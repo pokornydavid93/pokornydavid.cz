@@ -5,7 +5,7 @@
 .heroCont {
   height: 100vh;
   width: 100%;
-  background-image: url("/hero.png");
+  background-image: url("/hero.webp");
   background-position: right top; /* nejdůležitější změna */
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,19 +50,6 @@
         rgba(var(--brand-deep-trust-rgb), 0.08) 70%,
         rgba(var(--brand-deep-trust-rgb), 0) 100%
       );
-}
-
-.heroNoise {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 99;
-
-  background-image: url("/noise.png");
-  background-size: cover;
-  mix-blend-mode: soft-light; /* případně zkus overlay */
-
-  opacity: 0.1; /* 6 % */
 }
 
 .topStrip {
@@ -230,7 +217,7 @@
   pointer-events: none;
   z-index: 99;
 
-  background-image: url("/glass.png");
+  background-image: url("/glass.webp");
   background-size: cover;
   mix-blend-mode: soft-light; /* případně zkus overlay */
 
