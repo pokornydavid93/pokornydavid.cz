@@ -211,7 +211,7 @@
   bottom: 1px;
 }
 
-.heroGlass {
+/* .heroGlass {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -219,10 +219,10 @@
 
   background-image: url("/glass.webp");
   background-size: cover;
-  mix-blend-mode: soft-light; /* případně zkus overlay */
+  mix-blend-mode: soft-light; 
 
-  opacity: 0.1; /* 6 % */
-}
+  opacity: 0.1;
+} */
 
 /* DARK LAYER – filmovější stín zleva */
 .bgLayer {

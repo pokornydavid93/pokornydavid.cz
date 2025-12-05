@@ -21,7 +21,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.className} antialiased`}>
-        <SmoothScroll /> {/* ⬅ smooth scroll aktivní globálně */}
         <ViewportProvider>{children}</ViewportProvider>
       </body>
     </html>
