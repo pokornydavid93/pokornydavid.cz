@@ -22,7 +22,7 @@
   width: 62%;
   height: 100%;
   background: rgba(126, 235, 151, 0.1); /* brand-primary s alfou */
-  filter: blur(150px);
+  filter: blur(12px);
   border-radius: 50%;
   transform: scale(1.35);
   z-index: 1;
@@ -250,7 +250,7 @@
   width: 50%;
   top: 70px;
 
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(3px);
   display: flex;
   flex-direction: column;
   justify-content: center;
