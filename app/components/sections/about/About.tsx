@@ -6,13 +6,10 @@ import { Play } from "lucide-react";
 import { useViewport } from "../../Providers/ViewportProvider";
 
 const About = () => {
-  const { width } = useViewport()
+  const { width } = useViewport();
   return (
     <section className={s.aboutCont}>
-      <Container
-      className={s.mainCont}
-        fullHeight
-      >
+      <Container className={s.mainCont} fullHeight>
         {/* Eyebrow jako čistý H2 nad kartou */}
         <h2 className={s.eyebrow}>
           <span className={s.eyebrowLine}></span>
@@ -23,13 +20,11 @@ const About = () => {
         <div className={s.card}>
           <div className={s.contentCont}>
             <div className={s.photoCol}>
-              <Image
+              <img
                 src="/person.webp"
                 alt="David Pokorný – finanční plánování"
-                width={400}
-                height={600}
                 className={s.photo}
-                priority
+                loading="eager"
               />
             </div>
 
