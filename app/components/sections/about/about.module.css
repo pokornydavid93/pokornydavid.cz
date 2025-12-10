@@ -1,6 +1,6 @@
 .aboutCont {
   width: 100%;
-  padding: 100px 0;
+  padding: 90px 0;
   position: relative;
   background-color: var(--brand-deep-trust);
 }
@@ -9,84 +9,16 @@
   gap: 90px;
   align-items: center;
   width: 100% !important;
-}
-
-/* label "KDO JSEM" + linky okolo */
-.eyebrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-weight: 600;
-  font-size: clamp(13px, 1vw, 16px);
-  color: var(--brand-primary-soft);
-
-  text-shadow: 0 0 6px rgba(var(--brand-primary-rgb), 0.9);
-  margin-bottom: 24px;
-}
-
-/* label "KDO JSEM" + linky okolo */
-.eyebrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--brand-primary-soft);
-
-  text-shadow: 0 0 16px rgba(var(--brand-primary-rgb), 0.9);
-  margin-bottom: 24px;
-}
-
-.eyebrowText {
-  white-space: nowrap;
-}
-
-/* čára + kolečko na VNĚJŠÍM konci */
-.eyebrowLine {
-  flex: 1; /* natáhne se do stran */
-  min-width: 120px; /* aby tam fakt něco bylo */
-  height: 2px;
-  position: relative;
-  background-color: var(--brand-tertiary);
-  filter: drop-shadow(0 0 6px rgba(var(--brand-tertiary-rgb), 0.7));
-}
-
-/* výchozí: kruh na LEVÉM vnějším konci */
-.eyebrowLine::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0; /* ⬅ tady, ne right */
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(var(--brand-primary-rgb), 0.9);
-  background: var(--brand-tertiary);
-  box-shadow: 0 0 10px rgba(var(--brand-primary-rgb), 0.9);
-  transform: translate(-50%, -50%);
-  animation: glow 1.8s ease-in-out infinite alternate;
-}
-
-/* pravá linie má kruh na PRAVÉM vnějším konci */
-.eyebrowLine:last-child::before {
-  left: auto;
-  right: 0;
-  transform: translate(50%, -50%);
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
 .card {
   position: relative;
-  max-width: 1411px;
+  width: 100%;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 56px 64px;
+  padding: 46px 54px;
   border-radius: 36px;
   border: 1px solid var(--brand-tertiary-tint);
   overflow: hidden;
@@ -108,10 +40,12 @@
   inset: 0;
   pointer-events: none;
   background-image: url("/glass.webp");
-  background-size: cover;
+  background-size: 160%;
+  background-position: center;
   background-repeat: no-repeat;
   mix-blend-mode: overlay;
-  opacity: 0.28;
+  opacity: 0.16;
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.85), transparent 78%);
 }
 
 /* obsah uvnitř karty */
@@ -120,12 +54,15 @@
   z-index: 1;
   display: flex;
   justify-content: center;
-  gap: 72px;
-  align-items: center;
+  gap: 64px;
+  align-items: stretch;
 }
 
 .photoCol {
   flex: 0 0 auto;
+  width: clamp(340px, 30vw, 440px);
+  height: 100%;
+  min-height: 540px;
   border-radius: 28px;
   overflow: hidden;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
@@ -133,6 +70,7 @@
 
 .photo {
   width: 100%;
+  height: 100%;
   border-radius: 28px;
   object-fit: cover;
 }
@@ -148,7 +86,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 18px;
   max-width: 640px;
 }
 
@@ -161,50 +99,34 @@
 
 .body {
   color: var(--brand-white);
-  line-height: 1.6;
+  line-height: 1.62;
   font-size: clamp(15px, 1.1vw, 18px);
 }
 
 .actions {
-  margin-top: 20px;
-  display: flex;
-  gap: 30px;
-  align-items: center;
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
+  gap: 14px;
+  align-items: stretch;
+  justify-items: center;
 }
 
 .aboutCta {
   width: 146px;
   padding: 20px 25px !important;
   text-align: center !important;
-}
-
-/* Video button */
-.videoBtn {
-  all: unset;
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
-  cursor: pointer;
-  padding: 10px 20px 10px 10px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.26);
-  border: 1px solid var(--brand-tertiary-tint);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.videoBtn:hover {
-  background: rgba(0, 0, 0, 0.4);
-  transform: translateY(-1px);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.4) !important;
+  border-radius: 12px !important;
 }
 
 .playCont {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   border: 1px solid var(--brand-tertiary-tint);
   color: var(--brand-tertiary);
@@ -228,6 +150,104 @@
   animation-delay: 1.3s;
 }
 
+/* Highlights */
+.highlights {
+  display: grid;
+  gap: 14px;
+  margin: 2px 0 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.highlights li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.14);
+  box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.26);
+  text-align: left;
+}
+
+.highlights strong {
+  display: block;
+  color: var(--brand-light);
+  margin-bottom: 4px;
+  letter-spacing: -0.2px;
+}
+
+.highlights p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.5;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin-top: 4px;
+  border-radius: 999px;
+  position: relative;
+  background: radial-gradient(
+    circle at 30% 30%,
+    var(--brand-tertiary),
+    rgba(var(--brand-primary-rgb), 0.6)
+  );
+  box-shadow: 0 0 12px rgba(var(--brand-tertiary-rgb), 0.8);
+}
+
+.dot::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle,
+    rgba(var(--brand-tertiary-rgb), 0.38),
+    rgba(var(--brand-tertiary-rgb), 0)
+  );
+  animation: dotPulse 3.2s ease-out infinite;
+  pointer-events: none;
+}
+
+/* Video button */
+.videoBtn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.16);
+  border: 1px solid var(--brand-tertiary-tint);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.videoBtn:hover {
+  background: rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.5);
+}
+
+.videoCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+}
+
+.videoEyebrow {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-tertiary);
+}
+
 @keyframes glow {
   from {
     box-shadow: 0 0 6px rgba(var(--brand-primary-rgb), 0.5);
@@ -248,25 +268,41 @@
   }
 }
 
+@keyframes dotPulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+  60% {
+    transform: scale(1.4);
+    opacity: 0.15;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
 .videoLabel {
   font-size: 15px;
-  font-weight: 500;
-  color: var(--brand-tertiary);
+  font-weight: 600;
+  color: var(--brand-light);
 }
 @media (max-width: 1150px) {
 
   .card {
-    padding: 75px 70px;
+    padding: 64px 54px;
   }
 
   .actions {
-    margin-top: 46px;
+    margin-top: 26px;
   }
 
   .contentCont {
     flex-direction: column;
     text-align: center;
-    gap: 90px;
+    gap: 64px;
+    align-items: center;
   }
 
   .textCol {
@@ -279,10 +315,19 @@
  .mainCont {
   padding: 0px !important;
  }
+ .photoCol {
+  width: 88%;
+  height: auto;
+  min-height: 0;
+  max-height: 480px;
+ }
+ .actions {
+  grid-template-columns: 1fr;
+ }
 }
 @media (max-width: 555px) {
   .card {
-     padding: 40px 0px 75px 0px;
+     padding: 38px 0px 60px 0px;
   }
 
   .eyebrowLine {
@@ -290,6 +335,9 @@
   }
   .textCol {
     padding:  0px 30px;
+  }
+  .contentCont {
+    gap: 42px;
   }
 }
 @media (max-width: 450px) {
@@ -299,7 +347,7 @@
   }
 
   .card {
-     padding: 0px 0px 75px 0px;
+     padding: 0px 0px 55px 0px;
   }
 
 }

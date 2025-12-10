@@ -3,28 +3,22 @@ import Container from "@/app/ui/container/Container";
 import Button from "@/app/ui/cta/Button";
 import Image from "next/image";
 import { Play } from "lucide-react";
-import { useViewport } from "../../Providers/ViewportProvider";
 
 const About = () => {
-  const { width } = useViewport();
   return (
     <section className={s.aboutCont}>
       <Container className={s.mainCont} fullHeight>
         {/* Eyebrow jako čistý H2 nad kartou */}
-        <h2 className={s.eyebrow}>
-          <span className={s.eyebrowLine}></span>
-          <span className={s.eyebrowText}>Kdo jsem</span>
-          <span className={s.eyebrowLine}></span>
-        </h2>
-
         <div className={s.card}>
           <div className={s.contentCont}>
             <div className={s.photoCol}>
-              <img
+              <Image
                 src="/person.webp"
                 alt="David Pokorný – finanční plánování"
                 className={s.photo}
-                loading="eager"
+                width={720}
+                height={900}
+                priority
               />
             </div>
 
@@ -42,39 +36,54 @@ const About = () => {
               </p>
 
               <p className={s.body}>
-                K financím jsem se dostal původně kvůli sobě. Chtěl jsem
-                pochopit, kam mizí moje peníze a jak si vytvořit rezervu, která
-                mě opravdu podrží. Brzy jsem zjistil, že stejné otázky řeší
-                většina lidí kolem mě — jen často bez směru a podpory.
+                K financím jsem se dostal kvůli sobě: chtěl jsem vědět, kam
+                mizí moje peníze a jak si vybudovat rezervu, která opravdu
+                podrží. Brzy jsem zjistil, že stejné otázky řeší většina lidí
+                kolem mě — jen často bez směru a podpory.
               </p>
 
-              <p className={s.body}>
-                Dnes pomáhám jednotlivcům, rodinám i podnikatelům najít cestu,
-                která odpovídá jejich životu, kryje rizika a dává jistotu.
-                Klienti mi často říkají, že „poprvé měli pocit, že jim někdo
-                skutečně naslouchal“ — a přesně o tom moje práce je.
-              </p>
-
-              <p className={s.body}>
-                Neřeším jen čísla. Zajímá mě hlavně to, co vám osobně přinese
-                jistotu, přehled a pocit, že máte věci pod kontrolou.
-              </p>
+              <ul className={s.highlights}>
+                <li>
+                  <span className={s.dot} aria-hidden />
+                  <div>
+                    <strong>Přehled bez tlaku</strong>
+                    <p>Žádné složité termíny, jen jasné kroky a důvody proč.</p>
+                  </div>
+                </li>
+                <li>
+                  <span className={s.dot} aria-hidden />
+                  <div>
+                    <strong>Plan na míru</strong>
+                    <p>Každá rada vychází z toho, jak žijete a co chcete mít pod kontrolou.</p>
+                  </div>
+                </li>
+                <li>
+                  <span className={s.dot} aria-hidden />
+                  <div>
+                    <strong>Dlouhodobá jistota</strong>
+                    <p>Pomůžu hlídat rizika i budovat rezervy, aby finance držely v čase.</p>
+                  </div>
+                </li>
+              </ul>
 
               <div className={s.actions}>
                 <Button className={s.aboutCta} variant="cta">
                   Sjednat konzultaci
                 </Button>
+
+                <button type="button" className={s.videoBtn}>
+                  <div className={s.playCont}>
+                    <Play />
+                  </div>
+                  <div className={s.videoCopy}>
+                    <span className={s.videoEyebrow}>1 min</span>
+                    <span className={s.videoLabel}>Zhlédnout krátké video</span>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
         </div>
-
-        <button type="button" className={s.videoBtn}>
-          <div className={s.playCont}>
-            <Play />
-          </div>
-          <span className={s.videoLabel}>Zhlédnout krátké video</span>
-        </button>
       </Container>
     </section>
   );

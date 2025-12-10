@@ -1,7 +1,445 @@
-.testimonialsCont {
-    height: 100vh;
-    width: 100%;
-    z-index: 11;
-    position: relative;
-    background-color: var(--bg-section-light);
+.section {
+  width: 100%;
+  padding: 100px 0 90px;
+  background: var(--bg-section);
+}
+
+.inner {
+  width: 90% !important;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.eyebrow {
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  color: rgba(var(--brand-deep-trust-rgb), 0.8);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1.5fr 0.95fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.card {
+  background: linear-gradient(135deg, #0f3a2f, rgba(15, 58, 47, 0.9));
+  border-radius: 22px;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.24);
+  color: var(--brand-light);
+  padding: 40px 36px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.22);
+  display: grid;
+  gap: 14px;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 22% 25%,
+    rgba(var(--brand-tertiary-rgb), 0.08),
+    transparent 40%
+  );
+  pointer-events: none;
+}
+
+.cardHeading {
+  font-size: clamp(26px, 2.6vw, 34px);
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+
+.cardBody {
+  margin: 0 0 12px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.topicChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.topicLabel {
+  margin: 0 0 6px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.topicChip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.25);
+  color: var(--brand-light);
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.16);
+}
+
+.ctaBtn {
+  margin-top: 4px;
+  width: fit-content;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18) !important;
+}
+
+.marqueeShell {
+  background: rgba(var(--brand-light-rgb), 0.06);
+  border-radius: 20px;
+  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.2);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.08);
+}
+
+.mobileColumn {
+  display: none;
+}
+
+.marqueeShell::before,
+.marqueeShell::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 40px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.marqueeShell::before {
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(var(--brand-light-rgb), 1),
+    rgba(var(--brand-light-rgb), 0)
+  );
+}
+
+.marqueeShell::after {
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(var(--brand-light-rgb), 1),
+    rgba(var(--brand-light-rgb), 0)
+  );
+}
+
+.column {
+  position: relative;
+  overflow: hidden;
+  height: 420px;
+}
+
+.track {
+  display: grid;
+  gap: 14px;
+  animation: scrollUp 26s linear infinite;
+}
+
+.trackReverse {
+  animation-name: scrollDown;
+}
+
+.quoteCard {
+  background: var(--brand-white);
+  border-radius: 14px;
+  padding: 16px 16px 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.2);
+  display: grid;
+  gap: 10px;
+}
+
+.quoteText {
+  margin: 0;
+  color: var(--brand-dark);
+  line-height: 1.55;
+}
+
+.quoteMeta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #79eb93, #d6ffad);
+  color: #0f3a2f;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+}
+
+.person {
+  display: grid;
+  gap: 2px;
+}
+
+.name {
+  font-weight: 700;
+  color: var(--brand-dark);
+}
+
+.role {
+  font-size: 13px;
+  color: var(--brand-text);
+}
+
+.sideStack {
+  display: grid;
+  gap: 16px;
+}
+
+.ratingCard,
+.pillCard {
+  background: var(--brand-white);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.2);
+}
+
+.ratingValue {
+  font-size: 46px;
+  font-weight: 800;
+  color: var(--brand-dark);
+  margin: 0 0 6px;
+}
+
+.stars {
+  display: flex;
+  gap: 6px;
+  color: #f5c644;
+}
+
+.ratingMeta {
+  margin-top: 8px;
+  color: var(--brand-text);
+  font-size: 14px;
+}
+
+.logos {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--brand-dark);
+}
+
+.pillCard {
+  position: relative;
+  overflow: hidden;
+  min-height: 160px;
+  color: var(--brand-dark);
+}
+
+.pillCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(121, 235, 147, 0.28),
+    rgba(214, 255, 173, 0.26)
+  );
+  pointer-events: none;
+}
+
+.pillTitle {
+  position: relative;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.tagViewport {
+  position: relative;
+  overflow: hidden;
+  margin-top: 16px;
+  z-index: 1;
+  display: grid;
+  gap: 10px;
+}
+
+.tagRow {
+  overflow: hidden;
+}
+
+.tagTrack {
+  display: inline-flex;
+  gap: 12px;
+  animation: tagScrollLeft 18s linear infinite;
+  will-change: transform;
+}
+
+.tagTrackReverse {
+  animation-name: tagScrollRight;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--brand-dark);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.35);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tagDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 40% 40%, #79eb93, #0f3a2f);
+  box-shadow: 0 0 12px rgba(var(--brand-primary-rgb), 0.7);
+}
+
+.tagCount {
+  margin-left: auto;
+  color: var(--brand-text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@keyframes tagScrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes tagScrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.statsBar {
+  background: linear-gradient(135deg, #0c0f0d, #0f3a2f);
+  color: var(--brand-light);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  padding: 24px 30px;
+  gap: 16px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.26);
+  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.12);
+}
+
+.stat {
+  display: grid;
+  gap: 4px;
+  justify-items: center;
+}
+
+.statValue {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.statLabel {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes tagScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .marqueeShell {
+    grid-template-columns: 1fr;
+  }
+
+  /* na menších šířkách jedna kolejnice scroluje nahoru pro konzistentní dojem */
+  .track,
+  .trackReverse {
+    animation: scrollUp 24s linear infinite;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 80px 0 70px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .card,
+  .ratingCard,
+  .pillCard {
+    padding: 24px;
+  }
+  .marqueeShell {
+    display: none;
+  }
+  .mobileColumn {
+    display: block;
+  }
+  .column {
+    height: 320px;
+  }
+  .track,
+  .trackReverse {
+    animation: scrollUp 20s linear infinite;
+  }
 }

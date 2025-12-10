@@ -127,7 +127,7 @@ const Nav = ({ sideMenu, setSideMenu }: NavProps) => {
           <User2 className={s.topIcon} />
           <span>Kdo jsem</span>
         </a>
-        <a href="#help" className={s.topLink}>
+        <a href="#services" className={s.topLink}>
           <HeartHandshake className={s.topIcon} />
           <span>S čím pomáhám</span>
         </a>

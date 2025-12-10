@@ -24,11 +24,21 @@
   top: 6%;
   width: 62%;
   height: 100%;
-  background: rgba(126, 235, 151, 0.1); /* brand-primary s alfou */
-  filter: blur(12px);
+  background: rgba(126, 235, 151, 0.08); /* brand-primary s alfou */
+  filter: blur(20px);
   border-radius: 50%;
   transform: scale(1.35);
   z-index: 1;
+}
+
+.heroNoise {
+  position: absolute;
+  inset: 0;
+  background-image: url("/noise.webp");
+  opacity: 0.1;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  z-index: 2;
 }
 /* GLOBAL TONAL OVERLAY + SPOTLIGHT NA OBLIČEJ */
 
@@ -99,10 +109,10 @@
   z-index: 3;
   background: linear-gradient(
     to right,
-    #0f3a2fcc 22%,
-    #0f3a2f54 45%,
-    #0000001a 80%,
-    #00000000 100%
+    rgba(15, 58, 47, 0.8) 20%,
+    rgba(15, 58, 47, 0.46) 45%,
+    rgba(0, 0, 0, 0.08) 78%,
+    rgba(0, 0, 0, 0) 100%
   );
   pointer-events: none;
 }
@@ -123,13 +133,13 @@
   /* border-right: 1px solid var(--brand-tertiary-tint); */
   background: linear-gradient(
     122deg,
-    #0f3a2f85 22%,
-    #0f3a2f4a 45%,
-    #0f3a2f3d 80%,
-    #0f3a2f85 89%
+    rgba(15, 58, 47, 0.72) 22%,
+    rgba(15, 58, 47, 0.38) 45%,
+    rgba(15, 58, 47, 0.32) 80%,
+    rgba(15, 58, 47, 0.7) 89%
   );
   padding: 90px 50px 50px 90px;
-  box-shadow: inset -6px 0px 20px 0px #0000008c, 4px 0 29px 11px #0000009c;
+  box-shadow: inset -4px 0px 14px 0px #0000006c, 2px 0 20px 8px #0000006c;
   color: var(--brand-white);
 }
 

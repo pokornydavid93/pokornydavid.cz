@@ -8,6 +8,7 @@ import About from "./components/sections/about/About";
 import Services from "./components/sections/services/Services";
 import Process from "./components/sections/process/Process";
 import Testimonials from "./components/sections/testimonials/Testimonials";
+import Video from "./components/sections/video/Video";
 import FAQ from "./components/sections/faq/FAQ";
 import FastGuide from "./components/sections/fastGuide/FastGuide";
 import LeadForm from "./components/sections/leadForm/LeadForm";
@@ -21,6 +22,7 @@ const SECTION_KEYS = [
   "hero",
   "about",
   "testimonials",
+  "video",
   "services",
   "process",
   "faq",
@@ -83,6 +85,10 @@ export default function Page() {
 
         <section id="testimonials" data-section-key="testimonials">
           <Testimonials />
+        </section>
+
+        <section id="video" data-section-key="video">
+          <Video />
         </section>
 
         <section id="services" data-section-key="services">
