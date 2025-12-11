@@ -2,7 +2,7 @@
   width: 100%;
   padding: 72px 0 64px;
   background: linear-gradient(
-      180deg,
+      300deg,
       #0f3a2f 0%,
       rgba(15, 58, 47, 0.92) 60%,
       rgba(15, 58, 47, 0.86) 100%
@@ -13,9 +13,12 @@
 
 .inner {
   width: 100% !important;
-  display: grid;
-  gap: 90px;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 100px;
 }
 
 .headingBlock {
@@ -42,7 +45,7 @@
 
 .videoCard {
   width: 100%;
-  max-width: 980px;
+  max-width: 1026px;
   aspect-ratio: 16 / 9;
   position: relative;
   overflow: hidden;
@@ -124,9 +127,38 @@
 }
 
 .cta {
-  padding: 14px 22px !important;
+  padding: 26px 37px !important;
   border-radius: 10px !important;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24) !important;
+}
+
+.bottomGlow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 220px;
+  background: radial-gradient(
+    140% 120% at 50% 0%,
+    rgba(var(--brand-tertiary-rgb), 0.08),
+    transparent 58%
+  );
+  pointer-events: none;
+}
+
+.loopWrap {
+  width: 100%;
+  max-width: 1180px;
+  margin: 12px auto 0;
+  position: relative;
+  padding: 8px 12px;
+  background: linear-gradient(180deg, rgba(15, 58, 47, 0.96), rgba(15, 58, 47, 0.85));
+  border-radius: 12px;
+}
+
+.loopText {
+  fill: rgba(var(--brand-tertiary-rgb), 0.55) !important;
+  opacity: 1;
 }
 
 .videoModal {

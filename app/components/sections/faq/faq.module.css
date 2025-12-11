@@ -1,4 +1,230 @@
 .faqCont {
-    height: 100vh;
-    width: 100%;
+  position: relative;
+  width: 100%;
+  padding: 110px 0 120px;
+  background: radial-gradient(140% 80% at 50% -10%, rgba(121, 235, 147, 0.2), transparent 60%),
+    #0f3a2f;
+  color: var(--brand-white);
+  overflow: hidden;
+}
+
+.bgPattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
+  background-size: 28px 28px;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.inner {
+  display: grid;
+  gap: 36px;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.eyebrow {
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.header h2 {
+  margin: 0 0 6px;
+  font-size: clamp(30px, 3.4vw, 42px);
+  font-weight: 700;
+  color: #f6f9f6;
+}
+
+.highlight {
+  color: var(--brand-tertiary);
+}
+
+.header p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 22px;
+  align-items: start;
+}
+
+.accordion {
+  display: grid;
+  gap: 12px;
+}
+
+.item {
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+}
+
+.open {
+  background: linear-gradient(120deg, rgba(var(--brand-primary-rgb), 0.96), rgba(var(--brand-tertiary-rgb), 0.92));
+  color: var(--brand-deep-trust);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.24),
+    0 0 20px rgba(var(--brand-primary-rgb), 0.4);
+}
+
+.trigger {
+  all: unset;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  color: inherit;
+}
+
+.chevron {
+  transition: transform 0.18s ease;
+  opacity: 0.85;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.panel {
+  padding: 0 20px 18px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.open .panel {
+  color: rgba(var(--brand-deep-trust-rgb), 0.9);
+}
+
+.contactCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  background: linear-gradient(165deg, rgba(var(--brand-primary-rgb), 0.98), rgba(var(--brand-tertiary-rgb), 0.88));
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: var(--brand-deep-trust);
+}
+
+.contactOverlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.14) 0%, transparent 60%),
+    radial-gradient(120% 100% at 80% 10%, rgba(255, 255, 255, 0.2), transparent 60%);
+  mix-blend-mode: screen;
+  opacity: 0.35;
+}
+
+.contactContent {
+  position: relative;
+  z-index: 1;
+  padding: 28px 26px 30px;
+  display: grid;
+  gap: 14px;
+}
+
+.iconBadge {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  display: grid;
+  place-items: center;
+  color: var(--brand-deep-trust);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+.contactContent h3 {
+  margin: 0;
+  font-size: 22px;
+  color: var(--brand-deep-trust);
+}
+
+.contactContent p {
+  margin: 0;
+  color: rgba(var(--brand-deep-trust-rgb), 0.8);
+  line-height: 1.55;
+}
+
+.cta {
+  justify-self: start;
+  padding: 12px 18px;
+  border-radius: 12px !important;
+}
+
+.contactList {
+  display: grid;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.contactList div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+  color: var(--brand-deep-trust);
+  font-weight: 600;
+}
+
+.contactList a {
+  color: inherit;
+}
+
+.contactList span {
+  color: inherit;
+}
+
+@media (max-width: 1040px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contactCard {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .faqCont {
+    padding: 90px 0;
+  }
+
+  .trigger {
+    font-size: 16px;
+    align-items: flex-start;
+  }
+
+  .panel {
+    font-size: 14.5px;
+  }
 }

@@ -1,0 +1,70 @@
+.marqueeWrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 12px 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 58, 47, 0.92) 0%,
+    rgba(15, 58, 47, 0.7) 100%
+  );
+}
+
+.marqueeInner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
+  animation: marquee-left linear infinite;
+  font-size: clamp(68px, 8vw, 118px);
+  font-weight: 700;
+  color: rgba(var(--brand-tertiary-rgb), 0.65);
+  opacity: 0.98;
+  will-change: transform;
+  width: auto;
+}
+
+.marqueeTrack {
+  display: inline-flex;
+  align-items: center;
+  gap: 64px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: auto;
+  padding-right: 72px;
+}
+
+.item {
+  letter-spacing: 0.02em;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(var(--brand-tertiary-rgb), 0.95);
+  font-size: 1em;
+}
+
+.marqueeMeasure {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  height: 0;
+  white-space: nowrap;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(-1 * var(--total-width, 100%)), 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marqueeTrack {
+    animation: none;
+  }
+}

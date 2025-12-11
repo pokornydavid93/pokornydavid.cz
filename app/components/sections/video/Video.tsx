@@ -51,6 +51,7 @@ const Video = () => {
         </div>
       </Container>
 
+
       {isOpen ? (
         <div className={s.videoModal} role="dialog" aria-modal="true">
           <div className={s.overlayInner}>

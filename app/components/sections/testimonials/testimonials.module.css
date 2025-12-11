@@ -1,7 +1,7 @@
 .section {
   width: 100%;
   padding: 100px 0 90px;
-  background: var(--bg-section);
+      background: radial-gradient(140% 90% at 14% 12%, rgba(var(--brand-tertiary-rgb), .16), transparent 50%), radial-gradient(120% 80% at 88% 18%, rgba(var(--brand-muted-teal-rgb), .1), transparent 52%), linear-gradient(180deg, #f7faf7 0%, #eef4ef 100%);
 }
 
 .inner {
@@ -9,6 +9,8 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  min-height: 100vh;
+  justify-content: center;
 }
 
 .eyebrow {
@@ -84,7 +86,7 @@
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(var(--brand-tertiary-rgb), 0.25);
-  color: var(--brand-light);
+  color: var(--brand-tertiary);
   font-weight: 600;
   font-size: 14px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.16);
@@ -157,6 +159,10 @@
 
 .trackReverse {
   animation-name: scrollDown;
+}
+
+.paused {
+  animation-play-state: paused !important;
 }
 
 .quoteCard {

@@ -2,15 +2,15 @@
   width: 100%;
   padding: 90px 0;
   position: relative;
-  background-color: var(--brand-deep-trust);
+background: radial-gradient(140% 80% at 50% -10%, #79eb9333, #0000 60%), #0f3a2f;
 }
 
 .mainCont {
   gap: 90px;
   align-items: center;
   width: 100% !important;
-  max-width: 1320px;
   margin: 0 auto;
+  min-height: 100vh !important;
 }
 
 .card {
@@ -23,12 +23,7 @@
   border: 1px solid var(--brand-tertiary-tint);
   overflow: hidden;
 
-  background: radial-gradient(
-      circle at bottom left,
-      rgba(255, 255, 255, 0.06),
-      transparent 55%
-    ),
-    rgba(5, 35, 26, 0.92);
+  background-color: var(--brand-deep-trust);
 
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45),
     inset 0 0 30px rgba(255, 255, 255, 0.04);
@@ -45,7 +40,11 @@
   background-repeat: no-repeat;
   mix-blend-mode: overlay;
   opacity: 0.16;
-  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.85), transparent 78%);
+  mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.85),
+    transparent 78%
+  );
 }
 
 /* obsah uvnitř karty */
@@ -55,7 +54,8 @@
   display: flex;
   justify-content: center;
   gap: 64px;
-  align-items: stretch;
+  align-items: center;
+  flex-direction: row-reverse;
 }
 
 .photoCol {
@@ -153,7 +153,7 @@
 /* Highlights */
 .highlights {
   display: grid;
-  gap: 14px;
+  gap: 30px;
   margin: 2px 0 10px;
   padding: 0;
   list-style: none;
@@ -162,7 +162,7 @@
 .highlights li {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 10px;
+  gap: 16px;
   align-items: start;
   padding: 12px 14px;
   border-radius: 14px;
@@ -174,7 +174,7 @@
 
 .highlights strong {
   display: block;
-  color: var(--brand-light);
+  color: var(--brand-tertiary);
   margin-bottom: 4px;
   letter-spacing: -0.2px;
 }
@@ -289,52 +289,61 @@
   color: var(--brand-light);
 }
 @media (max-width: 1150px) {
-
   .card {
     padding: 64px 54px;
   }
 
   .actions {
     margin-top: 26px;
+    gap: 40px;
+  }
+
+  .aboutCta {
+    width: 100%;
+    justify-content: center;
+    padding: 20px 0px !important;
   }
 
   .contentCont {
     flex-direction: column;
-    text-align: center;
+
     gap: 64px;
     align-items: center;
   }
 
   .textCol {
     max-width: 100%;
-    align-items: center;
   }
 }
 
 @media (max-width: 620px) {
- .mainCont {
-  padding: 0px !important;
- }
- .photoCol {
-  width: 88%;
-  height: auto;
-  min-height: 0;
-  max-height: 480px;
- }
- .actions {
-  grid-template-columns: 1fr;
- }
+  .card {
+    border-left: none;
+    border-right: none;
+  }
+  .mainCont {
+    padding: 0px !important;
+  }
+  .photoCol {
+    width: 88%;
+    height: auto;
+    min-height: 0;
+    max-height: 480px;
+  }
+  .actions {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 555px) {
   .card {
-     padding: 38px 0px 60px 0px;
+    padding: 38px 0px 60px 0px;
   }
 
   .eyebrowLine {
     min-width: 67px;
   }
   .textCol {
-    padding:  0px 30px;
+    padding: 0px 30px;
   }
   .contentCont {
     gap: 42px;
@@ -347,12 +356,9 @@
   }
 
   .card {
-     padding: 0px 0px 55px 0px;
+    padding: 0px 0px 55px 0px;
   }
-
 }
 
-
 @media (max-width: 900px) {
-
 }

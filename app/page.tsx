@@ -17,7 +17,9 @@ import { heroVariants } from "./content/heroVariants";
 import s from "./page.module.css";
 import SideMenu from "./components/nav/SideMenu";
 import TrustBar from "./ui/trustBar/TrustBar";
-import { Home, Lock, ShieldAlert, ShieldCheck } from "lucide-react";
+import TextMarquee from "./ui/animations/TextMarquee";
+import marqueeStyles from "./ui/animations/textMarquee.module.css";
+import LogoMark from "./svgr/LogoMark";
 const SECTION_KEYS = [
   "hero",
   "about",
@@ -91,9 +93,28 @@ export default function Page() {
           <Video />
         </section>
 
+                     <TextMarquee
+          items={[
+            "Vlastní bydlení",
+            "Ochrana majetku",
+            "Zajištění příjmu",
+            "Pojištění odpovědnosti",
+            "Studium dětí",
+          ]}
+          icons={Array.from({ length: 5 }).map((_, idx) => (
+            <LogoMark
+              key={`logo-${idx}`}
+              style={{ width: "48px", height: "48px" }}
+            />
+          ))}
+          speedSec={64}
+          className={marqueeStyles.marqueeWrap}
+        />
+
         <section id="services" data-section-key="services">
           <Services />
         </section>
+
 
         <section id="process" data-section-key="process">
           <Process />
@@ -103,9 +124,9 @@ export default function Page() {
           <FAQ />
         </section>
 
-        <section id="fast-guide" data-section-key="fast-guide">
+        {/* <section id="fast-guide" data-section-key="fast-guide">
           <FastGuide />
-        </section>
+        </section> */}
 
         <section id="lead-form" data-section-key="lead-form">
           <LeadForm />

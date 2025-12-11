@@ -13,7 +13,7 @@ const About = () => {
           <div className={s.contentCont}>
             <div className={s.photoCol}>
               <Image
-                src="/person.webp"
+                src="/dejv.png"
                 alt="David Pokorný – finanční plánování"
                 className={s.photo}
                 width={720}
@@ -67,10 +67,6 @@ const About = () => {
               </ul>
 
               <div className={s.actions}>
-                <Button className={s.aboutCta} variant="cta">
-                  Sjednat konzultaci
-                </Button>
-
                 <button type="button" className={s.videoBtn}>
                   <div className={s.playCont}>
                     <Play />
@@ -80,6 +76,10 @@ const About = () => {
                     <span className={s.videoLabel}>Zhlédnout krátké video</span>
                   </div>
                 </button>
+                <Button className={s.aboutCta} variant="cta">
+                  Sjednat konzultaci
+                </Button>
+
               </div>
             </div>
           </div>

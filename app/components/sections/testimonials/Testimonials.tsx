@@ -4,6 +4,7 @@ import s from "./testimonials.module.css";
 import Container from "@/app/ui/container/Container";
 import Button from "@/app/ui/cta/Button";
 import { Star } from "lucide-react";
+import { useState } from "react";
 
 type Testimonial = {
   quote: string;
@@ -75,9 +76,17 @@ const topics = [
   "Penzijní plán",
 ];
 
-const renderTagTrack = (items: typeof trustTags, reverse?: boolean) => (
+const renderTagTrack = (
+  items: typeof trustTags,
+  reverse?: boolean,
+  paused?: boolean
+) => (
   <div className={s.tagRow}>
-    <div className={`${s.tagTrack} ${reverse ? s.tagTrackReverse : ""}`}>
+    <div
+      className={`${s.tagTrack} ${reverse ? s.tagTrackReverse : ""} ${
+        paused ? s.paused : ""
+      }`.trim()}
+    >
       {[...items, ...items].map((tag, idx) => (
         <div className={s.tag} key={`${tag.label}-${idx}`}>
           <span className={s.tagDot} aria-hidden />
@@ -89,10 +98,18 @@ const renderTagTrack = (items: typeof trustTags, reverse?: boolean) => (
   </div>
 );
 
-const renderCards = (items: Testimonial[], reverse?: boolean) => {
+const renderCards = (
+  items: Testimonial[],
+  reverse?: boolean,
+  paused?: boolean
+) => {
   const doubled = [...items, ...items];
   return (
-    <div className={`${s.track} ${reverse ? s.trackReverse : ""}`}>
+    <div
+      className={`${s.track} ${reverse ? s.trackReverse : ""} ${
+        paused ? s.paused : ""
+      }`.trim()}
+    >
       {doubled.map((item, idx) => (
         <article className={s.quoteCard} key={`${item.name}-${idx}`}>
           <p className={s.quoteText}>{item.quote}</p>
@@ -110,6 +127,9 @@ const renderCards = (items: Testimonial[], reverse?: boolean) => {
 };
 
 const Testimonials = () => {
+  const [pauseTracks, setPauseTracks] = useState(false);
+  const [pauseTags, setPauseTags] = useState(false);
+
   return (
     <section className={s.section}>
       <Container className={s.inner}>
@@ -135,13 +155,35 @@ const Testimonials = () => {
             </Button>
           </div>
 
-          <div className={s.marqueeShell} aria-hidden>
-            <div className={s.column}>{renderCards(leftColumn)}</div>
-            <div className={s.column}>{renderCards(rightColumn, true)}</div>
+          <div
+            className={s.marqueeShell}
+            aria-hidden
+            onMouseEnter={() => setPauseTracks(true)}
+            onMouseLeave={() => setPauseTracks(false)}
+            onTouchStart={() => setPauseTracks(true)}
+            onTouchEnd={() => setPauseTracks(false)}
+            onTouchCancel={() => setPauseTracks(false)}
+          >
+            <div className={s.column}>
+              {renderCards(leftColumn, false, pauseTracks)}
+            </div>
+            <div className={s.column}>
+              {renderCards(rightColumn, true, pauseTracks)}
+            </div>
           </div>
 
-          <div className={s.mobileColumn} aria-hidden>
-            <div className={s.column}>{renderCards(allTestimonials)}</div>
+          <div
+            className={s.mobileColumn}
+            aria-hidden
+            onMouseEnter={() => setPauseTracks(true)}
+            onMouseLeave={() => setPauseTracks(false)}
+            onTouchStart={() => setPauseTracks(true)}
+            onTouchEnd={() => setPauseTracks(false)}
+            onTouchCancel={() => setPauseTracks(false)}
+          >
+            <div className={s.column}>
+              {renderCards(allTestimonials, false, pauseTracks)}
+            </div>
           </div>
 
           <div className={s.sideStack}>
@@ -158,9 +200,16 @@ const Testimonials = () => {
 
             <div className={s.pillCard}>
               <div className={s.pillTitle}>Co klienti zmiňují nejčastěji</div>
-              <div className={s.tagViewport}>
-                {renderTagTrack(tagsTop, true)}
-                {renderTagTrack(tagsBottom, false)}
+              <div
+                className={s.tagViewport}
+                onMouseEnter={() => setPauseTags(true)}
+                onMouseLeave={() => setPauseTags(false)}
+                onTouchStart={() => setPauseTags(true)}
+                onTouchEnd={() => setPauseTags(false)}
+                onTouchCancel={() => setPauseTags(false)}
+              >
+                {renderTagTrack(tagsTop, true, pauseTags)}
+                {renderTagTrack(tagsBottom, false, pauseTags)}
               </div>
             </div>
           </div>
