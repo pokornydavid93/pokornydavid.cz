@@ -20,7 +20,7 @@ type Step = {
   kicker: string;
   description: string;
   bullets: string[];
-  icon: JSX.Element;
+  icon: React.ReactElement;
   image: string;
   badge?: string;
 };
