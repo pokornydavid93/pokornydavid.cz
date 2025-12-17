@@ -18,6 +18,7 @@ import {
 import GradientText from "@/app/ui/animations/GradientText";
 import LogoMark from "@/app/svgr/LogoMark";
 import { useViewport } from "../../Providers/ViewportProvider";
+import { useLeadFormModal } from "../../Providers/LeadFormModalProvider";
 
 export type HeroContent = {
   eyebrow: string;
@@ -42,6 +43,7 @@ const Hero = ({ variants, activeSession }: HeroProps) => {
   const [index, setIndex] = useState(5);
   const content = variants[index];
   const { width, height } = useViewport();
+  const { openLeadForm } = useLeadFormModal();
 
   const { line1, line2, highlight } = content.title;
   const hasHighlight = highlight && line1.includes(highlight);
@@ -86,7 +88,7 @@ const Hero = ({ variants, activeSession }: HeroProps) => {
           <Button
             variant="cta"
             label={content.cta.primary.label}
-            href={content.cta.primary.href}
+            onClick={() => openLeadForm()}
             iconRight={
               <PhoneCall
                 style={{ color: "var(--brand-dark)", marginLeft: "7px" }}

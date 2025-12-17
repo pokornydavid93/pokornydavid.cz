@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@radix-ui/react-select": "^2.2.6",
     "@studio-freight/lenis": "^1.0.42",
     "embla-carousel": "^8.6.0",
     "embla-carousel-react": "^8.6.0",

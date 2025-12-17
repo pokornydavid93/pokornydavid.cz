@@ -1,16 +1,20 @@
+'use client';
+
 import { Mail, MapPin, Phone, ArrowUpRight } from "lucide-react";
 import Container from "@/app/ui/container/Container";
 import Button from "@/app/ui/cta/Button";
 import LogoMark from "@/app/svgr/LogoMark";
 import s from "./footer.module.css";
+import { useLeadFormModal } from "../../Providers/LeadFormModalProvider";
 
 const Footer = () => {
+  const { openLeadForm } = useLeadFormModal();
+
   return (
     <footer className={s.footerCont} id="footer">
       <div className={s.glow} aria-hidden />
-      <div className={s.noise} aria-hidden />
 
-      <Container className={s.inner} maxWidth={1220}>
+      <Container className={s.inner}>
         <div className={s.topRow}>
           <div className={s.brand}>
             <div className={s.logoWrap}>
@@ -27,10 +31,10 @@ const Footer = () => {
             <Button
               variant="cta"
               className={s.cta}
-              href="#lead-form"
               iconRight={<ArrowUpRight size={18} />}
+              onClick={() => openLeadForm()}
             >
-              Domluvit konzultaci
+              Sjednat konzultaci
             </Button>
           </div>
 

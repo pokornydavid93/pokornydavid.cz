@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import {
   Compass,
@@ -8,8 +10,10 @@ import {
   ShieldAlert,
   Landmark,
 } from "lucide-react";
+import Container from "@/app/ui/container/Container";
 import Button from "@/app/ui/cta/Button";
 import s from "./services.module.css";
+import { useLeadFormModal } from "../../Providers/LeadFormModalProvider";
 
 type Service = {
   label: string;
@@ -86,8 +90,11 @@ const services: Service[] = [
 ];
 
 const Services = () => {
+  const { openLeadForm } = useLeadFormModal();
+
   return (
     <section className={s.servicesCont} id="services">
+      <Container fullHeight>
       <div className={s.spotlight} aria-hidden />
       <div className={s.header}>
         <p className={s.eyebrow}>Praktické služby</p>
@@ -115,12 +122,17 @@ const Services = () => {
               <h3>{service.title}</h3>
               <p>{service.description}</p>
             </div>
-            <Button variant="cta" className={s.ctaBtn} href="#lead-form">
-              Vybrat termín konzultace
+            <Button
+              variant="cta"
+              className={s.ctaBtn}
+              onClick={() => openLeadForm(service.title)}
+            >
+              Sjednat konzultaci
             </Button>
           </article>
         ))}
       </div>
+         </Container>
     </section>
   );
 };

@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "./ui/animations/SmoothScroll";
 import { ViewportProvider } from "./components/Providers/ViewportProvider";
+import { LeadFormModalProvider } from "./components/Providers/LeadFormModalProvider";
 const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -21,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.className} antialiased`}>
-        <ViewportProvider>{children}</ViewportProvider>
+        <ViewportProvider>
+          <LeadFormModalProvider>{children}</LeadFormModalProvider>
+        </ViewportProvider>
       </body>
     </html>
   );

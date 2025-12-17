@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useViewport } from "../Providers/ViewportProvider";
+import { useLeadFormModal } from "../Providers/LeadFormModalProvider";
 import s from "./css/nav.module.css";
 import LogoMark from "@/app/svgr/LogoMark";
 import { HeartHandshake, PhoneCall, Quote, User2, Workflow } from "lucide-react";
@@ -16,6 +17,7 @@ type NavProps = {
 const Nav = ({ sideMenu, setSideMenu }: NavProps) => {
   const [isHidden, setIsHidden] = useState(false);
   const { width } = useViewport();
+  const { openLeadForm } = useLeadFormModal();
 
   const topRef = useRef<HTMLSpanElement | null>(null);
   const midRef = useRef<HTMLSpanElement | null>(null);
@@ -139,13 +141,13 @@ const Nav = ({ sideMenu, setSideMenu }: NavProps) => {
           <Quote className={s.topIcon} />
           <span>Reference</span>
         </a>
-                  <Button
-            variant="cta"
-            label={"Konzultace zdarma"}
-            href={"/"}
-            size="md"
-            className={s.heroCta}
-          />
+        <Button
+          variant="cta"
+          label={"Sjednat konzultaci"}
+          onClick={() => openLeadForm()}
+          size="md"
+          className={s.heroCta}
+        />
       </div>
 
       {/* BURGER */}

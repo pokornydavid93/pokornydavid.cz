@@ -1,7 +1,6 @@
 .servicesCont {
   position: relative;
   width: 100%;
-  padding: 110px min(7vw, 200px) 120px;
   background: radial-gradient(
       140% 90% at 50% 0%,
       rgba(var(--brand-tertiary-rgb), 0.08),
@@ -164,10 +163,6 @@
 }
 
 @media (max-width: 780px) {
-  .servicesCont {
-    padding: 88px 18px 96px;
-  }
-
   .grid {
     grid-template-columns: 1fr;
   }

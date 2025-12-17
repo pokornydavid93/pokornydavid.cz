@@ -1,3 +1,5 @@
+'use client';
+
 import { useMemo, useState } from "react";
 import {
   Check,
@@ -10,6 +12,7 @@ import {
 import Container from "@/app/ui/container/Container";
 import Button from "@/app/ui/cta/Button";
 import s from "./process.module.css";
+import { useLeadFormModal } from "../../Providers/LeadFormModalProvider";
 
 type Step = {
   id: string;
@@ -106,6 +109,7 @@ const steps: Step[] = [
 ];
 
 const Process = () => {
+  const { openLeadForm } = useLeadFormModal();
   const [activeId, setActiveId] = useState<string>(steps[0].id);
 
   const activeStep = useMemo(
@@ -115,7 +119,7 @@ const Process = () => {
 
   return (
     <div className={s.processCont}>
-      <Container className={s.processInner} maxWidth={1240}>
+      <Container className={s.processInner}>
         <div className={s.sectionHeader}>
           <p className={s.eyebrow}>Průběh spolupráce</p>
           <div className={s.headlineWrap}>
@@ -184,11 +188,11 @@ const Process = () => {
 
                 <Button
                   variant="cta"
-                  href="#lead-form"
                   className={s.cta}
-                  aria-label="Domluvit si konzultaci"
+                  aria-label="Sjednat konzultaci"
+                  onClick={() => openLeadForm()}
                 >
-                  Domluvit si konzultaci
+                  Sjednat konzultaci
                 </Button>
               </div>
             </div>

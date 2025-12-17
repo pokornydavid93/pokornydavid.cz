@@ -5,6 +5,7 @@ import s from "./css/sideMenu.module.css";
 import gsap from "gsap";
 import { HeartHandshake, Quote, User2, Workflow } from "lucide-react";
 import Button from "@/app/ui/cta/Button";
+import { useLeadFormModal } from "../Providers/LeadFormModalProvider";
 
 type SideMenuProps = {
   sideMenu: boolean;
@@ -15,6 +16,7 @@ const SideMenu = ({ sideMenu, setSideMenu }: SideMenuProps) => {
   const contentRef = useRef<HTMLElement | null>(null);
   const firstLayerRef = useRef<HTMLDivElement | null>(null);
   const secondLayerRef = useRef<HTMLDivElement | null>(null);
+  const { openLeadForm } = useLeadFormModal();
 
   const linkRefs = useRef<HTMLAnchorElement[]>([]);
   const ctaRef = useRef<HTMLDivElement | null>(null);
@@ -159,8 +161,11 @@ const SideMenu = ({ sideMenu, setSideMenu }: SideMenuProps) => {
         <div ref={ctaRef}>
           <Button
             variant="cta"
-            label="Nezávazná konzultace"
-            href="*"
+            label="Sjednat konzultaci"
+            onClick={() => {
+              openLeadForm();
+              setSideMenu(false);
+            }}
             size="md"
             className={s.heroCta}
           />

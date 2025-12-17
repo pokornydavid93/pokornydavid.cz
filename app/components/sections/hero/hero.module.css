@@ -8,8 +8,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-image: url("/hero.webp");
-  background-position: right top; /* nejdůležitější změna */
+  background-image: url("/hero.jpg");
+  background-position: 150px top;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 15;
@@ -130,13 +130,12 @@
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  /* border-right: 1px solid var(--brand-tertiary-tint); */
   background: linear-gradient(
     122deg,
-    rgba(15, 58, 47, 0.72) 22%,
-    rgba(15, 58, 47, 0.38) 45%,
-    rgba(15, 58, 47, 0.32) 80%,
-    rgba(15, 58, 47, 0.7) 89%
+    #0f3a2f 22%,
+    #0f3a2f 45%,
+    #0f3a2f52 80%,
+    #0f3a2fb3 89%
   );
   padding: 90px 50px 50px 90px;
   box-shadow: inset -4px 0px 14px 0px #0000006c, 2px 0 20px 8px #0000006c;
@@ -252,9 +251,6 @@
 }
 
 @media (width <= 1880px) {
-  .heroCont {
-    background-position: 50% top; /* jemný posun dolů */
-  }
   .heroInner {
     padding: 50px;
     padding-top: 90px;
@@ -265,15 +261,33 @@
     min-width: 430px;
   }
 }
-/* === LAPTOP (1025–1439) === */
-@media (width <= 1439px) {
+@media (width <= 1580px) {
   .heroCont {
-    background-position: 60% top; /* jemný posun dolů */
+    background-position: 20px top;
   }
 }
+@media (width <= 1430px) {
+  .heroCont {
+    background-position: -86px top;
+  }
+}
+@media (width <= 1330px) {
+  .heroCont {
+    background-position: -146px top;
+  }
+}
+@media (width <= 1265px) {
+  .heroCont {
+    background-position: -223px top;
+  }
+}
+/* === LAPTOP (1025–1439) === */
 @media (width <= 1190px) {
   .heroInner {
     width: 600px; /* jemný posun dolů */
+  }
+  .heroCont {
+    background-position: -283px top;
   }
 }
 

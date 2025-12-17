@@ -1,22 +1,67 @@
 "use client";
 
 import s from "./video.module.css";
-import { useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import Container from "@/app/ui/container/Container";
 import Button from "@/app/ui/cta/Button";
-import { Clock, Play, ShieldCheck } from "lucide-react";
+import { Play } from "lucide-react";
+import { useLeadFormModal } from "../../Providers/LeadFormModalProvider";
 
-const VIDEO_EMBED = "https://www.youtube.com/embed/videoId?autoplay=1";
-const VIDEO_POSTER = "/hero.webp"; // nahraď reálným posterem
+const VIDEO_SRC = "/video_h264.mp4";
+const VIDEO_POSTER = "/nahled-video.png"; // nahraď reálným posterem
 
 const Video = () => {
+  const { openLeadForm } = useLeadFormModal();
   const [isOpen, setIsOpen] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const openVideo = () => setIsOpen(true);
-  const closeVideo = () => setIsOpen(false);
+  const closeVideo = () => {
+    setIsFullscreen(false);
+    setIsOpen(false);
+  };
 
   const videoStyle: CSSProperties & { "--video-poster": string } = {
     "--video-poster": `url(${VIDEO_POSTER})`,
+  };
+
+  useEffect(() => {
+    const node = videoRef.current;
+    if (!node) return;
+
+    if (isOpen) {
+      node.pause();
+      node.currentTime = 0;
+      node.load();
+      const playPromise = node.play();
+      if (playPromise) {
+        playPromise.catch(() => {
+          // Swallow autoplay errors (e.g., when not initiated by user gesture).
+        });
+      }
+    } else {
+      node.pause();
+      node.currentTime = 0;
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(Boolean(document.fullscreenElement));
+    };
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    return () => document.removeEventListener("fullscreenchange", handleFullscreenChange);
+  }, []);
+
+  const handleFullscreenToggle = () => {
+    const node = videoRef.current;
+    if (!node) return;
+    if (!document.fullscreenElement) {
+      node.requestFullscreen?.().catch(() => {});
+    } else {
+      document.exitFullscreen?.().catch(() => {});
+    }
   };
 
   return (
@@ -31,7 +76,6 @@ const Video = () => {
           className={s.videoCard}
           style={videoStyle}
         >
-          <div className={s.videoOverlay} />
           <button
             type="button"
             className={s.playButton}
@@ -45,8 +89,12 @@ const Video = () => {
         </div>
 
         <div className={s.ctaRow}>
-          <Button variant="cta" href="#lead-form" className={s.cta}>
-            Vybrat termín konzultace
+          <Button
+            variant="cta"
+            className={s.cta}
+            onClick={() => openLeadForm()}
+          >
+            Sjednat konzultaci
           </Button>
         </div>
       </Container>
@@ -63,13 +111,26 @@ const Video = () => {
             >
               ×
             </button>
-            <iframe
-              className={s.overlayIframe}
-              src={VIDEO_EMBED}
-              title="Video o spolupráci"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            <button
+              type="button"
+              className={s.overlayFullscreen}
+              aria-label={isFullscreen ? "Opustit celou obrazovku" : "Celá obrazovka"}
+              onClick={handleFullscreenToggle}
+            >
+              ⤢
+            </button>
+            <video
+              ref={videoRef}
+              className={s.overlayVideo}
+              controls
+              poster={VIDEO_POSTER}
+              preload="metadata"
+              playsInline
+              controlsList="nodownload"
+            >
+              <source src={VIDEO_SRC} type="video/mp4" />
+              Váš prohlížeč nepodporuje HTML5 video.
+            </video>
           </div>
           <div className={s.overlayBackdrop} onClick={closeVideo} />
         </div>

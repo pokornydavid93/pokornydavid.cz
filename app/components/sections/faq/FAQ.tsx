@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from "react";
 import {
   ChevronDown,
@@ -9,6 +11,7 @@ import {
 import Container from "@/app/ui/container/Container";
 import Button from "@/app/ui/cta/Button";
 import s from "./faq.module.css";
+import { useLeadFormModal } from "../../Providers/LeadFormModalProvider";
 
 type FaqItem = {
   question: string;
@@ -45,11 +48,12 @@ const faqs: FaqItem[] = [
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number>(0);
+  const { openLeadForm } = useLeadFormModal();
 
   return (
     <section className={s.faqCont} id="faq">
       <div className={s.bgPattern} aria-hidden />
-      <Container className={s.inner} maxWidth={1280}>
+      <Container className={s.inner}>
         <div className={s.header}>
           <p className={s.eyebrow}>Jasně a stručně</p>
           <div>
@@ -109,7 +113,7 @@ const FAQ = () => {
               <Button
                 variant="cta"
                 className={s.cta}
-                href="#lead-form"
+                onClick={() => openLeadForm()}
               >
                 Sjednat konzultaci
               </Button>

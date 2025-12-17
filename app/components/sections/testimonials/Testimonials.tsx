@@ -4,7 +4,8 @@ import s from "./testimonials.module.css";
 import Container from "@/app/ui/container/Container";
 import Button from "@/app/ui/cta/Button";
 import { Star } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLeadFormModal } from "../../Providers/LeadFormModalProvider";
 
 type Testimonial = {
   quote: string;
@@ -76,6 +77,21 @@ const topics = [
   "Penzijní plán",
 ];
 
+const useMediaQuery = (query: string) => {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const mql = window.matchMedia(query);
+    const listener = (event: MediaQueryListEvent) => setMatches(event.matches);
+
+    setMatches(mql.matches);
+    mql.addEventListener("change", listener);
+    return () => mql.removeEventListener("change", listener);
+  }, [query]);
+
+  return matches;
+};
+
 const renderTagTrack = (
   items: typeof trustTags,
   reverse?: boolean,
@@ -129,6 +145,8 @@ const renderCards = (
 const Testimonials = () => {
   const [pauseTracks, setPauseTracks] = useState(false);
   const [pauseTags, setPauseTags] = useState(false);
+  const isMobile = useMediaQuery("(max-width: 1100px)");
+  const { openLeadForm } = useLeadFormModal();
 
   return (
     <section className={s.section}>
@@ -150,41 +168,49 @@ const Testimonials = () => {
                 </span>
               ))}
             </div>
-            <Button variant="cta" className={s.ctaBtn} href="#lead-form">
+            <Button
+              variant="cta"
+              className={s.ctaBtn}
+              onClick={() => openLeadForm()}
+            >
               Sjednat konzultaci
             </Button>
           </div>
 
-          <div
-            className={s.marqueeShell}
-            aria-hidden
-            onMouseEnter={() => setPauseTracks(true)}
-            onMouseLeave={() => setPauseTracks(false)}
-            onTouchStart={() => setPauseTracks(true)}
-            onTouchEnd={() => setPauseTracks(false)}
-            onTouchCancel={() => setPauseTracks(false)}
-          >
-            <div className={s.column}>
-              {renderCards(leftColumn, false, pauseTracks)}
+          {!isMobile && (
+            <div
+              className={s.marqueeShell}
+              aria-hidden
+              onMouseEnter={() => setPauseTracks(true)}
+              onMouseLeave={() => setPauseTracks(false)}
+              onTouchStart={() => setPauseTracks(true)}
+              onTouchEnd={() => setPauseTracks(false)}
+              onTouchCancel={() => setPauseTracks(false)}
+            >
+              <div className={s.column}>
+                {renderCards(leftColumn, false, pauseTracks)}
+              </div>
+              <div className={s.column}>
+                {renderCards(rightColumn, true, pauseTracks)}
+              </div>
             </div>
-            <div className={s.column}>
-              {renderCards(rightColumn, true, pauseTracks)}
-            </div>
-          </div>
+          )}
 
-          <div
-            className={s.mobileColumn}
-            aria-hidden
-            onMouseEnter={() => setPauseTracks(true)}
-            onMouseLeave={() => setPauseTracks(false)}
-            onTouchStart={() => setPauseTracks(true)}
-            onTouchEnd={() => setPauseTracks(false)}
-            onTouchCancel={() => setPauseTracks(false)}
-          >
-            <div className={s.column}>
-              {renderCards(allTestimonials, false, pauseTracks)}
+          {isMobile && (
+            <div
+              className={s.mobileColumn}
+              aria-hidden
+              onMouseEnter={() => setPauseTracks(true)}
+              onMouseLeave={() => setPauseTracks(false)}
+              onTouchStart={() => setPauseTracks(true)}
+              onTouchEnd={() => setPauseTracks(false)}
+              onTouchCancel={() => setPauseTracks(false)}
+            >
+              <div className={s.column}>
+                {renderCards(allTestimonials, false, pauseTracks)}
+              </div>
             </div>
-          </div>
+          )}
 
           <div className={s.sideStack}>
             <div className={s.ratingCard}>
@@ -195,7 +221,6 @@ const Testimonials = () => {
                 ))}
               </div>
               <p className={s.ratingMeta}>121 hodnocení a stále přibývají</p>
-              <div className={s.logos}>Apple · Google · YouTube</div>
             </div>
 
             <div className={s.pillCard}>
