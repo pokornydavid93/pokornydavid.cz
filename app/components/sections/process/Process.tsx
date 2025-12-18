@@ -29,13 +29,13 @@ const steps: Step[] = [
   {
     id: "uvod",
     title: "Úvodní konzultace",
-    kicker: "15 minut online",
+    kicker: "15 minut",
     description:
-      "Krátce si projdeme, co řešíte a co je pro vás nejdůležitější. Zjistíte, jak pracuji, bez tlaku na produkt.",
+      "Krátký úvodní hovor, kde si ujasníme, co aktuálně řešíte a co od spolupráce očekáváte. Bez závazků a bez tlaku na konkrétní řešení.",
     bullets: [
-      "rychlé zorientování a jasný další krok",
-      "první doporučení hned po hovoru",
-      "vnímám vaše priority a tempo",
+      "rychlé zorientování v situaci",
+      "pojmenování hlavních priorit",
+      "jasný návrh dalšího kroku",
     ],
     icon: <Sparkles size={24} />,
     image:
@@ -47,15 +47,15 @@ const steps: Step[] = [
     title: "Analýza financí",
     kicker: "Data, která dávají smysl",
     description:
-      "Zmapujeme příjmy, výdaje, rezervy i stávající smlouvy. Díky tomu víte, kde jsou příležitosti a rizika.",
+      "Podíváme se na příjmy, výdaje, rezervy a existující smlouvy. Cílem není složitý report, ale pochopení reality a jasný obraz celé situace.",
     bullets: [
-      "přehled o tokách peněz a rezervách",
-      "porovnání existujících smluv",
-      "co řešit hned a co může počkat",
+      "přehled, kam peníze skutečně odcházejí",
+      "vyhodnocení rezerv a závazků",
+      "rozdělení věcí na důležité a zbytné",
     ],
     icon: <HandCoins size={24} />,
     image:
-      "https://images.unsplash.com/photo-1454165205744-3b78555e5572?auto=format&fit=crop&w=1600&q=80&sat=-18&exp=-6",
+      "https://images.unsplash.com/photo-1707902665498-a202981fb5ac?auto=format&fit=crop&w=1600&q=80&sat=-22&exp=-6",
     badge: "Transparentně",
   },
   {
@@ -63,11 +63,11 @@ const steps: Step[] = [
     title: "Návrh řešení",
     kicker: "Plán na míru",
     description:
-      "Představím konkrétní plán, který sedí na vaši situaci. Vysvětlím proč a jak, bez složitých termínů.",
+      "Na základě analýzy připravím konkrétní plán. Vysvětlím souvislosti, varianty a dopady, abyste se mohli rozhodovat s klidem.",
     bullets: [
-      "prioritizovaný postup krok za krokem",
-      "jasné náklady a přínosy",
-      "řešení laděné na vaše cíle",
+      "jasná struktura kroků v čase",
+      "přehled nákladů a přínosů",
+      "řešení sladěné s vašimi cíli",
     ],
     icon: <LineChart size={24} />,
     image:
@@ -77,36 +77,39 @@ const steps: Step[] = [
   {
     id: "upravy",
     title: "Úpravy a doporučení",
-    kicker: "Prostor pro otázky",
+    kicker: "Prostor pro rozhodnutí",
     description:
-      "Společně doladíme detaily. Vyzkoušíme varianty, aby se řešení cítilo pohodlně a realisticky.",
+      "Návrh společně projdeme, doladíme a případně upravíme. Cílem je řešení, které je pochopitelné, proveditelné a dává vám smysl.",
     bullets: [
-      "otevřená Q&A k návrhu",
-      "doladění rozpočtu i časování",
-      "nechávám vám klid na rozhodnutí",
+      "otevřený prostor pro otázky",
+      "úpravy tempa, rozsahu i priorit",
+      "rozhodnutí bez časového tlaku",
     ],
     icon: <SlidersHorizontal size={24} />,
     image:
       "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80&sat=-20&exp=-6",
-    badge: "Bez tlaku",
+    badge: "Bez nátlaku",
   },
   {
     id: "pece",
     title: "Dlouhodobá péče",
     kicker: "Kontrola a revize",
     description:
-      "Hlídáme, aby plán držel krok s vaším životem. Pravidelné revize, upozornění na změny a rychlá reakce, když je potřeba.",
+      "Spolupráce nekončí podpisem. Průběžně hlídáme, aby plán odpovídal vašemu životu a reagoval na změny, když nastanou.",
     bullets: [
       "pravidelné servisní schůzky",
-      "aktualizace při změně situace",
-      "spoleh, že nezůstanete sami",
+      "úpravy při změně životní situace",
+      "dlouhodobá kontinuita a dohled",
     ],
     icon: <ShieldCheck size={24} />,
     image:
-      "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1600&q=80&sat=-18&exp=-5",
+      "https://images.unsplash.com/photo-1707301280406-55612d3bb9db?auto=format&fit=crop&w=1600&q=80&sat=-18&exp=-6",
     badge: "Partnerství",
   },
 ];
+
+
+
 
 const Process = () => {
   const { openLeadForm } = useLeadFormModal();
@@ -119,7 +122,7 @@ const Process = () => {
 
   return (
     <div className={s.processCont}>
-      <Container className={s.processInner}>
+      <Container className={`${s.processInner} reveal`}>
         <div className={s.sectionHeader}>
           <p className={s.eyebrow}>Průběh spolupráce</p>
           <div className={s.headlineWrap}>

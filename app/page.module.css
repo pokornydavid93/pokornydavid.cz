@@ -4,9 +4,11 @@
   background-color: var(--bg-section-dark);
 }
 
+.heroCont {
+  background-color: var(--brand-deep-trust);
+}
 
 .serviceStrip {
-
   display: flex;
   align-items: center;
   justify-content: space-evenly;

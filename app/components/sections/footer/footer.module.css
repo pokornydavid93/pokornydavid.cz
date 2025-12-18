@@ -34,7 +34,7 @@
 
 .brand {
   display: grid;
-  gap: 12px;
+  gap: 36px;
 }
 
 .logoWrap {
@@ -139,6 +139,33 @@
 
 .bottomLinks a:hover {
   color: var(--brand-tertiary);
+}
+
+.privacyBlock {
+  display: grid;
+  gap: 4px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.privacyBlock a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.privacyBlock a:hover {
+  color: var(--brand-tertiary);
+}
+
+.privacyLinks {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.privacyDot {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 880px) {

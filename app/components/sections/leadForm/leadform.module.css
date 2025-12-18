@@ -416,16 +416,28 @@
 }
 
 .field textarea {
-  resize: vertical;
+  resize: none;
   min-height: 96px;
 }
 
 .submitBtn {
   justify-content: center;
   font-weight: 800 !important;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28),
-    0 0 20px rgba(var(--brand-muted-teal-rgb), 0.25) !important;
   max-width: 160px;
+}
+
+.ctaNote {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.privacyNote {
+  margin-top: -10px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 @media (width <= 1630px) {

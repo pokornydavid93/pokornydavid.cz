@@ -12,6 +12,7 @@ import Video from "./components/sections/video/Video";
 import FAQ from "./components/sections/faq/FAQ";
 import FastGuide from "./components/sections/fastGuide/FastGuide";
 import LeadForm from "./components/sections/leadForm/LeadForm";
+import AboutCredentials from "./components/sections/about/AboutCredentials";
 import Footer from "./components/sections/footer/Footer";
 import { heroVariants } from "./content/heroVariants";
 import s from "./page.module.css";
@@ -70,11 +71,33 @@ export default function Page() {
     };
   }, [activeSection]);
 
+  useEffect(() => {
+    const revealables = Array.from(
+      document.querySelectorAll<HTMLElement>(".reveal"),
+    );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal--visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        rootMargin: "0px 0px -10% 0px",
+        threshold: 0.1,
+      },
+    );
+
+    revealables.forEach((node) => observer.observe(node));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <Nav setSideMenu={setSideMenu} sideMenu={sideMenu} />
       <SideMenu setSideMenu={setSideMenu} sideMenu={sideMenu} />
-   
    
       <main>
         <section id="hero" data-section-key="hero" className={s.heroCont}>
@@ -83,6 +106,10 @@ export default function Page() {
 
         <section id="about" data-section-key="about">
           <About />
+        </section>
+
+        <section>
+          <AboutCredentials />
         </section>
 
         <section id="testimonials" data-section-key="testimonials">

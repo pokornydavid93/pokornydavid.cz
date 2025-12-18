@@ -24,10 +24,6 @@ const Footer = () => {
                 <p className={s.role}>Finanční plánování</p>
               </div>
             </div>
-            <p className={s.tagline}>
-              Jasný plán, klid v hlavě a partner, který hlídá vaše finance v čase.
-              Vše lidsky, srozumitelně a bez tlaku.
-            </p>
             <Button
               variant="cta"
               className={s.cta}
@@ -61,11 +57,30 @@ const Footer = () => {
                   <a href="mailto:info@pokornydavid.cz">info@pokornydavid.cz</a>
                 </li>
                 <li>
-                  <MapPin size={16} />
-                  <span>Praha & online</span>
+                  {/* <MapPin size={16} /> */}
+                  <span></span>
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+
+        <div className={s.privacyBlock}>
+          <p>
+            Správce osobních údajů: SAB servis s.r.o. Vázaný zástupce: David
+            Pokorný
+          </p>
+          <p>
+            Dotazy k ochraně osobních údajů:{" "}
+            <a href="mailto:info@pokornydavid.cz">info@pokornydavid.cz</a>
+          </p>
+          <p>Obsah webu nepředstavuje investiční doporučení.</p>
+          <div className={s.privacyLinks}>
+            <a href="/zasady-zpracovani-osobnich-udaju">
+              Zásady zpracování osobních údajů
+            </a>
+            <span className={s.privacyDot}>·</span>
+            <a href="/cookies-a-mereni">Cookies &amp; měření</a>
           </div>
         </div>
 

@@ -150,15 +150,13 @@ const Testimonials = () => {
 
   return (
     <section className={s.section}>
-      <Container className={s.inner}>
+      <Container className={`${s.inner} reveal`}>
         <p className={s.eyebrow}>Skutečné příběhy klientů</p>
         <div className={s.grid}>
           <div className={s.card}>
             <h3 className={s.cardHeading}>Důvěřuje mi přes 200 klientů</h3>
             <p className={s.cardBody}>
-              Lidé oceňují jednoduché vysvětlení, klidný přístup a řešení bez
-              triků. Pomáhám nastavit finance krok za krokem, aby dávaly smysl v
-              reálném životě.
+              Klienti oceňují přehled, klidný přístup a řešení, která dávají smysl v běžném životě.
             </p>
             <p className={s.topicLabel}>Co řešíme nejčastěji</p>
             <div className={s.topicChips}>

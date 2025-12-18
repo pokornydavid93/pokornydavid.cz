@@ -41,6 +41,7 @@ const LeadFormCard = ({
   variant = "section",
   onRequestClose,
 }: LeadFormCardProps) => {
+  const isSection = variant === "section";
   const topicOptions = useMemo(() => {
     if (prefillTopic && !leadFormTopics.includes(prefillTopic as typeof leadFormTopics[number])) {
       return [prefillTopic, ...leadFormTopics];
@@ -219,7 +220,7 @@ const LeadFormCard = ({
         </button>
       ) : null}
 
-      <div className={s.formHead}>
+      <div className={`${s.formHead} ${isSection ? "reveal" : ""}`}>
         <p className={s.kicker}>Bez závazku, v klidu</p>
         <h2 className={s.title}>Probereme vaši situaci?</h2>
         <p className={s.subtitle}>
@@ -229,7 +230,10 @@ const LeadFormCard = ({
         </p>
       </div>
 
-      <form className={s.form} onSubmit={handleSubmit}>
+      <form
+        className={`${s.form} ${isSection ? "reveal" : ""}`.trim()}
+        onSubmit={handleSubmit}
+      >
         <div className={s.inlineFields}>
           <label className={s.field}>
             <span className={s.fieldLabel}>
@@ -402,6 +406,16 @@ const LeadFormCard = ({
               : "Sjednat konzultaci"}
           </Button>
         </div>
+
+        <p className={s.ctaNote}>
+          Konzultace je nezávazná a nepředstavuje investiční doporučení.
+        </p>
+
+        <p className={s.privacyNote}>
+          Správcem osobních údajů je SAB servis s.r.o. Údaje slouží pouze k
+          domluvě úvodního hovoru. Pokud nevznikne spolupráce, budou do 6 měsíců
+          smazány.
+        </p>
 
         {status.state === "success" ? (
           <p className={s.statusSuccess}>{status.message}</p>

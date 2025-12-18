@@ -14,6 +14,8 @@ import {
   Workflow,
   Quote,
   Play,
+  Compass,
+  LineChart,
 } from "lucide-react";
 import GradientText from "@/app/ui/animations/GradientText";
 import LogoMark from "@/app/svgr/LogoMark";
@@ -44,6 +46,28 @@ const Hero = ({ variants, activeSession }: HeroProps) => {
   const content = variants[index];
   const { width, height } = useViewport();
   const { openLeadForm } = useLeadFormModal();
+  const serviceLinks = [
+    {
+      label: "Finanční plán",
+      icon: <Compass className={s.serviceIcon} />,
+      target: "#service-financni-plan",
+    },
+    {
+      label: "Investice a spoření",
+      icon: <LineChart className={s.serviceIcon} />,
+      target: "#service-investice-a-sporeni",
+    },
+    {
+      label: "Zajištění příjmu",
+      icon: <ShieldCheck className={s.serviceIcon} />,
+      target: "#service-zajisteni-prijmu",
+    },
+    {
+      label: "Ochrana majetku",
+      icon: <Lock className={s.serviceIcon} />,
+      target: "#service-ochrana-majetku",
+    },
+  ];
 
   const { line1, line2, highlight } = content.title;
   const hasHighlight = highlight && line1.includes(highlight);
@@ -106,22 +130,12 @@ const Hero = ({ variants, activeSession }: HeroProps) => {
       </div>
 
       <div className={s.serviceStrip}>
-        <div className={s.serviceItem}>
-          <Home className={s.serviceIcon} />
-          Hypotéka & bydlení
-        </div>
-        <div className={s.serviceItem}>
-          <ShieldCheck className={s.serviceIcon} />
-          Zajištění příjmu
-        </div>
-        <div className={s.serviceItem}>
-          <Lock className={s.serviceIcon} />
-          Ochrana majetku
-        </div>
-        <div className={s.serviceItem}>
-          <ShieldAlert className={s.serviceIcon} />
-          Pojištění odpovědnosti
-        </div>
+        {serviceLinks.map((item) => (
+          <a key={item.label} href={item.target} className={s.serviceItem}>
+            {item.icon}
+            {item.label}
+          </a>
+        ))}
       </div>
       {/* switcher */}
       {/* <div className={s.variantSwitcher}>

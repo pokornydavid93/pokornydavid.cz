@@ -22,29 +22,30 @@ const faqs: FaqItem[] = [
   {
     question: "Jak probíhá první konzultace?",
     answer:
-      "Úvodní hovor je nezávazný. Projdeme vaši situaci, cíle a to, co právě potřebujete řešit. Zjistíte, jak pracuji, bez tlaku na jakýkoli produkt.",
+      "Úvodní hovor je nezávazný. Krátce projdeme vaši situaci a cíle, ujasníme si priority a domluvíme se na dalším kroku. Bez tlaku na produkt a bez složitých výrazů.",
   },
   {
-    question: "Můžete mi zpracovat kompletní finanční plán?",
+    question: "Umíte připravit finanční plán?",
     answer:
-      "Ano. Zmapujeme tok peněz, rezervy, investice i pojištění a připravím plán s jasnými kroky, prioritami a odůvodněním.",
+      "Ano. Na základě vašich příjmů, výdajů, rezerv a stávajících smluv připravím srozumitelný plán s prioritami a konkrétními kroky. Vždy tak, aby dával smysl v běžném životě.",
   },
   {
-    question: "Jak vybíráte konkrétní produkty a řešení?",
+    question: "Jak vybíráte konkrétní řešení?",
     answer:
-      "Začínám cíli a potřebami, ne produkty. Srovnám dostupné možnosti, vysvětlím rozdíly a společně vybereme variantu, která vám sedí.",
+      "Začínám tím, co je pro vás důležité – cíle, rizika a časový horizont. Srovnám možnosti, vysvětlím rozdíly a doporučím varianty, které dávají smysl. Finální volba je vždy na vás.",
   },
   {
-    question: "Kolik stojí vaše služby?",
+    question: "Kolik stojí spolupráce?",
     answer:
-      "Úvodní konzultace je zdarma. Další kroky nacením transparentně podle rozsahu práce, vždy předem a bez překvapení.",
+      "Úvodní konzultace je zdarma. U dalších kroků vždy předem řeknu, co bude součástí práce a jaká bude odměna – transparentně a bez překvapení.",
   },
   {
-    question: "Proč řešit finance právě se mnou?",
+    question: "V čem je váš přístup jiný?",
     answer:
-      "Držím kurz podle toho, co je pro vás důležité. Mluvím srozumitelně, stavím na dlouhodobém partnerství a hlídám, aby plán držel krok s vaším životem.",
+      "Mluvím srozumitelně a držím se toho, co je pro vás praktické a udržitelné. Spolupráci stavím jako dlouhodobou péči – plán pravidelně kontrolujeme a upravujeme podle toho, jak se mění váš život.",
   },
 ];
+
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number>(0);
@@ -53,7 +54,7 @@ const FAQ = () => {
   return (
     <section className={s.faqCont} id="faq">
       <div className={s.bgPattern} aria-hidden />
-      <Container className={s.inner}>
+      <Container className={`${s.inner} reveal`}>
         <div className={s.header}>
           <p className={s.eyebrow}>Jasně a stručně</p>
           <div>

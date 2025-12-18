@@ -262,3 +262,14 @@ button {
 section {
   color: var(--text-primary);
 }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(124px);
+  transition: opacity 0.55s ease, transform 1s ease;
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -118,6 +118,10 @@
   font-size: 15px;
 }
 
+.panel p {
+  font-weight: 600;
+}
+
 .open .panel {
   color: rgba(var(--brand-deep-trust-rgb), 0.9);
 }
