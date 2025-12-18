@@ -81,6 +81,13 @@
   top: 2px;
 }
 
+.brandTextMobile {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.3;
+}
+
 .name {
   font-size: 15px;
   font-weight: 600;
@@ -157,9 +164,10 @@
 
 @media (width <= 521px) {
   .brandText {
-    justify-content: center;
-    align-items: center;
-    line-height: 1.4;
+    display: none;
+  }
+  .brandTextMobile {
+    display: flex;
     position: relative;
     right: 8px;
   }

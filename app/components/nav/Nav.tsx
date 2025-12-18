@@ -109,20 +109,16 @@ const Nav = ({ sideMenu, setSideMenu }: NavProps) => {
     >
       <div className={s.leftBox}>
         <LogoMark />
-        {width > 521 ? (
-          <div className={s.brandText}>
-            <span className={s.name}>David Pokorný</span>
-            <span className={s.role}>Finanční plánování</span>
-          </div>
-        ) : null}
-      </div>
-
-      {width <= 521 ? (
         <div className={s.brandText}>
           <span className={s.name}>David Pokorný</span>
           <span className={s.role}>Finanční plánování</span>
         </div>
-      ) : null}
+      </div>
+
+      <div className={s.brandTextMobile}>
+        <span className={s.name}>David Pokorný</span>
+        <span className={s.role}>Finanční plánování</span>
+      </div>
 
       <div className={s.rightBox}>
         <a href="#about" className={s.topLink}>
