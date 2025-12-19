@@ -9,7 +9,7 @@ import { useLeadFormModal } from "../../Providers/LeadFormModalProvider";
 
 const VIDEO_SRC = "/video_h264.mp4";
 const VIDEO_POSTER = "/nahled-video.webp";
-const MOBILE_VIDEO_SRC = "/video-mobil_h264.mp4";
+const MOBILE_VIDEO_SRC = "/video-mobil_h264_720p.mp4";
 const MOBILE_POSTER = "/nahled-mobil.webp";
 
 const Video = () => {
