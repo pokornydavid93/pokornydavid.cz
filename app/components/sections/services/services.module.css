@@ -8,10 +8,12 @@
 
 .header {
   position: relative;
-  text-align: start;
-  max-width: 880px;
-  margin: 0px 0 100px 0;
-  display: grid;
+  width: 100%;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
   gap: 16px;
   z-index: 1;
 }
@@ -53,7 +55,6 @@
 }
 
 .card {
- 
   border: 1px solid rgba(var(--brand-tertiary-rgb), 0.52);
   border-radius: 24px;
   padding: 27px 22px 27px;
@@ -112,7 +113,7 @@
   background-position: center;
   overflow: hidden;
   border: 1px solid rgba(var(--brand-tertiary-rgb), 0.18);
-  min-height: 355px;
+  min-height: 258px;
 }
 
 .figureBadge {
@@ -135,13 +136,45 @@
   gap: 15px;
 }
 
+.text h3 {
+      background: var(--text-gradient-hero);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    max-width: 620px;
+    margin: 0;
+    font-size: clamp(26px, 2.4vw, 34px);
+    font-weight: 800;
+    line-height: 1.6;
+}
+
+.flexLabelCont {
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iconLabel {
+  width: 55px;
+  height: 55px;
+  color: var(--brand-tertiary);
+  filter: drop-shadow(0px 0px 5px);
+  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.60);;
+  border-radius: 30px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .label {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 6px;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(var(--brand-tertiary-rgb), 0.12);
   color: var(--brand-tertiary);
   font-size: 13px;
   letter-spacing: 0.06em;
@@ -149,7 +182,7 @@
   width: fit-content;
   box-shadow: 0 14px 28px -12px #0000008c,
     0 0 16px rgba(var(--brand-tertiary-rgb), 0.15);
-  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.32);
+  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.60);
 }
 
 .card h3 {
@@ -160,7 +193,7 @@
 
 .card p {
   margin: 0;
-  color: rgba(232, 242, 236, 0.8);
+  color: #ffffffd1;
   line-height: 1.6;
   font-size: 18px;
 }
@@ -174,7 +207,7 @@
 }
 
 .disclaimer {
-  margin: 82px auto 150;
+  margin: 150 auto;
   max-width: 820px;
   text-align: center;
   color: rgba(232, 242, 236, 0.72);

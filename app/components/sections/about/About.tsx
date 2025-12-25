@@ -15,7 +15,7 @@ const ABOUT_CONTENT = {
   eyebrow: "Kdo jsem",
   heading: {
     line1: "Cílem není dokonalý plán na papíře, ale systém, který funguje v reálném životě – dnes, za pět let i ve chvíli, kdy se situace změní.",
-    accent: "Srozumitelně a férově.",
+    accent: "Srozumitelně a férově",
   },
   lead: [
     "Jmenuji se David Pokorný a pomáhám lidem dát finance do pořádku tak, aby fungovaly v běžném životě a přinášely dlouhodobý klid.",
@@ -33,7 +33,7 @@ const ABOUT_CONTENT = {
     },
     {
       title: "Plán na míru",
-      text: "Každý další krok vychází z toho, jak žijete a co chcete mít ve svém životě pod kontrolou.",
+      text: "Každý další krok vychází z toho, jak žijete, jaké máte priority a co chcete mít ve svém životě pod kontrolou.",
     },
     {
       title: "Dlouhodobá jistota",

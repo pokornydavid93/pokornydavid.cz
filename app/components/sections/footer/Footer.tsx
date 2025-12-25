@@ -88,7 +88,7 @@ const Footer = () => {
             Pokorný
           </p>
           <p>
-            David Pokorný · IČO: XXXXXXXX · Sídlo: Ulice, PSČ Město
+            David Pokorný · IČO: 09016236 · Sídlo: Tovární 1197/42a, 779 00, Olomouc,
           </p>
           <p>
             Vázaný zástupce společnosti SAB servis s.r.o., IČ: 24704008, se
@@ -106,6 +106,9 @@ const Footer = () => {
           <div className={s.bottomLinks}>
             <a href="#lead-form">Konzultace</a>
             <a href="#services">Služby</a>
+            <a href="#testimonials">Reference</a>
+            <a href="#about">Transparentnost</a>
+            
           </div>
         </div>
       </Container>

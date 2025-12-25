@@ -46,7 +46,7 @@
   top: 0;
   bottom: 0;
   width: 50%;
-  padding: 70px;
+  padding: 45px;
   background: linear-gradient(
       122deg,
       #0f3a2f 22%,
@@ -59,7 +59,7 @@
     0 20px 45px rgba(0, 0, 0, 0.45),
     0 0 24px rgba(var(--brand-primary-rgb), 0.18);
   border: 1px solid rgba(var(--brand-tertiary-rgb), 0.12);
-  overflow: visible;
+  overflow: hidden;
   backdrop-filter: blur(9px);
   transform: none;
   display: flex;

@@ -49,10 +49,10 @@
 }
 
 .name {
-  margin: 0;
-  font-weight: 700;
-  font-size: 18px;
-  color: var(--brand-light);
+    color: var(--brand-tertiary);
+    filter: drop-shadow(0 0 4px #7eeb9766);
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .role {
@@ -76,12 +76,12 @@
 .links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 18px;
+  gap: 46px;
 }
 
 .links h4 {
   margin: 0 0 10px;
-  color: var(--brand-light);
+  color: var(--brand-tertiary);
   font-size: 15px;
   letter-spacing: 0.04em;
   text-transform: uppercase;

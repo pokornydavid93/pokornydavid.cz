@@ -43,7 +43,7 @@ const faqs: FaqItem[] = [
   {
     question: "V čem je váš přístup jiný?",
     answer:
-      "Mluvím srozumitelně a držím se toho, co je pro vás praktické a udržitelné. Spolupráci stavím jako dlouhodobou péči – plán pravidelně kontrolujeme a upravujeme podle toho, jak se mění váš život.",
+      "Mluvím srozumitelně a začínám u vašich cílů, ne u produktů. Spolupráci vnímám jako dlouhodobou péči – plán pravidelně kontrolujeme a upravujeme podle toho, jak se vyvíjí váš život.",
   },
 ];
 
@@ -62,7 +62,7 @@ const FAQ = () => {
             Jasně a stručně
           </Reveal>
 
-          <div>
+   
             <Reveal as="h2" from="left" delay={0.12}>
               Odpovědi na <span className={s.highlight}>vaše</span> otázky
             </Reveal>
@@ -71,7 +71,7 @@ const FAQ = () => {
               Co vás nejčastěji zajímá před začátkem spolupráce. Klikněte a
               otevřete detail.
             </Reveal>
-          </div>
+       
         </div>
 
         <div className={s.grid}>

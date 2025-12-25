@@ -121,19 +121,21 @@ const Video = () => {
             <Reveal from="left">
               <div className={`${s.headingBlock}`}>
                 <p className={s.eyebrow}>O SPOLUPRÁCI</p>
-                <h3 className={s.gradientSoft}>Jak spolupráce probíhá v praxi</h3>
+                <h3 className={s.gradientSoft}>
+                  Jak spolupráce probíhá v praxi
+                </h3>
               </div>
             </Reveal>
 
             <Reveal from="left">
               <p className={`${s.lede}`}>
-                Krátká ukázka celého procesu — od prvního kontaktu až po
+                Jak spolupráce skutečně probíhá — od prvního kontaktu až po
                 konkrétní výstup.
               </p>
             </Reveal>
           </div>
 
-          <Reveal from="fade">
+          <Reveal from="top">
             <div onClick={openVideo} className={`${s.visualCol}`}>
               <div className={s.videoFrame}>
                 <span className={s.videoGlow} aria-hidden />
@@ -160,17 +162,14 @@ const Video = () => {
 
         <div className={s.ctaRow}>
           <Reveal from="bottom">
-            <p className={`${s.ctaLead}`}>
-              Co by dávalo smysl u vás?
-            </p>
+            <p className={`${s.ctaLead}`}>Co by dávalo smysl u vás?</p>
           </Reveal>
           <Reveal from="bottom" className={s.gradientSoft}>
-           Vyplňte krátký formulář
+            Vyplňte krátký formulář
           </Reveal>
           <Reveal from="bottom">
             <p className={s.ctaDescription}>
-              Vyberte si oblast hovoru a já se vám do
-              24 hodin telefonicky ozvu.
+              Vyberte si, co právě řešíte. Do 24 hodin vám zavolám.
             </p>
           </Reveal>
           <Reveal from="bottom">

@@ -3,7 +3,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import {
   motion,
-  useAnimationFrame,
   useMotionValue,
   useScroll,
   useSpring,
@@ -203,19 +202,6 @@ function ScrollVelocityRowImpl({
     ro.observe(container);
     ro.observe(block);
 
-    const io = new IntersectionObserver(([entry]) => {
-      isInViewRef.current = entry.isIntersecting;
-    });
-    io.observe(container);
-
-    const handleVisibility = () => {
-      isPageVisibleRef.current = document.visibilityState === "visible";
-    };
-    document.addEventListener("visibilitychange", handleVisibility, {
-      passive: true,
-    });
-    handleVisibility();
-
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
     const handlePRM = () => {
       prefersReducedMotionRef.current = mq.matches;
@@ -226,8 +212,6 @@ function ScrollVelocityRowImpl({
 
     return () => {
       ro.disconnect();
-      io.disconnect();
-      document.removeEventListener("visibilitychange", handleVisibility);
       mq.removeEventListener("change", handlePRM);
       if (boostDecayTimeoutRef.current) {
         clearTimeout(boostDecayTimeoutRef.current);
@@ -249,61 +233,131 @@ function ScrollVelocityRowImpl({
   /* Animation frame                                                          */
   /* ------------------------------------------------------------------------ */
 
-  useAnimationFrame((_, delta) => {
-    if (!isInViewRef.current || !isPageVisibleRef.current) return;
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
 
-    const dt = delta / 1000;
-    const now = performance.now();
+    let rafId: number | null = null;
+    let lastTime: number | null = null;
 
-    let scrollDirection = 0;
-    if (velocityFactor) {
-      scrollDirection = Math.sign(velocityFactor.get());
-    }
+    const stopRAF = () => {
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+      lastTime = null;
+    };
 
-    if (scrollDirection !== 0) {
-      const changed =
-        scrollDirection !== lastScrollDirectionRef.current;
+    const loop = (time: number) => {
+      if (!isInViewRef.current || !isPageVisibleRef.current) {
+        stopRAF();
+        return;
+      }
 
-      if (changed) {
-        lastScrollDirectionRef.current = scrollDirection;
-        currentDirectionRef.current =
-          baseDirectionRef.current * scrollDirection;
+      const deltaMs = lastTime === null ? 0 : time - lastTime;
+      lastTime = time;
+      const dt = deltaMs / 1000;
 
-        if (
-          !prefersReducedMotionRef.current &&
-          now - lastBoostAtRef.current > BOOST_COOLDOWN_MS
-        ) {
-          lastBoostAtRef.current = now;
-          boostTarget.set(BOOST_MAGNITUDE);
+      let scrollDirection = 0;
+      if (velocityFactor) {
+        scrollDirection = Math.sign(velocityFactor.get());
+      }
 
-          if (boostDecayTimeoutRef.current) {
-            clearTimeout(boostDecayTimeoutRef.current);
+      if (scrollDirection !== 0) {
+        const changed =
+          scrollDirection !== lastScrollDirectionRef.current;
+
+        if (changed) {
+          lastScrollDirectionRef.current = scrollDirection;
+          currentDirectionRef.current =
+            baseDirectionRef.current * scrollDirection;
+
+          if (
+            !prefersReducedMotionRef.current &&
+            time - lastBoostAtRef.current > BOOST_COOLDOWN_MS
+          ) {
+            lastBoostAtRef.current = time;
+            boostTarget.set(BOOST_MAGNITUDE);
+
+            if (boostDecayTimeoutRef.current) {
+              clearTimeout(boostDecayTimeoutRef.current);
+            }
+
+            boostDecayTimeoutRef.current = setTimeout(() => {
+              boostTarget.set(0);
+            }, BOOST_DECAY_MS);
           }
-
-          boostDecayTimeoutRef.current = setTimeout(() => {
-            boostTarget.set(0);
-          }, BOOST_DECAY_MS);
         }
       }
-    }
 
-    const bw = unitWidth.get();
-    if (bw <= 0) return;
+      const bw = unitWidth.get();
+      if (bw <= 0) {
+        rafId = requestAnimationFrame(loop);
+        return;
+      }
 
-    const pixelsPerSecond = (bw * baseVelocity) / 100;
-    const boost =
-      velocityFactor && !prefersReducedMotionRef.current
-        ? Math.max(0, boostSpring.get())
-        : 0;
+      const pixelsPerSecond = (bw * baseVelocity) / 100;
+      const boost =
+        velocityFactor && !prefersReducedMotionRef.current
+          ? Math.max(0, boostSpring.get())
+          : 0;
 
-    const moveBy =
-      currentDirectionRef.current *
-      pixelsPerSecond *
-      (1 + boost) *
-      dt;
+      const moveBy =
+        currentDirectionRef.current *
+        pixelsPerSecond *
+        (1 + boost) *
+        dt;
 
-    baseX.set(baseX.get() + moveBy);
-  });
+      baseX.set(baseX.get() + moveBy);
+      rafId = requestAnimationFrame(loop);
+    };
+
+    const startRAF = () => {
+      if (rafId !== null) return;
+      lastTime = null;
+      rafId = requestAnimationFrame(loop);
+    };
+
+    const syncRAF = () => {
+      if (isInViewRef.current && isPageVisibleRef.current) {
+        startRAF();
+      } else {
+        stopRAF();
+      }
+    };
+
+    isInViewRef.current = false;
+    isPageVisibleRef.current = document.visibilityState === "visible";
+
+    const io = new IntersectionObserver(([entry]) => {
+      isInViewRef.current = entry.isIntersecting;
+      syncRAF();
+    });
+    io.observe(container);
+
+    const handleVisibility = () => {
+      isPageVisibleRef.current = document.visibilityState === "visible";
+      syncRAF();
+    };
+    document.addEventListener("visibilitychange", handleVisibility, {
+      passive: true,
+    });
+
+    syncRAF();
+
+    return () => {
+      stopRAF();
+      io.disconnect();
+      document.removeEventListener("visibilitychange", handleVisibility);
+    };
+  }, [
+    baseVelocity,
+    baseX,
+    boostSpring,
+    boostTarget,
+    unitWidth,
+    velocityFactor,
+  ]);
 
   /* ------------------------------------------------------------------------ */
   /* Render                                                                   */

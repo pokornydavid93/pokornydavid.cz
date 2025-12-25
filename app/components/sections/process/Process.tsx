@@ -39,8 +39,7 @@ const steps: Step[] = [
       "jasný návrh dalšího kroku",
     ],
     icon: <Sparkles size={24} />,
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80&sat=-18&exp=-6",
+    image: "/uvod.avif",
     badge: "Start bez závazků",
   },
   {
@@ -55,8 +54,7 @@ const steps: Step[] = [
       "rozdělení věcí na důležité a zbytné",
     ],
     icon: <HandCoins size={24} />,
-    image:
-      "https://images.unsplash.com/photo-1707902665498-a202981fb5ac?auto=format&fit=crop&w=1600&q=80&sat=-22&exp=-6",
+    image: "/analyza.avif",
     badge: "Transparentně",
   },
   {
@@ -71,8 +69,7 @@ const steps: Step[] = [
       "řešení sladěné s vašimi cíli",
     ],
     icon: <LineChart size={24} />,
-    image:
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80&sat=-18&exp=-6",
+    image: "/navrh.avif",
     badge: "Konkrétní plán",
   },
   {
@@ -87,8 +84,8 @@ const steps: Step[] = [
       "rozhodnutí bez časového tlaku",
     ],
     icon: <SlidersHorizontal size={24} />,
-    image:
-      "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80&sat=-20&exp=-6",
+    image: "/upravy.avif",
+
     badge: "Bez nátlaku",
   },
   {
@@ -103,8 +100,7 @@ const steps: Step[] = [
       "dlouhodobá kontinuita a dohled",
     ],
     icon: <ShieldCheck size={24} />,
-    image:
-      "https://images.unsplash.com/photo-1707301280406-55612d3bb9db?auto=format&fit=crop&w=1600&q=80&sat=-18&exp=-6",
+    image: "/pece.avif",
     badge: "Partnerství",
   },
 ];
@@ -166,17 +162,18 @@ const Process = () => {
 
           <div className={s.detailCol}>
             <div className={s.detailCard}>
-              <div
-                className={s.detailMedia}
-                style={{
-                  backgroundImage: `linear-gradient(150deg, rgba(12, 42, 34, 0.65), rgba(12, 42, 34, 0.15)), url(${activeStep.image})`,
-                }}
-                role="presentation"
-              >
-                {activeStep.badge && (
-                  <span className={s.badge}>{activeStep.badge}</span>
-                )}
-              </div>
+             
+                <div
+                  className={s.detailMedia}
+                  style={{
+                    backgroundImage: `linear-gradient(150deg, rgba(12, 42, 34, 0.65), rgba(12, 42, 34, 0.15)), url(${activeStep.image})`,
+                  }}
+                  role="presentation"
+                >
+                  {activeStep.badge && (
+                    <span className={s.badge}>{activeStep.badge}</span>
+                  )}
+                </div>
 
               <div className={s.detailBody}>
                 <Reveal

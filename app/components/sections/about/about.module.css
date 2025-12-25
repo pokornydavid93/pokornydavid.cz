@@ -107,11 +107,12 @@
   display: flex;
   gap: 8px;
   flex-direction: column;
-  margin-top: 35px;
+  margin-top: 150px;
+  margin-bottom: 50px;
 }
 
 .body {
-  color: var(--brand-white);
+  color: var(--brand-light);
   line-height: 1.62;
   font-size: clamp(15px, 1.1vw, 18px);
   margin: 0;

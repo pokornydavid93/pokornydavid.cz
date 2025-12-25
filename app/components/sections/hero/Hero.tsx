@@ -3,22 +3,13 @@ import { useState } from "react";
 import s from "./hero.module.css";
 import Button from "@/app/ui/cta/Button";
 import {
-  ChevronRight,
   PhoneCall,
-  ShieldCheck,
-  Home,
-  Lock,
-  ShieldAlert,
-  User2,
-  HeartHandshake,
-  Workflow,
-  Quote,
-  Play,
-  Compass,
-  LineChart,
+  Eye,
+  BadgeCheck,
+  Hand,
+  Repeat,
 } from "lucide-react";
 import GradientText from "@/app/ui/animations/GradientText";
-import LogoMark from "@/app/svgr/LogoMark";
 import { useViewport } from "../../Providers/ViewportProvider";
 import { useLeadFormModal } from "../../Providers/LeadFormModalProvider";
 
@@ -48,23 +39,23 @@ const Hero = ({ variants, activeSession }: HeroProps) => {
   const { openLeadForm } = useLeadFormModal();
   const serviceLinks = [
     {
-      label: "Finanční plán",
-      icon: <Compass className={s.serviceIcon} />,
+      label: "Licencovaný poradce",
+      icon: <BadgeCheck className={s.serviceIcon} />,
       target: "#service-financni-plan",
     },
     {
-      label: "Investice a spoření",
-      icon: <LineChart className={s.serviceIcon} />,
+      label: "Transparentnost",
+      icon: <Eye className={s.serviceIcon} />,
       target: "#service-investice-a-sporeni",
     },
     {
-      label: "Zajištění příjmu",
-      icon: <ShieldCheck className={s.serviceIcon} />,
+      label: "Bez tlaku na produkt",
+      icon: <Hand className={s.serviceIcon} />,
       target: "#service-zajisteni-prijmu",
     },
     {
-      label: "Ochrana majetku",
-      icon: <Lock className={s.serviceIcon} />,
+      label: "Dlouhodobá spolupráce",
+      icon: <Repeat className={s.serviceIcon} />,
       target: "#service-ochrana-majetku",
     },
   ];

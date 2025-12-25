@@ -30,6 +30,7 @@
   min-height: 100px;
   max-height: 170px;
   margin-top: 150px;
+  margin-bottom: 50px;
 }
 
 .headingBlock {
@@ -163,9 +164,6 @@
   background-image: var(--video-poster, url("/nahled-video.png"));
   background-size: cover;
   background-position: center;
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.45),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-  isolation: isolate;
   height: 85vh;
 }
 .cornerTag {

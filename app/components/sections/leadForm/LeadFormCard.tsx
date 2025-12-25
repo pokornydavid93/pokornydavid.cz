@@ -233,7 +233,7 @@ const LeadFormCard = ({
         </button>
       ) : null}
 
-      <SectionReveal enabled={isSection} from="bottom">
+      <SectionReveal enabled={isSection} from="left">
         <div className={s.formHead}>
           <p className={s.kicker}>Bez závazku, v klidu</p>
           <h2 className={s.title}>Probereme vaši situaci?</h2>
@@ -410,7 +410,7 @@ const LeadFormCard = ({
           </label>
         </SectionReveal>
 
-        <SectionReveal enabled={isSection} from="right">
+        <SectionReveal enabled={isSection} from="left">
           <div className={s.actions}>
             <Button
               type="submit"
