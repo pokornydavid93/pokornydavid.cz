@@ -129,7 +129,7 @@ const Video = () => {
 
             <Reveal from="left">
               <p className={`${s.lede}`}>
-                Jak spolupráce skutečně probíhá — od prvního kontaktu až po
+                Od prvního kontaktu až po
                 konkrétní výstup.
               </p>
             </Reveal>
