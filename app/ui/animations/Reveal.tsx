@@ -21,8 +21,6 @@ type RenderProp = (args: {
 
 type RevealProps<T extends ElementType = "div"> = {
   as?: T;
-
-  /** podporuje JSX i legacy render-prop */
   children: ReactNode | RenderProp;
 
   from?: RevealFrom;
@@ -34,7 +32,6 @@ type RevealProps<T extends ElementType = "div"> = {
   start?: string;
   offset?: number;
 
-  /** stagger podpora pro map() */
   index?: number;
   stagger?: number;
 
@@ -46,10 +43,10 @@ export function Reveal<T extends ElementType = "div">({
   children,
   from = "bottom",
   delay = 0,
-  duration = 1,
-  once = true,
+  duration = 0.9,
+  once = false,
   disabled = false,
-  start = "top 100%",
+  start = "top 90%",
   offset = 120,
   index,
   stagger,
@@ -69,7 +66,7 @@ export function Reveal<T extends ElementType = "div">({
       : delay;
 
   useLayoutEffect(() => {
-    if (disabled || !el) return;
+    if (!el || disabled) return;
 
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
@@ -92,24 +89,35 @@ export function Reveal<T extends ElementType = "div">({
         : { x: offset };
 
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        el,
-        { opacity: 0, ...fromVars },
-        {
-          opacity: 1,
-          x: 0,
-          y: 0,
-          delay: computedDelay,
-          duration,
-          ease: "power3.out",
-          clearProps: "transform",
-          scrollTrigger: {
-            trigger: el,
-            start,
-            once,
-          },
-        }
-      );
+      // 🔹 výchozí stav (mimo viewport)
+      gsap.set(el, { opacity: 0, ...fromVars });
+
+      const tl = gsap.timeline({ paused: true });
+
+      tl.to(el, {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        duration,
+        delay: computedDelay,
+        ease: "power3.out",
+        clearProps: "transform",
+      });
+
+      const trigger = ScrollTrigger.create({
+        trigger: el,
+        start,
+        onEnter: () => tl.play(),
+        onEnterBack: () => tl.play(),
+        onLeave: () => tl.reverse(),
+        onLeaveBack: () => tl.reverse(),
+      });
+
+      if (once) {
+        tl.eventCallback("onComplete", () => {
+          trigger.kill();
+        });
+      }
     }, el);
 
     return () => ctx.revert();
@@ -124,12 +132,11 @@ export function Reveal<T extends ElementType = "div">({
     offset,
   ]);
 
-  // ✅ legacy render-prop
+  // render-prop
   if (typeof children === "function") {
     return children({ ref: setRef });
   }
 
-  // ✅ čistý režim
   return (
     <Tag ref={setRef} className={className} {...rest}>
       {children}

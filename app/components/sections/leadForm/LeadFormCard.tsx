@@ -19,6 +19,8 @@ export const leadFormTopics = [
   "Investice a spoření",
   "Zajištění příjmu",
   "Pojištění vozidla",
+  "Reality (prodej nemovitosti)",
+  "Energie a úspory",
   "Ochrana majetku",
   "Pojištění odpovědnosti",
   "Spotřebitelské a podnikatelské úvěry",
@@ -236,11 +238,10 @@ const LeadFormCard = ({
       <SectionReveal enabled={isSection} from="left">
         <div className={s.formHead}>
           <p className={s.kicker}>Bez závazku, v klidu</p>
-          <h2 className={s.title}>Probereme vaši situaci?</h2>
+          <h2 className={s.title}>Probereme vaši situaci</h2>
           <p className={s.subtitle}>
-            Nechte na sebe kontakt a v klidu si projdeme vaši situaci. Cílem je
-            získat přehled a domluvit se na dalším kroku. Ozvu se vám nejpozději
-            do 24 hodin.
+            Domluvíme další
+            krok. Ozvu se do 24 hodin.
           </p>
         </div>
       </SectionReveal>
@@ -422,9 +423,7 @@ const LeadFormCard = ({
               {status.state === "submitting" ? (
                 <span className={s.loader} aria-hidden />
               ) : null}
-              {status.state === "submitting"
-                ? "Odesílám…"
-                : "Odeslat"}
+              {status.state === "submitting" ? "Odesílám…" : "Odeslat"}
             </Button>
           </div>
         </SectionReveal>
