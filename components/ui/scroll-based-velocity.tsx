@@ -14,7 +14,13 @@ import type { MotionValue } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
-interface ScrollVelocityRowProps extends React.HTMLAttributes<HTMLDivElement> {
+/* ============================================================================
+ * Types
+ * ============================================================================
+ */
+
+interface ScrollVelocityRowProps
+  extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   baseVelocity?: number;
   direction?: 1 | -1;
@@ -27,6 +33,15 @@ interface ScrollVelocityRowProps extends React.HTMLAttributes<HTMLDivElement> {
   scrollLinked?: boolean;
 }
 
+interface ScrollVelocityRowImplProps extends ScrollVelocityRowProps {
+  velocityFactor: MotionValue<number> | null;
+}
+
+/* ============================================================================
+ * Utils
+ * ============================================================================
+ */
+
 export const wrap = (min: number, max: number, v: number) => {
   const rangeSize = max - min;
   return ((((v - min) % rangeSize) + rangeSize) % rangeSize) + min;
@@ -37,9 +52,18 @@ const BOOST_MAGNITUDE = 0.9;
 const BOOST_COOLDOWN_MS = 160;
 const BOOST_DECAY_MS = 140;
 
-const ScrollVelocityContext = React.createContext<MotionValue<number> | null>(
-  null
-);
+/* ============================================================================
+ * Context
+ * ============================================================================
+ */
+
+const ScrollVelocityContext =
+  React.createContext<MotionValue<number> | null>(null);
+
+/* ============================================================================
+ * Container – sdílený scroll → direction signal
+ * ============================================================================
+ */
 
 export function ScrollVelocityContainer({
   children,
@@ -48,16 +72,28 @@ export function ScrollVelocityContainer({
 }: React.HTMLAttributes<HTMLDivElement>) {
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
+
   const smoothVelocity = useSpring(scrollVelocity, {
     damping: 40,
     stiffness: 300,
   });
 
-const directionSignal = useTransform(smoothVelocity, (v): number => {
-  if (Math.abs(v) < DIRECTION_THRESHOLD) return 0;
-  return v < 0 ? -1 : 1;
-});
+  /**
+   * DŮLEŽITÉ:
+   * - NEPOUŽÍVÁME useTransform → vracel by union (0 | 1 | -1)
+   * - ručně spravujeme MotionValue<number>
+   */
+  const directionSignal = useMotionValue<number>(0);
 
+  useEffect(() => {
+    return smoothVelocity.on("change", (v) => {
+      if (Math.abs(v) < DIRECTION_THRESHOLD) {
+        directionSignal.set(0);
+      } else {
+        directionSignal.set(v < 0 ? -1 : 1);
+      }
+    });
+  }, [smoothVelocity, directionSignal]);
 
   return (
     <ScrollVelocityContext.Provider value={directionSignal}>
@@ -68,6 +104,11 @@ const directionSignal = useTransform(smoothVelocity, (v): number => {
   );
 }
 
+/* ============================================================================
+ * Public Row wrapper
+ * ============================================================================
+ */
+
 export function ScrollVelocityRow({
   scrollLinked = true,
   ...props
@@ -76,7 +117,10 @@ export function ScrollVelocityRow({
 
   if (scrollLinked && sharedVelocityFactor) {
     return (
-      <ScrollVelocityRowImpl {...props} velocityFactor={sharedVelocityFactor} />
+      <ScrollVelocityRowImpl
+        {...props}
+        velocityFactor={sharedVelocityFactor}
+      />
     );
   }
 
@@ -87,9 +131,10 @@ export function ScrollVelocityRow({
   return <ScrollVelocityRowImpl {...props} velocityFactor={null} />;
 }
 
-interface ScrollVelocityRowImplProps extends ScrollVelocityRowProps {
-  velocityFactor: MotionValue<number> | null;
-}
+/* ============================================================================
+ * Core implementation
+ * ============================================================================
+ */
 
 function ScrollVelocityRowImpl({
   children,
@@ -108,14 +153,19 @@ function ScrollVelocityRowImpl({
   const [numCopies, setNumCopies] = useState(1);
 
   const baseX = useMotionValue(0);
+  const unitWidth = useMotionValue(0);
+
   const baseDirectionRef = useRef<number>(direction >= 0 ? 1 : -1);
   const currentDirectionRef = useRef<number>(direction >= 0 ? 1 : -1);
   const lastScrollDirectionRef = useRef<number>(0);
-  const unitWidth = useMotionValue(0);
 
   const isInViewRef = useRef(true);
   const isPageVisibleRef = useRef(true);
   const prefersReducedMotionRef = useRef(false);
+
+  /* ------------------------------------------------------------------------ */
+  /* Boost logic                                                              */
+  /* ------------------------------------------------------------------------ */
 
   const boostTarget = useMotionValue(0);
   const boostSpring = useSpring(boostTarget, {
@@ -123,10 +173,15 @@ function ScrollVelocityRowImpl({
     stiffness: 260,
     mass: 0.7,
   });
+
   const lastBoostAtRef = useRef<number>(0);
   const boostDecayTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(
     null
   );
+
+  /* ------------------------------------------------------------------------ */
+  /* Resize / visibility / reduced motion                                     */
+  /* ------------------------------------------------------------------------ */
 
   useEffect(() => {
     const container = containerRef.current;
@@ -137,6 +192,7 @@ function ScrollVelocityRowImpl({
       const cw = container.offsetWidth || 0;
       const bw = block.scrollWidth || 0;
       unitWidth.set(bw);
+
       const nextCopies = bw > 0 ? Math.max(3, Math.ceil(cw / bw) + 2) : 1;
       setNumCopies((prev) => (prev === nextCopies ? prev : nextCopies));
     };
@@ -179,11 +235,19 @@ function ScrollVelocityRowImpl({
     };
   }, [children, unitWidth, boostTarget]);
 
+  /* ------------------------------------------------------------------------ */
+  /* X transform                                                              */
+  /* ------------------------------------------------------------------------ */
+
   const x = useTransform([baseX, unitWidth], ([v, bw]) => {
     const width = Number(bw) || 1;
     const offset = Number(v) || 0;
     return `${-wrap(0, width, offset)}px`;
   });
+
+  /* ------------------------------------------------------------------------ */
+  /* Animation frame                                                          */
+  /* ------------------------------------------------------------------------ */
 
   useAnimationFrame((_, delta) => {
     if (!isInViewRef.current || !isPageVisibleRef.current) return;
@@ -197,10 +261,10 @@ function ScrollVelocityRowImpl({
     }
 
     if (scrollDirection !== 0) {
-      const hasDirectionChanged =
+      const changed =
         scrollDirection !== lastScrollDirectionRef.current;
 
-      if (hasDirectionChanged) {
+      if (changed) {
         lastScrollDirectionRef.current = scrollDirection;
         currentDirectionRef.current =
           baseDirectionRef.current * scrollDirection;
@@ -223,21 +287,27 @@ function ScrollVelocityRowImpl({
       }
     }
 
-    const bw = unitWidth.get() || 0;
+    const bw = unitWidth.get();
     if (bw <= 0) return;
 
     const pixelsPerSecond = (bw * baseVelocity) / 100;
-    const boostValue =
+    const boost =
       velocityFactor && !prefersReducedMotionRef.current
         ? Math.max(0, boostSpring.get())
         : 0;
 
-    const speedMultiplier = 1 + boostValue;
     const moveBy =
-      currentDirectionRef.current * pixelsPerSecond * speedMultiplier * dt;
+      currentDirectionRef.current *
+      pixelsPerSecond *
+      (1 + boost) *
+      dt;
 
     baseX.set(baseX.get() + moveBy);
   });
+
+  /* ------------------------------------------------------------------------ */
+  /* Render                                                                   */
+  /* ------------------------------------------------------------------------ */
 
   return (
     <div
@@ -288,19 +358,36 @@ function ScrollVelocityRowImpl({
   );
 }
 
+/* ============================================================================
+ * Local (bez contextu)
+ * ============================================================================
+ */
+
 function ScrollVelocityRowLocal(props: ScrollVelocityRowProps) {
   const { scrollY } = useScroll();
   const localVelocity = useVelocity(scrollY);
-  const localSmoothVelocity = useSpring(localVelocity, {
+
+  const smoothVelocity = useSpring(localVelocity, {
     damping: 40,
     stiffness: 300,
   });
-  const localVelocityFactor = useTransform(localSmoothVelocity, (v) => {
-    if (Math.abs(v) < DIRECTION_THRESHOLD) return 0;
-    return v < 0 ? -1 : 1;
-  });
+
+  const directionSignal = useMotionValue<number>(0);
+
+  useEffect(() => {
+    return smoothVelocity.on("change", (v) => {
+      if (Math.abs(v) < DIRECTION_THRESHOLD) {
+        directionSignal.set(0);
+      } else {
+        directionSignal.set(v < 0 ? -1 : 1);
+      }
+    });
+  }, [smoothVelocity, directionSignal]);
 
   return (
-    <ScrollVelocityRowImpl {...props} velocityFactor={localVelocityFactor} />
+    <ScrollVelocityRowImpl
+      {...props}
+      velocityFactor={directionSignal}
+    />
   );
 }
