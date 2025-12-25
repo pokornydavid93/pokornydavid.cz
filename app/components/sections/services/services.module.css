@@ -37,6 +37,7 @@
   font-size: clamp(26px, 2.4vw, 34px);
   font-weight: 800;
   line-height: 1.6;
+  text-align: end;
 }
 
 .sub {
@@ -44,6 +45,7 @@
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
+  text-align: end;
 }
 
 .grid {
