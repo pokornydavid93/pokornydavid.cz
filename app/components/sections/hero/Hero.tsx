@@ -3,9 +3,10 @@ import { useState } from "react";
 import s from "./hero.module.css";
 import Button from "@/app/ui/cta/Button";
 import {
-  PhoneCall,
+  MousePointerClick,
   Eye,
   BadgeCheck,
+  ShieldAlert,
   Hand,
   Repeat,
 } from "lucide-react";
@@ -49,24 +50,20 @@ const Hero = ({ variants, activeSession }: HeroProps) => {
       target: "#service-investice-a-sporeni",
     },
     {
-      label: "Bez tlaku na produkt",
-      icon: <Hand className={s.serviceIcon} />,
-      target: "#service-zajisteni-prijmu",
-    },
-    {
       label: "Dlouhodobá spolupráce",
       icon: <Repeat className={s.serviceIcon} />,
       target: "#service-ochrana-majetku",
     },
   ];
+  const trustHints = ["Nezávazně", "Bez tlaku na produkt"];
 
   const { line1, line2, highlight } = content.title;
   const hasHighlight = highlight && line1.includes(highlight);
   const [before, after] = hasHighlight ? line1.split(highlight) : [line1, ""];
 
-  const next = () => setIndex((i) => (i + 1) % variants.length);
-  const prev = () =>
-    setIndex((i) => (i - 1 + variants.length) % variants.length);
+  // const next = () => setIndex((i) => (i + 1) % variants.length);
+  // const prev = () =>
+  //   setIndex((i) => (i - 1 + variants.length) % variants.length);
 
   return (
     <section className={s.heroCont}>
@@ -75,7 +72,6 @@ const Hero = ({ variants, activeSession }: HeroProps) => {
       <div className={s.heroInner}>
         <div className={s.heroGlass} />
         <p className={s.eyebrow}>{content.eyebrow}</p>
-
         <h1 className={s.title}>
           <span className={s.titleLine}>
             {hasHighlight ? (
@@ -84,7 +80,7 @@ const Hero = ({ variants, activeSession }: HeroProps) => {
                 <GradientText
                   gradientVar="--text-gradient-hero"
                   className={s.highlight}
-                  animationSpeed={1}
+                  animationSpeed={5}
                 >
                   {highlight}
                 </GradientText>
@@ -100,21 +96,34 @@ const Hero = ({ variants, activeSession }: HeroProps) => {
         <p className={s.description}>{content.description}</p>
 
         <div className={s.actions}>
+          <div className={s.trustHints}>
+            <div className={s.trustHintList}>
+              {trustHints.map((hint) => (
+                <span key={hint} className={s.trustHint}>
+                  <ShieldAlert
+                    className={s.trustHintIcon}
+                    strokeWidth={2.5}
+                    aria-hidden
+                  />
+                  <span className={s.trustHintText}>{hint}</span>
+                  <ShieldAlert
+                    className={s.trustHintIconRight}
+                    strokeWidth={2.5}
+                    aria-hidden
+                  />
+                </span>
+              ))}
+            </div>
+          </div>
+
           <Button
             variant="cta"
             label={content.cta.primary.label}
             onClick={() => openLeadForm()}
-            iconRight={
-              <PhoneCall
-                style={{ color: "var(--brand-dark)", marginLeft: "7px" }}
-              />
-            }
+            iconRight={<MousePointerClick className={s.ctaIcon} aria-hidden />}
             size="md"
             className={s.heroCta}
           />
-          {/* <div className={s.playCont}>
-            <Play />
-          </div> */}
         </div>
 
         {/* 🔥 NOVÝ BOTTOM STRIP – elegantně posazený na dně hero */}

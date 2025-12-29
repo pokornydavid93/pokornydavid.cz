@@ -72,14 +72,14 @@ export const heroVariants: HeroContent[] = [
     },
   },
   {
-    eyebrow: "Když nechcete rozhodovat naslepo",
+    eyebrow: "Když nechcete rozhodovat na slepo",
     title: {
       line1: "Nejdřív Přehled",
       line2: "Potom Jasný Plán",
-      highlight: "Přehled",
+      highlight: "Nejdřív Přehled",
     },
     description:
-      "Nejjednodušší cesta je ta, kterou vidíte jasně. Projdeme možnosti krok za krokem a vybereme takovou, která dává smysl právě vám.",
+      "K dobrému rozhodnutí vede jasný přehled. Společně projdeme varianty a určíte, která z nich nejlépe odpovídá vašim prioritám.",
     cta: {
       primary: { label: "Probrat vaši situaci", href: "#lead-form" },
       secondary: { label: "Kdo jsem", href: "#process" },

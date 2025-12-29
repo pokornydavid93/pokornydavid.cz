@@ -83,6 +83,49 @@
   width: 100%;
 }
 
+.trustHints {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  backdrop-filter: blur(10px);
+  color: rgba(236, 248, 239, 0.9);
+  letter-spacing: 0.01em;
+}
+
+.trustHintList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px;
+  align-items: center;
+}
+
+.trustHint {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 16px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #185846f2, #0f3a2f40);
+  border-left: 2px solid var(--brand-tertiary);
+  border-right: 2px solid var(--brand-tertiary);
+  box-shadow: 0 14px 28px -12px #0000008c;
+
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--brand-white);
+}
+.trustHintIconRight {
+  display: none; /* default = jen vlevo */
+}
+.trustHintIconRight,
+.trustHintIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--brand-tertiary);
+  filter: drop-shadow(0 0 4px rgba(126, 235, 151, 0.28));
+}
+
 .serviceItem {
   position: relative;
   display: flex;
@@ -208,7 +251,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
   background: linear-gradient(
     135deg,
     rgba(24, 88, 70, 0.95),
@@ -222,7 +264,7 @@
 .eyebrow {
   font-size: clamp(12px, 0.8vw, 15.5px);
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--brand-tertiary);
   margin-bottom: 6px;
@@ -247,23 +289,24 @@
 .description {
   max-width: 650px;
   min-width: 536px;
-  font-size: clamp(17.7px, 1.45vw, 22px);
+  font-size: clamp(15.7px, 1.45vw, 19px);
   line-height: 1.52;
   color: var(--brand-white);
-  text-shadow: 0px 0px 20px var(--brand-dark);
   margin: 0px 0 20px 0;
   opacity: 0;
   animation: heroFadeUp 0.9s ease 0.35s forwards;
+  margin-top: 5px;
 }
 
 /* ACTIONS */
 .actions {
   flex-wrap: wrap;
-  gap: 22px;
+  gap: 60px;
   margin-top: 16px;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   opacity: 0;
   animation: heroFadeUp 0.9s ease 0.5s forwards;
 }
@@ -274,6 +317,7 @@
   padding: 13px 24px !important;
   font-size: 17px !important;
   font-weight: 800 !important;
+  box-shadow: none;
 }
 
 .heroCta:hover {
@@ -337,7 +381,7 @@
 @media (width <= 1880px) {
   .heroInner {
     padding: 50px;
-    padding-top: 90px;
+    padding-top: 161px;
   }
 
   .description {
@@ -391,6 +435,10 @@
     );
   }
 
+  .ctaIcon {
+    display: none;
+  }
+
   .description {
     max-width: 550px;
   }
@@ -398,7 +446,7 @@
   .heroInner {
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 13px;
   }
   .eyebrow {
     text-align: center;
@@ -413,9 +461,41 @@
     max-width: 438px;
   }
   .actions {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-between;
     margin: 0;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .trustHintList .trustHint {
+    display: none;
+  }
+
+  .trustHintList .trustHint:first-child {
+    display: inline-flex;
+  }
+
+  .trustHintIconRight {
+    display: inline-block;
+    color: var(--brand-tertiary);
+    filter: drop-shadow(0 0 4px rgba(126, 235, 151, 0.28));
+  }
+  .trustHints {
+    width: 100%;
+  }
+  .trustHintList {
+    flex-direction: column;
+    width: 100%;
+  }
+  .trustHint {
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+  }
+  .trustHintIcon {
+    width: 20px;
+    height: 20px;
   }
 
   .heroInner {
@@ -430,7 +510,6 @@
     font-weight: 800 !important;
   }
   .actions {
-    flex-direction: column;
     justify-content: space-between;
     margin: 0;
   }
@@ -439,6 +518,7 @@
   }
   .heroInner {
     padding-top: 70px;
+    padding-bottom: 5px;
 
     border-bottom: 1px solid #d6ffad2e;
     box-shadow: none;
@@ -468,7 +548,6 @@
   .description {
     font-size: clamp(17px, 1.45vw, 22px);
     max-width: 322px;
-    margin-bottom: 40px;
   }
 }
 

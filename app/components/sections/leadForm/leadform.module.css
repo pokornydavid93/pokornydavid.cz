@@ -44,7 +44,7 @@
 }
 
 .statusToastError {
-  background: linear-gradient(180deg, #7a1f1f, #551515);
+  background: linear-gradient(180deg, #962929, #963434);
   color: #ffecec;
   font-weight: 600;
 }

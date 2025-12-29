@@ -71,6 +71,7 @@
   width: fit-content;
   padding: 12px 18px;
   border-radius: 12px !important;
+  box-shadow: none;
 }
 
 .links {

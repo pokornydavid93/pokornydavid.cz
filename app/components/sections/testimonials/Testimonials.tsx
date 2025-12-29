@@ -143,13 +143,13 @@ const Testimonials = () => {
     <section className={s.section}>
       <Container className={s.inner}>
         <div className={s.headingWrapper}>
-          <Reveal as="p" from="left" className={s.eyebrow}>
+          <Reveal as="p" from="bottom" className={s.eyebrow}>
             Skutečné příběhy
           </Reveal>
-          <Reveal as="h2" from="left" className={s.gradientSoft}>
+          <Reveal as="h2" from="bottom" className={s.gradientSoft}>
             Jak spolupráci vnímají klienti
           </Reveal>
-          <Reveal as="p" from="left" className={s.sectionDescription}>
+          <Reveal as="p" from="bottom" className={s.sectionDescription}>
             Reálné zkušenosti lidí, kteří řešili stejné otázky jako vy. Co
             fungovalo, co ne – a jaký měli pocit ze spolupráce.
           </Reveal>
@@ -158,16 +158,16 @@ const Testimonials = () => {
         <div className={s.flex}>
           {/* LEFT CONTENT */}
           <Reveal as="div" from="bottom" className={s.card}>
-            <Reveal as="h3" from="left" className={s.cardHeading}>
+            <Reveal as="h3" from="bottom" className={s.cardHeading}>
               Důvěřuje mi více než 200 klientů
             </Reveal>
 
-            <Reveal as="p" from="left" className={s.cardBody}>
+            <Reveal as="p" from="bottom" className={s.cardBody}>
               Klienti oceňují přehled, klidný přístup a řešení, která dávají
               smysl v běžném životě.
             </Reveal>
 
-            <Reveal as="div" from="left" className={s.buttonWrapper}>
+            <Reveal as="div" from="bottom" className={s.buttonWrapper}>
               <Button
                 variant="cta"
                 className={s.ctaBtn}

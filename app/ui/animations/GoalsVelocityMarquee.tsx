@@ -5,16 +5,15 @@ import {
 import LogoMark from "@/app/svgr/LogoMark";
 
 const TOP_ITEMS = [
+  "Vlastní bydlení",
   "Studium dětí",
-  "Vlastní Bydlení",
+  "Zajištění příjmu",
   "Ochrana majetku",
-  "Zajištění Příjmu",
-  "Pojištění odpovědnosti",
-  "Dlouhodobá strategie",
-  "Srozumitelná řešení",
-  "Individuální přístup",
-  "Průběžná péče",
+  "Rezervy a jistota",
+  "Důchod a budoucnost",
+  "Rodina a zodpovědnost",
 ];
+
 
 
 const BOTTOM_ITEMS = [];

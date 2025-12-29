@@ -15,7 +15,7 @@ export function StatusToast({
   state,
   message,
   onHide,
-  duration = 2500,
+  duration = 3500,
 }: StatusToastProps) {
   // 🔹 toast je viditelný hned po mountu
   const [visible, setVisible] = useState(true);

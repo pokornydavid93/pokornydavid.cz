@@ -118,7 +118,7 @@ const Video = () => {
       <Container className={`${s.inner}`}>
         <div className={s.layout}>
           <div className={s.copyCol}>
-            <Reveal from="left">
+            <Reveal from="bottom">
               <div className={`${s.headingBlock}`}>
                 <p className={s.eyebrow}>O SPOLUPRÁCI</p>
                 <h3 className={s.gradientSoft}>
@@ -127,7 +127,7 @@ const Video = () => {
               </div>
             </Reveal>
 
-            <Reveal from="left">
+            <Reveal from="bottom">
               <p className={`${s.lede}`}>
                 Od prvního kontaktu až po
                 konkrétní výstup.

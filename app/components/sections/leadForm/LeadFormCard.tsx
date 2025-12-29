@@ -13,6 +13,7 @@ import Button from "@/app/ui/cta/Button";
 import s from "./leadform.module.css";
 import { Reveal } from "@/app/ui/animations/Reveal";
 import { StatusToast } from "./StatusToast";
+import { Send } from "lucide-react";
 
 export const leadFormTopics = [
   "Hypotéka & bydlení",
@@ -441,6 +442,9 @@ const LeadFormCard = ({
               className={s.submitBtn}
               disabled={status.state === "submitting"}
               aria-busy={status.state === "submitting"}
+              iconRight={
+                <Send />
+              }
             >
               {status.state === "submitting" ? "Odesílám…" : "Odeslat"}
             </Button>

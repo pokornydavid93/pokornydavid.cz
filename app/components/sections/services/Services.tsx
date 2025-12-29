@@ -125,7 +125,7 @@ const Services = () => {
             Když chcete mít ve financích jasno
           </Reveal>
           <Reveal as="p" from="bottom" className={s.sub}>
-            Vyberte si téma, které chcete řešit. Společně si pak projdeme
+            Vyberte si téma, které právě řešíte. Společně pak projdeme
             možnosti a navrhneme další postup.
           </Reveal>
         </div>

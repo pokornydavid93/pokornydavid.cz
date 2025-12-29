@@ -6,6 +6,9 @@ import Container from "@/app/ui/container/Container";
 import AboutCredentials from "./AboutCredentials";
 import { Reveal } from "@/app/ui/animations/Reveal";
 
+import Button from "@/app/ui/cta/Button";
+import { useLeadFormModal } from "../../Providers/LeadFormModalProvider";
+
 type Highlight = {
   title: string;
   text: string;
@@ -14,7 +17,8 @@ type Highlight = {
 const ABOUT_CONTENT = {
   eyebrow: "Kdo jsem",
   heading: {
-    line1: "Cílem není dokonalý plán na papíře, ale systém, který funguje v reálném životě – dnes, za pět let i ve chvíli, kdy se situace změní.",
+    line1:
+      "Cílem není dokonalý plán na papíře, ale systém, který funguje v reálném životě – dnes, za pět let i ve chvíli, kdy se situace změní.",
     accent: "Srozumitelně a férově",
   },
   lead: [
@@ -36,7 +40,11 @@ const ABOUT_CONTENT = {
       text: "Každý další krok vychází z toho, jak žijete, jaké máte priority a co chcete mít ve svém životě pod kontrolou.",
     },
     {
-      title: "Dlouhodobá jistota",
+      title: "Dlouhodobá péče",
+      text: "Pomůžu hlídat rizika a budovat rezervy, aby finance fungovaly i v čase.",
+    },
+    {
+      title: "Funguje v reálném životě",
       text: "Pomůžu hlídat rizika a budovat rezervy, aby finance fungovaly i v čase.",
     },
   ] satisfies Highlight[],
@@ -44,49 +52,87 @@ const ABOUT_CONTENT = {
 };
 
 const About = () => {
+  const { openLeadForm } = useLeadFormModal();
+
+  const paragraphs = [
+    {
+      text: `${ABOUT_CONTENT.lead[0]} ${ABOUT_CONTENT.lead[1]}`,
+      isLead: true,
+    },
+    ...ABOUT_CONTENT.body.map((text) => ({ text, isLead: false })),
+  ];
+
   return (
     <section className={s.section}>
       <Container className={s.inner}>
-        <Reveal as="div" from="left" className={s.headingCont}>
-          <p className={s.eyebrow}>{ABOUT_CONTENT.eyebrow}</p>
-          <h3>
-            <span className={s.gradientSoft}>
-              {ABOUT_CONTENT.heading.accent}
-            </span>
-          </h3>
-          <p className={s.descHeading}>{ABOUT_CONTENT.heading.line1}</p>
-        </Reveal>
+        <div className={s.headingCont}>
+          <Reveal from="bottom">
+            <p className={s.eyebrow}>{ABOUT_CONTENT.eyebrow}</p>
+          </Reveal>
+          <Reveal from="bottom">
+            <h3>
+              <span className={s.gradientSoft}>
+                {ABOUT_CONTENT.heading.accent}
+              </span>
+            </h3>
+          </Reveal>
+          <Reveal from="bottom">
+            <p className={s.descHeading}>{ABOUT_CONTENT.heading.line1}</p>
+          </Reveal>
+        </div>
         <div className={s.grid}>
           <div className={s.leftCol}>
             <Reveal as="div" from="bottom" className={s.leftColInner}>
               <article className={`${s.card} ${s.textCard}`}>
-                <p className={`${s.body} ${s.bodyLead}`}>
-                  {ABOUT_CONTENT.lead[0]} {ABOUT_CONTENT.lead[1]}
-                </p>
+                {paragraphs.map((para, idx) => {
+                  const highlight =
+                    ABOUT_CONTENT.highlights[
+                      idx % ABOUT_CONTENT.highlights.length
+                    ];
 
-                {ABOUT_CONTENT.body.map((p, i) => (
-                  <p key={i} className={s.body}>
-                    {p}
-                  </p>
-                ))}
-
-                <ul className={s.highlights}>
-                  {ABOUT_CONTENT.highlights.map((h, i) => (
-                    <Reveal
-                      key={`${h.title}-${i}`}
-                      from="left"
-                      delay={i * 0.06}
-                    >
-                      <li className={s.highlightItem}>
-                        <span className={s.dot} aria-hidden />
-                        <div>
-                          <strong>{h.title}</strong>
-                          <p>{h.text}</p>
+                  return (
+                    <div key={idx} className={s.paragraphBlock}>
+                      <Reveal from="left">
+                        <div className={s.paragraphHighlight}>
+                          <strong>{highlight.title}</strong>
                         </div>
-                      </li>
-                    </Reveal>
-                  ))}
-                </ul>
+                      </Reveal>
+
+                      <Reveal from="left">
+                        <p
+                          className={`${s.body} ${
+                            para.isLead ? s.bodyLead : ""
+                          }`}
+                        >
+                          {para.text}
+                        </p>
+                      </Reveal>
+                    </div>
+                  );
+                })}
+              </article>
+
+              <article className={`${s.card} ${s.secondaryCard}`}>
+                <Reveal from="bottom fade">
+                  <h3>Co by dávalo smysl u vás?</h3>
+                </Reveal>
+                <Reveal from="bottom fade">
+                  <h4 className={s.body}>Vyplňte krátký formulář</h4>
+                </Reveal>
+                <Reveal from="bottom fade">
+                  <h5 className={s.body}>
+                    Udělejme si jasno v tom, co řešíte a co má smysl řešit dál.
+                  </h5>
+                </Reveal>
+                <Reveal from="bottom fade">
+                  <Button
+                    variant="cta"
+                    className={`${s.cta}`}
+                    onClick={() => openLeadForm()}
+                  >
+                    Probrat vaši situaci
+                  </Button>
+                </Reveal>
               </article>
             </Reveal>
           </div>

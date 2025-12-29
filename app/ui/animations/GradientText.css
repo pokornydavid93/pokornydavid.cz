@@ -35,7 +35,7 @@
   z-index: -1;
 }
 
-/* @keyframes gradient {
+@keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
@@ -47,7 +47,7 @@
   100% {
     background-position: 0% 50%;
   }
-} */
+}
 
 .text-content {
   display: inline-block;
