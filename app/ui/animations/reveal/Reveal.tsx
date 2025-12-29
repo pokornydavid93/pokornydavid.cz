@@ -8,11 +8,13 @@ import React, {
   type ElementType,
   type ReactNode,
 } from "react";
-import type { TweenVars } from "gsap";
+import gsap from "gsap";
 import { compileAnimation } from "./animationCompiler";
 import { resolvePreset, type RevealPresetName } from "./presets";
 import { useReveal } from "./useReveal";
 import type { RevealMode, RevealPreset } from "./types";
+
+export type TweenVars = gsap.TweenVars;
 
 type RenderProp = (args: {
   ref: (node: HTMLElement | null) => void;
