@@ -377,7 +377,7 @@ const LeadFormCard = ({
                   type="tel"
                   name="phone"
                   inputMode="numeric"
-                  placeholder="+420 731 830 897"
+                  placeholder="755 555 555"
                   autoComplete="tel"
                   value={phone}
                   onChange={(e) => {
