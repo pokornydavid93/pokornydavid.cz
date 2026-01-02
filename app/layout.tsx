@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { ViewportProvider } from "./components/Providers/ViewportProvider";
 import { LeadFormModalProvider } from "./components/Providers/LeadFormModalProvider";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -81,6 +82,8 @@ export default function RootLayout({
         />
       </head>
       <body className={`${dmSans.className} antialiased`}>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
+
         <ViewportProvider>
           <LeadFormModalProvider>{children}</LeadFormModalProvider>
         </ViewportProvider>

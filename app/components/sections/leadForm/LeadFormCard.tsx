@@ -14,6 +14,8 @@ import s from "./leadform.module.css";
 import { Reveal } from "@/app/ui/animations/Reveal";
 import { StatusToast } from "./StatusToast";
 import { Send } from "lucide-react";
+import { createApi } from "@/lib/api";
+import type { LeadFormPayload, LeadTopic } from "@/lib/api";
 
 export const leadFormTopics = [
   "Hypotéka & bydlení",
@@ -28,6 +30,11 @@ export const leadFormTopics = [
   "Spotřebitelské a podnikatelské úvěry",
   "Jiná situace",
 ] as const;
+
+type LeadFormTopic = (typeof leadFormTopics)[number];
+
+const isLeadTopic = (value: string): value is LeadTopic =>
+  leadFormTopics.some((topic) => topic === value);
 
 type LeadFormCardProps = {
   prefillTopic?: string;
@@ -59,19 +66,16 @@ const LeadFormCard = ({
   onRequestClose,
 }: LeadFormCardProps) => {
   const isSection = variant === "section";
-  const topicOptions = useMemo(() => {
-    if (
-      prefillTopic &&
-      !leadFormTopics.includes(prefillTopic as (typeof leadFormTopics)[number])
-    ) {
-      return [prefillTopic, ...leadFormTopics];
-    }
-    return [...leadFormTopics];
+  const topicOptions = useMemo<LeadFormTopic[]>(() => [...leadFormTopics], []);
+
+  const defaultTopic = useMemo<LeadTopic | undefined>(() => {
+    if (!prefillTopic) return undefined;
+    return isLeadTopic(prefillTopic) ? prefillTopic : undefined;
   }, [prefillTopic]);
 
-  const defaultTopic = useMemo(() => prefillTopic ?? "", [prefillTopic]);
-
-  const [selectedTopic, setSelectedTopic] = useState<string>(defaultTopic);
+  const [selectedTopic, setSelectedTopic] = useState<LeadTopic | undefined>(
+    defaultTopic
+  );
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -87,6 +91,7 @@ const LeadFormCard = ({
   } | null>(null);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
   const menuRef = useRef<HTMLDivElement | null>(null);
+  const api = useMemo(() => createApi(), []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -146,7 +151,7 @@ const LeadFormCard = ({
       return next;
     });
 
-  const handleSelect = (value: string) => {
+  const handleSelect = (value: LeadTopic) => {
     resetStatus();
     setSelectedTopic(value);
     setIsOpen(false);
@@ -182,7 +187,7 @@ const LeadFormCard = ({
     setErrors({});
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const nextErrors: Record<string, string> = {};
@@ -216,26 +221,39 @@ const LeadFormCard = ({
     setErrors({});
     setStatus({ state: "submitting" });
 
-    // Fake API call
-    window.setTimeout(() => {
-      const failed = Math.random() < 0.1;
-      if (failed) {
-        setStatus({
-          state: "error",
-          message:
-            "Odeslání se nepovedlo. Zkuste to prosím znovu, nebo mě kontaktujte telefonicky.",
-        });
-        resetForm();
-        return;
-      }
+    try {
+      const payload: LeadFormPayload = {
+        name: fullName.trim(),
+        email: email.trim(),
+        phone: phoneDigits || undefined,
+        topic: selectedTopic,
+        message: note.trim() || undefined,
+      };
+
+      await api.leadForm.submit(payload);
 
       setStatus({
         state: "success",
         message:
           "Na vaši e-mailovou adresu bylo posláno potvrzení o přijetí údajů.",
       });
+
       resetForm();
-    }, 900);
+
+      // volitelně: když je to modal, můžeš zavřít hned po success
+      // onRequestClose?.()
+
+      // volitelně: log pro debug
+      // console.log("Lead created:", res?.id)
+    } catch (e) {
+      console.error(e);
+      setStatus({
+        state: "error",
+        message:
+          "Odeslání se nepovedlo. Zkuste to prosím znovu, nebo mě kontaktujte telefonicky.",
+      });
+      resetForm();
+    }
   };
 
   const resetStatus = () =>
@@ -364,7 +382,7 @@ const LeadFormCard = ({
                 <span>{selectedTopic || "Vyberte téma"}</span>
                 <span className={s.selectChevron} aria-hidden />
               </button>
-              <input type="hidden" name="topic" value={selectedTopic} />
+              <input type="hidden" name="topic" value={selectedTopic ?? ""} />
 
               {isOpen && menuPos
                 ? createPortal(
@@ -442,14 +460,12 @@ const LeadFormCard = ({
               className={s.submitBtn}
               disabled={status.state === "submitting"}
               aria-busy={status.state === "submitting"}
-              iconRight={
-                <Send />
-              }
+              iconRight={<Send />}
             >
               {status.state === "submitting" ? "Odesílám…" : "Odeslat"}
             </Button>
             <div className={s.loadingCont}>
-                {status.state === "submitting" ? (
+              {status.state === "submitting" ? (
                 <span className={s.loader} aria-hidden />
               ) : null}
             </div>
