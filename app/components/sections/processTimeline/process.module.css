@@ -1,6 +1,6 @@
 .processTimeline {
   position: relative;
-  padding: 120px 0 140px;
+  padding: 120px 0 80px;
   background: radial-gradient(140% 80% at 50% -10%, #79eb9333, #0000 60%),
     #0f3a2f;
   overflow: hidden;
