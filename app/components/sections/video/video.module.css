@@ -219,7 +219,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 18px 38px #0006;
-  backdrop-filter: blur(10px);
 }
 
 .playCircle {

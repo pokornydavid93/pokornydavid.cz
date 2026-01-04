@@ -15,9 +15,9 @@ interface RippleProps extends ComponentPropsWithoutRef<"div"> {
 }
 
 export const Ripple = React.memo(function Ripple({
-  mainCircleSize = 250,
+  mainCircleSize = 200,
   mainCircleOpacity = 0.54,
-  numCircles = 3,
+  numCircles = 2,
   showPlay = true,
   playSize = 35,
   playColor = "rgb(var(--brand-tertiary-rgb))",
