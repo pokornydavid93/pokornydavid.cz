@@ -15,7 +15,7 @@ import { Reveal } from "@/app/ui/animations/Reveal";
 import { StatusToast } from "./StatusToast";
 import { Send } from "lucide-react";
 import type { LeadFormPayload, LeadTopic } from "@/lib/api";
-import { api } from "@/src/services/api";
+import { getApiClient } from "@/src/services/api";
 
 export const leadFormTopics = [
   "Hypotéka & bydlení",
@@ -286,7 +286,7 @@ const LeadFormCard = ({
         message: note.trim() || undefined,
       };
 
-      await api.submitLead(payload);
+      await getApiClient().submitLead(payload);
 
       setStatus({
         state: "success",

@@ -15,9 +15,6 @@ import Footer from "./components/sections/footer/Footer";
 import { heroVariants } from "./content/heroVariants";
 import s from "./page.module.css";
 import SideMenu from "./components/nav/SideMenu";
-import TextMarquee from "./ui/animations/TextMarquee";
-import marqueeStyles from "./ui/animations/textMarquee.module.css";
-import LogoMark from "./svgr/LogoMark";
 import { GoalsVelocityMarquee } from "./ui/animations/GoalsVelocityMarquee";
 import ProcessTimeline from "./components/sections/processTimeline/ProcessTimeline";
 const SECTION_KEYS = [
@@ -33,11 +30,14 @@ const SECTION_KEYS = [
 ] as const;
 
 export default function Page() {
+  const siteMode = process.env.NEXT_PUBLIC_SITE_MODE ?? "maintenance";
+  const isFull = siteMode === "full";
   const [activeSection, setActiveSection] = useState<string>("hero");
   const [sideMenu, setSideMenu] = useState(false);
 
   // Scroll detection
   useEffect(() => {
+    if (!isFull) return;
     const handleScroll = () => {
       const mid = window.innerHeight / 2;
       let currentKey: string | null = null;
@@ -68,9 +68,10 @@ export default function Page() {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
     };
-  }, [activeSection]);
+  }, [activeSection, isFull]);
 
   useEffect(() => {
+    if (!isFull) return;
     const revealables = Array.from(
       document.querySelectorAll<HTMLElement>(".reveal")
     );
@@ -91,7 +92,31 @@ export default function Page() {
 
     revealables.forEach((node) => observer.observe(node));
     return () => observer.disconnect();
-  }, []);
+  }, [isFull]);
+
+  if (!isFull) {
+    return (
+      <main className={s.maintenancePage}>
+        <section className={s.maintenanceCard} aria-labelledby="maintenance-title">
+          <h1 id="maintenance-title" className={s.maintenanceTitle}>
+            Web se připravuje
+          </h1>
+          <p className={s.maintenanceText}>
+            Pracujeme na finální podobě webu. Děkujeme za trpělivost.
+          </p>
+          <p className={s.maintenanceText}>
+            Kontakt:{" "}
+            <a className={s.maintenanceLink} href="mailto:info@pokornydavid.cz">
+              info@pokornydavid.cz
+            </a>
+          </p>
+          <p className={s.maintenanceNote}>
+            Napište nám a ozveme se co nejdříve.
+          </p>
+        </section>
+      </main>
+    );
+  }
 
   return (
     <>
@@ -110,7 +135,6 @@ export default function Page() {
           <Video />
         </section>
         <section id="process" data-section-key="process">
-      
           <ProcessTimeline />
         </section>
         <section id="testimonials" data-section-key="testimonials">
@@ -121,7 +145,6 @@ export default function Page() {
           <Services />
         </section>
         <GoalsVelocityMarquee />
-
 
         <section id="faq" data-section-key="faq">
           <FAQ />

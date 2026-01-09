@@ -8,6 +8,9 @@ export class ApiClient {
   private baseUrl: string;
 
   constructor(baseUrl: string) {
+    if (!baseUrl) {
+      throw new Error("ApiClient: baseUrl is required");
+    }
     this.baseUrl = baseUrl.replace(/\/+$/, "");
   }
 
