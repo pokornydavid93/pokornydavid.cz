@@ -142,11 +142,12 @@
   border: 1px solid transparent;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 30px;
   position: relative;
   overflow: hidden;
-  height: clamp(320px, 40vh, 420px);
+  height: 80vh;
 }
+
 
 .mobileColumn {
   background: rgba(8, 29, 24, 0.96);
@@ -220,37 +221,37 @@
 .quoteCard {
   background: #ffffff08;
   border-radius: 14px;
-  padding: 16px 16px 14px;
+  padding: 25px 25px;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
   border: 1px solid rgba(var(--brand-tertiary-rgb), 0.42);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 25px;
 }
 
 .quoteText {
   margin: 0;
-  color: rgba(237, 245, 241, 0.9);
+  color: var(--brand-white);
   line-height: 1.55;
-  max-width: 400px;
+  margin-left: 2px;
 }
 
 .quoteMeta {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
 }
 
 .avatar {
-  width: 34px;
-  height: 34px;
+  width: 55px;
+  height: 40px;
   border-radius: 999px;
   background: linear-gradient(135deg, #79eb93, #d6ffad);
   color: var(--brand-dark);
   display: grid;
   place-items: center;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 20px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
 }
 
@@ -259,14 +260,84 @@
   gap: 2px;
 }
 
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .name {
   font-weight: 700;
   color: var(--brand-tertiary);
 }
 
-.role {
-  font-size: 13px;
-  color: rgba(237, 245, 241, 0.75);
+.starsInline {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: #f5c644;
+  --star-size: 14px;
+}
+
+.starIcon {
+  width: var(--star-size);
+  height: var(--star-size);
+  stroke: currentColor;
+  stroke-width: 1.6px;
+}
+
+.starFull {
+  fill: currentColor;
+}
+
+.starEmpty {
+  fill: transparent;
+  opacity: 0.35;
+}
+
+.starHalf {
+  position: relative;
+  display: inline-flex;
+}
+
+.starHalfFill {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 50% 0 0);
+  overflow: hidden;
+}
+
+.reviewLink {
+  width: fit-content;
+  color: var(--brand-tertiary);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: none;
+  transition: color 0.2s ease;
+}
+
+.reviewLink:hover {
+  color: var(--brand-primary);
+}
+
+.reviewMeta {
+
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviewSource {
+  display: inline-flex;
+  align-items: center;
+}
+
+.reviewSourceIcon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  color: var(--brand-tertiary);
+  opacity: 0.9;
 }
 
 .sideStack {
@@ -480,7 +551,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   padding: 24px 30px;
-  gap: 16px;
+  overflow: hidden;
+  gap: 30px;
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
   border: 1px solid rgba(var(--brand-tertiary-rgb), 0.32);
 }
@@ -489,7 +561,12 @@
   display: grid;
   gap: 4px;
   justify-items: center;
+  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.26);
+  padding: 20px;
+  border-radius: 16px;
 }
+
+
 
 .statValue {
   font-size: 30px;

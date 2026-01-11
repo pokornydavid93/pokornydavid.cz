@@ -172,7 +172,7 @@ const PrivacyPolicyPage = () => {
               Tento dokument může být aktualizován při změně poskytovatele
               služeb nebo technického řešení.
             </p>
-            <p className={styles.text}>Účinné od: bude doplněno při spuštění webu.</p>
+            <p className={styles.text}>Účinné od: 11. 1. 2026</p>
           </section>
 
           <div className={styles.backRow}>

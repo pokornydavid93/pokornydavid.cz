@@ -21,7 +21,7 @@ export function Marquee({
   reverse = false,
   repeat = 6,
   pauseOnHover = false,
-  gap = 14,
+  gap = 30,
   children,
   ...rest
 }: MarqueeProps) {
@@ -30,9 +30,11 @@ export function Marquee({
 
   const offset = useRef(0)
   const isDragging = useRef(false)
+  const isPointerDown = useRef(false)
   const isHovering = useRef(false)
 
   const lastPos = useRef(0)
+  const startPos = useRef(0)
   const size = useRef(0)
   const raf = useRef<number | null>(null)
 
@@ -65,24 +67,38 @@ export function Marquee({
   }
 
   const onPointerDown = (e: React.PointerEvent) => {
-    isDragging.current = true
+    isPointerDown.current = true
+    isDragging.current = false
     lastPos.current = vertical ? e.clientY : e.clientX
+    startPos.current = lastPos.current
+  }
+
+  const beginDrag = (e: React.PointerEvent, pos: number) => {
+    isDragging.current = true
+    lastPos.current = pos
     containerRef.current?.setPointerCapture(e.pointerId)
   }
 
   const onPointerMove = (e: React.PointerEvent) => {
-    if (!isDragging.current) return
+    if (!isPointerDown.current) return
 
     const pos = vertical ? e.clientY : e.clientX
+    const moved = Math.abs(pos - startPos.current)
+    if (!isDragging.current) {
+      if (moved < 6) return
+      beginDrag(e, pos)
+    }
+
     const delta = pos - lastPos.current
     lastPos.current = pos
-
     offset.current -= delta
     normalize()
     apply()
   }
 
   const endDrag = (e: React.PointerEvent) => {
+    isPointerDown.current = false
+    if (!isDragging.current) return
     isDragging.current = false
     containerRef.current?.releasePointerCapture(e.pointerId)
   }

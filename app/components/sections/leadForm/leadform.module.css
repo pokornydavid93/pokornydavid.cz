@@ -12,18 +12,20 @@
 .statusToast {
   position: fixed;
   left: 50%;
-  bottom: 24px;
-  transform: translate(-50%, 120%);
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
   opacity: 0;
-  padding: 14px 18px;
+  padding: 14px 16px 14px 18px;
   border-radius: 14px;
   font-size: 14px;
   line-height: 1.4;
-  max-width: 472px;
+  width: min(92vw, 520px);
+  display: flex;
+  align-items: stretch;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
-  z-index: 9999;
-  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
+  z-index: 10001;
+  pointer-events: auto;
 }
 
 .actions {
@@ -33,7 +35,7 @@
 }
 
 .statusToastVisible {
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
 
@@ -47,6 +49,69 @@
   background: linear-gradient(180deg, #962929, #963434);
   color: #ffecec;
   font-weight: 600;
+}
+
+.statusToastMessage {
+  display: block;
+}
+
+.statusToastBody {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.statusToastActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.statusToastAction {
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 600;
+  background: #0f3a2f;
+  color: #ecf8ef;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.statusToastAction:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+}
+
+.statusToastClose {
+  border: 0;
+  background: transparent;
+  color: currentColor;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.8;
+  padding: 0 4px;
+}
+
+.statusToastClose:hover {
+  opacity: 1;
+}
+
+.statusOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 16, 12, 0.45);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10000;
+}
+
+.statusOverlayVisible {
+  opacity: 1;
 }
 
 .img {
@@ -483,9 +548,15 @@
   box-shadow: none !important;
 }
 
+.noteCont {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .ctaNote {
   margin-top: 10px;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--brand-tertiary);
   font-size: 13px;
   line-height: 1.5;
 }

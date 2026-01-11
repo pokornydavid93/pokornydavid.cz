@@ -82,6 +82,7 @@ const LeadFormCard = ({
   const [note, setNote] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<StatusState>({ state: "idle" });
+  const [isFormHidden, setIsFormHidden] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [menuPos, setMenuPos] = useState<{
     left: number;
@@ -306,7 +307,7 @@ const LeadFormCard = ({
       setStatus({
         state: "error",
         message:
-          "Odeslání se nepovedlo. Zkuste to prosím znovu, nebo mě kontaktujte telefonicky.",
+          "Odeslání se nepovedlo. Zkuste to prosím znovu, nebo napište na info@pokornydavid.cz.",
       });
       resetForm();
     }
@@ -314,6 +315,14 @@ const LeadFormCard = ({
 
   const resetStatus = () =>
     setStatus((prev) => (prev.state === "idle" ? prev : { state: "idle" }));
+
+  const handleSuccessContinue = () => {
+    setStatus({ state: "idle" });
+    setIsFormHidden(true);
+    onRequestClose?.();
+  };
+
+  if (isFormHidden) return null;
 
   return (
     <div
@@ -526,29 +535,33 @@ const LeadFormCard = ({
             </div>
           </div>
         </SectionReveal>
-        <SectionReveal once={true} enabled={isSection} from="left">
-          <p className={s.ctaNote}>
-            Konzultace je nezávazná a nepředstavuje investiční doporučení.
-          </p>
-        </SectionReveal>
+        <div className={s.noteCont}>
+          <SectionReveal once={true} enabled={isSection} from="left">
+            <p className={s.ctaNote}>
+              Konzultace je nezávazná a nepředstavuje investiční doporučení.
+            </p>
+          </SectionReveal>
 
-        <SectionReveal
-          once={true}
-          enabled={isSection}
-          from="left"
-          start="top 100%"
-        >
-          <p className={s.privacyNote}>
-            Správcem osobních údajů je SAB servis s.r.o. Údaje slouží pouze k
-            domluvě úvodního hovoru. Pokud nevznikne spolupráce, budou do 6
-            měsíců smazány.
-          </p>
-        </SectionReveal>
+          <SectionReveal
+            once={true}
+            enabled={isSection}
+            from="left"
+            start="top 100%"
+          >
+            <p className={s.privacyNote}>
+              Správcem osobních údajů je SAB servis s.r.o. Údaje slouží pouze k
+              domluvě úvodního hovoru.
+            </p>
+          </SectionReveal>
+        </div>
 
         {status.state === "success" ? (
           <StatusToast
             state="success"
             message={status.message}
+            duration={Infinity}
+            actionLabel="Pokračovat"
+            onAction={handleSuccessContinue}
             onHide={() => setStatus({ state: "idle" })}
           />
         ) : null}
@@ -557,6 +570,7 @@ const LeadFormCard = ({
           <StatusToast
             state="error"
             message={status.message}
+            duration={Infinity}
             onHide={() => setStatus({ state: "idle" })}
           />
         ) : null}

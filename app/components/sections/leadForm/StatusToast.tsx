@@ -9,6 +9,8 @@ type StatusToastProps = {
   message: string;
   onHide?: () => void;
   duration?: number;
+  actionLabel?: string;
+  onAction?: () => void;
 };
 
 export function StatusToast({
@@ -16,11 +18,14 @@ export function StatusToast({
   message,
   onHide,
   duration = 3500,
+  actionLabel,
+  onAction,
 }: StatusToastProps) {
   // 🔹 toast je viditelný hned po mountu
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
+    if (!Number.isFinite(duration)) return;
     const t = window.setTimeout(() => {
       setVisible(false);
     }, duration);
@@ -40,16 +45,49 @@ export function StatusToast({
   }, [visible, onHide]);
 
   return createPortal(
-    <div
-      className={`${s.statusToast} ${
-        visible ? s.statusToastVisible : ""
-      } ${state === "success" ? s.statusToastSuccess : s.statusToastError}`}
-      role="status"
-      aria-live="polite"
-    >
-      {message}
-    </div>,
+    <>
+      <div
+        className={`${s.statusOverlay} ${
+          visible ? s.statusOverlayVisible : ""
+        }`}
+        aria-hidden
+      />
+      <div
+        className={`${s.statusToast} ${visible ? s.statusToastVisible : ""} ${
+          state === "success" ? s.statusToastSuccess : s.statusToastError
+        }`}
+        role="status"
+        aria-live="polite"
+      >
+        <div className={s.statusToastBody}>
+          <span className={s.statusToastMessage}>{message}</span>
+          <div className={s.statusToastActions}>
+            {actionLabel && onAction ? (
+              <button
+                type="button"
+                className={s.statusToastAction}
+                onClick={() => {
+                  setVisible(false);
+                  onAction();
+                }}
+              >
+                {actionLabel}
+              </button>
+            ) : null}
+            <button
+              type="button"
+              className={s.statusToastClose}
+              aria-label="Zavřít oznámení"
+              onClick={() => setVisible(false)}
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      </div>
+    </>,
     document.body
   );
 }
 
+// ${ visible ? s.statusToastVisible : ""} ${state === "success" ? s.statusToastSuccess : s.statusToastError}

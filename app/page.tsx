@@ -94,29 +94,29 @@ export default function Page() {
     return () => observer.disconnect();
   }, [isFull]);
 
-  if (!isFull) {
-    return (
-      <main className={s.maintenancePage}>
-        <section className={s.maintenanceCard} aria-labelledby="maintenance-title">
-          <h1 id="maintenance-title" className={s.maintenanceTitle}>
-            Web se připravuje
-          </h1>
-          <p className={s.maintenanceText}>
-            Pracujeme na finální podobě webu. Děkujeme za trpělivost.
-          </p>
-          <p className={s.maintenanceText}>
-            Kontakt:{" "}
-            <a className={s.maintenanceLink} href="mailto:info@pokornydavid.cz">
-              info@pokornydavid.cz
-            </a>
-          </p>
-          <p className={s.maintenanceNote}>
-            Napište nám a ozveme se co nejdříve.
-          </p>
-        </section>
-      </main>
-    );
-  }
+  // if (!isFull) {
+  //   return (
+  //     <main className={s.maintenancePage}>
+  //       <section className={s.maintenanceCard} aria-labelledby="maintenance-title">
+  //         <h1 id="maintenance-title" className={s.maintenanceTitle}>
+  //           Web se připravuje
+  //         </h1>
+  //         <p className={s.maintenanceText}>
+  //           Pracujeme na finální podobě webu. Děkujeme za trpělivost.
+  //         </p>
+  //         <p className={s.maintenanceText}>
+  //           Kontakt:{" "}
+  //           <a className={s.maintenanceLink} href="mailto:info@pokornydavid.cz">
+  //             info@pokornydavid.cz
+  //           </a>
+  //         </p>
+  //         <p className={s.maintenanceNote}>
+  //           Napište nám a ozveme se co nejdříve.
+  //         </p>
+  //       </section>
+  //     </main>
+  //   );
+  // }
 
   return (
     <>

@@ -21,51 +21,159 @@ import { Marquee } from "@/magic/ui/marquee";
 type Testimonial = {
   quote: string;
   name: string;
-  role: string;
+  link: string;
+  rating: number;
+  source: ReviewSource;
 };
+
+type ReviewSource = "google";
 
 const leftColumn: Testimonial[] = [
   {
     quote:
-      "Eiusmod quam justo lectus commodo augue arcu dignissim. Porttitor ullamcorper.",
-    name: "Operations Manager",
-    role: "CEO",
+      "Jsem s tímto člověkem již přes 4 roky svého života a musím popravdě říct, že kdykoliv jsem potřeboval, tak byl ochotný a dokázal mi ve všem dobře poradit. Ať už se jednalo o nastavení pojistek nebo řešení pojistné události. Za mě super lidský přístup a tak to má hlavně vypadat! V dnešní době nikdo nechce, aby vám někdo mazal med kolem huby, a rozhodně ne u financí! Abych byl upřímný, tak to se vám u Davida nestane, protože vždy budete přesně vědět, že máte své finance, zdraví nebo případně životní události pod kontrolou. :) Pokračuj v tom, co děláš, protože to děláš perfektně! DB",
+    name: "Daniel Baciak",
+    link: "https://share.google/m6Nutj17CZUp7bRZP",
+    rating: 5,
+    source: "google",
   },
   {
     quote:
-      "Luctus nibh finibus facilisis dapibus etiam interdum tortor. Tincidunt nam porta elementum.",
-    name: "Nicole Saskia",
-    role: "Founder",
+      "Pana Davida Pokorného můžu doporučit všemi deseti. Má lidský a otevřený přístup, vše vysvětluje srozumitelně, aby tomu každý rozuměl. Do ničeho zbytečně netlačí a nepřesvědčuje vás o věcech, které opravdu nechcete. Jedná férově, zajímá se o to, co klient opravdu potřebuje a chce, a hledá správné a vhodné řešení tak, aby splnilo očekávání a dávalo smysl. Je vidět, že ho práce baví a že ji dělá s láskou. Nejde mu o vlastní obohacení, ale o spokojenost vlastních klientů. Spolupráce s ním je suprová.",
+    name: "Lukáš Kratochvíl",
+    link: "https://share.google/UvbYaZWNtv7wtQW2y",
+    rating: 5,
+    source: "google",
   },
   {
     quote:
-      "Lidé oceňují hlavně jednoduché vysvětlení, klidný přístup a řešení bez triků.",
-    name: "Jana Veselá",
-    role: "HR Director",
+      "Davida můžu doporučit, když potřebuji aktualizovat např. POV nebo jiné produkty. David to řeší okamžitě s pro mě vyhovujícími podmínkami. Řešili jsme už mnoho smluv i výpovědí a vše zdárně a rychle. Ještě jednou můžu doporučit.",
+    name: "David Jaroš",
+    link: "https://share.google/TZbl9U0htF5zFlyr4",
+    rating: 5,
+    source: "google",
   },
+  {
+    quote: "Davida můžu jednoznačně doporučit. Má lidský a otevřený přístup, vše vysvětluje srozumitelně, aby tomu každý rozuměl. Jedná férově, zajímá se o reálné potřeby klienta a nehledá rychlý prodej, ale dlouhodobé řešení. Je znát, že mu nejde jen o čísla, ale hlavně o lidi. Spolupráce s ním je příjemná a dává smysl.",
+    name: "Daniel Dvořák",
+    link: "https://share.google/inOM80tZ7IHvChmif",
+    rating: 5,
+    source: "google",
+  },
+  {
+    quote: "Spolupráce s finančním poradcem byla velmi přínosná. Vše vysvětlil srozumitelně, jednal férově a vždy vycházel z mých potřeb, ne z vlastního zájmu. Je ochotný hledat dlouhodobě nejlepší řešení. Díky němu mám ve svých financích a produktech jasno.",
+    name: "Dominik Vykydal",
+    link: "https://share.google/35DLzl3VlK1kH9LIB",
+    rating: 5,
+    source: "google",
+  },
+  {
+    quote: "Spolupráce na pohodu. Vše mi bylo normálně a lidsky vysvětleno, bez složitých výrazů a zbytečného tlačení do něčeho, co bych nechtěla. Měla jsem pocit, že mu jde hlavně o to, aby mi to dávalo smysl a fungovalo dlouhodobě. Příjemná a rychlá komunikace, ochota pomoct, když něčemu nerozumím. Jsem ráda, že jsem našla finančního poradce, který se nestará jen o svou kapsu. Určitě doporučuji.",
+    name: "Zuzana Smolíková",
+    link: "https://share.google/bIpQxPDkvei2tPzhj",
+    rating: 5,
+    source: "google",
+  },
+  {
+    quote: "Hledala jsem někoho, kdo mi vysvětlí a poradí, jakou pojistku si dát. Našla jsem pana Pokorného. Hned první volání bylo úžasné a schůzka ještě lepší. Pan Pokorný dokáže poradit a vysvětlit, proč by to tak mělo být, proč zase toto není dobré. Už jsem jeho klientka několik let a můžu ho jen doporučit.",
+    name: "Nikola Malerova",
+    link: "https://share.google/sWU1g4kfIK29D3gXN",
+    rating: 5,
+    source: "google",
+  },
+  {
+    quote: "Výborný poradce, svou práci odvádí dokonale. Má lidský přístup, vše dokáže vysvětlit tak, aby to pochopil každý. Jsem jeho klientkou už nějakou dobu, pokaždé mi dobře poradil. Vím, že když se něco stane, tak že se na něj můžu obrátit a nemusím se bát. Můžu jen doporučit ❤️",
+    name: "Lucie Martínková",
+    link: "https://share.google/nfCXeS76QASdPCC9V",
+    rating: 5,
+    source: "google",
+  },
+  
 ];
 
 const rightColumn: Testimonial[] = [
   {
-    quote: "Fermentum odio phasellus non purus est efficitur laoreet.",
-    name: "Lili Alexa",
-    role: "Marketing Director",
+    quote: "Jestli hledáte lidský a přátelský přístup, tak je pro vás David super volba. Nikdy jsem se nebála zeptat se na cokoli a v rychlosti mi bylo vše krásně a hlavně srozumitelně vysvětleno. Byl vždy k dispozici, když byla potřeba, dotáhne s vámi vše od začátku až do konce. Můžu jen doporučit. 🙏🏼",
+    name: "Nikola Kvapilova",
+    link: "https://share.google/BKLOQO8KWtFp101nK",
+    rating: 5,
+    source: "google",
   },
   {
     quote:
-      "Porta elementum a enim euismod quam justo lectus. Imperdiet mollis nullam volutpat porttitor.",
-    name: "Mario Pascal",
-    role: "Product Lead",
+      "Velký profesionál. Dost mile mě překvapil, kolik toho o financích ví a zná. Zatím nebylo nic, co by nedokázal vyřešit. Moc doporučuji.",
+    name: "Radek Mader",
+    link: "https://share.google/O0QbaE4dskUXj3IVv",
+    rating: 5,
+    source: "google",
   },
   {
     quote:
-      "Velká jistota v tom, co mám dělat a proč. Jednoduché kroky, žádný tlak.",
-    name: "David Hruška",
-    role: "Freelancer",
+      "Dejv mi spravuje pojistky na auta a já nemusím vůbec nic řešit. O všechno se stará on, hlídá výročí, upozorňuje na změny, posílá výpovědi atd. Prostě paráda.",
+    name: "Daniel Prucek",
+    link: "https://share.google/1ckJaWmrmSJyGdfQw",
+    rating: 5,
+    source: "google",
+  },
+    {
+    quote: "Dobrý kamarád, který poradí v nouzi. Bez něj jsem nevěděla, jak dobře investovat 💰. Poradí s vyhledáváním lepšího pojištění na cokoliv. 🚗🏡",
+    name: "Eva Hustá",
+    link: "https://share.google/mBOCHNrSKJZhbP5PY",
+    rating: 5,
+    source: "google",
+  },
+    {
+    quote: "Jsem velmi spokojená. David je výborný poradce, který své práci rozumí perfektně. Vždy se na něj mohu spolehnout a s důvěrou se na něj obrátit, vždy mi pomůže a dobře poradí. Nebojím se ho doporučit rodině a přátelům, vím, že i oni budou moc spokojení. Po dlouhých letech mám konečně finančního poradce, který myslí především na klienty a ne jen na sebe. Moc mu děkuji.",
+    name: "Martina Heinzová",
+    link: "https://share.google/JXP1KVVtrcNZJoQ7a",
+    rating: 5,
+    source: "google",
+  },
+    {
+    quote: "Se spoluprací s finančním poradcem jsem velmi spokojená. Od prvního setkání byl přístup profesionální, ale zároveň lidský a přátelský. Vše mi bylo vysvětleno srozumitelně a v klidu, takže jsem přesně věděla, co a proč řešíme. Oceňuji individuální přístup, dlouhodobé myšlení a skutečný zájem o mou finanční situaci. Díky této spolupráci mám větší jistotu a přehled ve svých financích. Doporučuji každému, kdo chce mít finance pod kontrolou.",
+    name: "Denisa Řezníčková",
+    link: "https://share.google/w0usRR2Gu4l37n3to",
+    rating: 5,
+    source: "google",
+  },
+    {
+    quote: "Skvělý finanční poradce a parťák, který mi srozumitelně vysvětlil věci, ve kterých jsem měl zmatek, a navrhl reálné řešení bez zbytečného kecání. Založil mi životní pojištění, pojištění auta a různé investiční plány a dále se o ně stará, abych já nemusel. Má profesionální a lidský přístup, který můžu jen doporučit.",
+    name: "Stanislav Dvořák",
+    link: "https://share.google/C1vyXNU8y4oSRQJrW",
+    rating: 5,
+    source: "google",
+  },
+    {
+    quote: "Davida můžu stoprocentně doporučit. Umí srozumitelným způsobem vše vysvětlit a s přehledem reagovat na potřeby klienta a jeho konkrétní situaci. Ocenila jsem, že při plánování předloží více možností jak požadavek řešit, a vy máte sami volbu vybrat si,co je pro vás nejlepší. S jeho pomocí i přístupem k řešení jsem opravdu spokojená.",
+    name: "Pavla Kucerova",
+    link: "https://share.google/lRTfcLgEGJbjB2Gzo",
+    rating: 5,
+    source: "google",
+  },
+    {
+    quote: "Davida můžu jednoznačně doporučit. Má lidský a otevřený přístup, vše vysvětluje srozumitelně a bez nátlaku. Jedná férově, zajímá se o reálné potřeby klienta a nehledá rychlý prodej, ale dlouhodobé řešení. Je znát, že mu nejde jen o čísla, ale hlavně o lidi. Spolupráce s ním je příjemná a dává smysl.",
+    name: "Sabina Palkovičová",
+    link: "https://share.google/ndVk9fUR9Wp0TBfOt",
+    rating: 5,
+    source: "google",
   },
 ];
 
 const allTestimonials = [...leftColumn, ...rightColumn];
+
+type StatItem = {
+  label: string;
+  value: number;
+  suffix?: string;
+  decimals?: number;
+};
+
+const stats: StatItem[] = [
+  { value: 5, suffix: "+", label: "Let zkušeností" },
+  { value: 200, suffix: "+", label: "Spokojených klientů" },
+  { value: 5, decimals: 1, label: "Průměrné hodnocení" },
+  { value: 96, suffix: "%", label: "pokračuje ve spolupráci" },
+];
 
 const trustTags = [
   { label: "Lidský přístup", count: 48 },
@@ -102,15 +210,73 @@ const useMediaQuery = (query: string) => {
   return matches;
 };
 
-const QuoteCard = ({ quote, name }: Testimonial) => (
+const renderStars = (rating: number) => {
+  const fullStars = Math.floor(rating);
+  const hasHalf = rating - fullStars >= 0.5;
+  const emptyStars = 5 - fullStars - (hasHalf ? 1 : 0);
+
+  return (
+    <span
+      className={s.starsInline}
+      aria-label={`Hodnocení ${rating} z 5`}
+      role="img"
+    >
+      {Array.from({ length: fullStars }).map((_, index) => (
+        <Star
+          key={`full-${index}`}
+          className={`${s.starIcon} ${s.starFull}`}
+          aria-hidden
+        />
+      ))}
+      {hasHalf ? (
+        <span className={s.starHalf} aria-hidden>
+          <Star className={`${s.starIcon} ${s.starEmpty}`} aria-hidden />
+          <span className={s.starHalfFill}>
+            <Star className={`${s.starIcon} ${s.starFull}`} aria-hidden />
+          </span>
+        </span>
+      ) : null}
+      {Array.from({ length: emptyStars }).map((_, index) => (
+        <Star
+          key={`empty-${index}`}
+          className={`${s.starIcon} ${s.starEmpty}`}
+          aria-hidden
+        />
+      ))}
+    </span>
+  );
+};
+
+const renderReviewSourceIcon = (source: ReviewSource) => {
+  if (source === "google") {
+    return (
+      <img className={s.reviewSourceIcon} src="/googleLogo.svg" alt="Google" />
+    );
+  }
+
+  return null;
+};
+
+const QuoteCard = ({ quote, name, link, rating, source }: Testimonial) => (
   <article className={s.quoteCard}>
     <div className={s.quoteMeta}>
       <span className={s.avatar}>{name.charAt(0)}</span>
       <div className={s.person}>
-        <span className={s.name}>{name}</span>
+        <div className={s.nameRow}>
+          <span className={s.name}>{name}</span>
+          {renderStars(rating)}
+        </div>
       </div>
     </div>
     <p className={s.quoteText}>{quote}</p>
+    <div className={s.reviewMeta}>
+      <a className={s.reviewLink} href={link} target="_blank" rel="noreferrer">
+        Zobrazit recenzi
+      </a>
+      <span className={s.reviewSource} aria-hidden>
+        {renderReviewSourceIcon(source)}
+      </span>
+    </div>
   </article>
 );
 
@@ -138,6 +304,10 @@ const Tag = ({ label, count, showCount = true, icon: Icon }: TagProps) => (
 const Testimonials = () => {
   const isMobile = useMediaQuery("(max-width: 1100px)");
   const { openLeadForm } = useLeadFormModal();
+  const formatStatValue = (value: number, item: StatItem) => {
+    const formatted = item.decimals ? value.toFixed(item.decimals) : `${value}`;
+    return `${formatted}${item.suffix ?? ""}`;
+  };
 
   return (
     <section className={s.section}>
@@ -223,22 +393,21 @@ const Testimonials = () => {
 
         {/* STATS */}
         <div className={s.statsBar}>
-          <div className={s.stat}>
-            <div className={s.statValue}>5+</div>
-            <div className={s.statLabel}>Let zkušeností</div>
-          </div>
-          <div className={s.stat}>
-            <div className={s.statValue}>200+</div>
-            <div className={s.statLabel}>Spokojených klientů</div>
-          </div>
-          <div className={s.stat}>
-            <div className={s.statValue}>4.9</div>
-            <div className={s.statLabel}>Průměrné hodnocení</div>
-          </div>
-          <div className={s.stat}>
-            <div className={s.statValue}>96%</div>
-            <div className={s.statLabel}>pokračuje ve spolupráci</div>
-          </div>
+          {stats.map((item, index) => (
+            <Reveal
+              key={item.label}
+              as="div"
+              from="bottom"
+              className={s.stat}
+              stagger={0.08}
+              index={index}
+            >
+              <div className={s.statValue}>
+                {formatStatValue(item.value, item)}
+              </div>
+              <div className={s.statLabel}>{item.label}</div>
+            </Reveal>
+          ))}
         </div>
 
         <div className={s.topicContainer}>
