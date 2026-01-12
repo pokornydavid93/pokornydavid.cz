@@ -45,7 +45,7 @@ type LeadFormCardProps = {
 type StatusState =
   | { state: "idle" }
   | { state: "submitting" }
-  | { state: "success"; message: string }
+  | { state: "success"; message: string; tone: "success" | "info" }
   | { state: "error"; message: string };
 
 const SectionReveal = ({
@@ -287,12 +287,28 @@ const LeadFormCard = ({
         message: note.trim() || undefined,
       };
 
-      await getApiClient().submitLead(payload);
+      const result = await getApiClient().submitLead(payload);
+      const serverMessage = result.message?.trim();
+
+      if (result.deduped) {
+        if (process.env.NODE_ENV === "development") {
+          console.info("[lead] deduped");
+        }
+        setStatus({
+          state: "success",
+          tone: "info",
+          message:
+            serverMessage ||
+            "Poptávku už evidujeme, brzy se ozveme.",
+        });
+        return;
+      }
 
       setStatus({
         state: "success",
+        tone: "success",
         message:
-          "Na vaši e-mailovou adresu bylo posláno potvrzení o přijetí údajů.",
+          serverMessage || "Na váš e-mail bylo odesláno shrnutí.",
       });
 
       resetForm();
@@ -557,11 +573,12 @@ const LeadFormCard = ({
 
         {status.state === "success" ? (
           <StatusToast
-            state="success"
+            state={status.tone}
             message={status.message}
             duration={Infinity}
             actionLabel="Pokračovat"
             onAction={handleSuccessContinue}
+            showClose={status.tone !== "success"}
             onHide={() => setStatus({ state: "idle" })}
           />
         ) : null}

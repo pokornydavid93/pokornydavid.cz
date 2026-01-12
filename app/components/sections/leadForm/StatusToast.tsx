@@ -5,12 +5,13 @@ import { useEffect, useState } from "react";
 import s from "./leadform.module.css";
 
 type StatusToastProps = {
-  state: "success" | "error";
+  state: "success" | "error" | "info";
   message: string;
   onHide?: () => void;
   duration?: number;
   actionLabel?: string;
   onAction?: () => void;
+  showClose?: boolean;
 };
 
 export function StatusToast({
@@ -20,6 +21,7 @@ export function StatusToast({
   duration = 3500,
   actionLabel,
   onAction,
+  showClose = true,
 }: StatusToastProps) {
   // 🔹 toast je viditelný hned po mountu
   const [visible, setVisible] = useState(true);
@@ -54,7 +56,11 @@ export function StatusToast({
       />
       <div
         className={`${s.statusToast} ${visible ? s.statusToastVisible : ""} ${
-          state === "success" ? s.statusToastSuccess : s.statusToastError
+          state === "success"
+            ? s.statusToastSuccess
+            : state === "info"
+            ? s.statusToastInfo
+            : s.statusToastError
         }`}
         role="status"
         aria-live="polite"
@@ -74,14 +80,16 @@ export function StatusToast({
                 {actionLabel}
               </button>
             ) : null}
-            <button
-              type="button"
-              className={s.statusToastClose}
-              aria-label="Zavřít oznámení"
-              onClick={() => setVisible(false)}
-            >
-              ×
-            </button>
+            {showClose ? (
+              <button
+                type="button"
+                className={s.statusToastClose}
+                aria-label="Zavřít oznámení"
+                onClick={() => setVisible(false)}
+              >
+                ×
+              </button>
+            ) : null}
           </div>
         </div>
       </div>

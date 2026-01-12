@@ -45,6 +45,12 @@
   font-weight: 600;
 }
 
+.statusToastInfo {
+  background: linear-gradient(180deg, #1b5f7a, #134a63);
+  color: #e6f6ff;
+  font-weight: 600;
+}
+
 .statusToastError {
   background: linear-gradient(180deg, #962929, #963434);
   color: #ffecec;

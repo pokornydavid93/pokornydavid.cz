@@ -620,6 +620,7 @@
 @media (max-width: 1100px) {
   .marqueeShell {
     grid-template-columns: 1fr;
+    height: 36vh;
   }
 
   .inner {

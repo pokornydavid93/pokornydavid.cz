@@ -1,7 +1,10 @@
 import type { LeadFormPayload } from "@/lib/api";
 
 export type LeadSubmitResponse = {
-  id: number;
+  ok: boolean;
+  created: boolean;
+  deduped: boolean;
+  message?: string;
 };
 
 export class ApiClient {
@@ -51,9 +54,27 @@ export class ApiClient {
   }
 
   async submitLead(payload: LeadFormPayload) {
-    return this.request<LeadSubmitResponse>("/api/lead", {
+    const url = `${this.baseUrl}/api/lead`;
+    const res = await fetch(url, {
       method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      cache: "no-store",
       body: JSON.stringify(payload),
     });
+
+    let data: LeadSubmitResponse | null = null;
+    try {
+      data = (await res.json()) as LeadSubmitResponse;
+    } catch {
+      data = null;
+    }
+
+    if (!res.ok || !data || data.ok !== true) {
+      const message = data?.message || `Request failed (${res.status})`;
+      throw new Error(message);
+    }
+
+    return data;
   }
 }
