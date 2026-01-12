@@ -7,7 +7,8 @@
   /* ============================================================
      BRAND CORE – MINT / GREEN IDENTITY
   ============================================================ */
-
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
   /* z Elementor: --e-global-color-primary / accent (#79EB93) */
   --brand-primary: #79eb93;
   --brand-primary-rgb: 121, 235, 147;
@@ -214,7 +215,12 @@
 
   --layout-gutter: 12px;
 
-  --brand-nav-bg: linear-gradient(to top, #0f3a2f 0%, rgb(15 58 47) 51%, #0f3a2f 126%);
+  --brand-nav-bg: linear-gradient(
+    to top,
+    #0f3a2f 0%,
+    rgb(15 58 47) 51%,
+    #0f3a2f 126%
+  );
   /* --brand-bottom-hero: linear-gradient(
     180deg,
     rgba(var(--brand-deep-trust-rgb), 0.55) 0%,
@@ -258,7 +264,6 @@
 
 html {
   scroll-behavior: smooth;
-
 }
 
 body {
@@ -345,31 +350,33 @@ section {
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   @keyframes marquee {
-  from {
-    transform: translateX(0);
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
   @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+    from {
+      transform: translateY(0);
     }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
     }
   }
-  --animate-ripple: ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite
-;
+  --animate-ripple: ripple var(--duration, 2s) ease calc(var(--i, 0) * 0.2s)
+    infinite;
   @keyframes ripple {
-  0%, 100% {
-    transform: translate(-50%, -50%) scale(1);
+    0%,
+    100% {
+      transform: translate(-50%, -50%) scale(1);
     }
-  50% {
-    transform: translate(-50%, -50%) scale(0.9);
+    50% {
+      transform: translate(-50%, -50%) scale(0.9);
     }
-  }}
+  }
+}
 
 .dark {
   --background: oklch(0.147 0.004 49.25);

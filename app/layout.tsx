@@ -80,6 +80,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
         />
+        <meta name="color-scheme" content="light" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="supported-color-schemes" content="light" />
       </head>
       <body className={`${dmSans.className} antialiased`}>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
