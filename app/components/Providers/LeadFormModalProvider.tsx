@@ -35,7 +35,13 @@ export const LeadFormModalProvider = ({
   const closeLeadForm = useCallback(() => setIsOpen(false), []);
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (typeof document === "undefined") return;
+
+    if (!isOpen) {
+      document.body.style.overflow = "";
+      document.body.removeAttribute("data-modal-open");
+      return;
+    }
 
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -45,10 +51,12 @@ export const LeadFormModalProvider = ({
 
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
+    document.body.setAttribute("data-modal-open", "1");
 
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
+      document.body.removeAttribute("data-modal-open");
     };
   }, [isOpen, closeLeadForm]);
 

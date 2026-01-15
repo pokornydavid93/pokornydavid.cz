@@ -1,16 +1,32 @@
+:root {
+  --play-main: var(--brand-tertiary);
+  --play-second: #ff5858;
+}
+
 .videoSection {
   width: 100%;
-  background: radial-gradient(140% 80% at 50% 110%, #79eb9333, #0000 60%),
+  background: radial-gradient(140% 80% at 50% -10%, #79eb9333, #0000 60%),
     #0f3a2f;
   position: relative;
   overflow: hidden;
 }
 
+.videoSection::after {
+  content: "";
+  filter: blur(160px);
+  background: #00754f;
+  border-radius: 555px;
+  width: 200px;
+  height: 200px;
+  display: block;
+  position: absolute;
+  bottom: 476px;
+  left: 230px;
+}
+
 .inner {
   display: flex;
   flex-direction: column;
-  gap: 60px;
-
   position: relative;
 }
 
@@ -24,19 +40,20 @@
 .copyCol {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  align-items: flex-start;
+  gap: 8px;
   color: var(--brand-light);
   min-height: 100px;
   max-height: 170px;
   margin-top: 150px;
-  margin-bottom: 66px;
+  margin-bottom: 140px;
 }
 
 .headingBlock {
-  text-align: left;
+  text-align: start;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .eyebrow {
@@ -47,6 +64,7 @@
   color: rgba(var(--brand-tertiary-rgb), 0.9);
   font-size: 12px;
   margin: 0;
+  text-align: start;
 }
 
 .heading {
@@ -64,6 +82,7 @@
   line-height: 1.6;
   font-size: 16px;
   max-width: 520px;
+  text-align: end;
 }
 
 .highlightGrid {
@@ -121,48 +140,208 @@
   font-size: 14px;
 }
 
-.visualCol {
-  width: 100%;
-  flex: 1 1 520px;
-  cursor: pointer;
-}
-
 .videoFrame {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-
-.videoGlow {
-  position: absolute;
-  inset: -18% -12% -22%;
-  background: radial-gradient(
-      60% 60% at 30% 30%,
-      rgba(var(--brand-tertiary-rgb), 0.32),
-      transparent 70%
-    ),
-    radial-gradient(
-      70% 70% at 70% 20%,
-      rgba(var(--brand-primary-rgb), 0.18),
-      transparent 65%
-    );
-  filter: blur(38px);
-  opacity: 0.55;
-  pointer-events: none;
+  align-items: center;
 }
 
 .videoCard {
-  width: 100%;
-  height: 90vh;
+  height: 70vh;
+  aspect-ratio: 16 / 9;
   position: relative;
   overflow: hidden;
   border-radius: 22px;
   background-image: var(--video-poster, url("/nahled-video.png"));
   background-size: cover;
-  background-position: center;
-  height: 85vh;
+  background-position: left 5%;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 11px 4px #ffffff2e;
+}
+
+.inlinePlayer {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background: #000; /* černý okraje jako YT */
+  border-radius: inherit;
+  overflow: hidden; /* aby radius fungoval */
+}
+
+.inlineVideo {
+  width: 100%;
+
+  height: 100%;
+  object-fit: contain; /* klíč */
+  object-position: center;
+  border-radius: inherit;
+  background: #000; /* pro jistotu */
+}
+
+.inlineClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 6;
+  color: var(--brand-tertiary);
+  cursor: pointer;
+  border: 1px solid var(--brand-tertiary);
+  background: #00000080;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.inlineFullscreen {
+  position: absolute;
+  top: 12px;
+  right: 52px;
+  z-index: 6;
+  border: 1px solid var(--brand-tertiary);
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--brand-tertiary);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 25px;
+  line-height: 1;
+}
+
+/* button root */
+.playButton {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #185846, #0c2820);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18) inset,
+    0 20px 60px rgba(0, 0, 0, 0.35);
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.playButton:hover {
+  transform: translate(-50%, -50%) scale(1.02);
+}
+
+.playButton:active {
+  transform: translate(-50%, -50%) scale(0.98);
+}
+
+/* pulsing outer rings */
+.outerCircle {
+  inset: 0;
+  border-radius: 999px;
+  background: rgba(var(--brand-tertiary-rgb), 0.55);
+  position: absolute;
+  pointer-events: none;
+}
+.playbuttoncont {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  z-index: 6;
+
+  display: grid;
+  place-items: center;
+
+  pointer-events: auto;
+}
+/* icon area */
+.icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* SVG styling */
+.triangle {
+  fill: var(--brand-tertiary);
+  animation: videoFadeIn 7s ease;
+}
+
+.path {
+  fill: none;
+  stroke: var(--brand-tertiary);
+  stroke-width: 1;
+
+  stroke-dasharray: 90;
+  stroke-dashoffset: 0;
+
+  animation: videoTriangleStroke 3s ease;
+}
+
+/* animations */
+@keyframes videoFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes videoTriangleStroke {
+  from {
+    stroke-dashoffset: 90;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes videoSmallScale {
+  from {
+    transform: scale(0.3);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* animation helper classes (instead of stylus nesting) */
+.scaleAnim {
+  animation: videoSmallScale 3s infinite;
+}
+
+.delayShort {
+  animation-delay: 0.5s;
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .scaleAnim {
+    animation: none;
+    opacity: 0.25;
+  }
+  .triangle,
+  .path {
+    animation: none;
+  }
 }
 .cornerTag {
   position: absolute;
@@ -186,39 +365,19 @@
   left: 0;
   z-index: 2;
   padding: 12px 14px;
-  background: rgba(0, 0, 0, 0.55);
-  border: 1px solid var(--brand-tertiary-tint);
+     background: #00000080;
   border-left: none;
   border-bottom: none;
   border-right: none;
   color: var(--brand-light);
   font-size: 13px;
-  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.247);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 80px;
-}
-
-.playButton {
-  color: var(--brand-light);
-  cursor: pointer;
-  z-index: 2;
-  background: none;
-  border: 1px solid #0000;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  width: 110px;
-  height: 110px;
-  transition: all 0.3s;
-  display: inline-flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 18px 38px #0006;
+  backdrop-filter: blur(20px);
 }
 
 .playCircle {
@@ -257,9 +416,10 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  gap: 16px;
+  gap: 8px;
   width: 100%;
   flex-direction: column;
+  margin-top: 140px;
 }
 
 .cta {
@@ -294,6 +454,7 @@
   font-size: clamp(26px, 2.4vw, 34px);
   line-height: 1.6;
   font-weight: 800;
+  text-align: end;
 }
 
 .ctaDescription {
@@ -352,8 +513,8 @@
   align-items: center;
   justify-content: center;
   padding: 24px;
-  z-index: 999999999999;
-  pointer-events: none;
+  z-index: 9999;
+  pointer-events: auto;
 }
 
 .overlayBackdrop {
@@ -425,36 +586,6 @@
   line-height: 1;
 }
 
-@keyframes bulletPulse {
-  0% {
-    transform: scale(0.6);
-    opacity: 0.45;
-  }
-  60% {
-    transform: scale(1.35);
-    opacity: 0.14;
-  }
-  100% {
-    transform: scale(1.6);
-    opacity: 0;
-  }
-}
-
-@keyframes playPulse {
-  0% {
-    transform: scale(0.6);
-    opacity: 0.6;
-  }
-  50% {
-    transform: scale(2.8);
-    opacity: 0.14;
-  }
-  100% {
-    transform: scale(0.6);
-    opacity: 0;
-  }
-}
-
 @media (max-width: 960px) {
   .layout {
     flex-direction: column;
@@ -462,6 +593,12 @@
   }
   .copyCol {
     text-align: left;
+  }
+}
+@media (max-width: 1103px) {
+  .videoCard {
+    background-position: center;
+    width: 100%;
   }
 }
 
@@ -481,6 +618,12 @@
     max-width: 300px;
   }
 
+
+  .icon {
+    width: 26px;
+    height: 26px;
+  }
+
   .copyCol {
     align-items: center;
     margin-top: 0px;
@@ -496,7 +639,10 @@
     max-width: 25rem;
     margin-inline: auto;
     border-radius: 18px;
-    height: 100vh;
+    height: 100%;
+  }
+  .playbuttoncont {
+        top: 40%;
   }
   .playButton {
     top: 50%;
@@ -504,6 +650,8 @@
     right: auto;
     bottom: auto;
     transform: translate(-50%, -50%);
+    width: 74px;
+    height: 74px;
   }
 
   .overlayInner {

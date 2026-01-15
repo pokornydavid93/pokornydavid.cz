@@ -18,7 +18,7 @@ const LEGAL_CONTENT = {
       title: "Oprávnění a registrace",
       paragraphs: [
         // TODO: doplň Dejvovo IČO
-        "David Pokorný, IČO: 09016236 se sídlem (Tovární 1197/42a, 779 00, Olomouc), je vázaným zástupcem investičního/samostatného zprostředkovatele SAB servis s.r.o., IČ: 24704008, se sídlem Jungmannova 748/30, 110 00 Praha 1, registrovaného u České národní banky.",
+        "David Pokorný, IČO: 09016236 se sídlem (Za zbrojnici 446, 784 01 Červenka), je vázaným zástupcem investičního/samostatného zprostředkovatele SAB servis s.r.o., IČ: 24704008, se sídlem Jungmannova 748/30, 110 00 Praha 1, registrovaného u České národní banky.",
         "Finanční služby prezentované na tomto webu jsou zprostředkovávány Davidem Pokorným v roli vázaného zástupce v rámci oprávnění společnosti SAB servis s.r.o. v těchto oblastech: investice dle zákona č. 256/2004 Sb., spotřebitelské úvěry dle zákona č. 257/2016 Sb., pojištění dle zákona č. 170/2018 Sb. a doplňkové penzijní spoření dle zákona č. 427/2011 Sb.",
       ],
       verify: {

@@ -1,15 +1,10 @@
-'use client';
-
-import { Mail, MapPin, Phone, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, ArrowUpRight } from "lucide-react";
 import Container from "@/app/ui/container/Container";
-import Button from "@/app/ui/cta/Button";
 import LogoMark from "@/app/svgr/LogoMark";
 import s from "./footer.module.css";
-import { useLeadFormModal } from "../../Providers/LeadFormModalProvider";
+import FooterCTAButton from "./FooterCTAButton.client";
 
 const Footer = () => {
-  const { openLeadForm } = useLeadFormModal();
-
   return (
     <footer className={s.footerCont} id="footer">
       <div className={s.glow} aria-hidden />
@@ -24,14 +19,12 @@ const Footer = () => {
                 <p className={s.role}>Finanční plánování</p>
               </div>
             </div>
-            <Button
-              variant="cta"
+            <FooterCTAButton
               className={s.cta}
               iconRight={<ArrowUpRight size={18} />}
-              onClick={() => openLeadForm()}
             >
               Probrat vaši situaci
-            </Button>
+            </FooterCTAButton>
           </div>
 
           <div className={s.links}>

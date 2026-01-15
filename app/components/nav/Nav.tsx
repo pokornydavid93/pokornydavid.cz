@@ -2,21 +2,21 @@
 
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { useViewport } from "../Providers/ViewportProvider";
 import { useLeadFormModal } from "../Providers/LeadFormModalProvider";
 import s from "./css/nav.module.css";
 import LogoMark from "@/app/svgr/LogoMark";
-import { HeartHandshake, PhoneCall, Quote, User2, Workflow } from "lucide-react";
+import { HeartHandshake, Quote, User2, Workflow } from "lucide-react";
 import Button from "@/app/ui/cta/Button";
 
 type NavProps = {
+  activeSection?: string;
   sideMenu: boolean;
   setSideMenu: React.Dispatch<React.SetStateAction<boolean>>;
+  modalOpen?: boolean;
 };
 
-const Nav = ({ sideMenu, setSideMenu }: NavProps) => {
+const Nav = ({ activeSection, sideMenu, setSideMenu, modalOpen }: NavProps) => {
   const [isHidden, setIsHidden] = useState(false);
-  const { width } = useViewport();
   const { openLeadForm } = useLeadFormModal();
 
   const topRef = useRef<HTMLSpanElement | null>(null);
@@ -54,7 +54,6 @@ const Nav = ({ sideMenu, setSideMenu }: NavProps) => {
         duration: 0.25,
         ease: "power3.inOut",
       });
-
     } else {
       // CLOSE — smooth easing
       gsap.to(topRef.current, {
@@ -81,9 +80,11 @@ const Nav = ({ sideMenu, setSideMenu }: NavProps) => {
 
   // --- scroll hide logic ---
   useEffect(() => {
+    if (modalOpen) return;
     let lastY = window.scrollY;
 
     const onScroll = () => {
+      if (modalOpen || document.documentElement.dataset.modal === "1") return;
       const currentY = window.scrollY;
       const diff = currentY - lastY;
 
@@ -98,13 +99,25 @@ const Nav = ({ sideMenu, setSideMenu }: NavProps) => {
 
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [modalOpen]);
+
+  useEffect(() => {
+    if (modalOpen) {
+      setIsHidden(false);
+    }
+  }, [modalOpen]);
+
+  const getLinkClassName = (sectionId: string) =>
+    `${s.topLink} ${activeSection === sectionId ? s.topLinkActive : ""}`;
+
+  const navHidden = modalOpen || (isHidden && !sideMenu);
 
   return (
     <nav
       className={s.navCont}
       style={{
-        transform: `translateY(${isHidden && !sideMenu ? "-100%" : "0"})`,
+        transform: `translateY(${navHidden ? "-100%" : "0"})`,
+        pointerEvents: modalOpen ? "none" : "auto",
       }}
     >
       <div className={s.leftBox}>
@@ -121,25 +134,26 @@ const Nav = ({ sideMenu, setSideMenu }: NavProps) => {
       </div>
 
       <div className={s.rightBox}>
-        <a href="#about" className={s.topLink}>
+        <a href="#about" className={getLinkClassName("about")}>
           <User2 className={s.topIcon} />
           <span>Kdo jsem</span>
         </a>
-        <a href="#services" className={s.topLink}>
-          <HeartHandshake className={s.topIcon} />
-          <span>S čím pomáhám</span>
-        </a>
-        <a href="#process" className={s.topLink}>
+        <a href="#process" className={getLinkClassName("process")}>
           <Workflow className={s.topIcon} />
           <span>Jak pracuji</span>
         </a>
-        <a href="#testimonials" className={s.topLink}>
+           <a href="#services" className={getLinkClassName("services")}>
+          <HeartHandshake className={s.topIcon} />
+          <span>S čím pomáhám</span>
+        </a>
+        <a href="#testimonials" className={getLinkClassName("testimonials")}>
           <Quote className={s.topIcon} />
           <span>Reference</span>
         </a>
+     
         <Button
           variant="cta"
-          label={"Probrat vaši situaci"}
+          label={"Domluvit hovor"}
           onClick={() => openLeadForm()}
           size="md"
           className={s.heroCta}
@@ -147,7 +161,7 @@ const Nav = ({ sideMenu, setSideMenu }: NavProps) => {
       </div>
 
       {/* BURGER */}
-      <div className={s.burgerMenu} onClick={() => setSideMenu(v => !v)}>
+      <div className={s.burgerMenu} onClick={() => setSideMenu((v) => !v)}>
         <span ref={topRef} className={s.burgerTop} />
         <span ref={midRef} className={s.burgerMiddle} />
         <span ref={botRef} className={s.burgerBottom} />

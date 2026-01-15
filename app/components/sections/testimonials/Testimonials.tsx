@@ -1,10 +1,6 @@
-"use client";
-
 import s from "./testimonials.module.css";
 import Container from "@/app/ui/container/Container";
-import Button from "@/app/ui/cta/Button";
 import {
-  Star,
   Wallet,
   ShieldCheck,
   Home,
@@ -13,12 +9,11 @@ import {
   Shield,
   LucideIcon,
 } from "lucide-react";
-import { useEffect, useState } from "react";
-import { useLeadFormModal } from "../../Providers/LeadFormModalProvider";
-import { Reveal } from "@/app/ui/animations/Reveal";
-import { Marquee } from "@/magic/ui/marquee";
+import RevealClient from "@/app/ui/animations/RevealClient";
+import TestimonialsCTAButton from "./TestimonialsCTAButton.client";
+import TestimonialsMarquee from "./TestimonialsMarquee.client";
 
-type Testimonial = {
+export type Testimonial = {
   quote: string;
   name: string;
   link: string;
@@ -26,7 +21,7 @@ type Testimonial = {
   source: ReviewSource;
 };
 
-type ReviewSource = "google";
+export type ReviewSource = "google";
 
 const leftColumn: Testimonial[] = [
   {
@@ -195,98 +190,6 @@ const topics: Topic[] = [
   { label: "Penzijní plán", icon: Shield },
 ];
 
-const useMediaQuery = (query: string) => {
-  const [matches, setMatches] = useState(false);
-
-  useEffect(() => {
-    const mql = window.matchMedia(query);
-    const listener = (event: MediaQueryListEvent) => setMatches(event.matches);
-
-    setMatches(mql.matches);
-    mql.addEventListener("change", listener);
-    return () => mql.removeEventListener("change", listener);
-  }, [query]);
-
-  return matches;
-};
-
-const renderStars = (rating: number) => {
-  const fullStars = Math.floor(rating);
-  const hasHalf = rating - fullStars >= 0.5;
-  const emptyStars = 5 - fullStars - (hasHalf ? 1 : 0);
-
-  return (
-    <span
-      className={s.starsInline}
-      aria-label={`Hodnocení ${rating} z 5`}
-      role="img"
-    >
-      {Array.from({ length: fullStars }).map((_, index) => (
-        <Star
-          key={`full-${index}`}
-          className={`${s.starIcon} ${s.starFull}`}
-          aria-hidden
-        />
-      ))}
-      {hasHalf ? (
-        <span className={s.starHalf} aria-hidden>
-          <Star className={`${s.starIcon} ${s.starEmpty}`} aria-hidden />
-          <span className={s.starHalfFill}>
-            <Star className={`${s.starIcon} ${s.starFull}`} aria-hidden />
-          </span>
-        </span>
-      ) : null}
-      {Array.from({ length: emptyStars }).map((_, index) => (
-        <Star
-          key={`empty-${index}`}
-          className={`${s.starIcon} ${s.starEmpty}`}
-          aria-hidden
-        />
-      ))}
-    </span>
-  );
-};
-
-const renderReviewSourceIcon = (source: ReviewSource) => {
-  if (source === "google") {
-    return (
-      <img className={s.reviewSourceIcon} src="/googleLogo.svg" alt="Google" />
-    );
-  }
-
-  return null;
-};
-
-const QuoteCard = ({ quote, name, link, rating, source }: Testimonial) => (
-  <article className={s.quoteCard}>
-    <div className={s.quoteMeta}>
-      <span className={s.avatar}>{name.charAt(0)}</span>
-      <div className={s.person}>
-        <div className={s.nameRow}>
-          <span className={s.name}>{name}</span>
-          {renderStars(rating)}
-        </div>
-      </div>
-    </div>
-    <p className={s.quoteText}>{quote}</p>
-    <div className={s.reviewMeta}>
-      <a className={s.reviewLink} href={link} target="_blank" rel="noreferrer">
-        Zobrazit recenzi
-      </a>
-      <span className={s.reviewSource} aria-hidden>
-        {renderReviewSourceIcon(source)}
-      </span>
-    </div>
-  </article>
-);
-
-type TagProps = {
-  label: string;
-  count?: number;
-  showCount?: boolean;
-  icon?: LucideIcon;
-};
-
 const Tag = ({ label, count, showCount = true, icon: Icon }: TagProps) => (
   <div className={s.tag}>
     {Icon ? (
@@ -301,9 +204,14 @@ const Tag = ({ label, count, showCount = true, icon: Icon }: TagProps) => (
   </div>
 );
 
+type TagProps = {
+  label: string;
+  count?: number;
+  showCount?: boolean;
+  icon?: LucideIcon;
+};
+
 const Testimonials = () => {
-  const isMobile = useMediaQuery("(max-width: 1100px)");
-  const { openLeadForm } = useLeadFormModal();
   const formatStatValue = (value: number, item: StatItem) => {
     const formatted = item.decimals ? value.toFixed(item.decimals) : `${value}`;
     return `${formatted}${item.suffix ?? ""}`;
@@ -313,88 +221,48 @@ const Testimonials = () => {
     <section className={s.section}>
       <Container className={s.inner}>
         <div className={s.headingWrapper}>
-          <Reveal as="p" from="bottom" className={s.eyebrow}>
+          <RevealClient as="p" from="bottom" className={s.eyebrow}>
             Skutečné příběhy
-          </Reveal>
-          <Reveal as="h2" from="bottom" className={s.gradientSoft}>
+          </RevealClient>
+          <RevealClient as="h2" from="bottom" className={s.gradientSoft}>
             Jak spolupráci vnímají klienti
-          </Reveal>
-          <Reveal as="p" from="bottom" className={s.sectionDescription}>
+          </RevealClient>
+          <RevealClient as="p" from="bottom" className={s.sectionDescription}>
             Reálné zkušenosti lidí, kteří řešili stejné otázky jako vy. Co
             fungovalo, co ne – a jaký měli pocit ze spolupráce.
-          </Reveal>
+          </RevealClient>
         </div>
 
         <div className={s.flex}>
           {/* LEFT CONTENT */}
-          <Reveal as="div" from="bottom" className={s.card}>
-            <Reveal as="h3" from="bottom" className={s.cardHeading}>
+          <RevealClient as="div" from="bottom" className={s.card}>
+            <RevealClient as="h3" from="bottom" className={s.cardHeading}>
               Důvěřuje mi více než 200 klientů
-            </Reveal>
+            </RevealClient>
 
-            <Reveal as="p" from="bottom" className={s.cardBody}>
+            <RevealClient as="p" from="bottom" className={s.cardBody}>
               Klienti oceňují přehled, klidný přístup a řešení, která dávají
               smysl v běžném životě.
-            </Reveal>
+            </RevealClient>
 
-            <Reveal as="div" from="bottom" className={s.buttonWrapper}>
-              <Button
-                variant="cta"
-                className={s.ctaBtn}
-                onClick={() => openLeadForm()}
-              >
+            <RevealClient as="div" from="bottom" className={s.buttonWrapper}>
+              <TestimonialsCTAButton className={s.ctaBtn}>
                 Probrat vaši situaci
-              </Button>
-            </Reveal>
-          </Reveal>
+              </TestimonialsCTAButton>
+            </RevealClient>
+          </RevealClient>
 
-          {/* MARQUEE – DESKTOP */}
-          {!isMobile && (
-            <Reveal
-              as="div"
-              from="bottom"
-              className={s.marqueeShell}
-              aria-hidden
-            >
-              <div className={s.column}>
-                <Marquee vertical pauseOnHover repeat={4}>
-                  {leftColumn.map((t) => (
-                    <QuoteCard key={t.name} {...t} />
-                  ))}
-                </Marquee>
-              </div>
-
-              <div className={s.column}>
-                <Marquee vertical reverse pauseOnHover repeat={4}>
-                  {rightColumn.map((t) => (
-                    <QuoteCard key={t.name} {...t} />
-                  ))}
-                </Marquee>
-              </div>
-            </Reveal>
-          )}
-
-          {/* MARQUEE – MOBILE */}
-          {isMobile && (
-            <Reveal
-              as="div"
-              from="bottom"
-              className={s.marqueeShell}
-              aria-hidden
-            >
-              <Marquee pauseOnHover repeat={4}>
-                {allTestimonials.map((t) => (
-                  <QuoteCard key={t.name} {...t} />
-                ))}
-              </Marquee>
-            </Reveal>
-          )}
+          <TestimonialsMarquee
+            leftColumn={leftColumn}
+            rightColumn={rightColumn}
+            allTestimonials={allTestimonials}
+          />
         </div>
 
         {/* STATS */}
         <div className={s.statsBar}>
           {stats.map((item, index) => (
-            <Reveal
+            <RevealClient
               key={item.label}
               as="div"
               from="bottom"
@@ -406,19 +274,19 @@ const Testimonials = () => {
                 {formatStatValue(item.value, item)}
               </div>
               <div className={s.statLabel}>{item.label}</div>
-            </Reveal>
+            </RevealClient>
           ))}
         </div>
 
         <div className={s.topicContainer}>
-          <Reveal as="p" from="left" className={s.topicLabel}>
+          <RevealClient as="p" from="left" className={s.topicLabel}>
             Co nejčastěji řešíme:
-          </Reveal>
+          </RevealClient>
 
           {/* TOPIC PILLS (now using Tag) */}
           <div className={s.topicChips}>
             {topics.map((t, i) => (
-              <Reveal
+              <RevealClient
                 key={t.label}
                 as="div"
                 from="bottom"
@@ -427,7 +295,7 @@ const Testimonials = () => {
                 index={i}
               >
                 <Tag label={t.label} showCount={false} icon={t.icon} />
-              </Reveal>
+              </RevealClient>
             ))}
           </div>
         </div>

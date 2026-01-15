@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import {
   Compass,
@@ -13,10 +11,9 @@ import {
   Zap,
 } from "lucide-react";
 import Container from "@/app/ui/container/Container";
-import Button from "@/app/ui/cta/Button";
 import s from "./services.module.css";
-import { useLeadFormModal } from "../../Providers/LeadFormModalProvider";
-import { Reveal } from "@/app/ui/animations/Reveal";
+import RevealClient from "@/app/ui/animations/RevealClient";
+import ServicesCTAButton from "./ServicesCTAButton.client";
 
 type Service = {
   label: string;
@@ -112,27 +109,25 @@ const slugify = (text: string) =>
     .replace(/(^-|-$)/g, "");
 
 const Services = () => {
-  const { openLeadForm } = useLeadFormModal();
-
   return (
     <section className={s.servicesCont} id="services">
       <Container fullHeight>
         <div className={`${s.header}`}>
-          <Reveal as="p" from="bottom" className={s.eyebrow}>
+          <RevealClient as="p" from="bottom" className={s.eyebrow}>
             Praktické služby
-          </Reveal>
-          <Reveal as="h2" from="bottom">
+          </RevealClient>
+          <RevealClient as="h2" from="bottom">
             Když chcete mít ve financích jasno
-          </Reveal>
-          <Reveal as="p" from="bottom" className={s.sub}>
+          </RevealClient>
+          <RevealClient as="p" from="bottom" className={s.sub}>
             Vyberte si téma, které právě řešíte. Společně pak projdeme
             možnosti a navrhneme další postup.
-          </Reveal>
+          </RevealClient>
         </div>
 
         <div className={s.grid}>
           {services.map((service, i) => (
-            <Reveal
+            <RevealClient
               key={service.title}
               as="article"
               from="bottom"
@@ -163,21 +158,17 @@ const Services = () => {
                 <p>{service.description}</p>
               </div>
 
-              <Button
-                variant="cta"
-                className={s.ctaBtn}
-                onClick={() => openLeadForm(service.title)}
-              >
+              <ServicesCTAButton serviceTitle={service.title} className={s.ctaBtn}>
                 Probrat vaši situaci
-              </Button>
-            </Reveal>
+              </ServicesCTAButton>
+            </RevealClient>
           ))}
         </div>
-        <Reveal as="p" from="bottom" className={s.disclaimer}>
+        <RevealClient as="p" from="bottom" className={s.disclaimer}>
           Informace na webu slouží k obecnému přehledu a nepředstavují
           investiční doporučení. Konkrétní řešení vždy vychází z individuální
           konzultace.
-        </Reveal>
+        </RevealClient>
       </Container>
     </section>
   );

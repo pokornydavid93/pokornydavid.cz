@@ -458,15 +458,40 @@
   /* 👇 SCROLL */
   max-height: 260px;
   overflow-y: auto;
-
-  /* 👇 SKRYTÍ SCROLLBARU */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Edge legacy */
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--brand-primary-rgb), 0.65)
+    rgba(255, 255, 255, 0.08);
 }
 
 .selectMenu::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+  width: 8px;
+  height: 8px;
+}
+
+.selectMenu::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+}
+
+.selectMenu::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--brand-primary-rgb), 0.75),
+    rgba(var(--brand-tertiary-rgb), 0.6)
+  );
+  border-radius: 999px;
+  border: 2px solid rgba(15, 58, 47, 0.6);
+}
+
+.selectMenu::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--brand-primary-rgb), 0.9),
+    rgba(var(--brand-tertiary-rgb), 0.75)
+  );
 }
 
 .selectItem {

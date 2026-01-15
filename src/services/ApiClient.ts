@@ -1,11 +1,21 @@
 import type { LeadFormPayload } from "@/lib/api";
 
 export type LeadSubmitResponse = {
-  ok: boolean;
-  created: boolean;
-  deduped: boolean;
   message?: string;
+  deduped?: boolean;
 };
+
+export class ApiError extends Error {
+  status?: number;
+  data?: unknown;
+
+  constructor(message: string, status?: number, data?: unknown) {
+    super(message);
+    this.name = "ApiError";
+    this.status = status;
+    this.data = data;
+  }
+}
 
 export class ApiClient {
   private baseUrl: string;
@@ -53,6 +63,35 @@ export class ApiClient {
     return text as unknown as T;
   }
 
+  private async safeReadJson<T>(res: Response): Promise<T | null> {
+    if (res.status === 204) {
+      return null;
+    }
+
+    const contentType = (res.headers.get("content-type") ?? "").toLowerCase();
+    const isJson =
+      contentType.includes("application/json") || contentType.includes("+json");
+
+    const text = await res.text();
+    if (!text) {
+      return null;
+    }
+
+    if (isJson) {
+      try {
+        return JSON.parse(text) as T;
+      } catch {
+        return null;
+      }
+    }
+
+    try {
+      return JSON.parse(text) as T;
+    } catch {
+      return null;
+    }
+  }
+
   async submitLead(payload: LeadFormPayload) {
     const url = `${this.baseUrl}/api/lead`;
     const res = await fetch(url, {
@@ -63,18 +102,20 @@ export class ApiClient {
       body: JSON.stringify(payload),
     });
 
-    let data: LeadSubmitResponse | null = null;
-    try {
-      data = (await res.json()) as LeadSubmitResponse;
-    } catch {
-      data = null;
+    const data = await this.safeReadJson<{ message?: string } & LeadSubmitResponse>(
+      res
+    );
+
+    if (!res.ok) {
+      const message =
+        data?.message ??
+        (res.status === 429 ? "Příliš mnoho pokusů." : `HTTP ${res.status}`);
+      throw new ApiError(message, res.status, data);
     }
 
-    if (!res.ok || !data || data.ok !== true) {
-      const message = data?.message || `Request failed (${res.status})`;
-      throw new Error(message);
-    }
-
-    return data;
+    return {
+      message: data?.message ?? "",
+      deduped: Boolean(data?.deduped),
+    };
   }
 }

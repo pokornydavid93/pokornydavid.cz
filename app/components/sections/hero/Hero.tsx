@@ -1,18 +1,14 @@
-"use client";
-import { useState } from "react";
+import Image from "next/image";
 import s from "./hero.module.css";
-import Button from "@/app/ui/cta/Button";
 import {
   MousePointerClick,
   Eye,
   BadgeCheck,
   ShieldAlert,
-  Hand,
   Repeat,
 } from "lucide-react";
 import GradientText from "@/app/ui/animations/GradientText";
-import { useViewport } from "../../Providers/ViewportProvider";
-import { useLeadFormModal } from "../../Providers/LeadFormModalProvider";
+import HeroCTAClient from "./HeroCTAClient";
 
 export type HeroContent = {
   eyebrow: string;
@@ -31,13 +27,16 @@ export type HeroContent = {
 type HeroProps = {
   variants: HeroContent[];
   activeSession: string;
+  index?: number;
 };
 
-const Hero = ({ variants, activeSession }: HeroProps) => {
-  const [index, setIndex] = useState(5);
-  const content = variants[index];
-  const { width, height } = useViewport();
-  const { openLeadForm } = useLeadFormModal();
+const Hero = ({ variants, activeSession, index = 0 }: HeroProps) => {
+  const maxIndex = Math.max(variants.length - 1, 0);
+  const safeIndex = Math.min(Math.max(index, 0), maxIndex);
+  const content = variants[safeIndex];
+
+  if (!content) return null;
+
   const serviceLinks = [
     {
       label: "Licencovaný poradce",
@@ -68,65 +67,73 @@ const Hero = ({ variants, activeSession }: HeroProps) => {
   return (
     <section className={s.heroCont}>
       <div className={s.bgLayer} />
-      <div className={s.heroNoise} />
-      <div className={s.heroInner}>
-        <div className={s.heroGlass} />
-        <p className={s.eyebrow}>{content.eyebrow}</p>
-        <h1 className={s.title}>
-          <span className={s.titleLine}>
-            {hasHighlight ? (
-              <>
-                {before}
-                <GradientText
-                  gradientVar="--text-gradient-hero"
-                  className={s.highlight}
-                  animationSpeed={5}
-                >
-                  {highlight}
-                </GradientText>
-                {after}
-              </>
-            ) : (
-              line1
-            )}
-          </span>
-          <span className={s.titleLine}>{line2}</span>
-        </h1>
+      <div className={s.heroLayout}>
+        <div className={`${s.heroInner} ${s.heroTextCol}`}>
+          <div className={s.heroGlass} />
+          <p className={s.eyebrow}>{content.eyebrow}</p>
+          <h1 className={s.title}>
+            <span className={s.titleLine}>
+              {hasHighlight ? (
+                <>
+                  {before}
+                  <GradientText
+                    gradientVar="--text-gradient-hero"
+                    className={s.highlight}
+                    animationSpeed={5}
+                  >
+                    {highlight}
+                  </GradientText>
+                  {after}
+                </>
+              ) : (
+                line1
+              )}
+            </span>
+            <span className={s.titleLine}>{line2}</span>
+          </h1>
 
-        <p className={s.description}>{content.description}</p>
+          <p className={s.description}>{content.description}</p>
 
-        <div className={s.actions}>
-          <div className={s.trustHints}>
-            <div className={s.trustHintList}>
-              {trustHints.map((hint) => (
-                <span key={hint} className={s.trustHint}>
-                  <ShieldAlert
-                    className={s.trustHintIcon}
-                    strokeWidth={2.5}
-                    aria-hidden
-                  />
-                  <span className={s.trustHintText}>{hint}</span>
-                  <ShieldAlert
-                    className={s.trustHintIconRight}
-                    strokeWidth={2.5}
-                    aria-hidden
-                  />
-                </span>
-              ))}
+          <div className={s.actions}>
+            <HeroCTAClient
+              label={content.cta.primary.label}
+              iconRight={<MousePointerClick className={s.ctaIcon} aria-hidden />}
+              size="md"
+              className={s.heroCta}
+            />
+            <div className={s.trustHints}>
+              <div className={s.trustHintList}>
+                {trustHints.map((hint) => (
+                  <span key={hint} className={s.trustHint}>
+                    <ShieldAlert
+                      className={s.trustHintIcon}
+                      strokeWidth={2.5}
+                      aria-hidden
+                    />
+                    <span className={s.trustHintText}>{hint}</span>
+                    <ShieldAlert
+                      className={s.trustHintIconRight}
+                      strokeWidth={2.5}
+                      aria-hidden
+                    />
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-
-          <Button
-            variant="cta"
-            label={content.cta.primary.label}
-            onClick={() => openLeadForm()}
-            iconRight={<MousePointerClick className={s.ctaIcon} aria-hidden />}
-            size="md"
-            className={s.heroCta}
-          />
         </div>
 
-        {/* 🔥 NOVÝ BOTTOM STRIP – elegantně posazený na dně hero */}
+        <div className={s.heroMediaCol}>
+          <Image
+            className={s.heroImg}
+            src="/hero-v2.webp"
+            alt="Hero background"
+            draggable={false}
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 48vw"
+          />
+        </div>
       </div>
 
       <div className={s.serviceStrip}>
@@ -137,12 +144,6 @@ const Hero = ({ variants, activeSession }: HeroProps) => {
           </a>
         ))}
       </div>
-      {/* switcher */}
-      {/* <div className={s.variantSwitcher}>
-        <button onClick={prev}>←</button>
-        <span>{index + 1} / {variants.length}</span>
-        <button onClick={next}>→</button>
-      </div> */}
     </section>
   );
 };

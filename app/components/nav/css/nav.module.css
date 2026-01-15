@@ -25,6 +25,10 @@
   border-right: none;
 }
 
+.heroCta {
+  font-weight: 800;
+}
+
 .leftBox {
   display: flex;
   justify-content: center;

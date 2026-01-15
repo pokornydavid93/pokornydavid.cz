@@ -8,10 +8,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-image: url("/hero.webp");
-  background-position: 100px center;
-  background-repeat: no-repeat;
-  background-size: cover;
   z-index: 15;
 }
 
@@ -30,14 +26,39 @@
   z-index: 1;
 }
 
-.heroNoise {
-  position: absolute;
-  inset: 0;
-  background-image: url("/noise.webp");
-  opacity: 0.1;
-  mix-blend-mode: soft-light;
-  pointer-events: none;
-  z-index: 2;
+
+.heroLayout {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  flex: 1 1 auto;
+  padding-top: 90px;
+}
+
+.heroTextCol {
+  flex: 1 1 52%;
+  max-width: 960px;
+}
+
+.heroMediaCol {
+  flex: 1 1 48%;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  user-select: none;
 }
 /* GLOBAL TONAL OVERLAY + SPOTLIGHT NA OBLIČEJ */
 
@@ -247,16 +268,15 @@
   height: 100%;
   position: relative;
   z-index: 9;
-  width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   background: linear-gradient(
     135deg,
     rgba(24, 88, 70, 0.95),
     rgba(12, 40, 32, 0.95)
   );
-  padding: 90px 50px 50px 90px;
+  padding: 0px 50px 50px 90px;
   box-shadow: inset -14px 0px 20px -10px #0000006c, -3px 0 9px 7px #0000006c;
   color: var(--brand-white);
 }
@@ -272,6 +292,7 @@
   text-shadow: 0px 0px 35px #d6ffade3;
   opacity: 0;
   animation: heroFadeUp 0.8s ease 0.1s forwards;
+  margin-top: 90px;
 }
 
 .title {
@@ -303,7 +324,7 @@
   gap: 60px;
   margin-top: 16px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: flex-start;
   justify-content: center;
   opacity: 0;
@@ -379,8 +400,7 @@
 
 @media (width <= 1880px) {
   .heroInner {
-    padding: 50px;
-    padding-top: 161px;
+    padding-left: 60px;
   }
 
   .description {
@@ -388,34 +408,18 @@
     min-width: 430px;
   }
 }
-/* @media (width <= 1580px) {
-  .heroCont {
-    background-position: 20px top;
-  }
-}
-@media (width <= 1430px) {
-  .heroCont {
-    background-position: -86px top;
-  }
-}
-@media (width <= 1330px) {
-  .heroCont {
-    background-position: -146px top;
-  }
-}
-@media (width <= 1265px) {
-  .heroCont {
-    background-position: -223px top;
-  }
-} */
+
 /* === LAPTOP (1025–1439) === */
 @media (width <= 1190px) {
   .heroInner {
     width: 600px; /* jemný posun dolů */
   }
-  /* .heroCont {
-    background-position: -283px top;
-  } */
+}
+
+@media (width <= 1223px) {
+  .heroLayout {
+    padding-top: 70px;
+  }
 }
 
 /* === TABLET (641–1024) === */
@@ -424,7 +428,7 @@
     background: none; /* větší posun, ať není hlava useknutá */
   }
 
-  .bgLayer {
+  /* .bgLayer {
     background: linear-gradient(
       122deg,
       #0f3a2f 22%,
@@ -432,7 +436,7 @@
       #0f3a2ff5 80%,
       #0f3a2fe8 100%
     );
-  }
+  } */
 
   .ctaIcon {
     display: none;
@@ -443,19 +447,19 @@
   }
 
   .heroInner {
-    align-items: center;
-    justify-content: center;
-    gap: 13px;
+    justify-content: start;
+    align-items: start;
+    gap: 5px;
   }
   .eyebrow {
-    text-align: center;
+    text-align: start;
     text-shadow: 0px 0px 10px #d6ffade3;
   }
   .title {
-    text-align: center;
+    text-align: start;
   }
   .description {
-    text-align: center;
+    text-align: start;
     min-width: 0px;
     max-width: 438px;
   }
@@ -463,7 +467,7 @@
     flex-direction: column-reverse;
     justify-content: space-between;
     margin: 0;
-    align-items: center;
+    align-items: start;
     gap: 30px;
   }
 
@@ -500,6 +504,19 @@
   .heroInner {
     width: 100%;
   }
+
+  .heroTextCol {
+    max-width: none;
+  }
+
+  .heroMediaCol {
+    order: 2;
+    min-height: 38vh;
+  }
+
+  .heroImg {
+    object-position: center;
+  }
 }
 
 @media (width <= 984px) {
@@ -515,12 +532,32 @@
   .serviceStrip {
     display: none;
   }
+  .heroMediaCol {
+    display: none;
+  }
   .heroInner {
-    padding-top: 70px;
     padding-bottom: 5px;
-
     border-bottom: 1px solid #d6ffad2e;
     box-shadow: none;
+    align-items: center;
+  }
+
+    .eyebrow {
+    text-align: center;
+    text-shadow: 0px 0px 10px #d6ffade3;
+  }
+  .title {
+    text-align: center;
+  }
+  .description {
+    text-align: center;
+  }
+  .actions {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    margin: 0;
+    align-items: center;
+    gap: 30px;
   }
 }
 

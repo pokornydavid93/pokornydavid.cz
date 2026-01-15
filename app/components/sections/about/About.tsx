@@ -1,13 +1,8 @@
-"use client";
-
-import React from "react";
 import s from "./about.module.css";
 import Container from "@/app/ui/container/Container";
 import AboutCredentials from "./AboutCredentials";
-import { Reveal } from "@/app/ui/animations/Reveal";
-
-import Button from "@/app/ui/cta/Button";
-import { useLeadFormModal } from "../../Providers/LeadFormModalProvider";
+import RevealClient from "@/app/ui/animations/RevealClient";
+import AboutCTAButton from "./AboutCTAButton.client";
 
 type Highlight = {
   title: string;
@@ -23,28 +18,28 @@ const ABOUT_CONTENT = {
   },
   lead: [
     "Jmenuji se David Pokorný a pomáhám lidem dát finance do pořádku tak, aby fungovaly v běžném životě a přinášely dlouhodobý klid.",
-    "Bez složitých termínů, bez tlaku na produkt – jen srozumitelný plán, který dává smysl v praxi.",
+    "Bez tlaku na produkt — jen srozumitelný plán, který dává smysl v praxi.",
   ],
   body: [
-    "K financím jsem se dostal kvůli sobě. Chtěl jsem pochopit, kam mizí moje peníze, co má skutečně smysl řešit a jak si vybudovat rezervu, na kterou se dá spolehnout, když se život nevyvíjí podle plánu.",
-    "Postupně jsem zjistil, že stejné otázky řeší většina lidí kolem mě – často bez jasného směru, bez kontextu a bez někoho, kdo by jim pomohl udělat si v tom pořádek.",
-    "Proto dnes stavím finance tak, aby byly přehledné, dlouhodobě udržitelné a pod kontrolou.",
+    "K financím jsem se dostal, protože jsem chtěl pochopit, co má v životě opravdu smysl řešit. Dnes pomáhám lidem nastavit rezervu a plán, na který se dá spolehnout, když věci nejdou podle očekávání.",
+    "Spolupráce pro mě nekončí jedním setkáním. Život se mění — a s ním i finance. Proto plán průběžně ladíme podle vašich priorit.",
+    "Proto stavím finance tak, aby byly přehledné, dlouhodobě udržitelné a hlavně srozumitelné — abyste vždy věděli, co je další krok.",
   ],
   highlights: [
     {
-      title: "Přehled bez tlaku",
+      title: "Bez složitých termínů.",
       text: "Žádné složité termíny – jen kroky, kterým rozumíte.",
     },
     {
-      title: "Plán na míru",
+      title: "Plán, který sedí vašemu životu.",
       text: "Každý další krok vychází z toho, jak žijete, jaké máte priority a co chcete mít ve svém životě pod kontrolou.",
     },
     {
-      title: "Dlouhodobá péče",
+      title: "Ne jednorázově. Dlouhodobě.",
       text: "Pomůžu hlídat rizika a budovat rezervy, aby finance fungovaly i v čase.",
     },
     {
-      title: "Funguje v reálném životě",
+      title: "Aby finance držely směr.",
       text: "Pomůžu hlídat rizika a budovat rezervy, aby finance fungovaly i v čase.",
     },
   ] satisfies Highlight[],
@@ -52,8 +47,6 @@ const ABOUT_CONTENT = {
 };
 
 const About = () => {
-  const { openLeadForm } = useLeadFormModal();
-
   const paragraphs = [
     {
       text: `${ABOUT_CONTENT.lead[0]} ${ABOUT_CONTENT.lead[1]}`,
@@ -66,23 +59,23 @@ const About = () => {
     <section className={s.section}>
       <Container className={s.inner}>
         <div className={s.headingCont}>
-          <Reveal from="bottom">
+          <RevealClient from="bottom">
             <p className={s.eyebrow}>{ABOUT_CONTENT.eyebrow}</p>
-          </Reveal>
-          <Reveal from="bottom">
+          </RevealClient>
+          <RevealClient from="bottom">
             <h3>
               <span className={s.gradientSoft}>
                 {ABOUT_CONTENT.heading.accent}
               </span>
             </h3>
-          </Reveal>
-          <Reveal from="bottom">
+          </RevealClient>
+          <RevealClient from="bottom">
             <p className={s.descHeading}>{ABOUT_CONTENT.heading.line1}</p>
-          </Reveal>
+          </RevealClient>
         </div>
         <div className={s.grid}>
           <div className={s.leftCol}>
-            <Reveal as="div" from="bottom" className={s.leftColInner}>
+            <RevealClient as="div" from="bottom" className={s.leftColInner}>
               <article className={`${s.card} ${s.textCard}`}>
                 {paragraphs.map((para, idx) => {
                   const highlight =
@@ -92,13 +85,13 @@ const About = () => {
 
                   return (
                     <div key={idx} className={s.paragraphBlock}>
-                      <Reveal from="left">
+                      <RevealClient from="left">
                         <div className={s.paragraphHighlight}>
                           <strong>{highlight.title}</strong>
                         </div>
-                      </Reveal>
+                      </RevealClient>
 
-                      <Reveal from="left">
+                      <RevealClient from="left">
                         <p
                           className={`${s.body} ${
                             para.isLead ? s.bodyLead : ""
@@ -106,49 +99,45 @@ const About = () => {
                         >
                           {para.text}
                         </p>
-                      </Reveal>
+                      </RevealClient>
                     </div>
                   );
                 })}
               </article>
 
-              <article className={`${s.card} ${s.secondaryCard}`}>
-                <Reveal from="bottom fade">
+              {/* <article className={`${s.card} ${s.secondaryCard}`}>
+                <RevealClient from="bottom fade">
                   <h3>Co by dávalo smysl u vás ?</h3>
-                </Reveal>
-                <Reveal from="bottom fade">
+                </RevealClient>
+                <RevealClient from="bottom fade">
                   <h4 className={s.body}>Začneme krátkým hovorem</h4>
-                </Reveal>
-                <Reveal from="bottom fade">
+                </RevealClient>
+                <RevealClient from="bottom fade">
                   <h5 className={s.body}>
                     Pomůže mi pochopit, kde dnes stojíte a co má smysl řešit hned.
                   </h5>
-                </Reveal>
-                <Reveal from="bottom fade">
-                  <Button
-                    variant="cta"
-                    className={`${s.cta}`}
-                    onClick={() => openLeadForm()}
-                  >
+                </RevealClient>
+                <RevealClient from="bottom fade">
+                  <AboutCTAButton className={`${s.cta}`}>
                     Probrat vaši situaci
-                  </Button>
-                </Reveal>
-              </article>
-            </Reveal>
+                  </AboutCTAButton>
+                </RevealClient>
+              </article> */}
+            </RevealClient>
           </div>
 
-          <Reveal from="bottom" delay={0.2}>
+          <RevealClient from="bottom" delay={0.2}>
             <article className={`${s.card} ${s.photoCard}`}>
               <div className={s.photoFrame} />
             </article>
-          </Reveal>
+          </RevealClient>
         </div>
 
-        <Reveal from="bottom" delay={0.1}>
+        {/* <RevealClient from="bottom" delay={0.1}>
           <div>
             <AboutCredentials />
           </div>
-        </Reveal>
+        </RevealClient> */}
       </Container>
     </section>
   );

@@ -263,7 +263,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  background: var(--brand-deep-trust); /* nebo #0f3a2f */
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -277,6 +278,7 @@ body {
   overscroll-behavior: none;
   height: 100%;
   overflow-x: hidden !important;
+    background: var(--brand-deep-trust); /* nebo #0f3a2f */
 }
 
 /* Reset všeho základního bordelu */
@@ -419,4 +421,51 @@ section {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Firefox */
+html,
+body,
+main {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--brand-primary-rgb), 0.65)
+    rgba(255, 255, 255, 0.08);
+}
+
+/* WebKit (Chrome/Edge/Safari) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+main::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+main::-webkit-scrollbar-track {
+  background: rgba(10, 24, 18, 0.55);
+  border-radius: 999px;
+  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.12);
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+main::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--brand-primary-rgb), 0.7),
+    rgba(var(--brand-tertiary-rgb), 0.55)
+  );
+  border-radius: 999px;
+  border: 2px solid rgba(10, 24, 18, 0.65);
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover,
+main::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--brand-primary-rgb), 0.9),
+    rgba(var(--brand-tertiary-rgb), 0.75)
+  );
 }

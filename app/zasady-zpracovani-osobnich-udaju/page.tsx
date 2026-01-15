@@ -97,7 +97,7 @@ const PrivacyPolicyPage = () => {
               </li>
               <li>
                 Pokud vznikne spolupráce → údaje se dále zpracovávají v interních systémech
-                správce (např. myDock / myPlan).
+                správce (myDock / myPlan).
               </li>
             </ul>
           </section>
@@ -133,7 +133,7 @@ const PrivacyPolicyPage = () => {
               <li>výmaz,</li>
               <li>omezení zpracování,</li>
               <li>námitku proti zpracování,</li>
-              <li>přenositelnost údajů (pokud je relevantní).</li>
+              <li>přenositelnost údajů.</li>
             </ul>
             <p className={styles.text}>
               Žádosti o uplatnění práv:{" "}

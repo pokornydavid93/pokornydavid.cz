@@ -38,7 +38,7 @@ const CookiesPage = () => {
             </p>
             <ul className={styles.list}>
               <li>počet návštěv,</li>
-              <li>zdroj návštěvy (např. Google / přímý vstup),</li>
+              <li>zdroj návštěvy (Google),</li>
               <li>
                 základní technické parametry pro zlepšení výkonu webu (například typ zařízení).
               </li>

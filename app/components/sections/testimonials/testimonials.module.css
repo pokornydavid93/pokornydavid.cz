@@ -1,10 +1,10 @@
 .section {
   width: 100%;
-   background: radial-gradient(140% 80% at 50% 110%, #79eb9333, #0000 60%), #0f3a2f;
+  background: radial-gradient(140% 80% at 50% -10%, #79eb9333, #0000 60%),
+    #0f3a2f;
 }
 
 .inner {
-  width: 90% !important;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -38,8 +38,8 @@
   flex-direction: column;
   justify-content: start;
   margin-bottom: 50px;
-  margin-top: 150px;
-  gap: 16px;
+  margin-top: 50px;
+  gap: 8px;
 }
 
 .sectionHeading {
@@ -78,14 +78,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 20px;
+  gap: 8px;
 }
 
 .cardHeading {
   font-size: clamp(26px, 2.6vw, 34px);
   line-height: 1.25;
   margin: 0 0 12px;
-  background: linear-gradient(180deg, var(--brand-primary) 16%, var(--brand-tertiary) 65%);;
+  background: linear-gradient(
+    180deg,
+    var(--brand-primary) 16%,
+    var(--brand-tertiary) 65%
+  );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -147,7 +151,6 @@
   overflow: hidden;
   height: 80vh;
 }
-
 
 .mobileColumn {
   background: rgba(8, 29, 24, 0.96);
@@ -321,7 +324,6 @@
 }
 
 .reviewMeta {
-
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -561,12 +563,10 @@
   display: grid;
   gap: 4px;
   justify-items: center;
-  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.26);
+  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.46);
   padding: 20px;
   border-radius: 16px;
 }
-
-
 
 .statValue {
   font-size: 30px;
@@ -607,8 +607,8 @@
 }
 @media (max-width: 820px) {
   .headingWrapper {
-        align-items: center;
-        margin-top: 0px;
+    align-items: center;
+    margin-top: 0px;
   }
   .sectionDescription {
     text-align: center;
@@ -639,7 +639,6 @@
   }
 }
 @media (max-width: 640px) {
-
   .card,
   .ratingCard,
   .pillCard {

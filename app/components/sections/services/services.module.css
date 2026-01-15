@@ -1,7 +1,7 @@
 .servicesCont {
   position: relative;
   width: 100%;
-   background: radial-gradient(140% 80% at 50% -10%, #79eb9333, #0000 60%), #0f3a2f;
+   background: radial-gradient(140% 80% at 50% 110%, #79eb9333, #0000 60%), #0f3a2f;
   color: #e8f2ec;
   overflow: hidden;
 }
@@ -13,8 +13,7 @@
   margin-bottom: 50px;
   display: flex;
   flex-direction: column;
-  align-items: end;
-  gap: 16px;
+  gap: 8px;
   z-index: 1;
 }
 
@@ -25,6 +24,7 @@
   text-shadow: 0 0 35px #d6ffade3;
   font-size: 12px;
   font-weight: 700;
+  text-align: start;
 }
 
 .header h2 {
@@ -38,6 +38,7 @@
   font-weight: 800;
   line-height: 1.6;
   text-align: end;
+  text-align: start;
 }
 
 .sub {
@@ -45,13 +46,13 @@
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
-  text-align: end;
+  text-align: start;
 }
 
 .grid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 50px;
   z-index: 1;
 }
@@ -59,7 +60,7 @@
 .card {
   border: 1px solid rgba(var(--brand-tertiary-rgb), 0.52);
   border-radius: 24px;
-  padding: 27px 22px 27px;
+  padding: 45px;
   display: grid;
   gap: 25px;
   min-height: 320px;
@@ -197,7 +198,7 @@
   margin: 0;
   color: #ffffffd1;
   line-height: 1.6;
-  font-size: 18px;
+  font-size: clamp(15px, 1.1vw, 18px);
 }
 
 .ctaBtn {
@@ -206,6 +207,9 @@
   border-radius: 12px !important;
   min-width: max-content;
   box-shadow: none;
+  background: transparent;
+  border: 1px solid rgba(var(--brand-tertiary-rgb), 0.4);
+  color: var(--brand-tertiary);
 }
 
 .disclaimer {

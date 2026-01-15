@@ -1,18 +1,9 @@
-'use client';
-
-import { useState } from "react";
-import {
-  ChevronDown,
-  Phone,
-  Mail,
-  MapPin,
-  MessageCircle,
-} from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import Container from "@/app/ui/container/Container";
-import Button from "@/app/ui/cta/Button";
 import s from "./faq.module.css";
-import { useLeadFormModal } from "../../Providers/LeadFormModalProvider";
-import { Reveal } from "@/app/ui/animations/Reveal";
+import RevealClient from "@/app/ui/animations/RevealClient";
+import FAQAccordion from "./FAQAccordion.client";
+import FAQCTAButton from "./FAQCTAButton.client";
 
 type FaqItem = {
   question: string;
@@ -47,116 +38,103 @@ const faqs: FaqItem[] = [
   },
 ];
 
-
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number>(0);
-  const { openLeadForm } = useLeadFormModal();
+  // ✅ SEO: FAQPage structured data (must match visible FAQs)
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
 
   return (
     <section className={s.faqCont} id="faq">
+      {/* ✅ JSON-LD rendered on server (SSR) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
       <div className={s.bgPattern} aria-hidden />
 
       <Container className={s.inner}>
         <div className={s.header}>
-          <Reveal as="p" from="left" className={s.eyebrow} delay={0.05}>
+          <RevealClient as="p" from="left" className={s.eyebrow} delay={0.05}>
             Jasně a stručně
-          </Reveal>
+          </RevealClient>
 
-   
-            <Reveal as="h2" from="left" delay={0.12}>
-              Odpovědi na <span className={s.highlight}>vaše</span> otázky
-            </Reveal>
+          <RevealClient as="h2" from="left" delay={0.12}>
+            Odpovědi na <span className={s.highlight}>vaše</span> otázky
+          </RevealClient>
 
-            <Reveal as="p" from="left" delay={0.18}>
-              Co vás nejčastěji zajímá před začátkem spolupráce. Klikněte a
-              otevřete detail.
-            </Reveal>
-       
+          <RevealClient as="p" from="left" delay={0.18}>
+            Co vás nejčastěji zajímá před začátkem spolupráce. Klikněte a
+            otevřete detail.
+          </RevealClient>
         </div>
 
         <div className={s.grid}>
-          <div className={s.accordion}>
-            {faqs.map((item, idx) => {
-              const isOpen = openIndex === idx;
+          <FAQAccordion faqs={faqs} />
 
-              return (
-                <Reveal
-                  key={item.question}
-                  as="div"
-                  from="left"
-                  className={`${s.item} ${isOpen ? s.open : ""}`}
-                  delay={0.22}
-                  stagger={0.06}
-                  index={idx}
-                >
-                  <button
-                    type="button"
-                    className={s.trigger}
-                    onClick={() => setOpenIndex(isOpen ? -1 : idx)}
-                    aria-expanded={isOpen}
-                  >
-                    <span>{item.question}</span>
-                    <ChevronDown
-                      className={`${s.chevron} ${isOpen ? s.rotated : ""}`}
-                      size={20}
-                    />
-                  </button>
-
-                  {isOpen && (
-                    <Reveal as="div" from="left" className={s.panel} delay={0.08}>
-                      <p>{item.answer}</p>
-                    </Reveal>
-                  )}
-                </Reveal>
-              );
-            })}
-          </div>
-
-          <Reveal as="aside" from="left" className={s.contactCard} delay={0.22}>
+          <RevealClient
+            as="aside"
+            from="left"
+            className={s.contactCard}
+            delay={0.22}
+          >
             <div className={s.contactOverlay} aria-hidden />
 
             <div className={s.contactContent}>
-              <Reveal as="div" from="left" className={s.iconBadge} delay={0.06}>
+              <RevealClient
+                as="div"
+                from="left"
+                className={s.iconBadge}
+                delay={0.06}
+              >
                 <MessageCircle />
-              </Reveal>
+              </RevealClient>
 
-              <Reveal as="h3" from="left" delay={0.12}>
+              <RevealClient as="h3" from="left" delay={0.12}>
                 Máte dotaz? Rád vám pomohu
-              </Reveal>
+              </RevealClient>
 
-              <Reveal as="p" from="left" delay={0.18}>
+              <RevealClient as="p" from="left" delay={0.18}>
                 Napište nebo zavolejte — domluvíme si konzultaci a probereme, co
                 je pro vaši situaci nejlepší.
-              </Reveal>
+              </RevealClient>
 
-              <Reveal as="div" from="left" delay={0.24}>
-                <Button
-                  variant="cta"
-                  className={s.cta}
-                  onClick={() => openLeadForm()}
-                >
+              <RevealClient as="div" from="left" delay={0.24}>
+                <FAQCTAButton className={s.cta}>
                   Probrat vaši situaci
-                </Button>
-              </Reveal>
+                </FAQCTAButton>
+              </RevealClient>
 
               <div className={s.contactList}>
-                <Reveal as="div" from="left" delay={0.30}>
+                <RevealClient as="div" from="left" delay={0.30}>
                   <Phone size={18} />
                   <a href="tel:+420731830897">+420 731 830 897</a>
-                </Reveal>
+                </RevealClient>
 
-                <Reveal as="div" from="left" delay={0.36}>
+                <RevealClient as="div" from="left" delay={0.36}>
                   <Mail size={18} />
-                  <a href="mailto:info@pokornydavid.cz">info@pokornydavid.cz</a>
-                </Reveal>
+                  <a href="mailto:info@pokornydavid.cz">
+                    info@pokornydavid.cz
+                  </a>
+                </RevealClient>
 
-                <Reveal as="div" from="left" delay={0.42}>
+                <RevealClient as="div" from="left" delay={0.42}>
                   <MapPin size={18} />
-                  <span>Tovární 1197/42a, 779 00, Olomouc</span>
-                </Reveal>
+                  <span>Za zbrojnici 446, 784 01 Červenka</span>
+                </RevealClient>
               </div>
             </div>
-          </Reveal>
+          </RevealClient>
         </div>
       </Container>
     </section>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import LenisProvider from "./components/Providers/LenisProvider";
 import { ViewportProvider } from "./components/Providers/ViewportProvider";
 import { LeadFormModalProvider } from "./components/Providers/LeadFormModalProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -64,13 +65,73 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const personLd = {
+  const BASE = "https://pokornydavid.cz";
+
+  // ✅ SAFE JSON-LD:
+  // - žádné review/rating schema (danger zone)
+  // - žádné zásahy do textů referencí
+  // - jasné propojení entit přes @id
+  const schemaLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "David Pokorný",
-    jobTitle: "Finanční poradce",
-    url: "https://pokornydavid.cz",
-    sameAs: [],
+    "@graph": [
+      // 1) Person
+      {
+        "@type": "Person",
+        "@id": `${BASE}/#person`,
+        name: "David Pokorný",
+        jobTitle: "Finanční poradce",
+        url: BASE,
+        sameAs: [],
+        email: "info@pokornydavid.cz",
+        telephone: "+420731830897",
+      },
+
+      // 2) WebSite
+      {
+        "@type": "WebSite",
+        "@id": `${BASE}/#website`,
+        url: BASE,
+        name: "David Pokorný – Finanční plánování",
+        inLanguage: "cs-CZ",
+        publisher: { "@id": `${BASE}/#person` },
+      },
+
+      // 3) WebPage (homepage)
+      {
+        "@type": "WebPage",
+        "@id": `${BASE}/#webpage`,
+        url: BASE,
+        name: "David Pokorný – finanční plánování bez nátlaku",
+        isPartOf: { "@id": `${BASE}/#website` },
+        about: { "@id": `${BASE}/#person` },
+        inLanguage: "cs-CZ",
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: `${BASE}/about.jpg`,
+        },
+      },
+
+      // 4) Business entity (FinancialService + LocalBusiness)
+      {
+        "@type": ["FinancialService", "LocalBusiness"],
+        "@id": `${BASE}/#business`,
+        name: "David Pokorný – Finanční plánování",
+        url: BASE,
+        areaServed: "CZ",
+        inLanguage: "cs-CZ",
+        provider: { "@id": `${BASE}/#person` },
+        image: `${BASE}/about.jpg`,
+        email: "info@pokornydavid.cz",
+        telephone: "+420731830897",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Tovární 1197/42a",
+          addressLocality: "Olomouc",
+          postalCode: "779 00",
+          addressCountry: "CZ",
+        },
+      },
+    ],
   };
 
   return (
@@ -78,18 +139,21 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaLd) }}
         />
         <meta name="color-scheme" content="light" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="supported-color-schemes" content="light" />
       </head>
+
       <body className={`${dmSans.className} antialiased`}>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
 
-        <ViewportProvider>
-          <LeadFormModalProvider>{children}</LeadFormModalProvider>
-        </ViewportProvider>
+        <LenisProvider minWidth={1024}>
+          <ViewportProvider>
+            <LeadFormModalProvider>{children}</LeadFormModalProvider>
+          </ViewportProvider>
+        </LenisProvider>
       </body>
     </html>
   );

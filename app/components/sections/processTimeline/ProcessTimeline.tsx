@@ -1,6 +1,3 @@
-"use client";
-
-import { useLayoutEffect, useRef } from "react";
 import {
   Phone,
   LineChart,
@@ -8,12 +5,10 @@ import {
   SlidersHorizontal,
   ShieldCheck,
 } from "lucide-react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import s from "./process.module.css";
 import Container from "@/app/ui/container/Container";
-import { Reveal } from "@/app/ui/animations/Reveal";
-gsap.registerPlugin(ScrollTrigger);
+import RevealClient from "@/app/ui/animations/RevealClient";
+import ProcessTimelineEnhancer from "./ProcessTimelineEnhancer.client";
 
 const STEPS = [
   {
@@ -44,84 +39,10 @@ const STEPS = [
 ] as const;
 
 export default function ProcessTimeline() {
-  const sectionRef = useRef<HTMLDivElement | null>(null);
-  const stepsRef = useRef<HTMLDivElement | null>(null);
-  const railFillRef = useRef<HTMLDivElement | null>(null);
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      const steps = stepsRef.current;
-      const rail = railFillRef.current;
-      if (!steps || !rail) return;
-
-      const points = gsap.utils.toArray<HTMLElement>(`.${s.stepNumber}`, steps);
-      const bodies = gsap.utils.toArray<HTMLElement>(`.${s.stepBody}`, steps);
-
-      // INIT
-      gsap.set(rail, { scaleY: 0, transformOrigin: "top" });
-      gsap.set(points, { scale: 0 });
-      gsap.set(bodies, { y: 28, autoAlpha: 0 });
-
-      const stepDuration = 1;
-      const totalDuration = points.length * stepDuration;
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: steps,
-          start: "top 65%",
-          end: () => `+=${Math.max(steps.scrollHeight, window.innerHeight)}`,
-          scrub: true,
-          invalidateOnRefresh: true,
-        },
-      });
-
-      // RAIL
-      tl.to(
-        rail,
-        {
-          scaleY: 1,
-          ease: "none",
-          duration: totalDuration,
-        },
-        0
-      );
-
-      // STEPS
-      points.forEach((point, i) => {
-        const body = bodies[i];
-        const t = i * stepDuration;
-
-        tl.to(
-          point,
-          {
-            scale: 1,
-            ease: "back.out(1.6)",
-            duration: 0.6,
-          },
-          t
-        );
-
-        if (body) {
-          tl.to(
-            body,
-            {
-              y: 0,
-              autoAlpha: 1,
-              ease: "power2.out",
-              duration: 0.6,
-            },
-            t + 0.15
-          );
-        }
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <div className={s.processTimeline} ref={sectionRef}>
+    <div className={s.processTimeline} data-process-timeline>
       <Container className={s.inner}>
-        <Reveal from="bottom">
+        <RevealClient from="bottom">
           <div className={s.header}>
             <div className={s.headline}>
               <p className={s.eyebrow}>Jak probíhá spolupráce</p>
@@ -129,20 +50,20 @@ export default function ProcessTimeline() {
               <p>Postupně si projdeme, co řešíme a jaký je další krok.</p>
             </div>
           </div>
-        </Reveal>
+        </RevealClient>
 
         <div className={s.timelineArea}>
-          <div className={s.steps} ref={stepsRef}>
+          <div className={s.steps} data-process-steps>
             <div className={s.rail} aria-hidden>
               <div className={s.railTrack} />
-              <div className={s.railFill} ref={railFillRef} />
+              <div className={s.railFill} data-process-rail-fill />
             </div>
 
             {STEPS.map((step, idx) => (
               <div className={s.step} key={step.title}>
                 <div className={s.railColumn}>
                   <div className={s.marker}>
-                    <div className={s.stepNumber}>
+                    <div className={s.stepNumber} data-process-point>
                       {String(idx + 1).padStart(2, "0")}
                     </div>
                   </div>
@@ -152,6 +73,7 @@ export default function ProcessTimeline() {
                   className={`${s.stepBody} ${
                     idx % 2 === 0 ? s.stepBodyLeft : s.stepBodyRight
                   }`}
+                  data-process-body
                 >
                   <div className={s.stepHeader}>
                     <h3>{step.title}</h3>
@@ -162,6 +84,8 @@ export default function ProcessTimeline() {
             ))}
           </div>
         </div>
+
+        <ProcessTimelineEnhancer />
       </Container>
     </div>
   );
