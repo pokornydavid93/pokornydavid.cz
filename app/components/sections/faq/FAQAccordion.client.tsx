@@ -32,7 +32,6 @@ const FAQAccordion = ({ faqs }: FAQAccordionProps) => {
             delay={0.22}
             stagger={0.06}
             index={idx}
-            debug
           >
             <button
               type="button"
