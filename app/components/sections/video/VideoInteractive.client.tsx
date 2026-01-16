@@ -155,7 +155,7 @@ const VideoInteractive = ({
               >
                 ×
               </button>
-              <button
+              {/* <button
                 type="button"
                 className={s.inlineFullscreen}
                 aria-label={
@@ -164,7 +164,7 @@ const VideoInteractive = ({
                 onClick={handleFullscreenToggle}
               >
                 ⤢
-              </button>
+              </button> */}
               <video
                 ref={videoRef}
                 className={s.inlineVideo}

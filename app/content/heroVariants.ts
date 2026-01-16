@@ -81,7 +81,7 @@ export const heroVariants: HeroContent[] = [
     description:
       "K dobrému rozhodnutí vede jasný přehled. Společně projdeme varianty a vyberete tu, která dává smysl vašim prioritám.",
     cta: {
-      primary: { label: "Probrat vaši situaci", href: "#lead-form" },
+      primary: { label: "Domluvit konzultaci", href: "#lead-form" },
       secondary: { label: "Kdo jsem", href: "#process" },
     },
   },

@@ -153,6 +153,7 @@
   display: grid;
   row-gap: 180px;
   min-height: 100vh;
+  margin-bottom: 200px;
 }
 
 .railColumn {
@@ -284,6 +285,13 @@
     min-height: clamp(520px, 82vh, 760px);
   }
 }
+
+@media (max-width: 821px) {
+  .steps {
+    margin-bottom: 0;
+  }
+}
+
 
 @media (max-width: 720px) {
   .processTimeline {

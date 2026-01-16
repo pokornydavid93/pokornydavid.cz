@@ -165,8 +165,11 @@
   gap: 8px;
   padding: 12px 16px;
   border-radius: 12px;
+  border: 0;
   background: var(--btn-cta-gradient);
   color: var(--brand-dark);
+  cursor: pointer;
+  font: inherit;
   font-weight: 700;
   text-decoration: none;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);

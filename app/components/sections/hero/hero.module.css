@@ -336,7 +336,7 @@
   min-width: 0px !important;
   padding: 13px 24px !important;
   font-size: 17px !important;
-  font-weight: 800 !important;
+  font-weight: 600 !important;
   box-shadow: none;
 }
 
@@ -416,7 +416,7 @@
   }
 }
 
-@media (width <= 1223px) {
+@media (width <= 1227px) {
   .heroLayout {
     padding-top: 70px;
   }

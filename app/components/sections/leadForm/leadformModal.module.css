@@ -21,17 +21,15 @@
   z-index: 1;
   pointer-events: auto;
   width: min(840px, 96vw);
-  max-height: calc(100vh - 32px);
+  max-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 18px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 
-.modalShell::-webkit-scrollbar {
-  display: none;
+
+@media (width <= 900px) {
+  .modalShell {
+    width: 100%;
+  }
 }

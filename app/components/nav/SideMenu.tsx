@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { HeartHandshake, Quote, User2, Workflow } from "lucide-react";
 import Button from "@/app/ui/cta/Button";
 import { useLeadFormModal } from "../Providers/LeadFormModalProvider";
+import HashLink from "@/app/ui/scroll/HashLink.client";
 
 type SideMenuProps = {
   sideMenu: boolean;
@@ -109,7 +110,7 @@ const SideMenu = ({ sideMenu, setSideMenu }: SideMenuProps) => {
     >
       <nav className={s.content} ref={contentRef}>
         <div className={s.navContainer}>
-          <a
+          <HashLink
             href="#about"
             className={s.navLink}
             onClick={() => setSideMenu(false)}
@@ -119,9 +120,9 @@ const SideMenu = ({ sideMenu, setSideMenu }: SideMenuProps) => {
           >
             <User2 className={s.navIcon} />
             <span>Kdo jsem</span>
-          </a>
+          </HashLink>
 
-          <a
+          <HashLink
             href="#services"
             className={s.navLink}
             onClick={() => setSideMenu(false)}
@@ -131,9 +132,9 @@ const SideMenu = ({ sideMenu, setSideMenu }: SideMenuProps) => {
           >
             <HeartHandshake className={s.navIcon} />
             <span>S čím pomáhám</span>
-          </a>
+          </HashLink>
 
-          <a
+          <HashLink
             href="#process"
             className={s.navLink}
             onClick={() => setSideMenu(false)}
@@ -143,9 +144,9 @@ const SideMenu = ({ sideMenu, setSideMenu }: SideMenuProps) => {
           >
             <Workflow className={s.navIcon} />
             <span>Jak pracuji</span>
-          </a>
+          </HashLink>
 
-          <a
+          <HashLink
             href="#testimonials"
             className={s.navLink}
             onClick={() => setSideMenu(false)}
@@ -155,7 +156,7 @@ const SideMenu = ({ sideMenu, setSideMenu }: SideMenuProps) => {
           >
             <Quote className={s.navIcon} />
             <span>Reference</span>
-          </a>
+          </HashLink>
         </div>
 
         <div ref={ctaRef}>

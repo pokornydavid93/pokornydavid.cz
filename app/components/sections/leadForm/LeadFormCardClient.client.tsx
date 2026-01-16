@@ -16,7 +16,12 @@ import { StatusToast } from "./StatusToast";
 import { Send } from "lucide-react";
 import type { LeadFormPayload, LeadTopic } from "@/lib/api";
 import { getApiClient } from "@/src/services/api";
-import { isLeadTopic, leadFormTopics, type LeadFormTopic } from "./leadFormTopics";
+import {
+  isLeadTopic,
+  leadFormTopics,
+  type LeadFormTopic,
+} from "./leadFormTopics";
+import LegalLink from "@/app/ui/legal/LegalLink";
 
 type LeadFormCardProps = {
   prefillTopic?: string;
@@ -285,9 +290,7 @@ const LeadFormCardClient = ({
         setStatus({
           state: "success",
           tone: "info",
-          message:
-            serverMessage ||
-            "Poptávku již eviduji, brzy se ozvu.",
+          message: serverMessage || "Poptávku již eviduji, brzy se ozvu.",
         });
         return;
       }
@@ -295,8 +298,7 @@ const LeadFormCardClient = ({
       setStatus({
         state: "success",
         tone: "success",
-        message:
-          serverMessage || "Na váš e-mail bylo odesláno shrnutí.",
+        message: serverMessage || "Na váš e-mail bylo odesláno shrnutí.",
       });
 
       resetForm();
@@ -320,12 +322,12 @@ const LeadFormCardClient = ({
         typeof data === "object" && data && "error" in data
           ? (data as { error?: string }).error
           : typeof data === "object" && data && "code" in data
-            ? (data as { code?: string }).code
-            : typeof data === "object" && data && "message" in data
-              ? (data as { message?: string }).message
-              : typeof data === "string"
-                ? data
-                : null;
+          ? (data as { code?: string }).code
+          : typeof data === "object" && data && "message" in data
+          ? (data as { message?: string }).message
+          : typeof data === "string"
+          ? data
+          : null;
 
       if (status === 429) {
         setStatus({
@@ -370,6 +372,8 @@ const LeadFormCardClient = ({
   return (
     <div
       className={`${s.formCard} ${variant === "modal" ? s.formCardModal : ""}`}
+      data-modal-scroll={variant === "modal" ? "true" : undefined}
+      data-lenis-prevent-wheel={variant === "modal" ? "true" : undefined}
     >
       <div className={s.formGlass} aria-hidden />
       <div className={s.formGlow} aria-hidden />
@@ -386,13 +390,17 @@ const LeadFormCardClient = ({
       ) : null}
 
       <SectionReveal once={true} enabled={isSection} from="left">
-        <div className={s.formHead}>
+        {/* <div className={s.formHead}>
           <p className={s.kicker}>V klidu a bez závazku</p>
           <h2 className={s.title}>Probereme vaši situaci</h2>
           <p className={s.subtitle}>
-            Domluvíme další krok. Ozvu se do 24 hodin.
+            Ozvu se vám nejpozději do 24 hodin.
           </p>
-        </div>
+        </div> */}
+
+        <p className={s.subtitle}>
+          Aktuálně jsem na cestách. Ozvu se vám po návratu nejpozději 8. února.
+        </p>
       </SectionReveal>
 
       <form
@@ -586,7 +594,9 @@ const LeadFormCardClient = ({
               aria-busy={status.state === "submitting"}
               iconRight={<Send />}
             >
-              {status.state === "submitting" ? "Odesílám…" : "Odeslat"}
+              {status.state === "submitting"
+                ? "Odesílám…"
+                : "Domluvit konzultaci"}
             </Button>
             <div className={s.loadingCont}>
               {status.state === "submitting" ? (
@@ -610,7 +620,20 @@ const LeadFormCardClient = ({
           >
             <p className={s.privacyNote}>
               Správcem osobních údajů je SAB servis s.r.o. Údaje slouží pouze k
-              domluvě úvodního hovoru.
+              domluvě úvodního hovoru. Podrobnosti najdete zde:{" "}
+              <LegalLink
+                className={s.privacyLink}
+                href="/zasady-zpracovani-osobnich-udaju"
+                onClick={() => {
+                  if (variant === "modal") {
+                    setIsFormHidden(true);
+                  }
+                }}
+                onRequestClose={onRequestClose}
+              >
+                Zásady zpracování osobních údajů
+              </LegalLink>
+              .
             </p>
           </SectionReveal>
         </div>

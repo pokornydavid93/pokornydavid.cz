@@ -126,7 +126,7 @@ const Hero = ({ variants, activeSession, index = 0 }: HeroProps) => {
         <div className={s.heroMediaCol}>
           <Image
             className={s.heroImg}
-            src="/hero-v2.webp"
+            src="/hero-v3.webp"
             alt="Hero background"
             draggable={false}
             fill

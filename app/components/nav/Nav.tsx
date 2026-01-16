@@ -7,6 +7,7 @@ import s from "./css/nav.module.css";
 import LogoMark from "@/app/svgr/LogoMark";
 import { HeartHandshake, Quote, User2, Workflow } from "lucide-react";
 import Button from "@/app/ui/cta/Button";
+import HashLink from "@/app/ui/scroll/HashLink.client";
 
 type NavProps = {
   activeSection?: string;
@@ -134,26 +135,26 @@ const Nav = ({ activeSection, sideMenu, setSideMenu, modalOpen }: NavProps) => {
       </div>
 
       <div className={s.rightBox}>
-        <a href="#about" className={getLinkClassName("about")}>
+        <HashLink href="#about" className={getLinkClassName("about")}>
           <User2 className={s.topIcon} />
           <span>Kdo jsem</span>
-        </a>
-        <a href="#process" className={getLinkClassName("process")}>
+        </HashLink>
+        <HashLink href="#process" className={getLinkClassName("process")}>
           <Workflow className={s.topIcon} />
           <span>Jak pracuji</span>
-        </a>
-           <a href="#services" className={getLinkClassName("services")}>
+        </HashLink>
+        <HashLink href="#services" className={getLinkClassName("services")}>
           <HeartHandshake className={s.topIcon} />
           <span>S čím pomáhám</span>
-        </a>
-        <a href="#testimonials" className={getLinkClassName("testimonials")}>
+        </HashLink>
+        <HashLink href="#testimonials" className={getLinkClassName("testimonials")}>
           <Quote className={s.topIcon} />
           <span>Reference</span>
-        </a>
+        </HashLink>
      
         <Button
           variant="cta"
-          label={"Domluvit hovor"}
+          label={"Domluvit konzultaci"}
           onClick={() => openLeadForm()}
           size="md"
           className={s.heroCta}

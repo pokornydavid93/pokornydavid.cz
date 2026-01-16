@@ -111,7 +111,7 @@ const FAQ = () => {
 
               <RevealClient as="div" from="left" delay={0.24}>
                 <FAQCTAButton className={s.cta}>
-                  Probrat vaši situaci
+                  Domluvit konzultaci
                 </FAQCTAButton>
               </RevealClient>
 

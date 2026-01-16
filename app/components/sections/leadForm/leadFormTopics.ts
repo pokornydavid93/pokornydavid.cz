@@ -7,7 +7,7 @@ export const leadFormTopics = [
   "Zajištění příjmu",
   "Pojištění vozidla",
   "Reality (prodej nemovitosti)",
-  "Energie a úspory",
+  // "Energie a úspory",
   "Ochrana majetku",
   "Pojištění odpovědnosti",
   "Spotřebitelské a podnikatelské úvěry",

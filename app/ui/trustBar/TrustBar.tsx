@@ -7,6 +7,7 @@ import { useViewport } from "@/app/components/Providers/ViewportProvider";
 // ⬇ starý Carousel pryč
 import { TrustCarousel } from "../Carousel/TrustCarousel";
 import Container from "../container/Container";
+import { scrollToInstant } from "@/app/ui/scroll/scrollTo";
 
 type Props = {
   activeSection: string;
@@ -53,8 +54,7 @@ const TrustBar = ({ activeSection }: Props) => {
   const { device } = useViewport();
 
   const handleClick = (item: TrustItem) => {
-    const el = document.querySelector(item.targetId);
-    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    scrollToInstant(item.targetId);
   };
 
   const isMobile = device === "mobile";

@@ -1,6 +1,7 @@
-import Link from "next/link";
 import Container from "@/app/ui/container/Container";
 import styles from "../legal.module.css";
+import LegalLink from "@/app/ui/legal/LegalLink";
+import LegalBackButton from "@/app/ui/legal/LegalBackButton.client";
 
 export const metadata = {
   title: "Zásady zpracování osobních údajů | David Pokorný",
@@ -13,6 +14,9 @@ const PrivacyPolicyPage = () => {
     <main className={styles.legalMain}>
       <Container maxWidth={960}>
         <div className={styles.legalWrap}>
+          <div className={styles.backRow}>
+            <LegalBackButton className={styles.backButton} />
+          </div>
           <div className={styles.titleBlock}>
             <div className={styles.eyebrow}>
               <span className={styles.eyebrowDot} />
@@ -159,9 +163,9 @@ const PrivacyPolicyPage = () => {
             </p>
             <p className={styles.text}>
               Podrobnosti najdete na stránce{" "}
-              <Link className={styles.link} href="/cookies-a-mereni">
+              <LegalLink className={styles.link} href="/cookies-a-mereni">
                 Cookies &amp; měření
-              </Link>
+              </LegalLink>
               .
             </p>
           </section>
@@ -176,9 +180,10 @@ const PrivacyPolicyPage = () => {
           </section>
 
           <div className={styles.backRow}>
-            <Link className={styles.backButton} href="/">
-              ← Zpět na hlavní stránku
-            </Link>
+            <LegalBackButton
+              className={styles.backButton}
+              label="← Zpět na hlavní stránku"
+            />
           </div>
         </div>
       </Container>

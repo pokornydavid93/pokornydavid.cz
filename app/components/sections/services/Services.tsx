@@ -90,14 +90,14 @@ const services: Service[] = [
     image: "/reality.png",
     icon: <Building2 size={28} />,
   },
-  {
-    label: "Energie",
-    title: "Energie a úspory",
-    description:
-      "Energie jsou dnes výrazná položka rodinného rozpočtu. Projdeme nastavení a se specialistou najdeme prostor pro úspory – vždy s ohledem na váš celkový plán.",
-    image: "/energie.png",
-    icon: <Zap size={28} />,
-  },
+  // {
+  //   label: "Energie",
+  //   title: "Energie a úspory",
+  //   description:
+  //     "Energie jsou dnes výrazná položka rodinného rozpočtu. Projdeme nastavení a se specialistou najdeme prostor pro úspory – vždy s ohledem na váš celkový plán.",
+  //   image: "/energie.png",
+  //   icon: <Zap size={28} />,
+  // },
 ];
 
 const slugify = (text: string) =>
@@ -110,16 +110,16 @@ const slugify = (text: string) =>
 
 const Services = () => {
   return (
-    <section className={s.servicesCont} id="services">
+    <section className={s.servicesCont} id="services-section" data-services-cont>
       <Container fullHeight>
-        <div className={`${s.header}`}>
-          <RevealClient as="p" from="bottom" className={s.eyebrow}>
+        <div className={s.header} data-services-header>
+          <RevealClient engine="io" as="p" from="bottom" className={s.eyebrow}>
             Praktické služby
           </RevealClient>
-          <RevealClient as="h2" from="bottom">
+          <RevealClient engine="io" as="h2" from="bottom">
             Když chcete mít ve financích jasno
           </RevealClient>
-          <RevealClient as="p" from="bottom" className={s.sub}>
+          <RevealClient engine="io" as="p" from="bottom" className={s.sub}>
             Vyberte si téma, které právě řešíte. Společně pak projdeme
             možnosti a navrhneme další postup.
           </RevealClient>
@@ -132,6 +132,7 @@ const Services = () => {
               as="article"
               from="bottom"
               className={`${s.card} ${s.cardReveal}`}
+              engine="io"
               index={i}
               id={`service-${slugify(service.title)}`}
               duration={0.3}
@@ -159,12 +160,12 @@ const Services = () => {
               </div>
 
               <ServicesCTAButton serviceTitle={service.title} className={s.ctaBtn}>
-                Probrat vaši situaci
+               Domluvit konzultaci
               </ServicesCTAButton>
             </RevealClient>
           ))}
         </div>
-        <RevealClient as="p" from="bottom" className={s.disclaimer}>
+        <RevealClient engine="io" as="p" from="bottom" className={s.disclaimer}>
           Informace na webu slouží k obecnému přehledu a nepředstavují
           investiční doporučení. Konkrétní řešení vždy vychází z individuální
           konzultace.

@@ -247,7 +247,7 @@ const Testimonials = () => {
 
             <RevealClient as="div" from="bottom" className={s.buttonWrapper}>
               <TestimonialsCTAButton className={s.ctaBtn}>
-                Probrat vaši situaci
+               Domluvit konzultaci
               </TestimonialsCTAButton>
             </RevealClient>
           </RevealClient>

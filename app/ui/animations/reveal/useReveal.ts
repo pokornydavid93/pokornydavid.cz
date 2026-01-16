@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { CompiledAnimation, RevealMode } from "./types";
@@ -6,6 +6,7 @@ import type { CompiledAnimation, RevealMode } from "./types";
 gsap.registerPlugin(ScrollTrigger);
 
 type UseRevealOptions = {
+  enabled?: boolean;
   root: HTMLElement | null;
   compiledAnimation: CompiledAnimation;
   duration: number;
@@ -33,9 +34,14 @@ export function useReveal({
   disabled,
   debug,
   scope,
+  enabled = true,
 }: UseRevealOptions) {
+  const stRef = useRef<ScrollTrigger | null>(null);
+
   useLayoutEffect(() => {
-    if (!root || disabled) return;
+     if (!enabled || disabled || !root) return;
+
+    let handleRefresh: (() => void) | null = null;
 
     const ctx = gsap.context(() => {
       const scopedTargets =
@@ -93,7 +99,6 @@ export function useReveal({
         timelines.push(timeline);
       });
 
-      let trigger: ScrollTrigger | null = null;
       let hasPlayed = false;
       let remaining = timelines.length;
 
@@ -103,8 +108,9 @@ export function useReveal({
 
       const handleComplete = () => {
         remaining -= 1;
-        if (remaining === 0 && trigger) {
-          trigger.kill();
+        if (remaining === 0 && stRef.current) {
+          stRef.current.kill();
+          stRef.current = null;
         }
       };
 
@@ -114,41 +120,89 @@ export function useReveal({
         });
       }
 
-      trigger = ScrollTrigger.create({
-        trigger: root,
-        start,
-        markers: debug,
-        onEnter: () => {
-          if (mode === "once") {
-            if (hasPlayed) return;
-            hasPlayed = true;
-          }
-          playAll();
-        },
-        onEnterBack: () => {
-          if (mode === "once") {
-            if (hasPlayed) return;
-            hasPlayed = true;
-            playAll();
-            return;
-          }
+      const setInitialState = () => {
+        if (mode === "once" && hasPlayed) {
+          targets.forEach((target) => {
+            gsap.set(target, {
+              ...to,
+              opacity: 1,
+              clearProps: meta.usesTransform ? "transform" : undefined,
+            });
+          });
+          return;
+        }
 
-          playAll();
-        },
-        onLeave: () => {
-          if (mode === "toggle") {
-            reverseAll();
-          }
-        },
-        onLeaveBack: () => {
-          if (mode === "toggle") {
-            reverseAll();
-          }
-        },
-      });
+        targets.forEach((target) => {
+          gsap.set(target, {
+            ...from,
+          });
+        });
+      };
+
+      const createTrigger = () => {
+        if (stRef.current) {
+          stRef.current.kill();
+          stRef.current = null;
+        }
+
+        remaining = mode === "once" && hasPlayed ? 0 : timelines.length;
+        setInitialState();
+
+        stRef.current = ScrollTrigger.create({
+          trigger: root,
+          start,
+          markers: debug,
+          onEnter: () => {
+            if (mode === "once") {
+              if (hasPlayed) return;
+              hasPlayed = true;
+            }
+            playAll();
+          },
+          onEnterBack: () => {
+            if (mode === "once") {
+              if (hasPlayed) return;
+              hasPlayed = true;
+              playAll();
+              return;
+            }
+
+            playAll();
+          },
+          onLeave: () => {
+            if (mode === "toggle") {
+              reverseAll();
+            }
+          },
+          onLeaveBack: () => {
+            if (mode === "toggle") {
+              reverseAll();
+            }
+          },
+        });
+      };
+
+      handleRefresh = () => {
+        createTrigger();
+        ScrollTrigger.refresh(true);
+      };
+
+      createTrigger();
+      window.addEventListener("handoff:refresh", handleRefresh);
     }, root);
 
-    return () => ctx.revert();
+    return () => {
+      if (handleRefresh) {
+        window.removeEventListener("handoff:refresh", handleRefresh);
+      }
+
+      if (stRef.current) {
+        stRef.current.kill();
+        stRef.current = null;
+      }
+
+      ctx.revert();
+    };
   }, [
     root,
     compiledAnimation,

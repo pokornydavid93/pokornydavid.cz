@@ -2,6 +2,7 @@ import { Scale, ChevronRight } from "lucide-react";
 import s from "./aboutCredentials.module.css";
 import RevealClient from "@/app/ui/animations/RevealClient";
 import Container from "@/app/ui/container/Container";
+import LegalLink from "@/app/ui/legal/LegalLink";
 
 const CERTS = [
   { label: "Pojištění (životní a neživotní)", href: "/pojisteni-cert.pdf" },
@@ -27,9 +28,9 @@ const AboutCredentials = () => {
             Jsem vázaný zástupce registrovaný u České národní banky a působím v
             rámci oprávnění samostatného zprostředkovatele SAB servis s.r.o.
             Podrobnější informace{" "}
-            <a href="/pravni-informace" target="_blank" rel="noreferrer">
+            <LegalLink href="/pravni-informace" target="_blank" rel="noreferrer">
               najdete zde
-            </a>
+            </LegalLink>
             .
           </RevealClient>
         </div>
@@ -68,11 +69,11 @@ const AboutCredentials = () => {
           delay={0.1}
           className={s.footerLink}
         >
-          <a href="/pravni-informace" target="_blank" rel="noreferrer">
+          <LegalLink href="/pravni-informace" target="_blank" rel="noreferrer">
             <span>Právní informace</span>
             <Scale className={s.scaleIcon} aria-hidden />
             <ChevronRight className={s.chevron} aria-hidden />
-          </a>
+          </LegalLink>
         </RevealClient>
       </RevealClient>
       </Container>

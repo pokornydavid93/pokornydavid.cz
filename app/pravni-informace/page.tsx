@@ -1,5 +1,6 @@
 import Container from "@/app/ui/container/Container";
 import styles from "../legal.module.css";
+import LegalBackButton from "@/app/ui/legal/LegalBackButton.client";
 
 export const metadata = {
   title: "Právní informace | David Pokorný",
@@ -51,6 +52,9 @@ const LegalInfoPage = () => {
     <main className={styles.legalMain}>
       <Container maxWidth={960}>
         <div className={styles.legalWrap}>
+          <div className={styles.backRow}>
+            <LegalBackButton className={styles.backButton} />
+          </div>
           <div className={styles.titleBlock}>
             <div className={styles.eyebrow}>
               <span className={styles.eyebrowDot} />
@@ -103,9 +107,10 @@ const LegalInfoPage = () => {
           </section>
 
           <div className={styles.backRow}>
-            <a className={styles.backButton} href="/">
-              ← Zpět na hlavní stránku
-            </a>
+            <LegalBackButton
+              className={styles.backButton}
+              label="← Zpět na hlavní stránku"
+            />
           </div>
         </div>
       </Container>

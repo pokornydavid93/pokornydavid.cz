@@ -12,6 +12,7 @@ import gsap from "gsap";
 import { compileAnimation } from "./animationCompiler";
 import { resolvePreset, type RevealPresetName } from "./presets";
 import { useReveal } from "./useReveal";
+import { useRevealIO } from "./useRevealIO";
 import type { RevealMode, RevealPreset } from "./types";
 
 export type TweenVars = gsap.TweenVars;
@@ -19,6 +20,8 @@ export type TweenVars = gsap.TweenVars;
 type RenderProp = (args: {
   ref: (node: HTMLElement | null) => void;
 }) => React.ReactElement;
+
+export type RevealEngine = "scrolltrigger" | "io";
 
 type RevealProps<T extends ElementType = "div"> = {
   as?: T;
@@ -38,6 +41,7 @@ type RevealProps<T extends ElementType = "div"> = {
   index?: number;
   stagger?: number;
   debug?: boolean;
+  engine?: RevealEngine;
   className?: string;
 } & Omit<ComponentPropsWithoutRef<T>, "ref" | "children" | "className">;
 
@@ -59,6 +63,7 @@ export function Reveal<T extends ElementType = "div">({
   index,
   stagger,
   debug,
+  engine = "scrolltrigger",
   className,
   ...rest
 }: RevealProps<T>) {
@@ -94,7 +99,26 @@ export function Reveal<T extends ElementType = "div">({
     setEl(node);
   }, []);
 
+  const useIO = engine === "io";
+  const useST = engine !== "io";
+
+  // ✅ vždy volej oba hooky, jen je “vypni” parametrem enabled
+  useRevealIO({
+    enabled: useIO,
+    root: el,
+    compiledAnimation,
+    duration: resolvedDuration,
+    ease: resolvedEase,
+    delay: resolvedDelay,
+    stagger: resolvedStagger,
+    index,
+    mode: resolvedMode,
+    disabled: resolvedDisabled,
+    scope: resolvedScope,
+  });
+
   useReveal({
+    enabled: useST,
     root: el,
     compiledAnimation,
     duration: resolvedDuration,

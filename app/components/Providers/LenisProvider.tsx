@@ -33,7 +33,7 @@ export default function LenisProvider({
     if (lenisRef.current) return;
 
     const lenis = new Lenis({
-      duration: 1.05,
+      duration: 5.05,
       smoothWheel: true,
       wheelMultiplier: 0.9,
       touchMultiplier: 1.0,
@@ -41,6 +41,7 @@ export default function LenisProvider({
     });
 
     lenisRef.current = lenis;
+    (window as unknown as { __lenis?: Lenis }).__lenis = lenis;
 
     const raf = (time: number) => {
       lenis.raf(time);
@@ -70,6 +71,7 @@ export default function LenisProvider({
 
       lenis.destroy();
       lenisRef.current = null;
+      delete (window as unknown as { __lenis?: Lenis }).__lenis;
     };
   }, [enabled, minWidth]);
 

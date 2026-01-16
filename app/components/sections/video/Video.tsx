@@ -10,7 +10,7 @@ const Video = () => {
       <Container className={`${s.inner}`}>
         <div className={s.layout}>
           <div className={s.copyCol}>
-            <RevealClient from="bottom">
+            <RevealClient engine="io" from="bottom">
               <div className={`${s.headingBlock}`}>
                 <p className={s.eyebrow}>O SPOLUPRÁCI</p>
                 <h3 className={s.gradientSoft}>
@@ -19,7 +19,7 @@ const Video = () => {
               </div>
             </RevealClient>
 
-            <RevealClient from="bottom">
+            <RevealClient engine="io" from="bottom">
               <p className={`${s.lede}`}>
                 Od prvního kontaktu až po
                 konkrétní výstup.
@@ -27,7 +27,7 @@ const Video = () => {
             </RevealClient>
           </div>
 
-          <RevealClient from="bottom">
+          <RevealClient engine="io" from="bottom">
             <VideoInteractive
               desktopSrc="/video_h264.mp4"
               desktopPoster="/nahled-video.webp"
@@ -38,20 +38,20 @@ const Video = () => {
         </div>
 
         <div className={s.ctaRow}>
-          <RevealClient from="bottom">
+          <RevealClient engine="io" from="bottom">
             <p className={`${s.ctaLead}`}>Co by dávalo smysl u vás ?</p>
           </RevealClient>
-          <RevealClient from="bottom" className={s.gradientSoft}>
+          <RevealClient engine="io" from="bottom" className={s.gradientSoft}>
             Začneme krátkým hovorem
           </RevealClient>
-          <RevealClient from="bottom">
+          <RevealClient engine="io" from="bottom">
             <p className={s.ctaDescription}>
               Vyberte si, co právě řešíte. Do 24 hodin vám zavolám.
             </p>
           </RevealClient>
-          <RevealClient from="bottom">
+          <RevealClient engine="io" from="bottom">
             <VideoCTAButton className={`${s.cta}`}>
-              Probrat vaši situaci
+              Domluvit konzultaci
             </VideoCTAButton>
           </RevealClient>
         </div>
