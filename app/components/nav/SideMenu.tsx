@@ -162,7 +162,7 @@ const SideMenu = ({ sideMenu, setSideMenu }: SideMenuProps) => {
         <div ref={ctaRef}>
           <Button
             variant="cta"
-            label="Probrat vaši situaci"
+            label="Domluvit konzultaci"
             onClick={() => {
               openLeadForm();
               setSideMenu(false);

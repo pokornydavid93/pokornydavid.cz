@@ -110,8 +110,12 @@ const slugify = (text: string) =>
 
 const Services = () => {
   return (
-    <section className={s.servicesCont} id="services-section" data-services-cont>
-      <Container fullHeight>
+    <section
+      className={s.servicesCont}
+      id="services-section"
+      data-services-cont
+    >
+      <Container>
         <div className={s.header} data-services-header>
           <RevealClient engine="io" as="p" from="bottom" className={s.eyebrow}>
             Praktické služby
@@ -120,8 +124,8 @@ const Services = () => {
             Když chcete mít ve financích jasno
           </RevealClient>
           <RevealClient engine="io" as="p" from="bottom" className={s.sub}>
-            Vyberte si téma, které právě řešíte. Společně pak projdeme
-            možnosti a navrhneme další postup.
+            Vyberte si téma, které právě řešíte. Společně pak projdeme možnosti
+            a navrhneme další postup.
           </RevealClient>
         </div>
 
@@ -159,16 +163,27 @@ const Services = () => {
                 <p>{service.description}</p>
               </div>
 
-              <ServicesCTAButton serviceTitle={service.title} className={s.ctaBtn}>
-               Domluvit konzultaci
+              <ServicesCTAButton
+                serviceTitle={service.title}
+                className={s.ctaBtn}
+              >
+                Domluvit konzultaci
               </ServicesCTAButton>
             </RevealClient>
           ))}
         </div>
-        <RevealClient engine="io" as="p" from="bottom" className={s.disclaimer}>
-          Informace na webu slouží k obecnému přehledu a nepředstavují
-          investiční doporučení. Konkrétní řešení vždy vychází z individuální
-          konzultace.
+
+        <RevealClient
+          engine="io"
+          as="p"
+          from="bottom"
+          className={s.disclaimer}
+        >
+    
+            Informace na webu slouží k obecnému přehledu a nepředstavují
+            investiční doporučení. Konkrétní řešení vždy vychází z individuální
+            konzultace.
+    
         </RevealClient>
       </Container>
     </section>

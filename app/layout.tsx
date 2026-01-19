@@ -5,7 +5,9 @@ import LenisProvider from "./components/Providers/LenisProvider";
 import { ViewportProvider } from "./components/Providers/ViewportProvider";
 import { LeadFormModalProvider } from "./components/Providers/LeadFormModalProvider";
 import LegalScrollRestoreProvider from "./components/Providers/LegalScrollRestoreProvider";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import AnalyticsLoader from "@/src/app/ui/privacy/AnalyticsLoader.client";
+import CookieBanner from "@/src/app/ui/privacy/CookieBanner.client";
+import CookieSettingsButton from "@/src/app/ui/privacy/CookieSettingsButton.client";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -167,7 +169,9 @@ export default function RootLayout({
       </head>
 
       <body className={`${dmSans.className} antialiased`}>
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
+        <AnalyticsLoader gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        <CookieBanner />
+        <CookieSettingsButton />
 
         <LenisProvider minWidth={1024}>
           <ViewportProvider>

@@ -339,18 +339,18 @@
     opacity: 1;
   }
   to {
-    transform: scale(1.5);
+    transform: scale(1.9);
     opacity: 0;
   }
 }
 
 /* animation helper classes (instead of stylus nesting) */
 .scaleAnim {
-  animation: videoSmallScale 3s infinite;
+  animation: videoSmallScale 4.3s infinite;
 }
 
 .delayShort {
-  animation-delay: 0.5s;
+  animation-delay: 0.6s;
 }
 
 /* reduced motion */

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Container from "@/app/ui/container/Container";
 import styles from "../legal.module.css";
 import LegalBackButton from "@/app/ui/legal/LegalBackButton.client";
@@ -19,63 +20,70 @@ const CookiesPage = () => {
           <div className={styles.titleBlock}>
             <div className={styles.eyebrow}>
               <span className={styles.eyebrowDot} />
-              <span>Právní informace</span>
+              <span>Cookies</span>
             </div>
             <h1 className={styles.title}>Cookies &amp; měření</h1>
             <p className={styles.lead}>
-              Na tomto webu nepoužíváme marketingové ani reklamní cookies. Měření
-              návštěvnosti probíhá pouze v podobě základních statistických údajů.
+              Na tomto webu nepoužíváme marketingové ani reklamní cookies. Po vašem
+              souhlasu používáme analytické cookies (Google Analytics 4) pro měření
+              návštěvnosti a zlepšování webu.
             </p>
           </div>
 
           <section className={styles.section}>
-            <h2>Základní principy</h2>
+            <h2>Co měříme</h2>
             <ul className={styles.list}>
-              <li>nejsou spojeny s vaší identitou,</li>
-              <li>nejsou ukládány do vašeho zařízení formou identifikačních cookies,</li>
+              <li>počet návštěv a zobrazení stránek,</li>
+              <li>zdroj návštěvy (např. Google),</li>
               <li>
-                nevyužívají služby jako Facebook Pixel, Google Ads, Sklik nebo remarketing.
+                základní technické informace (např. zařízení / prohlížeč) pro zlepšení
+                výkonu webu.
               </li>
             </ul>
             <p className={styles.text}>
-              Používáme cookieless analytiku, která zaznamenává pouze:
-            </p>
-            <ul className={styles.list}>
-              <li>počet návštěv,</li>
-              <li>zdroj návštěvy (Google),</li>
-              <li>
-                základní technické parametry pro zlepšení výkonu webu (například typ zařízení).
-              </li>
-            </ul>
-            <p className={styles.text}>
-              Tyto údaje nám pomáhají porozumět, jak je web používán, abychom jej mohli
-              postupně vylepšovat.
+              Tyto údaje nám pomáhají porozumět tomu, jak je web používán, a zlepšovat
+              jeho obsah i výkon.
             </p>
           </section>
 
           <section className={styles.section}>
-            <h2>Profilování a reklama</h2>
+            <h2>Co neděláme</h2>
             <ul className={styles.list}>
-              <li>Neprovádíme profilování, personalizaci ani cílení reklamy.</li>
-              <li>Nepředáváme data marketingovým ani reklamním službám třetích stran.</li>
+              <li>
+                žádný remarketing ani reklamní systémy (Google Ads, Sklik, Facebook Pixel),
+              </li>
+              <li>žádné profilování ani personalizace reklamy.</li>
             </ul>
+          </section>
+
+          <section className={styles.section}>
+            <h2>Souhlas a změna nastavení</h2>
+            <p className={styles.text}>
+              Analytické cookies se aktivují až po vašem souhlasu. Volbu můžete kdykoli
+              změnit přes ikonu cookies vpravo dole.
+            </p>
+            <p className={styles.text}>
+              Souhlas je dobrovolný a odmítnutí nemá vliv na fungování webu.
+            </p>
+            <p className={styles.text}>
+              Vaše volba se ukládá, abychom ji nemuseli zobrazovat při každé návštěvě.
+            </p>
           </section>
 
           <section className={styles.section}>
             <h2>Předávání třetím stranám</h2>
             <p className={styles.text}>
-              Pokud používáme externí analytický nástroj, je provozován výhradně v EU nebo
-              s anonymizací. Data nejsou využívána k marketingovým účelům.
+              Poskytovatelem analytiky je Google Analytics 4. Data využíváme pouze ke
+              statistickým účelům a ke zlepšování webu, nikoli k marketingu.
             </p>
           </section>
-
-          <section className={styles.section}>
-            <h2>Chcete-li měření vypnout úplně</h2>
-            <p className={styles.text}>
-              Stačí použít funkci „Do Not Track“ ve vašem prohlížeči — web ji automaticky
-              respektuje.
-            </p>
-          </section>
+          <p className={styles.text}>
+            Více informací o zpracování osobních údajů najdete v{" "}
+            <Link href="/zasady-zpracovani-osobnich-udaju">
+              Zásadách zpracování osobních údajů
+            </Link>
+            .
+          </p>
 
           <div className={styles.backRow}>
             <LegalBackButton

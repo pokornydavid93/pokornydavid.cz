@@ -399,7 +399,7 @@ const LeadFormCardClient = ({
         </div> */}
 
         <p className={s.subtitle}>
-          Aktuálně jsem na cestách. Ozvu se vám po návratu nejpozději 8. února.
+          Jsem mimo kancelář do 8. února. Kontakt ale můžete vyplnit už teď – po návratu vám navrhnu první možný termín.
         </p>
       </SectionReveal>
 

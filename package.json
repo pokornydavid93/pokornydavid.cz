@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "deploy:web": "bash scripts/deploy.sh"
+    "deploy:production": "bash scripts/deploy.sh"
   },
   "dependencies": {
     "@next/third-parties": "^16.1.1",

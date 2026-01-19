@@ -678,12 +678,10 @@
 }
 
 @media (width <= 810px) {
-  .formCard {
-    border-radius: 0;
-  }
   .formCardModal {
     max-width: 100%;
     max-height: 100dvh;
+    border-radius: 0px;
   }
 }
 
