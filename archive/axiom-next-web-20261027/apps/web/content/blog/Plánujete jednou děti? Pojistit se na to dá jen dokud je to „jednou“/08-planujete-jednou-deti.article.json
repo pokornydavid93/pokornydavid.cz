@@ -1,0 +1,578 @@
+{
+  "schemaVersion": 2,
+  "publication": {
+    "status": "review",
+    "author": "David Pokorný",
+    "publishedAt": "2026-10-08",
+    "updatedAt": "2026-10-08"
+  },
+  "meta": {
+    "slug": "planujete-jednou-deti-pojistit-se-na-to-da-jen-dokud-je-to-jednou",
+    "topic": "Jak může být asistovaná reprodukce součástí životního pojištění, jak přesně se definuje pojistná událost, kdy už se krytí nemůže vztahovat na existující problém a jak tato možnost zapadá do širšího finančního plánu páru",
+    "category": "Plánování rodiny a životní pojištění",
+    "primaryIntent": "Vysvětlit citlivě a bez prodejního tlaku, že některé pojistné možnosti související s asistovanou reprodukcí existují pouze před vznikem diagnózy nebo zahájením léčby, a naučit čtenáře ověřit přesnou definici události, podmínky a význam krytí v kontextu celého finančního plánu rodiny.",
+    "audience": "Pár nebo jednotlivec, který děti plánuje do budoucna, případně už má životní pojištění, ale neví, zda obsahuje krytí související s asistovanou reprodukcí, jak funguje a kde jsou jeho hranice.",
+    "estimatedReadTime": 7
+  },
+  "hero": {
+    "category": "Plánování rodiny",
+    "eyebrow": "NĚKTERÉ MOŽNOSTI EXISTUJÍ JEN PŘEDEM",
+    "title": "Plánujete jednou děti? Některé pojistné možnosti lze sjednat jen předem",
+    "subtitle": "Ukážu vám, kde ve smlouvě hledat krytí související s asistovanou reprodukcí, co rozhoduje o případném plnění a jak tuto možnost posoudit vedle rozpočtu celé rodiny.",
+    "excerpt": "Některé životní pojistky obsahují plnění spojené s asistovanou reprodukcí. Rozhoduje konkrétní sjednané krytí, jeho podmínky a zdravotní historie. Začněte kontrolou smlouvy a finančních možností domácnosti.",
+    "estimatedReadTime": "7 minut",
+    "heroSummary": [
+      "Zjistíte, které dokumenty potřebujete ke kontrole současného krytí.",
+      "Rozlišíte léčebný cyklus od přenosu embrya a veřejnou úhradu od komerčního plnění.",
+      "Uvidíte konkrétní smluvní příklad a podmínky, které nelze zobecnit.",
+      "Připravíte rozpočet na cestu k dítěti, rodičovskou i péči obou partnerů."
+    ]
+  },
+  "sections": [
+    {
+      "id": "tema-nezacina-produktem",
+      "eyebrow": "FINANČNÍ PŘÍPRAVA",
+      "title": "Co může pojištění při plánování rodiny řešit",
+      "intro": "Při plánování rodiny může vedle výdajů po narození dítěte vzniknout i otázka nákladů na léčbu. Patří sem případné doplatky, dojíždění nebo omezení pracovního příjmu.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "S vámi nejdřív projdu vlastní finanční možnosti a současné smlouvy. Některá životní pojištění mohou obsahovat krytí související s asistovanou reprodukcí. Samotný název balíku ale nestačí: potřebujeme zjistit, zda bylo krytí sjednáno a jakou událost skutečně řeší.",
+            "Pojištění může za splnění podmínek přinést finanční plnění. Neovlivňuje výsledek léčby a nemusí pokrýt všechny náklady. Je proto jednou z možností vedle rezervy a rozpočtu; kontrola může skončit i rozhodnutím současnou smlouvu neměnit."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neni-to-samostatna-ivf-pojistka",
+      "eyebrow": "KONTROLA SMLOUVY",
+      "title": "Kde hledat krytí ve své smlouvě",
+      "intro": "Označení „IVF pojistka“ nevysvětluje rozsah ochrany. Důležité je konkrétní sjednané připojištění, jeho pojistné podmínky a případná individuální ujednání.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "process",
+          "steps": [
+            {
+              "title": "Dohledejte svou verzi dokumentů",
+              "description": "Připravte smlouvu, dodatky a podmínky, které k ní patří. Současná produktová stránka nemusí popisovat starší smlouvu ani změny sjednané později."
+            },
+            {
+              "title": "Ověřte sjednaný rozsah",
+              "description": "Najděte seznam připojištění, pojištěnou osobu a příslušnou částku. Událost uvedená v obecných podmínkách nemusí být automaticky součástí vaší zvolené varianty."
+            },
+            {
+              "title": "Spojte definici s omezeními",
+              "description": "Vedle popisu události přečtěte čekací dobu, věkové hranice, výluky a individuální podmínky. Poznamenejte nejasnosti i dokument, ze kterého vycházíte."
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Při společné kontrole oddělíme to, co je ve smlouvě potvrzené, od otázek pro pojišťovnu. Zkontrolujeme také způsob výpočtu plnění a zda by případná změna neovlivnila jiná důležitá krytí."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pojistna-udalost-neni-prvni-pokus",
+      "eyebrow": "PŘESNÁ DEFINICE UDÁLOSTI",
+      "title": "Co rozhoduje o nároku na plnění",
+      "intro": "Běžné označení „další IVF“ může zahrnovat různé kroky léčby. Pro kontrolu smlouvy potřebujeme vědět, které z nich pojišťovna počítá.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "comparison",
+          "title": "Léčebný cyklus a přenos embrya",
+          "items": [
+            {
+              "label": "Léčebný cyklus",
+              "summary": "Průběh léčby zahrnující několik navazujících kroků.",
+              "points": [
+                "Význam: může zahrnovat přípravu, odběr vajíček a laboratorní část léčby.",
+                "Počítání: zahájený cyklus nemusí vést k provedenému přenosu embrya."
+              ]
+            },
+            {
+              "label": "Přenos embrya",
+              "summary": "Konkrétní výkon, při kterém se embryo přenáší do dělohy.",
+              "points": [
+                "Význam: lze přenášet také dříve zmrazené embryo bez nového odběru vajíček.",
+                "Počítání: počet přenosů proto nemusí odpovídat počtu cyklů s odběrem."
+              ]
+            }
+          ],
+          "takeaway": "Počet cyklů a počet přenosů nezaměňujte. Pro smluvní posouzení je rozhodující přesná definice a dokumentace skutečného průběhu."
+        },
+        {
+          "type": "expertNote",
+          "title": "Příklad jedné smluvní verze",
+          "text": "U jednoho krytí pro ženy v podmínkách O-974/25 platných od 24. října 2025 je událostí třetí přenos embrya po dvou neúspěšných. Neplodnost pojištěné ženy i nemoc, která ji způsobuje, musí být diagnostikovány za trvání pojištění. Přenos musí nastat nejpozději poslední den měsíce před měsícem jejích 45. narozenin. Čekací doba je dva měsíce; její běh se řídí uzavřením smlouvy nebo účinností dohodnuté změny. Jde o konkrétní příklad, nikoli pravidlo všech produktů."
+        },
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Událost a časová posloupnost",
+              "description": "Co přesně se musí stát, které předchozí kroky se započítávají a jakými doklady se prokazují?"
+            },
+            {
+              "title": "Zdravotní podmínky",
+              "description": "Jakou příčinu smlouva vyžaduje, koho se týká a jak posuzuje dřívější zdravotní okolnosti?"
+            },
+            {
+              "title": "Věk a čekací doba",
+              "description": "K jakému okamžiku se posuzuje věk a od kterého data běží příslušná lhůta? Nestačí pouze datum podpisu na první straně smlouvy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kdy-se-okno-uzavira",
+      "eyebrow": "VAŠE SOUČASNÁ SITUACE",
+      "title": "Pokud už řešíte vyšetření nebo léčbu",
+      "intro": "Dosavadní zdravotní stav, vyšetření a léčba mohou ovlivnit přijetí do pojištění i rozsah krytí. Bez konkrétní smlouvy nelze určit, zda by plnění vzniklo.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "decision",
+          "branches": [
+            {
+              "if": "Krytí už máte z dřívějška",
+              "then": "Prověřit stávající smlouvu.",
+              "check": "Porovnáme její podmínky s časovým průběhem situace a zjistíme, jaké doklady pojišťovna potřebuje. Samotný název události nárok nepotvrzuje."
+            },
+            {
+              "if": "O novém krytí teprve uvažujete",
+              "then": "Nejdřív ověřit možnosti přijetí.",
+              "check": "Na dotazy pojišťovny odpovídejte pravdivě a úplně. Novou smlouvu nepovažujte za příslib plnění za již řešenou situaci; rozhodují konkrétní podmínky a zdravotní posouzení."
+            },
+            {
+              "if": "Použitelné krytí nemáte",
+              "then": "Připravit plán z dostupných peněz.",
+              "check": "Projdeme rozsah veřejné úhrady, vlastní náklady, rezervu a příjem domácnosti. Rozpočet nepostavíme na nepotvrzené budoucí výplatě."
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Vyšetření ani léčbu kvůli pojištění neodkládejte. Zdravotní postup řešte s lékařem; kontrola smlouvy má objasnit finanční možnosti, ne určovat termín péče."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "co-hradi-verejne-pojisteni-a-co-muze-zustat",
+      "eyebrow": "DVA ODLIŠNÉ SYSTÉMY",
+      "title": "Veřejná úhrada a komerční plnění",
+      "intro": "Zdravotní pojišťovna řeší úhradu zdravotních služeb. Životní pojištění se posuzuje samostatně podle sjednané události a částky.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "explanation",
+          "subsections": [
+            {
+              "title": "Co může hradit zdravotní pojišťovna",
+              "paragraphs": [
+                "Podle pravidel popsaných VZP se při indikaci gynekologem hradí základní výkony u tří cyklů IVF, případně čtyři, pokud bylo v prvních dvou cyklech přeneseno vždy jen jedno embryo. Věkové rozmezí je od 22 let do dne před 40. narozeninami; při oboustranné neprůchodnosti vejcovodů od 18 let.",
+                "Úhrada neznamená, že všechny související položky jsou bez doplatku. Léky mohou mít limity úhrady a další služby se posuzují zvlášť. U kliniky a zdravotní pojišťovny si ověřte rozsah pro svůj postup a vyžádejte rozpis vlastních nákladů."
+              ]
+            },
+            {
+              "title": "Co může vyplatit životní pojištění",
+              "paragraphs": [
+                "V uvedeném smluvním příkladu se vyplácí 30 % sjednané pojistné částky. Tato výplata sama příslušné krytí neukončuje. Nejde o proplacení všech faktur ani příslib další výplaty při každém následujícím přenosu.",
+                "U vlastní smlouvy proto ověřte, z jaké částky se plnění odvozuje, komu se vyplácí a co se s krytím stane poté. Počet cyklů hrazených zdravotní pojišťovnou sám neurčuje nárok ze životního pojištění."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Rozsah veřejné úhrady",
+              "description": "Které plánované výkony a léky jsou hrazené a jak se započítává dosavadní léčba?"
+            },
+            {
+              "title": "Vlastní náklady",
+              "description": "Co zaplatíte za zvolený postup, doplatky a další služby? Které výdaje se mohou opakovat?"
+            },
+            {
+              "title": "Dopad do rozpočtu",
+              "description": "Přidejte dopravu, případné ubytování a očekávané omezení pracovního příjmu. Odhad oddělte od už potvrzených cen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "planovani-rodiny-je-cely-financni-plan",
+      "eyebrow": "ROZPOČET RODINY",
+      "title": "Co ještě zahrnout do rodinného rozpočtu",
+      "intro": "Vedle případné léčby s vámi projdu také období po narození dítěte. Důležité je, jak budou navazovat příjmy, výdaje a péče v jednotlivých měsících.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Příjmy během rodičovské",
+              "description": "Porovnáme očekávané pracovní příjmy a další potvrzené příjmy domácnosti s nutnými výdaji. Nejisté částky necháme jako samostatný scénář."
+            },
+            {
+              "title": "Rezerva a známé výdaje",
+              "description": "Oddělíme pohotovostní rezervu od peněz na vybavení a jiné plánované nákupy. Stejnou částku nemůžeme současně započítat na oba účely."
+            },
+            {
+              "title": "Bydlení",
+              "description": "Prověříme nájem nebo splátku i provozní náklady při změněném příjmu. Zahrneme případné stěhování či úpravy domácnosti."
+            },
+            {
+              "title": "Výdělek a péče obou partnerů",
+              "description": "Probereme dopad nemoci či jiného výpadku každého z vás. Potřebu finanční ochrany ovlivňuje také péče, kterou by někdo musel převzít nebo zajistit."
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Toto dílčí krytí posoudíme podle jeho ceny a přínosu v celém plánu. Nemá automaticky přednost před rezervou nebo ochranou příjmu. Pokud rozpočet nestačí na vše, společně určíme priority podle dopadu na vaši domácnost."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prakticky-audit-pred-rozhodnutim",
+      "eyebrow": "PRAKTICKÁ PŘÍPRAVA",
+      "title": "Co připravit ke společné kontrole",
+      "intro": "Pro úvodní přehled potřebujeme znát současné smlouvy a rozpočet. Podrobnosti zdravotní dokumentace pro případné plnění se řeší podle požadavků pojišťovny.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Smlouvu a její změny",
+              "description": "Aktuální přehled připojištění, částek a plateb, příslušné pojistné podmínky a dodatky. Označte, kterým ustanovením nerozumíte."
+            },
+            {
+              "title": "Rozpočet a rezervu",
+              "description": "Orientační příjmy, nutné výdaje, náklady na bydlení a dostupné úspory. Pokud už znáte očekávané změny, připište jejich termín."
+            },
+            {
+              "title": "Otázky a známé náklady",
+              "description": "Co potřebujete objasnit ve smlouvě a co už máte potvrzené od kliniky či zdravotní pojišťovny. Pokud léčbu neřešíte, není potřeba její cenu odhadovat naslepo."
+            }
+          ]
+        },
+        {
+          "type": "nextAction",
+          "title": "Proberme finanční přípravu na rodinu",
+          "paragraphs": [
+            "Na úvodním hovoru s vámi proberu vaši situaci a domluvíme se, které smlouvy a údaje o rozpočtu připravit ke společné kontrole."
+          ],
+          "action": {
+            "label": "Domluvit úvodní hovor",
+            "intent": "open-contact-or-screening-flow"
+          }
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "title": "Rozhodujte se podle potvrzených možností",
+    "paragraphs": [
+      "Smyslem kontroly je vědět, co vaše smlouva skutečně řeší, které náklady můžete nést sami a co potřebuje upravit rodinný rozpočet. Výsledkem může být doplnění ochrany i ponechání současného stavu."
+    ]
+  },
+  "relatedTopics": [
+    {
+      "topic": "Máte finanční produkty. Ale máte skutečně finanční plán?",
+      "reason": "Ukazuje, proč ani zajímavé dílčí krytí nestačí bez vazby na příjem, rezervu, závazky a cíle domácnosti.",
+      "slug": "mate-financni-produkty-ale-mate-skutecne-financni-plan"
+    },
+    {
+      "topic": "Kolik má mít domácnost v rezervě? Jedno správné číslo neexistuje.",
+      "reason": "Navazuje na otázku, jak se velikost rezervy mění při dítěti, rodičovské a vyšší závislosti domácnosti na jednom příjmu.",
+      "slug": "kolik-ma-mit-domacnost-v-rezerve"
+    },
+    {
+      "topic": "Kolik vám půjčí banka a kolik unese váš rozpočet?",
+      "reason": "Rozpracovává, proč má hypotéka plánované rodiny fungovat také během rodičovské, ne pouze při dvou plných příjmech.",
+      "slug": "banka-vam-pujci-vic-nez-si-muzete-dovolit"
+    }
+  ],
+  "editorial": {
+    "contentStatus": "review-ready",
+    "sourceBasis": "Rozhovorové odpovědi Davida Pokorného, téma 8, strany 51–61 zdrojového dokumentu. Redakční kontrola dne 2026-10-05 porovnala konkrétní příklad s oficiálními podmínkami O-974/25 a oddělila jej od obecné kontroly smlouvy; zdravotní a úhradové formulace byly porovnány s VZP, NZIP a popisem KET poskytovatele péče.",
+    "needsExternalVerification": true,
+    "sensitivity": "high",
+    "review": {
+      "status": "pending"
+    },
+    "verificationItems": [
+      {
+        "id": "08-01-konkretni-pojistovny-se-ve-verejnem-clanku-zamerne-n",
+        "title": "Konkrétní pojišťovny se ve veřejném článku záměrně nejmenují",
+        "instruction": "Konkrétní pojišťovny tu záměrně nejmenuji. Produkty se liší spouštěčem, věkem, čekací dobou i výší plnění a jejich podmínky se mohou měnit. Chci vám proto vysvětlit princip; konkrétní řešení má smysl porovnat až podle vaší situace a aktuálních podmínek.",
+        "status": "not_applicable",
+        "severity": "advisory",
+        "blocksPublish": false,
+        "visibility": "internal",
+        "sectionId": "neni-to-samostatna-ivf-pojistka",
+        "claimRef": "neni-to-samostatna-ivf-pojistka:verification-1",
+        "evidenceRequired": "Záznam editorial rozhodnutí, pokud se veřejná formulace změní.",
+        "sources": [
+          "https://www.koop.cz/file/edee/dokumenty/pojisteni-osob/zivotni-pojisteni-flexi/A2_PP_Zivotni_pojisteni_FLEXI_01_2025_v3_OPTIMALIZACE.PDF"
+        ],
+        "requiresRecheck": false,
+        "note": "Veřejně nejsou uvedeny názvy pojišťoven ani produktových značek; příklad je identifikován verzí podmínek a účinností. Značka a přímý produktový zdroj zůstávají v interním ověřování."
+      },
+      {
+        "id": "08-02-treti-prenos-embrya-musi-byt-overen-proti-aktualni-v",
+        "title": "Třetí přenos embrya musí být ověřen proti aktuální verzi podmínek",
+        "instruction": "Prověřit finální veřejné znění ukotvené na jediné variantě podmínek O-974/25. Nemíchat odlišná krytí ve stejném dokumentu; ověřit skutečně sjednanou variantu, doklady a ujednání konkrétní smlouvy.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "pojistna-udalost-neni-prvni-pokus",
+        "claimRef": "pojistna-udalost-neni-prvni-pokus:verification-2",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [
+          "https://www.koop.cz/file/edee/dokumenty/pojisteni-osob/zivotni-pojisteni-flexi/A2_PP_Zivotni_pojisteni_FLEXI_01_2025_v3_OPTIMALIZACE.PDF",
+          "https://www.nzip.cz/clanek/142-umele-oplodneni",
+          "https://www.reprofit.cz/cs/lecba-neplodnosti/kryoembryotransfer/"
+        ],
+        "requiresRecheck": true,
+        "note": "Zdrojově zkontrolováno 2026-10-05: veřejný příklad vychází z PRO NI, nikoli Trvalých následků nemoci. Strany PDF 10–11, 35 a 93. Produktové řádky ověřeny také vizuálně. Původní stav pending označuje nedokončené odborné uzavření finálního článku."
+      },
+      {
+        "id": "08-03-vek-45-let-priblizne-dvoumesicni-cekaci-doba-a-pozad",
+        "title": "Věk 45 let, přibližně dvouměsíční čekací doba a požadavek diagnostikované nemoci jsou produktově specifické",
+        "instruction": "Porovnat finální popis časových a zdravotních podmínek se zdrojovou definicí vybrané varianty a zachovat odlišení od pravidel veřejné úhrady.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "pojistna-udalost-neni-prvni-pokus",
+        "claimRef": "pojistna-udalost-neni-prvni-pokus:verification-3",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [
+          "https://www.koop.cz/file/edee/dokumenty/pojisteni-osob/zivotni-pojisteni-flexi/A2_PP_Zivotni_pojisteni_FLEXI_01_2025_v3_OPTIMALIZACE.PDF"
+        ],
+        "requiresRecheck": true,
+        "note": "Název položky zůstává historický kvůli auditu. Přibližné formulace byly ve veřejném příkladu zpřesněny. Idiopatická neplodnost nebyla v PDF nalezena jako výslovně pojmenovaná výluka; tento výrok a samostatná medicínská definice byly odstraněny."
+      },
+      {
+        "id": "08-04-presna-hranice-predchoziho-zdravotniho-stavu-vyzaduj",
+        "title": "Přesná hranice předchozího zdravotního stavu vyžaduje odbornou kontrolu",
+        "instruction": "Ověřit finální podmíněné znění o dřívějším zdravotním stavu, vyšetření a léčbě podle smlouvy, zdravotního dotazníku a pravidel přijetí. Veřejně netvrdit univerzální nepojistitelnost každé existující diagnózy.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "kdy-se-okno-uzavira",
+        "claimRef": "kdy-se-okno-uzavira:verification-4",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [
+          "https://www.koop.cz/file/edee/dokumenty/pojisteni-osob/zivotni-pojisteni-flexi/A2_PP_Zivotni_pojisteni_FLEXI_01_2025_v3_OPTIMALIZACE.PDF"
+        ],
+        "requiresRecheck": true,
+        "note": "Obecné tvrzení o zpětném převzetí známého problému bylo nahrazeno kontrolou konkrétních podmínek. Článek neslibuje plnění z nového krytí a nevybízí k odložení vyšetření nebo léčby."
+      },
+      {
+        "id": "08-05-vyplata-100-pojistne-castky-a-zanik-kryti-po-plneni",
+        "title": "Výplata 100 % pojistné částky a zánik krytí po plnění jsou specifické pro popsaný model",
+        "instruction": "Dokončit kontrolu opraveného popisu výplaty a trvání vybrané varianty; nepřebírat procento z vedlejšího řádku tabulky ani z jiného připojištění.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "co-hradi-verejne-pojisteni-a-co-muze-zustat",
+        "claimRef": "co-hradi-verejne-pojisteni-a-co-muze-zustat:verification-5",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [
+          "https://www.koop.cz/file/edee/dokumenty/pojisteni-osob/zivotni-pojisteni-flexi/A2_PP_Zivotni_pojisteni_FLEXI_01_2025_v3_OPTIMALIZACE.PDF"
+        ],
+        "requiresRecheck": true,
+        "note": "Historický název položky je zachován kvůli auditu. Původní tvrzení o plné výplatě a automatickém ukončení bylo chybné: procento v sousedním řádku patří jiné události. Veřejný text byl opraven podle strany 35 a bodu 8(3) na straně 11. Druhá varianta IVF ze strany 45 se veřejně nepopisuje."
+      },
+      {
+        "id": "08-06-pocet-hrazenych-cyklu-vekova-hranice-a-uvedene-castk",
+        "title": "Počet hrazených cyklů, věková hranice a uvedené částky vyžadují aktuální zdravotní a cenové zdroje",
+        "instruction": "Dokončit kontrolu aktuálních podmínek veřejné úhrady a jejich oddělení od komerčního pojištění. Individuální doplatky a samoplátecké položky ověřovat podle konkrétního postupu a ceníku; článek neuvádí orientační ceny.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "co-hradi-verejne-pojisteni-a-co-muze-zustat",
+        "claimRef": "co-hradi-verejne-pojisteni-a-co-muze-zustat:verification-6",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [
+          "https://www.vzp.cz/o-nas/tiskove-centrum/otazky-tydne/podminky-pro-umele-oplodneni-od-roku-2022"
+        ],
+        "requiresRecheck": true,
+        "note": "Veřejné věkové a početní podmínky byly porovnány se zdrojem VZP dne 2026-10-05. Původní nepodložené odhady cen i rail s cenami byly odstraněny; úhrada není prezentována jako nulové vlastní náklady."
+      },
+      {
+        "id": "08-07-statistiky-cetnosti-a-uspesnosti-nejsou-v-clanku-pou",
+        "title": "Statistiky četnosti a úspěšnosti nejsou v článku použité jako hotový fakt",
+        "instruction": "Ve veřejném článku nadále nepoužívat statistiky četnosti neplodnosti nebo úspěšnosti léčby. Případné budoucí doplnění vyžaduje samostatné ověření zdroje, období a metodiky.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "co-hradi-verejne-pojisteni-a-co-muze-zustat",
+        "claimRef": "co-hradi-verejne-pojisteni-a-co-muze-zustat:verification-7",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [],
+        "requiresRecheck": true,
+        "note": "Statistiky nebyly přidány. Původní ID, název, status a publikační příznaky zůstávají zachovány; tento redakční zásah neuzavírá původní odborný workflow."
+      },
+      {
+        "id": "08-08-pred-verejnym-renderem-je-nutna-kontrola-vsech-zdrav",
+        "title": "Před veřejným renderem je nutná kontrola všech zdravotních a produktových tvrzení",
+        "instruction": "Dokončit stávající odbornou kontrolu finálních zdravotních, pojistných a úhradových formulací. Oddělit zdrojově doložený smluvní příklad od posouzení individuálního nároku; zachovat citlivý tón bez tlaku na sjednání nebo odklad léčby.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "prakticky-audit-pred-rozhodnutim",
+        "claimRef": "prakticky-audit-pred-rozhodnutim:verification-8",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [
+          "https://www.koop.cz/file/edee/dokumenty/pojisteni-osob/zivotni-pojisteni-flexi/A2_PP_Zivotni_pojisteni_FLEXI_01_2025_v3_OPTIMALIZACE.PDF",
+          "https://www.vzp.cz/o-nas/tiskove-centrum/otazky-tydne/podminky-pro-umele-oplodneni-od-roku-2022",
+          "https://www.nzip.cz/clanek/142-umele-oplodneni",
+          "https://www.reprofit.cz/cs/lecba-neplodnosti/kryoembryotransfer/"
+        ],
+        "requiresRecheck": true,
+        "note": "Redakční ověření primárních podkladů není profesním schválením článku ani potvrzením nároku konkrétní osoby. Osm původních položek a jejich statusy jsou zachovány bez nových blokací."
+      }
+    ],
+    "productionNotes": {
+      "videoOpportunities": [
+        {
+          "recommendedPlacement": "Za sekcí vysvětlující pojistnou událost a rozdíl mezi léčebným cyklem a přenosem embrya.",
+          "recommendedTopic": "Cyklus není přenos: dvě minuty, které rozhodnou, kdy podle smlouvy vzniká událost.",
+          "suggestedDuration": "75–120 sekund",
+          "reason": "Krátká neutrální časová osa může odstranit nejdůležitější terminologickou záměnu bez použití zdravotně explicitních nebo emočně zatěžujících vizuálů."
+        },
+        {
+          "recommendedPlacement": "Za sekcí „Pokud už řešíte vyšetření nebo léčbu“.",
+          "recommendedTopic": "Proč se pojištění sjednává před problémem — bez nátlaku a bez slibů.",
+          "suggestedDuration": "60–90 sekund",
+          "reason": "David může lidsky vysvětlit rozdíl mezi informací o časové podmínce a prodejní urgencí, což je pro citlivost tématu zásadní."
+        },
+        {
+          "recommendedPlacement": "Před závěrečnou praktickou přípravou.",
+          "recommendedTopic": "Pět finančních změn při plánování rodiny: cesta k dítěti, příjem, rezerva, bydlení a ochrana obou rodičů.",
+          "suggestedDuration": "90–150 sekund",
+          "reason": "Video může vrátit pozornost od jedné pojistné položky k celému finančnímu systému domácnosti."
+        }
+      ],
+      "interactiveOpportunities": [
+        {
+          "type": "policyEventMapperOpportunity",
+          "title": "Mapa podmínek krytí asistované reprodukce v konkrétní smlouvě",
+          "inputs": [
+            "Pojišťovna, produkt a přesná verze podmínek",
+            "Datum počátku pojištění",
+            "Název širšího krytí a přesná definice události",
+            "Počet požadovaných cyklů nebo přenosů",
+            "Věková hranice",
+            "Čekací doba",
+            "Požadovaná diagnóza a čas jejího vzniku",
+            "Způsob výpočtu plnění",
+            "Zánik nebo pokračování krytí po výplatě"
+          ],
+          "outputs": [
+            "Srozumitelná časová osa podmínek",
+            "Rozlišení léčebného cyklu a přenosu embrya",
+            "Body, které jsou ve smlouvě potvrzené",
+            "Body, které vyžadují odborný nebo medicínský výklad",
+            "Seznam dokumentů potřebných při případném plnění",
+            "Upozornění, že nástroj negarantuje pojistné plnění"
+          ],
+          "reason": "Největší hodnotou článku je překlad komplikované definice do jasného sledu. Nástroj může tento proces zpřístupnit bez automatického produktového doporučení."
+        },
+        {
+          "type": "familyPlanScenarioOpportunity",
+          "title": "Scénář finančního plánu před příchodem dítěte",
+          "inputs": [
+            "Současné čisté příjmy obou partnerů",
+            "Očekávaný příjem během rodičovské",
+            "Nutné měsíční výdaje",
+            "Bydlení a splátky",
+            "Současná rezerva",
+            "Odhad vlastních krátkodobých nákladů před narozením",
+            "Současná ochrana příjmu obou partnerů"
+          ],
+          "outputs": [
+            "Rozpočet domácnosti při nižším příjmu",
+            "Orientační cílová rezerva",
+            "Prostor pro krátkodobé náklady související s plánováním rodiny",
+            "Neřešené vazby mezi bydlením, příjmem a ochranou",
+            "Otázky pro společnou revizi plánu"
+          ],
+          "reason": "Převádí hlavní závěr článku do praxe: asistovaná reprodukce je jen jedna část mnohem širší změny finančního systému páru."
+        }
+      ],
+      "verificationRequired": [
+        {
+          "topic": "Finální produktový příklad",
+          "reason": "Prověřit finální veřejné znění ukotvené na jediné variantě podmínek O-974/25. Nemíchat odlišná krytí ve stejném dokumentu; ověřit skutečně sjednanou variantu, doklady a ujednání konkrétní smlouvy.",
+          "priority": "high"
+        },
+        {
+          "topic": "Zdravotní a časové podmínky",
+          "reason": "Porovnat finální popis časových a zdravotních podmínek se zdrojovou definicí vybrané varianty a zachovat odlišení od pravidel veřejné úhrady.",
+          "priority": "high"
+        },
+        {
+          "topic": "Individuální zdravotní posouzení",
+          "reason": "Ověřit finální podmíněné znění o dřívějším zdravotním stavu, vyšetření a léčbě podle smlouvy, zdravotního dotazníku a pravidel přijetí. Veřejně netvrdit univerzální nepojistitelnost každé existující diagnózy.",
+          "priority": "high"
+        },
+        {
+          "topic": "Opravený popis pojistného plnění",
+          "reason": "Dokončit kontrolu opraveného popisu výplaty a trvání vybrané varianty; nepřebírat procento z vedlejšího řádku tabulky ani z jiného připojištění.",
+          "priority": "high"
+        },
+        {
+          "topic": "Veřejná úhrada a vlastní náklady",
+          "reason": "Dokončit kontrolu aktuálních podmínek veřejné úhrady a jejich oddělení od komerčního pojištění. Individuální doplatky a samoplátecké položky ověřovat podle konkrétního postupu a ceníku; článek neuvádí orientační ceny.",
+          "priority": "high"
+        },
+        {
+          "topic": "Případné budoucí statistiky",
+          "reason": "Ve veřejném článku nadále nepoužívat statistiky četnosti neplodnosti nebo úspěšnosti léčby. Případné budoucí doplnění vyžaduje samostatné ověření zdroje, období a metodiky.",
+          "priority": "medium"
+        },
+        {
+          "topic": "Dokončení původní odborné kontroly",
+          "reason": "Dokončit stávající odbornou kontrolu finálních zdravotních, pojistných a úhradových formulací. Oddělit zdrojově doložený smluvní příklad od posouzení individuálního nároku; zachovat citlivý tón bez tlaku na sjednání nebo odklad léčby.",
+          "priority": "high"
+        }
+      ],
+      "implementationNotes": [
+        "Zachovat H1, slug a fotografie. Sedm sekcí používá sdílené bloky bez vlastního screeningu nebo kalkulačky.",
+        "Konkrétní produktová značka zůstává interní. Veřejný příklad je úzce identifikován verzí podmínek a účinností; není přehledem trhu ani univerzálním pravidlem.",
+        "Stejný podklad obsahuje dvě rozdílná krytí asistované reprodukce. Veřejný text používá pouze první ověřenou variantu; nesměšovat jejich limity ani pokračování.",
+        "Cyklus a přenos embrya vysvětlovat pomocí ověřených procesních zdrojů. Nevytvářet vlastní medicínskou definici neplodnosti ani odhad úspěšnosti.",
+        "Zdroj neobsahuje konkrétní klientskou pojistnou událost, částky výsledku ani klientskou citaci. Nevkládat caseStudy, financialDelta nebo clientEvidence.",
+        "Původní cenové odhady byly odstraněny z textu a rails. Vlastní náklady se ověřují individuálně u poskytovatele a zdravotní pojišťovny.",
+        "Existující diagnóza není veřejně označena za univerzálně nepojistitelnou. Nové krytí ale není prezentováno jako příslib úhrady již řešené situace. Kontrola nesmí vést k odkladu vyšetření nebo léčby.",
+        "Jeden závěrečný nextAction vede na úvodní hovor a kontrolu současných možností, nikoli na automatické sjednání. Žádné další CTA v mezisekcích nebo rails.",
+        "Osm původních verificationItems zachovává ID, názvy, statusy a publikační příznaky. Zdrojová kontrola nepředstavuje odborné schválení ani nové publikační překážky."
+      ]
+    }
+  }
+}

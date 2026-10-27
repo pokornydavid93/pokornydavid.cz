@@ -1,0 +1,16 @@
+packages:
+  - apps/web
+  - packages/article-editorial
+  - packages/axiom-substrate
+  - packages/contracts
+  - packages/next
+  - packages/publication-runtime
+  - packages/surface-engine
+  - packages/web-core
+  - packages/tsconfig
+verifyDepsBeforeRun: false
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  sharp: true
+  unrs-resolver: true

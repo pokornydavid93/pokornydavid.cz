@@ -1,0 +1,2461 @@
+.processTimeline {
+  --process-surface: var(--surface-section-dark);
+  --process-surface-deep: var(--surface-section-dark-deep);
+  --process-surface-card: var(--surface-card-dark);
+  --process-surface-card-hover: var(--surface-card-dark-hover);
+  --process-border: var(--border-subtle);
+  --process-border-medium: var(--border-medium);
+  --process-border-strong: var(--border-emphasis-subtle);
+  --process-border-active: var(--border-emphasis);
+  --process-text: var(--text-primary);
+  --process-text-secondary: var(--text-secondary);
+  --process-text-muted: var(--text-muted);
+  --process-accent: var(--text-emphasis);
+  --process-icon: var(--icon-emphasis);
+  --process-focus-ring: var(--button-focus-ring);
+  --process-shadow-color: var(--surface-shadow-soft);
+
+  position: relative;
+  min-height: auto;
+  overflow: visible;
+  padding: clamp(46px, 5.6vw, 78px) 0 clamp(76px, 7vw, 108px);
+  scroll-margin-top: clamp(82px, 9vw, 116px);
+  color: var(--process-text);
+  background: var(--process-surface);
+}
+
+.processTimeline::before,
+.processTimeline::after {
+  content: none;
+}
+
+.processTimeline::before {
+  inset: 0;
+  background: var(--process-surface);
+  background-size: 96px 96px;
+  mask-image: none;
+  opacity: 0.18;
+}
+
+.processTimeline::after {
+  top: 13%;
+  right: 4%;
+  width: min(620px, 45vw);
+  height: min(620px, 45vw);
+  background: var(--process-surface);
+  filter: blur(38px);
+  opacity: 0.76;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-height: auto;
+  align-content: center;
+  gap: clamp(22px, 2.4vw, 32px);
+  padding-block: 0;
+}
+
+.header {
+  position: relative;
+  display: block;
+  width: min(100%, 920px);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.header::after {
+  content: none;
+}
+
+.headline {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  text-align: center;
+}
+
+.headline::before {
+  content: none;
+}
+
+.eyebrow,
+.nodeMeta,
+.artifactLabel {
+  margin: 0;
+  color: var(--process-accent);
+  font-size: 12px;
+  font-weight: 760;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.headline > .eyebrow {
+  color: var(--process-accent);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.headline h2 {
+  margin: 14px 0 0;
+  background: none;
+  background-clip: border-box;
+  color: var(--process-accent);
+  filter: none;
+  font-size: clamp(32px, 2.5vw, 48px);
+  font-weight: 820;
+  line-height: 1.12;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: currentColor;
+}
+
+.headline p {
+  max-width: 620px;
+  margin: 20px auto 0;
+  color: var(--process-text-secondary);
+  font-size: clamp(15.5px, 1.02vw, 17.5px);
+  line-height: 1.68;
+}
+
+.diagramArea {
+  position: relative;
+  min-height: auto;
+  isolation: isolate;
+}
+
+.focusStage {
+  display: none;
+}
+
+.diagramAmbient {
+  position: absolute;
+  inset: 2% -4% 0;
+  z-index: 0;
+  pointer-events: none;
+  background: var(--process-surface);
+  filter: blur(8px);
+  opacity: 0.58;
+}
+
+.focusShell {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: min(100%, 1120px);
+  min-height: clamp(430px, 42vw, 520px);
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  color: var(--process-accent);
+}
+
+.decisionBoard {
+  position: relative;
+  display: grid;
+  min-height: clamp(430px, 38vw, 520px);
+  align-content: stretch;
+  padding: clamp(26px, 3vw, 42px);
+  border: 1px solid var(--process-border);
+  border-radius: 30px;
+  background: var(--surface-section-dark);
+  background-size: 76px 76px, 76px 76px, auto;
+  box-shadow:
+    0 26px 70px var(--process-shadow-color),
+    inset 0 1px 0 var(--process-border-medium);
+  overflow: hidden;
+}
+
+.decisionBoard::before {
+  content: "";
+  position: absolute;
+  inset: -30% -12% auto 44%;
+  height: 76%;
+  pointer-events: none;
+  background: var(--surface-section-dark);
+  filter: blur(28px);
+  opacity: 0.72;
+}
+
+.compactStepNav {
+  position: relative;
+  display: flex;
+  width: min(100%, 640px);
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: clamp(18px, 2.1vw, 26px);
+  padding: 2px 0;
+}
+
+.compactStepTrack {
+  position: absolute;
+  right: 20px;
+  left: 20px;
+  top: 50%;
+  height: 1px;
+  overflow: hidden;
+  background: var(--process-border);
+  transform: translateY(-50%);
+}
+
+.compactStepFill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--process-accent);
+  box-shadow: none;
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+}
+
+.compactStep,
+.mobileProgressItem {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--process-surface-deep);
+  color: var(--text-on-dark-muted);
+  font-size: 10px;
+  font-weight: 760;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  box-shadow: inset 0 1px 0 var(--process-border-medium);
+  transition:
+    border-color 260ms ease,
+    color 260ms ease,
+    background 260ms ease,
+    box-shadow 260ms ease,
+    transform 260ms ease;
+}
+
+.compactStep[data-progress-state="done"],
+.mobileProgressItem[data-progress-state="done"] {
+  border-color: var(--process-border-strong);
+  color: var(--process-accent);
+  background: var(--process-surface-card);
+}
+
+.compactStep[data-progress-state="active"],
+.mobileProgressItem[data-progress-state="active"] {
+  border-color: var(--process-border-active);
+  color: var(--process-text);
+  background: var(--process-surface-card-hover);
+  box-shadow: inset 0 1px 0 var(--process-border-medium);
+  transform: translateY(-1px);
+}
+
+.focusCopyStack {
+  position: relative;
+  min-height: clamp(330px, 29vw, 390px);
+}
+
+.focusCopyPanel {
+  position: absolute;
+  inset: 0;
+  max-width: none;
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: 0 50%;
+  visibility: hidden;
+}
+
+.focusCopyPanel:first-child {
+  opacity: 1;
+  visibility: visible;
+}
+
+.focusPanelGrid {
+  display: grid;
+  height: 100%;
+  grid-template-columns: minmax(0, 1fr) minmax(285px, 360px);
+  gap: clamp(26px, 3vw, 46px);
+  align-items: stretch;
+}
+
+.focusNarrative {
+  display: grid;
+  min-width: 0;
+  align-content: center;
+}
+
+.focusMetaRow {
+  display: flex;
+  max-width: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: clamp(11px, 1.2vw, 14px);
+  border-bottom: 1px solid var(--process-border);
+}
+
+.focusCount {
+  display: inline-flex;
+  min-width: 88px;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  border: 1px solid var(--process-border);
+  border-radius: 999px;
+  background: var(--process-surface-deep);
+  color: var(--process-accent);
+  font-size: 13px;
+  font-weight: 760;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.focusCount span {
+  color: var(--process-text-muted);
+  font-size: 10px;
+  font-weight: 760;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.focusCopyPanel h3 {
+  max-width: 650px;
+  margin: clamp(17px, 1.8vw, 24px) 0 0;
+  color: var(--process-text);
+  font-size: clamp(36px, 3.2vw, 54px);
+  font-weight: 760;
+  line-height: 1.04;
+}
+
+.focusDescription {
+  max-width: 620px;
+  margin: clamp(12px, 1.4vw, 17px) 0 0;
+  color: var(--process-text-secondary);
+  font-size: clamp(15.5px, 1.05vw, 17px);
+  line-height: 1.56;
+}
+
+.focusTrustRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: clamp(18px, 1.9vw, 24px);
+}
+
+.focusTag {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  padding: 0 12px;
+  border: 1px solid var(--process-border);
+  border-radius: 999px;
+  background: var(--process-surface-deep);
+  color: var(--process-text-secondary);
+  font-size: 12px;
+  font-weight: 680;
+  line-height: 1;
+}
+
+.focusOutcomeCard {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  align-content: start;
+  overflow: hidden;
+  gap: 0;
+  padding: clamp(20px, 2vw, 26px);
+  border: 1px solid var(--process-border);
+  border-radius: 22px;
+  background: var(--surface-card-dark);
+  box-shadow:
+    0 22px 52px var(--process-shadow-color),
+    inset 0 1px 0 var(--process-border-medium);
+}
+
+.focusOutcomeCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: var(--surface-card-dark);
+}
+
+.focusOutcomeCard > * {
+  position: relative;
+  z-index: 1;
+}
+
+.focusOutcomeTop {
+  display: grid;
+  gap: 8px;
+}
+
+.focusOutcomeTop strong {
+  color: var(--process-text);
+  font-size: clamp(19px, 1.55vw, 24px);
+  font-weight: 780;
+  line-height: 1.18;
+}
+
+.focusOutcomeTop span {
+  color: var(--process-text-secondary);
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+.focusOutcomeList {
+  display: grid;
+  gap: 0;
+  margin: clamp(16px, 1.7vw, 20px) 0 clamp(12px, 1.3vw, 16px);
+  padding: 0;
+  list-style: none;
+}
+
+.focusOutcomeList li {
+  display: grid;
+  grid-template-columns: 14px minmax(0, 1fr);
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--process-border);
+}
+
+.focusOutcomeList li:last-child {
+  border-bottom: 1px solid var(--process-border);
+}
+
+.focusOutcomeMarker {
+  width: 7px;
+  height: 20px;
+  margin-top: 3px;
+  border-left: 1px solid var(--process-border-active);
+  border-bottom: 1px solid var(--process-border-strong);
+}
+
+.focusOutcomeList strong {
+  display: block;
+  color: var(--process-text);
+  font-size: 14.5px;
+  font-weight: 760;
+  line-height: 1.32;
+}
+
+.focusOutcomeList p {
+  margin: 4px 0 0;
+  color: var(--process-text-muted);
+  font-size: 13px;
+  line-height: 1.42;
+}
+
+.focusDecisionNote {
+  margin: 0;
+  padding: 10px 14px;
+  border: 1px solid var(--process-border);
+  border-radius: 14px;
+  background: var(--process-surface-deep);
+  color: var(--process-text-secondary);
+  font-size: 12.5px;
+  line-height: 1.44;
+}
+
+.decisionMapStack {
+  display: grid;
+  max-width: none;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: clamp(18px, 2vw, 24px);
+}
+
+.decisionMapItem {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-height: 96px;
+  padding: 0 16px 0 18px;
+  border-left: 1px solid var(--process-border-strong);
+}
+
+.decisionMapItem::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -4px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--process-border-active);
+  border-radius: 999px;
+  background: var(--process-surface-card-hover);
+  box-shadow: none;
+}
+
+.decisionMapItem span {
+  color: var(--process-accent);
+  font-size: 10px;
+  font-weight: 760;
+  letter-spacing: 0.13em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.decisionMapItem strong {
+  color: var(--process-text);
+  font-size: clamp(14px, 0.95vw, 15.5px);
+  font-weight: 620;
+  line-height: 1.45;
+}
+
+.outcomeStrip {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 8px 16px;
+  margin-top: clamp(16px, 1.8vw, 22px);
+  padding: 14px 16px;
+  border: 1px solid var(--process-border);
+  border-radius: 18px;
+  background: var(--surface-section-dark);
+}
+
+.outcomeStrip span {
+  color: var(--process-accent);
+  font-size: 10px;
+  font-weight: 760;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.outcomeStrip strong {
+  color: var(--process-text);
+  font-size: 15px;
+  font-weight: 760;
+}
+
+.outcomeStrip p {
+  grid-column: 2;
+  margin: 0;
+  color: var(--text-on-dark-muted);
+  font-size: 13px;
+}
+
+.focusVisual {
+  position: relative;
+  grid-column: 2;
+  min-height: clamp(390px, 48svh, 520px);
+}
+
+.artifactStack {
+  position: relative;
+  width: 100%;
+  min-height: clamp(390px, 48svh, 520px);
+}
+
+.artifactStack::before {
+  content: "";
+  position: absolute;
+  inset: 7% -5% 8% 16%;
+  z-index: 0;
+  pointer-events: none;
+  background: var(--surface-section-dark);
+  filter: blur(30px);
+  opacity: 0.78;
+}
+
+.artifactCard {
+  --process-node-active: 0;
+  --process-node-border-alpha: 0.22;
+  --process-node-glow-size: 34px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  width: min(100%, 500px);
+  min-height: clamp(390px, 48svh, 500px);
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid var(--process-border);
+  border-radius: 22px;
+  background: var(--surface-card-dark);
+  box-shadow:
+    0 26px 70px var(--process-shadow-color),
+    inset 0 1px 0 var(--process-border-medium);
+  color: var(--process-text-secondary);
+  opacity: 0;
+  transform-origin: 52% 50%;
+  visibility: hidden;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.artifactChrome {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: var(--surface-section-dark);
+  opacity: calc(0.7 + var(--process-node-active) * 0.16);
+}
+
+.artifactTopline,
+.artifactCopy,
+.artifactList,
+.artifactFooter {
+  position: relative;
+  z-index: 1;
+}
+
+.artifactTopline {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(20px, 2.4vw, 30px);
+  border-bottom: 1px solid var(--process-border);
+  background: var(--process-surface-deep);
+}
+
+.artifactHeaderMeta {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.artifactIndex {
+  display: inline-flex;
+  width: 34px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--process-border-strong);
+  color: var(--process-accent);
+  font-size: 12px;
+  font-weight: 780;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.artifactIcon,
+.mobileIcon {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--process-border-strong);
+  border-radius: 10px;
+  background: var(--process-surface-deep);
+  color: var(--process-icon);
+}
+
+.artifactCopy {
+  padding: clamp(20px, 2.5vw, 30px) clamp(20px, 2.4vw, 30px) 0;
+}
+
+.artifactCopy h3 {
+  max-width: 440px;
+  margin: 0;
+  color: var(--process-text);
+  font-size: clamp(27px, 2.45vw, 38px);
+  font-weight: 720;
+  line-height: 1.08;
+}
+
+.artifactCopy p,
+.mobileArtifactPanel > p:not(.artifactLabel) {
+  max-width: 410px;
+  margin: 10px 0 0;
+  color: var(--text-on-dark-secondary);
+  font-size: 14.5px;
+  line-height: 1.52;
+}
+
+.artifactList {
+  display: grid;
+  margin: clamp(18px, 2vw, 24px) 0 0;
+  padding: 0 clamp(20px, 2.4vw, 30px);
+  list-style: none;
+}
+
+.artifactList li {
+  display: grid;
+  grid-template-columns: 15px minmax(0, 1fr);
+  gap: 12px;
+  padding: 11px 0;
+  border-top: 1px solid var(--process-border);
+}
+
+.artifactList li:last-child {
+  border-bottom: 1px solid var(--process-border);
+}
+
+.artifactMarker {
+  width: 7px;
+  height: 20px;
+  margin-top: 2px;
+  border-left: 1px solid var(--process-border-active);
+  border-bottom: 1px solid var(--process-border-strong);
+}
+
+.artifactList strong {
+  display: block;
+  color: var(--process-text);
+  font-size: 15px;
+  font-weight: 740;
+  line-height: 1.3;
+}
+
+.artifactList small {
+  display: block;
+  margin-top: 3px;
+  color: var(--text-on-dark-muted);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.artifactFooter {
+  display: grid;
+  gap: 14px;
+  margin: clamp(18px, 2vw, 24px) clamp(20px, 2.4vw, 30px)
+    clamp(20px, 2.4vw, 28px);
+}
+
+.artifactResult {
+  display: grid;
+  min-height: 62px;
+  align-content: center;
+  gap: 4px;
+  padding: 12px 16px;
+  border: 1px solid var(--process-border);
+  border-radius: 14px;
+  background: var(--surface-section-dark);
+  box-shadow: inset 0 1px 0 var(--process-border-medium);
+}
+
+.artifactResult span {
+  display: block;
+  color: var(--process-accent);
+  font-size: 11px;
+  font-weight: 760;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.artifactResult strong {
+  display: block;
+  color: var(--process-text);
+  font-size: 15px;
+  font-weight: 760;
+  text-align: left;
+}
+
+.routeBoard {
+  --process-route-node-size: 44px;
+  --process-route-progress: 0;
+  position: relative;
+  display: block;
+  width: min(100%, 1120px);
+  height: clamp(360px, 31vw, 420px);
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(24px, 2.6vw, 34px);
+  border: 1px solid var(--process-border);
+  border-radius: 28px;
+  background: var(--process-surface);
+  background-size: 76px 76px, 76px 76px, auto;
+  box-shadow:
+    0 24px 66px var(--process-shadow-color),
+    inset 0 1px 0 var(--process-border-medium);
+}
+
+.routeBoard::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: var(--process-surface);
+}
+
+.diagramConnectors {
+  position: absolute;
+  inset: clamp(24px, 2.6vw, 34px);
+  z-index: 1;
+  width: calc(100% - clamp(48px, 5.2vw, 68px));
+  height: calc(100% - clamp(48px, 5.2vw, 68px));
+  overflow: visible;
+  pointer-events: none;
+}
+
+.diagramConnectorBase,
+.diagramConnectorFill {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.diagramConnectorBase {
+  stroke: var(--process-border-strong);
+  stroke-width: 1.1;
+}
+
+.diagramConnectorFill {
+  stroke: var(--process-accent);
+  stroke-dasharray: 1;
+  stroke-dashoffset: calc(1 - var(--process-route-progress));
+  stroke-width: 1.8;
+  transition: stroke-dashoffset 120ms linear;
+}
+
+.diagramConnectorDot {
+  fill: var(--process-accent);
+  opacity: 0.56;
+}
+
+.routeTrack {
+  position: absolute;
+  top: 26px;
+  bottom: 32px;
+  left: calc(var(--process-route-node-size) / 2);
+  z-index: 0;
+  display: none;
+  width: 1px;
+  pointer-events: none;
+}
+
+.routeTrack::before,
+.routeTrackFill {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+}
+
+.routeTrack::before {
+  background: var(--process-border);
+}
+
+.routeTrackFill {
+  background: var(--process-accent);
+  opacity: 0.76;
+  transform: scaleY(var(--process-route-progress));
+  transform-origin: top center;
+  will-change: transform;
+}
+
+.routeTrackFill::after {
+  content: "";
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--process-accent);
+  box-shadow: 0 0 0 4px var(--process-border-strong);
+  transform: translate(50%, 50%);
+}
+
+.routeStep {
+  --route-step-y: 0px;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  min-width: 0;
+  width: min(31%, 340px);
+  padding-bottom: 0;
+  transform: translateY(var(--route-step-y));
+  transition:
+    transform 260ms ease,
+    opacity 260ms ease;
+}
+
+.routeStep[data-process-step-role="entry"] {
+  position: absolute;
+  top: clamp(24px, 2.5vw, 34px);
+  left: clamp(24px, 2.6vw, 34px);
+}
+
+.routeStep[data-process-step-role="analysis"] {
+  position: absolute;
+  bottom: clamp(24px, 2.6vw, 34px);
+  left: 35.5%;
+}
+
+.routeStep[data-process-step-role="central"] {
+  --route-step-y: -47%;
+  position: absolute;
+  top: 50%;
+  right: clamp(24px, 2.6vw, 34px);
+}
+
+.routeStep[data-progress-state="upcoming"] {
+  opacity: 0.82;
+}
+
+.routeStep[data-progress-state="active"] {
+  opacity: 1;
+  transform: translateY(calc(var(--route-step-y) - 2px));
+}
+
+.routeStepInner {
+  --process-card-focus: 0;
+  --process-card-sheen: 0;
+  --process-card-tilt: 0;
+  --process-card-depth-shadow-x: 0px;
+  --process-card-depth-shadow-y: 18px;
+  --process-card-depth-shadow-blur: 42px;
+  --process-card-depth-shadow-alpha: 0.18;
+  --process-card-edge-left: 0;
+  --process-card-edge-right: 0;
+  --process-card-corner-pull: 0;
+  --process-card-anchor-pressure: 0;
+  --process-card-sheen-x: -155%;
+  --process-card-sheen-y: 24%;
+  position: relative;
+  display: grid;
+  min-height: 164px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+  align-content: start;
+  overflow: hidden;
+  padding: clamp(16px, 1.55vw, 20px);
+  border: 1px solid var(--process-border);
+  border-radius: 18px;
+  background: var(--process-surface-card);
+  box-shadow:
+    0 18px 42px var(--process-shadow-color),
+    inset 0 1px 0 var(--process-border-medium);
+  transition:
+    border-color 260ms ease,
+    background 260ms ease,
+    box-shadow 260ms ease,
+    transform 260ms ease;
+}
+
+.routeStepInner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: var(--process-surface-card);
+  opacity: 0.74;
+}
+
+.routeStepInner::after {
+  content: none;
+}
+
+.routeStep[data-process-step-role="central"] .routeStepInner {
+  min-height: clamp(248px, 22vw, 292px);
+  padding: clamp(20px, 1.9vw, 24px);
+  border-color: var(--process-border-active);
+  border-radius: 22px;
+  background: var(--process-surface-card);
+  box-shadow:
+    0 30px 78px var(--process-shadow-color),
+    inset 0 1px 0 var(--process-border-medium);
+}
+
+.routeStep[data-progress-state="active"] .routeStepInner {
+  border-color: var(--process-border-active);
+  box-shadow:
+    0 22px 54px var(--process-shadow-color),
+    inset 0 1px 0 var(--process-border-medium);
+}
+
+.routeStep[data-progress-state="done"] .routeStepInner {
+  border-color: var(--process-border-strong);
+}
+
+.routeStepTop {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: var(--process-route-node-size);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+}
+
+.routeIcon {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--process-border-strong);
+  border-radius: 10px;
+  background: var(--process-surface);
+  color: var(--process-icon);
+}
+
+.routeStep[data-process-step-role="central"] .routeIcon {
+  display: inline-flex;
+  border-color: var(--process-border-active);
+  background: var(--process-surface-deep);
+  color: var(--process-icon);
+}
+
+.routeStepBody {
+  position: relative;
+  z-index: 2;
+  display: block;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.routeStep[data-process-step-role="central"] .routeStepBody {
+  padding: 0;
+}
+
+.routeStepBody h3 {
+  margin: 8px 0 0;
+  color: var(--process-text);
+  font-size: clamp(24px, 1.75vw, 29px);
+  font-weight: 780;
+  line-height: 1.06;
+}
+
+.routeStepBody > p:not(.nodeMeta) {
+  max-width: 420px;
+  margin: 9px 0 0;
+  color: var(--process-text-secondary);
+  font-size: clamp(14px, 0.95vw, 15.5px);
+  line-height: 1.54;
+}
+
+.routeOutcome {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-height: 54px;
+  align-content: center;
+  gap: 5px;
+  margin-top: clamp(14px, 1.45vw, 18px);
+  padding: 11px 14px;
+  border: 1px solid var(--process-border);
+  border-radius: 13px;
+  background: var(--process-surface);
+  box-shadow: inset 0 1px 0 var(--process-border-medium);
+}
+
+.routeOutcome::before {
+  content: none;
+}
+
+.routeStep[data-process-step-role="central"] .routeOutcome {
+  border-color: var(--process-border-active);
+  background: var(--process-surface);
+}
+
+.routeOutcome span {
+  color: var(--process-accent);
+  font-size: 10px;
+  font-weight: 780;
+  letter-spacing: 0.15em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.routeOutcome strong {
+  color: var(--process-text);
+  font-size: 15px;
+  font-weight: 760;
+  line-height: 1.35;
+}
+
+.mobileFlow {
+  --process-flow-gap: clamp(18px, 2vw, 26px);
+  --process-route-node-size: 42px;
+  --process-route-y: 21px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--process-flow-gap);
+  align-items: stretch;
+  isolation: isolate;
+}
+
+.mobileFlow::before {
+  content: none;
+}
+
+.mobileProgress {
+  display: none;
+}
+
+.mobileStep {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 16px;
+  justify-items: stretch;
+}
+
+.mobileStep::before,
+.mobileStep::after {
+  content: none;
+}
+
+.routeNode {
+  position: relative;
+  z-index: 3;
+  display: inline-flex;
+  width: var(--process-route-node-size);
+  height: var(--process-route-node-size);
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--process-border-strong);
+  border-radius: 999px;
+  background: var(--process-surface);
+  color: var(--process-accent);
+  font-size: 11.5px;
+  font-weight: 780;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  box-shadow:
+    0 0 0 4px var(--process-surface-deep),
+    0 10px 22px var(--process-shadow-color),
+    inset 0 1px 0 var(--process-border-medium);
+}
+
+.routeNode[data-progress-state="active"],
+.routeNode[aria-current="step"] {
+  border-color: var(--process-border-active);
+  color: var(--process-text);
+  background: var(--process-surface-deep);
+  box-shadow:
+    0 0 0 4px var(--process-surface-deep),
+    inset 0 1px 0 var(--process-border-medium);
+}
+
+.routeNode[data-progress-state="done"] {
+  border-color: var(--process-border-strong);
+  color: var(--process-accent);
+}
+
+.mobileCard {
+  --process-card-focus: 0;
+  --process-card-sheen: 0;
+  --process-card-sheen-x: -120%;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  padding: clamp(22px, 6vw, 30px);
+  border: 1px solid var(--process-border);
+  border-radius: 22px;
+  background: var(--surface-card-dark);
+  box-shadow:
+    0 18px 46px var(--process-shadow-color),
+    inset 0 1px 0 var(--process-border-medium);
+  opacity: 1;
+  transform-origin: 50% 50%;
+  visibility: visible;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.mobileCard[data-process-step-role="central"] {
+  border-color: var(--process-border-active);
+  background: var(--surface-card-dark);
+  box-shadow:
+    0 34px 86px var(--process-shadow-color),
+    inset 0 1px 0 var(--process-border-medium);
+}
+
+.mobileCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: var(--surface-card-dark);
+  opacity: calc(0.46 + var(--process-card-focus) * 0.2);
+}
+
+.mobileCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: var(--surface-card-dark);
+  mix-blend-mode: screen;
+  opacity: calc(var(--process-card-sheen) * 0.58);
+  transform: translateX(var(--process-card-sheen-x));
+}
+
+.mobileCard > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mobileCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 14px;
+}
+
+.mobileCard h3 {
+  margin: 12px 0 0;
+  color: var(--process-text);
+  font-size: clamp(30px, 8.4vw, 42px);
+  font-weight: 780;
+  line-height: 1.08;
+  text-shadow: none;
+}
+
+.mobileCard > p:not(.nodeMeta) {
+  margin: 16px 0 0;
+  color: var(--process-text-secondary);
+  font-size: 15.5px;
+  line-height: 1.66;
+}
+
+.mobileCard > .artifactResult {
+  margin-top: clamp(15px, 1.8vw, 20px);
+}
+
+.mobileCard[data-process-step-role="central"] > .artifactResult {
+  border-color: var(--process-border-active);
+  background: var(--surface-card-dark);
+}
+
+.mobileCard[data-process-step-role="central"] .artifactResult strong {
+  color: var(--process-text);
+}
+
+.processCtaButton {
+  --process-cta-gap: 14px;
+  --process-cta-icon: 48px;
+  --process-cta-left: 5px;
+  position: relative;
+  min-height: 58px !important;
+  min-width: 0 !important;
+  gap: 0;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 28px 0
+    calc(var(--process-cta-left) + var(--process-cta-icon) + var(--process-cta-gap)) !important;
+  border: 1px solid var(--cta-primary-border) !important;
+  border-radius: 999px !important;
+  background: var(--cta-primary-bg) !important;
+  box-shadow: inset 0 1px 0 var(--border-on-light-subtle) !important;
+  color: var(--cta-primary-text) !important;
+  font-size: 15px !important;
+  font-weight: 850 !important;
+  line-height: 1 !important;
+  white-space: nowrap;
+  text-shadow: none;
+}
+
+.processCtaButton:hover,
+.processCtaButton:focus-visible {
+  border-color: var(--cta-primary-border) !important;
+  background: var(--cta-primary-bg-hover) !important;
+  box-shadow: inset 0 1px 0 var(--border-on-light-medium) !important;
+  color: var(--cta-primary-text) !important;
+  transform: translateY(-1px) !important;
+}
+
+.processCtaButton:focus-visible {
+  outline: 2px solid var(--process-focus-ring);
+  outline-offset: 3px;
+}
+
+.processCtaButton::after {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+.processCtaButton > span:first-child {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.processCtaButton > span:last-child {
+  position: absolute;
+  left: var(--process-cta-left);
+  top: 50%;
+  z-index: 1;
+  display: inline-flex;
+  width: var(--process-cta-icon);
+  height: var(--process-cta-icon);
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--border-on-light-subtle);
+  border-radius: 999px;
+  background: var(--cta-primary-bg);
+  box-shadow: inset 0 1px 0 var(--border-on-light-subtle);
+  color: var(--cta-primary-text);
+  transform: translateY(-50%) !important;
+}
+
+.processCtaButton:hover > span:last-child,
+.processCtaButton:focus-visible > span:last-child {
+  animation: none !important;
+  transform: translateY(-50%) !important;
+}
+
+.processCtaIcon {
+  display: block;
+  width: 23px;
+  height: 23px;
+  color: currentColor;
+  stroke-width: 2;
+  transform: rotate(var(--process-plane-rotation, 0deg));
+  transform-origin: 50% 50%;
+  transition: transform 0.18s cubic-bezier(0.2, 0.78, 0.28, 1);
+  will-change: transform, opacity;
+}
+
+.processCtaButton:hover .processCtaIcon,
+.processCtaButton:focus-visible .processCtaIcon {
+  animation: processCtaPlaneHover 0.72s cubic-bezier(0.2, 0.76, 0.22, 1) both;
+}
+
+@keyframes processCtaPlaneHover {
+  0%,
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0)
+      rotate(var(--process-plane-rotation, 0deg)) scale(1);
+  }
+
+  34% {
+    opacity: 0;
+    transform: translate3d(12px, -11px, 0) rotate(-12deg) scale(0.84);
+  }
+
+  35% {
+    opacity: 0;
+    transform: translate3d(-12px, 11px, 0) rotate(-12deg) scale(0.84);
+  }
+
+  76% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0)
+      rotate(var(--process-plane-rotation, 0deg)) scale(1);
+  }
+}
+
+.processPlaneProjectile {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: var(--cta-projectile-layer);
+  display: block;
+  width: 23px;
+  height: 23px;
+  color: var(--process-accent);
+  pointer-events: none;
+  filter: none;
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
+}
+
+.processPlaneShard {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2147483646;
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--process-accent);
+  box-shadow: none;
+  pointer-events: none;
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
+}
+
+.processFooterActions {
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  margin-top: clamp(8px, 1.1vw, 18px);
+}
+
+.processCtaBlock {
+  position: relative;
+  display: grid;
+  width: min(100%, 880px);
+  gap: 0;
+  justify-items: center;
+  padding: 0;
+  color: var(--process-text);
+  text-align: center;
+  will-change: filter, opacity, transform;
+}
+
+.processCtaBlock > * {
+  will-change: filter, opacity, transform;
+}
+
+.processCtaEyebrow {
+  margin: 0;
+  color: var(--process-accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.processCtaBlock h3 {
+  max-width: 840px;
+  margin: 14px 0 0;
+  background: none;
+  background-clip: border-box;
+  color: var(--process-accent);
+  font-size: clamp(34px, 3.35vw, 58px);
+  font-weight: 820;
+  letter-spacing: 0;
+  line-height: 1.08;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: currentColor;
+}
+
+.processCtaBody {
+  max-width: 620px;
+  margin: 20px auto 0;
+  color: var(--process-text-secondary);
+  font-size: clamp(15.5px, 1.02vw, 17.5px);
+  line-height: 1.68;
+}
+
+.processCtaAction {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(26px, 2.6vw, 34px);
+}
+
+.processCtaBlock .processCtaButton {
+  min-height: 58px !important;
+}
+
+.mobileArtifactPanel {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--process-border);
+}
+
+.mobileArtifactPanel h4 {
+  margin: 10px 0 0;
+  color: var(--process-text);
+  font-size: 23px;
+  font-weight: 720;
+  line-height: 1.15;
+}
+
+.mobileArtifactPanel .artifactList {
+  margin-top: 20px;
+  padding: 0;
+}
+
+.mobileArtifactPanel .artifactFooter {
+  margin: 22px 0 0;
+}
+
+@media (min-width: 921px) {
+  .processTimeline {
+    --process-sticky-top: clamp(94px, 10svh, 116px);
+    display: grid;
+    min-height: clamp(3200px, 500svh, 5600px);
+    align-items: start;
+    padding: 0;
+  }
+
+  .inner {
+    position: sticky;
+    top: var(--process-sticky-top);
+    display: grid;
+    min-height: calc(
+      100svh - var(--process-sticky-top) - clamp(18px, 3svh, 36px)
+    );
+    align-content: center;
+    justify-items: center;
+    gap: 0;
+    padding-block: 0;
+    will-change: transform;
+  }
+
+  .header {
+    position: absolute;
+    top: 50%;
+    inset-inline: 0;
+    z-index: 3;
+    pointer-events: none;
+    will-change: transform;
+  }
+
+  .header [data-process-heading-part] {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .diagramArea {
+    z-index: 2;
+    display: grid;
+    width: 100%;
+    align-self: center;
+    justify-items: center;
+    will-change: transform;
+  }
+
+  .focusStage {
+    display: none;
+  }
+
+  .routeBoard {
+    --process-route-node-size: 42px;
+    display: grid;
+    width: min(100%, 1240px);
+    height: auto;
+    min-height: auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(36px, 4vw, 58px);
+    justify-self: center;
+    margin-inline: auto;
+    overflow: visible;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    perspective: 1100px;
+    perspective-origin: 50% 42%;
+  }
+
+  .routeBoard::before {
+    content: none;
+  }
+
+  .diagramConnectors,
+  .routeTrack {
+    display: none;
+  }
+
+  .routeStep,
+  .routeStep[data-process-step-role="entry"],
+  .routeStep[data-process-step-role="analysis"],
+  .routeStep[data-process-step-role="central"] {
+    --route-step-y: 0px;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    display: grid;
+    width: auto;
+    min-width: 0;
+    padding-bottom: 0;
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: filter, opacity, transform;
+  }
+
+  .routeStep[data-progress-state="active"] {
+    transform: none;
+  }
+
+  .routeStepInner,
+  .routeStep[data-process-step-role="central"] .routeStepInner {
+    display: grid;
+    height: 100%;
+    min-height: clamp(328px, 28vw, 390px);
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 22px;
+    align-content: stretch;
+    overflow: hidden;
+    padding: clamp(26px, 2.4vw, 34px);
+    border: 1px solid var(--process-border);
+    border-radius: 20px;
+    background: var(--process-surface-card);
+    box-shadow:
+      var(--process-card-depth-shadow-x) var(--process-card-depth-shadow-y)
+        var(--process-card-depth-shadow-blur)
+        var(--process-shadow-color),
+      inset 0 1px 0 var(--process-border-medium);
+    transition:
+      border-color 260ms ease,
+      background 260ms ease,
+      box-shadow 260ms ease;
+    transform: translateZ(0);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+
+  .routeStepInner::before {
+    background: var(--process-surface-card);
+    opacity: calc(0.72 + var(--process-card-tilt) * 0.24);
+  }
+
+  .routeStepInner::after {
+    content: "";
+    position: absolute;
+    inset: -44% -70%;
+    z-index: 1;
+    pointer-events: none;
+    background: var(--process-surface-card-hover);
+    filter: blur(12px) saturate(0.78);
+    mix-blend-mode: screen;
+    opacity: calc(var(--process-card-sheen) * 0.72);
+    transform: translate3d(
+        var(--process-card-sheen-x),
+        var(--process-card-sheen-y),
+        0
+      )
+      rotate(10deg);
+    will-change: opacity, transform;
+  }
+
+  .routeStepInner > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .routeStep[data-process-step-role="central"] .routeStepInner {
+    border-color: var(--process-border-strong);
+    background: var(--process-surface-card);
+    box-shadow:
+      0 22px 52px var(--process-shadow-color),
+      inset 0 1px 0 var(--process-border-medium);
+  }
+
+  .routeStep[data-progress-state="active"] .routeStepInner {
+    border-color: var(--process-border-active);
+    box-shadow:
+      0 22px 52px var(--process-shadow-color),
+      inset 0 1px 0 var(--process-border-medium);
+  }
+
+  .routeStep[data-progress-state="upcoming"] {
+    opacity: 1;
+  }
+
+  .routeStepTop {
+    min-height: calc(var(--process-route-node-size) + 8px);
+  }
+
+  .routeIcon {
+    width: 31px;
+    height: 31px;
+  }
+
+  .routeStepBody {
+    display: grid;
+    min-height: 0;
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    align-content: stretch;
+  }
+
+  .routeStepBody h3 {
+    margin-top: 12px;
+    font-size: clamp(24px, 1.65vw, 29px);
+    line-height: 1.14;
+  }
+
+  .routeStepBody > p:not(.nodeMeta) {
+    margin-top: 14px;
+    font-size: clamp(13.5px, 0.9vw, 15px);
+    line-height: 1.62;
+  }
+
+  .routeOutcome {
+    align-self: end;
+    min-height: 58px;
+    margin-top: clamp(22px, 2.2vw, 32px);
+    padding: 13px 15px;
+    border-radius: 14px;
+  }
+
+  .routeOutcome strong {
+    font-size: 14.5px;
+  }
+
+  .processFooterActions {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    display: grid;
+    width: 100%;
+    place-items: center;
+    margin: 0;
+    pointer-events: none;
+  }
+
+  .processCtaBlock {
+    grid-column: auto;
+    justify-self: center;
+    width: min(100%, 880px);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .mobileFlow {
+    --process-flow-gap: clamp(24px, 2.1vw, 42px);
+    --process-route-node-size: 44px;
+    --process-route-y: 22px;
+    width: min(100%, 1088px);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--process-flow-gap);
+    align-items: center;
+  }
+
+  .mobileFlow::before {
+    content: "";
+    position: absolute;
+    top: var(--process-route-y);
+    right: calc((100% / 6) - (var(--process-route-node-size) / 2));
+    left: calc((100% / 6) - (var(--process-route-node-size) / 2));
+    z-index: 0;
+    display: block;
+    height: 1px;
+    background: var(--process-border);
+  }
+
+  .mobileStep[data-process-step-role="entry"] {
+    margin-top: 14px;
+  }
+
+  .mobileStep[data-process-step-role="central"] {
+    margin-top: -16px;
+  }
+
+  .mobileStep:not(:last-child)::after {
+    content: none;
+  }
+
+  .mobileStep:not(:last-child)::before {
+    content: none;
+  }
+
+  .routeNode {
+    justify-self: start;
+    margin: 0;
+  }
+
+  .mobileCard {
+    z-index: 1;
+    min-height: clamp(270px, 27svh, 326px);
+    padding: clamp(20px, 1.8vw, 26px);
+    border-radius: 24px;
+  }
+
+  .mobileCard[data-process-step-role="central"] {
+    min-height: clamp(304px, 31svh, 364px);
+  }
+
+  .mobileCardTop {
+    margin-bottom: 16px;
+  }
+
+  .mobileIcon {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+  }
+
+  .mobileCard h3 {
+    margin-top: 10px;
+    font-size: clamp(24px, 1.9vw, 30px);
+  }
+
+  .mobileCard > p:not(.nodeMeta) {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.44;
+  }
+
+  .mobileCard .decisionMapStack {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 9px;
+    margin-top: 17px;
+  }
+
+  .mobileCard .decisionMapItem {
+    min-height: auto;
+    gap: 5px;
+    padding: 0 0 0 14px;
+  }
+
+  .mobileCard .decisionMapItem strong {
+    font-size: 13.5px;
+    line-height: 1.38;
+  }
+
+  .mobileArtifactPanel {
+    margin-top: 18px;
+    padding-top: 16px;
+  }
+
+  .mobileArtifactPanel h4 {
+    margin-top: 8px;
+    font-size: 18px;
+  }
+
+  .mobileArtifactPanel > p:not(.artifactLabel) {
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+
+  .mobileArtifactPanel .artifactList {
+    display: none;
+  }
+
+  .mobileArtifactPanel .artifactFooter {
+    margin-top: 14px;
+  }
+
+  .artifactResult {
+    min-height: auto;
+    padding: 10px 14px;
+  }
+
+  .mobileCard[data-process-step-role="central"] .artifactResult strong {
+    font-size: 15.5px;
+    line-height: 1.35;
+  }
+
+}
+
+@media (min-width: 1580px) {
+  .focusShell,
+  .mobileFlow {
+    width: min(100%, calc(100vw - 420px), 1480px);
+  }
+
+  .focusShell {
+    width: min(100%, 1180px);
+  }
+
+  .mobileFlow {
+    --process-flow-gap: clamp(24px, 2vw, 36px);
+    gap: var(--process-flow-gap);
+  }
+}
+
+@media (max-width: 1120px) {
+  .focusShell {
+    grid-template-columns: minmax(0, 1fr);
+    width: min(100%, 920px);
+  }
+}
+
+@media (min-width: 921px) and (max-height: 820px) {
+  .processTimeline {
+    --process-sticky-top: clamp(82px, 11svh, 96px);
+    min-height: clamp(3000px, 500svh, 5000px);
+    padding: 0;
+  }
+
+  .inner {
+    min-height: calc(
+      100svh - var(--process-sticky-top) - clamp(10px, 2svh, 20px)
+    );
+    gap: clamp(14px, 2svh, 22px);
+    padding-block: clamp(10px, 2svh, 18px);
+  }
+
+  .headline h2 {
+    font-size: clamp(28px, 2.7vw, 38px);
+  }
+
+  .headline p {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.46;
+  }
+
+  .diagramArea,
+  .focusStage {
+    min-height: min(560px, calc(100svh - 72px));
+  }
+
+  .focusShell {
+    min-height: min(500px, calc(100svh - 96px));
+    align-items: center;
+  }
+
+  .decisionBoard {
+    min-height: min(500px, calc(100svh - 96px));
+    padding: clamp(22px, 2.6vw, 32px);
+  }
+
+  .focusCopyStack {
+    min-height: min(365px, 48svh);
+  }
+
+  .focusMetaRow {
+    padding-bottom: 11px;
+  }
+
+  .focusCount {
+    min-width: 82px;
+    min-height: 32px;
+    font-size: 12px;
+  }
+
+  .focusCopyPanel h3 {
+    margin-top: 16px;
+    font-size: clamp(30px, 2.7vw, 40px);
+  }
+
+  .focusDescription {
+    margin-top: 13px;
+    font-size: clamp(15px, 0.95vw, 16px);
+    line-height: 1.48;
+  }
+
+  .decisionMapItem {
+    min-height: 88px;
+    padding: 0 13px 0 16px;
+  }
+
+  .compactStepNav {
+    margin-top: 18px;
+  }
+
+  .compactStep,
+  .mobileProgressItem {
+    width: 28px;
+    height: 28px;
+    font-size: 10px;
+  }
+
+  .artifactCard {
+    top: 0;
+    min-height: min(480px, calc(100svh - 96px));
+  }
+
+  .artifactTopline {
+    min-height: 52px;
+  }
+
+  .artifactCopy {
+    padding-top: 18px;
+  }
+
+  .artifactCopy h3 {
+    font-size: clamp(26px, 2.35vw, 34px);
+  }
+
+  .artifactList {
+    margin-top: 16px;
+  }
+
+  .artifactList li {
+    padding: 9px 0;
+  }
+
+  .artifactMarker {
+    height: 18px;
+  }
+
+  .artifactList small {
+    margin-top: 3px;
+    line-height: 1.34;
+  }
+
+  .artifactFooter {
+    gap: 11px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+  }
+
+  .artifactResult {
+    min-height: 56px;
+    padding-block: 10px;
+  }
+
+  .processFooterActions {
+    margin-top: clamp(14px, 1.8svh, 22px);
+  }
+
+  .processCtaBlock h3 {
+    margin-top: 9px;
+    font-size: clamp(28px, 3vw, 42px);
+  }
+
+  .processCtaBody {
+    margin-top: 9px;
+    font-size: 14.5px;
+    line-height: 1.45;
+  }
+
+  .processCtaAction {
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 921px) and (max-height: 760px) {
+  .focusShell {
+    min-height: min(455px, calc(100svh - 86px));
+    column-gap: 22px;
+  }
+
+  .decisionBoard {
+    min-height: min(455px, calc(100svh - 82px));
+  }
+
+  .focusCopyStack {
+    min-height: min(335px, 46svh);
+  }
+
+  .focusCopyPanel h3 {
+    font-size: clamp(28px, 2.45vw, 36px);
+  }
+
+  .decisionMapStack {
+    gap: 9px;
+  }
+
+  .decisionMapItem {
+    min-height: 78px;
+    padding: 0 12px 0 15px;
+  }
+
+  .artifactCard {
+    top: 0;
+    min-height: min(458px, calc(100svh - 94px));
+  }
+
+  .artifactTopline {
+    min-height: 48px;
+  }
+
+  .artifactCopy {
+    padding-top: 16px;
+  }
+
+  .artifactCopy h3 {
+    font-size: clamp(25px, 2.15vw, 31px);
+  }
+
+  .artifactList {
+    margin-top: 13px;
+  }
+
+  .artifactList li {
+    padding: 7px 0;
+  }
+
+  .artifactList strong {
+    font-size: 14px;
+  }
+
+  .artifactList small {
+    font-size: 12.5px;
+  }
+
+  .artifactFooter {
+    gap: 9px;
+    margin-top: 13px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 920px) {
+  .processTimeline {
+    padding: clamp(92px, 22vw, 112px) 0 clamp(54px, 11vw, 78px);
+  }
+
+  .inner {
+    min-height: auto;
+    gap: 32px;
+  }
+
+  .headline {
+    align-items: center;
+    text-align: center;
+  }
+
+  .header {
+    display: block;
+  }
+
+  .header::after {
+    content: none;
+  }
+
+  .headline h2 {
+    font-size: clamp(29px, 7.8vw, 40px);
+  }
+
+  .headline p {
+    max-width: 620px;
+    font-size: 15.5px;
+  }
+
+  .diagramArea {
+    min-height: auto;
+  }
+
+  .focusStage {
+    display: none;
+  }
+
+  .mobileFlow {
+    --process-route-node-size: 40px;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    justify-items: center;
+    padding-left: 0;
+  }
+
+  .mobileStep[data-process-step-role="entry"],
+  .mobileStep[data-process-step-role="central"] {
+    margin-top: 0;
+  }
+
+  .mobileFlow::before {
+    content: none;
+  }
+
+  .mobileProgress {
+    display: none;
+  }
+
+  .mobileProgressItem {
+    width: 40px;
+    height: 34px;
+    transform: none;
+  }
+
+  .mobileProgressItem[data-progress-state="active"] {
+    transform: none;
+  }
+
+  .mobileCard {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+
+  .mobileStep {
+    width: min(100%, 520px);
+    grid-template-columns: var(--process-route-node-size) minmax(0, 1fr);
+    gap: 14px;
+    align-items: start;
+  }
+
+  .mobileStep:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 52px;
+    bottom: -50px;
+    left: calc(var(--process-route-node-size) / 2);
+    z-index: 0;
+    width: 1px;
+    background: var(--process-border);
+  }
+
+  .routeNode {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    margin-top: 8px;
+  }
+
+  .mobileCard {
+    grid-column: 2;
+    min-width: 0;
+  }
+
+  .routeBoard {
+    width: min(100%, 620px);
+    height: auto;
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    overflow: visible;
+    padding: 4px 0 2px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .routeBoard::before {
+    content: none;
+  }
+
+  .diagramConnectors {
+    display: none;
+  }
+
+  .routeTrack {
+    top: calc(4px + (var(--process-route-node-size) / 2));
+    right: auto;
+    bottom: 8px;
+    left: calc(var(--process-route-node-size) / 2);
+    z-index: 0;
+    display: block;
+    width: 1px;
+    height: auto;
+  }
+
+  .routeTrack::before {
+    background: var(--process-border);
+  }
+
+  .routeTrackFill {
+    background: var(--process-accent);
+    transform: scaleY(var(--process-route-progress));
+    transform-origin: top center;
+  }
+
+  .routeTrackFill::after {
+    top: auto;
+    right: 50%;
+    bottom: 0;
+    transform: translate(50%, 50%);
+  }
+
+  .routeStep {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    --route-step-y: 0px;
+    grid-column: 1;
+    grid-row: auto;
+    padding-bottom: 22px;
+    opacity: 1;
+    transform: none;
+  }
+
+  .routeStep[data-process-step-role="entry"],
+  .routeStep[data-process-step-role="analysis"],
+  .routeStep[data-process-step-role="central"] {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    grid-column: 1;
+    grid-row: auto;
+    align-self: auto;
+  }
+
+  .routeStep:last-child {
+    padding-bottom: 0;
+  }
+
+  .routeStep:not(:last-child)::after {
+    content: none;
+  }
+
+  .routeStepInner {
+    min-height: auto;
+    grid-template-columns: var(--process-route-node-size) minmax(0, 1fr);
+    gap: 14px;
+    overflow: visible;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .routeStepInner::before {
+    content: none;
+  }
+
+  .routeStep[data-process-step-role="central"] .routeStepInner {
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .routeStepTop {
+    grid-column: 1;
+    grid-row: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+    margin: 0;
+  }
+
+  .routeNode {
+    margin: 0;
+  }
+
+  .routeIcon {
+    display: none;
+    width: 32px;
+    height: 32px;
+  }
+
+  .routeStep[data-process-step-role="central"] .routeIcon {
+    display: none;
+  }
+
+  .routeStepBody {
+    grid-column: 2;
+    display: block;
+    min-width: 0;
+    padding: 16px 16px 17px;
+    border: 1px solid var(--process-border);
+    border-radius: 18px;
+    background: var(--process-surface-card);
+    box-shadow:
+      0 18px 42px var(--process-shadow-color),
+      inset 0 1px 0 var(--process-border-medium);
+  }
+
+  .routeStep[data-process-step-role="central"] .routeStepBody {
+    border-color: var(--process-border-active);
+    background: var(--process-surface-card);
+    box-shadow:
+      0 26px 62px var(--process-shadow-color),
+      inset 0 1px 0 var(--process-border-medium);
+  }
+
+  .routeOutcome {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .routeOutcome::before {
+    content: none;
+  }
+
+  .routeStepBody h3 {
+    font-size: clamp(26px, 7.2vw, 34px);
+  }
+
+  .routeStepBody > p:not(.nodeMeta) {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .processFooterActions {
+    width: min(100%, 620px);
+    margin: 8px auto 0;
+  }
+
+  .processCtaBlock {
+    width: 100%;
+    text-align: center;
+  }
+
+  .processCtaBlock h3 {
+    max-width: none;
+    font-size: clamp(29px, 7.8vw, 40px);
+  }
+
+  .processCtaBody {
+    max-width: 620px;
+    font-size: 15.5px;
+  }
+
+  .processCtaAction {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .processCtaButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mobileCard .decisionMapStack {
+    grid-template-columns: 1fr;
+    margin-top: 18px;
+  }
+
+  .mobileCard .decisionMapItem {
+    min-height: auto;
+    padding: 11px 12px;
+  }
+
+  .outcomeStrip {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .outcomeStrip p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 520px) {
+  .processTimeline::before {
+    background-size: 72px 72px;
+  }
+
+  .artifactList li {
+    grid-template-columns: 14px minmax(0, 1fr);
+    gap: 12px;
+    padding: 15px 0;
+  }
+
+  .artifactResult {
+    min-height: auto;
+    padding: 14px 15px;
+  }
+
+  .artifactResult strong {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .artifactCard,
+  .focusCopyPanel,
+  .mobileCard {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) and (min-width: 921px) {
+  .diagramArea {
+    min-height: auto;
+  }
+
+  .focusStage {
+    display: none;
+  }
+
+  .mobileFlow {
+    display: grid;
+    width: min(100%, 1088px);
+    margin: 0 auto;
+  }
+
+  .mobileProgress {
+    display: none;
+  }
+}

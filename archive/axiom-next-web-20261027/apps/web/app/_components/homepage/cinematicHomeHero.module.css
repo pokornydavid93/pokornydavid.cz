@@ -1,0 +1,1281 @@
+.integratedHeader.integratedHeader {
+  --container-wide: var(--container-page-cinematic-max);
+  --nav-text-light: var(--editorial-profile-nav-text);
+  --nav-text-light-active: var(--text-on-light-primary);
+
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: var(--layer-navigation);
+  inline-size: 100%;
+}
+
+/* A light chapter can still be crossing a dark scene during a radial handoff.
+   Give the whole navigation one calm paper plane so its dark ink never relies
+   on the luminance of the moving layer underneath. */
+.integratedHeader.integratedHeader[data-nav-theme="light"] {
+  --nav-link-text: color-mix(
+    in srgb,
+    var(--text-on-light-primary) 78%,
+    var(--brand-forest)
+  );
+  --nav-link-hover: var(--brand-forest);
+  --nav-link-active: var(--text-on-light-primary);
+  --nav-active-indicator: var(--brand-forest);
+  --nav-brand-mark: var(--brand-forest);
+  --nav-cta-icon: var(--brand-lime);
+  --site-header-material-bg: rgba(var(--brand-ivory-rgb), 0.92);
+  --site-header-material-image: none;
+  --site-header-material-edge: 1px solid
+    rgba(var(--brand-forest-rgb), 0.1);
+  --site-header-material-filter:
+    blur(var(--site-header-backdrop-blur)) saturate(0.82);
+  --site-header-shadow:
+    inset 0 -1px 0 rgba(var(--brand-forest-rgb), 0.05),
+    0 14px 30px -26px rgba(var(--brand-jet-rgb), 0.24);
+  --text-primary: var(--text-on-light-primary);
+  --text-muted: var(--editorial-profile-muted);
+}
+
+:global(body:has(:target:is(
+      [data-nav-theme="light"],
+      [data-nav-section="light"],
+      [data-surface-tone="light"]
+    )))
+  .integratedHeader.integratedHeader:not([data-navigation-owner="hero"]):not([data-nav-theme-ready]):not([data-nav-theme-bootstrap]),
+:global(body:has(
+      :is(
+          [data-nav-theme="light"],
+          [data-nav-section="light"],
+          [data-surface-tone="light"]
+        )
+        :target
+    ))
+  .integratedHeader.integratedHeader:not([data-navigation-owner="hero"]):not([data-nav-theme-ready]):not([data-nav-theme-bootstrap]) {
+  --site-header-material-bg: rgba(var(--brand-ivory-rgb), 0.92);
+  --site-header-material-image: none;
+  --site-header-material-edge: 1px solid
+    rgba(var(--brand-forest-rgb), 0.1);
+  --site-header-material-filter:
+    blur(var(--site-header-backdrop-blur)) saturate(0.82);
+  --site-header-shadow:
+    inset 0 -1px 0 rgba(var(--brand-forest-rgb), 0.05),
+    0 14px 30px -26px rgba(var(--brand-jet-rgb), 0.24);
+}
+
+.integratedHeader.integratedHeader[data-nav-theme="dark"][data-nav-material="default"] {
+  --site-header-material-bg: rgba(var(--brand-jet-rgb), 0.9);
+  --site-header-material-image: none;
+  --site-header-material-edge: 1px solid
+    rgba(var(--brand-ivory-rgb), 0.08);
+  --site-header-material-filter:
+    blur(var(--site-header-backdrop-blur)) saturate(0.9);
+  --site-header-shadow:
+    inset 0 -1px 0 rgba(var(--brand-ivory-rgb), 0.035),
+    0 14px 30px -26px rgba(var(--brand-jet-rgb), 0.42);
+}
+
+.heroHeader.heroHeader [data-header-motion-inner] > a {
+  min-block-size: var(--control-touch-target-min);
+}
+
+/* The entrance offset composes with HeaderScrollMotion's transform. */
+.heroHeader[data-hero-nav-entering="true"] [data-header-motion-inner] {
+  translate: 0 var(--hero-nav-reveal-y, -18px);
+}
+
+.heroHeader[data-hero-nav-entering="true"] [data-header-motion-inner] :is(a, button) {
+  pointer-events: none;
+}
+
+@media (max-width: 720px) {
+  .heroHeader.heroHeader [data-header-motion-inner] > a {
+    min-inline-size: var(--control-touch-target-min);
+    margin-inline-start: calc(var(--space-6) * -1);
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroHeader.heroHeader
+    [data-analytics-placement="header"][data-cta-composition="docked"],
+  .heroHeader.heroHeader
+    [data-analytics-placement="header"][data-cta-composition="docked"]
+    > [data-cta-icon-shell] {
+    transition: none;
+  }
+
+  .heroHeader.heroHeader
+    [data-analytics-placement="header"][data-cta-composition="docked"]:is(:hover, :active) {
+    transform: none;
+  }
+}
+
+.hero.hero {
+  --hero-stage: #04130c;
+  --hero-ivory: #f3f0e6;
+  --hero-ivory-muted: rgb(243 240 230 / 74%);
+  --hero-lime-calm: color-mix(
+    in srgb,
+    var(--brand-lime) 82%,
+    var(--brand-forest)
+  );
+  --hero-copy-max: 64rem;
+  --hero-copy-lower: 0px;
+  --hero-copy-shift-y: clamp(-7rem, -10vh, -5rem);
+  --hero-heading-size: clamp(3.875rem, 4.9vw, 5.25rem);
+  --hero-lead-measure: 37rem;
+  position: relative;
+  min-block-size: 100svh;
+  overflow: clip;
+  isolation: isolate;
+  color: var(--hero-ivory);
+  /* This is the SSR-owned first-paint material, not merely a fallback inside
+     the client-only WebGL component. Keeping it on the section itself also
+     makes the dark hero win deterministically over Surface's page background,
+     regardless of the order in which split CSS chunks arrive on a reload. */
+  background:
+    var(--hero-stage)
+    url("/hero-silk-home-frame-zero.avif") center / 100% 100% no-repeat;
+  border-block-end: var(--border-width-hairline) solid
+    color-mix(in srgb, var(--brand-lime) 10%, var(--border-subtle));
+}
+
+.hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgb(20 42 24 / 40%) 0%,
+    rgb(16 34 20 / 26%) 34%,
+    rgb(11 20 13 / 10%) 58%,
+    transparent 74%
+  );
+}
+
+.hero,
+.hero * {
+  pointer-events: none;
+}
+
+.hero :is(a, button) {
+  pointer-events: auto;
+}
+
+.heroSilkHost {
+  --hero-silk-left: 0%;
+  --hero-silk-width: 100%;
+
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: var(--hero-silk-left);
+  z-index: 1;
+  inline-size: var(--hero-silk-width);
+  overflow: visible;
+  pointer-events: none;
+  filter: none;
+  transform: none;
+  mask-image: linear-gradient(180deg, black 0%, black 100%);
+}
+
+/* The shared funnel silk fades its own horizontal edges. In the homepage hero
+   the canvas is a full-bleed material, so that child mask would expose a hard
+   vertical strip along the viewport edge. Keep the override route-scoped. */
+.heroSilkHost > [data-silk-backdrop] {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+/* Keep the homepage's quieter first frame in the static and reduced-motion
+   fallback without changing Silk posters on the other public routes. */
+.heroSilkHost [data-silk-static] {
+  background-image: url("/hero-silk-home-frame-zero.avif");
+}
+
+/* The room switches atomically between its DOM fallback and this same canvas,
+   including after a restored context. A canvas fade would expose a gap. */
+.hero[data-hero-portrait-variant="scene"] .heroSilkHost canvas {
+  transition: none;
+}
+
+.frame {
+  position: relative;
+  inline-size: min(
+    calc(100% - (var(--page-gutter) * 2)),
+    var(--container-page-cinematic-max)
+  );
+  min-block-size: 100svh;
+  margin-inline: auto;
+}
+
+.composition {
+  position: relative;
+  min-block-size: 100svh;
+  padding-block-end: var(--space-24);
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: var(--site-header-min-block) minmax(0, 1fr);
+  column-gap: var(--space-24);
+}
+
+.copy {
+  position: relative;
+  z-index: 3;
+  isolation: isolate;
+  inline-size: min(100%, var(--hero-copy-max));
+  min-inline-size: 0;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  align-self: center;
+  padding-block: var(--space-24) var(--space-40);
+  display: grid;
+  justify-items: start;
+  gap: 0;
+  transform: translateY(
+    calc(var(--hero-copy-shift-y) + var(--hero-copy-lower))
+  );
+}
+
+.copy::before {
+  position: absolute;
+  inset: -3.5rem -5rem -3rem -3rem;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  opacity: 0.88;
+  background: radial-gradient(
+    ellipse 78% 72% at 28% 46%,
+    rgb(4 19 12 / 58%) 0%,
+    rgb(4 19 12 / 34%) 48%,
+    transparent 78%
+  );
+  filter: blur(18px);
+}
+
+.headline {
+  inline-size: 100%;
+  max-inline-size: none;
+  margin: 0;
+  display: grid;
+  color: var(--hero-ivory);
+  font-size: var(--hero-heading-size);
+  font-weight: 850;
+  line-height: 0.95;
+  letter-spacing: -0.052em;
+  text-wrap: balance;
+}
+
+.headlineMask {
+  display: block;
+  overflow: clip;
+  overflow-clip-margin: 0.22em;
+  white-space: nowrap;
+}
+
+.headlineLine {
+  display: block;
+}
+
+.headlineMask[data-hero-heading-line="secondary"] {
+  color: rgb(243 240 230 / 84%);
+}
+
+.headlineEmphasis {
+  color: var(--hero-lime-calm);
+  text-shadow: none;
+}
+
+.lead {
+  position: relative;
+  isolation: isolate;
+  max-inline-size: var(--hero-lead-measure);
+  margin: clamp(1.5rem, 2vw, 2rem) 0 0;
+  color: rgb(243 240 230 / 92%);
+  font-size: clamp(1.0625rem, 1.15vw, 1.25rem);
+  font-weight: 540;
+  line-height: 1.55;
+  text-shadow: 0 1px 12px rgb(2 13 8 / 92%);
+  text-wrap: pretty;
+}
+
+.lead::before {
+  position: absolute;
+  inset: -0.75rem -2.5rem -0.85rem -1.25rem;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  background: none;
+}
+
+.actionBlock {
+  max-inline-size: min(100%, 42rem);
+  margin-block-start: clamp(1.75rem, 2.4vw, 2.5rem);
+  display: grid;
+  gap: clamp(1.125rem, 1.45vw, 1.5rem);
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: var(--space-16);
+}
+
+.actionRow [data-cta-icon="paper-plane"],
+.secondaryActionIcon > svg {
+  inline-size: var(--icon-size-control);
+  block-size: var(--icon-size-control);
+  flex: 0 0 auto;
+}
+
+.actionRow
+  [data-analytics-placement="hero"][data-cta-composition="docked"] {
+  --cta-primary-bg: var(--hero-lime-calm);
+  --cta-primary-bg-hover: color-mix(
+    in srgb,
+    var(--hero-lime-calm) 88%,
+    white
+  );
+  --cta-primary-bg-active: color-mix(
+    in srgb,
+    var(--hero-lime-calm) 90%,
+    var(--brand-forest)
+  );
+  --cta-primary-border: var(--hero-lime-calm);
+  --cta-primary-border-hover: var(--cta-primary-bg-hover);
+  --cta-primary-border-active: var(--cta-primary-bg-active);
+  --cta-primary-text: var(--brand-jet);
+  --cta-primary-text-hover: var(--brand-jet);
+  --cta-primary-text-active: var(--brand-jet);
+  --cta-icon-bg: var(--hero-stage);
+  --cta-icon-border: var(--hero-stage);
+  --cta-icon-color: var(--hero-lime-calm);
+  --cta-icon-color-hover: var(--hero-lime-calm);
+  min-inline-size: 11.5rem;
+  box-shadow: 0 12px 34px -24px rgba(var(--brand-lime-rgb), 0.7);
+}
+
+.secondaryAction.secondaryAction {
+  --cta-secondary-bg: rgba(var(--brand-jet-rgb), 0.52);
+  --cta-secondary-bg-hover: rgba(var(--brand-lime-rgb), 0.11);
+  --cta-secondary-bg-active: rgba(var(--brand-lime-rgb), 0.16);
+  --cta-secondary-text: var(--hero-ivory);
+  --cta-secondary-text-hover: var(--hero-ivory);
+  --cta-secondary-text-active: var(--hero-ivory);
+  --cta-secondary-border: rgba(var(--brand-ivory-rgb), 0.24);
+  --cta-secondary-border-hover: rgba(var(--brand-lime-rgb), 0.58);
+  --cta-secondary-border-active: rgba(var(--brand-lime-rgb), 0.7);
+
+  inline-size: fit-content;
+  min-inline-size: 0;
+  min-block-size: var(--button-cta-height);
+  padding-block: calc(
+    var(--button-cta-icon-inset) - var(--border-width-structural)
+  );
+  padding-inline-start: var(--button-cta-label-padding-start);
+  padding-inline-end: calc(
+    var(--button-cta-icon-inset) - var(--border-width-structural)
+  );
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--button-cta-content-gap);
+  color: var(--cta-secondary-text);
+  background: var(--cta-secondary-bg);
+  border-color: var(--cta-secondary-border);
+  border-radius: var(--button-cta-radius);
+  box-shadow: inset 0 1px 0 rgba(var(--brand-ivory-rgb), 0.07);
+  text-decoration-line: none;
+  transition:
+    background-color var(--duration-micro) var(--ease-standard),
+    border-color var(--duration-micro) var(--ease-standard),
+    box-shadow var(--duration-micro) var(--ease-standard),
+    color var(--duration-micro) var(--ease-standard);
+}
+
+.secondaryActionIcon {
+  box-sizing: border-box;
+  inline-size: var(--button-cta-icon-shell-size);
+  block-size: var(--button-cta-icon-shell-size);
+  display: inline-grid;
+  flex: 0 0 var(--button-cta-icon-shell-size);
+  place-items: center;
+  color: var(--hero-lime-calm);
+  background: rgba(var(--brand-ivory-rgb), 0.065);
+  border: var(--border-width-structural) solid
+    rgba(var(--brand-ivory-rgb), 0.18);
+  border-radius: var(--radius-circle);
+  transition:
+    background-color var(--duration-micro) var(--ease-standard),
+    border-color var(--duration-micro) var(--ease-standard),
+    color var(--duration-micro) var(--ease-standard);
+}
+
+.secondaryActionIcon > svg {
+  transition: transform var(--duration-micro) var(--ease-standard);
+}
+
+.proofRail {
+  position: relative;
+  isolation: isolate;
+  max-inline-size: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-8) var(--space-16);
+  color: rgb(243 240 230 / 88%);
+  font-size: clamp(0.75rem, 0.72vw, 0.8125rem);
+  font-weight: 540;
+  letter-spacing: 0.01em;
+  line-height: 1.45;
+  list-style: none;
+  text-shadow: 0 1px 8px rgb(2 13 8 / 86%);
+}
+
+.proofRail::before {
+  position: absolute;
+  inset: -0.45rem -1.25rem;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgb(2 13 8 / 36%) 0%,
+    rgb(2 13 8 / 18%) 72%,
+    transparent 100%
+  );
+  filter: blur(10px);
+}
+
+.proofRail > li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.18em;
+}
+
+.proofRail > li + li::before {
+  inline-size: 0.2rem;
+  block-size: 0.2rem;
+  margin-inline-end: var(--space-10);
+  flex: 0 0 auto;
+  content: "";
+  background: rgba(var(--brand-lime-rgb), 0.52);
+  border-radius: 50%;
+}
+
+.proofRail strong {
+  color: var(--hero-ivory);
+  font-weight: 650;
+}
+
+.proofLink.proofLink {
+  min-block-size: var(--control-touch-target-min);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.18em;
+  color: inherit;
+  text-decoration-color: rgb(243 240 230 / 34%);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.28em;
+}
+
+.reviewProofLink.reviewProofLink {
+  gap: var(--space-12);
+  text-decoration-line: none;
+}
+
+.clientBubbles {
+  display: inline-flex;
+  align-items: center;
+  padding-inline-end: 0.1rem;
+}
+
+.clientBubble {
+  position: relative;
+  inline-size: 2.25rem;
+  block-size: 2.25rem;
+  display: inline-grid;
+  flex: 0 0 2.25rem;
+  place-items: center;
+  overflow: hidden;
+  color: var(--hero-ivory);
+  background: color-mix(
+    in srgb,
+    var(--brand-forest) 78%,
+    var(--hero-ivory)
+  );
+  border: 2px solid var(--hero-stage);
+  border-radius: var(--radius-circle);
+  box-shadow: 0 0 0 1px
+    color-mix(in srgb, var(--hero-lime-calm) 52%, transparent);
+}
+
+.clientBubble + .clientBubble {
+  margin-inline-start: -0.55rem;
+}
+
+.clientBubble:nth-child(1) {
+  z-index: 3;
+}
+
+.clientBubble:nth-child(2) {
+  z-index: 2;
+}
+
+.clientBubble:nth-child(3) {
+  z-index: 1;
+}
+
+.clientBubble > span {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.clientBubble img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.ratingSummary {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.ratingStars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.14rem;
+  color: var(--hero-lime-calm);
+}
+
+.ratingStars > svg {
+  inline-size: 0.75rem;
+  block-size: 0.75rem;
+  stroke-width: 1.8;
+}
+
+.ratingCopy {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-6);
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.ratingCopy > span {
+  color: rgb(243 240 230 / 78%);
+}
+
+.registrationProofItem .proofLink {
+  font-weight: 580;
+}
+
+.portrait {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: -1.5vw;
+  z-index: 2;
+  inline-size: min(63vw, 70rem);
+  margin: 0;
+  overflow: hidden;
+  isolation: isolate;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 420ms var(--ease-standard);
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgb(0 0 0 / 18%) 14%,
+    rgb(0 0 0 / 72%) 34%,
+    black 48%,
+    black 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgb(0 0 0 / 18%) 14%,
+    rgb(0 0 0 / 72%) 34%,
+    black 48%,
+    black 100%
+  );
+}
+
+.hero[data-hero-intro-motion="prepared"] .portrait,
+.hero[data-hero-intro-motion="enhanced"] .portrait {
+  transition: none;
+}
+
+.portrait::before {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse 30% 58% at 64% 46%,
+      rgb(255 236 218 / 10%) 0%,
+      rgb(255 236 218 / 4%) 42%,
+      transparent 76%
+    ),
+    radial-gradient(
+      ellipse 44% 76% at 34% 52%,
+      color-mix(in srgb, var(--brand-lime) 8%, transparent) 0%,
+      color-mix(in srgb, var(--brand-forest) 7%, transparent) 34%,
+      transparent 74%
+    );
+  mix-blend-mode: screen;
+  opacity: 0.34;
+}
+
+.portrait::after {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(
+      90deg,
+      rgb(4 19 12 / 92%) 0%,
+      rgb(4 19 12 / 78%) 18%,
+      rgb(4 19 12 / 48%) 38%,
+      rgb(4 19 12 / 14%) 55%,
+      transparent 74%
+    ),
+    linear-gradient(
+      180deg,
+      rgb(4 19 12 / 24%) 0%,
+      rgb(4 19 12 / 8%) 8%,
+      transparent 16%,
+      transparent 66%,
+      rgb(4 19 12 / 56%) 84%,
+      var(--hero-stage) 100%
+    );
+}
+
+.portraitImage,
+.portraitWarp {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.portraitPicture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.portraitImage {
+  z-index: 0;
+  object-fit: cover;
+  object-position: 60% 0%;
+}
+
+.portraitImage,
+.portraitWarp {
+  filter:
+    saturate(0.88)
+    contrast(1.03)
+    brightness(1.03);
+}
+
+.portraitWarp {
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 360ms var(--ease-standard);
+}
+
+.portraitWarp[data-state="ready"] {
+  opacity: 1;
+}
+
+.portraitWarp > canvas {
+  inline-size: 100%;
+  block-size: 100%;
+  display: block;
+}
+
+/* Keep the foreground composition while the room occupies its own background
+   plane. Both remain anchored to the bottom of the scene. */
+.portrait:is([data-portrait-variant="cutout"], [data-portrait-variant="scene"]) {
+  /* The transparent canvas has generous empty space on its left side. Keep
+     the visible figure inside the scene instead of pushing its chair offscreen. */
+  inset-inline-end: clamp(-9vw, calc(42vw - 522px), 0px);
+  overflow: visible;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.portrait:is([data-portrait-variant="cutout"], [data-portrait-variant="scene"])::before,
+.portrait:is([data-portrait-variant="cutout"], [data-portrait-variant="scene"])::after {
+  display: none;
+}
+
+.portrait:is([data-portrait-variant="cutout"], [data-portrait-variant="scene"]) .portraitPicture {
+  inset-block-start: auto;
+  block-size: 88%;
+}
+
+.portrait[data-portrait-variant="cutout"] .portraitImage {
+  object-fit: contain;
+  object-position: right bottom;
+  filter: saturate(0.86) contrast(0.93) brightness(0.82);
+}
+
+.portrait[data-portrait-variant="scene"] {
+  container-type: size;
+}
+
+.portrait.sceneInteriorPlane {
+  z-index: 1;
+}
+
+/* Preserve the foreground's contain/right-bottom crop. The room overrides this
+   base with a full-height cover crop shared by its static and GPU versions. */
+.portrait[data-portrait-variant="scene"] .portraitPicture {
+  inset-inline-start: auto;
+  inline-size: min(100cqw, 88cqh);
+  block-size: min(100cqw, 88cqh);
+}
+
+/* Keep the cropped legs below the viewport throughout the stronger vertical
+   parallax. Matching growth and bottom offset preserve the head's placement. */
+.portrait[data-portrait-variant="scene"] [data-hero-scene-foreground] {
+  inset-block-end: -13px;
+  inline-size: calc(min(100cqw, 88cqh) + 13px);
+  block-size: calc(min(100cqw, 88cqh) + 13px);
+}
+
+.portrait[data-portrait-variant="scene"] .portraitImage {
+  object-fit: contain;
+  object-position: right bottom;
+  filter: none;
+}
+
+.interiorPicture {
+  z-index: 0;
+}
+
+/* Keep the room's full height and floor anchor, while capping its scale at the
+   wide reference composition. A short window must not enlarge the room by
+   its width while the person continues to scale by the scene's height. The
+   existing texture pass reads this same image box for its crop and mask. */
+.portrait.sceneInteriorPlane .interiorPicture {
+  inset: 0;
+  inset-inline-start: auto;
+  inline-size: min(100cqw, 112cqh);
+  block-size: 100%;
+}
+
+.portrait.sceneInteriorPlane .interiorImage {
+  object-fit: cover;
+}
+
+.interiorImage {
+  /* Only the left boundary joins Silk. The top and floor remain photographic. */
+  --hero-interior-mask:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgb(0 0 0 / 16%) 9.5%,
+      rgb(0 0 0 / 50%) 19%,
+      rgb(0 0 0 / 84%) 28.5%,
+      black 38%
+    );
+
+  -webkit-mask-image: var(--hero-interior-mask);
+  mask-image: var(--hero-interior-mask);
+}
+
+.hero[data-hero-interior-ready="true"] .interiorPicture {
+  visibility: hidden;
+}
+
+@media (min-width: 768px) {
+  /* Keep the neutral readability scrim behind the person as well as the UI.
+     The room retains its warm light and the clean cutout keeps its own tones. */
+  .hero[data-hero-portrait-variant="scene"]::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    content: "";
+    pointer-events: none;
+    background:
+      linear-gradient(
+        180deg,
+        rgb(0 0 0 / 28%) 0px,
+        rgb(0 0 0 / 12%) 64px,
+        transparent calc(var(--site-header-min-block) + 4.5rem)
+      ),
+      radial-gradient(
+        ellipse 28% 32% at 52% 34%,
+        rgb(0 0 0 / 20%) 0%,
+        rgb(0 0 0 / 12%) 50%,
+        transparent 82%
+      ),
+      radial-gradient(
+        ellipse 76% 62% at 33% 44%,
+        rgb(0 0 0 / 58%) 0%,
+        rgb(0 0 0 / 42%) 55%,
+        transparent 85%
+      );
+  }
+
+  .hero[data-hero-portrait-variant="scene"] .copy::before {
+    display: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .secondaryAction:hover {
+    color: var(--cta-secondary-text-hover);
+    background: var(--cta-secondary-bg-hover);
+    border-color: var(--cta-secondary-border-hover);
+    box-shadow:
+      inset 0 1px 0 rgba(var(--brand-ivory-rgb), 0.1),
+      0 14px 30px -26px rgba(var(--brand-lime-rgb), 0.58);
+  }
+
+  .secondaryAction:hover .secondaryActionIcon {
+    color: var(--hero-stage);
+    background: var(--hero-lime-calm);
+    border-color: var(--hero-lime-calm);
+  }
+
+  .secondaryAction:hover .secondaryActionIcon > svg {
+    transform: translateX(0.12rem);
+  }
+
+  .proofLink:hover {
+    color: var(--hero-ivory);
+    text-decoration-color: currentColor;
+  }
+
+  .reviewProofLink:hover .clientBubble {
+    box-shadow: 0 0 0 1px var(--hero-lime-calm);
+  }
+}
+
+/* The base hero selector intentionally outranks Surface's background rules.
+   Match that specificity here so the responsive optical centering tokens are
+   not silently shadowed by the desktop defaults. */
+@media (min-width: 1280px) {
+  .hero.hero {
+    --hero-copy-lower: clamp(1.75rem, 2vw, 2.25rem);
+  }
+
+  .portrait {
+    inset-inline-end: clamp(-7rem, -5vw, -3.5rem);
+  }
+}
+
+@media (min-width: 1680px) {
+  .hero.hero {
+    --hero-copy-shift-y: clamp(-6rem, -8vh, -4rem);
+    --hero-heading-size: clamp(5.25rem, 4.6vw, 5.5rem);
+    --hero-lead-measure: 44rem;
+  }
+}
+
+.secondaryAction:focus-visible {
+  border-color: var(--hero-lime-calm);
+}
+
+@media (min-width: 1280px) and (max-height: 820px) {
+  .hero.hero {
+    --hero-heading-size: clamp(3.875rem, 4.5vw, 4.5rem);
+  }
+
+  .copy {
+    padding-block: var(--space-16) var(--space-24);
+    gap: 0;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1279px) {
+  .hero.hero {
+    --hero-copy-max: 50rem;
+    --hero-heading-size: clamp(3.25rem, 5vw, 4rem);
+  }
+
+  .composition {
+    column-gap: var(--space-16);
+  }
+
+  .copy {
+    padding-block: var(--space-20) var(--space-32);
+    gap: 0;
+  }
+
+  .actionBlock {
+    max-inline-size: 29rem;
+  }
+
+  .portrait {
+    inset-inline-end: -4vw;
+    inline-size: 65vw;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .portrait {
+    inset-inline-end: -6vw;
+  }
+}
+
+@media (max-width: 767px), (max-width: 900px) and (max-height: 560px) {
+  /* Keep this navigation at the scene's top so it leaves with the hero. */
+  .heroHeader.heroHeader {
+    position: absolute;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero.hero {
+    --hero-copy-max: 100%;
+    --hero-copy-shift-y: 0;
+    --hero-heading-size: clamp(2.125rem, 9.2vw, 2.25rem);
+    --hero-lead-measure: 42rem;
+  }
+
+  .hero::before {
+    z-index: 2;
+    background:
+      linear-gradient(
+        180deg,
+        rgb(8 10 9 / 25%) 0%,
+        rgb(8 10 9 / 10%) 52%,
+        rgb(8 10 9 / 40%) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgb(8 10 9 / 38%) 0%,
+        rgb(8 10 9 / 16%) 68%,
+        rgb(8 10 9 / 8%) 100%
+      );
+  }
+
+  /* Fill the stable first viewport; short screens and enlarged text can
+     still grow the scene naturally without clipping its copy or controls. */
+  .hero.hero,
+  .frame,
+  .composition {
+    min-block-size: 100svh;
+  }
+
+  .frame {
+    inline-size: calc(100% - (var(--page-gutter) * 2));
+  }
+
+  .composition {
+    padding-block-end: clamp(var(--space-40), 8vw, var(--space-54));
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: var(--site-header-min-block-compact) auto;
+  }
+
+  .copy {
+    inline-size: 100%;
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    padding-block:
+      clamp(var(--space-54), 12vw, var(--space-72))
+      clamp(var(--space-40), 8vw, var(--space-54));
+    gap: 0;
+  }
+
+  .copy::before {
+    inset: -2rem -1.5rem -2.5rem;
+    opacity: 0.72;
+    background: radial-gradient(
+      ellipse 110% 68% at 32% 30%,
+      rgb(4 19 12 / 52%) 0%,
+      rgb(4 19 12 / 24%) 54%,
+      transparent 82%
+    );
+    filter: blur(14px);
+  }
+
+  .headline {
+    max-inline-size: 100%;
+    line-height: 0.96;
+  }
+
+  .headlineMask,
+  .headlineLine {
+    white-space: normal;
+  }
+
+  .lead {
+    inline-size: 100%;
+    max-inline-size: var(--hero-lead-measure);
+    margin-block-start: var(--space-24);
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .lead::before {
+    inset: -0.625rem -1rem -0.75rem -0.75rem;
+    background: none;
+  }
+
+  .actionBlock {
+    inline-size: 100%;
+    min-inline-size: 0;
+    max-inline-size: 34rem;
+    margin-block-start: var(--space-32);
+    gap: var(--space-24);
+  }
+
+  .actionRow {
+    align-items: center;
+    flex-direction: row;
+    gap: var(--space-8);
+  }
+
+  .actionRow
+    [data-analytics-placement="hero"][data-cta-composition="docked"],
+  .secondaryAction.secondaryAction {
+    --button-cta-label-padding-start: var(--space-12);
+    --button-cta-content-gap: var(--space-6);
+    --button-cta-icon-inset: var(--space-6);
+    --button-cta-icon-shell-size: 2.5rem;
+
+    min-inline-size: 0;
+    flex: 0 1 auto;
+    font-size: 0.8125rem;
+    white-space: nowrap;
+  }
+
+  .proofRail {
+    inline-size: 100%;
+    max-inline-size: 22rem;
+    gap: var(--space-4) var(--space-12);
+    font-size: 0.75rem;
+    line-height: 1.35;
+  }
+
+  .proofRail > li {
+    min-inline-size: 0;
+  }
+
+  .proofLink.proofLink {
+    min-block-size: var(--control-touch-target-min);
+  }
+
+  .reviewProofLink.reviewProofLink {
+    gap: var(--space-10);
+  }
+
+  .clientBubble {
+    inline-size: 2rem;
+    block-size: 2rem;
+    flex-basis: 2rem;
+  }
+
+  .clientBubble + .clientBubble {
+    margin-inline-start: -0.5rem;
+  }
+
+  .ratingStars > svg {
+    inline-size: 0.6875rem;
+    block-size: 0.6875rem;
+  }
+
+  .ratingCopy {
+    gap: var(--space-4);
+  }
+
+  .portrait {
+    display: none;
+  }
+
+  .heroSilkHost {
+    inset-block: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    filter: none;
+    transform: none;
+    mask-image: linear-gradient(180deg, black 0%, black 100%);
+  }
+
+}
+
+@media (max-width: 360px) {
+  .actionRow
+    [data-analytics-placement="hero"][data-cta-composition="docked"],
+  .secondaryAction.secondaryAction {
+    --button-cta-label-padding-start: var(--space-10);
+    --button-cta-content-gap: var(--space-4);
+    --button-cta-icon-inset: 7px;
+    --button-cta-icon-shell-size: 2.375rem;
+
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .hero.hero {
+    --hero-copy-max: 100%;
+    --hero-copy-shift-y: -5.5rem;
+    --hero-heading-size: clamp(2.5rem, 5.2vw, 2.75rem);
+  }
+
+  .composition {
+    column-gap: var(--space-16);
+  }
+
+  .copy {
+    padding-block: var(--space-20) var(--space-24);
+    gap: var(--space-14);
+  }
+
+  .actionBlock {
+    max-inline-size: 32rem;
+  }
+
+
+  .lead,
+  .proofRail {
+    max-inline-size: 32rem;
+  }
+
+  .portrait {
+    inset-inline-end: -8vw;
+    inline-size: 66vw;
+  }
+}
+
+@media (max-height: 720px) and (max-width: 767px) {
+  .hero.hero {
+    --hero-heading-size: clamp(2.125rem, 7vw, 2.5rem);
+  }
+
+  .composition {
+    padding-block-end: var(--space-54);
+  }
+
+  .copy {
+    padding-block: var(--space-54) var(--space-40);
+    gap: 0;
+  }
+
+  .lead {
+    margin-block-start: var(--space-24);
+  }
+
+  .actionBlock {
+    margin-block-start: var(--space-32);
+    gap: var(--space-20);
+  }
+}
+
+@media (max-width: 900px) and (max-height: 560px) and (orientation: landscape) {
+  .hero.hero {
+    --hero-copy-shift-y: 0;
+    --hero-heading-size: clamp(2rem, 5vw, 2.5rem);
+  }
+
+  .hero.hero,
+  .frame,
+  .composition {
+    min-block-size: max(100svh, 34rem);
+  }
+
+  .composition {
+    padding-block-end: var(--space-16);
+    grid-template-rows: var(--site-header-min-block-compact) auto;
+  }
+
+  .copy {
+    align-self: start;
+    padding-block: var(--space-24) var(--space-32);
+    gap: 0;
+  }
+
+  .lead {
+    max-inline-size: 36rem;
+    margin-block-start: var(--space-16);
+  }
+
+  .actionBlock {
+    margin-block-start: var(--space-18);
+    gap: var(--space-16);
+  }
+
+  .portrait {
+    display: none;
+  }
+}
+
+/* In short desktop windows a fixed upward optical shift can put the first
+   headline line behind the fixed header. Let the copy start below it and let
+   hero content determine the section height when the viewport is too short. */
+@media (min-width: 901px) and (max-height: 680px) {
+  .hero.hero {
+    --hero-copy-shift-y: 0px;
+    --hero-copy-lower: 0px;
+  }
+
+  .composition {
+    grid-template-rows: var(--site-header-min-block) auto;
+    padding-block-end: var(--space-16);
+  }
+
+  .copy {
+    align-self: start;
+    padding-block: clamp(3rem, 11svh, 5.5rem) var(--space-24);
+  }
+}
+
+@media (forced-colors: active) {
+  .heroSilkHost {
+    display: none;
+  }
+
+  .portrait {
+    opacity: 1;
+  }
+
+  .portrait::before,
+  .portrait::after,
+  .portraitWarp {
+    display: none;
+  }
+
+  .portraitImage {
+    filter: none;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroSilkHost,
+  .portrait,
+  .portraitWarp {
+    transition: none;
+  }
+
+  .secondaryAction.secondaryAction,
+  .secondaryActionIcon,
+  .secondaryActionIcon > svg {
+    transition: none;
+  }
+
+  .secondaryAction:hover .secondaryActionIcon > svg {
+    transform: none;
+  }
+}

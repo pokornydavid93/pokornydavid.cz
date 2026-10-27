@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="550" viewBox="0 0 440 550" fill="none">
+  <defs>
+    <filter id="tertiary-line-glow" x="-90" y="-90" width="620" height="730" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4.2" result="blur" />
+      <feColorMatrix
+        in="blur"
+        type="matrix"
+        values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 .78 0"
+        result="softGlow"
+      />
+      <feMerge>
+        <feMergeNode in="softGlow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <g filter="url(#tertiary-line-glow)" opacity=".46" stroke="#d6ffad" stroke-opacity=".34" stroke-width="1.9" vector-effect="non-scaling-stroke">
+      <path d="M-46 74C22 58 76 63 136 84C194 104 246 105 304 82C360 60 420 57 486 84" />
+      <path d="M-48 154C20 138 78 142 140 164C198 184 250 183 310 158C366 134 424 133 486 160" />
+      <path d="M-50 246C22 226 82 230 144 256C202 280 256 278 316 250C374 224 430 224 488 250" />
+      <path d="M-48 338C18 318 78 320 140 344C202 368 258 366 318 338C374 312 430 313 488 342" />
+      <path d="M-42 432C22 412 80 414 142 438C204 462 260 460 320 434C378 408 432 410 486 438" />
+      <path d="M66-44C100 28 106 94 86 158C62 232 72 296 114 354C148 402 154 456 134 590" />
+      <path d="M224-48C204 28 210 92 242 154C274 216 270 278 238 338C206 396 202 454 226 592" />
+      <path d="M374-44C340 28 334 94 354 158C378 232 368 296 326 354C292 402 286 456 306 590" />
+    </g>
+    <g stroke="#d6ffad" vector-effect="non-scaling-stroke">
+      <path d="M-46 74C22 58 76 63 136 84C194 104 246 105 304 82C360 60 420 57 486 84" stroke-opacity=".32" stroke-width=".9" />
+      <path d="M-48 154C20 138 78 142 140 164C198 184 250 183 310 158C366 134 424 133 486 160" stroke-opacity=".28" stroke-width=".86" />
+      <path d="M-50 246C22 226 82 230 144 256C202 280 256 278 316 250C374 224 430 224 488 250" stroke-opacity=".3" stroke-width=".86" />
+      <path d="M-48 338C18 318 78 320 140 344C202 368 258 366 318 338C374 312 430 313 488 342" stroke-opacity=".26" stroke-width=".84" />
+      <path d="M-42 432C22 412 80 414 142 438C204 462 260 460 320 434C378 408 432 410 486 438" stroke-opacity=".24" stroke-width=".82" />
+      <path d="M66-44C100 28 106 94 86 158C62 232 72 296 114 354C148 402 154 456 134 590" stroke-opacity=".22" stroke-width=".78" />
+      <path d="M224-48C204 28 210 92 242 154C274 216 270 278 238 338C206 396 202 454 226 592" stroke-opacity=".2" stroke-width=".78" />
+      <path d="M374-44C340 28 334 94 354 158C378 232 368 296 326 354C292 402 286 456 306 590" stroke-opacity=".2" stroke-width=".76" />
+    </g>
+  </g>
+</svg>

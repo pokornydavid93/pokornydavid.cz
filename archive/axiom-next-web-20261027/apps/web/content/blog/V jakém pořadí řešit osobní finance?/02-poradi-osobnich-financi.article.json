@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 2,
+  "publication": {
+    "status": "review",
+    "author": "David Pokorný",
+    "publishedAt": "2026-10-08",
+    "updatedAt": "2026-10-08"
+  },
+  "meta": {
+    "slug": "v-jakem-poradi-resit-osobni-finance",
+    "topic": "Pořadí osobních financí od přehledu a rezervy po bydlení a dlouhodobé investice",
+    "category": "Finanční plánování",
+    "primaryIntent": "Pomoci čtenáři určit, které finanční kroky mají přednost, co lze budovat souběžně a které podmínky by se neměly přeskočit.",
+    "audience": "Člověk, který chce začít řešit finance, investuje, plánuje bydlení, splácí dluhy nebo rychleji umořuje hypotéku, ale nemá jasno v tom, co má přijít nejdřív.",
+    "estimatedReadTime": 7
+  },
+  "hero": {
+    "category": "Finanční plánování",
+    "eyebrow": "PRIORITY PODLE VAŠÍ SITUACE",
+    "title": "V jakém pořadí řešit osobní finance?",
+    "subtitle": "Přehled rozpočtu ukáže, co potřebuje pozornost hned a co může počkat. Rezervu, drahé dluhy a ochranu příjmu pak můžete řešit souběžně podle své situace.",
+    "excerpt": "Pořadí finančních kroků vychází z vašich závazků, dostupných peněz a cílů. Ukážu vám, co prověřit před investicí, bydlením nebo rychlejším splácením a jak poznat, které oblasti řešit současně.",
+    "estimatedReadTime": "7 min čtení",
+    "heroSummary": [
+      "Určíte, co je v rozpočtu naléhavé a co může počkat.",
+      "Rozlišíte povinné splátky od peněz navíc na rezervu, dluhy a cíle.",
+      "Prověříte, zda dlouhodobý plán unese změnu příjmu nebo nečekaný výdaj.",
+      "Na skutečném případu uvidíte, proč záleží také na výši povinné splátky."
+    ]
+  },
+  "sections": [
+    {
+      "id": "poradi-osobnich-financi",
+      "eyebrow": "PRVNÍ KROK",
+      "title": "Podle čeho určit první krok",
+      "intro": "Nejdřív potřebuji vědět, co musí váš rozpočet zaplatit, které peníze jsou dostupné a co plánujete. Teprve potom má smysl rozhodovat o dalším kroku.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "process",
+          "steps": [
+            {
+              "title": "Sepsat skutečný rozpočet",
+              "description": "Příjmy, nutné výdaje, povinné splátky i nepravidelné platby. Zjistíme, zda a kolik zbývá v běžném měsíci, nejen v tom nejlepším."
+            },
+            {
+              "title": "Najít nejbližší finanční tlak",
+              "description": "Co potřebujete zaplatit brzy a z čeho? Prověříme dostupné peníze, drahé závazky a dopad případného výpadku příjmu."
+            },
+            {
+              "title": "Pojmenovat cíle a termíny",
+              "description": "Které výdaje nelze odložit, co chcete řešit později a jak důležitý je každý cíl? Podle toho rozdělíme případný přebytek."
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Povinné splátky a jiné splatné závazky se kvůli tvorbě rezervy neodkládají. Když mluvím o volbě mezi rezervou a rychlejším splácením, jde o peníze nad rámec těchto plateb. Pokud je rozpočet nepokrývá, nejdřív řešíme tento nesoulad. Při hrozícím prodlení kontaktujte věřitele co nejdřív; nečekejte na dokončení celého plánu.",
+            "Pořadí proto není seznam produktů, které musíte postupně nakoupit. Bydlení může znamenat nájem i vlastní nemovitost a jeho koupě není povinným předstupněm investování. Rozhoduje vaše situace a účel peněz."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "co-muze-bezet-soubezne",
+      "eyebrow": "SOUBĚŽNÉ KROKY",
+      "title": "Co řešit souběžně",
+      "intro": "Na úplné dokončení jedné oblasti nemusíte čekat, abyste začali řešit jinou. Rozdělení peněz ale musí odpovídat rozpočtu a naléhavosti jednotlivých potřeb.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "decision",
+          "branches": [
+            {
+              "if": "Máte malou rezervu a drahý dluh",
+              "then": "Porovnat dostupný polštář s náklady dluhu.",
+              "check": "Po povinných platbách může část přebytku zůstat na nečekaný výdaj a část snížit dluh. Poměr závisí na úroku, nákladech splácení, stabilitě příjmů a riziku dalšího zadlužení."
+            },
+            {
+              "if": "Delší výpadek příjmu by ohrozil domácnost",
+              "then": "Prověřit zdroje, které by zůstaly.",
+              "check": "Započítáme rezervu, další příjmy domácnosti, dostupné dávky a stávající krytí. Teprve podle nepokrytého rozdílu posoudíme další možnosti včetně případného pojištění."
+            },
+            {
+              "if": "Příjem kolísá nebo se blíží změna",
+              "then": "Připravit rozpočet i pro slabší měsíce.",
+              "check": "U rodičovské, podnikání nebo změny bydlení porovnáme očekávané příjmy s výdaji a termíny plateb. Podle výsledku upravíme rezervu, pevné závazky a tempo ostatních cílů."
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "U dluhů nehodnotím jen výši splátky. Konsolidace může změnit sazbu i splatnost; nižší měsíční platba sama neprokazuje úsporu. Porovnáme RPSN, poplatky, celkovou částku k zaplacení a podmínky změny.",
+            "Ochrana příjmu neznamená automaticky novou pojistku. Potřebujeme nejdřív znát rozsah a podmínky dostupných zdrojů. Pokud pojištění zvažujete, součástí posouzení jsou i zdravotní podmínky, výluky a čekací doby."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "co-musi-byt-pred-investovanim",
+      "eyebrow": "PŘED DALŠÍM ZÁVAZKEM",
+      "title": "Co prověřit před investicí nebo hypotékou",
+      "intro": "U dlouhodobé investice řešíme, zda peníze nebudete potřebovat dřív. U hypotéky navíc přibývá pravidelná povinnost. V obou případech sledujeme dopad na zbytek rozpočtu.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Dostupné peníze",
+              "description": "Z čeho zaplatíte nečekaný výdaj a známé blízké platby? Peníze vyhrazené na rezervu nezapočítávejte současně na vlastní vklad nebo jiný cíl."
+            },
+            {
+              "title": "Skutečný přebytek",
+              "description": "Zbývá prostor i po nepravidelných výdajích, splátkách a provozu bydlení? Prověřte také známé změny příjmů a výdajů."
+            },
+            {
+              "title": "Současné dluhy",
+              "description": "Jaké mají náklady a podmínky? Očekávaný investiční výnos není jistý zdroj pro úhradu smluvených splátek."
+            },
+            {
+              "title": "Termín a přijatelné riziko",
+              "description": "Kdy peníze potřebujete a co by znamenala ztráta jejich části? Dlouhý horizont sám nezaručuje návrat hodnoty ani to, že pokles finančně a psychicky unesete."
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Pokud některý bod nevychází, není výsledkem automatický pokyn prodat investice nebo zrušit smlouvy. Nejdřív porovnáme dopad změny, její náklady a možnosti upravit budoucí vklady či splátky. Někdy stačí zpomalit jeden cíl a uvolnit prostor pro naléhavější potřebu."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spravny-cil-spatne-nacasovani",
+      "eyebrow": "PŘÍPAD Z PRAXE",
+      "title": "Co změnila nižší povinná splátka",
+      "intro": "Skutečný anonymizovaný případ ukazuje rozdíl mezi cílem zbavit se dluhu a výší platby, kterou musíte zvládnout každý měsíc.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "caseStudy",
+          "context": "Klientce bylo 26 let a koupila si byt. Zvolila hypotéku se splatností 20 let, protože chtěla být bez dluhu co nejdříve.",
+          "initialState": [
+            "Vyšší povinná splátka jí nechávala jen malý prostor pro další výdaje a cíle.",
+            "Neměla vytvořenou rezervu a ochrana příjmu byla minimální."
+          ],
+          "problem": [
+            "Při dlouhodobé pracovní neschopnosti jí vypadl příjem, splátka ale pokračovala.",
+            "Další úvěr nezískala a s placením jí pomohla rodina."
+          ],
+          "analysis": "Cíl splatit hypotéku dříve jsme zachovali. Bylo ale potřeba snížit povinnou měsíční zátěž a vytvořit prostor pro dostupné peníze. Původní nastavení nedávalo rozpočtu dost možností reagovat na výpadek příjmu.",
+          "whatChanged": [
+            "Při nejbližší možnosti se hypotéka upravila na delší splatnost a povinná splátka klesla. Uvolněné peníze začaly tvořit rezervu.",
+            "Pro další období jsme prověřili dostupnou ochranu příjmu. Rychlejší splácení se přesunulo do dobrovolných mimořádných splátek podle finančních možností."
+          ],
+          "result": [
+            "Klientka získala nižší povinnou platbu a prostor doplňovat rezervu.",
+            "O penězích navíc mohla rozhodovat podle situace místo toho, aby celá částka musela každý měsíc odejít na splátku."
+          ],
+          "takeaway": "Pomohla změna povinné zátěže a využití uvolněných peněz. Delší splatnost sama nezajišťuje finanční stabilitu a není univerzálním doporučením."
+        },
+        {
+          "type": "expertNote",
+          "title": "Podmínky změny je potřeba ověřit",
+          "text": "Prodloužení splatnosti vyžaduje souhlas banky a může zvýšit celkové úroky. Mimořádné splátky mají vlastní pravidla. Případ také neznamená, že nové pojištění pokryje již nastalou pracovní neschopnost."
+        }
+      ]
+    },
+    {
+      "id": "od-prvniho-rozhovoru-k-planu",
+      "eyebrow": "SPOLEČNÝ POSTUP",
+      "title": "Jak spolu určíme priority",
+      "intro": "Začneme vaší situací a otázkou, kterou chcete řešit. Na úvodní rozhovor nepotřebujete shromáždit všechny smlouvy; potřebné podklady si domluvíme pro další posouzení.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "process",
+          "steps": [
+            {
+              "title": "Zmapujeme současný stav",
+              "description": "Projdeme příjmy, výdaje, dostupné peníze, závazky a cíle. Oddělíme potvrzené údaje od odhadů a doplníme, co chybí."
+            },
+            {
+              "title": "Porovnáme možnosti",
+              "description": "Ukážu vám, co má přednost, co může běžet souběžně a co zatím počká. U každé varianty vysvětlím přínos, náklady a dopad na rozpočet."
+            },
+            {
+              "title": "Domluvíme konkrétní kroky",
+              "description": "Určíme, co upravit, co ponechat a kdy výsledek zkontrolovat. Nový příjem, dítě, bydlení nebo jiná významná změna mohou priority znovu posunout."
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Mým úkolem je vysvětlit souvislosti a doporučení tak, abyste věděli, proč daný krok přichází právě teď. Rozhodnutí zůstává na vás. Součástí výsledku může být i ponechání smlouvy nebo cíle, který už funguje."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zkontrolujte-vlastni-poradi",
+      "eyebrow": "PRAKTICKÁ PŘÍPRAVA",
+      "title": "Co si ujasnit před prvním hovorem",
+      "intro": "Nemusíte mít přesný výpočet ani hotové odpovědi. Pomůže krátce pojmenovat, co vás přivádí a kde si nejste jistí.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Co vás teď nejvíc tíží",
+              "description": "Chybějící rezerva, drahý dluh, vysoká splátka nebo rozhodování mezi několika cíli? Zapište si hlavní otázku."
+            },
+            {
+              "title": "Co už víte o rozpočtu",
+              "description": "Orientační příjmy, pravidelné platby a dostupné peníze. Pokud něco nevíte, stačí to označit k pozdějšímu doplnění."
+            },
+            {
+              "title": "Co se má změnit",
+              "description": "Dítě, bydlení, práce nebo jiný plán. Přidejte přibližný termín a to, které cíle jsou pro vás nejdůležitější."
+            }
+          ]
+        },
+        {
+          "type": "nextAction",
+          "title": "Ujasněme priority vašich financí",
+          "paragraphs": [
+            "Na úvodním hovoru s vámi proberu, co právě řešíte, a domluvíme se, které údaje potřebujeme pro určení dalších kroků."
+          ],
+          "action": {
+            "label": "Domluvit úvodní hovor",
+            "intent": "open-contact-or-screening-flow"
+          }
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "title": "Pořadí se může měnit spolu s vaší situací",
+    "paragraphs": [
+      "Dobrý výsledek je vědět, co řešit nyní, co rozvíjet současně a kdy priority znovu zkontrolovat. Každý krok má mít konkrétní důvod v rozpočtu a cílech vaší domácnosti."
+    ]
+  },
+  "relatedTopics": [
+    {
+      "topic": "Máte finanční produkty. Ale máte skutečně finanční plán?",
+      "reason": "Vysvětluje, proč samotné smlouvy nestačí a jak pořadí, cíle a vazby mění jednotlivé produkty v jeden systém.",
+      "slug": "mate-financni-produkty-ale-mate-skutecne-financni-plan"
+    },
+    {
+      "topic": "Kolik má mít domácnost v rezervě? Jedno správné číslo neexistuje.",
+      "reason": "Rozpracovává první stabilizační vrstvu a ukazuje, jak se rezerva odvozuje z nutných výdajů a konkrétních rizik domácnosti.",
+      "slug": "kolik-ma-mit-domacnost-v-rezerve"
+    },
+    {
+      "topic": "Peníze na rezervu, bydlení a důchod nemají být v jednom balíku",
+      "reason": "Rozvíjí význam časového horizontu a vysvětluje, proč různé cíle potřebují odlišnou dostupnost, riziko a způsob uložení.",
+      "slug": "penize-na-rezervu-bydleni-a-duchod-nemaji-byt-v-jednom-baliku"
+    }
+  ],
+  "editorial": {
+    "contentStatus": "review-ready",
+    "sourceBasis": "Rozhovorové odpovědi Davida Pokorného, téma 2, strany 5–11 zdrojového dokumentu. Zadavatel dne 2026-10-05 potvrdil skutečnost všech popsaných případů včetně jejich detailů; potvrzení zahrnuje tuto anonymizovanou klientku. Nejde o nezávislý audit soukromých podkladů.",
+    "needsExternalVerification": false,
+    "review": {
+      "status": "pending"
+    },
+    "verificationItems": [
+      {
+        "id": "02-missing-case-loan-values",
+        "title": "Nevytvářet chybějící částku splátky ani úvěru",
+        "instruction": "Podklad neobsahuje přesnou výši splátky ani úvěru. Tyto hodnoty proto nebyly dopočítány a nesmí být do případu doplněny bez doloženého zdroje.",
+        "status": "not_applicable",
+        "severity": "advisory",
+        "blocksPublish": false,
+        "visibility": "internal",
+        "sectionId": "spravny-cil-spatne-nacasovani",
+        "claimRef": "spravny-cil-spatne-nacasovani:case-missing-loan-values",
+        "evidenceRequired": "Doložená výše splátky a úvěru, pokud mají být někdy zveřejněné.",
+        "sources": [],
+        "note": "Veřejná verze nadále neobsahuje nedoložené částky. Zachován potvrzený věk a původní splatnost; nová splatnost, sazba, splátka ani úroková úspora nebyly doplněny. Potvrzení původu případu vychází z vyjádření zadavatele dne 2026-10-05, nikoli z nezávislé kontroly dokumentů."
+      }
+    ],
+    "productionNotes": {
+      "videoOpportunities": [
+        {
+          "recommendedPlacement": "Za sekcí „Co řešit souběžně“.",
+          "recommendedTopic": "David na běžné situaci vysvětlí rozdíl mezi povinnými splátkami a rozdělením přebytku mezi základní rezervu, dluhy a další cíle.",
+          "suggestedDuration": "60–90 sekund",
+          "reason": "Krátké vysvětlení může ukázat, proč priority nejsou pevné pořadí produktů a proč některé kroky probíhají současně."
+        }
+      ],
+      "interactiveOpportunities": [
+        {
+          "workingTitle": "Která oblast vašich financí potřebuje pozornost?",
+          "recommendedPlacement": "Před závěrečnou praktickou kontrolou",
+          "concept": "Případný budoucí přehled příjmů, povinných plateb, dostupné rezervy, závazků a cílů. Nevytvářet automatickou certifikaci finanční stability nebo univerzální pořadí produktů. Nový nástroj není součástí tohoto článku.",
+          "renderWhenAvailable": false
+        }
+      ],
+      "verificationRequired": [],
+      "implementationNotes": [
+        "Zachovat H1, slug a fotografie. Šest sekcí používá stávající sdílené bloky bez nové kalkulačky nebo screeningu.",
+        "Povinné splátky a jiné splatné závazky nejsou odkládány kvůli tvorbě rezervy. Volba mezi rezervou a rychlejším splácením se týká přebytku po těchto platbách.",
+        "Nezavádět univerzální pořadí rezerva, pojištění, dluhy, koupě bydlení, investice. Ochrana příjmu zahrnuje dostupné zdroje a nemusí znamenat nové pojištění; bydlení může být nájemní.",
+        "Skutečný anonymizovaný případ zachovává pouze dodané údaje. Nevkládat financialDelta nebo dopočtené hodnoty; nižší úroková úspora nebyla podložena a příslušné tvrzení bylo odstraněno.",
+        "Po pracovní neschopnosti se posuzují budoucí možnosti ochrany. Text nesmí vyvolávat dojem, že nová smlouva pokryje již nastalou událost.",
+        "Delší splatnost a mimořádné splátky nejsou univerzální doporučení. Změna splatnosti podléhá bance a může měnit celkové náklady.",
+        "Závěrečné ano/ne vyhodnocení bylo nahrazeno praktickou přípravou bez automatického potvrzování finanční bezpečnosti.",
+        "Na první rozhovor nejsou vyžadovány kompletní smlouvy a výpisy. Další podklady se domlouvají podle potřeb konkrétního posouzení.",
+        "Článek má právě jeden osobní nextAction se stávajícím kontaktním intentem; nevkládat další mezisekční CTA ani nedodané video či klientskou citaci.",
+        "Jediný původní verificationItem zachovává ID, název, status a publikační příznaky. Zdrojové poznámky nezavádějí nové schvalovací překážky.",
+        "Ověřené obecné zdroje dne 2026-10-05: ČNB Desatero pro investory (přehled, dostupná rezerva, horizont) https://www.cnb.cz/cs/dohled-financni-trh/ochrana-spotrebitele/desatero-pro-investory/index.html ; ČNB Desatero při sjednávání úvěru (rezerva při splácení, RPSN, celková splatná částka, konsolidace a včasné splátky) https://www.cnb.cz/cs/dohled-financni-trh/ochrana-spotrebitele/desatero-pri-sjednavani-uveru/index.html .",
+        "Ověřené obecné zdroje dne 2026-10-05: MF Rozpočet (časová návaznost příjmů a povinných plateb) https://financnigramotnost.gov.cz/cs/rodinne-finance/rozpocet ; ČNB Deset věcí při sjednávání pojištění (individuální potřeby, limity a výluky) https://www.cnb.cz/cs/dohled-financni-trh/ochrana-spotrebitele/deset-veci-na-ktere-si-dat-pozor-pri-sjednavani-pojisteni/ .",
+        "Konkrétní pořadí a rozdělení přebytku je individuální autorský postup. Zdrojům nepřipisovat oficiálně stanovené univerzální pořadí produktů ani konkrétní poměr rezervy a splácení."
+      ]
+    }
+  }
+}

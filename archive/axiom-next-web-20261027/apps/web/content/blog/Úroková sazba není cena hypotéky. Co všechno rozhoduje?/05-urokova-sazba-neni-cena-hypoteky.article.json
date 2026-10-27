@@ -1,0 +1,536 @@
+{
+  "schemaVersion": 2,
+  "publication": {
+    "status": "review",
+    "author": "David Pokorný",
+    "publishedAt": "2026-10-08",
+    "updatedAt": "2026-10-08"
+  },
+  "meta": {
+    "slug": "urokova-sazba-neni-cena-hypoteky",
+    "topic": "Jak porovnat skutečnou cenu, podmínky, flexibilitu a dlouhodobou použitelnost hypotečních nabídek místo rozhodování pouze podle úrokové sazby",
+    "category": "Hypotéky a bydlení",
+    "primaryIntent": "Naučit čtenáře rozložit hypoteční nabídku na celkovou měsíční platbu, jednorázové náklady, podmínky pro získání sazby, flexibilitu a soulad s dlouhodobým plánem, aby dokázal rozpoznat, kdy nižší sazba ve výsledku není levnější ani vhodnější.",
+    "audience": "Člověk nebo pár, který vybírá mezi více nabídkami hypotéky, dostal sazbu podmíněnou účtem či pojištěním nebo se potřebuje zorientovat v tom, co kromě procenta skutečně porovnávat.",
+    "estimatedReadTime": 7
+  },
+  "hero": {
+    "category": "Hypotéky a výběr nabídky",
+    "eyebrow": "NEJNIŽŠÍ SAZBA NEMUSÍ BÝT NEJLEVNĚJŠÍ",
+    "title": "Úroková sazba není cena hypotéky. Co všechno rozhoduje?",
+    "subtitle": "Ukážu vám, jak porovnat hypoteční nabídky podle splátek, dalších nákladů a podmínek. Oddělíme měsíční dopad do rozpočtu od ceny úvěru a prověříme, co by znamenala pozdější změna.",
+    "excerpt": "Nižší sazba může být spojená s dražším pojištěním nebo dalšími podmínkami. Na skutečném případu a praktickém postupu ukážu, která čísla porovnávat a co si vyžádat před rozhodnutím.",
+    "estimatedReadTime": "7 minut",
+    "heroSummary": [
+      "Rozlišíte úrokovou sazbu, RPSN a pravidelné měsíční platby.",
+      "Prověříte cenu a podmínky služeb spojených se slevou.",
+      "Na skutečném případu uvidíte vliv ceny pojištění na měsíční účet.",
+      "Připravíte si srovnatelné nabídky včetně poplatků a zbývajícího dluhu."
+    ]
+  },
+  "sections": [
+    {
+      "id": "sazba-je-jen-viditelna-cast",
+      "eyebrow": "TŘI RŮZNÉ ÚDAJE",
+      "title": "Sazba, RPSN a měsíční platba",
+      "intro": "Dvě nabídky mohou mít podobnou sazbu a přesto jiný dopad do rozpočtu. Nejdřív s vámi oddělím, co jednotlivá čísla znamenají.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "comparison",
+          "title": "Co z nabídky zjistíte",
+          "items": [
+            {
+              "label": "Úroková sazba",
+              "summary": "Procento, podle kterého se počítá úrok z úvěru.",
+              "points": [
+                "Pomáhá určit úrokovou část splátky.",
+                "Sama nevyjadřuje všechny náklady na získání a používání úvěru."
+              ]
+            },
+            {
+              "label": "RPSN",
+              "summary": "Roční procentní vyjádření celkových nákladů úvěru podle zákonných pravidel.",
+              "points": [
+                "Zahrnuje úrok i známé náklady služeb nutných pro získání úvěru nebo nabízených podmínek.",
+                "Výpočet má zákonné předpoklady; nejde o předpověď budoucích sazeb."
+              ]
+            },
+            {
+              "label": "Měsíční platba",
+              "summary": "Součet splátky a dalších pravidelných plateb v dané variantě.",
+              "points": [
+                "Ukazuje, kolik potřebuje běžný rozpočet.",
+                "Splátka obsahuje také vracenou jistinu; celý odtok proto není cenou půjčení peněz."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "RPSN je důležité cenové vodítko, ale nepopisuje rozsah pojištění ani možnosti změny smlouvy. Rozpis a předpoklady zkontrolujeme v předsmluvním přehledu. Vedle něj sledujeme pravidelné platby, jednorázové výdaje a podmínky nabídky. Budoucí sazbu po konci fixace dnešní nabídka nezaručuje."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sleva-na-sazbe-je-smena",
+      "eyebrow": "PODMÍNKY SLEVY",
+      "title": "Co stojí podmínky slevy",
+      "intro": "Sleva může být spojená s účtem, pojištěním nebo jinou službou. Rozhoduje cena celého řešení i to, zda služba odpovídá vašim potřebám.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Cena s podmínkou i bez ní",
+              "description": "Vyžádejte si obě varianty, pokud je banka nabízí. Rozdíl ve splátce porovnejte s cenou účtu, pojištění a dalších požadovaných služeb."
+            },
+            {
+              "title": "Rozsah služby",
+              "description": "U pojištění posuďte rizika, limity, spoluúčast, výluky a návaznost na současné smlouvy. Stejná pojistná částka ještě neznamená stejné krytí."
+            },
+            {
+              "title": "Důsledky změny",
+              "description": "Co se stane se sazbou, pokud přestanete plnit obrat, změníte účet nebo pojištění? Zjistěte, zda lze podmínku splnit i službou od jiného poskytovatele."
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Navázaný produkt nemusí být nevýhodný. Pokud jej potřebujete a obstojí cenou i rozsahem, může být sleva přínosem. Pokud jej už máte jinde nebo byste si ho samostatně nevybrali, porovnáme také nabídku bez něj.",
+            "Platnost sazby a nabídky si nechte potvrdit písemně. Omezená platnost může mít reálný důvod; k rozhodnutí ale potřebujete znát celý rozsah závazků. Nejasnou položku doplníme před tím, než podle výsledku vyberete variantu."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pripad-kdy-vyssi-sazba-vysla-levneji",
+      "eyebrow": "PŘÍPAD Z PRAXE",
+      "title": "Co ukázaly dvě konkrétní nabídky",
+      "intro": "Ve skutečném anonymizovaném případu klientky změnila cena pojištění nemovitosti výsledek porovnání pravidelných měsíčních plateb.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "caseStudy",
+          "context": "Porovnávali jsme nabídku klientčiny banky s druhou variantou. Nabídky měly stejnou splatnost a stejnou pojistnou částku u nemovitosti. Klientka chtěla mít podle svého plánu hypotéku splacenou přibližně za patnáct let.",
+          "initialState": [
+            "První nabídka měla nižší sazbu a splátku, ale byla spojená s dražším pojištěním nemovitosti."
+          ],
+          "problem": [
+            "Při pohledu pouze na úrokovou sazbu nebylo vidět, kolik bude odcházet za splátku a pojištění dohromady."
+          ],
+          "analysis": "Položil jsem vedle sebe obě splátky a pojistné. Ve druhé variantě byla splátka vyšší, rozdíl v ceně pojištění ji ale převážil.",
+          "whatChanged": [
+            "Klientka zvolila druhou variantu se samostatně sjednaným pojištěním."
+          ],
+          "result": [
+            "Uvedené pravidelné měsíční platby měly nižší součet a sjednaná splatnost dál odpovídala jejímu plánu."
+          ],
+          "takeaway": "Tento případ ukazuje dopad dvou konkrétních měsíčních položek. Sám neprokazuje nižší celkové náklady úvěru ani shodný rozsah pojištění."
+        },
+        {
+          "type": "comparison",
+          "title": "Tehdejší nabídky ve stejném přehledu",
+          "items": [
+            {
+              "label": "Nabídka klientčiny banky",
+              "summary": "Nižší sazba s navázaným pojištěním nemovitosti.",
+              "points": [
+                "Úroková sazba: 4,84 %",
+                "Splátka úvěru: 9 238 Kč / měsíc",
+                "Pojištění nemovitosti: 768 Kč / měsíc",
+                "Součet uvedených plateb: přibližně 10 006 Kč / měsíc"
+              ]
+            },
+            {
+              "label": "Druhá nabídka",
+              "summary": "Vyšší sazba a samostatně sjednané pojištění.",
+              "points": [
+                "Úroková sazba: 5,04 %",
+                "Splátka úvěru: 9 516 Kč / měsíc",
+                "Pojištění nemovitosti: 331 Kč / měsíc",
+                "Součet uvedených plateb: přibližně 9 847 Kč / měsíc"
+              ]
+            }
+          ],
+          "takeaway": "Splátky se lišily o 278 Kč a pojistné o 437 Kč opačným směrem. Součet byl ve druhé variantě přibližně o 159 Kč měsíčně nižší. Jde o historické nabídky tohoto případu, nikoli o současný sazebník."
+        }
+      ]
+    },
+    {
+      "id": "jak-pocitat-celkove-naklady",
+      "eyebrow": "SROVNATELNÉ VSTUPY",
+      "title": "Jak porovnat náklady za stejnou dobu",
+      "intro": "Při porovnání odděluji částku, která odejde z účtu, od nákladů úvěru. Současně potřebuji vědět, kolik budete na konci zvoleného období ještě dlužit.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "process",
+          "steps": [
+            {
+              "title": "Sjednotit zadání",
+              "description": "Stejná požadovaná výše úvěru, způsob čerpání, splatnost a porovnávané období. Pokud se varianty některým vstupem liší, rozdíl výslovně označíme."
+            },
+            {
+              "title": "Sepsat všechny platby",
+              "description": "Splátky úvěru, pravidelné doplňkové služby a jednorázové výdaje. Zahrneme i společné položky do celkového rozpočtu; pro výběr nabídky pak zvýrazníme skutečné rozdíly."
+            },
+            {
+              "title": "Oddělit jistinu od nákladů",
+              "description": "Ze splátkového kalendáře zjistíme úroky a splacenou jistinu. Úroky, poplatky a související služby ukážeme zvlášť od vracených půjčených peněz."
+            },
+            {
+              "title": "Porovnat zbývající dluh",
+              "description": "Vedle zaplacených částek uvedeme zůstatek jistiny ke stejnému dni. Nižší splátky mohou znamenat, že po daném období zůstává větší dluh."
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Pro období se známou sazbou lze srovnání postavit na konkrétních podmínkách nabídek. Jestliže mají různé fixace, nesmíme delší období počítat s neznámou budoucí sazbou jako s jistotou. Předpoklady dalšího vývoje uvedeme samostatně, nikoli jako slib.",
+            "Delší splatnost může snížit povinnou měsíční splátku, ale při stejných ostatních podmínkách prodlužuje úročení. Proto vedle dopadu do rozpočtu ukážu i náklady a tempo snižování dluhu. Měsíční splátka vynásobená počtem měsíců není sama o sobě cenou úvěru.",
+            "U poplatků rozlišíme jejich účel a četnost: například ocenění nemovitosti, čerpání nebo zápis zástavy. Pokud je některá položka odpuštěná či pouze odhadnutá, v přehledu to označíme. Pojištění ani jiný poplatek nesmíme do stejného součtu započítat dvakrát."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flexibilita-ma-hodnotu-az-kdyz-se-neco-zmeni",
+      "eyebrow": "BUDOUCÍ ZMĚNY",
+      "title": "Fixace a možnosti změny",
+      "intro": "Fixace sazby a celková splatnost jsou dvě různé lhůty. Volbu fixace posuzujeme i podle toho, kdy můžete potřebovat bydlení nebo financování změnit.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "explanation",
+          "subsections": [
+            {
+              "title": "Konec fixace",
+              "paragraphs": [
+                "Před koncem fixace banka sdělí sazbu pro další období. Prověřte termíny a podklady potřebné pro případnou změnu banky. V rozpočtu posoudíme i vyšší budoucí splátku. Delší nebo kratší fixaci nevolíme pouze podle odhadu, kam se trh pohne."
+              ]
+            },
+            {
+              "title": "Mimořádné a předčasné splacení",
+              "paragraphs": [
+                "Hypotéku můžete předčasně splatit i během fixace. Před plánovanou splátkou si od banky vyžádejte vyčíslení a ověřte, zda splňujete podmínky pro splacení bez náhrady nákladů. Rozhoduje termín, důvod splacení i právní režim vaší smlouvy."
+              ]
+            },
+            {
+              "title": "Změna splátky nebo splatnosti",
+              "paragraphs": [
+                "Prodloužení splatnosti či odklad splátek mohou vyžadovat nové posouzení a souhlas banky. Prověřte dopad na úroky, poplatky i konec splácení. Budoucí možnost úlevy nenahrazuje rozpočet, který funguje už při sjednání."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hypoteka-musi-zapadat-do-planu",
+      "eyebrow": "ROZPOČET A PROVEDITELNOST",
+      "title": "Sedí nabídka i na váš rozpočet?",
+      "intro": "Cena je důležitá, ale nabídka musí odpovídat také vašemu příjmu, plánům a podmínkám samotného nákupu.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Prostor po zaplacení",
+              "description": "Vedle splátky započítejte provoz bydlení, další závazky a nepravidelné výdaje. Ověřte, zda zůstává dostupná rezerva."
+            },
+            {
+              "title": "Známé změny příjmů",
+              "description": "Rodičovská, podnikání nebo změna práce patří do porovnání, pokud je plánujete. Nepracujte jen s dnešní výplatou."
+            },
+            {
+              "title": "Termíny nákupu a čerpání",
+              "description": "Prověřte odhad nemovitosti, potřebné vlastní prostředky, podmínky čerpání a návaznost na kupní smlouvu. Nabídka sazby sama není příslibem schválení."
+            },
+            {
+              "title": "Váš plán splácení",
+              "description": "Chcete dluh ukončit dříve, nebo potřebujete nižší povinnou splátku? Porovnáme přínos, náklady a podmínky obou variant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "otazky-pred-podpisem",
+      "eyebrow": "PRAKTICKÁ PŘÍPRAVA",
+      "title": "Co připravit k porovnání",
+      "intro": "Nejvíc pomůže písemná nabídka se všemi podmínkami. Samotný údaj o sazbě nebo nezávazný výpočet splátky pro srovnání nestačí.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Údaje k úvěru",
+              "description": "Nabídku a předsmluvní informace s výší úvěru, splatností, fixací, RPSN, splátkovým kalendářem a dobou platnosti podmínek."
+            },
+            {
+              "title": "Služby a poplatky",
+              "description": "Rozpis nákladů, podmínky slev a nabídku pojištění včetně rozsahu. Přidejte současnou pojistnou smlouvu, pokud ji chcete zachovat."
+            },
+            {
+              "title": "Rozpočet a plánované změny",
+              "description": "Orientační příjmy, výdaje a rezervu, termín koupě nebo refinancování a případný plán prodeje či mimořádných splátek."
+            }
+          ]
+        },
+        {
+          "type": "nextAction",
+          "title": "Proberme vaše hypoteční nabídky",
+          "paragraphs": [
+            "Na úvodním hovoru s vámi proberu, co financujete a mezi čím se rozhodujete. Domluvíme se, které nabídky a podklady připravit ke srovnání."
+          ],
+          "action": {
+            "label": "Domluvit úvodní hovor",
+            "intent": "open-contact-or-screening-flow"
+          }
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "title": "Ať víte, za co platíte",
+    "paragraphs": [
+      "Výsledkem porovnání má být přehled pravidelných plateb, nákladů, zbývajícího dluhu a podmínek. Podle něj se můžete rozhodnout, která nabídka odpovídá vašemu rozpočtu a proč jí dáváte přednost."
+    ]
+  },
+  "relatedTopics": [
+    {
+      "topic": "Kolik vám půjčí banka a kolik unese váš rozpočet?",
+      "reason": "Před samotným porovnáním nabídek pomáhá určit bezpečnou výši úvěru a splátky, uvnitř které má výběr konkrétní banky vůbec smysl.",
+      "slug": "banka-vam-pujci-vic-nez-si-muzete-dovolit"
+    },
+    {
+      "topic": "Kolik má mít domácnost v rezervě? Jedno správné číslo neexistuje.",
+      "reason": "Vysvětluje, jak velký polštář má vedle hypotéky zůstat a proč jej nesmí spotřebovat honba za nejvyšší možnou splátkou.",
+      "slug": "kolik-ma-mit-domacnost-v-rezerve"
+    },
+    {
+      "topic": "Končí vám fixace? Neberte první nabídku automaticky.",
+      "slug": "konec-fixace-hypoteky",
+      "reason": "Jak připravit porovnání sazeb a podmínek před dalším fixačním obdobím."
+    }
+  ],
+  "editorial": {
+    "contentStatus": "review-ready",
+    "sourceBasis": "Rozhovorové odpovědi Davida Pokorného, téma 5, strany 26–34 zdrojového dokumentu. Zadavatel dne 2026-10-05 potvrdil, že všechny popsané případy jsou skutečné, včetně uvedených detailů. Potvrzení nebylo nezávislým auditem soukromých nabídek.",
+    "needsExternalVerification": true,
+    "review": {
+      "status": "pending"
+    },
+    "verificationItems": [
+      {
+        "id": "05-01-slozeni-rpsn-poplatky-a-produktove-podminky-je-nutne",
+        "title": "Složení RPSN, poplatky a produktové podmínky je nutné ověřit v konkrétní nabídce",
+        "instruction": "Dokončit stávající kontrolu formulace RPSN a práci s předpoklady konkrétních nabídek. Rozlišovat zákonný ukazatel, pravidelné peněžní odtoky a náklady bez vracené jistiny; nepočítat stejnou položku dvakrát.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "sazba-je-jen-viditelna-cast",
+        "claimRef": "sazba-je-jen-viditelna-cast:verification-1",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [
+          "https://www.cnb.cz/cs/casto-kladene-dotazy/Co-je-ukazatel-RPSN/",
+          "https://e-sbirka.gov.cz/sb/2016/257?zalozka=text"
+        ],
+        "requiresRecheck": true,
+        "note": "Rozsah článku zúžen na obecný postup a historický případ. Konkrétní bankovní sazebník, RPSN nebo neznámý poplatek nebyl doplněn. Primární zdroje ověřeny 2026-10-05: §133 zahrnuje známé povinné služby i při podmínění nabízené sazby, §134 stanoví předpoklady výpočtu. RPSN není prognóza sazeb. Oddělení nákladů a jistiny bylo promítnuto do výkladu."
+      },
+      {
+        "id": "05-02-konkretni-slevove-podminky-jsou-produktove-a-casove",
+        "title": "Konkrétní slevové podmínky jsou produktově a časově citlivé",
+        "instruction": "Posoudit finální podmíněné znění o navázaných službách. U konkrétní nabídky porovnat cenu, rozsah a důsledky změny; nezobecňovat, že každá sleva nebo navázaná služba je nevýhodná.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "sleva-na-sazbe-je-smena",
+        "claimRef": "sleva-na-sazbe-je-smena:verification-2",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [
+          "https://www.csas.cz/cs/caste-dotazy/muzu-ziskat-slevy-na-urokove-sazbe",
+          "https://e-sbirka.gov.cz/sb/2016/257?zalozka=text"
+        ],
+        "requiresRecheck": true,
+        "note": "Článek neuvádí aktuální slevové sazby konkrétní banky. Historický případ zůstává omezený na dodané nabídky. Aktuální bankovní zdroj ověřuje princip slevy podmíněné službou, nikoli výhodnost pro konkrétního klienta. §115(2) rozlišuje pojištění požadované pro uzavření úvěru; veřejný text netvrdí automatické zachování slevy při změně pojistitele."
+      },
+      {
+        "id": "05-03-pravidla-mimoradneho-a-predcasneho-splaceni-vyzaduji",
+        "title": "Pravidla mimořádného a předčasného splácení vyžadují aktuální právní kontrolu",
+        "instruction": "Dokončit stávající kontrolu obecného popisu mimořádného a předčasného splacení podle použitelné právní úpravy a smlouvy. Článek nepřidává konkrétní procentní stropy, zákonná okna ani nárok na bankou schvalovanou úpravu splátek.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "flexibilita-ma-hodnotu-az-kdyz-se-neco-zmeni",
+        "claimRef": "flexibilita-ma-hodnotu-az-kdyz-se-neco-zmeni:verification-3",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [
+          "https://e-sbirka.gov.cz/sb/2016/257?zalozka=text",
+          "https://www.cnb.cz/cs/dohled-financni-trh/ochrana-spotrebitele/spotrebitelsky-uver/",
+          "https://www.cnb.cz/cs/dohled-financni-trh/legislativni-zakladna/stanoviska-k-regulaci-financniho-trhu/RS2024-38"
+        ],
+        "requiresRecheck": true,
+        "note": "Změna splatnosti nebo odklad nejsou prezentovány jako automatický nárok. Konkrétní výpočet náhrady nákladů zůstává mimo obecný článek. Ověřeny §102 pro oznámení nové sazby před koncem fixace a §117 pro předčasné splacení a vyčíslení. Konkrétní právní režim se odvíjí také od přechodných ustanovení; číselné limity se veřejně nepřidávají."
+      },
+      {
+        "id": "05-04-srovnani-investovani-a-rychlejsiho-splaceni-neni-uni",
+        "title": "Srovnání investování a rychlejšího splácení není univerzální pravidlo",
+        "instruction": "Zachovat oddělení dopadu do rozpočtu, nákladů a tempa splácení. Veřejný text neobsahuje porovnání s očekávaným investičním výnosem ani doporučení investovat místo splácení.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "jak-pocitat-celkove-naklady",
+        "claimRef": "jak-pocitat-celkove-naklady:verification-4",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [],
+        "requiresRecheck": true,
+        "note": "Historický název a původní pending stav ponechány kvůli auditu. Spekulativní argument o alternativním investičním výnosu byl z veřejného výkladu odstraněn."
+      },
+      {
+        "id": "05-05-natlak-podminky-a-cenove-rozdily-se-musi-posuzovat-v",
+        "title": "Nátlak, podmínky a cenové rozdíly se musí posuzovat v konkrétním čase",
+        "instruction": "Zachovat rozlišení mezi skutečnou dobou platnosti nabídky a nedostatečně vysvětlenými podmínkami. Článek nehodnotí konkrétní banku a nepovažuje nízkou sazbu samu za varování.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "sleva-na-sazbe-je-smena",
+        "claimRef": "sleva-na-sazbe-je-smena:verification-5",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [
+          "https://www.csas.cz/cs/caste-dotazy/muzu-ziskat-slevy-na-urokove-sazbe"
+        ],
+        "requiresRecheck": true,
+        "note": "Samostatná opakující se sekce varovných signálů byla spojena s praktickou kontrolou podmínek slevy."
+      },
+      {
+        "id": "05-case-anonymization-release-check",
+        "title": "Ověřit dostatečnou anonymizaci klientského případu",
+        "instruction": "Před release potvrdit, že kombinace částek, okolností a výsledku neumožňuje zpětnou identifikaci klientky.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "pripad-kdy-vyssi-sazba-vysla-levneji",
+        "claimRef": "pripad-kdy-vyssi-sazba-vysla-levneji:case-anonymization",
+        "evidenceRequired": "Zaznamenaná anonymizační kontrola konkrétního případu.",
+        "sources": [
+          "Potvrzení zadavatele v konverzaci dne 2026-10-05: všechny uvedené případy jsou skutečné včetně jejich detailů."
+        ],
+        "requiresRecheck": false,
+        "note": "Zadavatel dne 2026-10-05 potvrdil skutečnost všech případů a uvedených detailů; tento záznam není nezávislý audit klientských dokumentů ani automatické uzavření původní anonymizační kontroly. Aritmetika uvedených plateb byla ověřena. Podklad uvádí stejnou splatnost a pojistnou částku, nikoli jistinu, přesnou fixaci nebo úplnou srovnatelnost krytí. Přibližně patnáct let je cíl klientky, ne doplněný anuitní model. Rozdíl splátek se nepřipisuje pouze sazbě a z měsíčního součtu se neodvozuje celková úspora úvěru."
+      }
+    ],
+    "productionNotes": {
+      "videoOpportunities": [
+        {
+          "recommendedPlacement": "Za číselným srovnáním ve skutečném případu.",
+          "recommendedTopic": "Jak může mít sazba 5,04 % po započtení pojištění nižší celkovou měsíční platbu než 4,84 %.",
+          "suggestedDuration": "60–90 sekund",
+          "reason": "Krátké vizuální sečtení splátky a pojištění okamžitě demonstruje hlavní kontrast článku ještě před detailním vysvětlením."
+        },
+        {
+          "recommendedPlacement": "Před závěrečnou praktickou kontrolou.",
+          "recommendedTopic": "Pět řádků, které si vyžádat u každé hypoteční nabídky.",
+          "suggestedDuration": "75–120 sekund",
+          "reason": "Video může ukázat jednoduchý jednostránkový rozpad nabídky: splátka, povinné produkty, vstupní náklady, podmínky a flexibilita."
+        }
+      ],
+      "interactiveOpportunities": [
+        {
+          "type": "comparisonToolOpportunity",
+          "title": "Porovnávač skutečné ceny hypotečních nabídek",
+          "inputs": [
+            "Výše úvěru, splatnost a fixace",
+            "Úroková sazba a měsíční splátka každé nabídky",
+            "Povinné pojištění, účet a další pravidelné produkty",
+            "Jednorázové poplatky",
+            "Podmínky udržení sazby",
+            "Základní informace o flexibilitě"
+          ],
+          "outputs": [
+            "Pravidelné měsíční platby",
+            "Úroky a související náklady za stejné období",
+            "Splacená jistina a zůstatek úvěru na konci období",
+            "Přehled podmínek a neověřených vstupů"
+          ],
+          "reason": "Článek stojí na tom, že sazba sama nestačí. Nástroj umožní čtenáři převést dvě konkrétní nabídky do stejného srovnatelného formátu."
+        },
+        {
+          "type": "diagnosticToolOpportunity",
+          "title": "Kontrola podmínek za sazbou",
+          "inputs": [
+            "Povinný účet a minimální obrat",
+            "Povinné pojištění a jeho cena",
+            "Dopad nesplnění podmínky na sazbu",
+            "Možnost změnit poskytovatele produktu",
+            "Požadované doplňkové služby"
+          ],
+          "outputs": [
+            "Seznam podmínek, které mají vlastní finanční cenu",
+            "Otázky, které je nutné položit bance nebo poradci",
+            "Signál, zda produkt obstojí i bez slevy na sazbě"
+          ],
+          "reason": "Pomůže oddělit skutečnou slevu od ceny produktového balíku bez toho, aby automaticky hodnotil konkrétní banku jako dobrou nebo špatnou."
+        }
+      ],
+      "verificationRequired": [
+        {
+          "topic": "Složení RPSN, poplatky a produktové podmínky je nutné ověřit v konkrétní nabídce",
+          "reason": "Dokončit stávající kontrolu formulace RPSN a práci s předpoklady konkrétních nabídek. Rozlišovat zákonný ukazatel, pravidelné peněžní odtoky a náklady bez vracené jistiny; nepočítat stejnou položku dvakrát.",
+          "priority": "high"
+        },
+        {
+          "topic": "Konkrétní slevové podmínky jsou produktově a časově citlivé",
+          "reason": "Posoudit finální podmíněné znění o navázaných službách. U konkrétní nabídky porovnat cenu, rozsah a důsledky změny; nezobecňovat, že každá sleva nebo navázaná služba je nevýhodná.",
+          "priority": "high"
+        },
+        {
+          "topic": "Pravidla mimořádného a předčasného splácení vyžadují aktuální právní kontrolu",
+          "reason": "Dokončit stávající kontrolu obecného popisu mimořádného a předčasného splacení podle použitelné právní úpravy a smlouvy. Článek nepřidává konkrétní procentní stropy, zákonná okna ani nárok na bankou schvalovanou úpravu splátek.",
+          "priority": "high"
+        },
+        {
+          "topic": "Srovnání investování a rychlejšího splácení není univerzální pravidlo",
+          "reason": "Zachovat oddělení dopadu do rozpočtu, nákladů a tempa splácení. Veřejný text neobsahuje porovnání s očekávaným investičním výnosem ani doporučení investovat místo splácení.",
+          "priority": "high"
+        },
+        {
+          "topic": "Nátlak, podmínky a cenové rozdíly se musí posuzovat v konkrétním čase",
+          "reason": "Zachovat rozlišení mezi skutečnou dobou platnosti nabídky a nedostatečně vysvětlenými podmínkami. Článek nehodnotí konkrétní banku a nepovažuje nízkou sazbu samu za varování.",
+          "priority": "high"
+        },
+        {
+          "topic": "Ověřit dostatečnou anonymizaci klientského případu",
+          "reason": "Před release potvrdit, že kombinace částek, okolností a výsledku neumožňuje zpětnou identifikaci klientky.",
+          "priority": "medium"
+        }
+      ],
+      "implementationNotes": [
+        "H1, slug a fotografie zůstávají zachovány. Sedm sekcí používá sdílené bloky bez nové kalkulačky nebo screeningu.",
+        "Skutečný anonymizovaný případ zachovává stručný caseStudy. Čísla patří pouze do jedné comparison tabulky a rozdílů uvedených pod ní; žádný duplicitní financialDelta nebo rail.",
+        "Případ porovnává uvedené měsíční platby, nikoli doložené celkové náklady. Shodná pojistná částka není důkazem shodného rozsahu krytí.",
+        "Výše jistiny ani přesná fixace nejsou dodané. Nevytvářet zpětný výpočet úvěru; přibližně patnáctileté splacení je cíl klientky. Vyšší splátku nepřipisovat pouze rozdílu sazby.",
+        "Měsíční odtok obsahuje vracenou jistinu. Srovnání nákladů musí oddělit jistinu, úroky, poplatky a související služby a uvést zbývající dluh ke stejnému dni.",
+        "Budoucí sazby a ceny služeb nepředstírat jako jisté. Při odlišných fixacích označit neznámou část období a případné předpoklady.",
+        "Do součtů nezapočítávat pojištění ani jinou položku dvakrát. Společné výdaje patří do rozpočtu, rozdíly mezi nabídkami do rozhodovacího porovnání.",
+        "Článek obsahuje právě jeden nextAction se stávajícím kontaktním intentem a bez conversionId.",
+        "Původních šest verificationItems zachovává ID, názvy, statusy a publikační příznaky. Ověření zdrojů není automatickým odborným schválením; nové publikační požadavky nebyly přidány."
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+export { default as ArticleDetailTemplate } from "./ArticleDetailTemplate";
+export type { ArticleDetailTemplateProps } from "./ArticleDetailTemplate";
+export { default as ContentDetailTemplate } from "./ContentDetailTemplate";
+export type { ContentDetailTemplateProps } from "./ContentDetailTemplate";
+export { default as ConversionTemplate } from "./ConversionTemplate";
+export type { ConversionTemplateProps } from "./ConversionTemplate";
+export { default as HomeTemplate } from "./HomeTemplate";
+export type { HomeTemplateProps } from "./HomeTemplate";
+export { default as IndexTemplate } from "./IndexTemplate";
+export type { IndexTemplateProps } from "./IndexTemplate";
+export { default as LegalTemplate } from "./LegalTemplate";
+export type { LegalTemplateProps } from "./LegalTemplate";
+export { default as SystemTemplate } from "./SystemTemplate";
+export type { SystemTemplateProps } from "./SystemTemplate";
+export type { TemplateSurface } from "./PageTemplateFrame";

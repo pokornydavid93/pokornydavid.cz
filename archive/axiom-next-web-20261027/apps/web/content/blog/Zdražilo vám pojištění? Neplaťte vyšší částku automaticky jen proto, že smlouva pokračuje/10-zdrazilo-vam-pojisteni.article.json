@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 2,
+  "publication": {
+    "status": "review",
+    "author": "David Pokorný",
+    "publishedAt": "2026-06-24",
+    "updatedAt": "2026-08-12"
+  },
+  "meta": {
+    "slug": "zdrazilo-vam-pojisteni",
+    "topic": "Kontrola zdraženého pojištění majetku před automatickým prodloužením",
+    "category": "Pojištění majetku",
+    "primaryIntent": "Pomoci čtenáři ověřit, zda vyšší pojistné odpovídá současnému trhu, rozsahu krytí a hodnotě majetku.",
+    "audience": "Člověk, kterému zdražilo pojištění auta, domácnosti nebo nemovitosti a nechce další období zaplatit bez kontroly.",
+    "estimatedReadTime": 6
+  },
+  "seo": {
+    "title": "Zdražilo vám pojištění? Neplaťte vyšší částku automaticky jen proto, že smlouva pokračuje",
+    "description": "Navýšené pojistné není konečný verdikt. U pojištění auta, domácnosti nebo nemovitosti má smysl zkontrolovat cenu, krytí i aktuální hodnotu majetku."
+  },
+  "hero": {
+    "category": "Pojištění majetku",
+    "eyebrow": "KONTROLA CENY I KRYTÍ PŘED DALŠÍ PLATBOU",
+    "title": "Zdražilo vám pojištění? Neplaťte vyšší částku automaticky jen proto, že smlouva pokračuje",
+    "displayTitle": "Zdražilo vám pojištění?\nNeplaťte automaticky víc.",
+    "subtitle": "Navýšené pojistné není konečný verdikt. U pojištění auta, domácnosti nebo nemovitosti má smysl zkontrolovat cenu, krytí i aktuální hodnotu majetku.",
+    "excerpt": "Navýšené pojistné není konečný verdikt. U pojištění auta, domácnosti nebo nemovitosti má smysl zkontrolovat cenu, krytí i aktuální hodnotu majetku.",
+    "estimatedReadTime": "6 minut",
+    "heroSummary": [
+      "O kolik se pojistné zvýšilo.",
+      "Jestli cena odpovídá současnému trhu.",
+      "Jestli krytí a limity odpovídají hodnotě majetku.",
+      "Jestli smlouva není zastaralá.",
+      "Jestli nejde získat stejnou nebo lepší ochranu efektivněji."
+    ]
+  },
+  "sections": [
+    {
+      "id": "dlouholety-klient-nemusi-mit-automaticky-nejlepsi-cenu",
+      "eyebrow": "01 / VÝCHOZÍ SITUACE",
+      "title": "Dlouholetý klient nemusí mít automaticky nejlepší cenu",
+      "intro": "V oznámení o pojistném na další období vidíte vyšší částku. Co se proti minulému roku změnilo?",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Samotná nižší cena ještě neznamená vhodnější smlouvu."
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Při kontrole se proto dívejte na pojistné společně s rozsahem ochrany, limity a aktuální hodnotou majetku."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "co-porovnat-pred-zaplacenim",
+      "eyebrow": "02 / KONTROLA SMLOUVY",
+      "title": "Co porovnat před zaplacením",
+      "intro": "Připravte si současnou smlouvu a oznámení o novém pojistném. Při porovnání jiné nabídky projděte stejných pět bodů.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Cena",
+              "description": "Srovnejte dosavadní a nové pojistné za stejné období. Zapište si rozdíl."
+            },
+            {
+              "title": "Rozsah krytí",
+              "description": "Ověřte, co pojištění kryje a jaké má výluky. Zahrnuje rizika, proti kterým se potřebujete chránit?"
+            },
+            {
+              "title": "Limity plnění",
+              "description": "Zkontrolujte limity u rizik, která jsou pro vás podstatná. U případné jiné nabídky porovnejte i jejich výši."
+            },
+            {
+              "title": "Hodnota majetku",
+              "description": "Zkontrolujte pojistnou částku i hodnotu majetku, ze které smlouva vychází. Pokud si jejich aktuálností nejste jistí, nechte je ověřit."
+            },
+            {
+              "title": "Spoluúčast",
+              "description": "Zjistěte, jakou spoluúčast smlouva uvádí pro jednotlivá rizika. Při porovnání nabídek zkontrolujte, zda je stejná."
+            }
+          ]
+        },
+        {
+          "type": "interactiveTool",
+          "tool": "screening",
+          "id": "screening",
+          "title": "Ujasněte si, co ve smlouvě prověřit",
+          "text": "Vyberte svou situaci a to, co chcete zjistit. Přehled konkrétních kontrol získáte bez zadání kontaktu.",
+          "screeningType": "insurance-price-check",
+          "conversionId": "zdrazovani-pojisteni"
+        }
+      ]
+    },
+    {
+      "id": "kdy-pojistne-neplatit-automaticky",
+      "eyebrow": "03 / KDY ZPOZORNĚT",
+      "title": "Kdy je čas zkontrolovat smlouvu",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "explanation",
+          "subsections": [
+            {
+              "title": "Smlouvu jste dlouho nekontrolovali",
+              "paragraphs": [
+                "Od poslední kontroly se mohl změnit váš majetek i vaše potřeby. Ověřte, zda smlouva stále odpovídá dnešní situaci."
+              ]
+            },
+            {
+              "title": "Pojistné se výrazně zvýšilo",
+              "paragraphs": [
+                "Zjistěte, co se kromě ceny změnilo. Případnou jinou nabídku porovnávejte při stejném krytí, limitech a spoluúčasti."
+              ]
+            },
+            {
+              "title": "Nemáte jasno v rozsahu ochrany",
+              "paragraphs": [
+                "Pokud nevíte, při jaké škodě a za jakých podmínek pojišťovna plní, nechte si nejasná místa ve smlouvě vysvětlit."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "co-odhalila-kontrola-ceny",
+      "eyebrow": "04 / PŘÍPAD Z PRAXE",
+      "title": "Co ukázala kontrola smlouvy",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "explanation",
+          "subsections": [
+            {
+              "title": "Výchozí situace",
+              "paragraphs": [
+                "Rodina dlouhodobě platila vysoké pojistné, přesto měla nemovitost podpojištěnou."
+              ]
+            },
+            {
+              "title": "Co ukázalo porovnání",
+              "paragraphs": [
+                "Cenové porovnání ukázalo výrazný rozdíl v roční platbě. Pro posouzení nabídek bylo potřeba porovnat také krytí, limity, výluky a pojistnou částku."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "keyInsight",
+          "text": "Dobrá cena je jen část dobře nastavené smlouvy."
+        }
+      ]
+    },
+    {
+      "id": "nejdriv-zkontrolovat-potom-zaplatit",
+      "eyebrow": "05 / DALŠÍ KROK",
+      "title": "Jak postupovat při zdražení pojištění",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Připravte podklady",
+              "description": "Dohledejte platnou smlouvu, dodatky a aktuální oznámení o pojistném, pokud už přišlo."
+            },
+            {
+              "title": "Sepište změny a otázky",
+              "description": "Poznamenejte si, co se změnilo v ceně nebo krytí a čemu ve smlouvě nerozumíte."
+            },
+            {
+              "title": "Ověřte splatnost",
+              "description": "Zkontrolujte termín platby uvedený ve smlouvě nebo v oznámení."
+            }
+          ]
+        },
+        {
+          "type": "nextAction",
+          "title": "Proberme vaše pojištění",
+          "paragraphs": [
+            "Na úvodním hovoru spolu probereme, co vám zdražilo, a domluvíme se, které podklady připravit ke kontrole."
+          ],
+          "action": {
+            "label": "Domluvit si kontrolu",
+            "intent": "article-consultation",
+            "conversionId": "zdrazovani-pojisteni"
+          }
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "title": "Kontrola nemusí znamenat změnu pojišťovny",
+    "paragraphs": [
+      "Současná smlouva může vašim potřebám stále odpovídat. Společná kontrola ceny a rozsahu ochrany pomůže ujasnit, co funguje a zda je potřeba něco upravit."
+    ]
+  },
+  "relatedTopics": [
+    {
+      "topic": "Cestovko zdarma od karty vás nemusí zachránit ve chvíli, kdy ho potřebujete",
+      "reason": "Ukazuje, proč se u pojištění nemá kontrolovat jen jeho existence, ale také limity a podmínky."
+    },
+    {
+      "topic": "Máte pojištění příjmu, nebo jen pocit, že jste pojištění?",
+      "reason": "Navazuje stejným principem kontroly skutečného krytí u ochrany příjmu."
+    },
+    {
+      "topic": "Plánujete jednou děti? Některé pojistné možnosti lze sjednat jen předem",
+      "reason": "Ukazuje, proč je u životního pojištění důležitý okamžik sjednání a přesné podmínky krytí."
+    }
+  ],
+  "editorial": {
+    "contentStatus": "Legacy runtime content migrated to ArticleDocumentV2 and ready for final editorial approval.",
+    "sourceBasis": "Public articleFlow from zdrazilo-vam-pojisteni.mdx, migrated as the previously active runtime projection.",
+    "needsExternalVerification": true,
+    "sensitivity": "Insurance pricing, underinsurance and provenance of an anonymized or model case.",
+    "review": {
+      "status": "pending"
+    },
+    "verificationItems": [
+      {
+        "id": "10-case-provenance-and-figures",
+        "title": "Potvrdit původ a čísla případu 28 500 Kč → 14 200 Kč",
+        "instruction": "Potvrdit, zda jde o skutečný anonymizovaný, kompozitní, nebo modelový případ, a doložit uvedené částky.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "co-odhalila-kontrola-ceny",
+        "claimRef": "co-odhalila-kontrola-ceny:10-case-provenance-and-figures",
+        "evidenceRequired": "Záznam původu případu, anonymizovaný podklad a cenové porovnání.",
+        "sources": [],
+        "requiresRecheck": true
+      },
+      {
+        "id": "10-underinsurance-figure",
+        "title": "Ověřit údaj o podpojištění 2,4 milionu Kč",
+        "instruction": "Potvrdit výpočet rozdílu pojistné a skutečné hodnoty majetku i způsob, jakým je údaj ve veřejném textu formulován.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "co-odhalila-kontrola-ceny",
+        "claimRef": "co-odhalila-kontrola-ceny:10-underinsurance-figure",
+        "evidenceRequired": "Anonymizovaný výpočet pojistné hodnoty a podpojištění.",
+        "sources": [],
+        "requiresRecheck": true
+      },
+      {
+        "id": "10-insurance-market-context",
+        "title": "Ověřit aktuálnost tvrzení o cenách a nabídkách pojišťoven",
+        "instruction": "Před release prověřit formulace o rozdílu mezi stávající a tržní nabídkou a o možnostech změny smlouvy.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "co-porovnat-pred-zaplacenim",
+        "claimRef": "co-porovnat-pred-zaplacenim:10-insurance-market-context",
+        "evidenceRequired": "Aktuální produktové a tržní podklady.",
+        "sources": [],
+        "requiresRecheck": true
+      }
+    ],
+    "productionNotes": {
+      "migration": "Full ArticleDocumentV2 cutover from legacy structured/MDX runtime source.",
+      "publicVoice": "David speaks directly to the reader in first person."
+    }
+  }
+}

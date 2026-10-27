@@ -1,0 +1,254 @@
+.legalMain {
+  --legal-surface: var(--surface-section-light);
+  --legal-card-surface: var(--surface-card-light);
+  --legal-subtle-surface: var(--surface-paper);
+  --legal-action-surface: var(--surface-action);
+  --legal-action-soft: var(--surface-action-soft);
+  --legal-border: var(--border-on-light-subtle);
+  --legal-border-medium: var(--border-on-light-medium);
+  --legal-text: var(--text-on-light-primary);
+  --legal-text-secondary: var(--text-on-light-secondary);
+  --legal-emphasis: var(--text-emphasis-on-light);
+  --legal-action-text: var(--text-on-light-primary);
+  --legal-shadow: var(--surface-shadow-soft);
+  background: var(--legal-surface);
+  color: var(--legal-text);
+  padding-block: clamp(40px, 6vw, 72px);
+}
+
+.legalWrap {
+  background: transparent;
+  border-radius: var(--radius-none);
+  padding: 0;
+  box-shadow: var(--shadow-none);
+  border: 0;
+  display: grid;
+  gap: clamp(28px, 4vw, 40px);
+}
+
+.titleBlock {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: clamp(34px, 6vw, 58px) clamp(20px, 3vw, 36px);
+  overflow: hidden;
+  border-radius: var(--radius-none);
+  background: var(--hero-cinematic-bg);
+  color: var(--hero-cinematic-text);
+}
+
+.titleBlock::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--hero-cinematic-overlay);
+  pointer-events: none;
+}
+
+.titleBlock > * {
+  position: relative;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hero-cinematic-kicker);
+  font-weight: 800;
+}
+
+.eyebrowDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--hero-cinematic-kicker);
+  box-shadow: none;
+}
+
+.title {
+  margin: 0;
+  max-width: 860px;
+  color: var(--hero-cinematic-text);
+  font-size: clamp(34px, 6vw, 64px);
+  font-weight: 850;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.title::first-line {
+  color: var(--hero-cinematic-highlight);
+}
+
+.lead {
+  margin: 0;
+  max-width: 780px;
+  color: var(--hero-cinematic-muted);
+  line-height: 1.6;
+}
+
+.section {
+  display: grid;
+  gap: 12px;
+}
+
+.section h2 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  scroll-margin-top: 100px;
+}
+
+.text {
+  margin: 0;
+  color: var(--legal-text-secondary);
+  line-height: 1.6;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--legal-text-secondary);
+  display: grid;
+  gap: 6px;
+  line-height: 1.5;
+}
+
+.pillList {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.pill {
+  padding: 12px 14px;
+  border-radius: var(--radius-card-compact);
+  background: var(--legal-subtle-surface);
+  border: 1px solid var(--legal-border);
+  display: grid;
+  gap: 6px;
+}
+
+.pillTitle {
+  margin: 0;
+  font-weight: 700;
+  color: var(--legal-text);
+}
+
+.pillDesc {
+  margin: 0;
+  color: var(--legal-text-secondary);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.muted {
+  color: var(--legal-text-secondary);
+  font-size: 14px;
+}
+
+.subList {
+  padding-left: 16px;
+  margin: 0;
+  display: grid;
+  gap: 4px;
+  color: var(--legal-text-secondary);
+}
+
+.badgeRow {
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: var(--radius-control);
+  background: var(--legal-action-soft);
+  color: var(--legal-action-text);
+  font-size: 13px;
+  border: 1px solid var(--legal-border-medium);
+}
+
+.link {
+  color: var(--legal-emphasis);
+  text-decoration: underline;
+  text-decoration-color: var(--legal-border-medium);
+  text-decoration-thickness: 2px;
+  overflow-wrap: anywhere;
+}
+
+.inlineAction {
+  width: fit-content;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  min-height: 24px;
+  touch-action: manipulation;
+}
+
+.link:hover {
+  text-decoration-color: currentColor;
+}
+
+.note {
+  padding: 12px 14px;
+  border-radius: var(--radius-card-compact);
+  background: var(--legal-action-soft);
+  border: 1px solid var(--legal-border-medium);
+  color: var(--legal-action-text);
+  line-height: 1.5;
+}
+
+.divider {
+  height: 1px;
+  background: var(--legal-border);
+  margin: 6px 0;
+}
+
+.backRow {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: var(--radius-control);
+  border: 0;
+  background: var(--legal-action-surface);
+  color: var(--legal-action-text);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: var(--shadow-none);
+  transition: color 180ms ease, background 180ms ease;
+}
+
+.backButton:hover {
+  background: var(--legal-action-soft);
+}
+
+.backButton:focus-visible,
+.link:focus-visible {
+  outline: var(--focus-width-standard) solid var(--focus-ring);
+  outline-offset: var(--focus-offset-standard);
+}
+
+@media (max-width: 640px) {
+  .titleBlock {
+    padding: 32px 18px;
+  }
+}

@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 2,
+  "publication": {
+    "status": "review",
+    "author": "David Pokorný",
+    "publishedAt": "2026-06-25",
+    "updatedAt": "2026-08-12"
+  },
+  "meta": {
+    "slug": "konec-fixace-hypoteky",
+    "topic": "Kontrola nabídky banky a nové nastavení hypotéky při konci fixace",
+    "category": "Hypotéka",
+    "primaryIntent": "Pomoci čtenáři porovnat novou nabídku banky se splátkou, rezervou a dlouhodobým plánem domácnosti.",
+    "audience": "Člověk, kterému v nejbližších měsících končí fixace hypotéky nebo už dostal novou nabídku od banky.",
+    "estimatedReadTime": 5
+  },
+  "seo": {
+    "title": "Končí vám fixace hypotéky? Neberte první nabídku banky jako konečný verdikt",
+    "description": "Konec fixace hypotéky není jen administrativa. Je to moment, kdy se dá znovu ověřit sazba, splátka, rezerva i dlouhodobý plán domácnosti."
+  },
+  "hero": {
+    "category": "Hypotéka",
+    "eyebrow": "KONEC FIXACE BEZ AUTOMATICKÉHO ROZHODNUTÍ",
+    "title": "Končí vám fixace hypotéky? Neberte první nabídku banky jako konečný verdikt",
+    "displayTitle": "Končí vám fixace?\nNeberte první nabídku automaticky.",
+    "subtitle": "Konec fixace není jen administrativa. Je to chvíle, kdy dává smysl znovu porovnat sazbu, splátku, rezervu a plán domácnosti.",
+    "excerpt": "Konec fixace hypotéky není jen administrativa. Je to moment, kdy se dá znovu ověřit sazba, splátka, rezerva i dlouhodobý plán domácnosti.",
+    "estimatedReadTime": "5 minut",
+    "heroSummary": [
+      "Jestli nová sazba dává smysl.",
+      "Jak se změní měsíční splátka.",
+      "Jestli máte rezervu na další období."
+    ]
+  },
+  "sections": [
+    {
+      "id": "kontrola",
+      "eyebrow": "01 / Kontrola před podpisem",
+      "title": "Nejdřív si ujasněte, co má nová fixace vyřešit.",
+      "intro": "Dopis z banky není výsledek rozhodnutí. Je to vstupní podklad pro kontrolu celé hypotéky.",
+      "rail": {
+        "type": "currentTopic",
+        "label": "Než začnete porovnávat",
+        "title": "Oddělte nabídku od rozhodnutí.",
+        "summary": "Nejdřív si stanovte únosnou splátku, potřebnou rezervu a horizont, ve kterém má nastavení fungovat.",
+        "steps": [
+          "splátka",
+          "rezerva",
+          "délka fixace"
+        ]
+      },
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Konec fixace hypotéky je moment, který v mnoha rodinách vyvolá velmi konkrétní otázku: kolik budeme nově měsíčně platit?"
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Možná vám právě dorazil dopis nebo e-mail z banky. Možná už v něm vidíte novou sazbu. A možná jste si hned začali počítat, co to udělá s rodinným rozpočtem.",
+            "Hypotéka bývá jeden z největších pravidelných výdajů domácnosti. Změna sazby se proto rychle promítne do rezerv, plánů i pocitu finanční stability."
+          ]
+        },
+        {
+          "type": "checklist",
+          "title": "Co si před podpisem zkontrolovat",
+          "items": [
+            {
+              "title": "Jaká splátka dává smysl pro váš rozpočet"
+            },
+            {
+              "title": "Jak dlouhou fixaci zvolit vzhledem k současnému trhu"
+            },
+            {
+              "title": "Jestli je vhodné upravit splatnost"
+            },
+            {
+              "title": "Jestli máte dostatečnou rezervu"
+            },
+            {
+              "title": "Jak hypotéka zapadá do dlouhodobého finančního plánu"
+            }
+          ]
+        },
+        {
+          "type": "expertNote",
+          "title": "Nabídka banky je návrh, ne verdikt.",
+          "text": "Je to jeden z možných scénářů. Ne nutně ten nejlepší — ale ani automaticky špatný. Smyslem kontroly je zjistit, jak obstojí v kontextu vaší domácnosti."
+        }
+      ]
+    },
+    {
+      "id": "strategicky-moment",
+      "eyebrow": "02 / Strategický moment",
+      "title": "Konec fixace není administrativa.",
+      "intro": "Právě teď lze hypotéku znovu otevřít a posoudit ji v širších souvislostech.",
+      "rail": {
+        "type": "currentTopic",
+        "label": "Změna perspektivy",
+        "title": "Neřešte jen sazbu.",
+        "summary": "Rozhodnutí se týká celého měsíčního rozpočtu domácnosti — splátky, splatnosti, rezervy i dalších plánů.",
+        "steps": [
+          "měsíční rozpočet",
+          "splatnost",
+          "dlouhodobý plán"
+        ]
+      },
+      "blocks": [
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Mnoho lidí bere konec fixace jako formalitu. Banka pošle novou nabídku, vy ji podepíšete a hypotéka pokračuje dál.",
+            "Jenže právě tady často vzniká zbytečně drahé rozhodnutí. Nejde jen o otázku, jakou dostanete sazbu. Důležitá je splátka, délka fixace, splatnost, rezerva a to, jak hypotéka zapadá do dlouhodobého finančního plánu."
+          ]
+        },
+        {
+          "type": "decision",
+          "title": "Dvě různé cesty",
+          "branches": [
+            {
+              "if": "Pasivně prodloužit",
+              "then": "Přijmout nabídku bez ověření jejího dopadu a bez srovnání dalších možností.",
+              "check": "Před rozhodnutím zvažte dopad každé varianty na splátku, rezervu a dlouhodobé cíle domácnosti."
+            },
+            {
+              "if": "Aktivně nastavit",
+              "then": "Porovnat varianty a vybrat řešení podle aktuální situace rodiny.",
+              "check": "Před rozhodnutím zvažte dopad každé varianty na splátku, rezervu a dlouhodobé cíle domácnosti."
+            }
+          ]
+        },
+        {
+          "type": "keyInsight",
+          "text": "Nejde o to hypotéku jen prodloužit. Jde o to znovu ji nastavit tak, aby odpovídala dnešnímu životu vaší domácnosti."
+        }
+      ]
+    },
+    {
+      "id": "prvni-nabidka-banky",
+      "eyebrow": "03 / Porovnání nabídky",
+      "title": "První nabídka banky je začátek rozhodování.",
+      "intro": "Pohodlná varianta může být správná. Bez porovnání ale nevíte, zda je skutečně výhodná.",
+      "rail": {
+        "type": "currentTopic",
+        "label": "Co srovnat",
+        "title": "Srovnávejte výsledek, ne jen desetinné číslo.",
+        "summary": "Nižší sazba sama o sobě nemusí znamenat lepší řešení. Sledujte také splátku, podmínky a flexibilitu.",
+        "steps": [
+          "nabídka banky",
+          "trh",
+          "celkové nastavení"
+        ]
+      },
+      "blocks": [
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Stávající banka má jednu výhodu: už vás zná. Často proto pošle nabídku automaticky a celý proces působí jednoduše. Pro mnoho lidí je lákavé ji přijmout, protože nechtějí nic složitě řešit.",
+            "Jednoduché řešení ale nemusí být nejlepší řešení. Někdy jiná banka nabídne lepší podmínky. Jindy rozdíl není jen v sazbě, ale v celkovém nastavení hypotéky. A někdy dává smysl zůstat u současné banky, ale vyjednat jiné parametry.",
+            "Smyslem není za každou cenu refinancovat. Smyslem je vědět, jaké máte možnosti, a nerozhodovat se naslepo."
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "Přijmout hned, nebo nejdřív prověřit?",
+          "items": [
+            {
+              "label": "Bez porovnání",
+              "summary": "Co víte a přijímáte bez dalšího srovnání.",
+              "points": [
+                "Sazba: Znáte jedinou nabídku.",
+                "Splátka: Přijmete výpočet banky.",
+                "Rozhodnutí: Volíte hlavně pohodlí."
+              ]
+            },
+            {
+              "label": "Po porovnání",
+              "summary": "Co získáte, když nabídku zasadíte do širšího kontextu.",
+              "points": [
+                "Sazba: Vidíte reálný rozdíl vůči trhu.",
+                "Splátka: Ověříte více délek fixace a splatnosti.",
+                "Rozhodnutí: Volíte podle dopadu na domácnost."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vice-zpusobu",
+      "eyebrow": "04 / Nastavení hypotéky",
+      "title": "Stejná sazba může znamenat jinou splátku.",
+      "intro": "Po srovnání nabídek se podíváme, jak hypotéka zapadne do vašeho rozpočtu.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Prodloužení splatnosti může snížit měsíční splátku, ale úvěr budete splácet déle. Délka fixace určuje, na jak dlouho máte sjednanou sazbu. Každou variantu proto posoudím spolu s rezervou, kterou potřebujete zachovat."
+          ]
+        },
+        {
+          "type": "checklist",
+          "title": "Co spolu prověříme",
+          "items": [
+            {
+              "title": "Délka fixace",
+              "description": "Porovnám období jisté sazby a podmínky, které s nimi banky spojují."
+            },
+            {
+              "title": "Délka splatnosti",
+              "description": "Ukážu vám rozdíl v měsíční splátce a v celkové částce, kterou zaplatíte."
+            },
+            {
+              "title": "Finanční rezerva",
+              "description": "Po splátce vám musí zůstat prostor i na nečekané výdaje."
+            }
+          ],
+          "action": {
+            "label": "Domluvit úvodní hovor",
+            "conversionId": "fixace-hypoteky"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-chyby",
+      "eyebrow": "05 / Riziková místa",
+      "title": "Tři rozhodnutí, která stojí za kontrolu.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "decision",
+          "branches": [
+            {
+              "if": "Zvolit fixaci podle odhadu sazeb",
+              "then": "Nikdo předem neví, jak se sazby vyvinou. Volba má dávat smysl i při méně příznivém vývoji.",
+              "check": "Porovnám kratší a delší fixaci podle dopadu na váš rozpočet."
+            },
+            {
+              "if": "Nechat rozhodnutí na poslední chvíli",
+              "then": "Krátký čas před koncem fixace zužuje prostor pro srovnání a klidné rozhodnutí.",
+              "check": "Ověřím termín konce fixace a co ještě stihneme prověřit."
+            },
+            {
+              "if": "Mimořádně splatit bez pohledu na rezervu",
+              "then": "Splacení sníží dluh, ale také peníze, které budete mít dál k dispozici.",
+              "check": "Spočítám dopad na úvěr a rezervu, kterou potřebujete zachovat."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "priklad-z-praxe",
+      "eyebrow": "06 / Skutečný anonymizovaný případ",
+      "title": "Oproti první nabídce splátka klesla. Splatnost se prodloužila.",
+      "intro": "Rodině po pěti letech končila fixace. Na jejich splátkách vám ukážu, co znamenala první nabídka banky a následná úprava úvěru.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "financialDelta",
+          "layout": "normal",
+          "title": "Jak se změnila měsíční splátka",
+          "items": [
+            {
+              "label": "Před koncem fixace",
+              "value": "26 600 Kč",
+              "context": "Původní měsíční splátka."
+            },
+            {
+              "label": "První nabídka banky",
+              "value": "35 900 Kč",
+              "context": "Přibližně o 9 300 Kč více měsíčně."
+            },
+            {
+              "label": "Po novém nastavení",
+              "value": "32 700 Kč",
+              "context": "Přibližně o 3 200 Kč méně než první nabídka."
+            }
+          ],
+          "interpretation": "Součástí nové varianty byla nižší sazba a o pět let delší splatnost. Samotný rozdíl ve splátce proto neříká, kolik rodina zaplatí za úvěr celkem."
+        }
+      ]
+    },
+    {
+      "id": "proc-nejen-sazba",
+      "eyebrow": "07 / Širší souvislost",
+      "title": "Proč výsledek nebyl jen o nižší sazbě.",
+      "intro": "Skutečná hodnota vznikla až ve chvíli, kdy se jednotlivé možnosti zasadily do života konkrétní rodiny.",
+      "rail": {
+        "type": "currentTopic",
+        "label": "Princip poradenské práce",
+        "title": "Produkt je jen část řešení.",
+        "summary": "Nejdřív spolu vyhodnotíme váš rozpočet a cíle. Teprve potom porovnám sazby, banky a parametry.",
+        "steps": [
+          "trh",
+          "únosná splátka",
+          "plán domácnosti"
+        ]
+      },
+      "blocks": [
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Na tomto příkladu je důležité, že řešení nestálo pouze na nižší sazbě. Sazba pomohla, ale skutečná hodnota byla v celkovém nastavení.",
+            "Nejdříve se porovnaly možnosti na trhu. Potom se vyhodnotilo, jaká splátka je pro rodinu únosná. Následně se řešilo, zda dává smysl upravit splatnost. A celé rozhodnutí se zasadilo do dlouhodobého finančního plánu.",
+            "Bankovní nabídka většinou odpovídá tomu, co banka umí nabídnout v daném produktu. Při konzultaci se díváme dál: nejen na to, zda je sazba o něco nižší, ale hlavně na to, jak bude hypotéka fungovat v reálném životě rodiny."
+          ]
+        },
+        {
+          "type": "keyInsight",
+          "text": "Neřeším jeden podpis na dodatku.",
+          "supportingText": "Dívám se na celou finanční situaci domácnosti — aby nové nastavení fungovalo nejen v den podpisu, ale i v dalších letech."
+        }
+      ]
+    },
+    {
+      "id": "co-udelat-pred-podpisem",
+      "eyebrow": "08 / Další krok",
+      "title": "Co udělat, než podepíšete novou nabídku.",
+      "intro": "Než nabídku podepíšete, můžeme spolu projít, co udělá se splátkou a rezervou. Ideálně několik měsíců před koncem fixace, abyste měli čas rozhodnout se v klidu.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "checklist",
+          "title": "Co mít po ruce při úvodním hovoru",
+          "items": [
+            {
+              "title": "Datum konce současné fixace"
+            },
+            {
+              "title": "Nabídku vaší banky, pokud už přišla"
+            },
+            {
+              "title": "Aktuální zůstatek úvěru a měsíční splátku"
+            },
+            {
+              "title": "Představu o únosné splátce a rezervě domácnosti"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "title": "Nejdřív si ujasněte možnosti.",
+    "paragraphs": [
+      "Nemáte všechny podklady? Nevadí. Na úvodním hovoru vám pomohu určit, co ještě zjistit a jaké varianty stojí za porovnání."
+    ]
+  },
+  "relatedTopics": [
+    {
+      "topic": "Úroková sazba není cena hypotéky. Co všechno rozhoduje?",
+      "reason": "Navazuje podrobnějším pohledem na celkovou cenu úvěru a parametry nabídky."
+    },
+    {
+      "topic": "Kolik vám půjčí banka a kolik unese váš rozpočet?",
+      "reason": "Ukazuje rozdíl mezi bankovním limitem a dlouhodobě únosnou splátkou.",
+      "slug": "banka-vam-pujci-vic-nez-si-muzete-dovolit"
+    }
+  ],
+  "editorial": {
+    "contentStatus": "Legacy runtime content migrated to ArticleDocumentV2 and ready for final editorial approval.",
+    "sourceBasis": "Legacy semantic article in content/articles.ts, migrated without changing its public point of view.",
+    "needsExternalVerification": true,
+    "sensitivity": "Mortgage pricing, anonymized client case and time-sensitive lending context.",
+    "review": {
+      "status": "pending"
+    },
+    "verificationItems": [
+      {
+        "id": "09-fixation-market-context",
+        "title": "Ověřit aktuálnost tvrzení o fixaci, sazbách a možnostech změny hypotéky",
+        "instruction": "Před release zkontrolovat všechny formulace závislé na aktuální situaci hypotečního trhu a pravidlech bank.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "vice-zpusobu",
+        "claimRef": "vice-zpusobu:09-fixation-market-context",
+        "evidenceRequired": "Aktuální bankovní metodiky nebo doložené tržní podklady.",
+        "sources": [],
+        "requiresRecheck": true
+      },
+      {
+        "id": "09-case-figures-and-anonymization",
+        "title": "Ověřit čísla a anonymizaci případu konce fixace",
+        "instruction": "Potvrdit sazby, splátky, prodloužení splatnosti a dostatečnou anonymizaci kombinace údajů.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "priklad-z-praxe",
+        "claimRef": "priklad-z-praxe:09-case-figures-and-anonymization",
+        "evidenceRequired": "Doložený anonymizovaný výpočet případu a zaznamenaná anonymizační kontrola.",
+        "sources": [],
+        "requiresRecheck": true
+      }
+    ],
+    "productionNotes": {
+      "migration": "Full ArticleDocumentV2 cutover from legacy structured/MDX runtime source.",
+      "publicVoice": "David speaks directly to the reader in first person."
+    }
+  }
+}

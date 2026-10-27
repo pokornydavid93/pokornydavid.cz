@@ -1,0 +1,61 @@
+/* Start with the first styled paint, independently of hydration or GSAP loading.
+   Backwards fill covers the stagger delay, then releases the final transform. */
+@media (prefers-reduced-motion: no-preference) and (forced-colors: none) {
+  [data-route-hero-entry] {
+    --route-hero-entry-order: 0;
+    --route-hero-entry-step: 80ms;
+    --route-hero-entry-travel: 28px;
+    --route-hero-entry-scale: 1;
+    animation-name: route-hero-enter;
+    animation-duration: var(--duration-reveal, 900ms);
+    animation-timing-function: cubic-bezier(0.22, 0.68, 0, 1);
+    animation-delay: calc(var(--route-hero-entry-order) * var(--route-hero-entry-step));
+    animation-fill-mode: backwards;
+  }
+
+  [data-route-hero-entry="1"] { --route-hero-entry-order: 1; }
+  [data-route-hero-entry="2"] { --route-hero-entry-order: 2; }
+  [data-route-hero-entry="3"] { --route-hero-entry-order: 3; }
+  [data-route-hero-entry="4"] { --route-hero-entry-order: 4; }
+  [data-route-hero-entry="5"] { --route-hero-entry-order: 5; }
+  [data-route-hero-entry="6"] { --route-hero-entry-order: 6; }
+  [data-route-hero-entry="7"] { --route-hero-entry-order: 7; }
+
+  [data-route-hero-entry-kind="visual"] {
+    --route-hero-entry-travel: 18px;
+    --route-hero-entry-scale: 1.015;
+  }
+
+  @media (max-width: 900px) {
+    [data-route-hero-entry] {
+      --route-hero-entry-step: 60ms;
+      --route-hero-entry-travel: 18px;
+      animation-duration: var(--duration-cinematic, 680ms);
+    }
+
+    [data-route-hero-entry-kind="visual"] {
+      --route-hero-entry-travel: 12px;
+    }
+  }
+}
+
+@keyframes route-hero-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, var(--route-hero-entry-travel), 0)
+      scale(var(--route-hero-entry-scale));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* A transition snapshot is the outgoing scene, never a new hero entrance. */
+[data-route-transition-snapshot] [data-route-hero-entry] {
+  animation: none;
+}
+
+@media print {
+  [data-route-hero-entry] { animation: none; }
+}

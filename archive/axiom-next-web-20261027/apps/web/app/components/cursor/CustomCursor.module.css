@@ -1,0 +1,453 @@
+.root {
+  --cursor-ink: var(--focus-cursor-dark-foreground);
+  --cursor-core-keyline: var(--focus-cursor-dark-keyline);
+  --cursor-glint: var(--brand-ivory);
+  --cursor-field-ink: var(--brand-lime);
+  --cursor-field-accent: var(--brand-ivory);
+  --cursor-frame-ink: var(--brand-lime);
+  --cursor-frame-accent: var(--brand-ivory);
+  --cursor-field-angle: 0deg;
+  --cursor-field-scale-x: 1;
+  --cursor-field-scale-y: 1;
+  --cursor-field-state-scale: 1;
+  --cursor-field-opacity: 0.94;
+  --cursor-field-half-width: var(--focus-cursor-field-half-size);
+  --cursor-field-half-height: var(--focus-cursor-field-half-size);
+  --cursor-field-stroke-width: 2px;
+  --cursor-field-corner-duration: var(--focus-cursor-release-duration);
+  --cursor-core-scale: 1;
+  position: fixed;
+  inset: 0;
+  inline-size: auto;
+  block-size: auto;
+  max-inline-size: none;
+  max-block-size: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  z-index: var(--focus-cursor-z-index);
+  overflow: visible;
+  pointer-events: none;
+  contain: layout style paint;
+}
+
+.root::backdrop {
+  background: transparent;
+  pointer-events: none;
+}
+
+.root[data-cursor-surface="light"] {
+  --cursor-field-ink: var(--brand-forest);
+  --cursor-field-accent: color-mix(
+    in srgb,
+    var(--brand-lime) 25%,
+    var(--brand-forest)
+  );
+  --cursor-frame-ink: var(--brand-forest);
+  --cursor-frame-accent: color-mix(
+    in srgb,
+    var(--brand-lime) 25%,
+    var(--brand-forest)
+  );
+  --cursor-field-opacity: 1;
+}
+
+.root[data-cursor-surface="action"] {
+  --cursor-field-ink: var(--brand-forest);
+  --cursor-field-accent: color-mix(
+    in srgb,
+    var(--brand-forest) 64%,
+    var(--brand-jet)
+  );
+  --cursor-frame-ink: var(--brand-forest);
+  --cursor-frame-accent: color-mix(
+    in srgb,
+    var(--brand-forest) 64%,
+    var(--brand-jet)
+  );
+  --cursor-field-opacity: 1;
+}
+
+.root[data-cursor-core-surface="light"] {
+  --cursor-ink: var(--focus-cursor-light-foreground);
+  --cursor-core-keyline: var(--focus-cursor-light-keyline);
+  --cursor-glint: var(--brand-lime);
+}
+
+.root[data-cursor-core-surface="action"] {
+  --cursor-ink: var(--focus-cursor-action-foreground);
+  --cursor-core-keyline: var(--focus-cursor-action-keyline);
+  --cursor-glint: var(--brand-lime);
+}
+
+.root[data-cursor-variant="link"] {
+  --cursor-field-state-scale: 0.92;
+  --cursor-field-opacity: 0.92;
+  --cursor-core-scale: 0.98;
+}
+
+.root[data-cursor-variant="action"] {
+  --cursor-field-state-scale: 1;
+  --cursor-field-opacity: 1;
+  --cursor-core-scale: 1;
+}
+
+.root[data-cursor-variant="external"] {
+  --cursor-field-state-scale: 1;
+  --cursor-field-opacity: 0.92;
+}
+
+.root[data-cursor-variant="article"],
+.root[data-cursor-variant="case"] {
+  --cursor-field-state-scale: 1.08;
+  --cursor-field-opacity: 0.94;
+}
+
+.root[data-cursor-variant="video"],
+.root[data-cursor-variant="drag"] {
+  --cursor-field-state-scale: 1.06;
+  --cursor-field-opacity: 0.92;
+}
+
+.root[data-cursor-framed="true"] {
+  --cursor-field-corner-duration: var(--focus-cursor-morph-duration);
+}
+
+.interactionZone {
+  position: absolute;
+  z-index: 4;
+  display: block;
+  background: transparent;
+  pointer-events: auto !important;
+}
+
+.dot,
+.follower {
+  position: fixed;
+  inset: 0 auto auto 0;
+  inline-size: 0;
+  block-size: 0;
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.root[data-cursor-visible="true"] .dot,
+.root[data-cursor-visible="true"] .follower {
+  opacity: 1;
+}
+
+.dot {
+  z-index: 3;
+  transition: opacity 160ms var(--ease-out);
+  will-change: transform, opacity;
+}
+
+.follower {
+  z-index: 1;
+  transition: opacity 180ms var(--ease-out);
+}
+
+.fieldFrame {
+  position: absolute;
+  inset: 0 auto auto 0;
+  inline-size: 0;
+  block-size: 0;
+  scale: 1;
+  transform: scale(var(--cursor-field-state-scale));
+  transform-origin: center;
+  transition:
+    scale 105ms var(--ease-standard),
+    transform var(--cursor-field-corner-duration) var(--focus-cursor-morph-ease);
+  will-change: transform;
+}
+
+.root[data-cursor-framed="true"] .fieldFrame {
+  transform: scale(1);
+}
+
+.fieldShape {
+  position: absolute;
+  inset: 0 auto auto 0;
+  display: block;
+  inline-size: 0;
+  block-size: 0;
+  opacity: var(--cursor-field-opacity);
+  transform:
+    rotate(var(--cursor-field-angle))
+    scaleX(var(--cursor-field-scale-x))
+    scaleY(var(--cursor-field-scale-y));
+  transform-origin: center;
+  transition:
+    opacity 200ms var(--ease-out),
+    transform 88ms linear;
+  will-change: transform;
+}
+
+.root[data-cursor-reticle-enabled="false"] .fieldShape {
+  visibility: hidden;
+}
+
+.root[data-cursor-angle-snap="true"] .fieldShape {
+  transition: none;
+}
+
+.root[data-cursor-framed="true"] .fieldShape {
+  opacity: 1;
+  transform: rotate(0deg) scaleX(1) scaleY(1);
+  transition-duration: var(--focus-cursor-morph-duration);
+  transition-timing-function: var(--focus-cursor-morph-ease);
+}
+
+.fieldCorner {
+  position: absolute;
+  inset: 0 auto auto 0;
+  display: block;
+  inline-size: 15px;
+  block-size: 15px;
+  color: var(--cursor-field-ink);
+  filter: none;
+  transition:
+    color 110ms var(--ease-standard),
+    transform var(--cursor-field-corner-duration) var(--focus-cursor-morph-ease);
+  will-change: transform;
+}
+
+.root[data-cursor-framed="true"] .fieldCorner {
+  color: var(--cursor-frame-ink);
+}
+
+.fieldCornerNorthWest {
+  border-block-start: var(--cursor-field-stroke-width) solid currentColor;
+  border-inline-start: var(--cursor-field-stroke-width) solid currentColor;
+  border-start-start-radius: 4px;
+  transform: translate(
+    calc(0px - var(--cursor-field-half-width)),
+    calc(0px - var(--cursor-field-half-height))
+  );
+}
+
+.fieldCornerNorthEast {
+  border-block-start: var(--cursor-field-stroke-width) solid currentColor;
+  border-inline-end: var(--cursor-field-stroke-width) solid currentColor;
+  border-start-end-radius: 4px;
+  transform:
+    translate(
+      var(--cursor-field-half-width),
+      calc(0px - var(--cursor-field-half-height))
+    )
+    translateX(-100%);
+}
+
+.fieldCornerSouthEast {
+  border-block-end: var(--cursor-field-stroke-width) solid currentColor;
+  border-inline-end: var(--cursor-field-stroke-width) solid currentColor;
+  border-end-end-radius: 4px;
+  transform:
+    translate(
+      var(--cursor-field-half-width),
+      var(--cursor-field-half-height)
+    )
+    translate(-100%, -100%);
+}
+
+.fieldCornerSouthWest {
+  border-block-end: var(--cursor-field-stroke-width) solid currentColor;
+  border-inline-start: var(--cursor-field-stroke-width) solid currentColor;
+  border-end-start-radius: 4px;
+  transform:
+    translate(
+      calc(0px - var(--cursor-field-half-width)),
+      var(--cursor-field-half-height)
+    )
+    translateY(-100%);
+}
+
+.fieldCornerAccent {
+  color: var(--cursor-field-accent);
+}
+
+.root[data-cursor-framed="true"] .fieldCornerAccent {
+  color: var(--cursor-frame-accent);
+}
+
+.precisionCore {
+  position: absolute;
+  inset: 0 auto auto 0;
+  display: block;
+  inline-size: 52px;
+  block-size: 52px;
+  max-inline-size: none;
+  overflow: visible;
+  color: var(--cursor-ink);
+  filter: none;
+  scale: 1;
+  shape-rendering: geometricPrecision;
+  transform:
+    translate(-50%, -50%)
+    scale(var(--cursor-core-scale));
+  transform-origin: center;
+  transition:
+    color 110ms var(--ease-standard),
+    opacity 160ms var(--ease-out),
+    scale 105ms var(--ease-standard),
+    transform 210ms var(--ease-standard);
+  will-change: transform;
+}
+
+.coreAnchorKeyline {
+  fill: var(--cursor-core-keyline);
+  stroke: var(--cursor-core-keyline);
+  stroke-linejoin: round;
+  stroke-width: 1.3px;
+  transition:
+    fill 110ms var(--ease-standard),
+    stroke 110ms var(--ease-standard);
+}
+
+.coreAnchor {
+  fill: var(--cursor-ink);
+  transition: fill 110ms var(--ease-standard);
+}
+
+.coreGlint {
+  fill: url("#cursor-arrow-glint");
+}
+
+.coreGlintStart {
+  stop-color: var(--cursor-glint);
+  stop-opacity: 0.95;
+}
+
+.coreGlintEnd {
+  stop-color: var(--cursor-glint);
+  stop-opacity: 0.08;
+}
+
+.icon {
+  position: absolute;
+  inset: 0 auto auto 0;
+  z-index: 2;
+  display: block;
+  inline-size: 28px;
+  block-size: 28px;
+  color: var(--cursor-ink);
+  opacity: 0;
+  scale: 0.84;
+  translate: -14.7px -3px;
+  transform-origin: 14.7px 3px;
+  transition:
+    color 110ms var(--ease-standard),
+    opacity 130ms var(--ease-out),
+    scale 170ms var(--ease-standard);
+}
+
+.clickHand {
+  inline-size: 100%;
+  block-size: 100%;
+  display: block;
+}
+
+.clickHand path:first-child {
+  fill: var(--cursor-core-keyline);
+  stroke: var(--cursor-ink);
+  stroke-linejoin: round;
+  stroke-width: 1.8px;
+}
+
+.clickHand path:last-child {
+  fill: none;
+  stroke: var(--cursor-ink);
+  stroke-linecap: round;
+  stroke-width: 1.1px;
+}
+
+.root[data-cursor-shows-core-icon="true"] .precisionCore {
+  opacity: 0;
+  scale: 0.84;
+}
+
+.root[data-cursor-shows-core-icon="true"] .icon {
+  opacity: 1;
+  scale: 1;
+}
+
+.root[data-cursor-locked="true"] .fieldCorner {
+  --cursor-field-stroke-width: 2px;
+}
+
+.root[data-cursor-pressed="true"] .fieldFrame,
+.root[data-cursor-pressed="true"] .precisionCore,
+.root[data-cursor-pressed="true"] .icon {
+  scale: 0.84;
+}
+
+.root[data-cursor-framed="true"][data-cursor-pressed="true"] .fieldFrame {
+  scale: 0.975;
+}
+
+.root[data-cursor-shows-core-icon="true"][data-cursor-pressed="true"] .icon {
+  scale: 0.86;
+}
+
+:global(html.custom-cursor-ready body),
+:global(html.custom-cursor-ready body *) {
+  cursor: none !important;
+}
+
+:global(html.custom-cursor-ready input:not(:is([type="checkbox"], [type="radio"], [type="button"], [type="submit"], [type="reset"], [type="image"]))),
+:global(html.custom-cursor-ready textarea),
+:global(html.custom-cursor-ready [contenteditable]:not([contenteditable="false"])),
+:global(html.custom-cursor-ready [contenteditable]:not([contenteditable="false"]) *) {
+  cursor: text !important;
+}
+
+:global(html.custom-cursor-ready select),
+:global(html.custom-cursor-ready iframe),
+:global(html.custom-cursor-ready video[controls]),
+:global(html.custom-cursor-ready audio[controls]),
+:global(html.custom-cursor-ready [data-native-cursor]),
+:global(html.custom-cursor-ready [data-native-cursor] *) {
+  cursor: auto !important;
+}
+
+:global([data-cursor-magnetic]),
+:global([data-cursor-magnetic-active="true"]) {
+  /*
+   * GSAP writes `translate: none` inline while managing an element's reveal
+   * transform. The magnetic offset is an independent interaction layer and
+   * must keep composing with that transform after the reveal has settled.
+   */
+  translate: var(--cursor-magnetic-x, 0) var(--cursor-magnetic-y, 0) !important;
+  transition:
+    translate 115ms var(--ease-out),
+    color var(--button-primary-transition-duration) var(--button-primary-transition-ease),
+    background-color var(--button-primary-transition-duration) var(--button-primary-transition-ease),
+    border-color var(--button-primary-transition-duration) var(--button-primary-transition-ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot,
+  .follower,
+  .fieldFrame,
+  .fieldShape,
+  .fieldCorner,
+  .precisionCore,
+  .coreGlint,
+  .coreAnchor,
+  .coreAnchorKeyline,
+  .clickHand,
+  .icon {
+    transition-duration: var(--duration-instant-reduced);
+  }
+
+  .fieldShape {
+    transform: none;
+  }
+
+  :global([data-cursor-magnetic]),
+  :global([data-cursor-magnetic-active="true"]) {
+    translate: none !important;
+  }
+}

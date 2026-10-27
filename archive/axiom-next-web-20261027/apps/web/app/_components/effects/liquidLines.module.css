@@ -1,0 +1,169 @@
+/* Shared material and reading veil from the homepage process section. */
+.content {
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--process-bg-deep);
+}
+
+.backdrop::before,
+.backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.backdrop::before {
+  z-index: 0;
+  opacity: 0.9;
+  background:
+    radial-gradient(
+      ellipse 72% 44% at 88% 8%,
+      rgba(var(--brand-forest-rgb), 0.26),
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse 62% 40% at 8% 92%,
+      rgba(var(--brand-forest-rgb), 0.22),
+      transparent 74%
+    ),
+    linear-gradient(
+      128deg,
+      transparent 0 10%,
+      rgba(var(--brand-forest-rgb), 0.24) 14.5%,
+      rgba(var(--brand-lime-rgb), 0.2) 17.2%,
+      rgba(var(--brand-ivory-rgb), 0.09) 18.3%,
+      rgba(var(--brand-lime-rgb), 0.16) 19.1%,
+      rgba(var(--brand-forest-rgb), 0.18) 21.8%,
+      transparent 27.5% 100%
+    ),
+    linear-gradient(
+      128deg,
+      transparent 0 62%,
+      rgba(var(--brand-forest-rgb), 0.2) 66.2%,
+      rgba(var(--brand-lime-rgb), 0.24) 69.2%,
+      rgba(var(--brand-ivory-rgb), 0.1) 70.2%,
+      rgba(var(--brand-lime-rgb), 0.18) 71%,
+      rgba(var(--brand-forest-rgb), 0.16) 73.8%,
+      transparent 80% 100%
+    );
+  filter: blur(5px) saturate(1.08);
+  transform: scale(1.075);
+}
+
+.backdrop::after {
+  z-index: 2;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(var(--brand-jet-rgb), 0.34) 0%,
+      rgba(var(--brand-jet-rgb), 0.18) 16%,
+      rgba(var(--brand-jet-rgb), 0.25) 78%,
+      rgba(var(--brand-jet-rgb), 0.14) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(var(--brand-jet-rgb), 0.34) 0%,
+      rgba(var(--brand-jet-rgb), 0.04) 16%,
+      rgba(var(--brand-jet-rgb), 0.06) 78%,
+      rgba(var(--brand-jet-rgb), 0.42) 100%
+    );
+}
+
+.webgl {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity var(--duration-cinematic) var(--ease-standard);
+}
+
+.webgl[data-state="ready"] {
+  opacity: 0.96;
+}
+
+.canvas {
+  inline-size: 100%;
+  block-size: 100%;
+  display: block;
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  inset: clamp(-2.5rem, -2.4vw, -1.5rem)
+    clamp(-1.25rem, -1.8vw, -0.5rem);
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(var(--brand-jet-rgb), 0.38) 0%,
+    rgba(var(--brand-jet-rgb), 0.28) 18%,
+    rgba(var(--brand-jet-rgb), 0.3) 72%,
+    rgba(var(--brand-jet-rgb), 0.12) 100%
+  );
+  mask-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    black 3.5%,
+    black 96.5%,
+    transparent 100%
+  );
+}
+
+@media (max-width: 767px) {
+  .backdrop::before {
+    opacity: 0.84;
+    filter: blur(7px) saturate(1.02);
+    transform: translateX(4%) scale(1.12);
+  }
+
+  .backdrop::after {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(var(--brand-jet-rgb), 0.52) 0%,
+        rgba(var(--brand-jet-rgb), 0.36) 72%,
+        rgba(var(--brand-jet-rgb), 0.26) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(var(--brand-jet-rgb), 0.42) 0%,
+        rgba(var(--brand-jet-rgb), 0.08) 14%,
+        rgba(var(--brand-jet-rgb), 0.1) 82%,
+        rgba(var(--brand-jet-rgb), 0.5) 100%
+      );
+  }
+
+  .content::before {
+    inset-inline: calc(var(--space-page) * -0.5);
+    background: linear-gradient(
+      90deg,
+      rgba(var(--brand-jet-rgb), 0.5),
+      rgba(var(--brand-jet-rgb), 0.4) 78%,
+      rgba(var(--brand-jet-rgb), 0.2)
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .webgl {
+    transition-duration: var(--duration-instant-reduced);
+  }
+}
+
+@media (forced-colors: active) {
+  .backdrop {
+    display: none;
+  }
+}

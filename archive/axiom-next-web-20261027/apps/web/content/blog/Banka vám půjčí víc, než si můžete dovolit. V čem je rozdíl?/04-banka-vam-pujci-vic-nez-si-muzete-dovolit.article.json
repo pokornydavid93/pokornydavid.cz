@@ -1,0 +1,479 @@
+{
+  "schemaVersion": 2,
+  "publication": {
+    "status": "review",
+    "author": "David Pokorný",
+    "publishedAt": "2026-10-08",
+    "updatedAt": "2026-10-08"
+  },
+  "meta": {
+    "slug": "banka-vam-pujci-vic-nez-si-muzete-dovolit",
+    "topic": "Porovnání bankovní nabídky s rozpočtem domácnosti a plánovanými změnami během splácení",
+    "category": "Hypotéky a bydlení",
+    "primaryIntent": "Pomoci čtenáři posoudit nabídku hypotéky podle rozpočtu po pořízení bydlení, dostupné rezervy a scénářů změny příjmu, splátky či nákladů.",
+    "audience": "Jednotlivec nebo pár, který plánuje vlastní bydlení, řeší předschválenou hypotéku nebo má před sebou nabídku banky a potřebuje poznat, zda schválená částka dává smysl i mimo samotné bankovní posouzení.",
+    "estimatedReadTime": 6
+  },
+  "hero": {
+    "category": "Hypotéky a bydlení",
+    "eyebrow": "BANKOVNÍ NABÍDKA A ROZPOČET DOMÁCNOSTI",
+    "title": "Kolik vám půjčí banka a kolik unese váš rozpočet?",
+    "subtitle": "Ukážu vám, jak nabídku banky porovnat s rozpočtem domácnosti a co prověřit před rozhodnutím o výši hypotéky.",
+    "excerpt": "Nabídku hypotéky porovnejte s budoucími výdaji na bydlení, rezervou a plánovanými změnami. Zjistíte, kolik po splátce zbývá a co je potřeba prověřit.",
+    "estimatedReadTime": "6 minut",
+    "heroSummary": [
+      "Co zahrnuje bankovní posouzení a co doplnit za domácnost.",
+      "Kolik v rozpočtu po pořízení bydlení zbývá na splátku.",
+      "Jak výsledek změní slabší příjem, vyšší sazba nebo nové výdaje.",
+      "Co konkrétní domácnosti přinesla splátka nižší o 6 000 Kč měsíčně."
+    ]
+  },
+  "sections": [
+    {
+      "id": "schvaleni-neni-potvrzeni-unosnosti",
+      "eyebrow": "01 / BANKOVNÍ POSOUZENÍ",
+      "title": "Co znamená schválení banky",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Banka při posuzování úvěruschopnosti porovnává příjmy, výdaje a dosavadní závazky. Zohledňuje také relevantní informace o předvídatelných změnách během splácení."
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Schválení se vztahuje ke konkrétnímu úvěru a jeho podmínkám. Schválená částka proto nemusí být zároveň nejvyšší částkou, kterou by vám banka nabídla.",
+            "K bankovní nabídce spolu doplníme podrobný rozpočet po pořízení bydlení, vaše další cíle a plánované změny. Ujasníme si, jaký prostor chcete zachovat vedle povinné splátky a s jakými předpoklady rozhodnutí pracuje."
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "LTV",
+          "simpleDefinition": "Poměr výše úvěru k hodnotě zastavené nemovitosti, kterou uzná banka.",
+          "optionalDetail": "Tato hodnota se může lišit od kupní ceny. LTV proto samo neříká, kolik peněz vám po koupi zůstane ani jakou splátku unese domácnost.",
+          "optionalExample": "Úvěr 4 miliony Kč proti uznané hodnotě zástavy 5 milionů Kč odpovídá LTV 80 %."
+        }
+      ]
+    },
+    {
+      "id": "bezpecna-splatka-zacina-tim-co-ma-zustat",
+      "eyebrow": "02 / ROZPOČET PO KOUPI",
+      "title": "Kolik v rozpočtu zbývá na splátku",
+      "rail": null,
+      "intro": "Při výpočtu vycházím z toho, jak bude domácnost fungovat po pořízení nemovitosti. Současný nájem a budoucí náklady vlastního bydlení proto potřebujeme rozlišit.",
+      "blocks": [
+        {
+          "type": "process",
+          "steps": [
+            {
+              "title": "Sepište čisté příjmy",
+              "description": "Uveďte částky, se kterými můžete pravidelně počítat. Oddělte kolísavé příjmy a očekávané změny, například při rodičovské nebo změně práce."
+            },
+            {
+              "title": "Doplňte výdaje po pořízení bydlení",
+              "description": "Započítejte jídlo, dopravu, ostatní splátky a pojistné. Přidejte budoucí energie, služby, údržbu a další náklady nemovitosti. Nájem, který skončí, nahraďte odpovídajícími budoucími výdaji; případný souběh bydlení posuďte zvlášť."
+            },
+            {
+              "title": "Vyhraďte peníze na rezervu a cíle",
+              "description": "Určete plánovanou tvorbu rezervy a peníze na další známé výdaje. Dostupnou rezervu evidujte zvlášť jako již naspořenou částku. Pojistné ani jiný náklad započtený v předchozím kroku znovu neodečítejte."
+            },
+            {
+              "title": "Spočítejte prostor pro splátku",
+              "description": "Od příjmů odečtěte uvedené výdaje a plánované odkládání peněz. Zbytek je orientační prostor pro splátku, který následně prověříme při změně podmínek."
+            }
+          ]
+        },
+        {
+          "type": "keyInsight",
+          "text": "Každá koruna má být v rozpočtu započtená jen jednou.",
+          "supportingText": "Odlište pravidelný výdaj, budoucí spoření a již dostupnou rezervu. Výpočet pak ukáže, co pro hypotéku skutečně zbývá."
+        }
+      ]
+    },
+    {
+      "id": "stress-test-hypoteky",
+      "eyebrow": "03 / ZMĚNY BĚHEM SPLÁCENÍ",
+      "title": "Jak rozpočet obstojí při změně",
+      "rail": null,
+      "intro": "Společně projdeme několik konkrétních scénářů. U každého zapíšeme nový měsíční rozdíl, dostupné krytí a dobu, po kterou by situace mohla trvat.",
+      "blocks": [
+        {
+          "type": "explanation",
+          "subsections": [
+            {
+              "title": "Slabší příjem",
+              "paragraphs": [
+                "Přepočítejte příjem například na rodičovskou, období mezi zaměstnáními nebo nemoc. Porovnejte částku, která by chyběla, s dostupnou rezervou a s tím, co může podle podmínek pokrýt sjednané pojištění. Výplatu ani dobu plnění nelze předpokládat automaticky."
+              ]
+            },
+            {
+              "title": "Vyšší splátka po fixaci",
+              "paragraphs": [
+                "Pokud fixace končí před splacením úvěru, ukážu vám splátku také při vyšší sazbě. Výpočet musí vycházet ze zůstatku úvěru a zbývající splatnosti v dané době. Před koncem fixace pak porovnáme aktuální nabídky a jejich celkové podmínky."
+              ]
+            },
+            {
+              "title": "Nové nebo vyšší výdaje",
+              "paragraphs": [
+                "Započítejte plánované dítě, opravy nemovitosti nebo jiné větší výdaje. U jednorázové platby určete, z jakých peněz ji uhradíte; u pravidelného nákladu přepočítejte měsíční rozpočet."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Pokud některý scénář nevychází, projdeme dostupné možnosti: jinou výši úvěru, cenu nemovitosti, vlastní vklad nebo termín nákupu. U změny splatnosti posoudíme také délku závazku a celkové náklady. Výsledek platí pro použité předpoklady; při jejich změně je potřeba rozpočet znovu projít."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modelovy-par-dve-hranice",
+      "eyebrow": "04 / PŘÍPAD Z PRAXE",
+      "title": "Co této domácnosti přinesla nižší splátka",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Jde o skutečný anonymizovaný případ z mé praxe. Pár měl čistý příjem přibližně 80 000 Kč měsíčně, oba partneři pracovali a plánovali založit rodinu. Uvedené nutné výdaje mimo nové bydlení byly přibližně 31 000 Kč.",
+            "Po odečtení těchto výdajů zbývalo přibližně 49 000 Kč na splátku i další položky rozpočtu. Porovnali jsme nabídku banky s nižší variantou financování."
+          ]
+        },
+        {
+          "type": "financialDelta",
+          "title": "Dvě varianty z tehdejšího posouzení",
+          "items": [
+            {
+              "label": "Výše úvěru",
+              "from": "≈ 6,7 mil. Kč",
+              "to": "≈ 5,6 mil. Kč",
+              "context": "Nabídka banky a nižší varianta zvažovaná pro tuto domácnost."
+            },
+            {
+              "label": "Měsíční splátka",
+              "from": "≈ 36 000 Kč",
+              "to": "≈ 30 000 Kč",
+              "context": "Nižší varianta ponechávala v rozpočtu přibližně o 6 000 Kč měsíčně více."
+            },
+            {
+              "label": "Zbytek po uvedených výdajích a splátce",
+              "from": "≈ 13 000 Kč",
+              "to": "≈ 19 000 Kč",
+              "context": "Z této částky je potřeba hradit také provoz nového bydlení, poté tvorbu rezervy a další cíle."
+            }
+          ],
+          "interpretation": "Rozdíl 6 000 Kč měsíčně platí při stejných ostatních výdajích. Zůstatek 19 000 Kč ještě není celý volný na rezervu a cíle: uvedených 31 000 Kč nezahrnuje nové bydlení."
+        },
+        {
+          "type": "explanation",
+          "subsections": [
+            {
+              "title": "Co se změnilo",
+              "paragraphs": [
+                "Pár hledal levnější nemovitost a výběr trval přibližně o tři měsíce déle. Nižší úvěr umožnil zachovat více prostoru pro provoz domácnosti, rezervu, ochranu příjmu a další cíle."
+              ]
+            },
+            {
+              "title": "Výsledek pro tuto domácnost",
+              "paragraphs": [
+                "Pár si pořídil vlastní bydlení s nižší povinnou splátkou. Ta při tehdejším individuálním posouzení vyhověla scénářům spojeným s plánovaným založením rodiny. Stejnou splátku nelze bez posouzení příjmů, výdajů a rezervy přenést na jinou domácnost."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "expertNote",
+          "title": "Jak číst uvedené částky",
+          "text": "Částky jsou zaokrouhlené a vycházejí z tehdejšího posouzení konkrétní domácnosti. Samy neurčují sazbu, splatnost ani dnešní dostupnou nabídku. Ukazují dopad nižší splátky na zbytek rozpočtu."
+        }
+      ]
+    },
+    {
+      "id": "kdy-vetsi-financovani-dava-smysl",
+      "eyebrow": "05 / VOLBA VÝŠE ÚVĚRU",
+      "title": "Kdy může dávat smysl vyšší úvěr",
+      "rail": null,
+      "intro": "Výši vlastního vkladu i úvěru posuzuji společně s rezervou, dalšími závazky a tím, k čemu budete peníze potřebovat.",
+      "blocks": [
+        {
+          "type": "explanation",
+          "subsections": [
+            {
+              "title": "Ponechání dostupných peněz",
+              "paragraphs": [
+                "Vyšší úvěr může umožnit zachovat část vlastních peněz na rezervu nebo známé výdaje. Porovnáme však také vyšší splátku, celkové náklady a výsledky scénářů. Ponechané peníze potřebují konkrétní účel v rozpočtu."
+              ]
+            },
+            {
+              "title": "Přijaté náklady a rizika",
+              "paragraphs": [
+                "Pokud chcete vlastní peníze investovat, vedle nákladů úvěru posoudíme i scénáře sazby po fixaci, náklady investice, daně a riziko ztráty. Očekávaný investiční výnos není zaručený a nemusí náklady hypotéky překonat. Zvážíme finanční i psychickou schopnost nést investiční riziko při současném splácení."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Vysvětlím vám důsledky obou variant. Rozhodnutí, jaký dluh a dostupnou rezervu chcete při daných podmínkách zachovat, zůstává na vás."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tri-otazky-pred-hledanim-maxima",
+      "eyebrow": "06 / PŘÍPRAVA NA POSOUZENÍ",
+      "title": "Co připravit k posouzení hypotéky",
+      "rail": null,
+      "intro": "Pro úvodní posouzení pomohou tři skupiny podkladů. Pokud nabídku banky nebo konkrétní nemovitost teprve hledáte, poznamenejte si svou představu.",
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Rozpočet po koupi",
+              "description": "Sepište čisté příjmy, běžné závazky a očekávané výdaje na nové bydlení. U odhadů označte, co bude potřeba upřesnit."
+            },
+            {
+              "title": "Nabídka a vlastní zdroje",
+              "description": "Připravte cenu nemovitosti, dostupné vlastní peníze a případnou nabídku banky včetně splátky, sazby, fixace a splatnosti."
+            },
+            {
+              "title": "Rezerva a plánované změny",
+              "description": "Uveďte dostupnou rezervu, současné pojistné krytí a změny příjmu nebo výdajů, se kterými už počítáte."
+            }
+          ]
+        },
+        {
+          "type": "nextAction",
+          "title": "Proberme rozpočet pro vaše bydlení",
+          "paragraphs": [
+            "Na úvodním hovoru spolu projdeme vaši představu o bydlení a domluvíme se, které podklady k rozpočtu a případné nabídce banky připravit."
+          ],
+          "action": {
+            "label": "Domluvit úvodní hovor",
+            "intent": "open-contact-or-screening-flow"
+          }
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "title": "Výsledek má odpovídat vaší situaci",
+    "paragraphs": [
+      "Společné posouzení může potvrdit zvažovanou nabídku, ukázat vhodnost nižšího úvěru nebo pomoci připravit se na pozdější nákup. Podstatné je znát předpoklady, ze kterých rozpočet vychází, a prostor, který vám po splátce zůstane."
+    ]
+  },
+  "relatedTopics": [
+    {
+      "topic": "Úroková sazba není cena hypotéky. Co všechno rozhoduje?",
+      "reason": "Pomůže porovnat celkové náklady a podmínky konkrétních nabídek.",
+      "slug": "urokova-sazba-neni-cena-hypoteky"
+    },
+    {
+      "topic": "Končí vám fixace hypotéky? Neberte první nabídku banky jako konečný verdikt",
+      "reason": "Navazuje na posouzení nové splátky a možností při konci fixace.",
+      "slug": "konec-fixace-hypoteky"
+    },
+    {
+      "topic": "Kolik má mít domácnost v rezervě? Jedno správné číslo neexistuje.",
+      "reason": "Rozpracovává dostupnou rezervu pro nečekané výdaje a výpadky příjmu.",
+      "slug": "kolik-ma-mit-domacnost-v-rezerve"
+    }
+  ],
+  "editorial": {
+    "contentStatus": "Redakčně upraveno do šesti sekcí; publikace i odborná kontrola zůstávají ve stavu review/pending.",
+    "sourceBasis": "Rozhovorové odpovědi Davida Pokorného, téma 4, strany 17–25 zdrojového dokumentu. Zadavatel dne 2026-10-05 potvrdil skutečný anonymizovaný případ včetně uvedených detailů; původní označení modelového příkladu bylo podle tohoto potvrzení opraveno.",
+    "needsExternalVerification": true,
+    "review": {
+      "status": "pending"
+    },
+    "verificationItems": [
+      {
+        "id": "04-01-aktualni-pravidla-bankovniho-posouzeni-je-nutne-over",
+        "title": "Dokončit odbornou kontrolu formulace bankovního posouzení",
+        "instruction": "Zkontrolovat finální obecnou formulaci o příjmech, výdajích, závazcích a předvídatelných změnách. Článek neuvádí aktuální regulatorní limity ani jednotný postup interního bankovního scoringu.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "schvaleni-neni-potvrzeni-unosnosti",
+        "claimRef": "schvaleni-neni-potvrzeni-unosnosti:verification-1",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [
+          "https://www.cnb.cz/cs/dohled-financni-trh/ochrana-spotrebitele/spotrebitelsky-uver/",
+          "https://www.cnb.cz/cs/dohled-financni-trh/vykon-dohledu/upozorneni-pro-verejnost/Upozorneni-na-nabizeni-spotrebitelskych-uveru-bez-dolozeni-prijmu-v-online-prostoru",
+          "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/credit-risk/guidelines-loan-origination-and-monitoring"
+        ],
+        "requiresRecheck": true,
+        "note": "Primární zdroje byly při redakčním review ověřeny. Text neomezuje bankovní posouzení na riziko věřitele a nezaměňuje schválenou částku automaticky za maximum. Stav pending ponechán pro odborné uzavření finálního znění."
+      },
+      {
+        "id": "04-02-podminky-refixace-a-jednotlivych-zmen-jsou-casove-ci",
+        "title": "Ověřit individuální předpoklady změny splátky",
+        "instruction": "U konkrétního rozhodnutí ověřit zůstatek úvěru, zbývající splatnost, sazbu a smluvní podmínky. Obecný článek neuvádí konkrétní náklady refinancování, mimořádného splacení ani doporučenou délku fixace.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "stress-test-hypoteky",
+        "claimRef": "stress-test-hypoteky:verification-2",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [],
+        "requiresRecheck": true,
+        "note": "Rozsah zúžen na obecné prověření rozpočtu a podmíněné porovnání dostupných variant. Žádná konkrétní sazba, splatnost ani nabídka nebyla doplněna či nezávisle ověřena."
+      },
+      {
+        "id": "04-03-ocekavany-investicni-vynos-neni-zaruceny",
+        "title": "Očekávaný investiční výnos není zaručený",
+        "instruction": "Dokončit odbornou kontrolu podmíněné úvahy o vyšším financování a investování vlastních peněz. Zachovat náklady, daně, scénáře sazby po fixaci a finanční i psychickou schopnost nést ztrátu; neslibovat překonání nákladů hypotéky.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "kdy-vetsi-financovani-dava-smysl",
+        "claimRef": "kdy-vetsi-financovani-dava-smysl:verification-3",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [
+          "https://www.cnb.cz/cs/dohled-financni-trh/ochrana-spotrebitele/desatero-pro-investory/index.html"
+        ],
+        "requiresRecheck": true,
+        "note": "Obecný princip nezaručeného investičního výsledku byl při redakčním review porovnán s primárním vzdělávacím zdrojem ČNB. Nejde o doporučení konkrétní investice ani uzavřené odborné posouzení individuálního financování."
+      },
+      {
+        "id": "04-case-provenance",
+        "title": "Původ skutečného anonymizovaného případu",
+        "instruction": "Uchovat interní potvrzení zadavatele a ve veřejném článku správně uvádět skutečný anonymizovaný případ. Nezveřejňovat klientské podklady.",
+        "status": "verified",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "modelovy-par-dve-hranice",
+        "claimRef": "modelovy-par-dve-hranice:case-provenance",
+        "evidenceRequired": "Interní potvrzení původu a uvedených detailů zadavatelem.",
+        "sources": [
+          "Potvrzení zadavatele v konverzaci dne 2026-10-05: skutečný případ včetně uvedených detailů (pár s příjmem 80 000 Kč, splátka 36 000 → 30 000 Kč a levnější nemovitost)."
+        ],
+        "verifiedBy": "Zadavatel článku v konverzaci",
+        "verifiedAt": "2026-10-05",
+        "requiresRecheck": false,
+        "note": "Potvrzení vychází z vyjádření zadavatele, nikoli z nezávislého auditu soukromých záznamů. Aritmetika 80 000 − 31 000 − 36 000 = 13 000 a 80 000 − 31 000 − 30 000 = 19 000 byla zkontrolována. Původní údaj 31 000 Kč mimo nové bydlení nebyl překlasifikován jako úplné budoucí výdaje domácnosti."
+      }
+    ],
+    "productionNotes": {
+      "videoOpportunities": [
+        {
+          "recommendedPlacement": "Za první sekcí o bankovním posouzení.",
+          "recommendedTopic": "Dvě čísla: kolik schválí banka a kolik bezpečně unese domácnost.",
+          "suggestedDuration": "60–90 sekund",
+          "reason": "Krátký vizuální rozklad dvou odlišných otázek může rychle odstranit nejčastější mentální záměnu celého článku."
+        },
+        {
+          "recommendedPlacement": "Před anonymizovaným případem mladého páru.",
+          "recommendedTopic": "Jak během jedné minuty projít tři scénáře stresového testu hypotéky.",
+          "suggestedDuration": "75–120 sekund",
+          "reason": "Video může na jednoduchém rozpočtu ukázat, jak se stejná splátka mění při výpadku příjmu, rodičovské a vyšší sazbě."
+        }
+      ],
+      "interactiveOpportunities": [
+        {
+          "type": "calculatorOpportunity",
+          "title": "Orientační kalkulačka bezpečného stropu splátky",
+          "inputs": [
+            "Čistý příjem domácnosti",
+            "Nutné měsíční výdaje mimo novou splátku",
+            "Částka, která má zůstat na rezervu, ochranu a cíle",
+            "Současná modelová sazba a splatnost",
+            "Vyšší stresová sazba",
+            "Scénář jednoho příjmu nebo rodičovské"
+          ],
+          "outputs": [
+            "Rozpočtový strop splátky v dnešním scénáři",
+            "Splátka při stresové sazbě",
+            "Prostor po splátce v jednotlivých scénářích",
+            "Signalizace, který scénář bezpečná hranice neprojde"
+          ],
+          "reason": "Článek staví na překladu bankovní nabídky do skutečného rozpočtu. Interaktivní nástroj umožní čtenáři princip okamžitě aplikovat na vlastní situaci bez předstírání bankovního předschválení."
+        },
+        {
+          "type": "comparisonToolOpportunity",
+          "title": "Banka vs. bezpečná varianta",
+          "inputs": [
+            "Výše úvěru a splátka nabídnutá bankou",
+            "Vlastní bezpečná výše úvěru a splátka",
+            "Čistý příjem a nutné výdaje"
+          ],
+          "outputs": [
+            "Kolik zůstane po splátce v každé variantě",
+            "Měsíční rozdíl pro rezervu a cíle",
+            "Podíl splátky na čistém příjmu",
+            "Roční rozdíl v disponibilním prostoru"
+          ],
+          "reason": "Případ z praxe může být podkladem pro budoucí srovnání rozpočtových variant. Tento článek kalkulačku ani screening neobsahuje."
+        }
+      ],
+      "verificationRequired": [
+        {
+          "topic": "Aktuální hypoteční limity a regulatorní rámec v České republice",
+          "reason": "Zdroj popisuje LTV a vztah regulace k internímu bankovnímu posouzení. Před publikací ověřit aktuální limity, věkové výjimky a stav případných ukazatelů DTI/DSTI u ČNB.",
+          "priority": "high"
+        },
+        {
+          "topic": "Metodika bankovních stresových testů při schvalování",
+          "reason": "Jednotlivé banky mohou používat rozdílné interní modely a sazební rezervy. Neuvádět konkrétní univerzální postup bank bez aktuálního zdroje.",
+          "priority": "medium"
+        },
+        {
+          "topic": "Pravidla, náklady a možnosti změn při refixaci",
+          "reason": "Refinancování, mimořádné splátky, změny splatnosti a související náklady závisejí na aktuálním právu a konkrétní smlouvě.",
+          "priority": "high"
+        },
+        {
+          "topic": "Aktuální úrokové prostředí a doporučení délky fixace",
+          "reason": "Článek má zachovat princip práce s rozpočtovou nejistotou, nikoli uvádět obecné tržní doporučení bez aktuálního kontextu.",
+          "priority": "high"
+        },
+        {
+          "topic": "Srovnání nákladu hypotéky a očekávaného investičního výnosu",
+          "reason": "Výhodnost závisí na sazbě, horizontu, nákladech, zdanění a riziku. Očekávaný výnos nesmí být formulován jako zaručený.",
+          "priority": "high"
+        }
+      ],
+      "implementationNotes": [
+        "Článek používá šest sekcí a zachovává relevantní původní ID; ID modelovy-par-dve-hranice zůstává pouze technickým identifikátorem kvůli stávajícím odkazům.",
+        "Veřejný případ je označen jako skutečný anonymizovaný případ potvrzený zadavatelem. Původní označení modelový bylo opraveno.",
+        "Číselné porovnání používá jediný financialDelta se zaokrouhlenými hodnotami. Neprezentovat je jako aktuální nabídku financování.",
+        "Zůstatky 13 000 a 19 000 Kč jsou po uvedených výdajích 31 000 Kč a splátce. Musí z nich být hrazen také provoz nového bydlení.",
+        "Článek obsahuje jediný explicitní nextAction pro úvodní hovor. Nepřidává screening ani kalkulačku.",
+        "Odborné verificationItems zůstávají pending. Potvrzení původu případu samo neznamená schválení metodiky ani publikace."
+      ],
+      "caseEvidence": "Potvrzení zadavatele ze dne 2026-10-05 opravuje původní chybné označení modelového příkladu. Soukromé klientské podklady se nezveřejňují a nebyly nezávisle auditovány. Částky popisují tehdejší individuální posouzení; sazba a splatnost nejsou doplňovány domněnkou.",
+      "sectionMapping": {
+        "01": [
+          "schvaleni-neni-potvrzeni-unosnosti",
+          "co-banka-pocita-a-co-ne"
+        ],
+        "02": [
+          "bezpecna-splatka-zacina-tim-co-ma-zustat"
+        ],
+        "03": [
+          "hypoteka-bezi-pres-nekolik-zivotnich-etap",
+          "stress-test-hypoteky",
+          "konec-fixace-jako-planovany-bod"
+        ],
+        "04": [
+          "modelovy-par-dve-hranice"
+        ],
+        "05": [
+          "kdy-vetsi-financovani-dava-smysl"
+        ],
+        "06": [
+          "tri-otazky-pred-hledanim-maxima"
+        ]
+      }
+    },
+    "sensitivity": "Posouzení úvěruschopnosti, individuální hypoteční podmínky a skutečný anonymizovaný případ; rozsah uvedených výdajů je nutné odlišovat od úplných nákladů nového bydlení."
+  }
+}

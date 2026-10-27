@@ -1,0 +1,204 @@
+.funnelPage {
+  min-height: 100svh;
+  background: var(--hero-cinematic-bg);
+}
+
+.funnelPage :global([data-axiom-node-id="landing_section"]) {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--hero-cinematic-text);
+  background: var(--hero-cinematic-bg) !important;
+}
+
+.funnelPage :global([data-axiom-node-id="landing_section"]::before) {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: var(--hero-cinematic-overlay);
+}
+
+.funnelPage :global([data-axiom-node-id="landing_section"] > *) {
+  position: relative;
+  z-index: 1;
+}
+
+.funnelPage :global([data-axiom-node-id="landing_badge"]) {
+  color: var(--hero-cinematic-kicker) !important;
+  border: 1px solid var(--border-emphasis-subtle) !important;
+  background: var(--surface-card-dark-hover) !important;
+  box-shadow: none;
+}
+
+.funnelPage :global([data-axiom-node-id="landing_heading"]) {
+  max-width: 720px;
+  color: var(--hero-cinematic-text) !important;
+  font-weight: 850 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.02 !important;
+}
+
+.funnelPage :global([data-axiom-node-id="landing_heading"]::first-line) {
+  color: var(--hero-cinematic-highlight);
+}
+
+.funnelPage :global([data-axiom-node-id="landing_subheadline"]) {
+  max-width: 660px;
+  color: var(--hero-cinematic-muted) !important;
+}
+
+.funnelPage :global([data-axiom-node-id="landing_bullets"]) {
+  color: var(--text-secondary) !important;
+}
+
+.funnelPage :global([data-axiom-node-id="landing_video_stack"]) {
+  align-self: start;
+  align-content: start;
+  grid-template-rows: auto auto;
+  filter: none;
+}
+
+.funnelPage :global([data-axiom-node-id="landing_grid"]) {
+  align-items: start;
+}
+
+.funnelPage :global([data-axiom-node-id="landing_video"]) {
+  align-self: start;
+  border-color: var(--border-default) !important;
+  border-radius: var(--radius-card-compact) !important;
+  background: var(--surface-card-dark) !important;
+  box-shadow: var(--shadow-none) !important;
+}
+
+.funnelPage :global([data-axiom-node-id="landing_video"] video) {
+  background: var(--surface-section-dark-deep);
+}
+
+.funnelPage :global([data-axiom-node-id="landing_video"] p) {
+  color: var(--text-on-light-secondary) !important;
+  background: var(--surface-paper) !important;
+}
+
+.funnelPage :global([data-axiom-node-id="landing_cta"]) {
+  align-self: start;
+  min-height: var(--control-touch-target-min) !important;
+  border: 1px solid var(--cta-primary-border) !important;
+  border-radius: var(--radius-control) !important;
+  color: var(--cta-primary-text) !important;
+  background: var(--cta-primary-bg) !important;
+  box-shadow: var(--shadow-none) !important;
+}
+
+.funnelPage :global([data-axiom-node-id="landing_cta"]:hover) {
+  background: var(--cta-primary-bg-hover) !important;
+}
+
+.funnelPage :global([data-axiom-node-id="landing_cta"]:focus-visible) {
+  outline: var(--focus-width-standard) solid var(--focus-ring);
+  outline-offset: var(--focus-offset-standard);
+}
+
+@media (max-width: 760px) {
+  .funnelPage :global([data-axiom-node-id="landing_section"]) {
+    min-height: auto !important;
+    padding: var(--space-40) 0 var(--space-64) !important;
+    overflow: visible;
+  }
+
+  .funnelPage :global([data-axiom-node-id="landing_container"]) {
+    width: min(100% - var(--space-28), 40rem) !important;
+    padding-block: 0 !important;
+  }
+
+  .funnelPage :global([data-axiom-node-id="landing_grid"]) {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: var(--space-40) !important;
+  }
+
+  .funnelPage :global([data-axiom-node-id="landing_copy"]),
+  .funnelPage :global([data-axiom-node-id="landing_video_stack"]) {
+    width: 100%;
+    min-width: 0;
+    max-width: none !important;
+  }
+
+  .funnelPage :global([data-axiom-node-id="landing_heading"]) {
+    max-width: 12ch;
+    font-size: var(--type-display-size) !important;
+    line-height: var(--type-display-line-height) !important;
+  }
+
+  .funnelPage :global([data-axiom-node-id="landing_video"]),
+  .funnelPage :global([data-axiom-node-id="landing_cta"]) {
+    width: 100% !important;
+  }
+}
+
+.funnelPage
+  :global([data-axiom-node-id^="question_"][data-axiom-node-id$="_section"]) {
+  color: var(--text-on-light-primary);
+  background: var(--surface-section-light) !important;
+}
+
+.funnelPage :global([data-axiom-node-id^="question_"][data-axiom-node-id$="_heading"]) {
+  color: var(--text-on-light-primary) !important;
+  font-weight: var(--type-heading-weight) !important;
+  letter-spacing: 0 !important;
+}
+
+.funnelPage
+  :global([data-axiom-node-id^="question_"][data-axiom-node-id$="_progress"] > div:first-child) {
+  color: var(--text-on-light-secondary) !important;
+}
+
+.funnelPage
+  :global([data-axiom-node-id^="question_"][data-axiom-node-id$="_progress"] > div:last-child) {
+  background: var(--border-on-light-subtle) !important;
+}
+
+.funnelPage
+  :global([data-axiom-node-id^="question_"][data-axiom-node-id$="_progress"] > div:last-child > span) {
+  background: var(--brand-forest) !important;
+}
+
+.funnelPage
+  :global([data-axiom-node-id^="question_"][data-axiom-node-id$="_choices"] > button) {
+  min-height: var(--control-touch-target-min);
+  border: 1px solid var(--border-control-on-light) !important;
+  border-radius: var(--radius-control) !important;
+  color: var(--text-on-light-primary) !important;
+  background: var(--surface-paper) !important;
+  box-shadow: var(--shadow-none) !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .funnelPage
+    :global([data-axiom-node-id^="question_"][data-axiom-node-id$="_choices"] > button:hover) {
+    border-color: var(--selection-border-hover-on-light) !important;
+    background: var(--selection-bg-hover-on-light) !important;
+  }
+}
+
+.funnelPage
+  :global([data-axiom-node-id^="question_"][data-axiom-node-id$="_choices"] > button:focus-visible),
+.funnelPage
+  :global([data-axiom-node-id^="question_"][data-axiom-node-id$="_next"]:focus-visible) {
+  outline: var(--focus-width-standard) solid var(--focus-ring-on-light);
+  outline-offset: var(--focus-offset-standard);
+}
+
+.funnelPage
+  :global([data-axiom-node-id^="question_"][data-axiom-node-id$="_next"]:not(:disabled)) {
+  border: 1px solid var(--cta-primary-border-on-light) !important;
+  color: var(--cta-primary-text-on-light) !important;
+  background: var(--cta-primary-bg-on-light) !important;
+}
+
+.funnelPage
+  :global([data-axiom-node-id^="question_"][data-axiom-node-id$="_next"]:disabled) {
+  border: 1px solid var(--cta-primary-border-disabled-on-light) !important;
+  color: var(--cta-primary-text-disabled-on-light) !important;
+  background: var(--cta-primary-bg-disabled-on-light) !important;
+}

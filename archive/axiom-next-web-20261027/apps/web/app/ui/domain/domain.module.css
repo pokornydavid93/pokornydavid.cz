@@ -1,0 +1,403 @@
+.eyebrow {
+  color: var(--text-emphasis);
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-weight);
+  letter-spacing: var(--type-eyebrow-letter-spacing);
+  line-height: var(--type-eyebrow-line-height);
+  text-transform: var(--type-eyebrow-transform);
+}
+
+.hero {
+  padding-block: var(--space-section);
+  color: var(--text-primary);
+}
+
+.hero[data-variant="compact"] {
+  padding-block: var(--space-section-compact);
+}
+
+.hero[data-variant="home"],
+.hero[data-variant="conversion"] {
+  padding-block: var(--space-section-spacious);
+}
+
+.heroCopy {
+  min-width: 0;
+}
+
+.hero h1,
+.hero h2,
+.hero h3 {
+  margin: 0;
+  max-inline-size: var(--measure-display);
+  color: var(--text-primary);
+  font-size: var(--type-display-size);
+  font-weight: var(--type-display-weight);
+  letter-spacing: var(--type-display-letter-spacing);
+  line-height: var(--type-display-line-height);
+  text-wrap: balance;
+}
+
+.hero[data-variant="page"] :is(h1, h2, h3),
+.hero[data-variant="article"] :is(h1, h2, h3),
+.hero[data-variant="compact"] :is(h1, h2, h3) {
+  max-inline-size: var(--measure-heading);
+  font-size: var(--type-heading-size);
+  font-weight: var(--type-heading-weight);
+  letter-spacing: var(--type-heading-letter-spacing);
+  line-height: var(--type-heading-line-height);
+}
+
+.heroLead {
+  margin: 0;
+  max-inline-size: var(--measure-lead);
+  color: var(--text-secondary);
+  font-size: var(--type-lead-size);
+  line-height: var(--type-lead-line-height);
+  text-wrap: pretty;
+}
+
+.heroActions,
+.bookingActions,
+.cookieActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-10);
+}
+
+.heroSupport {
+  min-width: 0;
+  align-self: center;
+}
+
+.serviceCard,
+.articleCard,
+.testimonialCard,
+.profileCard,
+.bookingPanel,
+.cookieConsent,
+.consentPreferences {
+  min-width: 0;
+  color: var(--text-primary);
+  border-radius: var(--radius-card-compact);
+}
+
+.serviceCard,
+.testimonialCard,
+.bookingPanel,
+.cookieConsent,
+.consentPreferences {
+  padding: var(--card-padding);
+}
+
+.serviceCard,
+.testimonialCard,
+.bookingPanel {
+  display: grid;
+  align-content: start;
+  gap: var(--space-component);
+}
+
+.serviceCard h3,
+.articleCard h3,
+.profileCard h3,
+.bookingPanel h3,
+.cookieConsent h3 {
+  margin: var(--space-6) 0 0;
+  color: var(--text-primary);
+  font-size: var(--type-subheading-size);
+  line-height: var(--type-subheading-line-height);
+  text-wrap: balance;
+}
+
+.serviceOutcomes {
+  margin: 0;
+  display: grid;
+  gap: var(--space-12);
+}
+
+.serviceOutcomes > div {
+  padding-block-start: var(--space-12);
+  display: grid;
+  gap: var(--space-6);
+  border-block-start: 1px solid var(--border-subtle);
+}
+
+.serviceOutcomes dt,
+.articleMeta,
+.trustDetail,
+.proofEvidence {
+  color: var(--text-muted);
+  font-size: var(--type-metadata-size);
+  line-height: var(--type-metadata-line-height);
+}
+
+.serviceOutcomes dd {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--type-body-small-size);
+  line-height: var(--type-body-small-line-height);
+}
+
+.metadataList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  list-style: none;
+}
+
+.metadataList li {
+  padding: var(--space-4) var(--space-8);
+  color: var(--selection-text);
+  background: var(--selection-bg);
+  border: 1px solid var(--selection-border);
+  border-radius: var(--radius-pill);
+  font-size: var(--type-caption-size);
+}
+
+.cardAction {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.cardAction svg {
+  inline-size: var(--icon-size-control);
+  block-size: var(--icon-size-control);
+  transition: transform 180ms var(--ease-standard);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cardAction:hover svg {
+    transform: translate(0.12rem, -0.12rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cardAction svg {
+    transition: none;
+  }
+}
+
+.articleCard,
+.profileCard {
+  overflow: clip;
+}
+
+.articleCard > figure,
+.profileCard > figure {
+  border-radius: 0;
+}
+
+.articleCard > figure > div,
+.profileCard > figure > div {
+  border-radius: 0;
+}
+
+.profileCard > figure > div {
+  max-block-size: var(--profile-card-portrait-max-block);
+}
+
+.cardBody {
+  padding: var(--card-padding);
+  display: grid;
+  align-content: start;
+  gap: var(--space-12);
+}
+
+.cardBody > p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--type-body-small-size);
+  line-height: var(--type-body-small-line-height);
+  text-wrap: pretty;
+}
+
+.articleMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+}
+
+.testimonialCard figure,
+.testimonialCard blockquote,
+.testimonialCard p {
+  margin: 0;
+}
+
+.testimonialCard figure {
+  display: grid;
+  gap: var(--space-component);
+}
+
+.testimonialCard blockquote {
+  color: var(--text-primary);
+  font-size: var(--type-lead-size);
+  line-height: var(--type-lead-line-height);
+}
+
+.testimonialCard figcaption {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.testimonialCard figcaption span {
+  color: var(--text-muted);
+  font-size: var(--type-caption-size);
+}
+
+.trustDetail {
+  padding-block-start: var(--space-12);
+  border-block-start: 1px solid var(--border-subtle);
+}
+
+.proofItem {
+  min-width: 0;
+  padding-block: var(--space-12);
+  display: grid;
+  align-content: start;
+  gap: var(--space-6);
+  color: var(--text-primary);
+  border-block-start: 1px solid var(--border-default);
+}
+
+.proofItem > strong {
+  font-size: var(--type-subheading-size);
+  line-height: var(--type-subheading-line-height);
+}
+
+.proofItem > span:not(.proofIcon) {
+  color: var(--text-secondary);
+  font-size: var(--type-body-small-size);
+}
+
+.proofDescription {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--type-body-small-size);
+  line-height: var(--type-body-small-line-height);
+}
+
+.proofEvidence {
+  padding-block-start: var(--space-8);
+  display: grid;
+  gap: var(--space-4);
+  border-block-start: 1px solid var(--border-subtle);
+}
+
+.proofEvidence a {
+  color: inherit;
+}
+
+.proofIcon,
+.proofIcon > svg {
+  inline-size: var(--icon-size-card);
+  block-size: var(--icon-size-card);
+}
+
+.proofIcon {
+  color: var(--text-emphasis);
+}
+
+.enquiryForm {
+  inline-size: 100%;
+  max-inline-size: 48rem;
+  min-width: 0;
+  display: grid;
+  gap: var(--space-component);
+}
+
+.enquiryForm > button[type="submit"] {
+  justify-self: start;
+}
+
+
+.bookingFrame {
+  inline-size: 100%;
+  min-block-size: var(--booking-panel-min-block);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-control);
+  opacity: 0;
+}
+
+.bookingFrame[data-ready] {
+  opacity: 1;
+}
+
+.cookieConsent {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: var(--space-component);
+}
+
+.cookieConsent > div:first-child {
+  max-inline-size: var(--measure-lead);
+  display: grid;
+  gap: var(--space-8);
+}
+
+.cookieConsent p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--type-body-small-size);
+  line-height: var(--type-body-small-line-height);
+}
+
+.consentPreferences {
+  display: grid;
+  gap: var(--space-component);
+}
+
+.consentPreferences header {
+  max-inline-size: var(--measure-lead);
+  display: grid;
+  gap: var(--space-8);
+}
+
+.consentPreferences h3,
+.consentPreferences p {
+  margin: 0;
+}
+
+.consentPreferences h3 {
+  color: var(--text-primary);
+  font-size: var(--type-subheading-size);
+  line-height: var(--type-subheading-line-height);
+}
+
+.consentPreferences p {
+  color: var(--text-secondary);
+  font-size: var(--type-body-small-size);
+  line-height: var(--type-body-small-line-height);
+}
+
+.consentCategories {
+  display: grid;
+  gap: var(--space-10);
+}
+
+.consentError {
+  color: var(--status-error-text) !important;
+}
+
+@media (max-width: 720px) {
+  .heroActions > *,
+  .bookingActions > *,
+  .cookieActions > *,
+  .enquiryForm > button[type="submit"] {
+    inline-size: 100%;
+  }
+
+  .cookieConsent {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cookieActions {
+    display: grid;
+  }
+}

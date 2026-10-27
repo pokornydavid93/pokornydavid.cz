@@ -1,0 +1,454 @@
+.specimen {
+  min-inline-size: 0;
+  display: grid;
+  gap: var(--space-component);
+}
+
+.controls {
+  min-inline-size: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  align-items: end;
+  gap: var(--space-16);
+}
+
+.widthControl,
+.selectControl,
+.choiceControl {
+  min-inline-size: 0;
+  display: grid;
+  gap: var(--space-8);
+}
+
+.widthControl > span,
+.selectControl > span,
+.choiceControl > span,
+.parentProof > header > span,
+.examples > header > span,
+.edgeCases section > span,
+.proofCase > header > span {
+  color: var(--text-muted);
+  font-size: var(--type-metadata-size);
+  font-weight: var(--type-metadata-weight);
+  letter-spacing: var(--type-eyebrow-letter-spacing);
+  text-transform: uppercase;
+}
+
+.widthControl > div {
+  min-block-size: var(--control-touch-target-min);
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) auto;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.widthControl input {
+  inline-size: 100%;
+  accent-color: var(--accent-primary);
+  cursor: ew-resize;
+}
+
+.widthControl output {
+  min-inline-size: 4.75rem;
+  color: var(--text-primary);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: var(--type-label-small-size);
+  font-variant-numeric: tabular-nums;
+  text-align: end;
+}
+
+.selectControl select,
+.choiceControl > div {
+  min-block-size: var(--control-touch-target-min);
+  color: var(--text-secondary);
+  background: transparent;
+  border: var(--border-width-structural) solid var(--border-default);
+  border-radius: var(--radius-control);
+}
+
+.selectControl select {
+  inline-size: 100%;
+  padding-inline: var(--space-12);
+  color-scheme: dark;
+  font: inherit;
+  font-size: var(--type-label-small-size);
+  font-weight: var(--type-label-weight);
+  cursor: pointer;
+}
+
+.choiceControl > div {
+  padding: var(--space-4);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+.choiceControl button {
+  min-inline-size: 0;
+  min-block-size: calc(var(--control-touch-target-min) - var(--space-8));
+  padding-inline: var(--space-8);
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: var(--type-label-small-size);
+  font-weight: var(--type-label-weight);
+  background: transparent;
+  border: var(--border-width-structural) solid transparent;
+  border-radius: calc(var(--radius-control) - var(--space-2));
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.choiceControl button:hover,
+.selectControl select:hover {
+  color: var(--text-primary);
+  background: var(--selection-bg-hover);
+}
+
+.choiceControl button[data-active] {
+  color: var(--selection-selected-text);
+  background: var(--selection-selected-bg);
+  border-color: var(--selection-selected-border);
+}
+
+.choiceControl button:focus-visible,
+.selectControl select:focus-visible,
+.widthControl input:focus-visible,
+.edgeCases summary:focus-visible {
+  outline: var(--focus-width-standard) solid var(--focus-ring);
+  outline-offset: var(--focus-offset-standard);
+}
+
+.parentStage {
+  min-inline-size: 0;
+  block-size: 30rem;
+  padding-block: var(--space-12);
+  display: grid;
+  place-items: stretch center;
+  overflow: auto;
+  background: var(--surface-section-dark-deep);
+  border-block: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.parentSandbox,
+.fixedParent {
+  position: relative;
+  inline-size: var(--intrinsic-parent-width);
+  padding-block: var(--space-40);
+  display: grid;
+  align-content: center;
+  background: var(--surface-page);
+}
+
+.parentSandbox {
+  inline-size: min(100%, var(--intrinsic-parent-width));
+  min-block-size: 100%;
+}
+
+.parentSandbox::before,
+.fixedParent::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-inline: var(--border-width-hairline) dashed var(--border-emphasis);
+}
+
+.parentSandbox::after,
+.fixedParent::after {
+  content: attr(data-parent-target) " px parent";
+  position: absolute;
+  inset-block-start: var(--space-8);
+  inset-inline-end: var(--space-8);
+  color: var(--text-emphasis);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: var(--type-metadata-size);
+  font-variant-numeric: tabular-nums;
+}
+
+.fixedParent::after {
+  content: none;
+}
+
+.algorithmList,
+.compositionGrid {
+  padding: 0;
+  list-style: none;
+}
+
+.gridItem,
+.switcherItem,
+.sidebarRail,
+.sidebarContent {
+  min-inline-size: 0;
+  color: var(--text-secondary);
+  background: var(--surface-card-dark);
+  border: var(--border-width-structural) solid var(--border-default);
+  border-radius: var(--radius-control);
+}
+
+.gridItem {
+  min-block-size: 5.5rem;
+  padding: var(--space-14);
+  display: grid;
+  align-content: start;
+  gap: var(--space-8);
+}
+
+.gridItem:nth-child(2),
+.gridItem:nth-child(4) {
+  min-block-size: 7rem;
+}
+
+.gridItem strong,
+.switcherItem strong,
+.sidebarRail strong,
+.sidebarContent strong,
+.compositionGrid strong,
+.switcherComposition strong,
+.compositionRail strong,
+.compositionContent strong {
+  color: var(--text-primary);
+  font-size: var(--type-label-small-size);
+}
+
+.gridItem span,
+.switcherItem span,
+.sidebarRail span,
+.sidebarContent p,
+.compositionGrid span,
+.switcherComposition p,
+.compositionRail span,
+.compositionContent p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--type-body-small-size);
+  line-height: var(--type-body-small-line-height);
+  overflow-wrap: anywhere;
+}
+
+.switcherItem {
+  min-block-size: 5rem;
+  padding: var(--space-14);
+  display: grid;
+  align-content: center;
+  grid-template-columns: var(--space-24) minmax(0, 1fr);
+  gap: var(--space-8);
+}
+
+.sidebarRail,
+.sidebarContent {
+  padding: var(--space-16);
+  display: grid;
+  align-content: start;
+  gap: var(--space-10);
+}
+
+.sidebarRail {
+  min-block-size: 7rem;
+}
+
+.sidebarContent {
+  min-block-size: 11rem;
+}
+
+.sidebarContent::after {
+  content: "content minimum";
+  inline-size: fit-content;
+  margin-block-start: auto;
+  padding-block-start: var(--space-8);
+  color: var(--text-emphasis);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: var(--type-metadata-size);
+  border-block-start: var(--border-width-hairline) solid var(--border-emphasis);
+}
+
+.longContent {
+  overflow-wrap: anywhere;
+}
+
+.diagnostics {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  border-block: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.diagnostics > div {
+  min-inline-size: 0;
+  padding: var(--space-12);
+  display: grid;
+  align-content: start;
+  gap: var(--space-6);
+  border-inline-start: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.diagnostics > div:first-child {
+  border-inline-start: 0;
+}
+
+.diagnostics dt {
+  color: var(--text-muted);
+  font-size: var(--type-metadata-size);
+  text-transform: uppercase;
+}
+
+.diagnostics dd {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: var(--type-label-small-size);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.parentProof,
+.examples {
+  display: grid;
+  gap: var(--space-component);
+  padding-block-start: var(--space-component);
+  border-block-start: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.parentProof > header,
+.examples > header {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.parentProof h4,
+.examples h4 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: var(--type-subheading-size);
+  line-height: var(--type-subheading-line-height);
+  text-wrap: balance;
+}
+
+.proofCase {
+  min-inline-size: 0;
+  display: grid;
+  gap: var(--space-8);
+}
+
+.proofCase > header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-12);
+}
+
+.proofCase code {
+  color: var(--text-emphasis);
+  font-size: var(--type-metadata-size);
+}
+
+.proofScroller {
+  min-inline-size: 0;
+  padding-block: var(--space-8);
+  overflow: auto;
+  background: var(--surface-section-dark-deep);
+}
+
+.fixedParent {
+  min-block-size: 12rem;
+}
+
+.exampleRow {
+  min-inline-size: 0;
+  padding-block-start: var(--space-component);
+  display: grid;
+  grid-template-columns: minmax(9rem, 0.22fr) minmax(0, 1fr);
+  gap: var(--space-component);
+  border-block-start: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.exampleRow > div:first-child {
+  display: grid;
+  align-content: start;
+  gap: var(--space-6);
+  color: var(--text-muted);
+  font-size: var(--type-metadata-size);
+}
+
+.exampleRow code {
+  color: var(--text-emphasis);
+}
+
+.compositionGrid li,
+.switcherComposition section,
+.compositionRail,
+.compositionContent {
+  min-inline-size: 0;
+  padding: var(--space-16);
+  display: grid;
+  align-content: start;
+  gap: var(--space-8);
+  border-block-start: var(--border-width-hairline) solid var(--border-default);
+}
+
+.switcherComposition section:last-child {
+  gap: var(--space-16);
+}
+
+.switcherComposition section:last-child > button {
+  inline-size: fit-content;
+}
+
+.edgeCases {
+  border-block: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.edgeCases summary {
+  min-block-size: var(--control-touch-target-min);
+  display: flex;
+  align-items: center;
+  color: var(--text-primary);
+  font-weight: var(--type-label-weight);
+  cursor: pointer;
+}
+
+.edgeCases > div {
+  padding-block-end: var(--space-component);
+  display: grid;
+  gap: var(--space-component);
+}
+
+.edgeCases > div > section:not(.proofCase) {
+  min-inline-size: 0;
+  padding-block-start: var(--space-12);
+  display: grid;
+  gap: var(--space-12);
+  border-block-start: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+@media (max-width: 720px) {
+  .controls,
+  .diagnostics,
+  .exampleRow {
+    grid-template-columns: 1fr;
+  }
+
+  .parentStage {
+    block-size: 32rem;
+    place-items: stretch start;
+  }
+
+  .diagnostics > div {
+    grid-template-columns: minmax(7rem, 0.42fr) minmax(0, 1fr);
+    border-inline-start: 0;
+    border-block-start: var(--border-width-hairline) solid var(--border-subtle);
+  }
+
+  .diagnostics > div:first-child {
+    border-block-start: 0;
+  }
+
+  .proofCase > header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .switcherComposition section:last-child > button {
+    inline-size: 100%;
+  }
+}

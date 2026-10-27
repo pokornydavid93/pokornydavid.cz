@@ -1,0 +1,68 @@
+.card {
+  min-width: 0;
+  display: grid;
+  gap: var(--card-gap, var(--space-stack, 16px));
+  padding: var(--card-padding, 24px);
+  border: var(--card-border-width, 1px) solid var(--card-border-color);
+  border-radius: var(--card-radius, var(--radius-card));
+  background: var(--card-surface);
+  box-shadow: var(--card-elevation, none);
+  color: var(--card-foreground);
+}
+
+.compact {
+  padding: var(--card-padding-compact, 16px);
+}
+
+.toneDark {
+  --card-surface: var(--surface-card-dark);
+  --card-foreground: var(--text-on-dark-primary);
+  --card-border-color: var(--border-on-dark-subtle);
+}
+
+.toneLight {
+  --card-surface: var(--surface-card-light);
+  --card-foreground: var(--text-on-light-primary);
+  --card-border-color: var(--border-on-light-subtle);
+}
+
+.toneAction {
+  --card-surface: var(--surface-action);
+  --card-foreground: var(--cta-primary-text);
+  --card-border-color: var(--border-accent-on-light-emphasis);
+}
+
+.toneTransparent {
+  --card-surface: transparent;
+  --card-foreground: currentColor;
+  --card-border-color: transparent;
+}
+
+.elevationBase,
+.elevationNone {
+  --card-elevation: var(--shadow-none, none);
+}
+
+.elevationRaised {
+  --card-elevation: var(--elevation-raised-shadow, var(--shadow-raised));
+}
+
+.elevationFloating {
+  --card-elevation: var(--elevation-floating-shadow, var(--shadow-floating));
+}
+
+.interactive {
+  transition:
+    border-color var(--duration-component, 320ms) var(--ease-standard, ease),
+    box-shadow var(--duration-component, 320ms) var(--ease-standard, ease),
+    transform var(--duration-control, 260ms) var(--ease-standard, ease);
+}
+
+.interactive:hover {
+  transform: translateY(var(--hover-lift, -1px));
+}
+
+.interactive:focus-visible {
+  outline: var(--focus-width-standard, 2px) solid var(--button-focus-ring);
+  outline-offset: var(--focus-offset-standard, 3px);
+}

@@ -1,0 +1,69 @@
+.badge {
+  min-height: var(--badge-height, 28px);
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--badge-gap, 6px);
+  padding-inline: var(--badge-padding-inline, 10px);
+  border: var(--badge-border-width, 1px) solid var(--badge-border-color);
+  border-radius: var(--badge-radius, var(--radius-pill));
+  color: var(--badge-foreground);
+  background: var(--badge-surface);
+  font-size: var(--type-label-small-size, 13px);
+  font-weight: var(--type-weight-strong, 650);
+  line-height: var(--type-label-line-height, 1.2);
+  white-space: nowrap;
+}
+
+.toneAccent {
+  --badge-surface: var(--surface-action-soft);
+  --badge-foreground: var(--text-emphasis);
+  --badge-border-color: var(--border-accent-subtle);
+}
+
+.toneNeutral,
+.toneCode {
+  --badge-surface: var(--surface-card-dark);
+  --badge-foreground: var(--text-on-dark-secondary);
+  --badge-border-color: var(--border-on-dark-subtle);
+}
+
+.toneSuccess {
+  --badge-surface: var(--status-success-surface);
+  --badge-foreground: var(--status-success-foreground);
+  --badge-border-color: var(--status-success-border);
+}
+
+.toneWarning {
+  --badge-surface: var(--status-info-surface);
+  --badge-foreground: var(--status-info-foreground);
+  --badge-border-color: var(--status-info-border);
+}
+
+.toneDanger {
+  --badge-surface: var(--status-error-surface);
+  --badge-foreground: var(--status-error-foreground);
+  --badge-border-color: var(--status-error-border);
+}
+
+.toneCode {
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+}
+
+.interactive {
+  cursor: pointer;
+  transition:
+    border-color var(--badge-transition-duration, 200ms) var(--ease-standard, ease),
+    color var(--badge-transition-duration, 200ms) var(--ease-standard, ease),
+    transform var(--badge-transition-duration, 200ms) var(--ease-standard, ease);
+}
+
+.interactive:hover {
+  transform: translateY(var(--hover-lift, -1px));
+}
+
+.interactive:focus-visible {
+  outline: var(--focus-width-dense, 2px) solid var(--button-focus-ring);
+  outline-offset: var(--focus-offset-dense, 2px);
+}

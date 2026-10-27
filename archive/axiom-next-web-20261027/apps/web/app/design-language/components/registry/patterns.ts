@@ -1,0 +1,128 @@
+import { patternEntry } from "./builders";
+import type { PatternRegistryEntry } from "./types";
+
+const patternResponsive = {
+  invariant: "Povinné sloty, sémantika a logické pořadí zůstávají zachované.",
+  narrow: "Použitý layout algorithm skládá regiony bez route-specific breakpointu.",
+  wide: "Reading measure a vztahy slotů zůstávají omezené schválenými layout primitives.",
+};
+
+const verifiedPhase5 = (codeRef: string) => ({
+  maturity: "verified" as const,
+  codeRef,
+  tests: {
+    unit: "not-applicable" as const,
+    accessibility: "passing" as const,
+    visual: "passing" as const,
+    responsive: "passing" as const,
+    evidence: ["tests/e2e/design-language-patterns-templates.spec.ts"],
+  },
+});
+
+const livePhase5 = (codeRef: string, usageEvidence: string[]) => ({
+  ...verifiedPhase5(codeRef),
+  maturity: "live" as const,
+  usageEvidence,
+});
+
+export const patternRegistryEntries = [
+  patternEntry({
+    id: "pattern.section-intro", name: "SectionIntro", capability: "section-entry",
+    ...verifiedPhase5("app/ui/patterns/SectionIntro.tsx"),
+    responsibility: "Otevírá sekci eyebrow, headingem, leadem a volitelnou akcí v řízené measure.",
+    anatomy: [{ name: "heading", required: true, description: "Nadpis sekce." }, { name: "eyebrow", required: false, description: "Krátký kontext." }, { name: "lead", required: false, description: "Vysvětlující úvod." }, { name: "action", required: false, description: "Jedna podpůrná navigace nebo akce." }],
+    props: [{ name: "align", type: "start | center", default: "start", description: "Povolené zarovnání bez změny anatomy." }],
+    responsive: patternResponsive, antiUse: ["Nevkládat collection, media split ani nový surface systém."],
+    slots: ["eyebrow", "heading", "lead", "action"], allowedChildren: ["layout.stack", "layout.container", "component.button", "component.link"],
+    surfaceSequence: ["inherited"], routeFamilies: ["route.home", "route.services-index", "route.service-detail", "route.process", "route.about", "route.blog-index", "route.overview", "route.legal", "route.system"],
+    tokens: ["--measure-lead", "--space-composition"],
+  }),
+  patternEntry({
+    id: "pattern.card-collection", name: "CardCollection", capability: "content-discovery",
+    ...verifiedPhase5("app/ui/patterns/CardCollection.tsx"),
+    responsibility: "Skládá intro a responzivní kolekci jedné schválené doménové card family.",
+    anatomy: [{ name: "intro", required: false, description: "SectionIntro." }, { name: "collection", required: true, description: "Homogenní card family." }, { name: "action", required: false, description: "Collection-level cíl." }],
+    props: [{ name: "cardKind", type: "service | article | testimonial", description: "Jediná povolená card family kolekce." }],
+    responsive: patternResponsive, antiUse: ["Nemíchat nesrovnatelné card families ani vytvářet generic ContentCard."],
+    slots: ["intro", "collection", "action"], allowedChildren: ["pattern.section-intro", "layout.grid", "domain.service-card", "domain.article-card", "domain.testimonial-card", "component.link"],
+    surfaceSequence: ["inherited", "card surface"], routeFamilies: ["route.home", "route.services-index", "route.service-detail", "route.about", "route.blog-index"],
+    tokens: ["--space-composition", "--size-card-min"],
+  }),
+  patternEntry({
+    id: "pattern.split-narrative", name: "SplitNarrative", capability: "narrative-relationship",
+    ...verifiedPhase5("app/ui/patterns/SplitNarrative.tsx"),
+    responsibility: "Skládá text a media nebo supporting content přes Switcher či Sidebar.",
+    anatomy: [{ name: "narrative", required: true, description: "Hlavní textový region." }, { name: "support", required: true, description: "Media, profile nebo proof region." }],
+    variants: ["balanced", "sidebar"], props: [{ name: "layout", type: "switcher | sidebar", description: "Schválený vztah regionů." }],
+    responsive: patternResponsive, antiUse: ["Neměnit source order přes CSS order ani zakládat Split primitive."],
+    slots: ["narrative", "support"], allowedChildren: ["layout.switcher", "layout.sidebar", "layout.stack", "component.responsive-media", "domain.profile-card", "domain.proof-item"],
+    surfaceSequence: ["inherited"], routeFamilies: ["route.home", "route.services-index", "route.service-detail", "route.process", "route.about", "route.article-detail", "route.overview"],
+    tokens: ["--space-composition", "--measure-body"],
+  }),
+  patternEntry({
+    id: "pattern.trust-block", name: "TrustBlock", capability: "trust-context",
+    ...verifiedPhase5("app/ui/patterns/TrustBlock.tsx"),
+    responsibility: "Skládá proof items, testimonials a jejich důvěryhodnostní kontext.",
+    anatomy: [{ name: "context", required: true, description: "Vysvětlení relevance důkazů." }, { name: "proof", required: true, description: "ProofItems nebo testimonials." }],
+    props: [{ name: "density", type: "compact | standard", default: "standard", description: "Povolená hustota důkazů." }],
+    responsive: patternResponsive, antiUse: ["Nevytvářet neověřené metriky ani dekorativní logo wall bez kontextu."],
+    slots: ["context", "proof"], allowedChildren: ["pattern.section-intro", "layout.grid", "layout.cluster", "domain.proof-item", "domain.testimonial-card"],
+    surfaceSequence: ["dark or paper", "card surface optional"], routeFamilies: ["route.home", "route.services-index", "route.service-detail", "route.process", "route.about", "route.overview"],
+    tokens: ["--space-composition", "--text-secondary"],
+  }),
+  patternEntry({
+    id: "pattern.process-and-fees", name: "ProcessAndFees", capability: "advisory-process",
+    responsibility: "Vysvětluje proces, kroky spolupráce a fee context bez skrytí podstatných informací.",
+    ...verifiedPhase5("app/ui/patterns/ProcessAndFees.tsx"),
+    anatomy: [{ name: "intro", required: true, description: "Kontext procesu." }, { name: "steps", required: true, description: "Logicky seřazené kroky." }, { name: "fees", required: false, description: "Transparentní fee explanation." }, { name: "action", required: false, description: "Následující krok." }],
+    states: ["rest", "reduced-motion"], props: [{ name: "steps", type: "ProcessStep[]", description: "Seřazený procesní obsah." }],
+    responsive: patternResponsive, antiUse: ["Nepřipnout kritický obsah pouze do scroll-driven canvas vrstvy."],
+    slots: ["intro", "steps", "fees", "action"], allowedChildren: ["pattern.section-intro", "layout.stack", "layout.grid", "domain.proof-item", "component.button", "component.link"],
+    surfaceSequence: ["dark", "dark card", "action optional"], routeFamilies: ["route.home", "route.service-detail", "route.process"],
+    tokens: ["--space-section", "--duration-cinematic"],
+  }),
+  patternEntry({
+    id: "pattern.faq-section", name: "FAQSection", capability: "question-resolution",
+    responsibility: "Skládá SectionIntro a kolekci přístupných Disclosure položek.",
+    ...verifiedPhase5("app/ui/patterns/FAQSection.tsx"),
+    anatomy: [{ name: "intro", required: true, description: "Kontext FAQ." }, { name: "questions", required: true, description: "Disclosure collection." }, { name: "action", required: false, description: "Kontakt při nevyřešené otázce." }],
+    states: ["all-collapsed", "item-expanded"], props: [{ name: "items", type: "FAQItem[]", description: "Otázky a odpovědi." }],
+    responsive: patternResponsive, antiUse: ["Neskrývat kritické smluvní informace nebo používat hover-only otevření."],
+    slots: ["intro", "questions", "action"], allowedChildren: ["pattern.section-intro", "layout.stack", "component.disclosure", "component.link", "component.button"],
+    surfaceSequence: ["inherited", "card surface optional"], routeFamilies: ["route.home", "route.services-index", "route.service-detail", "route.process", "route.overview"],
+    tokens: ["--space-composition", "--border-subtle"],
+  }),
+  patternEntry({
+    id: "pattern.action-band", name: "ActionBand", capability: "conversion-decision",
+    ...livePhase5("app/ui/patterns/ActionBand.tsx", ["app/ui/templates/SystemTemplate.tsx", "app/not-found.tsx"]),
+    responsibility: "Vytváří jednoznačný rozhodovací CTA blok na action nebo action-dark surface.",
+    anatomy: [{ name: "heading", required: true, description: "Rozhodovací výzva." }, { name: "lead", required: false, description: "Důvod a očekávání." }, { name: "actions", required: true, description: "Jedna primární a nanejvýš jedna sekundární akce." }],
+    variants: ["action", "action-dark"], props: [{ name: "surface", type: "action | action-dark", description: "Schválená konverzní surface." }],
+    responsive: patternResponsive, antiUse: ["Nevkládat více rovnocenných CTA ani vlastní gradient/glow recipe."],
+    slots: ["heading", "lead", "actions"], allowedChildren: ["component.surface", "layout.container", "layout.stack", "layout.cluster", "component.button", "component.link"],
+    surfaceSequence: ["action or action-dark"], routeFamilies: ["route.home", "route.services-index", "route.service-detail", "route.process", "route.about", "route.blog-index", "route.article-detail", "route.overview", "route.system"],
+    tokens: ["--surface-action", "--surface-action-dark", "--space-section"],
+  }),
+  patternEntry({
+    id: "pattern.form-contact-split", name: "FormContactSplit", capability: "lead-capture",
+    responsibility: "Skládá EnquiryForm a kontaktní, booking nebo supporting informace.",
+    ...verifiedPhase5("app/ui/patterns/FormContactSplit.tsx"),
+    anatomy: [{ name: "form", required: true, description: "EnquiryForm." }, { name: "support", required: true, description: "Kontakt, očekávání nebo booking panel." }],
+    states: ["idle", "submitting", "success", "error"], props: [{ name: "supportKind", type: "contact | booking | context", description: "Typ podpůrného regionu." }],
+    responsive: patternResponsive, antiUse: ["Neskrývat form labels ani měnit field order mezi viewports."],
+    slots: ["form", "support"], allowedChildren: ["layout.sidebar", "layout.switcher", "domain.enquiry-form", "domain.booking-panel", "domain.proof-item"],
+    surfaceSequence: ["paper or dark", "card surface"], routeFamilies: ["route.home", "route.service-detail", "route.process", "route.about", "route.overview"],
+    tokens: ["--space-composition", "--form-field-gap"],
+  }),
+  patternEntry({
+    id: "pattern.editorial-flow", name: "EditorialFlow", capability: "longform-journey",
+    responsibility: "Skládá article header, Prose, callouts, media, related content a final action.",
+    ...verifiedPhase5("app/ui/patterns/EditorialFlow.tsx"),
+    anatomy: [{ name: "header", required: true, description: "Article entry a metadata." }, { name: "body", required: true, description: "Prose a obsahová média." }, { name: "related", required: false, description: "Související obsah." }, { name: "action", required: false, description: "Finální relevantní akce." }],
+    props: [{ name: "article", type: "ArticleContent", description: "Strukturovaný editorial obsah." }],
+    responsive: patternResponsive, antiUse: ["Nerozbíjet heading hierarchy ani reading measure dekorativním gridem."],
+    slots: ["header", "body", "related", "action"], allowedChildren: ["component.prose", "component.responsive-media", "component.notice", "domain.article-card", "pattern.action-band", "layout.bleed"],
+    surfaceSequence: ["paper", "card light optional", "action optional"], routeFamilies: ["route.home", "route.about", "route.blog-index", "route.article-detail", "route.legal"],
+    tokens: ["--measure-body", "--surface-paper", "--space-section"],
+  }),
+] satisfies PatternRegistryEntry[];

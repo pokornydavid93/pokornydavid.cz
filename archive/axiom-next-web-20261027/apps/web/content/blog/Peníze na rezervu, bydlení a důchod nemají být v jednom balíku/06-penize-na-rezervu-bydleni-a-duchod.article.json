@@ -1,0 +1,464 @@
+{
+  "schemaVersion": 2,
+  "publication": {
+    "status": "review",
+    "author": "David Pokorný",
+    "publishedAt": "2026-10-08",
+    "updatedAt": "2026-10-08"
+  },
+  "meta": {
+    "slug": "penize-na-rezervu-bydleni-a-duchod-nemaji-byt-v-jednom-baliku",
+    "topic": "Jak rozdělit peníze podle účelu a okamžiku, kdy je bude člověk potřebovat, aby rezerva zůstala dostupná, střednědobé cíle nebyly vystavené nepřiměřenému kolísání a dlouhodobé peníze měly prostor růst",
+    "category": "Investice a finanční plánování",
+    "primaryIntent": "Naučit čtenáře oddělit rezervu, střednědobé cíle a dlouhodobé investice podle jejich práce, pochopit vztah mezi horizontem, dostupností a rizikem a převést vlastní cíle do přehledného systému, který se průběžně mění s životem.",
+    "audience": "Člověk nebo domácnost, která drží všechny úspory na jednom účtu, má všechny peníze v jednom investičním portfoliu nebo neví, jak oddělit rezervu, peníze na bydlení a dlouhodobou rentu.",
+    "estimatedReadTime": 7
+  },
+  "hero": {
+    "category": "Investice a práce s cíli",
+    "eyebrow": "KAŽDÉ PENÍZE MAJÍ JINOU PRÁCI",
+    "title": "Peníze na rezervu, bydlení a důchod nemají být v jednom balíku",
+    "subtitle": "Ukážu vám, jak oddělit rezervu, plánované výdaje a peníze na pozdější příjem. U každé části posoudíme termín, dostupnost a ztrátu, kterou by váš rozpočet unesl.",
+    "excerpt": "Peníze na nečekaný výdaj potřebují jiné nastavení než úspory na bydlení nebo důchod. Začněte jejich účelem a termínem; podle nich pak posuďte současné účty a investice.",
+    "estimatedReadTime": "7 minut",
+    "heroSummary": [
+      "Rozlišíte rezervu, plánované výdaje a peníze na pozdější příjem.",
+      "Prověříte termín, dostupnost, náklady a přijatelné riziko každého cíle.",
+      "Uvidíte, co se mění před čerpáním peněz a co při kontrole portfolia.",
+      "Připravíte si přehled vlastních cílů a současných úspor."
+    ]
+  },
+  "sections": [
+    {
+      "id": "jeden-zustatek-tri-ruzne-ukoly",
+      "eyebrow": "ÚČEL PENĚZ",
+      "title": "Každá část peněz potřebuje svůj účel",
+      "intro": "Na jednom účtu nebo v jednom portfoliu můžete mít peníze na opravu auta, vlastní vklad na bydlení i budoucí důchod. Samotný zůstatek neukáže, kolik z něj můžete použít dnes.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Při společné kontrole proto nejdřív přiřadíme penězům účel. Jinak hrozí, že výdaj na bydlení spotřebuje i rezervu nebo že kvůli nečekané platbě budete prodávat dlouhodobé investice v nevhodnou chvíli.",
+            "Rozdělení nemusí znamenat další smlouvy ani více institucí. Potřebujete především vědět, která část je na co, kdy bude potřeba a zda její současné uložení tomuto účelu odpovídá. Stejnou částku přitom nemůžete současně započítat k několika cílům."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tri-skupiny-podle-casu",
+      "eyebrow": "TŘI RŮZNÉ ÚKOLY",
+      "title": "Rezerva, plánované výdaje a pozdější příjem",
+      "intro": "Pro první přehled používám tři skupiny. Konkrétní termín je důležitější než pevná hranice počtu let: bydlení můžete řešit příští rok i za deset let.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "comparison",
+          "items": [
+            {
+              "label": "Pohotovostní rezerva",
+              "summary": "Peníze na nečekaný výdaj nebo výpadek příjmu.",
+              "points": [
+                "Použití: může přijít kdykoli; termín dopředu neznáte.",
+                "Dostupnost: potřebujete je rychle použít bez závislosti na prodeji kolísavých investic.",
+                "Riziko: prioritou je dostupná částka, nikoli vysoký výnos."
+              ]
+            },
+            {
+              "label": "Plánované výdaje",
+              "summary": "Například vlastní vklad na bydlení, rekonstrukce nebo auto.",
+              "points": [
+                "Použití: znáte alespoň přibližnou částku a termín.",
+                "Dostupnost: ověřte, že peníze získáte před splatností výdaje, včetně případné výpovědní lhůty.",
+                "Riziko: záleží také na tom, zda lze nákup odložit nebo jeho cenu snížit."
+              ]
+            },
+            {
+              "label": "Pozdější příjem",
+              "summary": "Majetek, ze kterého chcete v budoucnu průběžně čerpat.",
+              "points": [
+                "Použití: jednotlivé výběry mohou být rozložené do mnoha let.",
+                "Dostupnost: první plánované výběry potřebují jiné nastavení než vzdálenější část.",
+                "Riziko: delší horizont může dát prostor většímu kolísání, ale nezaručuje výnos ani návrat hodnoty."
+              ]
+            }
+          ],
+          "takeaway": "Spoření na známý výdaj veďte v přehledu zvlášť od rezervy. Může mít podobné uložení, ale má už předem určené použití.",
+          "title": "Co má být připravené v okamžiku potřeby"
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Příjmu čerpanému z majetku se někdy říká renta. Při plánování důchodu proto řešíme částku a délku čerpání. První rok v důchodu automaticky neukončuje horizont celého portfolia."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "horizont-dostupnost-a-riziko",
+      "eyebrow": "PŘIMĚŘENÉ RIZIKO",
+      "title": "Kolik rizika odpovídá vašemu cíli",
+      "intro": "Doba do použití peněz je jen jeden z podkladů. Potřebuji znát také váš rozpočet, pevnost termínu a reakci na případnou ztrátu.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "explanation",
+          "subsections": [
+            {
+              "title": "Termín a únosná ztráta",
+              "paragraphs": [
+                "Co by se stalo, kdyby při plánovaném výběru byla hodnota nižší? U pevného termínu může chybějící částka zmařit nákup. Vedle finančního dopadu probereme i kolísání, které psychicky unesete. Delší čas sám nezaručuje zotavení investice."
+              ]
+            },
+            {
+              "title": "Dostupnost a náklady",
+              "paragraphs": [
+                "Rychle prodat neznamená prodat bez ztráty. Ověřte lhůty výběru, případná omezení a náklady na správu, prodej či ukončení. U peněz ponechaných na účtu zase zvažte, zda čistý výnos stačí na růst cen toho, co chcete později koupit."
+              ]
+            },
+            {
+              "title": "Skutečné rozložení investic",
+              "paragraphs": [
+                "Dlouhodobému rozdělení mezi různé druhy majetku se říká strategická alokace. Prověříme, co jednotlivé investice skutečně obsahují: několik produktů může držet podobná aktiva. Rozložení omezuje závislost na jediné investici, ale neodstraňuje riziko ztráty v portfoliu."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jak-se-cil-blizi-penize-se-presouvaji",
+      "eyebrow": "PŘÍPRAVA NA ČERPÁNÍ",
+      "title": "Co změnit, když se termín blíží",
+      "intro": "Peníze na bydlení za osm let posuzujeme jinak než částku splatnou za osm měsíců. Kontrola může ukázat potřebu změny, ale nemusí automaticky znamenat prodej.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "process",
+          "steps": [
+            {
+              "title": "Zpřesnit částku a termín",
+              "description": "Ověříme cenu cíle, už připravené peníze a datum, kdy musí být částka k dispozici. U průběžného čerpání rozlišíme jednotlivé výběry."
+            },
+            {
+              "title": "Prověřit současné riziko",
+              "description": "Porovnáme možné kolísání s tím, kolik ještě můžete doplnit a zda lze výdaj odložit. Peníze potřebné brzy mohou vyžadovat stabilnější uložení."
+            },
+            {
+              "title": "Naplánovat dostupnost peněz",
+              "description": "Domluvíme, zda a kdy měnit uložení či směr nových vkladů. Postupný přesun je jedna z možností; záleží na termínu, nákladech a konkrétním řešení."
+            }
+          ]
+        },
+        {
+          "type": "expertNote",
+          "title": "Rebalancování řeší jinou otázku",
+          "text": "Rebalancování vrací portfolio k dohodnutým poměrům, které se změnily vývojem investic. Snižování rizika před čerpáním mění samotné cílové nastavení. Rebalancovat lze někdy i novými vklady bez prodeje; před transakcemi je potřeba zohlednit náklady a případné daně. Automatika funguje jen tam, kde ji konkrétní řešení a sjednaný servis podporují."
+        }
+      ]
+    },
+    {
+      "id": "kolik-penez-ma-jit-kam",
+      "eyebrow": "ČÁSTKY A PRIORITY",
+      "title": "Kolik peněz vyčlenit na jednotlivé cíle",
+      "intro": "Začneme konkrétními částkami. Univerzální procenta by přehlédla rozdíly mezi domácností s hypotékou, nepravidelným příjmem nebo blížícím se velkým výdajem.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Cílová částka",
+              "description": "Kolik má být připraveno a zda jde o dnešní cenu, nebo odhad ceny v době nákupu. U pozdějšího příjmu také kolik a jak dlouho chcete čerpat."
+            },
+            {
+              "title": "Současné úspory",
+              "description": "Kolik už patří k tomuto cíli a kde peníze leží. Odečtěte část vyhrazenou na rezervu a jiné výdaje."
+            },
+            {
+              "title": "Termín a jeho pevnost",
+              "description": "Kdy peníze potřebujete a co by znamenalo odložení cíle. Jinak se plánuje nutná platba a jinak volitelný nákup."
+            },
+            {
+              "title": "Měsíční možnosti",
+              "description": "Kolik zbývá po běžných i nepravidelných výdajích a závazcích. Zohledněte známé změny příjmů, rodiny nebo bydlení."
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Pak porovnáme potřebné tempo s rozpočtem. Pokud na všechny cíle nestačí, probereme změnu částky, termínu nebo pořadí priorit. Současně ověříme, zda nečekaný výdaj neohrozí základní chod domácnosti. Některé cíle mohou běžet souběžně, jiné budou muset počkat.",
+            "U delších plánů oddělím předpoklady růstu, inflace, nákladů a případných daní. Výpočet má ukázat i méně příznivou variantu. Nedostatek peněz v rozpočtu nelze vyřešit pouhým zvýšením očekávaného výnosu v tabulce."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pripad-klientky-ktera-prodala-v-propadu",
+      "eyebrow": "PŘÍPAD Z PRAXE",
+      "title": "Co změnilo rozdělení peněz v praxi",
+      "intro": "Ve skutečném anonymizovaném případu klientky jsme vedle investic řešili také to, zda rozumí jejich účelu a možnému kolísání.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "caseStudy",
+          "context": "Klientka měla přes banku sjednané cenné papíry. Peníze neměla rozdělené podle cílů a termínů a chybělo jí srozumitelné vysvětlení strategie.",
+          "initialState": [
+            "Investice tvořily jeden balík bez rozlišení krátkodobých a dlouhodobých peněz.",
+            "Původní řešení mělo vysoké náklady, omezené rozložení investic a chyběla průběžná podpora."
+          ],
+          "problem": [
+            "Při poklesu trhu klientka nevěděla, jak vývoj souvisí s tím, kdy bude peníze potřebovat.",
+            "Ze strachu velkou část investic prodala se ztrátou."
+          ],
+          "analysis": "Nejdřív jsem s klientkou prošel účel peněz, termíny a kolísání, které je ochotná i schopná přijmout. Vedle nákladů bylo potřeba změnit také rozdělení peněz a způsob, jakým o investicích spolu mluvíme.",
+          "whatChanged": [
+            "Peníze jsme rozdělili podle účelu a horizontu. Dlouhodobé investice dostaly širší rozložení a nižší náklady.",
+            "Probrali jsme možná rizika a postup při dalších výkyvech; součástí spolupráce se stala průběžná podpora."
+          ],
+          "result": [
+            "Při dalších menších výkyvech už klientka nereagovala prodejem ze strachu.",
+            "Ví, které peníze jsou určené na přilepšení k důchodu, a rozumí důvodům jejich nastavení."
+          ],
+          "takeaway": "Rozdělení peněz a srozumitelné vysvětlení pomohly klientce rozhodovat podle jejího plánu i při dalších výkyvech."
+        }
+      ]
+    },
+    {
+      "id": "jak-casto-rozdeleni-kontrolovat",
+      "eyebrow": "PRAKTICKÁ PŘÍPRAVA",
+      "title": "Jak začít a kdy rozdělení zkontrolovat",
+      "intro": "Pro první přehled stačí seznam cílů a aktuální výpisy. Pokud zatím žádné investice nemáte, začněte úsporami a rozpočtem.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Pojmenujte cíle",
+              "description": "Ke každému napište částku, termín a důležitost. Pohotovostní rezervu uveďte samostatně; její použití může přijít kdykoli."
+            },
+            {
+              "title": "Přiřaďte současné peníze",
+              "description": "Rozdělte zůstatky a investice mezi cíle bez dvojího započtení. Označte peníze bez jasného účelu nebo s neznámými podmínkami výběru."
+            },
+            {
+              "title": "Sepište nejasnosti",
+              "description": "Zjistěte, kde chybí informace o dostupnosti, nákladech či riziku. Přidejte měsíční částku, kterou můžete na cíle odkládat."
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "S klienty rozdělení pravidelně kontroluji, například při roční revizi. Zásadní změnu příjmu, rodiny, závazků nebo termínu cíle má smysl řešit dříve. Domluvíme si také, kdo sleduje nastavení a co případně zajišťuje použitá služba.",
+            "Samotný titulek o pohybu trhu není automatickým pokynem k prodeji. Kontrola má ověřit, zda stále platí předpoklady plánu i vlastnosti použitých investic. Výsledkem může být změna, ale také ponechání současného nastavení."
+          ]
+        },
+        {
+          "type": "nextAction",
+          "title": "Proberme rozdělení vašich peněz",
+          "paragraphs": [
+            "Na úvodním hovoru s vámi projdu vaše cíle a domluvíme se, které podklady připravit pro kontrolu současných úspor a investic."
+          ],
+          "action": {
+            "label": "Domluvit úvodní hovor",
+            "intent": "open-contact-or-screening-flow"
+          }
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "title": "Každý cíl má mít své místo v přehledu",
+    "paragraphs": [
+      "Důležitý je přehled, ze kterého poznáte, co můžete použít dnes, co už patří k plánovanému výdaji a co má sloužit později. Podle něj se pak rozhoduje o částkách i vhodném nastavení."
+    ]
+  },
+  "relatedTopics": [
+    {
+      "topic": "Kolik má mít domácnost v rezervě? Jedno správné číslo neexistuje.",
+      "reason": "Jak určit potřebnou výši dostupné rezervy podle situace domácnosti.",
+      "slug": "kolik-ma-mit-domacnost-v-rezerve"
+    },
+    {
+      "topic": "V jakém pořadí řešit osobní finance?",
+      "reason": "Jak určit priority jednotlivých kroků podle rizik, termínů a možností rozpočtu.",
+      "slug": "v-jakem-poradi-resit-osobni-finance"
+    },
+    {
+      "topic": "Máte finanční produkty. Ale máte skutečně finanční plán?",
+      "reason": "Jak propojit cíle, rozpočet, závazky a současné smlouvy do jednoho plánu.",
+      "slug": "mate-financni-produkty-ale-mate-skutecne-financni-plan"
+    }
+  ],
+  "editorial": {
+    "contentStatus": "review-ready",
+    "sourceBasis": "Rozhovorové odpovědi Davida Pokorného, téma 6, strany 34–43 zdrojového dokumentu. Zadavatel dne 2026-10-05 potvrdil, že všechny popsané případy jsou skutečné; toto potvrzení zahrnuje anonymizovaný případ klientky v tomto článku.",
+    "needsExternalVerification": true,
+    "review": {
+      "status": "pending"
+    },
+    "verificationItems": [
+      {
+        "id": "06-01-investicni-tvrzeni-musi-zustat-metodikou-ne-prislibe",
+        "title": "Investiční tvrzení musí zůstat metodikou, ne příslibem výsledku",
+        "instruction": "V rámci stávající odborné kontroly posoudit finální obecné formulace horizontu, likvidity, schopnosti nést ztrátu a rozložení investic. Článek neuvádí konkrétní výnosy, podíly aktiv ani univerzální časové hranice a neslibuje zotavení investice.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "horizont-dostupnost-a-riziko",
+        "claimRef": "horizont-dostupnost-a-riziko:verification-1",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [
+          "https://www.cnb.cz/cs/dohled-financni-trh/ochrana-spotrebitele/desatero-pro-investory/index.html",
+          "https://www.investor.gov/introduction-investing/getting-started/asset-allocation"
+        ],
+        "requiresRecheck": true,
+        "note": "Primární zdroje byly při redakční úpravě ověřeny. Zachován původní stav pending; nebyl přidán nový požadavek na schválení."
+      },
+      {
+        "id": "06-02-predpoklady-rustu-a-inflace-musi-byt-ve-skutecnem-vy",
+        "title": "Předpoklady růstu a inflace musí být ve skutečném výpočtu aktuální a transparentní",
+        "instruction": "Zachovat transparentní oddělení předpokladů růstu, inflace, nákladů a případných daní při individuálním výpočtu. Článek sám neobsahuje kalkulaci, konkrétní sazby ani nový interaktivní nástroj.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "kolik-penez-ma-jit-kam",
+        "claimRef": "kolik-penez-ma-jit-kam:verification-2",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [
+          "https://www.cnb.cz/cs/dohled-financni-trh/ochrana-spotrebitele/desatero-pro-investory/index.html",
+          "https://www.investor.gov/introduction-investing/getting-started/asset-allocation"
+        ],
+        "requiresRecheck": true,
+        "note": "Původní kontrola se týká formulace práce s předpoklady a případné budoucí individuální kalkulace. Do veřejného textu nebyl doplněn předpokládaný výnos ani jiný číselný odhad."
+      },
+      {
+        "id": "06-03-pripad-vyzaduje-kontrolu-anonymizace-a-presnosti-vys",
+        "title": "Případ vyžaduje kontrolu anonymizace a přesnosti výsledku",
+        "instruction": "Uchovat potvrzení zadavatele o skutečném anonymizovaném případu. Veřejně nepřidávat částky, datum zotavení ani dříve vynechaný výrok o vydělání ztráty zpět.",
+        "status": "verified",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "pripad-klientky-ktera-prodala-v-propadu",
+        "claimRef": "pripad-klientky-ktera-prodala-v-propadu:verification-3",
+        "evidenceRequired": "Interní potvrzení skutečného původu případu zadavatelem a porovnání zveřejněného rozsahu s dodaným popisem.",
+        "sources": [
+          "Potvrzení zadavatele v konverzaci dne 2026-10-05: „Ano všechny případy co najdeš ve všech článcích jsou skutečné a staly se“."
+        ],
+        "requiresRecheck": false,
+        "verifiedBy": "Zadavatel článku v konverzaci",
+        "verifiedAt": "2026-10-05",
+        "note": "Původ a popsané události jsou potvrzené zadavatelem, nikoli nezávislým auditem soukromých záznamů. Veřejný případ zůstává bez osobních identifikátorů, částek a tvrzení o navrácení předchozí ztráty. Zachována chronologie: původní nastavení, prodej při poklesu, následná kontrola a úprava, reakce na další menší výkyvy."
+      },
+      {
+        "id": "06-04-automaticke-presouvani-a-rebalancovani-musi-odpovida",
+        "title": "Automatické přesouvání a rebalancování musí odpovídat skutečně používanému řešení",
+        "instruction": "Zachovat rozdíl mezi návratem k původním poměrům portfolia a změnou cílového rizika před čerpáním. Automatiku zmiňovat pouze podmíněně podle konkrétního řešení a sjednaného servisu; kontrola sama neznamená pokyn k prodeji.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "jak-se-cil-blizi-penize-se-presouvaji",
+        "claimRef": "jak-se-cil-blizi-penize-se-presouvaji:verification-4",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [
+          "https://www.investor.gov/introduction-investing/getting-started/asset-allocation",
+          "https://www.investor.gov/additional-resources/general-resources/publications-research/info-sheets/beginners-guide-asset"
+        ],
+        "requiresRecheck": true,
+        "note": "Primární zdroje podporují rozlišení rebalancování, změny alokace a možnosti použít nové vklady. Žádná konkrétní platforma ani automatická funkce nebyla do článku přidána nebo nezávisle ověřena. Původní stav pending zůstává."
+      }
+    ],
+    "productionNotes": {
+      "videoOpportunities": [
+        {
+          "recommendedPlacement": "Za porovnáním rezervy, plánovaných výdajů a pozdějšího příjmu.",
+          "recommendedTopic": "Rozdělení peněz podle účelu a termínu použití.",
+          "suggestedDuration": "60–90 sekund",
+          "reason": "Jednoduchá animovaná časová osa může názorně ukázat, proč stejné peníze potřebují odlišnou dostupnost a riziko podle okamžiku použití."
+        },
+        {
+          "recommendedPlacement": "Před případovou studií klientky.",
+          "recommendedTopic": "Proč pokles trhu znamená něco jiného pro rezervu a něco jiného pro peníze na důchod.",
+          "suggestedDuration": "75–120 sekund",
+          "reason": "Vysvětlit riziko nuceného prodeje bez předpokladu, že se každá investice zotaví. Video nebylo do článku vloženo."
+        }
+      ],
+      "interactiveOpportunities": [
+        {
+          "type": "goalMappingToolOpportunity",
+          "title": "Mapa peněz podle cílů a horizontu",
+          "inputs": [
+            "Seznam cílů a jejich priorita",
+            "Termín každého cíle",
+            "Orientační cílová částka",
+            "Současná výše úspor a investic",
+            "Měsíční volný přebytek",
+            "Požadovaná dostupnost",
+            "Základní tolerance ke kolísání"
+          ],
+          "outputs": [
+            "Rozdělení cílů do krátkodobé, střednědobé a dlouhodobé vrstvy",
+            "Upozornění na smíchané cíle v jednom balíku",
+            "Orientační měsíční tempo pro každý cíl",
+            "Pořadí priorit při nedostatečném přebytku",
+            "Seznam údajů, které je nutné doplnit před konkrétním doporučením"
+          ],
+          "reason": "Hlavní přínos článku je převést neurčité úspory na konkrétní cíle. Nástroj může čtenáři vytvořit první mapu bez automatického doporučení konkrétních produktů."
+        },
+        {
+          "type": "diagnosticToolOpportunity",
+          "title": "Kontrola, zda peníze neleží ve špatném režimu",
+          "inputs": [
+            "Kde jsou peníze dnes uložené",
+            "K čemu mají sloužit",
+            "Kdy budou potřeba",
+            "Jak rychle jsou dostupné",
+            "Jak výrazně mohou kolísat"
+          ],
+          "outputs": [
+            "Signál krátkodobých peněz vystavených nepřiměřenému kolísání",
+            "Signál dlouhodobých peněz držených bez růstového prostoru",
+            "Otázky pro další kontrolu cíle, horizontu a rizika",
+            "Doporučení, zda je potřeba odborné přepočítání"
+          ],
+          "reason": "Pomůže čtenáři rozpoznat oba extrémy článku bez toho, aby nástroj suploval individuální investiční doporučení."
+        }
+      ],
+      "verificationRequired": [
+        {
+          "topic": "Investiční tvrzení musí zůstat metodikou, ne příslibem výsledku",
+          "reason": "V rámci stávající odborné kontroly posoudit finální obecné formulace horizontu, likvidity, schopnosti nést ztrátu a rozložení investic. Článek neuvádí konkrétní výnosy, podíly aktiv ani univerzální časové hranice a neslibuje zotavení investice.",
+          "priority": "high"
+        },
+        {
+          "topic": "Předpoklady růstu a inflace musí být ve skutečném výpočtu aktuální a transparentní",
+          "reason": "Zachovat transparentní oddělení předpokladů růstu, inflace, nákladů a případných daní při individuálním výpočtu. Článek sám neobsahuje kalkulaci, konkrétní sazby ani nový interaktivní nástroj.",
+          "priority": "high"
+        },
+        {
+          "topic": "Automatické přesouvání a rebalancování musí odpovídat skutečně používanému řešení",
+          "reason": "Zachovat rozdíl mezi návratem k původním poměrům portfolia a změnou cílového rizika před čerpáním. Automatiku zmiňovat pouze podmíněně podle konkrétního řešení a sjednaného servisu; kontrola sama neznamená pokyn k prodeji.",
+          "priority": "high"
+        }
+      ],
+      "implementationNotes": [
+        "H1, slug a fotografie zůstávají zachovány. Sedm sekcí používá stávající sdílené bloky; nevkládat vlastní kalkulačku ani screening.",
+        "Hlavní comparison rozlišuje tři účely se společnými kritérii Použití / Dostupnost / Riziko. Rezerva je oddělena od předem známých plánovaných výdajů.",
+        "Časové hranice do 3 let, 4–10 let a 10+ let byly odstraněny; konkrétní termín sám neurčuje vhodný produkt ani kapacitu nést ztrátu.",
+        "Případ zůstává skutečný, anonymizovaný a potvrzený zadavatelem. Nevkládat financialDelta, klientskou citaci ani údaje o vydělání ztráty zpět; nejsou součástí veřejného výsledku.",
+        "Ztráta hodnoty není označena za nutně dočasnou. Prodej při poklesu může realizovat ztrátu, ale text neslibuje návrat hodnoty při pouhém setrvání.",
+        "Rebalancování a snižování cílového rizika před čerpáním jsou odlišné kroky. Nové vklady mohou někdy změnit poměry bez prodeje; transakce mohou mít náklady a daňové dopady.",
+        "Začátek důchodu neukončuje horizont celého portfolia. Rozlišovat první výběry a pozdější čerpání.",
+        "Článek obsahuje právě jeden nextAction s osobním textem a stávajícím kontaktním intentem.",
+        "Původní čtyři verificationItems zachovávají ID a názvy. Potvrzení původu případu je zaznamenáno; ostatní původní kontroly zůstávají pending s aktualizovaným rozsahem a zdroji. Nové publikační blokace nebyly přidány."
+      ]
+    }
+  }
+}

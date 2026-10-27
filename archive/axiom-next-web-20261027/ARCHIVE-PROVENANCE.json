@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "snapshotDate": "2026-10-27",
+  "kind": "Historical Next.js source archive with private pinned dependencies",
+  "sourceApplication": "apps/web",
+  "sourceOriginalWorktreeHead": "38eea10a79f57c5f75bd02cb9aef2feccdc80ab1",
+  "sourceIsWorkingTreeSnapshot": true,
+  "publicTargetRepository": "pokornydavid93/pokornydavid.cz",
+  "targetBaseCommit": "e3dcaef42e5cf623a1d314e64bb319a3fa7db944",
+  "targetOriginalCommitCount": 74,
+  "sourceFiles": 806,
+  "sourceBytes": 29954738,
+  "authoredPublicFiles": 64,
+  "authoredPublicBytes": 22738809,
+  "privateDependencyCommit": "a8655da30fa9f3b7ff9a5a4931d4e1f25346581a",
+  "privateDependencyPackageCount": 8,
+  "publicScope": [
+    "apps/web complete authored source and public media",
+    "Minimal independent workspace wrapper, selected lockfile importers and root TypeScript configuration",
+    "Source provenance and private dependency checksum metadata",
+    "Private SSH bootstrap and local standalone start helper"
+  ],
+  "privateSourceExcludedFromPublicGit": [
+    "packages/",
+    ".axiom-private/"
+  ],
+  "appTransformations": [],
+  "wrapperTransformations": [
+    "Independent archive root package scripts and workspace package list",
+    "Root lockfile importer has no dependencies; only web closure importers retained",
+    "Shared packages are restored privately and verified before use",
+    "Standalone start helper copies public and static outputs to the generated standalone server directory"
+  ],
+  "productionStatus": "Historical archive; active production uses Surface",
+  "runtimePrerequisites": [
+    "Published public article API with explicit source/origin/workspace configuration",
+    "Public active offering API covering all archived offering keys",
+    "Runtime credentials for original form/booking/publication integrations must be configured separately"
+  ]
+}

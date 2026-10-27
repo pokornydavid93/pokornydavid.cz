@@ -1,0 +1,256 @@
+.overlay {
+  --route-transition-origin-x: 50vw;
+  --route-transition-origin-y: 50vh;
+  --route-transition-radius: 150vmax;
+  --route-transition-scale: 48;
+  --route-transition-surface: var(--surface-section-dark);
+  --route-transition-snapshot-surface: var(--surface-section-dark);
+  --route-transition-border: var(--border-emphasis);
+  --route-transition-border-subtle: var(--border-emphasis-subtle);
+  --route-transition-inset-highlight: var(--shadow-inset);
+  --route-transition-depth-shadow: var(--surface-shadow-soft);
+  position: fixed;
+  inset: 0;
+  z-index: var(--route-transition-layer, var(--layer-route-transition, 4000));
+  visibility: hidden;
+  pointer-events: none;
+  isolation: isolate;
+}
+
+.overlayActive {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.snapshotMode .scrim,
+.snapshotMode .lens {
+  display: none;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--route-transition-surface);
+  opacity: 0;
+  backdrop-filter: blur(var(--route-transition-backdrop-blur, 8px))
+    saturate(0.92);
+  -webkit-backdrop-filter: blur(var(--route-transition-backdrop-blur, 8px))
+    saturate(0.92);
+  will-change: opacity;
+}
+
+.snapshot {
+  --route-transition-hole-radius: 0px;
+  position: fixed;
+  inset: 0;
+  z-index: var(--route-transition-snapshot-layer, 3999);
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.snapshotContent {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--route-transition-snapshot-surface);
+  -webkit-mask-image: none;
+  mask-image: none;
+  will-change: mask-image, -webkit-mask-image;
+}
+
+.snapshotContentInner {
+  min-height: 100vh;
+  transform-origin: 0 0;
+}
+
+.snapshotRing {
+  position: absolute;
+  left: var(--route-transition-origin-x, 50vw);
+  top: var(--route-transition-origin-y, 50vh);
+  z-index: 1;
+  width: calc(var(--route-transition-hole-radius) * 2);
+  height: calc(var(--route-transition-hole-radius) * 2);
+  border-radius: var(--radius-circle);
+  border: 0.5px solid var(--route-transition-border);
+  box-shadow:
+    0 0 0 0.5px var(--route-transition-border-subtle),
+    0 0 14px var(--route-transition-border-subtle);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(-50%, -50%, 0);
+  transform-origin: 50% 50%;
+  will-change: height, opacity, width;
+}
+
+.snapshotReveal {
+  animation: routeTransitionSnapshotReveal var(--route-transition-cover-duration)
+    var(--route-transition-ease) both;
+}
+
+.snapshotReveal .snapshotRing {
+  animation: routeTransitionSnapshotRing var(--route-transition-cover-duration)
+    var(--route-transition-ease) both;
+}
+
+.lens {
+  position: absolute;
+  left: var(--route-transition-origin-x);
+  top: var(--route-transition-origin-y);
+  z-index: 1;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-circle);
+  background: var(--route-transition-surface);
+  box-shadow:
+    var(--route-transition-inset-highlight),
+    inset 0 -44px 80px var(--route-transition-depth-shadow),
+    0 0 0 0.5px var(--route-transition-border-subtle),
+    0 0 30px var(--route-transition-border-subtle);
+  transform: translate3d(-50%, -50%, 0) scale(0.08);
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  will-change: transform, opacity;
+}
+
+.lens::before,
+.lens::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.lens::before {
+  background-image: none;
+  background-size: 58px 58px;
+  opacity: 0.14;
+}
+
+.lens::after {
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0 0 0.5px var(--route-transition-border),
+    inset 0 0 10px var(--route-transition-border-subtle);
+}
+
+.cover .scrim {
+  animation: routeTransitionScrimIn var(--route-transition-cover-duration)
+    var(--route-transition-ease) both;
+}
+
+.cover .lens {
+  animation: routeTransitionLensCover var(--route-transition-cover-duration)
+    var(--route-transition-ease)
+    both;
+}
+
+.reveal .scrim {
+  animation: routeTransitionScrimOut var(--route-transition-reveal-duration)
+    var(--route-transition-ease) both;
+}
+
+.reveal .lens {
+  animation: routeTransitionLensReveal var(--route-transition-reveal-duration)
+    var(--route-transition-ease)
+    both;
+}
+
+.reduced.cover .scrim,
+.reduced.cover .lens {
+  animation-duration: var(--route-transition-reduced-duration);
+}
+
+.reduced.reveal .scrim,
+.reduced.reveal .lens {
+  animation-duration: var(--route-transition-reduced-duration);
+}
+
+.reduced .lens {
+  opacity: 0;
+}
+
+@property --route-transition-hole-radius {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0px;
+}
+
+@keyframes routeTransitionLensCover {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0) scale(0.08);
+  }
+
+  26% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 0)
+      scale(var(--route-transition-scale));
+  }
+}
+
+@keyframes routeTransitionLensReveal {
+  0% {
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 0)
+      scale(var(--route-transition-scale));
+  }
+
+  78% {
+    opacity: 0.28;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0)
+      scale(var(--route-transition-scale));
+  }
+}
+
+@keyframes routeTransitionSnapshotReveal {
+  0% {
+    --route-transition-hole-radius: 24px;
+  }
+
+  100% {
+    --route-transition-hole-radius: var(--route-transition-radius, 150vmax);
+  }
+}
+
+@keyframes routeTransitionSnapshotRing {
+  0% {
+    opacity: 0.78;
+  }
+
+  72% {
+    opacity: 0.58;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes routeTransitionScrimIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes routeTransitionScrimOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

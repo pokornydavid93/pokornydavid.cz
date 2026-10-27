@@ -1,0 +1,789 @@
+{
+  "schemaVersion": 2,
+  "publication": {
+    "status": "review",
+    "author": "David Pokorný",
+    "publishedAt": "2026-10-08",
+    "updatedAt": "2026-10-08"
+  },
+  "meta": {
+    "slug": "kolik-ma-mit-domacnost-v-rezerve",
+    "topic": "Stanovení finanční rezervy podle nutných výdajů, rizik domácnosti a dostupnosti peněz",
+    "category": "Finanční plánování",
+    "primaryIntent": "Pomoci čtenáři spočítat přiměřenou rezervu, rozlišit její minimální a cílovou úroveň, správně ji uložit a poznat, kdy je příliš malá nebo zbytečně vysoká.",
+    "audience": "Jednotlivec nebo domácnost, která má peníze stranou, teprve rezervu buduje nebo se řídí obecným pravidlem několika výplat, ale neví, zda částka odpovídá její skutečné situaci.",
+    "estimatedReadTime": 12
+  },
+  "hero": {
+    "category": "Rezerva a finanční bezpečí",
+    "eyebrow": "NE PODLE VÝPLATY, ALE PODLE POTŘEBY",
+    "title": "Kolik má mít domácnost v rezervě? Jedno správné číslo neexistuje.",
+    "subtitle": "Pravidlo tří výplat zní jednoduše. Jenže při výpadku příjmu nerozhoduje, kolik jste vydělávali, ale kolik musí domácnost dál platit a jak dlouho může trvat, než se příjem vrátí.",
+    "excerpt": "Přiměřená rezerva vzniká ze dvou proměnných: z nezbytných měsíčních výdajů a z rizik konkrétní domácnosti. Musí být dostupná, bezpečná a dostatečná na krátké výpadky — ne však tak velká, aby dlouhodobé peníze zbytečně ležely.",
+    "estimatedReadTime": "12 minut",
+    "heroSummary": [
+      "Zjistíte, proč se rezerva nemá počítat jako násobek výplaty.",
+      "Spočítáte si základ z nutných výdajů a určíte počet měsíců podle své situace.",
+      "Rozlišíte základní polštář, cílovou rezervu a ochranu velkých rizik pojištěním.",
+      "Ujasníte si, kde rezervu držet, kdy ji přepočítat a kdy už je zbytečně vysoká."
+    ]
+  },
+  "sections": [
+    {
+      "id": "rezerva-neni-nasobek-vyplaty",
+      "eyebrow": "PROČ UNIVERZÁLNÍ ČÍSLO SELHÁVÁ",
+      "title": "Dvě domácnosti se stejným příjmem mohou potřebovat úplně jiný polštář",
+      "intro": "Obecná rada typu „mějte stranou tři výplaty“ zaměňuje dvě různé věci: kolik domácnost vydělává a kolik potřebuje k přežití období bez příjmu.",
+      "rail": {
+        "type": "currentTopic",
+        "label": "PRÁVĚ ŘEŠÍME",
+        "title": "Co musí domácnost dál platit, když příjem přestane chodit."
+      },
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Když příjem na několik měsíců vypadne, účty se nepřepočítají podle poslední výplaty. Dál běží nájem nebo hypotéka, energie, jídlo, doprava, splátky, pojistné a další věci, bez kterých domácnost nemůže fungovat. Právě ty má rezerva překlenout."
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Proto není dobrým základem samotný příjem. Člověk s vysokou výplatou a nízkými nutnými náklady může potřebovat menší částku než domácnost s nižším příjmem, ale vysokou hypotékou, dětmi a jedním živitelem.",
+            "Stejně tak nestačí říct, že každý potřebuje stejný počet měsíců. Stabilní zaměstnanec, jehož příjem lze relativně rychle nahradit, je v jiné situaci než podnikatel s kolísavými zakázkami. A bezdětný zaměstnanec v nájmu má jinou zranitelnost než OSVČ s dětmi a hypotékou — i kdyby oba vydělávali stejně.",
+            "Výše rezervy proto nevzniká jedním univerzálním pravidlem. Potřebuje odpovědět na dvě konkrétní otázky: kolik musí domácnost každý měsíc nezbytně zaplatit a na jak dlouho by mohla tento provoz potřebovat financovat bez běžného příjmu."
+          ]
+        },
+        {
+          "type": "keyInsight",
+          "text": "Nezbytné výdaje říkají, kolik potřebujete na jeden měsíc. Rizika domácnosti říkají, na kolik měsíců.",
+          "supportingText": "Teprve jejich součin vytvoří rezervu, která odpovídá vašemu životu — ne průměrné poučce."
+        }
+      ]
+    },
+    {
+      "id": "co-ma-rezerva-kryt",
+      "eyebrow": "JEJÍ SKUTEČNÁ PRÁCE",
+      "title": "Rezerva má přenést domácnost přes krátkou ránu. Nemá nahrazovat pojištění.",
+      "intro": "Hotovostní polštář a pojištění se doplňují. Každé řeší jiný typ problému a zaměnit jejich práci vede buď k malé ochraně, nebo k nesmyslně velké částce ležící stranou.",
+      "rail": {
+        "type": "comparisonSummary",
+        "label": "ROZDĚLENÍ PRÁCE",
+        "left": "Krátké a menší výpadky: rezerva",
+        "right": "Velké a dlouhé následky: pojištění"
+      },
+      "blocks": [
+        {
+          "type": "definition",
+          "term": "Finanční rezerva",
+          "simpleDefinition": "Peníze dostupné pro nečekaný jednorázový výdaj nebo dočasný výpadek příjmu, aniž byste museli prodávat dlouhodobé investice nebo si půjčovat.",
+          "optionalDetail": "Jejím úkolem není vydělávat co nejvíc. Má být připravená ve chvíli, kdy běžný rozpočet nestačí a situaci je potřeba překlenout hned.",
+          "optionalExample": "Nutná oprava auta, rozbitá pračka nebo několik měsíců, během kterých domácnost hledá náhradu za vypadlý příjem."
+        },
+        {
+          "type": "comparison",
+          "title": "Rezerva a pojištění si dělí práci",
+          "items": [
+            {
+              "label": "Finanční rezerva",
+              "summary": "Kryje události, které jsou krátké, bezprostřední a svou velikostí zvládnutelné z několikaměsíčního polštáře.",
+              "points": [
+                "Nečekaný jednorázový výdaj, který nelze odložit.",
+                "Krátký nebo několikaměsíční výpadek příjmu.",
+                "Období, během kterého se hledá nová práce nebo stabilizuje podnikání.",
+                "Situaci, kdy je potřeba zaplatit hned a nechcete kvůli tomu sahat na dlouhodobé cíle."
+              ]
+            },
+            {
+              "label": "Ochrana příjmu pojištěním",
+              "summary": "Kryje následky, které by hotovostní rezerva v rozumné velikosti nemohla dlouhodobě unést.",
+              "points": [
+                "Invaliditu nebo jiný dlouhodobý pokles schopnosti vydělávat.",
+                "Dlouhou nemoc nebo vážný úraz s rozsáhlým výpadkem příjmu.",
+                "Potřebu nahradit příjem na roky, ne pouze na několik měsíců.",
+                "Velké závazky, například hypotéku, které by při dlouhém výpadku mohly ohrozit bydlení."
+              ]
+            }
+          ],
+          "takeaway": "Rezerva řeší první měsíce a menší rány. Pojištění přebírá situace, které by vyžadovaly držet v hotovosti miliony nebo nahrazovat příjem po dlouhou dobu."
+        },
+        {
+          "type": "expertNote",
+          "title": "Větší rezerva nenahradí chybějící ochranu velkých rizik",
+          "text": "Pokud domácnost nemá krytou invaliditu, dlouhodobou nemoc nebo jiné závažné riziko, řešením není donekonečna zvětšovat hotovostní polštář. Dobře nastavená ochrana příjmu je právě to, co umožní držet rezervu na rozumném počtu měsíců a nenechat v ní zbytečně ležet peníze určené pro jiné cíle."
+        }
+      ]
+    },
+    {
+      "id": "jak-vysku-rezervy-spocitat",
+      "eyebrow": "VÝPOČET NA MÍRU",
+      "title": "Základní rovnice: nezbytné výdaje × počet měsíců podle rizik",
+      "intro": "Výpočet není složitý. Nejtěžší není násobení, ale poctivě určit, které výdaje jsou opravdu nutné a jak zranitelný je příjem konkrétní domácnosti.",
+      "rail": {
+        "type": "decisionSummary",
+        "label": "VÝPOČET",
+        "title": "Kolik musí dál odcházet × jak dlouho může návrat příjmu trvat."
+      },
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Nejdřív potřebujete částku na jeden měsíc krizového provozu. Potom určíte, kolik takových měsíců má rezerva pokrýt. Výsledkem není obecné číslo, ale částka navázaná na váš rozpočet, příjem, závazky a lidi, kteří na něm závisí."
+        },
+        {
+          "type": "process",
+          "title": "Jak se cílová rezerva odvozuje",
+          "steps": [
+            {
+              "title": "Sečtěte nezbytné měsíční výdaje",
+              "description": "Zahrňte pouze to, co by domácnost musela dál platit i po výpadku příjmu. Tím vznikne základní částka na jeden měsíc."
+            },
+            {
+              "title": "Posuďte jistotu a nahraditelnost příjmu",
+              "description": "Zvažte, zda je příjem stabilní, jak rychle by šel nahradit a zda chodí pravidelně, nebo výrazně kolísá."
+            },
+            {
+              "title": "Zohledněte počet příjmů a závislých lidí",
+              "description": "Domácnost stojící na dvou příjmech má jinou odolnost než domácnost závislá na jednom. Děti a další závislé osoby zvyšují dopad výpadku."
+            },
+            {
+              "title": "Přidejte pevné závazky",
+              "description": "Hypotéka, nájem, leasing a další splátky běží dál bez ohledu na situaci. Čím větší jsou, tím pevnější musí být polštář."
+            },
+            {
+              "title": "Prověřte, co přebírá pojištění",
+              "description": "Dobře krytá dlouhodobá rizika umožní rezervě soustředit se na krátké období. Chybějící ochranu nelze jednoduše nahradit několika dalšími měsíci hotovosti."
+            },
+            {
+              "title": "Vynásobte výdaje potřebným počtem měsíců",
+              "description": "Výdaje určují měsíční základ. Rizikový profil určuje, kolikrát jej potřebujete držet stranou."
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Nezbytné výdaje",
+          "simpleDefinition": "Výdaje, které musí domácnost platit dál, aby zachovala bydlení, základní provoz, zdraví a možnost vrátit se k příjmu.",
+          "optionalDetail": "Nejde o celý současný životní standard. Rezerva počítá s omezeným režimem, ve kterém lze dočasně zastavit zábavu, dovolené, většinu předplatných i pravidelné investování.",
+          "optionalExample": "Splátka hypotéky je nezbytný výdaj. Měsíční vklad do dlouhodobé investice lze při výpadku příjmu dočasně pozastavit, proto do výpočtu rezervy nepatří."
+        }
+      ]
+    },
+    {
+      "id": "ktere-vydaje-zahrnout",
+      "eyebrow": "REŽIM PŘEŽITÍ, NE PLNÝ KOMFORT",
+      "title": "Do rezervy patří jen výdaje, které by běžely dál",
+      "intro": "Příliš široký výpočet vytvoří zbytečně vysoký cíl. Příliš úzký naopak přehlédne závazky, které nelze v krizi vypnout. Rozhoduje, co je skutečně nutné udržet.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "comparison",
+          "title": "Co do měsíčního základu zahrnout — a co lze dočasně zastavit",
+          "items": [
+            {
+              "label": "Zahrnout do nezbytných výdajů",
+              "summary": "Položky, které by domácnost musela platit dál i při náhlém výpadku příjmu.",
+              "points": [
+                "Nájem nebo splátku hypotéky.",
+                "Energie a základní služby domácnosti — elektřinu, plyn, vodu a teplo.",
+                "Jídlo a základní domácí potřeby.",
+                "Nutnou dopravu, zejména cestu do práce.",
+                "Splátky úvěrů a leasingů.",
+                "Pojistné za životní a majetkové pojištění.",
+                "Nezbytné léky a zdravotní výdaje.",
+                "Telefon a internet, pokud jsou potřebné pro práci nebo hledání nového příjmu."
+              ]
+            },
+            {
+              "label": "Nezahrnovat jako nutný provoz",
+              "summary": "Položky, které lze na několik měsíců omezit nebo úplně pozastavit, aniž by domácnost přišla o základní fungování.",
+              "points": [
+                "Restaurace, zábavu, koníčky, dovolené a nákupy navíc.",
+                "Předplatná a služby, bez kterých se domácnost dočasně obejde.",
+                "Pravidelné vklady do investic a spoření — při výpadku se pozastaví, nejsou to účty, které musí rezerva financovat."
+              ]
+            }
+          ],
+          "takeaway": "Rezerva má udržet domácnost v omezeném, ale funkčním režimu. Nemá několik měsíců financovat stejný komfort jako plný příjem."
+        },
+        {
+          "type": "checklist",
+          "title": "Čtyři otázky ke každé položce rozpočtu",
+          "items": [
+            {
+              "title": "Musel bych tento výdaj platit dál i bez příjmu?",
+              "description": "Pokud ano a jeho neplacení by rychle ohrozilo bydlení, zdraví, dopravu do práce nebo jiné základní fungování, do rezervy patří."
+            },
+            {
+              "title": "Lze jej okamžitě zrušit nebo výrazně omezit?",
+              "description": "Výdaj, který lze bez zásadních následků na několik měsíců vypnout, není součástí krizového základu."
+            },
+            {
+              "title": "Je to splátka, pojistné nebo jiný pevný závazek?",
+              "description": "Pevné závazky obvykle běží dál a musí být ve výpočtu vidět, i když je člověk v dobrém období téměř nevnímá."
+            },
+            {
+              "title": "Není to ve skutečnosti odkládání peněz na budoucnost?",
+              "description": "Investice a spoření jsou důležité, ale při krátkém výpadku je lze pozastavit. Rezerva je nemá financovat sama ze sebe."
+            }
+          ]
+        },
+        {
+          "type": "expertNote",
+          "title": "Příliš vysoký cíl může vzniknout jen tím, že do něj započítáte celý současný život",
+          "text": "Když se do rezervy přidá běžná spotřeba, dovolené, volnočasové náklady i investiční úložky, vyjde částka, která může domácnost zbytečně paralyzovat. Smyslem není udržet beze změny každý zvyk, ale koupit čas, během kterého lze situaci vyřešit bez nového dluhu a bez rozebrání dlouhodobého plánu."
+        }
+      ]
+    },
+    {
+      "id": "kolik-mesicu-podle-situace",
+      "eyebrow": "KOLIK MĚSÍCŮ",
+      "title": "Počet měsíců neurčuje tabulka. Určuje ho zranitelnost domácnosti.",
+      "intro": "Stejný měsíční základ může vést k různě velké rezervě. Rozhoduje, jak pravděpodobný je výpadek, jak rychle lze příjem nahradit a kolik lidí a závazků na něm stojí.",
+      "rail": {
+        "type": "decisionSummary",
+        "label": "HLAVNÍ OTÁZKA",
+        "title": "Jak dlouho by domácnost mohla potřebovat fungovat bez běžného příjmu?"
+      },
+      "blocks": [
+        {
+          "type": "decision",
+          "title": "Jak se orientační rozsah mění podle profilu domácnosti",
+          "branches": [
+            {
+              "if": "Jste zaměstnanec na stabilní pozici a příjem by šel relativně snadno nahradit",
+              "then": "Dává smysl uvažovat o spodní hranici rozpětí, orientačně kolem tří měsíců nutných výdajů.",
+              "check": "Ověřte, zda domácnost nestojí jen na tomto jednom příjmu a zda nemáte vysoké pevné závazky, které by spodní hranici posunuly výš."
+            },
+            {
+              "if": "Podnikáte nebo máte výrazně kolísavý příjem",
+              "then": "Polštář bývá větší, často kolem šesti měsíců nebo více.",
+              "check": "Zvažte nepravidelnost zakázek, dobu potřebnou k obnovení příjmu a skutečnost, že nemáte stejnou záchrannou síť jako zaměstnanec."
+            },
+            {
+              "if": "Máte děti nebo na příjmu závisí více lidí",
+              "then": "Roste potřebná velikost rezervy i počet výdajů, které nelze v krizi jednoduše omezit.",
+              "check": "Prověřte, na kolika příjmech domácnost stojí a co se stane, když vypadne právě ten hlavní."
+            },
+            {
+              "if": "Splácíte hypotéku nebo jiný velký pevný závazek",
+              "then": "Rezerva musí po několik měsíců unést i tuto splátku, takže cílová částka roste.",
+              "check": "Současně ověřte ochranu příjmu. Rezerva zvládne několik měsíců, ale dlouhý výpadek u velkého závazku má přebírat pojištění."
+            },
+            {
+              "if": "Rizika se kombinují — například podnikání, děti a hypotéka",
+              "then": "Jednotlivé vlivy se sčítají a domácnost se posouvá výrazně nad základní orientační minimum.",
+              "check": "Nesrovnávejte se s člověkem se stejným příjmem, ale úplně jinou stabilitou, závazky a počtem lidí, kteří na něm závisí."
+            }
+          ]
+        },
+        {
+          "type": "expertNote",
+          "title": "Jak číst orientační rozpětí",
+          "text": "Tři až šest měsíců není univerzální norma ani automatický výsledek pro každého. Toto rozpětí používám jen jako orientační rámec. Konkrétní velikost rezervy společně odvodíme od jistoty a nahraditelnosti vašich příjmů, počtu příjmů v domácnosti, lidí, kteří jsou na nich závislí, pevných závazků a nastavené ochrany velkých rizik."
+        },
+        {
+          "type": "keyInsight",
+          "text": "OSVČ s dětmi a hypotékou je v úplně jiné situaci než bezdětný zaměstnanec v nájmu — i kdyby oba vydělávali stejně.",
+          "supportingText": "Příjem sám o sobě o velikosti rezervy nerozhodne. Rozhoduje konstrukce celé domácnosti kolem něj."
+        }
+      ]
+    },
+    {
+      "id": "minimalni-a-cilova-rezerva",
+      "eyebrow": "STAVÍ SE PO ČÁSTECH",
+      "title": "Nejdřív základní polštář. Potom cílová rezerva.",
+      "intro": "Plnou rezervu většina domácností nevytvoří za jeden měsíc. Proto má smysl oddělit první ochranu proti drobné ráně od částky, která už odpovídá celému rizikovému profilu.",
+      "rail": {
+        "type": "progress",
+        "label": "POSTUPNÉ BUDOVÁNÍ",
+        "steps": [
+          "Nula",
+          "Základní polštář",
+          "Cílová rezerva",
+          "Průběžné doplňování"
+        ]
+      },
+      "blocks": [
+        {
+          "type": "comparison",
+          "title": "Dvě úrovně rezervy mají odlišnou práci",
+          "items": [
+            {
+              "label": "Minimální neboli základní polštář",
+              "summary": "První částka, která dostane domácnost z nuly a zachytí první nečekanou událost.",
+              "points": [
+                "Orientačně může odpovídat přibližně jednomu měsíci nutných výdajů nebo menší pevné částce.",
+                "Má zabránit tomu, aby rozbitá pračka, nutná oprava auta nebo jiný první výdaj okamžitě vytvořil nový dluh.",
+                "Buduje se jako první, protože i neúplný polštář chrání lépe než čekání na jednou provždy hotovou rezervu."
+              ]
+            },
+            {
+              "label": "Cílová rezerva",
+              "summary": "Plná částka odvozená z nutných výdajů a konkrétního počtu měsíců podle situace domácnosti.",
+              "points": [
+                "Často odpovídá orientačnímu rozpětí tří až šesti měsíců, u zranitelnější domácnosti i více.",
+                "Doplňuje se postupně, zatímco mohou souběžně běžet další části finančního plánu.",
+                "Po dosažení cíle se už automaticky nezvětšuje bez důvodu; další peníze mohou dostat jinou práci."
+              ]
+            }
+          ],
+          "takeaway": "Základní polštář má co nejdřív zachytit první nečekaný výdaj. Cílová rezerva pak odpovídá nutným výdajům a rizikům konkrétní domácnosti."
+        },
+        {
+          "type": "process",
+          "title": "Jak rezervu budovat bez zastavení celého plánu",
+          "steps": [
+            {
+              "title": "Dostaňte se z nuly",
+              "description": "První priorita je částka na bezprostřední problém, aby drobná událost nemusela být financována úvěrem."
+            },
+            {
+              "title": "Pokračujte souběžně",
+              "description": "Po vytvoření základního polštáře lze rezervu dál doplňovat vedle ochrany příjmu, řešení drahých dluhů a dalších priorit."
+            },
+            {
+              "title": "Doplňte cílovou úroveň",
+              "description": "Pravidelnými vklady se dostaňte k částce odpovídající nutným výdajům a vašemu počtu měsíců."
+            },
+            {
+              "title": "Po použití ji obnovte",
+              "description": "Čerpání je přesně to, k čemu rezerva slouží. Po události se postupně doplní a zároveň se ověří, zda původní cílová výše stále sedí."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kam-rezervu-ulozit",
+      "eyebrow": "DOSTUPNOST PŘED VÝNOSEM",
+      "title": "Rezerva musí být po ruce a nesmí být zrovna v mínusu",
+      "intro": "U rezervy jdou proti sobě dvě snahy: mít peníze okamžitě dostupné a nenechat je úplně zahálet. Pořadí je ale jasné — nejdřív dostupnost a jistota, teprve potom výnos.",
+      "rail": {
+        "type": "progress",
+        "label": "POŘADÍ PRIORIT",
+        "steps": [
+          "Dostupnost",
+          "Jistota",
+          "Až potom výnos"
+        ]
+      },
+      "blocks": [
+        {
+          "type": "definition",
+          "term": "Likvidita",
+          "simpleDefinition": "Jak rychle a bez významné ztráty lze peníze použít, když je potřebujete.",
+          "optionalDetail": "U finanční rezervy je vysoká likvidita zásadní. Peníze nemají být pouze hodnotné na papíře; musí být skutečně dostupné pro platbu v krátkém čase.",
+          "optionalExample": "Peníze na spořicím účtu lze použít prakticky hned. Peníze v nemovitosti nebo v investici, která právě klesla, tuto vlastnost nemají."
+        },
+        {
+          "type": "comparison",
+          "title": "Jak jednotlivá místa plní práci rezervy",
+          "items": [
+            {
+              "label": "Spořicí účet",
+              "summary": "Přirozený základ pro rezervu: peníze jsou dostupné prakticky okamžitě, jejich hodnota nekolísá a zároveň mohou alespoň částečně nést úrok.",
+              "points": [
+                "Splňuje požadavek rychlé dostupnosti.",
+                "Nevystavuje rezervu tržnímu propadu ve chvíli potřeby.",
+                "Je vhodnější než dlouhodobé držení celé částky na neúročeném běžném účtu."
+              ]
+            },
+            {
+              "label": "Běžný účet",
+              "summary": "Je okamžitě dostupný, ale větší rezerva na něm může dlouhodobě ležet téměř bez užitku.",
+              "points": [
+                "Dává smysl pro provozní část peněz, kterou domácnost používá průběžně.",
+                "Pro celý několikaměsíční polštář bývá méně vhodný, pokud nenese žádný nebo téměř žádný úrok."
+              ]
+            },
+            {
+              "label": "Investice nebo hodnota v nemovitosti",
+              "summary": "Mohou být součástí majetku, ale neplní základní požadavky rezervy.",
+              "points": [
+                "Investice může být právě v poklesu a prodej by z dočasné ztráty udělal skutečnou.",
+                "Nemovitost nelze proměnit v hotovost okamžitě pro zaplacení účtu nebo opravy.",
+                "Vyšší očekávaný výnos nenahradí dostupnost ve chvíli, kvůli které rezerva existuje."
+              ]
+            }
+          ],
+          "takeaway": "Rezerva není pouze majetek, který někde máte. Musí jít použít rychle, bezpečně a bez nuceného prodeje ve špatnou chvíli."
+        },
+        {
+          "type": "decision",
+          "title": "Jak lze rozdělit větší rezervu",
+          "branches": [
+            {
+              "if": "Část rezervy můžete potřebovat prakticky okamžitě",
+              "then": "Držte ji v nástroji s okamžitým přístupem, typicky na spořicím účtu.",
+              "check": "Peníze musí být dostupné bez čekání, výpovědní lhůty a rizika poklesu hodnoty."
+            },
+            {
+              "if": "Cílová rezerva je vyšší a část pravděpodobně nebudete potřebovat první den",
+              "then": "Lze ji rozdělit mezi okamžitě dostupnou část a o něco výnosnější, stále nízkorizikovou a rozumně dostupnou vrstvu.",
+              "check": "Ani druhá vrstva nesmí ztratit funkci rezervy. Konkrétní nástroj musí zachovat jistotu a dostupnost; nejde o dlouhodobou investiční část."
+            }
+          ]
+        },
+        {
+          "type": "keyInsight",
+          "text": "Rezerva není od toho, aby vydělávala. Je od toho, aby byla připravená.",
+          "supportingText": "Výnos může omezit její zahálení, ale nikdy nesmí převážit nad dostupností a jistotou."
+        }
+      ]
+    },
+    {
+      "id": "chyby-a-zbytecne-vysoka-rezerva",
+      "eyebrow": "CHYBY NA OBOU STRANÁCH",
+      "title": "Rezerva může být malá, špatně uložená i zbytečně vysoká",
+      "intro": "Nejčastější problém není jen nedostatek peněz stranou. Část domácností má rezervu počítanou z nesprávného základu, schovanou v investicích nebo nafouknutou dávno za hranici toho, co má plnit.",
+      "rail": {
+        "type": "comparisonSummary",
+        "label": "DVA EXTRÉMY",
+        "left": "Příliš málo: dluh nebo nucený prodej",
+        "right": "Příliš mnoho: dlouhodobé peníze bez práce"
+      },
+      "blocks": [
+        {
+          "type": "checklist",
+          "title": "Nejčastější chyby u finanční rezervy",
+          "items": [
+            {
+              "title": "Počítat ji z příjmu místo z nutných výdajů",
+              "description": "Při výpadku nerozhoduje výše poslední výplaty, ale částka, která musí každý měsíc dál odejít."
+            },
+            {
+              "title": "Použít stejné univerzální číslo pro každého",
+              "description": "Stejný počet měsíců může být pro jednu domácnost zbytečně vysoký a pro jinou nedostatečný."
+            },
+            {
+              "title": "Spoléhat, že hotovost pokryje i velká dlouhodobá rizika",
+              "description": "Invaliditu nebo dlouhou nemoc nelze rozumně řešit pouze několikaměsíčním polštářem; od toho je ochrana příjmu."
+            },
+            {
+              "title": "Nechat celou částku dlouhodobě na běžném účtu",
+              "description": "Peníze jsou sice po ruce, ale mohou zbytečně ztrácet kupní sílu a nenesou ani základní úrok."
+            },
+            {
+              "title": "Schovat rezervu do investic",
+              "description": "Ve chvíli potřeby může být hodnota níž a člověk je nucený prodávat se ztrátou nebo si půjčit, přestože má majetek."
+            },
+            {
+              "title": "Čekat, až půjde vytvořit celou rezervu naráz",
+              "description": "První menší polštář chrání okamžitě. Není nutné čekat, až bude hotová celá cílová částka."
+            },
+            {
+              "title": "Dál ji bez důvodu zvětšovat po dosažení cíle",
+              "description": "Přebytek nad zdravou úrovní může dlouhodobě plnit jiné cíle místo toho, aby ze zvyku zůstával v hotovosti."
+            }
+          ]
+        },
+        {
+          "type": "decision",
+          "title": "Kdy už je část rezervy kandidátem na jinou práci",
+          "branches": [
+            {
+              "if": "Rezerva pokrývá výrazně více měsíců, než odpovídá stabilitě a závazkům domácnosti",
+              "then": "Prověřte částku nad cílovou úrovní.",
+              "check": "Stabilní zaměstnanec s ročním nebo dvouletým polštářem může držet násobně více, než jeho situace vyžaduje."
+            },
+            {
+              "if": "Na spořicí účet dál odchází peníze, i když je cíl dávno splněný",
+              "then": "Zastavte automatické navyšování a znovu určete prioritu přebytku.",
+              "check": "Peníze mohou pomoci s drahým dluhem nebo cílem, který má delší horizont a potřebuje jiný režim."
+            },
+            {
+              "if": "V rezervě se ve skutečnosti skrývají peníze na důchod nebo jiný vzdálený cíl",
+              "then": "Oddělte je podle účelu a času, kdy budou potřeba.",
+              "check": "Dlouhodobý cíl není rezerva jen proto, že jeho peníze zatím leží na stejném účtu."
+            }
+          ]
+        },
+        {
+          "type": "keyInsight",
+          "text": "Přesouvá se pouze přebytek nad zdravou rezervou — nikdy ne rezerva samotná.",
+          "supportingText": "Cílem není polštář zmenšit kvůli vyššímu výnosu. Cílem je dát jinou práci pouze penězům, které už jeho bezpečnostní úkol plnit nemusí."
+        }
+      ]
+    },
+    {
+      "id": "rezerva-zmenila-prusvih-na-neprijemnost",
+      "eyebrow": "PŘÍPAD Z PRAXE",
+      "title": "Rezerva, kterou považoval za mrtvé peníze, zabránila úvěru i prodeji investic ve ztrátě",
+      "intro": "Konkrétní případ ukazuje, že rezerva nemusí vytvořit viditelný výnos. Její hodnota se projeví tím, jaké špatné možnosti člověk díky ní nemusí použít.",
+      "rail": {
+        "type": "caseStudySummary",
+        "label": "VÝCHOZÍ NASTAVENÍ",
+        "metrics": [
+          {
+            "label": "Velikost rezervy",
+            "value": "4 měsíce nutných výdajů"
+          },
+          {
+            "label": "Uložení",
+            "value": "Spořicí účet"
+          },
+          {
+            "label": "Nečekaná událost",
+            "value": "Velká oprava auta"
+          },
+          {
+            "label": "Stav investic",
+            "value": "Menší korekce"
+          }
+        ]
+      },
+      "blocks": [
+        {
+          "type": "caseStudy",
+          "context": "Při sestavování plánu měl klient nastavenou rezervu na čtyři měsíce nutných výdajů, uloženou na spořicím účtu. Sám ji tehdy nepovažoval za prioritu a raději by peníze rovnou investoval, protože hotovost mu připadala nevyužitá.",
+          "initialState": [
+            "Rezerva měla jasně určenou velikost podle nutných výdajů.",
+            "Byla oddělená od dlouhodobých investic a okamžitě dostupná.",
+            "Klient ji vnímal spíše jako peníze, které nevydělávají, než jako aktivní součást plánu."
+          ],
+          "problem": [
+            "Přibližně po osmi měsících přišel nečekaný velký výdaj na autě.",
+            "Auto potřeboval pro každodenní cesty do práce, takže opravu nešlo odložit.",
+            "Dlouhodobé investice byly právě v menší korekci a jejich prodej by znamenal realizovat ztrátu."
+          ],
+          "analysis": "Bez rezervy by klient musel volit mezi drahým úvěrem, prodejem investic v nevhodnou chvíli nebo žádostí o pomoc. Samotný problém s autem by tím přerostl v dlouhodobější finanční důsledek. Rezerva oddělila krátkodobou provozní událost od dlouhodobých peněz.",
+          "whatChanged": [
+            "Opravu zaplatil přímo z rezervy.",
+            "Investice nechal v klidu a nemusel prodávat během poklesu.",
+            "Nevznikl nový drahý dluh ani závislost na pomoci okolí.",
+            "V dalších měsících polštář postupně doplnil zpět na původní cílovou výši."
+          ],
+          "result": [
+            "Událost zůstala provozní nepříjemností místo finančního problému s dlouhým dozvukem.",
+            "Dlouhodobý investiční plán pokračoval bez zásahu.",
+            "Klient prakticky pochopil, že hodnota rezervy není ve výnosu, ale v možnostech, které díky ní nemusí použít."
+          ],
+          "takeaway": "Rezerva nepřinesla peníze navíc. Zabránila drahému úvěru a nucenému prodeji investic — a přesně tím splnila svou práci."
+        },
+        {
+          "type": "comparison",
+          "title": "Stejný výdaj, dva úplně jiné následky",
+          "items": [
+            {
+              "label": "Bez dostupné rezervy",
+              "summary": "Krátkodobý problém se přenese do dalších částí financí.",
+              "points": [
+                "Vznikne nový úvěr a další pravidelná splátka.",
+                "Nebo se prodají investice v době poklesu a dočasná ztráta se stane skutečnou.",
+                "Případně je člověk odkázaný na pomoc rodiny nebo okolí."
+              ]
+            },
+            {
+              "label": "S dostupnou rezervou",
+              "summary": "Výdaj se zaplatí z vrstvy, která byla vytvořená právě pro tento typ situace.",
+              "points": [
+                "Nevznikne nový drahý závazek.",
+                "Dlouhodobé peníze zůstanou investované.",
+                "Po události se postupně obnoví pouze vyčerpaný polštář."
+              ]
+            }
+          ],
+          "takeaway": "Rozdíl není v ceně opravy. Je v tom, zda kvůli ní musí domácnost rozebrat něco, co mělo sloužit úplně jinému cíli."
+        },
+        {
+          "type": "expertNote",
+          "title": "Jak číst tento případ",
+          "text": "Jde o anonymizovaný případ z praxe."
+        }
+      ]
+    },
+    {
+      "id": "kdy-rezervu-prepocitat",
+      "eyebrow": "REZERVA SE MĚNÍ S ŽIVOTEM",
+      "title": "Přepočítává se při změně výdajů nebo rizik, ne jen podle kalendáře",
+      "intro": "Cílová částka není jednou provždy hotové číslo. Jakmile se změní měsíční základ nebo zranitelnost příjmu, změní se i to, kolik má rezerva pokrýt.",
+      "rail": {
+        "type": "currentTopic",
+        "label": "SPUŠTĚČ REVIZE",
+        "title": "Změnilo se, kolik musíte platit, nebo jak dlouho můžete být bez příjmu?"
+      },
+      "blocks": [
+        {
+          "type": "checklist",
+          "title": "Životní změny, po kterých má smysl rezervu znovu spočítat",
+          "items": [
+            {
+              "title": "Změna příjmu nebo jeho jistoty",
+              "description": "Přechod ze zaměstnání na podnikání, výrazně kolísavější příjem nebo naopak stabilnější práce mění potřebný počet měsíců."
+            },
+            {
+              "title": "Domácnost přestane stát na dvou příjmech",
+              "description": "Když zůstane pouze jeden hlavní příjem, výpadek má větší dopad a rezerva může potřebovat růst."
+            },
+            {
+              "title": "Narození dítěte",
+              "description": "Přibývá člověk závislý na příjmu, rostou nutné výdaje a často současně klesá jeden z příjmů."
+            },
+            {
+              "title": "Hypotéka nebo jiný velký závazek",
+              "description": "Nová splátka běží dál i při výpadku příjmu a zvyšuje měsíční základ, který má rezerva pokrýt."
+            },
+            {
+              "title": "Stěhování nebo skokový růst provozních nákladů",
+              "description": "Vyšší nájem, energie nebo dojíždění přímo mění částku potřebnou na jeden měsíc."
+            },
+            {
+              "title": "Změna složení domácnosti",
+              "description": "Partnerství, svatba, rozvod nebo odstěhování mění počet příjmů, počet závislých lidí i strukturu výdajů."
+            },
+            {
+              "title": "Výrazná změna v pojištění",
+              "description": "Silnější ochrana příjmu může část dlouhodobého rizika převzít. Pokud naopak krytí zmizí nebo nestačí, zranitelnost domácnosti roste."
+            },
+            {
+              "title": "Skutečné čerpání rezervy",
+              "description": "Po větším výdaji ji nejen doplňte, ale zkontrolujte, zda původní cílová výše po změně situace stále odpovídá potřebě."
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "První poctivý odhad vlastní rezervy",
+          "steps": [
+            {
+              "title": "Sepište jeden měsíc nutného provozu",
+              "description": "Sečtěte bydlení, energie, jídlo, dopravu, splátky, pojistné, léky a další položky, které by opravdu běžely dál."
+            },
+            {
+              "title": "Určete zranitelnost příjmu",
+              "description": "Zvažte stabilitu práce nebo podnikání, rychlost náhrady příjmu, počet příjmů v domácnosti a počet lidí, kteří na nich závisí."
+            },
+            {
+              "title": "Prověřte pevné závazky a pojištění",
+              "description": "Hypotéka a další splátky zvyšují potřebu rezervy. Dobře nastavená ochrana naopak přebírá velké dlouhodobé následky, které hotovost řešit nemá."
+            },
+            {
+              "title": "Stanovte minimální a cílovou úroveň",
+              "description": "Nejdřív určete první základní polštář, potom plnou částku jako nutné výdaje násobené počtem měsíců podle vašeho profilu."
+            },
+            {
+              "title": "Porovnejte výsledek s tím, co máte dnes",
+              "description": "Zjistěte, zda je potřeba rezervu postupně doplnit, pouze udržovat, nebo zda už část peněz leží nad zdravou cílovou úrovní."
+            },
+            {
+              "title": "Ověřte, kde peníze skutečně leží",
+              "description": "Rezerva má být dostupná a bezpečná. Majetek v investicích nebo nemovitosti se do ní nepočítá jen proto, že má hodnotu."
+            }
+          ]
+        },
+        {
+          "type": "decision",
+          "title": "Co dělat podle výsledku",
+          "branches": [
+            {
+              "if": "Nemáte žádný dostupný polštář",
+              "then": "První cíl je základní rezerva na první nečekanou událost.",
+              "check": "Nemusíte čekat na celou cílovou částku. Začněte vrstvou, která vás dostane z nuly."
+            },
+            {
+              "if": "Máte základ, ale jste pod cílovou úrovní",
+              "then": "Doplňujte rozdíl postupně vedle ostatních priorit.",
+              "check": "Tempo má odpovídat rozpočtu; smyslem není zastavit celý finanční plán, dokud nebude polštář kompletní."
+            },
+            {
+              "if": "Jste přibližně na cílové úrovni",
+              "then": "Rezervu udržujte, po čerpání doplňte a přepočítejte při významné životní změně.",
+              "check": "Další automatické navyšování bez nového důvodu není nutné."
+            },
+            {
+              "if": "Jste výrazně nad cílovou úrovní",
+              "then": "Prověřte pouze přebytek a jeho možné využití pro jiný cíl.",
+              "check": "Zdravý polštář ponechte nedotčený. Přesouvá se jen část, která už jeho práci nemusí vykonávat."
+            }
+          ]
+        },
+        {
+          "type": "nextAction",
+          "title": "Nevíte, jaký počet měsíců odpovídá právě vaší domácnosti?",
+          "text": "Můžeme společně projít vaše nutné výdaje, jistotu příjmu, závazky a to, co už přebírá pojištění. Výsledkem nebude univerzální poučka, ale minimální a cílová rezerva srozumitelně odvozená z vaší situace.",
+          "action": {
+            "label": "Spočítat rezervu pro moji domácnost",
+            "intent": "open-contact-or-screening-flow"
+          }
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "title": "Správná rezerva není největší. Je přesně tak velká, aby splnila svou práci.",
+    "paragraphs": [
+      "Finanční polštář má domácnosti koupit čas a volnost. Má zaplatit nutný provoz při krátkém výpadku, zachytit nečekaný výdaj a zabránit tomu, aby se kvůli jedné události prodávaly dlouhodobé investice nebo vznikal nový drahý dluh.",
+      "Jeho velikost proto nevychází z poslední výplaty, ale z nutných výdajů a rizik konkrétní domácnosti. Minimum chrání první ránu, cílová úroveň pokrývá potřebný počet měsíců a pojištění přebírá následky, které by rozumná hotovostní rezerva unést nemohla. Jakmile se změní život, změní se i výpočet."
+    ]
+  },
+  "relatedTopics": [
+    {
+      "topic": "V jakém pořadí řešit osobní finance?",
+      "reason": "Ukazuje, proč je rezerva jedním z prvních pater plánu a jak chrání investice, bydlení a další cíle před první nečekanou událostí."
+    },
+    {
+      "topic": "Máte finanční produkty. Ale máte skutečně finanční plán?",
+      "reason": "Vysvětluje vazbu mezi příjmem, výdaji, rezervou, ochranou, závazky a cíli v jednom společném systému."
+    },
+    {
+      "topic": "Kolik vám půjčí banka a kolik unese váš rozpočet?",
+      "reason": "Navazuje na domácnosti s hypotékou a ukazuje, proč musí po splátce zůstat prostor pro rezervu a ochranu příjmu.",
+      "slug": "banka-vam-pujci-vic-nez-si-muzete-dovolit"
+    },
+    {
+      "topic": "Peníze na rezervu, bydlení a důchod nemají být v jednom balíku",
+      "reason": "Rozvíjí rozdíl mezi okamžitě dostupným polštářem a penězi, které mají podle svého horizontu dlouhodobě pracovat."
+    }
+  ],
+  "editorial": {
+    "contentStatus": "review-ready",
+    "sourceBasis": "Rozhovorové odpovědi Davida Pokorného, téma 3, strany 11–17 zdrojového dokumentu.",
+    "needsExternalVerification": false,
+    "review": {
+      "status": "pending"
+    },
+    "verificationItems": [
+      {
+        "id": "03-missing-case-repair-values",
+        "title": "Nevytvářet chybějící cenu opravy ani korunovou rezervu",
+        "instruction": "Podklad neobsahuje přesnou cenu opravy ani korunovou výši rezervy. Proto nebylo vytvořeno číselné porovnání a částky nesmí být doplněny bez doloženého zdroje.",
+        "status": "not_applicable",
+        "severity": "advisory",
+        "blocksPublish": false,
+        "visibility": "internal",
+        "sectionId": "rezerva-zmenila-prusvih-na-neprijemnost",
+        "claimRef": "case-missing-repair-values",
+        "evidenceRequired": "Doložená cena opravy a korunová výše rezervy, pokud mají být někdy zveřejněné.",
+        "sources": [],
+        "note": "Veřejná verze záměrně zůstává bez nedoloženého číselného delta bloku."
+      }
+    ],
+    "productionNotes": {
+      "videoOpportunities": [
+        {
+          "recommendedPlacement": "Za sekcí „Základní rovnice: nezbytné výdaje × počet měsíců podle rizik“",
+          "recommendedTopic": "David na jednoduchém zápisu vysvětlí dvě proměnné výpočtu: nutné měsíční výdaje a počet měsíců podle jistoty příjmu, závazků a lidí, kteří na něm závisí.",
+          "suggestedDuration": "60–90 sekund",
+          "reason": "Jednoduchá rovnice je hlavní zapamatovatelný rámec článku a krátké osobní vysvětlení může ukázat, proč dvě domácnosti se stejným příjmem dostanou odlišný výsledek."
+        }
+      ],
+      "interactiveOpportunities": [
+        {
+          "workingTitle": "Orientační výpočet rezervy domácnosti",
+          "recommendedPlacement": "Před závěrečnou sekcí „Přepočítává se při změně výdajů nebo rizik“",
+          "concept": "Nástroj nechá čtenáře sečíst nutné měsíční výdaje a projít profil domácnosti: stabilita a nahraditelnost příjmu, počet příjmů, děti, hypotéka, podnikání a nastavená ochrana. Výstup ukáže základní polštář a orientační cílové rozpětí, nikoli univerzální produktové doporučení.",
+          "renderWhenAvailable": false
+        }
+      ],
+      "verificationRequired": [],
+      "implementationNotes": [
+        "Nevkládat financialDelta: případová studie neobsahuje korunovou výši opravy ani rezervy, pouze čtyři měsíce nutných výdajů a popis dopadu.",
+        "Rozpětí kolem tří až šesti měsíců prezentovat výhradně jako orientační rámec, nikoli univerzální normu. U podnikatele může být cílová úroveň i vyšší.",
+        "Rezervu a pojištění vykreslit jako dvě spolupracující vrstvy. Neformulovat je jako plně zaměnitelné alternativy.",
+        "Spořicí účet uvádět jako přirozený typ uložení podle Davidovy metodiky, nikoli jako doporučení konkrétní banky nebo produktu.",
+        "Nevkládat clientEvidence: pro toto téma nebyl dodán skutečný klientský výrok.",
+        "Nevkládat renderable videoExplanation ani interactiveTool, dokud nebude dodané skutečné video, URL nebo implementovaný nástroj.",
+        "CTA napojit na existující kontaktní nebo screening flow; konkrétní URL nebyla ve zdrojích dodána.",
+        "Po dodání TypeScript schema pouze přemapovat field names. Význam bloků, rozdělení kapitol a jejich pořadí zachovat."
+      ]
+    }
+  }
+}

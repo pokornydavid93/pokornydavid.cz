@@ -1,0 +1,130 @@
+/* ============================================
+   TRUSTBAR — spodní navigace
+============================================ */
+.trustBar {
+  --trustbar-surface: var(--overlay-navigation);
+  --trustbar-control-surface: transparent;
+  --trustbar-control-hover: var(--surface-card-dark-hover);
+  --trustbar-control-active: var(--surface-action);
+  --trustbar-border: var(--border-emphasis-subtle);
+  --trustbar-border-active: var(--border-emphasis);
+  --trustbar-text: var(--text-primary);
+  --trustbar-active-text: var(--text-on-light-primary);
+  --trustbar-shadow: var(--surface-shadow-soft);
+  position: fixed;
+  bottom: 15px;
+   left: 0;
+  right: 0; 
+   margin: 0 auto;    /* centrum */
+  max-width: 75%;
+
+  /* centrování */
+  height: 95px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+border-radius: var(--radius-panel);
+
+  background: var(--trustbar-surface);
+  border: 1px solid var(--trustbar-border);
+
+  box-shadow: var(--trust-bar-elevation);
+
+  z-index: var(--trust-bar-layer, var(--layer-navigation, 200));
+  transition: transform 0.6s ease-out, opacity 0.4s ease-out;
+}
+
+.staticRow {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center; /* nebo flex-start, podle layoutu */
+  width: 100%;
+}
+
+/* viditelný stav */
+.trustBarVisible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* schovaný + nekilkatelný */
+.trustBarHidden {
+  transform: translateY(120%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ============================================
+   BUTTONY
+============================================ */
+.navButton {
+  appearance: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 12px 25px;
+
+  border-radius: var(--radius-control);
+  border: 1px solid var(--trustbar-border);
+
+  color: var(--trustbar-text);
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: background 0.22s ease-out, border-color 0.22s ease-out,
+    color 0.22s ease-out, transform 0.16s ease-out, box-shadow 0.22s ease-out;
+}
+
+/* ikonka */
+.navIcon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  opacity: 0.92;
+}
+
+/* ať se text neláme */
+.navButton span {
+  white-space: nowrap;
+}
+
+/* ============================================
+   HOVER
+============================================ */
+.navButton:hover {
+  background: var(--trustbar-control-hover);
+  border-color: var(--trustbar-border-active);
+  color: var(--trustbar-text);
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 1px var(--trustbar-border),
+    0 10px 22px var(--trustbar-shadow);
+}
+
+/* PRESS */
+.navButton:active {
+  transform: translateY(0);
+  box-shadow: 0 0 0 1px var(--trustbar-border),
+    0 4px 14px var(--trustbar-shadow);
+}
+
+/* ============================================
+   ACTIVE STAV BUTTONU (napojené na activeSection)
+============================================ */
+.navButtonActive {
+  background: var(--trustbar-control-active);
+  border-color: var(--border-on-light-medium);
+  color: var(--trustbar-active-text);
+
+  box-shadow: 0 0 0 1px var(--border-on-light-subtle),
+    0 12px 26px var(--trustbar-shadow);
+}

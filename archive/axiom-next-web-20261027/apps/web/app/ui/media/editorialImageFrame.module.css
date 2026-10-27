@@ -1,0 +1,25 @@
+/* Keep the permanent crop separate from scroll reveals and link focus rings. */
+.frame {
+  --editorial-image-cut: clamp(22px, 2.5vw, 36px);
+
+  display: block;
+  overflow: hidden;
+  border-radius: 0;
+  clip-path: polygon(
+    var(--editorial-image-cut) 0,
+    100% 0,
+    100% calc(100% - var(--editorial-image-cut)),
+    calc(100% - var(--editorial-image-cut)) 100%,
+    0 100%,
+    0 var(--editorial-image-cut)
+  );
+}
+
+.compact {
+  --editorial-image-cut: clamp(12px, 1.6vw, 24px);
+}
+
+.fill {
+  position: absolute;
+  inset: 0;
+}

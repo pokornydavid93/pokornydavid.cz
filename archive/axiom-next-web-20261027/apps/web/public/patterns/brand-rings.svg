@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960">
+  <g fill="none" stroke-linecap="butt">
+    <circle cx="-120" cy="-160" r="210" stroke="#031b15" stroke-opacity=".34" stroke-width="82"/>
+    <circle cx="-120" cy="-160" r="330" stroke="#0b4632" stroke-opacity=".34" stroke-width="74"/>
+    <circle cx="-120" cy="-160" r="450" stroke="#79eb93" stroke-opacity=".13" stroke-width="70"/>
+    <circle cx="-120" cy="-160" r="570" stroke="#d6ffad" stroke-opacity=".09" stroke-width="68"/>
+    <circle cx="-120" cy="-160" r="690" stroke="#79eb93" stroke-opacity=".12" stroke-width="66"/>
+    <circle cx="-120" cy="-160" r="810" stroke="#d6ffad" stroke-opacity=".075" stroke-width="64"/>
+    <circle cx="-120" cy="-160" r="930" stroke="#79eb93" stroke-opacity=".105" stroke-width="62"/>
+    <circle cx="-120" cy="-160" r="1050" stroke="#d6ffad" stroke-opacity=".065" stroke-width="60"/>
+    <circle cx="-120" cy="-160" r="1170" stroke="#79eb93" stroke-opacity=".09" stroke-width="58"/>
+    <circle cx="-120" cy="-160" r="1290" stroke="#d6ffad" stroke-opacity=".055" stroke-width="56"/>
+    <circle cx="-120" cy="-160" r="1410" stroke="#79eb93" stroke-opacity=".075" stroke-width="54"/>
+  </g>
+  <g fill="none" stroke="#d6ffad" stroke-opacity=".045" stroke-width="2">
+    <circle cx="-120" cy="-160" r="270"/>
+    <circle cx="-120" cy="-160" r="510"/>
+    <circle cx="-120" cy="-160" r="750"/>
+    <circle cx="-120" cy="-160" r="990"/>
+    <circle cx="-120" cy="-160" r="1230"/>
+  </g>
+</svg>

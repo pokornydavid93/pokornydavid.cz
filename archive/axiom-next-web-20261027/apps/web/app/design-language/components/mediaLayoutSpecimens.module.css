@@ -1,0 +1,530 @@
+.specimen {
+  min-inline-size: 0;
+  display: grid;
+  gap: var(--space-component);
+}
+
+.controls {
+  min-inline-size: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  align-items: end;
+  gap: var(--space-16);
+}
+
+.rangeControl,
+.selectControl,
+.choiceControl {
+  min-inline-size: 0;
+  display: grid;
+  gap: var(--space-8);
+}
+
+.rangeControl > span,
+.selectControl > span,
+.choiceControl > span,
+.linearExamples > header > span,
+.fixedContext > header > span {
+  color: var(--text-muted);
+  font-size: var(--type-metadata-size);
+  font-weight: var(--type-metadata-weight);
+  letter-spacing: var(--type-eyebrow-letter-spacing);
+  text-transform: uppercase;
+}
+
+.rangeControl > div {
+  min-block-size: var(--control-touch-target-min);
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) auto;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.rangeControl input {
+  inline-size: 100%;
+  accent-color: var(--accent-primary);
+  cursor: ns-resize;
+}
+
+.rangeControl output,
+.fixedContext code {
+  color: var(--text-primary);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: var(--type-label-small-size);
+  font-variant-numeric: tabular-nums;
+}
+
+.rangeControl output {
+  min-inline-size: 4.75rem;
+  text-align: end;
+}
+
+.selectControl select,
+.choiceControl > div {
+  min-block-size: var(--control-touch-target-min);
+  color: var(--text-secondary);
+  background: transparent;
+  border: var(--border-width-structural) solid var(--border-default);
+  border-radius: var(--radius-control);
+}
+
+.selectControl select {
+  inline-size: 100%;
+  padding-inline: var(--space-12);
+  color-scheme: dark;
+  font: inherit;
+  font-size: var(--type-label-small-size);
+  font-weight: var(--type-label-weight);
+  cursor: pointer;
+}
+
+.choiceControl > div {
+  padding: var(--space-4);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+.choiceControl button {
+  min-inline-size: 0;
+  min-block-size: calc(var(--control-touch-target-min) - var(--space-8));
+  padding-inline: var(--space-8);
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: var(--type-label-small-size);
+  font-weight: var(--type-label-weight);
+  background: transparent;
+  border: var(--border-width-structural) solid transparent;
+  border-radius: calc(var(--radius-control) - var(--space-2));
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.choiceControl button:hover,
+.selectControl select:hover {
+  color: var(--text-primary);
+  background: var(--selection-bg-hover);
+}
+
+.choiceControl button[data-active] {
+  color: var(--selection-selected-text);
+  background: var(--selection-selected-bg);
+  border-color: var(--selection-selected-border);
+}
+
+.choiceControl button:focus-visible,
+.selectControl select:focus-visible,
+.rangeControl input:focus-visible,
+.edgeCases summary:focus-visible {
+  outline: var(--focus-width-standard) solid var(--focus-ring);
+  outline-offset: var(--focus-offset-standard);
+}
+
+.coverStage,
+.frameStage,
+.bleedStage {
+  min-inline-size: 0;
+  overflow: auto;
+  background: var(--surface-section-dark-deep);
+  border-block: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.coverStage {
+  padding: var(--space-12);
+  display: grid;
+  justify-items: center;
+}
+
+.coverStage[data-preview-context="narrow"] .coverAlgorithm {
+  inline-size: min(100%, 20.5rem);
+}
+
+.coverStage[data-preview-context="medium"] .coverAlgorithm {
+  inline-size: min(100%, 42rem);
+}
+
+.coverAlgorithm {
+  inline-size: min(100%, 56.25rem);
+  min-block-size: max(var(--size-cover-standard), var(--specimen-block-size));
+  border-inline: var(--border-width-hairline) dashed var(--border-emphasis);
+}
+
+.coverStart,
+.coverPrincipal,
+.coverEnd {
+  min-inline-size: 0;
+  padding-inline: var(--space-12);
+  display: grid;
+  align-content: center;
+  gap: var(--space-8);
+  color: var(--text-secondary);
+  background: var(--surface-card-dark);
+  border: var(--border-width-structural) solid var(--border-default);
+  border-radius: var(--radius-control);
+  overflow: hidden;
+}
+
+.coverStart > span,
+.coverPrincipal > span,
+.coverEnd > span {
+  color: var(--text-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: var(--type-metadata-size);
+  text-transform: uppercase;
+}
+
+.coverPrincipal strong {
+  color: var(--text-primary);
+  font-size: var(--type-label-small-size);
+}
+
+.coverStart small,
+.coverPrincipal p,
+.coverEnd small {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--type-body-small-size);
+  line-height: var(--type-body-small-line-height);
+}
+
+.coverAlgorithm[data-cover-scenario="short"] .coverStart {
+  block-size: 2rem;
+}
+
+.coverAlgorithm[data-cover-scenario="short"] .coverPrincipal {
+  block-size: 6rem;
+}
+
+.coverAlgorithm[data-cover-scenario="short"] .coverEnd {
+  block-size: 1.5rem;
+}
+
+.coverAlgorithm[data-cover-scenario="balanced"] .coverStart {
+  block-size: 4.5rem;
+}
+
+.coverAlgorithm[data-cover-scenario="balanced"] .coverPrincipal {
+  block-size: 10rem;
+}
+
+.coverAlgorithm[data-cover-scenario="balanced"] .coverEnd {
+  block-size: 4rem;
+}
+
+.coverAlgorithm[data-cover-scenario="overflow"] .coverStart {
+  block-size: 7.5rem;
+}
+
+.coverAlgorithm[data-cover-scenario="overflow"] .coverPrincipal {
+  block-size: 18.75rem;
+}
+
+.coverAlgorithm[data-cover-scenario="overflow"] .coverEnd {
+  block-size: 12rem;
+}
+
+.diagnostics {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  border-block: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.diagnostics > div {
+  min-inline-size: 0;
+  padding: var(--space-12);
+  display: grid;
+  align-content: start;
+  gap: var(--space-6);
+  border-inline-start: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.diagnostics > div:first-child {
+  border-inline-start: 0;
+}
+
+.diagnostics dt {
+  color: var(--text-muted);
+  font-size: var(--type-metadata-size);
+  text-transform: uppercase;
+}
+
+.diagnostics dd {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: var(--type-label-small-size);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.linearExamples {
+  min-inline-size: 0;
+  padding-block-start: var(--space-component);
+  display: grid;
+  gap: var(--space-component);
+  border-block-start: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.linearExamples > header {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.linearExamples h4 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: var(--type-subheading-size);
+  line-height: var(--type-subheading-line-height);
+  text-wrap: balance;
+}
+
+.coverStateSummary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-component);
+}
+
+.coverStateSummary p {
+  margin: 0;
+  padding-block-start: var(--space-12);
+  display: grid;
+  gap: var(--space-8);
+  border-block-start: var(--border-width-hairline) solid var(--border-default);
+}
+
+.coverStateSummary strong {
+  color: var(--text-primary);
+  font-size: var(--type-label-small-size);
+}
+
+.coverStateSummary span {
+  color: var(--text-secondary);
+  font-size: var(--type-body-small-size);
+  line-height: var(--type-body-small-line-height);
+}
+
+.frameStage {
+  padding-block: var(--space-24);
+  display: grid;
+  place-items: center;
+}
+
+.frameParent {
+  position: relative;
+  inline-size: min(100%, var(--specimen-inline-size));
+}
+
+.frameAlgorithm {
+  margin: 0;
+  background: var(--surface-page);
+}
+
+.focalMarker {
+  position: absolute;
+  inset-inline-start: 62%;
+  inset-block-start: 38%;
+  inline-size: var(--space-16);
+  block-size: var(--space-16);
+  translate: -50% -50%;
+  pointer-events: none;
+  border: var(--border-width-structural) solid var(--border-state);
+  border-radius: 50%;
+}
+
+.focalMarker::before,
+.focalMarker::after {
+  content: "";
+  position: absolute;
+  background: var(--border-state);
+}
+
+.focalMarker::before {
+  inset-inline: 50% auto;
+  inset-block: calc(var(--space-6) * -1);
+  inline-size: var(--border-width-structural);
+}
+
+.focalMarker::after {
+  inset-inline: calc(var(--space-6) * -1);
+  inset-block: 50% auto;
+  block-size: var(--border-width-structural);
+}
+
+.frameVariants {
+  display: grid;
+  gap: var(--space-component);
+}
+
+.frameVariants article {
+  min-inline-size: 0;
+  padding-block-start: var(--space-12);
+  display: grid;
+  grid-template-columns: minmax(9rem, 0.3fr) minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-component);
+  border-block-start: var(--border-width-hairline) solid var(--border-default);
+}
+
+.frameVariants article > div {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.frameVariants strong {
+  color: var(--text-primary);
+  font-size: var(--type-label-small-size);
+}
+
+.frameVariants code {
+  color: var(--text-muted);
+  font-size: var(--type-metadata-size);
+}
+
+.frameVariants figure {
+  max-inline-size: 24rem;
+  margin: 0;
+  background: var(--surface-section-dark-deep);
+  border: var(--border-width-hairline) solid var(--border-default);
+}
+
+.financeFrame {
+  max-inline-size: 64rem;
+  margin: 0 auto;
+}
+
+.bleedStage {
+  padding-block: var(--space-12);
+  display: grid;
+  justify-items: center;
+}
+
+.bleedContext {
+  inline-size: min(100%, var(--specimen-inline-size));
+  min-inline-size: 0;
+}
+
+.readingPreview {
+  position: relative;
+  padding-block: var(--space-40);
+  row-gap: var(--space-24);
+  background: var(--surface-page);
+  border-block: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.wideTrackGuide,
+.measureTrackGuide {
+  position: absolute;
+  inset-block: 0;
+  pointer-events: none;
+}
+
+.readingPreview > .wideTrackGuide {
+  grid-column: wide-start / wide-end;
+  border-inline: var(--border-width-hairline) dashed var(--border-emphasis);
+}
+
+.readingPreview > .measureTrackGuide {
+  grid-column: measure-start / measure-end;
+  border-inline: var(--border-width-hairline) solid var(--border-control);
+}
+
+.readingCopy {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: var(--space-12);
+  color: var(--text-secondary);
+  font-size: var(--type-body-small-size);
+  line-height: var(--type-body-small-line-height);
+  background: var(--surface-card-dark);
+}
+
+.bleedBand {
+  position: relative;
+  z-index: 1;
+  margin-block: 0;
+  padding: var(--space-24);
+  display: grid;
+  gap: var(--space-8);
+  color: var(--text-secondary);
+  background: var(--surface-card-dark);
+  border: var(--border-width-structural) solid var(--border-default);
+}
+
+.bleedBand strong {
+  color: var(--text-primary);
+  font-size: var(--type-label-small-size);
+  text-transform: uppercase;
+}
+
+.bleedBand span {
+  font-size: var(--type-body-small-size);
+  line-height: var(--type-body-small-line-height);
+}
+
+.fixedContext {
+  min-inline-size: 0;
+  display: grid;
+  gap: var(--space-8);
+}
+
+.fixedContext > header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-12);
+}
+
+.contextScroller {
+  min-inline-size: 0;
+  overflow: auto;
+  background: var(--surface-section-dark-deep);
+}
+
+.fixedContextInner {
+  inline-size: var(--specimen-inline-size);
+}
+
+.edgeCases {
+  border-block: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.edgeCases summary {
+  min-block-size: var(--control-touch-target-min);
+  display: flex;
+  align-items: center;
+  color: var(--text-primary);
+  font-weight: var(--type-label-weight);
+  cursor: pointer;
+}
+
+.edgeCases > div {
+  padding-block-end: var(--space-component);
+  display: grid;
+  gap: var(--space-component);
+}
+
+@media (max-width: 720px) {
+  .controls,
+  .diagnostics,
+  .coverStateSummary,
+  .frameVariants article {
+    grid-template-columns: 1fr;
+  }
+
+  .diagnostics > div {
+    grid-template-columns: minmax(7rem, 0.42fr) minmax(0, 1fr);
+    border-inline-start: 0;
+    border-block-start: var(--border-width-hairline) solid var(--border-subtle);
+  }
+
+  .diagnostics > div:first-child {
+    border-block-start: 0;
+  }
+
+  .fixedContext > header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

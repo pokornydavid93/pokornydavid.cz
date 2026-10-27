@@ -1,0 +1,520 @@
+.workbench {
+  min-width: 0;
+  display: grid;
+  gap: var(--space-24);
+}
+
+.layerTabs {
+  min-width: 0;
+  padding: var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-control);
+}
+
+.layerTabs button,
+.segmentedControl button,
+.contractIndex button {
+  min-block-size: var(--control-touch-target-min);
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font: inherit;
+  font-size: var(--type-label-small-size);
+  font-weight: var(--type-label-weight);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.layerTabs button:hover,
+.segmentedControl button:hover,
+.contractIndex button:hover {
+  color: var(--text-primary);
+  background: var(--selection-bg-hover);
+}
+
+.layerTabs button[data-active],
+.segmentedControl button[data-active],
+.contractIndex button[data-active] {
+  color: var(--selection-selected-text);
+  background: var(--selection-selected-bg);
+  border-color: var(--selection-selected-border);
+}
+
+.layerTabs button:focus-visible,
+.segmentedControl button:focus-visible,
+.contractIndex button:focus-visible,
+.workbench [role="tabpanel"]:focus-visible {
+  outline: var(--focus-width-standard) solid var(--focus-ring);
+  outline-offset: var(--focus-offset-standard);
+}
+
+.labLayer {
+  min-width: 0;
+  display: grid;
+  gap: var(--space-composition);
+}
+
+.layerIntro {
+  max-inline-size: var(--measure-body);
+}
+
+.layerIntro > span,
+.contractStage > header > span,
+.compositionSection > header > span,
+.journeyTools > span,
+.contractIndex > div > span {
+  color: var(--text-emphasis);
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-weight);
+  letter-spacing: var(--type-eyebrow-letter-spacing);
+  line-height: var(--type-eyebrow-line-height);
+  text-transform: uppercase;
+}
+
+.layerIntro h3,
+.contractStage h4,
+.compositionSection h4 {
+  margin: var(--space-8) 0 0;
+  color: var(--text-primary);
+  line-height: var(--type-subheading-line-height);
+  text-wrap: balance;
+}
+
+.layerIntro h3 {
+  font-size: var(--type-subheading-size);
+}
+
+.layerIntro p,
+.contractStage > header p {
+  margin: var(--space-10) 0 0;
+  color: var(--text-secondary);
+  font-size: var(--type-body-small-size);
+  line-height: var(--type-body-small-line-height);
+}
+
+.contractLayout {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(12rem, 14rem) minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-32);
+}
+
+.contractIndex {
+  min-width: 0;
+  display: grid;
+  gap: var(--space-20);
+  border-inline-end: 1px solid var(--border-subtle);
+}
+
+.contractIndex > div {
+  padding-inline-end: var(--space-16);
+  display: grid;
+  gap: var(--space-4);
+}
+
+.contractIndex button {
+  padding-inline: var(--space-10);
+  text-align: start;
+}
+
+.contractStage {
+  min-width: 0;
+  display: grid;
+  gap: var(--space-24);
+}
+
+.contractStage h4,
+.compositionSection h4 {
+  font-size: 1.25rem;
+}
+
+.toneMatrix {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: var(--space-12);
+}
+
+.tonePanel {
+  min-width: 0;
+  padding: var(--space-16);
+  display: grid;
+  gap: var(--space-16);
+  border-radius: var(--radius-control);
+}
+
+.toneHeader {
+  padding-block-end: var(--space-10);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-8);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.toneHeader strong {
+  color: var(--text-primary);
+  font-size: var(--type-label-size);
+}
+
+.toneHeader code {
+  color: var(--text-muted);
+  font-size: var(--type-caption-size);
+}
+
+.stateGrid {
+  min-width: 0;
+  display: grid;
+}
+
+.stateCell {
+  min-width: 0;
+  padding-block: var(--space-14);
+  display: grid;
+  gap: var(--space-10);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.stateCell:last-child {
+  border-bottom: 0;
+}
+
+.stateCell > span {
+  color: var(--text-muted);
+  font-size: var(--type-caption-size);
+  font-weight: var(--type-caption-weight);
+  text-transform: uppercase;
+}
+
+.stateCell > div {
+  min-width: 0;
+}
+
+.stateCell :is(
+  [data-component="text-input"],
+  [data-component="textarea"],
+  [data-component="select"]
+) {
+  min-inline-size: 0;
+}
+
+.stateCell[data-demo-state="hover"] [data-component="button"][data-variant="primary"] {
+  color: var(--cta-primary-text-hover);
+  background: var(--cta-primary-bg-hover);
+  border-color: var(--cta-primary-border-hover);
+}
+
+.stateCell[data-demo-state="hover"] [data-component="icon-button"] {
+  background: var(--selection-bg-hover);
+  border-color: var(--selection-border-hover);
+}
+
+.stateCell[data-demo-state="hover"] [data-component="link"] {
+  color: var(--text-primary);
+  text-decoration-thickness: 2px;
+}
+
+.stateCell[data-demo-state="hover"] [data-component="selection-chip"] {
+  color: var(--selection-text-hover);
+  background: var(--selection-bg-hover);
+  border-color: var(--selection-border-hover);
+}
+
+.stateCell[data-demo-state="hover"] :is(
+  [data-component="text-input"],
+  [data-component="textarea"],
+  [data-component="select"]
+) {
+  border-color: var(--input-border-hover);
+}
+
+.stateCell[data-demo-state="focus"] :is(
+  [data-component="button"],
+  [data-component="icon-button"],
+  [data-component="link"],
+  [data-component="selection-chip"]
+),
+.stateCell[data-demo-state="focus"] [data-component="disclosure"] > button,
+.stateCell[data-demo-state="focus"] :is(
+  [data-component="text-input"],
+  [data-component="textarea"],
+  [data-component="select"]
+),
+.stateCell[data-demo-state="invalid-focus"] :is(
+  [data-component="text-input"],
+  [data-component="textarea"],
+  [data-component="select"]
+) {
+  outline: var(--focus-width-standard) solid var(--focus-ring);
+  outline-offset: var(--focus-offset-standard);
+}
+
+.stateCell[data-demo-state="focus"] :is(
+  [data-component="text-input"],
+  [data-component="textarea"],
+  [data-component="select"]
+) {
+  border-color: var(--input-border-focus);
+}
+
+.stateCell[data-demo-state="focus"] [data-component="checkbox"] input + span,
+.stateCell[data-demo-state="invalid-focus"] [data-component="checkbox"] input + span,
+.stateCell[data-demo-state="focus"] [data-component="radio-group"] input:first-of-type + span,
+.stateCell[data-demo-state="invalid-focus"] [data-component="radio-group"] input:first-of-type + span {
+  outline: var(--focus-width-standard) solid var(--focus-ring);
+  outline-offset: var(--focus-offset-standard);
+}
+
+.stateCell[data-demo-state="invalid-focus"] :is(
+  [data-component="text-input"],
+  [data-component="textarea"],
+  [data-component="select"]
+) {
+  border-color: var(--status-error-border);
+}
+
+.stateCell[data-demo-state="autofill"] [data-component="text-input"] {
+  color: var(--input-autofill-text);
+  background: var(--input-autofill-surface);
+}
+
+.summaryContract,
+.fieldAnatomy {
+  min-width: 0;
+  display: grid;
+  gap: var(--space-16);
+}
+
+.fieldAnatomy dl {
+  margin: 0;
+  display: grid;
+  gap: var(--space-8);
+}
+
+.fieldAnatomy dl > div {
+  padding-block-start: var(--space-8);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.fieldAnatomy dt {
+  color: var(--text-muted);
+  font-size: var(--type-caption-size);
+}
+
+.fieldAnatomy dd {
+  margin: var(--space-4) 0 0;
+  color: var(--text-primary);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: var(--type-caption-size);
+  overflow-wrap: anywhere;
+}
+
+.compositionToolbar {
+  min-width: 0;
+  padding-block: var(--space-12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+  border-block: 1px solid var(--border-subtle);
+}
+
+.segmentedControl {
+  min-width: 0;
+  padding: var(--space-4);
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(5rem, 1fr);
+  gap: var(--space-4);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-control);
+}
+
+.segmentedControl button {
+  padding-inline: var(--space-10);
+}
+
+.compositionToolbar output {
+  color: var(--text-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: var(--type-caption-size);
+  font-variant-numeric: tabular-nums;
+}
+
+.compositionSurface,
+.journeySurface {
+  min-width: 0;
+  padding: clamp(var(--space-16), 4vw, var(--space-40));
+  display: grid;
+  gap: var(--space-composition);
+  border-radius: var(--radius-control);
+}
+
+.compositionSection {
+  min-width: 0;
+  display: grid;
+  gap: var(--space-component);
+}
+
+.actionRow,
+.inlineRow,
+.formActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-10);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: var(--space-component);
+}
+
+.formSpecimen {
+  inline-size: min(100%, 48rem);
+  min-width: 0;
+  display: grid;
+  gap: var(--space-component);
+}
+
+.formSpecimen > button[type="submit"] {
+  justify-self: start;
+}
+
+.journeyRail {
+  margin: 0;
+  padding: 0 0 var(--space-16);
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--space-8);
+  list-style: none;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.journeyRail li {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-8);
+  color: var(--text-muted);
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+}
+
+.journeyRail li > span {
+  inline-size: 10px;
+  block-size: 10px;
+  background: var(--selection-bg);
+  border: 1px solid var(--selection-border);
+  border-radius: var(--radius-circle);
+}
+
+.journeyRail li[data-active] {
+  color: var(--text-primary);
+  font-weight: var(--type-label-weight);
+}
+
+.journeyRail li[data-active] > span {
+  background: var(--selection-selected-bg);
+  border-color: var(--selection-selected-border);
+}
+
+.journeyTools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+}
+
+.journeySurface {
+  justify-items: start;
+}
+
+@media (max-width: 1180px) {
+  .toneMatrix {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 820px) {
+  .contractLayout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contractIndex {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-inline-end: 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .contractIndex > div {
+    padding: 0 0 var(--space-16);
+  }
+
+  .contentGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .journeyRail {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .layerTabs {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contractIndex {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .compositionToolbar,
+  .journeyTools {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .segmentedControl {
+    inline-size: 100%;
+  }
+
+  .actionRow > :not([data-component="icon-button"]),
+  .formActions > *,
+  .formSpecimen > button[type="submit"] {
+    inline-size: 100%;
+  }
+
+  .journeyRail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (forced-colors: active) {
+  .layerTabs button[data-active],
+  .segmentedControl button[data-active],
+  .contractIndex button[data-active],
+  .journeyRail li[data-active] > span {
+    color: HighlightText;
+    background: Highlight;
+    border-color: Highlight;
+  }
+
+  .stateCell[data-demo-state="invalid-focus"] :is(
+    [data-component="text-input"],
+    [data-component="textarea"],
+    [data-component="select"]
+  ) {
+    border-color: Mark;
+    outline-color: Highlight;
+  }
+}

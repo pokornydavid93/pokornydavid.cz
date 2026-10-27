@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "privateRepository": "git@github.com:Perfekt235/axiom.git",
+  "commit": "a8655da30fa9f3b7ff9a5a4931d4e1f25346581a",
+  "packages": [
+    {
+      "path": "packages/article-editorial",
+      "name": "@axiom-dp/article-editorial",
+      "files": 6,
+      "sha256": "4e4fd41438ead5328ec57fc456e39685fea1d04b7c5cd3a5396f9ea0ae006883"
+    },
+    {
+      "path": "packages/axiom-substrate",
+      "name": "@axiom-dp/axiom-substrate",
+      "files": 46,
+      "sha256": "e64ae4380bbdd7df05e8eee4a2c7a1c04879956ba4cb74bae3a4c8c9cc4d4c3f"
+    },
+    {
+      "path": "packages/contracts",
+      "name": "@axiom-dp/contracts",
+      "files": 132,
+      "sha256": "86f381bc05d7d259da6657fccf93c21471801ffedec1d565055d7f77e13b2b8e"
+    },
+    {
+      "path": "packages/next",
+      "name": "@axiom/next",
+      "files": 13,
+      "sha256": "2f104831ea90191f5a97b317510ded7ce5f7a6a6205beb0b70e64a5255ea0973"
+    },
+    {
+      "path": "packages/publication-runtime",
+      "name": "@axiom-dp/publication-runtime",
+      "files": 9,
+      "sha256": "e2fab5b828bbb66cbc7f861fb82290acaae5dfe34d16c5d0ae98cac59de7d8a0"
+    },
+    {
+      "path": "packages/surface-engine",
+      "name": "@axiom-dp/surface-engine",
+      "files": 575,
+      "sha256": "07c59c4eec6dcbc3fd8dd44d125ebcc096107a4f75d6bab109b7583c16ad31aa"
+    },
+    {
+      "path": "packages/web-core",
+      "name": "@axiom/web-core",
+      "files": 14,
+      "sha256": "46e5e89bd858909ce7436ddf2ec5e26663e6d5cb4b726b607c7f1cdab67ecc7b"
+    },
+    {
+      "path": "packages/tsconfig",
+      "name": "@axiom-dp/tsconfig",
+      "files": 2,
+      "sha256": "983055c9b93272150c6ccffe45f4cc9015a16a687b1cf5da6b6cd9abdbd91632"
+    }
+  ],
+  "integrityFormat": "For each package: sort tracked Git blob rows by relative path; rows contain path, mode (100644/100755/120000), bytes, sha256(content; symlink target bytes). SHA256 of UTF-8 JSON rows with sorted keys, ensure_ascii=false and separators comma/colon. No shared source is committed to this public archive."
+}

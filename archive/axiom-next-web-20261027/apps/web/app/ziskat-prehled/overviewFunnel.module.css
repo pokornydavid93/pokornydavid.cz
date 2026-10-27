@@ -1,0 +1,396 @@
+/* The authored palette, material and motion of the Surface income funnel. */
+:global(html):has(.page), :global(body):has(.page) { background: #04130c; color-scheme: dark; }
+
+.page {
+  --overview-stage: #04130c;
+  --overview-ink: #f6f4e8;
+  --overview-display: #f0f3ca;
+  --overview-display-accent: #d0ed2a;
+  --overview-muted: #b0bead;
+  --overview-line: #344b3e;
+  --overview-control-border: #718774;
+  --overview-lime: #cbec10;
+  --overview-calm-lime: #aad512;
+  --overview-error: #ffb4a5;
+  --overview-ease: cubic-bezier(.22, .61, .36, 1);
+  --input-autofill-text: var(--overview-ink);
+  --input-autofill-surface: var(--overview-stage);
+  --input-placeholder: #91a18e;
+  --focus-ring: var(--overview-lime);
+  position: relative;
+  isolation: isolate;
+  min-block-size: 100svh;
+  padding-inline: clamp(20px, 5.5vw, 88px);
+  color: var(--overview-ink);
+  background: var(--overview-stage);
+  color-scheme: dark;
+  font-family: var(--font-base), "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.page ::selection {
+  color: var(--overview-stage);
+  background: var(--overview-lime);
+}
+
+.page :is(button, a, input, textarea):focus-visible {
+  outline: 2px solid var(--overview-lime);
+  outline-offset: 4px;
+}
+
+.page :is(button, input, textarea) { font-family: inherit; }
+.page :is(button, a) { touch-action: manipulation; }
+
+.sceneBackdrop {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 0;
+  block-size: min(1000px, 100%);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.sceneMaterial {
+  position: relative;
+  inline-size: 100%;
+  block-size: 100%;
+  background: url("/hero-silk-home-frame-zero.avif") center top / cover no-repeat;
+  opacity: .46;
+}
+
+.silk.silk { background: #224f10; }
+.silk [data-silk-static] { background: #224f10 url("/hero-silk-home-frame-zero.avif") center top / cover no-repeat; }
+.silk canvas { transition: opacity 600ms ease; }
+
+.sceneShade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, #04130c26 0%, #04130c00 42%, #04130c 100%),
+    linear-gradient(90deg, #04130c66 0%, #04130c0d 62%, #04130c33 100%);
+}
+
+.pageContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-block-size: 100svh;
+  max-inline-size: 1160px;
+  margin-inline: auto;
+  padding-block: clamp(40px, 5.5vh, 64px);
+}
+
+.overviewExperience {
+  inline-size: 100%;
+  max-inline-size: 920px;
+  min-inline-size: 0;
+  margin-inline: auto;
+}
+
+.formColumn, .overviewForm { min-inline-size: 0; }
+
+.conversationHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-block-end: 38px;
+  animation: soften 1100ms ease both;
+}
+
+.progressBlock { flex: 0 1 420px; }
+.progressSteps { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; }
+.progressSteps li {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 9px;
+  padding-block-start: 12px;
+  border-block-start: 2px solid var(--overview-line);
+  color: var(--overview-muted);
+  font-size: 12px;
+  line-height: 1.4;
+  transition: border-color 700ms ease, color 480ms ease;
+}
+.progressSteps li:is([data-active], [data-complete]) { border-color: var(--overview-calm-lime); }
+.progressSteps li[data-active] { color: var(--overview-ink); font-weight: 650; }
+.progressNumber { display: grid; flex: 0 0 18px; place-items: center; block-size: 18px; font-size: 11px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.progressNumber svg { inline-size: 15px; block-size: 15px; }
+.progressSteps li:is([data-active], [data-complete]) .progressNumber { color: var(--overview-lime); }
+
+.stepPanel { min-inline-size: 0; }
+.situationGroup { min-inline-size: 0; margin: 0; padding: 0; border: 0; }
+.question {
+  max-inline-size: 27ch;
+  margin: 0;
+  color: var(--overview-display);
+  font-size: clamp(38px, 4.3vw, 64px);
+  font-weight: 560;
+  line-height: 1.08;
+  letter-spacing: -.038em;
+  white-space: pre-line;
+  text-wrap: pretty;
+  animation: arrive 1200ms var(--overview-ease) both;
+}
+.questionLead { color: var(--overview-display-accent); }
+.intro { max-inline-size: 62ch; margin: 18px 0 0; color: var(--overview-muted); font-size: 15px; line-height: 1.65; animation: soften 1100ms 100ms ease both; }
+
+.situationOptions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 24px;
+  margin-block-start: 28px;
+}
+.situationOptionCluster { --field-delay: 140ms; position: relative; min-inline-size: 0; animation: soften 1100ms var(--field-delay) ease both; }
+.situationOptionCluster:nth-child(2n) { --field-delay: 240ms; }
+.situationOptionCluster:nth-child(n+3) { --field-delay: 300ms; }
+.situationOptionCluster:nth-child(n+5) { --field-delay: 400ms; }
+.situationOptionCluster::after {
+  position: absolute;
+  inset: auto 0 0;
+  block-size: 1px;
+  background: var(--overview-line);
+  content: "";
+  pointer-events: none;
+  transform-origin: left center;
+  animation: rule 1400ms var(--field-delay) var(--overview-ease) both;
+}
+.situationOption {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-block-size: 92px;
+  padding: 20px 16px;
+  color: var(--overview-ink);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: color 220ms ease;
+}
+.situationOption::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(90deg, #cbec1014, #cbec1004 80%, transparent);
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease;
+}
+.situationOption::after {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  block-size: 2px;
+  background: var(--overview-lime);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 700ms var(--overview-ease);
+}
+.situationOption[data-selected] { color: var(--overview-display-accent); }
+.situationOption[data-selected]::before { opacity: 1; }
+.situationOption[data-selected]::after { transform: scaleX(1); }
+.situationOptionCopy { display: grid; gap: 3px; min-inline-size: 0; }
+.situationOptionCopy strong { font-size: inherit; font-weight: 500; }
+.situationOptionCopy > span { color: var(--overview-muted); font-size: 13px; font-weight: 400; line-height: 1.5; }
+.situationOption input { position: absolute; inline-size: 1px; block-size: 1px; opacity: 0; }
+.page .situationOption input:focus-visible { outline: none; }
+.situationOption:has(input:focus-visible) { outline: 2px solid var(--overview-lime); outline-offset: 4px; }
+.radioMark { display: grid; flex: 0 0 20px; place-items: center; inline-size: 20px; block-size: 20px; border: 1px solid var(--overview-control-border); border-radius: 50%; transition: border-color 480ms ease; }
+.radioMark::after { inline-size: 8px; block-size: 8px; border-radius: 50%; background: var(--overview-lime); content: ""; transform: scale(0); transition: transform 480ms var(--overview-ease); }
+.situationOption[data-selected] .radioMark { border-color: var(--overview-lime); }
+.situationOption[data-selected] .radioMark::after { transform: scale(1); }
+
+.situationNoteDisclosure { margin-block-start: 8px; }
+.situationNoteToggle, .situationSummary button { min-block-size: 44px; padding: 10px 0; border: 0; color: var(--overview-muted); background: transparent; font-size: 13px; line-height: 1.6; text-align: start; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; transition: color 480ms ease; }
+.situationNoteToggle { display: inline-flex; align-items: center; gap: 8px; color: var(--overview-ink); text-decoration: none; }
+.noteToggleIcon { inline-size: 16px; block-size: 16px; color: var(--overview-muted); transition: transform 220ms var(--overview-ease); }
+.situationNoteDisclosure[data-expanded="true"] .noteToggleIcon { transform: rotate(45deg); }
+.situationNoteReveal { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 480ms var(--overview-ease), opacity 480ms ease; }
+.situationNoteReveal > div { min-block-size: 0; overflow: hidden; }
+.situationNoteDisclosure[data-expanded="true"] .situationNoteReveal { grid-template-rows: 1fr; opacity: 1; }
+.situationNotePanel { display: grid; gap: 8px; max-inline-size: 660px; padding-block: 8px 18px; }
+.situationNoteLabel { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; font-size: 14px; font-weight: 550; }
+.situationNoteLabel small { color: var(--overview-muted); font-size: 12px; font-weight: 400; }
+.situationNotePanel textarea { inline-size: 100%; min-block-size: 94px; padding: 8px 0; border: 0; border-block-end: 1px solid var(--overview-control-border); border-radius: 0; color: var(--overview-ink); background: transparent; caret-color: var(--overview-lime); font-size: 18px; line-height: 1.5; resize: vertical; }
+.situationNotePanel textarea::placeholder { color: var(--input-placeholder); }
+.situationNoteMeta { display: flex; justify-content: space-between; align-items: start; gap: 16px; color: var(--overview-muted); font-size: 12px; line-height: 1.6; }
+.situationNoteMeta span:last-child:not(:first-child) { flex-shrink: 0; font-variant-numeric: tabular-nums; }
+
+.stepOneActions { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-block-start: 20px; animation: arrive 1200ms 280ms var(--overview-ease) both; }
+.reassurance { margin: 0; color: var(--overview-muted); font-size: 12px; line-height: 1.65; }
+
+/* Same docked pill and travelling arrow as the native funnel CTA. */
+.primaryAction.primaryAction {
+  --action-lime: color-mix(in srgb, #cbec10 82%, #116e1c);
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  gap: 10px;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  min-block-size: 52px;
+  padding: 4px 4px 4px 18px;
+  border: 1px solid var(--action-lime);
+  border-radius: 999px;
+  color: #022c12;
+  background: var(--action-lime);
+  box-shadow: 0 12px 34px -24px #cbec10b3;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: normal;
+  cursor: pointer;
+  transition: background-color 700ms ease, border-color 700ms ease, color 480ms ease, box-shadow 700ms ease, transform 700ms var(--overview-ease);
+}
+.primaryAction > span:first-child { min-inline-size: 0; transition: transform 950ms var(--overview-ease); }
+.primaryAction > span:last-child:not(:first-child) { display: inline-grid; flex: 0 0 42px; place-items: center; inline-size: 42px; block-size: 42px; border: 1px solid var(--overview-stage); border-radius: 50%; color: var(--action-lime); background: var(--overview-stage); transition: transform 950ms var(--overview-ease); }
+.actionIconMotion { display: inline-grid; place-items: center; inline-size: 26px; block-size: 26px; overflow: hidden; }
+.actionIconMotion > svg { display: block; grid-area: 1 / 1; inline-size: 18px; block-size: 18px; transition: transform 1000ms var(--overview-ease), opacity 600ms ease; }
+.actionIconMotion > svg:last-child { opacity: 0; transform: translateX(-145%); }
+.primaryAction:is(:hover, :focus-visible):not(:disabled) > span:last-child:not(:first-child) { transform: scale(1.045); }
+.primaryAction:is(:hover, :focus-visible):not(:disabled) .actionIconMotion > svg:first-child { opacity: 0; transform: translateX(145%); }
+.primaryAction:is(:hover, :focus-visible):not(:disabled) .actionIconMotion > svg:last-child { opacity: 1; transform: translateX(0); }
+.primaryAction.primaryAction:active:not(:disabled) { background: color-mix(in srgb, var(--action-lime) 90%, #116e1c); border-color: color-mix(in srgb, var(--action-lime) 90%, #116e1c); color: #022c12; transform: scale(.985); transition-duration: 140ms; }
+.primaryAction.primaryAction:disabled { color: #f6f4e85c; background: #f6f4e80e; border-color: #f6f4e814; box-shadow: none; cursor: not-allowed; }
+.submittingIndicator { inline-size: 18px; block-size: 18px; border: 1px solid currentColor; border-inline-start-color: transparent; border-radius: 50%; animation: submit 900ms linear infinite; }
+
+.contactIntro { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); align-items: end; gap: 64px; }
+.contactIntro > div { min-inline-size: 0; }
+.contactIntro + :is(.serverError, .validationMessage) { margin-block: 32px 0; }
+:is(.serverError, .validationMessage):not([hidden]) + .contactFields { margin-block-start: 28px; }
+.contactQuestion { max-inline-size: none; font-size: clamp(34px, 3.4vw, 48px); line-height: 1.12; }
+.contactQuestion + .intro { max-inline-size: 58ch; margin-block-start: 20px; }
+.situationSummary { display: grid; justify-items: start; align-content: start; gap: 10px; padding-inline-start: 24px; border-inline-start: 1px solid var(--overview-control-border); animation: recap 900ms var(--overview-ease) both; }
+.situationSummaryContext { display: grid; gap: 16px; min-inline-size: 0; }
+.situationSummaryContext > span { display: grid; gap: 6px; }
+.situationSummary small { color: var(--overview-muted); font-size: 12px; }
+.situationSummary strong { color: var(--overview-ink); font-size: 16px; font-weight: 500; line-height: 1.5; }
+.contactFields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; margin-block-start: 56px; }
+.contactField.contactField { display: grid; align-content: start; gap: 12px; min-inline-size: 0; animation: soften 1100ms 140ms ease both; }
+.contactField:nth-child(2) { animation-delay: 240ms; }
+.contactField:nth-child(3) { animation-delay: 340ms; }
+.contactField > label { order: 0; display: flex; flex-wrap: wrap; gap: 8px; color: var(--overview-ink); font-size: 14px; font-weight: 550; line-height: 1.5; }
+.contactField > label small { color: var(--overview-muted); font-size: 11px; font-weight: 400; }
+.contactField > p { order: 2; color: var(--overview-muted); font-size: 12px; line-height: 1.6; }
+.contactField > input { order: 1; min-block-size: 62px; padding: 8px 0 12px; border: 0; border-block-end: 1px solid var(--overview-control-border); border-radius: 0; color: var(--overview-ink); background: transparent; caret-color: var(--overview-lime); font-size: 24px; font-weight: 400; line-height: 1.5; box-shadow: none; transition: border-color 160ms; }
+.contactField > input::placeholder { color: var(--input-placeholder); opacity: 1; }
+.page .contactField > input:focus-visible { padding-block-end: 11px; border-block-end: 2px solid var(--overview-lime); outline: none; box-shadow: none; }
+.contactField[data-field-invalid="true"] > input { border-block-end-color: var(--overview-error); }
+.contactField[data-field-invalid="true"] > p:last-child { color: var(--overview-error); }
+.contactField > input:autofill { -webkit-text-fill-color: var(--overview-ink); box-shadow: 0 0 0 100px var(--overview-stage) inset; }
+.finalActionBlock { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 36px; margin-block-start: 52px; animation: arrive 1200ms 280ms var(--overview-ease) both; }
+.submitActions { display: grid; justify-items: start; align-content: start; gap: 16px; min-inline-size: 0; }
+.finalActionBlock .primaryAction { min-inline-size: 235px; }
+.collectionNotice { grid-column: 2 / -1; min-inline-size: 0; max-inline-size: 58ch; color: var(--overview-muted); font-size: 12px; line-height: 1.75; }
+.collectionNotice p { margin: 0; }
+.collectionNotice a { display: inline-flex; align-items: center; min-block-size: 44px; margin-block-start: 4px; color: var(--overview-muted); font-size: 12px; text-underline-offset: 4px; }
+.backToWebsite svg { flex-shrink: 0; inline-size: 14px; block-size: 14px; }
+.serverError { display: grid; gap: 6px; margin-block-end: 24px; padding: 16px; border: 1px solid var(--overview-error); color: var(--overview-error); font-size: 14px; line-height: 1.6; }
+.serverError p { margin: 0; }
+.directContactError { inline-size: fit-content; min-block-size: 44px; display: inline-flex; align-items: center; color: inherit; text-decoration: underline; text-underline-offset: 4px; }
+.validationMessage, .fieldError { margin-block: 0 16px; color: var(--overview-error); font-size: 13px; line-height: 1.5; }
+
+.footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 24px; margin-block-start: 32px; padding-block-start: 12px; border-block-start: 1px solid var(--overview-line); animation: soften 1100ms 360ms ease both; }
+.overviewExperience[data-overview-step="2"] .footer { margin-block-start: 48px; }
+.legalLinks { display: flex; flex-wrap: wrap; gap: 0 24px; }
+.footer :is(a, button) { position: relative; display: inline-flex; align-items: center; gap: 6px; min-block-size: 44px; padding: 0; border: 0; color: var(--overview-muted); background: transparent; font-size: 12px; font-weight: 400; line-height: 1.6; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.honeypot, .visuallyHidden { position: absolute; inline-size: 1px; block-size: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+
+/* This route supplies its own footer trigger; retain the shared settings panel. */
+:global(body):has(.page) :global([data-cookie-settings][data-overview-route="true"]) {
+  position: fixed;
+  inset: auto 20px 20px auto;
+  inline-size: 0;
+  padding: 0;
+  background: transparent;
+}
+:global(body):has(.page) :global([data-cookie-settings][data-overview-route="true"]) > button { display: none; }
+:global(body):has(.page) :global([data-cookie-settings][data-overview-route="true"]) > :global([role="region"]) {
+  position: fixed;
+  inset: auto max(20px, env(safe-area-inset-right)) max(20px, env(safe-area-inset-bottom)) auto;
+  max-block-size: calc(100dvh - 40px);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .situationOption:hover:not([data-selected]) { color: var(--overview-display); }
+  .situationOption:hover:not([data-selected])::before { opacity: .35; }
+  .situationOption:hover:not([data-selected]) .radioMark { border-color: var(--overview-ink); }
+  .page :is(.situationNoteToggle, .situationSummary button, .footer a, .footer button, .collectionNotice a):hover { color: var(--overview-lime); }
+  .primaryAction.primaryAction:hover:not(:disabled) { color: #022c12; background: color-mix(in srgb, var(--action-lime) 88%, white); border-color: color-mix(in srgb, var(--action-lime) 88%, white); transform: translateY(-1px); }
+  .primaryAction:hover:not(:disabled) > span:first-child { transform: translateX(1px); }
+  .contactField > input:hover:not(:focus-visible) { border-color: var(--overview-control-border); }
+}
+
+@keyframes arrive { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes soften { from { opacity: 0; } to { opacity: 1; } }
+@keyframes rule { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes recap { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes submit { to { transform: rotate(360deg); } }
+
+@media (min-width: 721px) and (max-height: 720px) {
+  .pageContent { padding-block: 32px; }
+}
+
+@media (min-width: 721px) and (max-width: 960px) {
+  .contactIntro { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 32px; }
+  .contactFields { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-block-start: 44px; }
+  .finalActionBlock { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-block-start: 44px; }
+  .collectionNotice { grid-column: auto; }
+}
+
+@media (max-width: 720px) {
+  .page { padding-inline: 20px; }
+  .pageContent { min-block-size: 100svh; justify-content: flex-start; padding-block: max(28px, env(safe-area-inset-top)) max(28px, env(safe-area-inset-bottom)); }
+  .conversationHeader { flex-direction: column; align-items: stretch; margin-block-end: 28px; }
+  .progressBlock { flex-basis: auto; inline-size: 100%; max-inline-size: 420px; }
+  .question { font-size: clamp(32px, 8.8vw, 40px); line-height: 1.12; }
+  .intro { margin-block-start: 12px; }
+  .sceneMaterial { background-position: 62% top; opacity: .38; }
+  .silk [data-silk-static] { background-position: 62% top; }
+  .situationOptions { grid-template-columns: minmax(0, 1fr); margin-block-start: 24px; }
+  .situationOption { min-block-size: 78px; padding: 16px 10px; font-size: 15px; }
+  .situationOptionCluster:nth-child(n) { --field-delay: 140ms; }
+  .situationOptionCluster:nth-child(2n) { --field-delay: 240ms; }
+  .stepOneActions { align-items: stretch; gap: 12px; }
+  .primaryAction.primaryAction { justify-self: stretch; gap: 8px; font-size: 13px; }
+  .primaryAction > span:last-child:not(:first-child) { flex-basis: 38px; inline-size: 38px; block-size: 38px; }
+  .contactIntro { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .contactQuestion { font-size: clamp(32px, 8.5vw, 38px); }
+  .contactQuestion + .intro { margin-block-start: 16px; }
+  .situationSummary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-inline-start: 16px; }
+  .situationSummary strong { font-size: 14px; }
+  .situationSummary button { flex-shrink: 0; }
+  .contactFields { grid-template-columns: minmax(0, 1fr); gap: 28px; margin-block-start: 36px; }
+  .contactField.contactField { gap: 8px; }
+  .contactField > input { min-block-size: 56px; font-size: 22px; }
+  .finalActionBlock { grid-template-columns: minmax(0, 1fr); gap: 28px; margin-block-start: 40px; }
+  .collectionNotice { grid-column: auto; }
+  .submitActions { justify-items: stretch; }
+  .footer { margin-block-start: 28px; padding-block-start: 10px; }
+  .legalLinks { gap: 0 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page *, .page *::before, .page *::after { animation: none !important; transition: none !important; }
+  .primaryAction:is(:hover, :active, :focus-visible), .primaryAction span, .primaryAction svg { transform: none !important; }
+  .actionIconMotion > svg:first-child { opacity: 1 !important; }
+  .actionIconMotion > svg:last-child { opacity: 0 !important; }
+}
+
+@media (forced-colors: active) {
+  .sceneBackdrop { display: none; }
+  .situationOptionCluster::after { background: CanvasText; }
+  .situationOption[data-selected] .radioMark { border-color: Highlight; }
+  .situationOption[data-selected] .radioMark::after { background: Highlight; }
+  .contactField[data-field-invalid="true"] > input, .serverError { border-color: Mark; }
+  .contactField[data-field-invalid="true"] > p:last-child, .serverError, .fieldError { color: Mark; }
+  .page :is(button, a, input, textarea):focus-visible { outline-color: Highlight; }
+}

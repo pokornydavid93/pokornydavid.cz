@@ -1,0 +1,180 @@
+.banner {
+  --cookie-surface: rgba(var(--brand-jet-rgb), 0.86);
+  --cookie-border: rgba(var(--brand-ivory-rgb), 0.16);
+  --cookie-text: var(--text-on-dark-secondary);
+  --cookie-link: var(--text-on-dark-primary);
+  --cookie-focus-ring: var(--focus-ring-on-dark);
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: var(--layer-overlay);
+  padding: 0
+    calc(clamp(var(--space-12), 3vw, var(--space-24)) + env(safe-area-inset-right))
+    calc(var(--space-12) + env(safe-area-inset-bottom))
+    calc(clamp(var(--space-12), 3vw, var(--space-24)) + env(safe-area-inset-left));
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 280ms ease;
+}
+
+/* Keep the first homepage scene clear until its navigation has appeared. */
+:global(html:has([data-cinematic-home-hero][data-hero-intro-motion="prepared"])) .banner,
+:global(html:has([data-cinematic-home-hero][data-hero-intro-motion="enhanced"])) .banner {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner {
+    transition: none;
+  }
+}
+
+.panel {
+  pointer-events: auto;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) auto;
+  grid-template-areas:
+    "icon title actions"
+    "icon copy actions";
+  align-items: start;
+  gap: var(--space-6) var(--space-16);
+  width: min(100%, 1040px);
+  margin: 0 auto;
+  border: var(--border-width-structural) solid var(--cookie-border);
+  border-radius: var(--radius-card);
+  background: var(--cookie-surface);
+  padding: var(--space-16) var(--space-20);
+  max-height: calc(100svh - var(--space-24) - env(safe-area-inset-bottom));
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  box-shadow: var(--elevation-raised-shadow);
+  backdrop-filter: blur(var(--backdrop-medium));
+}
+
+.illustration {
+  grid-area: icon;
+  display: grid;
+  place-items: center;
+  align-self: center;
+  width: 32px;
+  height: 32px;
+  color: var(--brand-lime);
+}
+
+.cookieIcon {
+  width: 28px;
+  height: 28px;
+  stroke-width: 1.65;
+  transform: rotate(-12deg);
+}
+
+.title {
+  grid-area: title;
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: var(--type-label-weight);
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.copy {
+  grid-area: copy;
+  margin: 0;
+  max-width: 690px;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--cookie-text);
+  font-weight: var(--type-metadata-weight);
+}
+
+.reassurance {
+  color: var(--brand-lime);
+  font-weight: var(--type-label-weight);
+}
+
+.link {
+  white-space: nowrap;
+  color: var(--cookie-link);
+  font-weight: var(--type-label-weight);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.link:focus-visible {
+  outline: var(--focus-width-standard) solid var(--cookie-focus-ring);
+  outline-offset: var(--focus-offset-standard);
+  border-radius: var(--radius-control);
+}
+
+.actions {
+  grid-area: actions;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+}
+
+.choiceButton {
+  --cta-secondary-bg: rgba(var(--brand-ivory-rgb), 0.04);
+  --cta-secondary-bg-hover: rgba(var(--brand-ivory-rgb), 0.1);
+  --cta-secondary-bg-active: rgba(var(--brand-ivory-rgb), 0.06);
+  --cta-secondary-text: var(--brand-ivory);
+  --cta-secondary-text-hover: var(--brand-ivory);
+  --cta-secondary-text-active: var(--brand-ivory);
+  --cta-secondary-border: rgba(var(--brand-ivory-rgb), 0.24);
+  --cta-secondary-border-hover: var(--brand-lime);
+  --cta-secondary-border-active: var(--brand-lime);
+  --button-primary-height: 44px;
+  --button-primary-padding-inline: var(--space-16);
+  min-width: 132px;
+  font-size: 0.875rem;
+}
+
+@media (width <= 900px) {
+  .panel {
+    grid-template-columns: 32px minmax(0, 1fr);
+    grid-template-areas:
+      "icon title"
+      "icon copy"
+      ". actions";
+    gap: var(--space-8) var(--space-12);
+  }
+
+  .actions {
+    justify-self: end;
+    margin-top: var(--space-4);
+  }
+}
+
+@media (width <= 640px) {
+  .panel {
+    grid-template-areas:
+      "icon title"
+      "copy copy"
+      "actions actions";
+    gap: var(--space-12);
+    padding: var(--space-16);
+  }
+
+  .copy {
+    font-size: 1rem;
+  }
+
+  .title {
+    align-self: start;
+  }
+
+  .actions {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .choiceButton {
+    min-width: 0;
+    padding-inline: var(--space-10);
+    padding-block: var(--space-10);
+  }
+}

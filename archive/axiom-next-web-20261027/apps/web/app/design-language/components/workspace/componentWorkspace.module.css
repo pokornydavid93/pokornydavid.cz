@@ -1,0 +1,546 @@
+.workspace {
+  display: grid;
+  gap: var(--space-composition);
+}
+
+.workspaceNavigation {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: var(--layer-sticky);
+  display: grid;
+  gap: var(--space-8);
+  padding-block: var(--space-12);
+  background: var(--surface-page);
+  border-block: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.workspaceNavigation > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+.workspaceNavigation > div > span {
+  margin-inline-end: var(--space-6);
+  color: var(--text-muted);
+  font-size: var(--type-metadata-size);
+  font-weight: var(--type-metadata-weight);
+  text-transform: uppercase;
+}
+
+.workspaceNavigation a {
+  min-block-size: var(--control-touch-target-min);
+  display: inline-flex;
+  align-items: center;
+  padding-inline: var(--space-14);
+  color: var(--text-secondary);
+  text-decoration: none;
+  border: var(--border-width-structural) solid transparent;
+  border-radius: var(--radius-control);
+}
+
+.workspaceNavigation a:hover,
+.workspaceNavigation a[aria-current="page"] {
+  color: var(--text-primary);
+  background: var(--selection-bg);
+  border-color: var(--border-control);
+}
+
+.workspaceNavigation a:focus-visible {
+  outline: var(--focus-width-standard) solid var(--focus-ring);
+  outline-offset: var(--focus-offset-standard);
+}
+
+.viewStack,
+.registryGroups,
+.registryGroup,
+.registryRows,
+.contractDetail,
+.routeCoverageRows {
+  display: grid;
+}
+
+.viewStack,
+.contractDetail {
+  gap: var(--space-section-compact);
+}
+
+.workspaceSection,
+.labView {
+  display: grid;
+  gap: var(--space-composition);
+  padding-block: var(--space-section-compact);
+  border-block-start: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.viewStack > .workspaceSection:first-child {
+  border-block-start: 0;
+}
+
+.sectionIntro,
+.labHeader {
+  display: grid;
+  gap: var(--space-stack);
+  max-inline-size: var(--measure-content);
+}
+
+.sectionIntro > span,
+.labHeader > span,
+.registryGroup > header span,
+.layerList article > div > span,
+.routeCoverageRows article > div > span {
+  color: var(--text-emphasis);
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-weight);
+  letter-spacing: var(--type-eyebrow-letter-spacing);
+  text-transform: var(--type-eyebrow-transform);
+}
+
+.sectionIntro h2,
+.sectionIntro p,
+.labHeader h2,
+.labHeader p,
+.layerList h3,
+.layerList p,
+.labList p,
+.registryIdentity h3,
+.registryIdentity p,
+.routeCoverageRows h3,
+.contractDetail h2,
+.contractDetail h3,
+.contractDetail p {
+  margin: 0;
+}
+
+.sectionIntro h2,
+.labHeader h2,
+.contractDetail h2 {
+  color: var(--text-primary);
+  font-size: var(--type-heading-size);
+  line-height: var(--type-heading-line-height);
+}
+
+.sectionIntro p,
+.labHeader p,
+.layerList p,
+.labList p,
+.registryIdentity p,
+.detailHeader > p {
+  color: var(--text-secondary);
+  line-height: var(--type-body-line-height);
+}
+
+.summaryStrip,
+.coverageHealth {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-component);
+}
+
+.summaryStrip article,
+.coverageHealth article {
+  min-inline-size: 0;
+  display: grid;
+  gap: var(--space-8);
+  padding-block: var(--space-component);
+  border-block: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.summaryStrip span,
+.coverageHealth span,
+.healthRows span {
+  color: var(--text-muted);
+  font-size: var(--type-metadata-size);
+  font-weight: var(--type-metadata-weight);
+  text-transform: uppercase;
+}
+
+.summaryStrip strong,
+.coverageHealth strong,
+.healthRows strong {
+  color: var(--text-primary);
+  font-size: var(--type-heading-size);
+  line-height: 1;
+}
+
+.summaryStrip small,
+.coverageHealth small,
+.healthRows small {
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+
+.maturityStrip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-block: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.maturityStrip > div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-8);
+  padding: var(--space-12);
+  border-inline-start: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.maturityStrip > div:first-child {
+  border-inline-start: 0;
+}
+
+.maturityStrip span,
+.maturityStrip strong {
+  color: var(--text-secondary);
+}
+
+.layerList,
+.labList,
+.healthRows,
+.uncoveredList {
+  display: grid;
+}
+
+.layerList article,
+.labList article,
+.uncoveredList article {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.65fr) minmax(0, 1fr) auto;
+  gap: var(--space-component);
+  align-items: center;
+  padding-block: var(--space-component);
+  border-block-start: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.layerList article > div,
+.labList article > div,
+.uncoveredList article > div {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.layerList h3,
+.labList strong,
+.uncoveredList strong {
+  color: var(--text-primary);
+  font-size: var(--type-subheading-size);
+}
+
+.healthRows > div {
+  display: grid;
+  grid-template-columns: minmax(14rem, 0.5fr) auto minmax(0, 1fr);
+  gap: var(--space-component);
+  align-items: baseline;
+  padding-block: var(--space-component);
+  border-block-start: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.registryFilters {
+  display: grid;
+  grid-template-columns: minmax(14rem, 1.5fr) repeat(5, minmax(8rem, 1fr));
+  gap: var(--space-12);
+  align-items: end;
+}
+
+.registryFilters label {
+  min-inline-size: 0;
+  display: grid;
+  gap: var(--space-8);
+  color: var(--text-secondary);
+  font-size: var(--type-label-small-size);
+  font-weight: var(--type-label-weight);
+}
+
+.registryFilters input,
+.registryFilters select {
+  inline-size: 100%;
+  min-block-size: var(--input-height);
+  padding-inline: var(--input-padding-inline);
+  color: var(--input-text);
+  background: var(--input-surface);
+  border: var(--input-border-width) solid var(--input-border);
+  border-radius: var(--input-radius);
+  font: inherit;
+}
+
+.registryFilters input:focus-visible,
+.registryFilters select:focus-visible {
+  outline: var(--focus-width-standard) solid var(--focus-ring);
+  outline-offset: var(--focus-offset-standard);
+}
+
+.searchField > span:last-child {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchField svg {
+  position: absolute;
+  inset-inline-start: var(--space-12);
+  inline-size: var(--icon-size-inline);
+  pointer-events: none;
+}
+
+.searchField input {
+  padding-inline-start: var(--space-40);
+}
+
+.resultCount {
+  color: var(--text-muted);
+  font-size: var(--type-metadata-size);
+}
+
+.registryGroups {
+  gap: var(--space-section-compact);
+}
+
+.registryGroup {
+  gap: var(--space-component);
+  scroll-margin-block-start: var(--space-section);
+}
+
+.registryGroup > header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-component);
+  padding-block-end: var(--space-12);
+  border-block-end: var(--border-width-emphasis) solid var(--border-emphasis);
+}
+
+.registryGroup > header > div {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.registryGroup > header h2 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: var(--type-subheading-size);
+}
+
+.registryRows article {
+  display: grid;
+  grid-template-columns: auto minmax(16rem, 1.5fr) minmax(11rem, 0.75fr) minmax(10rem, 0.65fr) auto;
+  gap: var(--space-component);
+  align-items: center;
+  padding-block: var(--space-component);
+  border-block-end: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.registryIdentity,
+.registryEvidence {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.registryIdentity > span,
+.registryEvidence,
+.registryRows code,
+.routeCoverageRows code,
+.uncoveredList code {
+  color: var(--text-muted);
+  font-size: var(--type-metadata-size);
+  overflow-wrap: anywhere;
+}
+
+.emptyState,
+.loadingState {
+  padding: var(--space-composition);
+  color: var(--text-secondary);
+  border: var(--border-width-structural) solid var(--border-default);
+  border-radius: var(--radius-card);
+}
+
+.contractDetail {
+  max-inline-size: var(--container-page-standard-max);
+}
+
+.detailHeader {
+  display: grid;
+  gap: var(--space-stack);
+  padding-block: var(--space-section-compact);
+  border-block-end: var(--border-width-emphasis) solid var(--border-emphasis);
+}
+
+.detailHeader > div {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  color: var(--text-muted);
+}
+
+.detailHeader > code {
+  color: var(--text-emphasis);
+}
+
+.contractDetail > section {
+  display: grid;
+  gap: var(--space-component);
+  padding-block-end: var(--space-section-compact);
+  border-block-end: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.contractDetail > section > h3 {
+  color: var(--text-primary);
+  font-size: var(--type-subheading-size);
+}
+
+.contractDetail ul {
+  margin: 0;
+  padding-inline-start: var(--space-24);
+  color: var(--text-secondary);
+}
+
+.contractRows,
+.compactDefinition,
+.routeCoverageRows dl {
+  display: grid;
+  margin: 0;
+}
+
+.contractRows > div,
+.compactDefinition > div,
+.routeCoverageRows dl > div {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
+  gap: var(--space-component);
+  padding-block: var(--space-12);
+  border-block-start: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.contractRows dt,
+.compactDefinition dt,
+.routeCoverageRows dt {
+  display: grid;
+  gap: var(--space-6);
+  color: var(--text-primary);
+  font-weight: var(--type-label-weight);
+}
+
+.contractRows dt small,
+.compactDefinition dt small,
+.contractRows dd span {
+  display: block;
+  color: var(--text-muted);
+  font-size: var(--type-metadata-size);
+  font-weight: var(--type-body-weight);
+}
+
+.contractRows dd,
+.compactDefinition dd,
+.routeCoverageRows dd {
+  margin: 0;
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.routeCoverageRows {
+  gap: var(--space-component);
+}
+
+.routeCoverageRows article {
+  display: grid;
+  grid-template-columns: minmax(14rem, 0.35fr) minmax(0, 1fr);
+  gap: var(--space-composition);
+  padding-block: var(--space-component);
+  border-block-start: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.routeCoverageRows article > div {
+  display: grid;
+  align-content: start;
+  gap: var(--space-8);
+}
+
+.labView {
+  border-block-start: 0;
+}
+
+@media (max-width: 1100px) {
+  .summaryStrip,
+  .coverageHealth {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .registryFilters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .searchField {
+    grid-column: 1 / -1;
+  }
+
+  .registryRows article {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .registryEvidence {
+    grid-column: 2 / -1;
+  }
+
+  .registryRows article > code {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 720px) {
+  .workspaceNavigation {
+    position: static;
+  }
+
+  .workspaceNavigation > div {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workspaceNavigation > div:first-child {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .workspaceNavigation > div > span {
+    grid-column: 1 / -1;
+  }
+
+  .workspaceNavigation a {
+    justify-content: center;
+    padding-inline: var(--space-8);
+    text-align: center;
+  }
+
+  .summaryStrip,
+  .coverageHealth,
+  .maturityStrip,
+  .registryFilters,
+  .layerList article,
+  .labList article,
+  .healthRows > div,
+  .registryRows article,
+  .routeCoverageRows article,
+  .uncoveredList article,
+  .contractRows > div,
+  .compactDefinition > div,
+  .routeCoverageRows dl > div {
+    grid-template-columns: 1fr;
+  }
+
+  .maturityStrip > div {
+    border-inline-start: 0;
+    border-block-start: var(--border-width-hairline) solid var(--border-subtle);
+  }
+
+  .maturityStrip > div:first-child {
+    border-block-start: 0;
+  }
+
+  .registryRows article > *,
+  .registryEvidence,
+  .registryRows article > code {
+    grid-column: auto;
+  }
+
+  .registryRows article {
+    align-items: start;
+  }
+}

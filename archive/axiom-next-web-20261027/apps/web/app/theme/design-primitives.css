@@ -1,0 +1,455 @@
+:root {
+  /* Responsive profile values. Media query generation should read the TS schema. */
+  --breakpoint-compact-max: 720px;
+  --breakpoint-media-max: 820px;
+  --breakpoint-media-min: 821px;
+  --breakpoint-cinematic-max: 920px;
+  --breakpoint-cinematic-min: 921px;
+  --breakpoint-smooth-scroll-min: 1024px;
+  --breakpoint-page-cinematic-max: 1480px;
+
+  /* Primitive spacing scale. */
+  --space-0: 0;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-14: 14px;
+  --space-16: 16px;
+  --space-18: 18px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-28: 28px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-54: 54px;
+  --space-72: 72px;
+
+  /* Semantic spacing roles. */
+  --space-inline-tight: var(--space-6);
+  --space-inline: var(--space-10);
+  --space-stack-tight: var(--space-8);
+  --space-stack: var(--space-16);
+  --space-control: var(--space-12);
+  --space-component: var(--space-20);
+  --space-composition: var(--space-40);
+  --space-section-compact: clamp(56px, 7vw, 82px);
+  --space-section: clamp(76px, 8vw, 112px);
+  --space-section-spacious: clamp(96px, 10vw, 148px);
+  --space-page: clamp(20px, 4vw, 56px);
+  --page-gutter: var(--space-page);
+  --space-grid: var(--space-component);
+  --layout-gap-tight: var(--space-8);
+  --layout-gap-standard: var(--space-16);
+  --layout-gap-component: var(--space-component);
+  --layout-gap-composition: var(--space-composition);
+  --card-padding: var(--space-24);
+  --control-padding-inline: 26px;
+  --form-field-gap: var(--space-14);
+  --heading-to-body-gap: var(--space-16);
+  --intro-to-content-gap: var(--space-40);
+  --section-padding-block: var(--space-section);
+
+  /* Containers and text measure. Open wide-layout decisions stay in the TS registry. */
+  --container-page-cinematic-max: 1480px;
+  --container-page-wide-max: 1200px;
+  --container-page-standard-max: 1180px;
+  --container-content-wide-max: 860px;
+  --container-content-max: 720px;
+  --container-narrow-max: 520px;
+  --container-rail-max: 380px;
+  --container-measure: var(--measure-body);
+  --container-content: var(--container-page-standard-max);
+  --container-wide: var(--container-page-wide-max);
+  --container-gutter: var(--space-page);
+  --measure-compact: 520px;
+  --measure-body: 66ch;
+  --measure-lead: 42ch;
+  --measure-editorial: 760px;
+  --measure-wide: 860px;
+  --measure-display: 15ch;
+  --measure-heading: 22ch;
+  --measure-content: var(--container-content-max);
+  --size-card-min: 16rem;
+  --layout-grid-item-compact: 10rem;
+  --layout-grid-item-standard: var(--size-card-min);
+  --layout-grid-item-wide: 22rem;
+  --layout-switcher-threshold-compact: 30rem;
+  --layout-switcher-threshold-standard: 44rem;
+  --layout-switcher-threshold-wide: 64rem;
+  --layout-sidebar-size-compact: 11rem;
+  --layout-sidebar-size-default: 14rem;
+  --layout-sidebar-size-wide: 26rem;
+  --layout-content-min-half: 50%;
+  --layout-content-min-two-thirds: 66.666%;
+  --size-cover-compact: 18rem;
+  --size-cover-standard: 30rem;
+  --size-cover-page: 100svb;
+  --cover-padding-compact: var(--space-16);
+  --cover-padding-page: var(--space-page);
+  --cover-padding-section: var(--space-section-compact);
+
+  /* Control dimensions and icon geometry. */
+  --control-touch-target-min: 44px;
+  --control-height-small: 40px;
+  --control-height-medium: 44px;
+  --control-height-large: 52px;
+  --control-height-prominent: 58px;
+  --input-height: var(--control-height-medium);
+  --input-control-size: 20px;
+  --textarea-min-block: 8rem;
+  --booking-panel-min-block: 22rem;
+  --profile-card-portrait-max-block: 28rem;
+  --icon-button-size: 44px;
+  --chip-height: 34px;
+  --badge-height: 28px;
+  --modal-close-control-size: 44px;
+  --icon-size-inline: 14px;
+  --icon-size-control: 18px;
+  --icon-size-card: 22px;
+  --icon-size-navigation: 18px;
+  --icon-size-display: 42px;
+  --icon-size-status: 16px;
+  --focus-cursor-core-size: 26px;
+  --focus-cursor-field-size: 66px;
+  --focus-cursor-field-half-size: 33px;
+  --focus-cursor-core-stroke-width: 2.3px;
+  --focus-cursor-field-stroke-width: 3px;
+  --focus-cursor-morph-duration: 420ms;
+  --focus-cursor-release-duration: 360ms;
+  --focus-cursor-morph-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --focus-cursor-icon-size: 11px;
+  --focus-cursor-editorial-icon-size: 12.5px;
+  --focus-cursor-max-separation: 10px;
+
+  /* Compatibility aliases for cursor consumers outside the focus lens. */
+  --cursor-dot-size: var(--focus-cursor-core-size);
+  --cursor-follower-size: var(--focus-cursor-field-size);
+  --cursor-interactive-size: var(--focus-cursor-field-size);
+  --cursor-badge-size: calc(var(--focus-cursor-field-size) * 1.16);
+  --stroke-hairline: 0.5px;
+  --stroke-standard: 1px;
+  --stroke-emphasis: 2px;
+  --stroke-icon-standard: 1.9;
+  --stroke-icon-strong: 2.1;
+
+  /* Shape roles. */
+  --radius-primary: 16px;
+  --radius-none: 0;
+  --radius-control: var(--radius-primary);
+  --radius-input: var(--radius-primary);
+  --radius-card-compact: var(--radius-primary);
+  --radius-card: var(--radius-primary);
+  --radius-panel: var(--radius-primary);
+  --radius-modal: var(--radius-primary);
+  --radius-sheet: var(--radius-primary) var(--radius-primary) 0 0;
+  --radius-media: var(--radius-primary);
+  --radius-checkbox: 4px;
+  --radius-cinematic-inner: 30px;
+  --radius-cinematic-outer: 39px;
+  --radius-pill: 999px;
+  --radius-cta: var(--radius-pill);
+  --radius-circle: 50%;
+  --border-width-hairline: var(--stroke-hairline);
+  --border-width-structural: var(--stroke-standard);
+  --border-width-emphasis: var(--stroke-emphasis);
+  --border-width-focus: 2px;
+
+  /* Project media ratios. */
+  --ratio-hero-portrait: 0.79;
+  --ratio-cinematic-device: 0.79;
+  --ratio-square: 1 / 1;
+  --ratio-portrait: 4 / 5;
+  --ratio-landscape: 3 / 2;
+  --ratio-wide: 16 / 9;
+  --ratio-video-landscape: 16 / 9;
+  --ratio-video-portrait: 9 / 16;
+  --ratio-editorial-portrait: 4 / 5;
+  --ratio-article-feature: 16 / 8.55;
+
+  /* Depth, effect, and layer roles. */
+  --shadow-none: none;
+  --shadow-raised: 0 18px 48px rgba(var(--brand-jet-rgb), 0.22);
+  --shadow-floating: 0 28px 72px rgba(var(--brand-jet-rgb), 0.3);
+  --shadow-modal: 0 34px 90px rgba(var(--brand-jet-rgb), 0.42);
+  --shadow-media: 0 28px 74px rgba(var(--brand-jet-rgb), 0.34);
+  --shadow-inset: inset 0 1px 0 rgba(var(--brand-ivory-rgb), 0.08);
+  --shadow-focus-halo: 0 0 0 5px rgba(var(--brand-lime-rgb), 0.12);
+  --elevation-base-shadow: var(--shadow-none);
+  --elevation-raised-shadow: var(--shadow-raised);
+  --elevation-floating-shadow: var(--shadow-floating);
+  --elevation-sticky-shadow: var(--shadow-raised);
+  --elevation-popover-shadow: var(--shadow-floating);
+  --elevation-modal-shadow: var(--shadow-modal);
+  --blur-none: 0;
+  --blur-decorative-soft: 8px;
+  --blur-decorative-medium: 18px;
+  --blur-decorative-strong: 34px;
+  --backdrop-soft: 8px;
+  --backdrop-medium: 16px;
+  --backdrop-strong: 22px;
+  --opacity-hidden: 0;
+  --opacity-decorative-soft: 0.12;
+  --opacity-decorative-medium: 0.28;
+  --opacity-muted-visual: 0.62;
+  --opacity-disabled: 0.46;
+  --opacity-loading: 0.72;
+  --opacity-overlay-support: 0.78;
+  --opacity-visible: 1;
+  --layer-background: -1;
+  --layer-base: 0;
+  --layer-raised: 10;
+  --layer-sticky: 100;
+  --layer-section-chrome: 150;
+  --layer-navigation: 200;
+  --layer-popover: 500;
+  --layer-dropdown: 600;
+  --layer-overlay: 1000;
+  --layer-modal: 2000;
+  --layer-toast: 3000;
+  --layer-cursor: 3500;
+  --layer-route-transition: 4000;
+  --layer-transient-feedback: 11000;
+  --layer-fullscreen-experience: 12000;
+  --layer-dev-tools: 14000;
+  --z-cursor: var(--layer-cursor);
+  --focus-cursor-z-index: var(--z-cursor);
+  --navigation-layer: var(--layer-navigation);
+  --popover-layer: var(--layer-popover);
+  --dropdown-layer: var(--layer-dropdown);
+  --overlay-layer: var(--layer-overlay);
+  --service-strip-layer: var(--layer-section-chrome);
+  --cta-projectile-layer: var(--layer-transient-feedback);
+  --hero-explore-overlay-layer: var(--layer-fullscreen-experience);
+
+  /* Typography primitives. Color and contrast stay in color-palette.css. */
+  --type-display-size: clamp(2.75rem, 5vw, 5rem);
+  --type-display-line-height: 0.98;
+  --type-display-weight: 700;
+  --type-display-letter-spacing: -0.04em;
+  --type-display-measure: 15ch;
+
+  --type-heading-size: clamp(2rem, 3vw, 3.25rem);
+  --type-heading-line-height: 1.06;
+  --type-heading-weight: 680;
+  --type-heading-letter-spacing: -0.03em;
+  --type-heading-measure: 22ch;
+
+  --type-subheading-size: clamp(1.375rem, 2vw, 1.75rem);
+  --type-subheading-line-height: 1.16;
+
+  --type-lead-size: clamp(1.25rem, 1.6vw, 1.625rem);
+  --type-lead-line-height: 1.4;
+  --type-lead-weight: 500;
+  --type-lead-letter-spacing: -0.012em;
+  --type-lead-measure: 42ch;
+
+  --type-body-size: clamp(1rem, 1.1vw, 1.125rem);
+  --type-body-line-height: 1.62;
+  --type-body-weight: 400;
+  --type-body-letter-spacing: 0em;
+  --type-body-measure: 66ch;
+  --type-body-small-size: 0.9375rem;
+  --type-body-small-line-height: 1.58;
+
+  --type-metadata-size: 0.8125rem;
+  --type-metadata-line-height: 1.4;
+  --type-metadata-weight: 550;
+  --type-metadata-letter-spacing: 0.01em;
+
+  --type-eyebrow-size: 0.75rem;
+  --type-eyebrow-line-height: 1.25;
+  --type-eyebrow-weight: 700;
+  --type-eyebrow-letter-spacing: 0.075em;
+  --type-eyebrow-transform: uppercase;
+
+  --type-label-size: 0.875rem;
+  --type-label-small-size: 0.8125rem;
+  --type-label-line-height: 1.2;
+  --type-label-small-line-height: 1.22;
+  --type-label-weight: 650;
+  --type-label-letter-spacing: 0.01em;
+  --type-caption-size: 0.75rem;
+  --type-caption-line-height: 1.45;
+  --type-caption-weight: 500;
+  --type-code-size: 0.8125rem;
+  --type-code-line-height: 1.55;
+  --type-link-weight: 650;
+
+  --type-weight-regular: var(--type-body-weight);
+  --type-weight-medium: var(--type-lead-weight);
+  --type-weight-strong: 650;
+  --type-weight-editorial: var(--type-heading-weight);
+  --type-weight-display: var(--type-display-weight);
+  --type-weight-display-heavy: 720;
+  --type-tracking-none: 0;
+  --type-tracking-label: var(--type-label-letter-spacing);
+  --type-tracking-eyebrow: var(--type-eyebrow-letter-spacing);
+  --type-tracking-metadata: var(--type-metadata-letter-spacing);
+  --type-display-tracking: var(--type-display-letter-spacing);
+  --type-heading-tracking: var(--type-heading-letter-spacing);
+  --type-lead-tracking: var(--type-lead-letter-spacing);
+  --type-body-tracking: var(--type-body-letter-spacing);
+  --type-eyebrow-tracking: var(--type-eyebrow-letter-spacing);
+  --type-label-tracking: var(--type-label-letter-spacing);
+
+  /* Motion primitives. */
+  --duration-instant: 140ms;
+  --duration-micro: 200ms;
+  --duration-fast: 240ms;
+  --duration-control: 260ms;
+  --duration-component: 320ms;
+  --duration-composed: 460ms;
+  --duration-cinematic: 680ms;
+  --duration-route-reveal: 620ms;
+  --duration-reveal: 900ms;
+  --duration-hero-reveal: 1050ms;
+  --duration-loading-loop: 700ms;
+  --duration-smooth-scroll: 880ms;
+  --focus-cursor-transition-duration: 250ms;
+  --focus-cursor-badge-transition-duration: 250ms;
+  --focus-cursor-follow-easing: 0.2;
+  --focus-cursor-badge-rotation-duration: 22s;
+  --cursor-transition-duration: var(--focus-cursor-transition-duration);
+  --cursor-follow-easing: var(--focus-cursor-follow-easing);
+  --cursor-badge-rotation-duration: var(--focus-cursor-badge-rotation-duration);
+  --duration-instant-reduced: 80ms;
+  --duration-control-reduced: 120ms;
+  --duration-cinematic-reduced: 180ms;
+  --ease-linear: linear;
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.32, 0, 0.67, 0);
+  --ease-emphasized: cubic-bezier(0.77, 0, 0.18, 1);
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --press-scale: 0.985;
+  --hover-lift: -1px;
+  --reveal-offset-small: 64px;
+  --reveal-offset-medium: 100px;
+  --reveal-offset-large: 160px;
+  --stagger-tight: 40ms;
+  --stagger-standard: 80ms;
+  --stagger-editorial: 120ms;
+
+  /* Focus geometry. */
+  --focus-width-dense: 2px;
+  --focus-offset-dense: 2px;
+  --focus-width-standard: 2px;
+  --focus-offset-standard: 3px;
+  --focus-width-prominent: 3px;
+  --focus-offset-prominent: 3px;
+  --focus-width-inset: 2px;
+  --focus-offset-inset: -6px;
+
+  /* Initial component contracts. */
+  --button-primary-height: var(--control-height-medium);
+  --button-primary-padding-inline: var(--control-padding-inline);
+  --button-primary-radius: var(--radius-control);
+  --button-primary-icon-size: var(--icon-size-control);
+  --button-primary-transition-duration: var(--duration-control);
+  --button-primary-transition-ease: var(--ease-standard);
+  --button-cta-height: var(--control-height-large);
+  --button-cta-radius: var(--radius-cta);
+  --button-cta-label-padding-start: var(--space-20);
+  --button-cta-content-gap: var(--space-16);
+  --button-cta-icon-inset: calc(var(--space-10) / 2);
+  --button-cta-icon-shell-size: calc(
+    var(--button-cta-height) - (var(--button-cta-icon-inset) * 2)
+  );
+  --button-cta-icon-size: var(--icon-size-control);
+  --button-secondary-border-width: 1.4px;
+  --button-focus-width: var(--focus-width-standard);
+  --button-focus-offset: var(--focus-offset-standard);
+  --button-secondary-elevation: 0 4px 20px rgba(var(--brand-jet-rgb), 0.22);
+  --button-secondary-elevation-hover: 0 6px 26px rgba(var(--brand-jet-rgb), 0.28);
+  --button-secondary-backdrop: 5px;
+  --card-radius: var(--radius-card);
+  --card-padding-compact: var(--space-16);
+  --card-gap: var(--space-stack);
+  --card-border-width: var(--border-width-structural);
+  --card-elevation: var(--shadow-none);
+  --input-radius: var(--radius-input);
+  --input-border-width: var(--border-width-structural);
+  --input-gap: var(--form-field-gap);
+  --input-padding-inline: var(--space-14);
+  --input-padding-block: var(--space-12);
+  --input-transition-duration: var(--duration-control);
+  --input-focus-width: var(--focus-width-standard);
+  --status-error-edge-width: 4px;
+  --badge-padding-inline: var(--space-10);
+  --badge-gap: var(--space-6);
+  --badge-radius: var(--radius-pill);
+  --badge-border-width: var(--border-width-structural);
+  --badge-transition-duration: var(--duration-micro);
+  --nav-item-height: var(--control-height-medium);
+  --site-header-min-block: 72px;
+  --site-header-min-block-compact: 64px;
+  --site-header-backdrop-blur: var(--backdrop-soft);
+  --site-header-default-material-bg: transparent;
+  --site-header-default-material-image: none;
+  --site-header-default-material-edge: 0;
+  --site-header-default-material-filter:
+    blur(var(--site-header-backdrop-blur));
+  --site-header-default-material-shadow:
+    0 6px 14px -12px rgba(var(--brand-jet-rgb), 0.22),
+    0 18px 36px -24px rgba(var(--brand-jet-rgb), 0.28),
+    0 32px 72px -42px rgba(var(--brand-jet-rgb), 0.32);
+  --site-header-material-bg: var(--site-header-default-material-bg);
+  --site-header-material-image: var(--site-header-default-material-image);
+  --site-header-material-edge: var(--site-header-default-material-edge);
+  --site-header-material-filter: var(--site-header-default-material-filter);
+  --site-header-border: 0;
+  --site-header-shadow: var(--site-header-default-material-shadow);
+  --hero-chrome-glass-filter:
+    blur(var(--site-header-backdrop-blur)) saturate(0.94);
+  --hero-chrome-glass-shadow-up:
+    inset 0 1px 0 rgba(var(--brand-ivory-rgb), 0.035),
+    0 -6px 14px -12px rgba(var(--brand-jet-rgb), 0.22),
+    0 -18px 36px -24px rgba(var(--brand-jet-rgb), 0.28),
+    0 -32px 72px -42px rgba(var(--brand-jet-rgb), 0.32);
+  --hero-chrome-glass-shadow-down:
+    inset 0 -1px 0 rgba(var(--brand-ivory-rgb), 0.035),
+    0 6px 14px -12px rgba(var(--brand-jet-rgb), 0.22),
+    0 18px 36px -24px rgba(var(--brand-jet-rgb), 0.28),
+    0 32px 72px -42px rgba(var(--brand-jet-rgb), 0.32);
+  --hero-trust-rail-block-size: clamp(56px, 7svh, 74px);
+  --hero-trust-rail-responsive-block-size: clamp(116px, 18svh, 132px);
+  --hero-trust-rail-single-column-block-size: clamp(184px, 34svh, 208px);
+  --nav-item-padding-inline: var(--space-14);
+  --nav-item-gap: var(--space-inline);
+  --nav-item-radius: var(--radius-control);
+  --nav-item-layer: var(--layer-navigation);
+  --media-frame-radius: var(--radius-media);
+  --media-frame-border-width: var(--border-width-structural);
+  --media-frame-elevation: var(--shadow-none);
+  --modal-layer: var(--layer-modal);
+  --modal-backdrop-blur: var(--backdrop-strong);
+  --modal-backdrop-opacity: var(--opacity-overlay-support);
+  --sheet-radius: var(--radius-sheet);
+  --sheet-layer: var(--layer-modal);
+  --popover-radius: var(--radius-card);
+  --popover-padding: var(--space-16);
+  --popover-gap: var(--space-12);
+  --popover-layer: var(--layer-popover);
+  --popover-elevation: var(--elevation-floating-shadow);
+  --toast-radius: var(--radius-card);
+  --toast-padding: var(--space-16);
+  --toast-layer: var(--layer-toast);
+  --toast-overlay-layer: 2999;
+  --toast-elevation: var(--elevation-floating-shadow);
+  --route-transition-layer: var(--layer-route-transition);
+  --route-transition-snapshot-layer: 3999;
+  --route-transition-backdrop-blur: var(--backdrop-soft);
+  --route-transition-cover-duration: var(--duration-cinematic);
+  --route-transition-reveal-duration: var(--duration-route-reveal);
+  --route-transition-reduced-duration: var(--duration-cinematic-reduced);
+  --route-transition-ease: var(--ease-emphasized);
+  --trust-bar-layer: var(--layer-navigation);
+  --trust-bar-elevation:
+    0 -5px 20px 0 rgba(var(--brand-jet-rgb), 0.35),
+    inset 0 -4px 18px 3px rgba(var(--brand-lime-rgb), 0.12);
+  --dev-tools-layer: var(--layer-dev-tools);
+  --dev-tools-control-backdrop-blur: var(--backdrop-medium);
+  --dev-tools-drawer-backdrop-blur: var(--backdrop-medium);
+}

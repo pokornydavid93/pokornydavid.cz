@@ -1,0 +1,349 @@
+.field,
+.fieldGroup,
+.checkField {
+  min-width: 0;
+  display: grid;
+  gap: var(--form-field-gap);
+}
+
+.fieldGroup {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.fieldLabel,
+.choiceLabel {
+  width: fit-content;
+  min-width: 0;
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-inline);
+  color: var(--input-label);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  line-height: var(--type-label-line-height);
+}
+
+.fieldLabel small,
+.choiceLabel small {
+  color: var(--input-helper-text);
+  font-size: var(--type-caption-size);
+  font-weight: var(--type-caption-weight);
+}
+
+.fieldHint {
+  margin: 0;
+  color: var(--input-helper-text);
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+}
+
+.field > p {
+  margin: 0;
+}
+
+.control {
+  box-sizing: border-box;
+  inline-size: 100%;
+  min-block-size: var(--input-height);
+  padding: var(--input-padding-block) var(--input-padding-inline);
+  color: var(--input-text);
+  caret-color: var(--input-caret);
+  background: var(--input-surface);
+  border: var(--input-border-width) solid var(--border-control);
+  border-radius: var(--input-radius);
+  font: inherit;
+  font-size: max(1rem, var(--type-body-small-size));
+  line-height: var(--type-body-small-line-height);
+  transition:
+    color var(--input-transition-duration) var(--ease-standard),
+    background-color var(--input-transition-duration) var(--ease-standard),
+    border-color var(--input-transition-duration) var(--ease-standard);
+}
+
+.control::placeholder {
+  color: var(--input-placeholder);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .control:hover:not(:disabled) {
+    border-color: var(--input-border-hover);
+  }
+
+  .checkOption:hover:not(:has(input:disabled)),
+  .radioOption:hover:not(:has(input:disabled)) {
+    background: var(--selection-bg-hover);
+  }
+}
+
+.control:focus-visible {
+  border-color: var(--input-border-focus);
+  outline: var(--focus-width-standard) solid var(--focus-ring);
+  outline-offset: var(--focus-offset-standard);
+}
+
+.control[aria-invalid="true"] {
+  border-width: var(--stroke-emphasis);
+  border-color: var(--input-border-error);
+}
+
+.control[aria-invalid="true"]:focus-visible {
+  border-color: var(--input-border-error);
+  outline-color: var(--focus-ring);
+}
+
+.control[readonly] {
+  color: var(--text-secondary);
+  background: var(--selection-bg);
+  border-style: dashed;
+}
+
+.control:autofill,
+.control:-webkit-autofill {
+  color: var(--input-autofill-text);
+  background-color: var(--input-autofill-surface);
+  -webkit-text-fill-color: var(--input-autofill-text);
+}
+
+.control:disabled {
+  color: var(--input-disabled-text);
+  background: var(--input-disabled-surface);
+  border-color: var(--input-border-disabled);
+  cursor: not-allowed;
+}
+
+.textarea {
+  min-block-size: var(--textarea-min-block);
+}
+
+.textarea[data-resize="none"] {
+  resize: none;
+}
+
+.textarea[data-resize="vertical"] {
+  resize: vertical;
+}
+
+.select {
+  color-scheme: inherit;
+}
+
+.fieldError {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+  color: var(--status-error-text);
+  font-size: var(--type-caption-size);
+  font-weight: var(--type-caption-weight);
+  line-height: var(--type-caption-line-height);
+}
+
+.fieldError > svg {
+  inline-size: var(--icon-size-status);
+  block-size: var(--icon-size-status);
+  flex: 0 0 auto;
+}
+
+.checkOption,
+.radioOption {
+  position: relative;
+  min-block-size: var(--control-touch-target-min);
+  padding: var(--space-10);
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
+  color: var(--text-primary);
+  background: var(--selection-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-control);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.checkOption input,
+.radioOption input {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  opacity: 0;
+}
+
+.checkCopy {
+  min-width: 0;
+  display: grid;
+  gap: var(--space-4);
+}
+
+.checkboxIndicator,
+.radioIndicator {
+  box-sizing: border-box;
+  inline-size: var(--input-control-size);
+  block-size: var(--input-control-size);
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  color: var(--selection-selected-text);
+  background: var(--selection-bg);
+  border: 1px solid var(--border-control);
+}
+
+.checkboxIndicator {
+  border-radius: var(--radius-checkbox);
+}
+
+.radioIndicator {
+  border-radius: var(--radius-circle);
+}
+
+.checkboxIndicator > svg {
+  inline-size: var(--icon-size-status);
+  block-size: var(--icon-size-status);
+  opacity: 0;
+}
+
+.checkOption input:checked + .checkboxIndicator,
+.checkOption input:indeterminate + .checkboxIndicator,
+.radioOption input:checked + .radioIndicator {
+  background: var(--selection-selected-bg);
+  border-color: var(--selection-selected-border);
+}
+
+.checkOption input:checked + .checkboxIndicator > svg,
+.checkOption input:indeterminate + .checkboxIndicator > svg {
+  opacity: 1;
+}
+
+.radioOption input:checked + .radioIndicator::after {
+  content: "";
+  inline-size: 8px;
+  block-size: 8px;
+  background: var(--selection-indicator);
+  border-radius: var(--radius-circle);
+}
+
+.checkOption input:focus-visible + .checkboxIndicator,
+.radioOption input:focus-visible + .radioIndicator {
+  outline: var(--focus-width-standard) solid var(--focus-ring);
+  outline-offset: var(--focus-offset-standard);
+}
+
+.checkField[data-field-invalid="true"] .checkOption,
+.fieldGroup[data-field-invalid="true"] .radioOption {
+  border-color: var(--status-error-border);
+}
+
+.checkOption:has(input:disabled),
+.radioOption:has(input:disabled) {
+  color: var(--disabled-foreground);
+  cursor: not-allowed;
+}
+
+.checkOption input:disabled + .checkboxIndicator,
+.radioOption input:disabled + .radioIndicator {
+  color: var(--disabled-foreground);
+  background: var(--disabled-surface);
+  border-color: var(--disabled-border);
+}
+
+.fieldGroupOptions {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.radioOption > span:last-child {
+  min-width: 0;
+  display: grid;
+  gap: var(--space-4);
+}
+
+.radioOption strong,
+.radioOption small {
+  display: block;
+}
+
+.radioOption strong {
+  color: currentColor;
+  font-size: var(--type-label-size);
+}
+
+.radioOption small {
+  color: var(--text-muted);
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+}
+
+.errorSummary {
+  position: relative;
+  padding: var(--space-16);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-12);
+  color: var(--status-error-text);
+  background: var(--status-error-bg);
+  border: 1px solid var(--status-error-border);
+  border-inline-start-width: var(--status-error-edge-width);
+  border-radius: var(--radius-control);
+}
+
+.errorSummary:focus-visible {
+  outline: var(--focus-width-standard) solid var(--focus-ring);
+  outline-offset: var(--focus-offset-standard);
+}
+
+.errorSummary > svg {
+  inline-size: var(--icon-size-card);
+  block-size: var(--icon-size-card);
+  color: var(--status-error-icon);
+}
+
+.errorSummary :where(h2, h3, h4, ul) {
+  margin: 0;
+}
+
+.errorSummary :where(h2, h3, h4) {
+  color: var(--status-error-text);
+  font-size: var(--type-subheading-size);
+  line-height: var(--type-subheading-line-height);
+}
+
+.errorSummary ul {
+  margin-block-start: var(--space-8);
+  padding-inline-start: var(--space-20);
+}
+
+.errorSummary a {
+  color: var(--status-error-text);
+  font-size: var(--type-body-small-size);
+  text-underline-offset: 0.2em;
+}
+
+.errorSummary a:focus-visible {
+  outline: var(--focus-width-standard) solid var(--focus-ring);
+  outline-offset: var(--focus-offset-standard);
+}
+
+@media (forced-colors: active) {
+  .control[aria-invalid="true"],
+  .checkField[data-field-invalid="true"] .checkOption,
+  .fieldGroup[data-field-invalid="true"] .radioOption,
+  .errorSummary {
+    border-color: Mark;
+  }
+
+  .fieldError,
+  .errorSummary,
+  .errorSummary > svg,
+  .errorSummary a {
+    color: Mark;
+  }
+
+  .control:focus-visible,
+  .checkOption input:focus-visible + .checkboxIndicator,
+  .radioOption input:focus-visible + .radioIndicator,
+  .errorSummary:focus-visible,
+  .errorSummary a:focus-visible {
+    outline-color: Highlight;
+  }
+}

@@ -1,0 +1,145 @@
+.workbench {
+  display: grid;
+  gap: var(--space-composition);
+  border-block: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-component);
+  padding-block: var(--space-component);
+}
+
+.toneControl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-control);
+}
+
+.toolbar output {
+  color: var(--text-muted);
+  font-size: var(--type-metadata-size);
+  font-weight: var(--type-metadata-weight);
+}
+
+.stage {
+  min-inline-size: 0;
+}
+
+.specimenRow {
+  display: grid;
+  gap: var(--space-composition);
+  padding-block: var(--space-section-compact);
+  border-block-start: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.specimenRow:first-child {
+  border-block-start: 0;
+}
+
+.specimenIntro {
+  inline-size: min(calc(100% - (var(--page-gutter) * 2)), var(--container-page-wide-max));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(11rem, 0.35fr) minmax(0, 1fr);
+  gap: var(--space-component);
+  align-items: start;
+}
+
+.specimenIntro code {
+  color: var(--text-emphasis);
+  font-size: var(--type-code-size);
+  line-height: var(--type-code-line-height);
+  overflow-wrap: anywhere;
+}
+
+.specimenIntro h3,
+.specimenIntro p,
+.templateIndex h3,
+.templateIndex p {
+  margin: 0;
+}
+
+.specimenIntro h3,
+.templateIndex h3 {
+  color: var(--text-primary);
+  font-size: var(--type-subheading-size);
+  line-height: var(--type-subheading-line-height);
+}
+
+.specimenIntro p,
+.templateIndex p {
+  max-inline-size: var(--measure-lead);
+  color: var(--text-secondary);
+  line-height: var(--type-body-line-height);
+}
+
+.specimenIntro > div {
+  display: grid;
+  gap: var(--space-stack-tight);
+}
+
+.liveSpecimen {
+  min-inline-size: 0;
+}
+
+.templateIndex {
+  display: grid;
+  gap: var(--space-composition);
+  padding-block: var(--space-section-compact) var(--space-section);
+}
+
+.templateIndex > header {
+  display: grid;
+  gap: var(--space-stack);
+}
+
+.templateIndex > header > span {
+  color: var(--text-emphasis);
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-weight);
+  text-transform: var(--type-eyebrow-transform);
+}
+
+.templateList {
+  display: grid;
+}
+
+.templateList article {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.55fr) minmax(0, 1fr) auto;
+  gap: var(--space-component);
+  align-items: center;
+  padding-block: var(--space-component);
+  border-block-start: var(--border-width-hairline) solid var(--border-subtle);
+}
+
+.templateList article > div {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.templateList code,
+.templateList span {
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 720px) {
+  .toolbar,
+  .specimenIntro,
+  .templateList article {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .templateList article {
+    align-items: start;
+  }
+}

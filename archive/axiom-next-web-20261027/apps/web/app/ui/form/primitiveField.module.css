@@ -1,0 +1,71 @@
+.field {
+  min-width: 0;
+  display: grid;
+  gap: var(--input-gap, var(--form-field-gap, 14px));
+  color: var(--text-on-dark-primary);
+}
+
+.header {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-inline, 10px);
+}
+
+.label,
+.optional,
+.description,
+.error {
+  display: block;
+}
+
+.label {
+  color: var(--text-on-dark-primary);
+  font-size: var(--type-label-size, 14px);
+  font-weight: var(--type-weight-strong, 650);
+  line-height: var(--type-label-line-height, 1.2);
+}
+
+.optional,
+.description {
+  color: var(--text-on-dark-muted);
+  font-size: var(--type-caption-size, 12px);
+  line-height: var(--type-caption-line-height, 1.4);
+}
+
+.field :where(input, textarea, select) {
+  width: 100%;
+  min-height: var(--input-height, 44px);
+  box-sizing: border-box;
+  padding: var(--input-padding-block, 12px) var(--input-padding-inline, 14px);
+  border: var(--input-border-width, 1px) solid var(--border-on-dark-subtle);
+  border-radius: var(--input-radius);
+  color: var(--text-on-dark-primary);
+  background: var(--surface-card-dark);
+  font: inherit;
+  transition:
+    border-color var(--input-transition-duration, 260ms) var(--ease-standard, ease),
+    background var(--input-transition-duration, 260ms) var(--ease-standard, ease),
+    box-shadow var(--input-transition-duration, 260ms) var(--ease-standard, ease);
+}
+
+.field :where(input, textarea, select)::placeholder {
+  color: var(--text-on-dark-muted);
+}
+
+.field :where(input, textarea, select):focus-visible {
+  outline: var(--input-focus-width, 2px) solid var(--button-focus-ring);
+  outline-offset: var(--focus-offset-standard, 3px);
+  border-color: var(--border-accent-subtle);
+}
+
+.invalid :where(input, textarea, select) {
+  border-color: var(--status-error-border);
+}
+
+.error {
+  color: var(--status-error-foreground);
+  font-size: var(--type-caption-size, 12px);
+  line-height: var(--type-caption-line-height, 1.4);
+}

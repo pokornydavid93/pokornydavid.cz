@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 2,
+  "publication": {
+    "status": "review",
+    "author": "David Pokorný",
+    "publishedAt": "2026-06-22",
+    "updatedAt": "2026-08-12"
+  },
+  "meta": {
+    "slug": "chcete-investovat-zacnete-planem",
+    "topic": "Investiční plán podle cíle, horizontu, rizika a dlouhodobé disciplíny",
+    "category": "Investice",
+    "primaryIntent": "Pomoci čtenáři přejít od nahodilých investičních tipů k přehledné strategii navázané na konkrétní cíle.",
+    "audience": "Člověk, který chce začít investovat nebo už investuje, ale nemá jistotu, zda jeho produkty tvoří jeden srozumitelný plán.",
+    "estimatedReadTime": 5
+  },
+  "seo": {
+    "title": "Chcete investovat, ale nevíte čemu věřit? Začněte plánem, ne produktem",
+    "description": "Investiční chaos často nevzniká z nedostatku možností, ale z chybějícího plánu. Nejdřív si ujasněte cíl, horizont, riziko a pravidelnost."
+  },
+  "hero": {
+    "category": "Investice",
+    "eyebrow": "NEJDŘÍV CÍL, POTOM PRODUKT",
+    "title": "Chcete investovat, ale nevíte čemu věřit? Začněte plánem, ne produktem",
+    "displayTitle": "Chcete investovat?\nZačněte plánem, ne produktem.",
+    "subtitle": "Ukážu vám, co si ujasnit před výběrem investice a jak prověřit, zda současné investice odpovídají vašim cílům.",
+    "excerpt": "Investiční chaos často nevzniká z nedostatku možností, ale z chybějícího plánu. Nejdřív si ujasněte cíl, horizont, riziko a pravidelnost.",
+    "estimatedReadTime": "5 minut",
+    "heroSummary": [
+      "Na co peníze mají být a kdy je budete potřebovat.",
+      "Kolik můžete odkládat a jaké riziko unesete.",
+      "Co si ověřit u současných investic."
+    ]
+  },
+  "sections": [
+    {
+      "id": "investovani-neni-hledani-zazracneho-produktu",
+      "eyebrow": "01 / ÚČEL PENĚZ",
+      "title": "Nejdřív si ujasněte, co mají peníze zařídit",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Jedna nabídka zdůrazňuje růst, druhá bezpečí. Než je začnete porovnávat, potřebujete vědět, kdy peníze využijete a k čemu."
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Peníze na bydlení za několik let mají jiný úkol než úspory na důchod. Také částka, kterou můžete pravidelně odkládat, musí odpovídat vašemu rozpočtu.",
+            "Při společném plánování proto nejdřív pojmenujeme cíl a podmínky, které má investice splnit. Podle nich pak posoudíme současné investice nebo případné nové řešení."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bez-cile-je-kazda-investice-trochu-naslepo",
+      "eyebrow": "02 / CÍL A HORIZONT",
+      "title": "Čtyři otázky před výběrem investice",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Cíl",
+              "description": "Na co mají peníze sloužit? Oddělte například bydlení, vzdělání dětí a příjem na důchod."
+            },
+            {
+              "title": "Potřebná částka",
+              "description": "Kolik budete pro daný cíl potřebovat a kolik už máte připraveno? U odhadu si označte, z čeho vychází."
+            },
+            {
+              "title": "Termín",
+              "description": "Kdy budete peníze potřebovat? Je termín pevný, nebo ho můžete posunout?"
+            },
+            {
+              "title": "Rozpočet",
+              "description": "Kolik můžete odkládat jednorázově a pravidelně při zachování běžných výdajů, splátek a rezervy?"
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Pohotovostní rezervu držte odděleně a rychle dostupnou pro nečekané výdaje. Při plánování spolu rozlišíme tuto rezervu od peněz, které mohou zůstat investované delší dobu.",
+            "Pokud částka, termín a rozpočet zatím nevycházejí, projdeme možné úpravy cíle nebo doby, za kterou ho chcete dosáhnout."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "id": "pozvanka-k-prehledu-investicniho-planu",
+          "content": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Projděte si krátký přehled bez zadání kontaktu.",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "#screening"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "intro": "U každého cíle si poznamenejte následující čtyři údaje. Pokud něco ještě nevíte, můžeme to při společném plánování upřesnit."
+    },
+    {
+      "id": "nejcastejsi-chyba-investice-bez-strategie",
+      "eyebrow": "03 / ROZUMĚT INVESTICI",
+      "title": "Co si ověřit před vložením peněz",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "explanation",
+          "subsections": [
+            {
+              "title": "Rozumíte investici?",
+              "paragraphs": [
+                "Ujasněte si, do čeho peníze skutečně směřují, z čeho má vznikat výnos a co může způsobit ztrátu. Nejasnosti si nechte vysvětlit před rozhodnutím."
+              ]
+            },
+            {
+              "title": "Unesete případnou ztrátu?",
+              "paragraphs": [
+                "Promyslete, jak byste reagovali na pokles hodnoty a jak by případná ztráta ovlivnila váš rozpočet a cíle. Ochota snášet kolísání a finanční schopnost unést ztrátu jsou dvě různé věci. Při společném posouzení projdeme obě."
+              ]
+            },
+            {
+              "title": "Kdy a za kolik peníze vyberete?",
+              "paragraphs": [
+                "Zjistěte podmínky a lhůty výběru. Dohledejte také vstupní, průběžné i výstupní náklady a případné poplatky za předčasné ukončení. Porovnávejte celkové náklady za dobu, po kterou chcete investici držet."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diverzifikace-neni-nuda-je-to-ochrana-planu",
+      "eyebrow": "04 / ROZLOŽENÍ RIZIKA",
+      "title": "Co znamená rozložit investiční riziko",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Diverzifikace znamená rozložit peníze mezi různé investice. Může omezit dopad neúspěchu jedné pozice, ale nezaručuje, že celé portfolio při poklesu trhů neztratí hodnotu."
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Samotný počet produktů nestačí. U více fondů se podívejte, zda nedrží převážně stejné společnosti nebo stejné odvětví. Pod různými názvy se může skrývat podobné složení.",
+            "Při kontrole spolu projdeme rozložení investic jako celek a porovnáme ho s vaším cílem, termínem využití peněz a schopností nést riziko."
+          ]
+        },
+        {
+          "type": "interactiveTool",
+          "tool": "screening",
+          "id": "screening",
+          "title": "Ujasněte si, co ve svém investičním plánu prověřit",
+          "text": "Pojmenujte své cíle a časový horizont. Přehled bodů k prověření získáte bez zadání kontaktu.",
+          "screeningType": "investment-plan",
+          "conversionId": "investicni-chaos"
+        }
+      ]
+    },
+    {
+      "id": "kdyz-investice-nemely-spolecny-smer",
+      "eyebrow": "05 / PŘÍPAD Z PRAXE",
+      "title": "Když investice neměly společný směr",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "caseStudy",
+          "context": "Jde o anonymizovaný případ z mé praxe. Klientovi bylo 38 let a investice postupně vybíral podle doporučení z internetu, sociálních sítí a svého okolí.",
+          "initialState": [
+            "Vedle peněz na běžném účtu měl jednotlivé akcie, kryptoměny a několik bankovních investičních produktů.",
+            "Celkem investoval přibližně 6 000 Kč měsíčně. Neměl však jasně určené, které peníze mají zůstat jako rezerva a které mají sloužit na důchod."
+          ],
+          "problem": [
+            "Jednotlivé investice nebyly propojené s konkrétními cíli a termíny. Chyběl přehled, zda jejich rozložení a pravidelné vklady odpovídají tomu, čeho chce klient dosáhnout.",
+            "Při covidových propadech pod tlakem strachu prodal část investic ve ztrátě."
+          ],
+          "analysis": "Při rozboru jsme potřebovali oddělit dostupnou rezervu od dlouhodobých peněz a určit, jaké riziko je pro klienta přijatelné. Teprve k dlouhodobému cíli jsme mohli posoudit nastavení investic a pravidelných vkladů.",
+          "whatChanged": [
+            "Nejdřív jsme oddělili peníze určené na dostupnou finanční rezervu od peněz na důchod.",
+            "Investice jsme zjednodušili do rozložení, které odpovídalo jeho časovému horizontu a toleranci rizika."
+          ],
+          "result": [
+            "Klient získal přehledný systém, kterému rozuměl, a přestal řešit každý krátkodobý výkyv. Nové uspořádání mu přineslo větší klid při rozhodování."
+          ],
+          "takeaway": "Částka 6 000 Kč měsíčně popisuje výchozí situaci tohoto klienta. Pro vlastní plán je potřeba posoudit váš cíl, termín a rozpočet."
+        }
+      ]
+    },
+    {
+      "id": "cilem-neni-investovat-sloziteji-cilem-je-investovat-smysluplneji",
+      "eyebrow": "06 / PŘÍPRAVA NA POSOUZENÍ",
+      "title": "Co si připravit pro společné posouzení",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Cíle a termíny",
+              "description": "Sepište, na co chcete peníze využít, kolik budete potřebovat a kdy. Uveďte i to, co ještě potřebujete ujasnit."
+            },
+            {
+              "title": "Současné investice",
+              "description": "Připravte přehled produktů, vložených částek, aktuálních hodnot a pravidelných vkladů. Přidejte dostupné výpisy a informace o nákladech a podmínkách výběru. Pokud zatím neinvestujete, tento bod přeskočte."
+            },
+            {
+              "title": "Rozpočet a otázky",
+              "description": "Poznamenejte si výši rezervy, závazky a částku, kterou můžete odkládat. Přidejte otázky k riziku nebo situace, ve kterých byste peníze potřebovali dříve."
+            }
+          ]
+        },
+        {
+          "type": "nextAction",
+          "title": "Proberme váš investiční plán",
+          "paragraphs": [
+            "Na úvodním hovoru spolu projdeme vaše cíle a domluvíme se, které podklady k posouzení investičního plánu připravit."
+          ],
+          "action": {
+            "label": "Domluvit si úvodní hovor",
+            "intent": "article-consultation",
+            "conversionId": "investicni-chaos"
+          }
+        }
+      ],
+      "intro": "Ať teprve začínáte, nebo už investujete, pomohou nám tyto podklady."
+    }
+  ],
+  "conclusion": {
+    "title": "Plán má odpovídat vašemu životu",
+    "paragraphs": [
+      "Když se změní cíl, termín nebo rozpočet, společně ověříme, zda tomu stále odpovídá nastavení investic. Pravidla pro další rozhodování tak budou vycházet z vaší aktuální situace."
+    ]
+  },
+  "relatedTopics": [
+    {
+      "topic": "Peníze na rezervu, bydlení a důchod nemají být v jednom balíku",
+      "reason": "Ukazuje, jak rozdělit peníze podle cíle a doby, kdy je budete potřebovat.",
+      "slug": "penize-na-rezervu-bydleni-a-duchod-nemaji-byt-v-jednom-baliku"
+    },
+    {
+      "topic": "Máte finanční produkty. Ale máte skutečně finanční plán?",
+      "reason": "Zasazuje investice do návaznosti na rezervu, ochranu, závazky a ostatní cíle.",
+      "slug": "mate-financni-produkty-ale-mate-skutecne-financni-plan"
+    },
+    {
+      "topic": "Kolik má mít domácnost v rezervě? Jedno správné číslo neexistuje.",
+      "reason": "Pomůže určit, které peníze mají zůstat rychle dostupné pro nečekané výdaje.",
+      "slug": "kolik-ma-mit-domacnost-v-rezerve"
+    }
+  ],
+  "editorial": {
+    "contentStatus": "Redakčně upravený obsah; publikace zůstává ve stavu review a odborné ověření investiční metodiky není uzavřené.",
+    "sourceBasis": "Původní kanonický obsah articleBlocks převedený do ArticleDocumentV2; redakční úprava a potvrzení skutečného případu i uvedených detailů zadavatelem v konverzaci dne 2026-10-05.",
+    "needsExternalVerification": true,
+    "sensitivity": "Investiční metodika a popis rizik; skutečný anonymizovaný klientský případ a jeho detaily potvrzené zadavatelem.",
+    "review": {
+      "status": "pending"
+    },
+    "verificationItems": [
+      {
+        "id": "12-case-provenance",
+        "title": "Původ anonymizovaného investičního případu",
+        "instruction": "Uchovat interní potvrzení zadavatele, že jde o skutečný anonymizovaný případ z praxe. Nezveřejňovat klientské podklady.",
+        "status": "verified",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "kdyz-investice-nemely-spolecny-smer",
+        "claimRef": "kdyz-investice-nemely-spolecny-smer:12-case-provenance",
+        "evidenceRequired": "Interní potvrzení původu anonymizovaného případu.",
+        "sources": [
+          "Potvrzení zadavatele v konverzaci dne 2026-10-05: případ i uvedené detaily jsou skutečné."
+        ],
+        "requiresRecheck": false,
+        "verifiedBy": "Zadavatel článku v konverzaci",
+        "verifiedAt": "2026-10-05",
+        "note": "Potvrzení původu a údajů 38 let a 6 000 Kč měsíčně vychází z vyjádření zadavatele, nikoli z nezávislého auditu klientských záznamů."
+      },
+      {
+        "id": "12-case-market-history",
+        "title": "Potvrzený prodej ve ztrátě během covidu",
+        "instruction": "Zachovat potvrzený popis prodeje ve ztrátě. Neodvozovat výsledek při hypotetickém držení ani tvrzení o zotavení konkrétních klientských investic.",
+        "status": "verified",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "kdyz-investice-nemely-spolecny-smer",
+        "claimRef": "kdyz-investice-nemely-spolecny-smer:12-case-market-history",
+        "evidenceRequired": "Interní potvrzení skutkového kontextu klientského případu.",
+        "sources": [
+          "Potvrzení zadavatele v konverzaci dne 2026-10-05 zahrnuje prodej části investic ve ztrátě během covidu."
+        ],
+        "requiresRecheck": false,
+        "verifiedBy": "Zadavatel článku v konverzaci",
+        "verifiedAt": "2026-10-05",
+        "note": "Ověřeno na úrovni potvrzení zadavatelem, bez nezávislého auditu obchodů. Veřejný text neobsahuje závěr o následném zotavení konkrétních investic ani o výsledku alternativního postupu."
+      },
+      {
+        "id": "12-investment-methodology",
+        "title": "Ověřit investiční metodiku a nepříslibový jazyk",
+        "instruction": "Prověřit formulace o diverzifikaci, horizontu, riziku a dlouhodobém výsledku tak, aby zůstaly metodikou, nikoli příslibem výnosu.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "diverzifikace-neni-nuda-je-to-ochrana-planu",
+        "claimRef": "diverzifikace-neni-nuda-je-to-ochrana-planu:12-investment-methodology",
+        "evidenceRequired": "Schválená investiční metodika a aktuální compliance kontrola.",
+        "sources": [
+          "https://www.cnb.cz/cs/dohled-financni-trh/ochrana-spotrebitele/desatero-pro-investory/index.html",
+          "https://www.investor.gov/introduction-investing/getting-started/asset-allocation",
+          "https://www.investor.gov/introduction-investing/investing-basics/save-and-invest/diversify-your-investments"
+        ],
+        "requiresRecheck": true,
+        "note": "Redakční formulace o oddělené rezervě, horizontu, nákladech, schopnosti a ochotě nést ztrátu a mezích diverzifikace byly porovnány s primárními vzdělávacími zdroji ČNB a SEC Investor.gov. Nejde o schválení konkrétního portfolia ani uzavření odborné kontroly. Položka zůstává pending a blokuje publikaci."
+      }
+    ],
+    "productionNotes": {
+      "migration": "Full ArticleDocumentV2 cutover from legacy structured/MDX runtime source.",
+      "publicVoice": "David speaks directly to the reader in first person.",
+      "caseEvidence": "Dne 2026-10-05 zadavatel potvrdil: „Ano, případ i uvedené detaily jsou skutečné.“ Potvrzení se týká anonymizovaného 38letého klienta, investování 6 000 Kč měsíčně i prodeje části investic ve ztrátě během covidu. Záznam vychází z vyjádření zadavatele; klientské podklady nebyly nezávisle auditovány ani nejsou zveřejňovány. Toto potvrzení zůstává pouze v interní editorial vrstvě."
+    }
+  }
+}

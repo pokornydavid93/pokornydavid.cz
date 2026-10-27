@@ -1,0 +1,155 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+  position: relative;
+  z-index: 5;
+}
+
+.fullHeight {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.primitiveRole {
+  max-width: none;
+}
+
+.gutterFluid {
+  width: min(
+    calc(100% - (var(--space-page, clamp(20px, 4vw, 56px)) * 2)),
+    var(--container-page-standard-max, 1180px)
+  );
+  max-width: none;
+}
+
+.gutterNone {
+  width: 100%;
+  max-width: none;
+}
+
+.fullBleed {
+  width: 100%;
+  max-width: none;
+  padding-inline: 0;
+}
+
+.pageCinematic {
+  width: min(
+    calc(100% - (var(--space-page, clamp(20px, 4vw, 56px)) * 2)),
+    var(--container-page-cinematic-max, 1480px)
+  );
+}
+
+.pageWide {
+  width: min(
+    calc(100% - (var(--space-page, clamp(20px, 4vw, 56px)) * 2)),
+    var(--container-page-wide-max, 1200px)
+  );
+}
+
+.pageStandard {
+  width: min(
+    calc(100% - (var(--space-page, clamp(20px, 4vw, 56px)) * 2)),
+    var(--container-page-standard-max, 1180px)
+  );
+}
+
+.contentWide {
+  width: min(
+    calc(100% - (var(--space-page, clamp(20px, 4vw, 56px)) * 2)),
+    var(--container-content-wide-max, 860px)
+  );
+}
+
+.content {
+  width: min(
+    calc(100% - (var(--space-page, clamp(20px, 4vw, 56px)) * 2)),
+    var(--container-content-max, 720px)
+  );
+}
+
+.editorial {
+  width: min(
+    calc(100% - (var(--space-page, clamp(20px, 4vw, 56px)) * 2)),
+    var(--measure-editorial, 760px)
+  );
+}
+
+.narrow {
+  width: min(
+    calc(100% - (var(--space-page, clamp(20px, 4vw, 56px)) * 2)),
+    var(--container-narrow-max, 520px)
+  );
+}
+
+.form {
+  width: min(
+    calc(100% - (var(--space-page, clamp(20px, 4vw, 56px)) * 2)),
+    var(--measure-lead, 720px)
+  );
+}
+
+.rail {
+  width: min(100%, var(--container-rail-max, 380px));
+}
+
+.measureCompact {
+  max-width: var(--measure-compact, 520px);
+}
+
+.measureBody {
+  max-width: var(--measure-body, 680px);
+}
+
+.measureLead {
+  max-width: var(--measure-lead, 720px);
+}
+
+.measureEditorial {
+  max-width: var(--measure-editorial, 760px);
+}
+
+.measureWide {
+  max-width: var(--measure-wide, 860px);
+}
+
+.measureDisplay {
+  max-width: var(--measure-display, 980px);
+}
+
+.rhythmNone {
+  padding-block: 0;
+}
+
+.rhythmCompact {
+  padding-block: var(--space-section-compact, clamp(56px, 7vw, 82px));
+}
+
+.rhythmStandard {
+  padding-block: var(--space-section, clamp(76px, 8vw, 112px));
+}
+
+.rhythmSpacious {
+  padding-block: var(--space-section-spacious, clamp(96px, 10vw, 148px));
+}
+
+.rhythmHero {
+  padding-block: clamp(88px, 11svh, 148px);
+}
+
+.rhythmCta {
+  padding-block: clamp(64px, 8vw, 104px);
+}
+
+.rhythmCinematic {
+  padding-block: clamp(92px, 12svh, 168px);
+}
+
+@media (max-width: 1200px) {
+  .container:not(.primitiveRole) {
+    width: 90%;
+  }
+}

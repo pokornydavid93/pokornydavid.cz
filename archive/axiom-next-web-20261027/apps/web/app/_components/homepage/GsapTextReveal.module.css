@@ -1,0 +1,15 @@
+.mask {
+  min-inline-size: 0;
+  display: block;
+  overflow: clip;
+  overflow-clip-margin: 0.16em;
+}
+
+.mask:focus-within {
+  overflow: visible;
+}
+
+.content {
+  min-inline-size: 0;
+  display: block;
+}

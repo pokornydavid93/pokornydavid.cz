@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "key": "financni-plan",
+      "kind": "service",
+      "name": "Finanční plán",
+      "description": "Uspořádám vám hypotéku, pojištění, rezervy a investice do jednoho přehledného plánu, který dává smysl v běžném životě.",
+      "presentation": {
+        "icon_key": "compass",
+        "short_description": "Hypotéka, pojištění, rezerva a investice v jednom přehledném směru.",
+        "tags": ["Přehled", "Priority", "Další krok"],
+        "cta_label": "Sestavit finanční plán",
+        "lead_topic": "financial-plan",
+        "legacy_lead_topic": "Finanční plán",
+        "featured_on_landing": true,
+        "badge": "Dobrý první krok"
+      }
+    },
+    {
+      "key": "zajisteni-prijmu",
+      "kind": "service",
+      "name": "Zajištění příjmu",
+      "description": "Prověřím, jestli vaše domácnost zvládne výpadek příjmu bez toho, aby ohrozila hypotéku, náklady nebo běžný provoz.",
+      "presentation": {
+        "icon_key": "shield-check",
+        "short_description": "Prověřím, jestli vaše domácnost zvládne výpadek příjmu bez ohrožení běžného provozu.",
+        "tags": ["Příjem", "Rodina", "Hypotéka"],
+        "cta_label": "Prověřit zajištění příjmu",
+        "lead_topic": "income-protection",
+        "legacy_lead_topic": "Zajištění příjmu",
+        "featured_on_landing": true
+      }
+    },
+    {
+      "key": "investice-a-sporeni",
+      "kind": "service",
+      "name": "Investice a spoření",
+      "description": "Nastavím vám rezervy, spoření a investice tak, aby každá část měla jasný účel - krátkodobě i do budoucna.",
+      "presentation": {
+        "icon_key": "line-chart",
+        "short_description": "Nastavím vám rezervy, spoření a investice tak, aby každá část měla jasný účel.",
+        "tags": ["Rezerva", "Růst", "Dlouhodobě"],
+        "cta_label": "Probrat investice a rezervy",
+        "lead_topic": "investments",
+        "legacy_lead_topic": "Investice a spoření",
+        "featured_on_landing": false
+      }
+    },
+    {
+      "key": "hypoteka-a-financovani",
+      "kind": "service",
+      "name": "Hypotéka a financování",
+      "description": "Porovnám možnosti financování před důležitým rozhodnutím, abyste věděli, co dává smysl pro rozpočet i další plány.",
+      "presentation": {
+        "icon_key": "landmark",
+        "short_description": "Porovnám možnosti financování před důležitým rozhodnutím a ukážu vám, co dává smysl pro rozpočet.",
+        "tags": ["Hypotéka", "Splátka", "Rezerva"],
+        "cta_label": "Porovnat financování",
+        "lead_topic": "mortgage",
+        "legacy_lead_topic": "Hypotéka & bydlení",
+        "featured_on_landing": true
+      }
+    },
+    {
+      "key": "spotrebitelske-a-podnikatelske-uvery",
+      "kind": "service",
+      "name": "Spotřebitelské a podnikatelské úvěry",
+      "description": "Financování auta, většího výdaje nebo podnikatelského záměru nastavím tak, aby zbytečně nepřetížilo váš rozpočet ani další cíle.",
+      "presentation": {
+        "icon_key": "wallet-cards",
+        "short_description": "Financování většího výdaje nebo podnikání posoudím podle nákladů a dopadu na váš rozpočet.",
+        "tags": ["Úvěr", "Podnikání", "Rozpočet"],
+        "cta_label": "Posoudit možnosti financování",
+        "lead_topic": "business-financing",
+        "legacy_lead_topic": "Spotřebitelské a podnikatelské úvěry",
+        "featured_on_landing": false
+      }
+    },
+    {
+      "key": "pojisteni-majetku",
+      "kind": "service",
+      "name": "Pojištění majetku",
+      "description": "Zkontroluji, jestli jsou váš domov, domácnost a důležité věci kryté rozumně - bez zbytečných mezer i zbytečně drahých smluv.",
+      "presentation": {
+        "icon_key": "home",
+        "short_description": "Zkontroluji, jestli je váš domov krytý rozumně - bez zbytečných mezer i zbytečně drahých smluv.",
+        "tags": ["Domov", "Majetek", "Rizika"],
+        "cta_label": "Zkontrolovat pojištění majetku",
+        "lead_topic": "property-insurance",
+        "legacy_lead_topic": "Ochrana majetku",
+        "featured_on_landing": true
+      }
+    },
+    {
+      "key": "pojisteni-vozidla",
+      "kind": "service",
+      "name": "Pojištění vozidla",
+      "description": "Podívám se na cenu, rozsah krytí i podmínky, aby vaše auto nebylo pojištěné draze, slabě nebo zbytečně složitě.",
+      "presentation": {
+        "icon_key": "car",
+        "short_description": "Podívám se na cenu, rozsah krytí i podmínky, aby vaše auto nebylo pojištěné draze nebo slabě.",
+        "tags": ["Auto", "Cena", "Krytí"],
+        "cta_label": "Zkontrolovat pojistku auta",
+        "lead_topic": "vehicle-insurance",
+        "legacy_lead_topic": "Pojištění vozidla",
+        "featured_on_landing": false
+      }
+    },
+    {
+      "key": "pojisteni-odpovednosti",
+      "kind": "service",
+      "name": "Pojištění odpovědnosti",
+      "description": "Prověřím situace, kdy vám může běžná chyba doma, v práci nebo v provozu způsobit velké finanční škody.",
+      "presentation": {
+        "icon_key": "shield-alert",
+        "short_description": "Prověřím situace, kdy vám běžná chyba může způsobit větší finanční škodu.",
+        "tags": ["Odpovědnost", "Profese", "Běžný život"],
+        "cta_label": "Prověřit odpovědnost",
+        "lead_topic": "liability-insurance",
+        "legacy_lead_topic": "Pojištění odpovědnosti",
+        "featured_on_landing": false
+      }
+    },
+    {
+      "key": "prodej-nemovitosti",
+      "kind": "service",
+      "name": "Prodej nemovitosti",
+      "description": "Projdu s vámi finance kolem prodeje nemovitosti - návaznosti, závazky, rezervu i další rozhodnutí po prodeji.",
+      "presentation": {
+        "icon_key": "building-2",
+        "short_description": "Projdu s vámi finance kolem prodeje, návaznosti, závazky, rezervu i další rozhodnutí.",
+        "tags": ["Nemovitost", "Prodej", "Návaznosti"],
+        "cta_label": "Probrat prodej nemovitosti",
+        "lead_topic": "property-sale",
+        "legacy_lead_topic": "Reality / prodej nemovitosti",
+        "featured_on_landing": false
+      }
+    }
+  ]
+}

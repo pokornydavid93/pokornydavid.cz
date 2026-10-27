@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 2,
+  "publication": {
+    "status": "review",
+    "author": "David Pokorný",
+    "publishedAt": "2026-10-08",
+    "updatedAt": "2026-10-08"
+  },
+  "meta": {
+    "slug": "mate-financni-produkty-ale-mate-skutecne-financni-plan",
+    "topic": "Rozdíl mezi souborem finančních produktů a skutečným finančním plánem",
+    "category": "Finanční plánování",
+    "primaryIntent": "Pomoci čtenáři poznat, zda jeho smlouvy a finanční rozhodnutí tvoří propojený systém odpovídající jeho životu a cílům.",
+    "audience": "Člověk, který má několik finančních smluv, ale nemá jistotu, co přesně řeší, proč je platí a zda spolu dávají smysl.",
+    "estimatedReadTime": 6
+  },
+  "hero": {
+    "category": "Finanční plánování",
+    "eyebrow": "KDY SMLOUVY ZAČNOU TVOŘIT CELEK",
+    "title": "Máte finanční produkty. Ale máte skutečně finanční plán?",
+    "subtitle": "Ukážu vám, jak porovnat smlouvy s vaším rozpočtem a cíli, odhalit rozpory a rozhodnout, co ponechat, upravit nebo doplnit.",
+    "excerpt": "Z jednotlivých smluv vznikne plán teprve tehdy, když víte, čemu slouží a jak se navzájem ovlivňují. Projděte si praktickou kontrolu i skutečný případ z mé praxe.",
+    "estimatedReadTime": "6 minut",
+    "heroSummary": [
+      "Ujasníte si účel jednotlivých smluv a peněz.",
+      "Zjistíte, co porovnat v rozpočtu, dluzích, ochraně příjmu a investicích.",
+      "Uvidíte skutečný případ propojení dosud oddělených rozhodnutí.",
+      "Připravíte si podklady ke kontrole bez automatického rušení smluv."
+    ]
+  },
+  "sections": [
+    {
+      "id": "kazdy-mesic-neco-platite",
+      "eyebrow": "PRODUKTY A PLÁN",
+      "title": "Co mají vaše smlouvy společně řešit?",
+      "intro": "Pojištění jste sjednali v prvním zaměstnání, úvěr při koupi auta a investice o několik let později. Každá smlouva měla svůj důvod. Odpovídají ale společně tomu, co potřebujete dnes?",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "definition",
+          "term": "Finanční plán",
+          "simpleDefinition": "Přehled cílů, peněz a závazků, podle kterého rozhodujete, na co mají jednotlivé smlouvy a platby sloužit.",
+          "optionalExample": "U volných peněz například víte, zda mají doplnit rezervu, snížit dluh nebo směřovat k určitému cíli."
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Při společné kontrole proto nezačínám nabídkou nového produktu. Nejdřív si ujasníme, proč současné smlouvy máte, co vám chybí a jak by změna jedné části ovlivnila ostatní. Dobře nastavená smlouva může v plánu zůstat."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cisla-a-clovek-za-nimi",
+      "eyebrow": "VSTUPY DO PLÁNU",
+      "title": "Potřebuji znát vaše čísla i priority",
+      "intro": "Rozpočet ukáže možnosti. Vaše cíle a životní situace mi pomohou určit, které z nich dávají smysl právě vám.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Rozpočet",
+              "description": "Čisté příjmy, pravidelné i nepravidelné výdaje a částka, která vám skutečně zbývá. Zahrňte i očekávané změny příjmu nebo rodiny."
+            },
+            {
+              "title": "Majetek a dluhy",
+              "description": "Dostupná rezerva, ostatní úspory a investice. U úvěrů zůstatek, splátka, sazba, RPSN a zbývající splatnost."
+            },
+            {
+              "title": "Současné smlouvy",
+              "description": "Co platíte, jaké krytí nebo službu za to máte a za jakých podmínek lze nastavení změnit či smlouvu ukončit."
+            },
+            {
+              "title": "Cíle a hranice",
+              "description": "Na co budou peníze potřeba, přibližně kolik a kdy. Také jakou ztrátu by unesl váš rozpočet, jak snášíte kolísání a co chcete zachovat."
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Z těchto údajů společně určíme priority. Domácnost bez dostupné rezervy řeší jinou situaci než člověk s drahým dluhem nebo blížící se koupí bydlení. Pořadí kroků vychází z vašich rizik, termínů a možností; nemusí být pro každého stejné."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rozpory-mezi-smlouvami",
+      "eyebrow": "SKRYTÉ ROZPORY",
+      "title": "Kde si jednotlivá rozhodnutí mohou odporovat",
+      "intro": "Při kontrole sleduji také vazby, které z jedné smlouvy nepoznáte.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "explanation",
+          "subsections": [
+            {
+              "title": "Dluh vedle investování",
+              "paragraphs": [
+                "Pravidelné investování vedle drahého úvěru stojí za prověření. Investiční výsledek je nejistý, zatímco úvěr má smluvené náklady. Porovnáme možnosti splácení s rezervou, podmínkami úvěru a cílem investice. Samotné porovnání úroku s očekávaným výnosem k rozhodnutí nestačí."
+              ]
+            },
+            {
+              "title": "Peníze bez jasného termínu",
+              "paragraphs": [
+                "Rezerva, peníze na auto za dva roky a dlouhodobé investice mají odlišný účel. Pokud jsou smíchané v kolísavé investici, můžete potřebovat vybírat právě při poklesu. U každého cíle proto prověříme dostupnost peněz, náklady a riziko ztráty."
+              ]
+            },
+            {
+              "title": "Pojištění bez vazby na rozpočet",
+              "paragraphs": [
+                "Seznam pojištěných rizik ještě neukazuje, zda by domácnost zvládla dlouhý výpadek příjmu. Porovnáme rozsah krytí, částky, podmínky a délku plnění s výdaji, závazky, rezervou a příjmem, který by domácnosti zůstal."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "expertNote",
+          "title": "Nižší sazba sama o sobě neprokazuje úsporu",
+          "text": "Při konsolidaci porovnávám také RPSN, poplatky, celkovou částku k zaplacení a délku splácení. Nižší měsíční splátka může vzniknout i prodloužením úvěru."
+        }
+      ]
+    },
+    {
+      "id": "pripad-klienta-ktery-mel-vsechno",
+      "eyebrow": "PŘÍPAD Z PRAXE",
+      "title": "Co ukázala společná kontrola smluv",
+      "intro": "Skutečný anonymizovaný případ z mé praxe ukazuje, proč má smysl posuzovat smlouvy společně.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "caseStudy",
+          "context": "Klientovi bylo 34 let. Měl příjem, životní pojištění, investice, spoření i doplňkové penzijní spoření a považoval své finance za vyřešené.",
+          "initialState": [
+            "Investoval 5 000 Kč měsíčně a současně splácel spotřebitelský úvěr se zůstatkem 193 000 Kč a sazbou 8,4 %.",
+            "Rezerva byla malá. Životní pojištění obsahovalo investiční složku a převážně úrazová krytí; pro invaliditu měl sjednáno 300 000 Kč pro každý stupeň."
+          ],
+          "problem": [
+            "Peníze na auto plánované přibližně za dva roky byly smíchané s dlouhodobými penězi v dynamické strategii.",
+            "Ochrana příjmu neodpovídala jeho potřebám. Investice byly úzce zaměřené a nevyužíval příspěvek zaměstnavatele 600 Kč měsíčně."
+          ],
+          "analysis": "Porovnal jsem účel smluv s rozpočtem a cíli klienta. Bylo potřeba oddělit krátkodobé peníze, prověřit náklady dluhu a sladit ochranu příjmu s jeho závazky.",
+          "whatChanged": [
+            "Úvěr jsme konsolidovali se sazbou 5 %. Upravili jsme ochranu příjmu, odstranili investiční složku pojištění a navýšili rezervu.",
+            "Peníze na auto jsme oddělili, dlouhodobé investice více rozložili a upravili penzijní strategii. Klient začal využívat příspěvek zaměstnavatele 600 Kč měsíčně."
+          ],
+          "result": [
+            "Klient měl oddělené peníze podle účelu a termínu a věděl, jak jednotlivé smlouvy zapadají do jeho plánu.",
+            "Ochrana příjmu vycházela z jeho výdajů a závazků; krátkodobý cíl už nesdílel stejnou strategii s dlouhodobými investicemi."
+          ],
+          "takeaway": "Podstatou změny bylo sladit dluh, rezervu, ochranu příjmu a cíle tohoto klienta. Stejný postup nemusí být vhodný pro jinou domácnost."
+        },
+        {
+          "type": "expertNote",
+          "title": "Jak číst uvedené částky",
+          "text": "Jde o údaje tohoto případu, nikoli o aktuální nabídku. Pokles sazby z 8,4 % na 5 % sám nevyčísluje celkovou úsporu: ta závisí také na poplatcích a délce splácení."
+        }
+      ]
+    },
+    {
+      "id": "kdy-nic-nemenit",
+      "eyebrow": "CO ZACHOVAT",
+      "title": "Dobrý plán neznamená všechno zrušit",
+      "intro": "Změnu navrhuji až po porovnání přínosu, nákladů a toho, o co byste mohli přijít.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "decision",
+          "branches": [
+            {
+              "if": "Smlouva plní svůj účel",
+              "then": "Ponechat ji.",
+              "check": "Ujasníme si její místo v plánu a kdy ji znovu zkontrolovat."
+            },
+            {
+              "if": "Vyhovuje produkt, ale nesedí nastavení",
+              "then": "Prověřit úpravu.",
+              "check": "Může stačit změnit částku, rozsah krytí nebo strategii. Nejdřív ověříme podmínky a náklady."
+            },
+            {
+              "if": "Současné řešení potřebám neodpovídá",
+              "then": "Porovnat dostupné možnosti.",
+              "check": "Včetně zachování části původního řešení a důsledků jeho ukončení. Nová smlouva musí mít konkrétní přínos."
+            }
+          ]
+        },
+        {
+          "type": "expertNote",
+          "title": "U pojištění nejdřív prověřit náhradu",
+          "text": "Při změně pojištění může záležet i na současném zdravotním stavu a nových podmínkách krytí. Původní smlouvu proto nerušte před prověřením náhrady. U investičního životního pojištění zohledněte také náklady ukončení a případné odkupné."
+        }
+      ]
+    },
+    {
+      "id": "mate-plan-nebo-jen-smlouvy",
+      "eyebrow": "PRAKTICKÁ PŘÍPRAVA",
+      "title": "Jak začít kontrolu vlastních financí",
+      "intro": "Než budete měnit trvalé příkazy nebo smlouvy, připravte si tři věci.",
+      "rail": null,
+      "blocks": [
+        {
+          "type": "checklist",
+          "items": [
+            {
+              "title": "Přehled smluv a plateb",
+              "description": "Smlouvy, aktuální výpisy a splátkové kalendáře. Ke každé pravidelné platbě připište, čemu má sloužit; nejasné položky označte."
+            },
+            {
+              "title": "Rozpočet a dostupné peníze",
+              "description": "Orientační měsíční příjmy a výdaje, nepravidelné platby a přehled rezervy. Poznamenejte, které peníze můžete použít hned."
+            },
+            {
+              "title": "Cíle a otevřené otázky",
+              "description": "Co chcete řešit, přibližně kdy a za kolik. Přidejte očekávané životní změny i to, co vám na současném řešení vyhovuje."
+            }
+          ]
+        },
+        {
+          "type": "nextAction",
+          "title": "Projděme vaše finance jako celek",
+          "paragraphs": [
+            "Na úvodním hovoru spolu probereme, co chcete řešit, a domluvíme se, které podklady připravit ke společné kontrole."
+          ],
+          "action": {
+            "label": "Domluvit úvodní hovor",
+            "intent": "open-contact-or-screening-flow"
+          }
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "title": "Plán vám má usnadnit další rozhodnutí",
+    "paragraphs": [
+      "Výsledkem má být srozumitelný přehled toho, co ponechat, co upravit a proč. Když se změní příjem, rodina nebo bydlení, máte se k čemu vrátit a víte, které části znovu prověřit."
+    ]
+  },
+  "relatedTopics": [
+    {
+      "topic": "V jakém pořadí řešit osobní finance?",
+      "slug": "v-jakem-poradi-resit-osobni-finance",
+      "reason": "Jak určit priority podle situace domácnosti a navázat jednotlivé kroky."
+    },
+    {
+      "topic": "Kolik má mít domácnost v rezervě?",
+      "slug": "kolik-ma-mit-domacnost-v-rezerve",
+      "reason": "Jak odvodit rezervu od výdajů, příjmů a dostupných peněz."
+    },
+    {
+      "topic": "Peníze na rezervu, bydlení a důchod nemají být v jednom balíku",
+      "slug": "penize-na-rezervu-bydleni-a-duchod-nemaji-byt-v-jednom-baliku",
+      "reason": "Jak oddělit peníze podle účelu a doby, kdy je budete potřebovat."
+    }
+  ],
+  "editorial": {
+    "contentStatus": "review-ready",
+    "sourceBasis": "Rozhovorové odpovědi Davida Pokorného, téma 1, strany 1–5 zdrojového dokumentu. Zadavatel dne 2026-10-05 potvrdil skutečný anonymizovaný případ včetně uvedených detailů.",
+    "needsExternalVerification": false,
+    "review": {
+      "status": "pending"
+    },
+    "verificationItems": [
+      {
+        "id": "01-case-provenance",
+        "title": "Původ skutečného anonymizovaného případu",
+        "instruction": "Uchovat interní potvrzení zadavatele; klientské podklady se nezveřejňují.",
+        "status": "verified",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "pripad-klienta-ktery-mel-vsechno",
+        "claimRef": "pripad-klienta-ktery-mel-vsechno:case-provenance",
+        "evidenceRequired": "Interní potvrzení původu a uvedených detailů zadavatelem.",
+        "sources": [
+          "Potvrzení zadavatele v konverzaci dne 2026-10-05 na otázku k případu 34letého klienta, úvěru 193 000 Kč, sazbě 8,4 → 5 %, investování 5 000 Kč měsíčně a příspěvku zaměstnavatele 600 Kč měsíčně: „Ano všechny případy co najdeš ve všech článcích jsou skutečné a staly se“."
+        ],
+        "verifiedBy": "Zadavatel článku v konverzaci",
+        "verifiedAt": "2026-10-05",
+        "requiresRecheck": false,
+        "note": "Potvrzení vychází z vyjádření zadavatele, nikoli z nezávislého auditu soukromých záznamů. Sazby a částky patří k tomuto případu; délka splácení, poplatky ani celková úspora nebyly doplněny nebo nezávisle ověřeny."
+      }
+    ],
+    "productionNotes": {
+      "videoOpportunities": [
+        {
+          "recommendedPlacement": "Za první sekcí „Co mají vaše smlouvy společně řešit?“",
+          "recommendedTopic": "David během 60–90 sekund vysvětlí rozdíl mezi dobrou smlouvou a finančním plánem na jednoduchém příkladu dvou produktů, které jsou jednotlivě v pořádku, ale dohromady si odporují.",
+          "suggestedDuration": "60–90 sekund",
+          "reason": "Osobní vysvětlení zde posílí autorský způsob uvažování, aniž by narušilo informační tok článku."
+        }
+      ],
+      "interactiveOpportunities": [
+        {
+          "workingTitle": "Mám plán, nebo jen smlouvy?",
+          "recommendedPlacement": "Před závěrečnou praktickou kontrolou",
+          "concept": "Případný budoucí diagnostický přehled účelu smluv, rozpočtu a cílů. Nezavádět bodové hodnocení ani automatická produktová doporučení; konkrétní obsah vyžaduje samostatný návrh.",
+          "renderWhenAvailable": false
+        }
+      ],
+      "verificationRequired": [],
+      "implementationNotes": [
+        "Zachovat H1, slug, fotografie a jejich oříznutí; využít společný renderer bez vlastní kalkulačky nebo screeningu.",
+        "Jediný caseStudy zobrazuje anonymizovaný skutečný případ potvrzený zadavatelem. Nepřidávat duplicitní financialDelta ani klientskou citaci, která nebyla dodána.",
+        "Sazby a částky případu nejsou současná nabídka ani obecný návod. Snížení sazby samo neprokazuje celkovou úsporu.",
+        "Původní názorné porovnání 8 % investičního výnosu a 13 % úroku bylo odstraněno. Posouzení zahrnuje nejistý výnos, úvěrové náklady, rezervu a podmínky.",
+        "CTA používá existující kontaktní intent; nevkládat nový screening ani renderable video bez skutečného podkladu.",
+        "Ověřené obecné zdroje (01-uverove-naklady): https://www.cnb.cz/cs/casto-kladene-dotazy/Co-je-ukazatel-RPSN ; https://mf.gov.cz/cs/financni-trh/spotrebitelske-uvery/spotrebitelsky-uver/rocni-procentni-sazba-nakladu-rpsn",
+        "Ověřené obecné zdroje (01-investicni-principy): https://www.cnb.cz/cs/dohled-financni-trh/ochrana-spotrebitele/desatero-pro-investory/index.html",
+        "Ověřené obecné zdroje (01-zmena-pojisteni): https://www.cnb.cz/cs/dohled-financni-trh/ochrana-spotrebitele/deset-veci-na-ktere-si-dat-pozor-pri-sjednavani-pojisteni/ ; https://www.cnb.cz/cs/dohled-financni-trh/vykon-dohledu/upozorneni-pro-verejnost/upozorneni-pro-verejnost-k-uzavirani-smluv-investicniho-zivotniho-pojisteni/index.html",
+        "Obecné formulace byly při redakční úpravě porovnány s uvedenými primárními zdroji. Původní review.status=pending zůstává beze změny; potvrzení skutečného případu není nezávislým auditem soukromých podkladů."
+      ]
+    }
+  }
+}

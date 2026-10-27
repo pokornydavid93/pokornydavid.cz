@@ -1,0 +1,314 @@
+/* ============================================
+   BASE BUTTON
+============================================ */
+.button {
+  all: unset;
+  box-sizing: border-box;
+  min-height: var(--button-height, var(--button-primary-height, 44px));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--button-gap, var(--space-control, 12px));
+  cursor: pointer;
+  user-select: none;
+  border-radius: var(--button-radius, var(--button-primary-radius));
+  padding: var(--button-padding-block, 14px)
+    var(--button-padding-inline, var(--button-primary-padding-inline, 26px));
+  font-weight: 600;
+  font-size: var(--button-font-size, 16px);
+  line-height: 1;
+  transition:
+    background-color var(--button-primary-transition-duration, 0.2s)
+      var(--button-primary-transition-ease, ease),
+    color var(--button-primary-transition-duration, 0.2s)
+      var(--button-primary-transition-ease, ease),
+    border-color var(--button-primary-transition-duration, 0.2s)
+      var(--button-primary-transition-ease, ease),
+    box-shadow var(--button-primary-transition-duration, 0.25s)
+      var(--button-primary-transition-ease, ease),
+    transform var(--button-primary-transition-duration, 0.2s)
+      var(--button-primary-transition-ease, ease);
+
+  position: relative;
+  touch-action: manipulation;
+}
+
+.button:focus-visible,
+.button[data-demo-state="focus-visible"] {
+  outline: var(--button-focus-width, 2px) solid var(--button-focus-ring);
+  outline-offset: var(--button-focus-offset, 3px);
+}
+
+/* ============================================
+   PRIMARY (solid accent)
+============================================ */
+.primary {
+  background: var(--cta-primary-bg);
+  color: var(--cta-primary-text);
+  border: 1px solid var(--cta-primary-border);
+  box-shadow: var(--cta-primary-shadow);
+}
+.primary:hover,
+.primary[data-demo-state="hover"] {
+  background: var(--cta-primary-bg-hover);
+  color: var(--cta-primary-text-hover);
+  border-color: var(--cta-primary-border-hover);
+  transform: translateY(var(--hover-lift, -1px));
+  box-shadow: var(--cta-primary-shadow-hover);
+}
+
+.primary:active,
+.primary[data-demo-state="active"] {
+  background: var(--cta-primary-bg-active);
+  color: var(--cta-primary-text-active);
+  border-color: var(--cta-primary-border-active);
+  transform: translateY(0);
+  box-shadow: var(--cta-primary-shadow-active);
+}
+
+/* ============================================
+   CTA — soft warmth + invite feeling
+============================================ */
+.cta {
+  position: relative;
+  overflow: hidden;
+  background: var(--cta-primary-bg);
+  color: var(--cta-primary-text);
+  border: 1px solid var(--cta-primary-border);
+  box-shadow: var(--cta-primary-shadow);
+  transition:
+    box-shadow var(--duration-control, 0.28s) var(--ease-standard, ease),
+    color var(--duration-cinematic, 0.9s) var(--ease-standard, ease),
+    transform var(--duration-control, 0.2s) var(--ease-standard, ease);
+  z-index: 0;
+}
+
+.cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--cta-primary-bg-hover);
+  opacity: 0;
+  transition: opacity var(--duration-control, 0.28s) var(--ease-standard, ease);
+  z-index: 0;
+}
+
+.cta:hover {
+  box-shadow: var(--cta-primary-shadow-hover);
+  color: var(--cta-primary-text);
+  transform: translateY(var(--hover-lift, -1px));
+}
+
+.cta:hover::after {
+  opacity: 1;
+}
+
+.cta:active {
+  background: var(--cta-primary-bg-active);
+  box-shadow: var(--cta-primary-shadow-active);
+  transform: translateY(0);
+}
+
+.cta:active::after {
+  opacity: 0;
+}
+
+.cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- CTA ICON CLICK EFFECT --- */
+.cta .iconRight {
+  margin-left: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* při hoveru na CTA ikonka „klikne“ */
+.cta:hover .iconRight {
+  animation: cta-icon-click var(--duration-composed, 500ms)
+    cubic-bezier(.26,.78,.48,1.18) forwards;
+}
+
+@keyframes cta-icon-click {
+  0% {
+    transform:  scale(1);
+  }
+  35% {
+    transform: scale(0.2);  /* stlačení */
+  }
+  100% {
+    transform: scale(1);  /* skončí lehce vepředu */
+  }
+}
+
+/* ============================================
+   SECONDARY — čistší outline + lux look
+============================================ */
+.secondary {
+  background: var(--cta-secondary-bg);
+  border: var(--button-secondary-border-width, 1.4px) solid
+    var(--cta-secondary-border);
+  color: var(--cta-secondary-text);
+  backdrop-filter: blur(var(--button-secondary-backdrop, 5px));
+  box-shadow: var(--button-secondary-elevation);
+  transition:
+    background-color var(--duration-control, 260ms) var(--ease-standard, ease),
+    border-color var(--duration-control, 260ms) var(--ease-standard, ease),
+    color var(--duration-control, 260ms) var(--ease-standard, ease),
+    box-shadow var(--duration-control, 260ms) var(--ease-standard, ease),
+    transform var(--duration-control, 260ms) var(--ease-standard, ease);
+}
+
+/* hover — jasněji, ale stále ne jako CTA */
+.secondary:hover,
+.secondary[data-demo-state="hover"] {
+  background: var(--cta-secondary-bg-hover);
+  color: var(--cta-secondary-text-hover);
+  border-color: var(--cta-secondary-border-hover);
+  transform: translateY(calc(var(--hover-lift, -1px) * 2));
+  box-shadow: var(--button-secondary-elevation-hover);
+}
+
+.secondary:active,
+.secondary[data-demo-state="active"] {
+  background: var(--cta-secondary-bg-active);
+  color: var(--cta-secondary-text-active);
+  border-color: var(--cta-secondary-border-active);
+  transform: translateY(0);
+  box-shadow: var(--button-secondary-elevation);
+}
+
+/* ikona šťouchne dopředu — jako CTO light */
+.secondary .iconRight {
+  margin-left: var(--space-8, 8px);
+  transition: transform var(--duration-control, 260ms)
+    var(--ease-standard, ease);
+}
+
+.secondary:hover .iconRight,
+.secondary[data-demo-state="hover"] .iconRight {
+  transform: translateX(4px);
+}
+/* ============================================
+   GHOST (transparent, used on dark bg)
+============================================ */
+.ghost {
+  background: transparent;
+  color: var(--text-on-dark-primary);
+}
+.ghost:hover {
+  background: var(--cta-secondary-bg-hover);
+  transform: translateY(var(--hover-lift, -1px));
+}
+
+/* ============================================
+   SIZES
+============================================ */
+.sm {
+  --button-height: var(--control-height-small, 40px);
+  --button-padding-block: 10px;
+  --button-padding-inline: 18px;
+  --button-font-size: 14px;
+  --button-icon-size: 16px;
+}
+
+.md {
+  --button-height: var(--control-height-medium, 44px);
+  --button-padding-block: 14px;
+  --button-padding-inline: var(--button-primary-padding-inline, 26px);
+  --button-font-size: 16px;
+  --button-icon-size: var(--button-primary-icon-size, 18px);
+}
+
+.lg {
+  --button-height: var(--control-height-large, 52px);
+  --button-padding-block: 18px;
+  --button-padding-inline: 32px;
+  --button-font-size: 18px;
+  --button-icon-size: 22px;
+}
+
+/* ============================================
+   ICONS
+============================================ */
+.iconLeft,
+.iconRight {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: var(--button-icon-size, var(--icon-size-control, 18px));
+  height: var(--button-icon-size, var(--icon-size-control, 18px));
+  align-items: center;
+  justify-content: center;
+  transform: translateY(1px);
+}
+
+.iconLeft > svg,
+.iconRight > svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: var(--button-icon-stroke, var(--stroke-icon-strong, 2.1));
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   LOADING
+============================================ */
+.loading {
+  pointer-events: none;
+  cursor: progress;
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  color: var(--button-disabled-text);
+  background: var(--button-disabled-bg);
+  border-color: var(--button-disabled-border);
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.button:disabled:hover,
+.button[aria-disabled="true"]:hover,
+.button:disabled:active,
+.button[aria-disabled="true"]:active {
+  color: var(--button-disabled-text);
+  background: var(--button-disabled-bg);
+  border-color: var(--button-disabled-border);
+  box-shadow: none;
+  transform: none;
+}
+
+.secondary:disabled,
+.secondary[aria-disabled="true"],
+.secondary:disabled:hover,
+.secondary[aria-disabled="true"]:hover,
+.secondary:disabled:active,
+.secondary[aria-disabled="true"]:active {
+  color: var(--cta-secondary-text-disabled);
+  background: var(--cta-secondary-bg-disabled);
+  border-color: var(--cta-secondary-border-disabled);
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--button-loading-track);
+  border-top-color: var(--button-loading-indicator);
+  border-radius: var(--radius-circle);
+  animation: spin var(--duration-loading-loop, 700ms) var(--ease-linear, linear)
+    infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

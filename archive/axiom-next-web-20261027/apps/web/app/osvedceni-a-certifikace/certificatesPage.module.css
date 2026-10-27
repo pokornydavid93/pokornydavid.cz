@@ -1,0 +1,482 @@
+.page {
+  --cert-surface: var(--surface-section-dark);
+  --cert-surface-card: var(--surface-card-dark);
+  --cert-surface-card-hover: var(--surface-card-dark-hover);
+  --cert-border: var(--border-subtle);
+  --cert-border-medium: var(--border-medium);
+  --cert-border-emphasis: var(--border-emphasis-subtle);
+  --cert-border-active: var(--border-emphasis);
+  --cert-text: var(--text-primary);
+  --cert-text-secondary: var(--text-secondary);
+  --cert-text-muted: var(--text-muted);
+  --cert-emphasis: var(--text-emphasis);
+  --cert-icon: var(--icon-emphasis);
+  --cert-badge-surface: var(--surface-action-soft);
+  --cert-badge-text: var(--text-on-light-primary);
+  --cert-badge-border: var(--border-on-light-subtle);
+  --cert-shadow: var(--surface-shadow-soft);
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  overflow: hidden;
+  color: var(--cert-text);
+  background: var(--cert-surface-card);
+}
+
+.page::before,
+.page::after,
+.ambient {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+}
+
+.page::before {
+  opacity: 0.24;
+  background-image: none;
+  background-size: 96px 96px;
+  mask-image: none;
+}
+
+.page::after {
+  background: var(--surface-section-dark);
+}
+
+.ambient {
+  inset: -18% -12% auto -12%;
+  height: 58%;
+  opacity: 0.7;
+  background: var(--surface-section-dark);
+  display: none;
+  filter: none;
+}
+
+.shell {
+  position: relative;
+  width: min(1180px, calc(100% - 44px));
+  margin: 0 auto;
+  padding: clamp(134px, 10vw, 172px) 0 clamp(84px, 9vw, 118px);
+}
+
+.hero {
+  display: grid;
+  max-width: 860px;
+  gap: 18px;
+  margin-bottom: clamp(30px, 4.2vw, 54px);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--cert-emphasis);
+  font-size: clamp(0.88rem, 0.85vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+
+.hero h1 {
+  max-width: 840px;
+  margin: 0;
+  color: var(--text-on-dark-primary);
+  font-size: clamp(40px, 4.6vw, 74px);
+  font-weight: 850;
+  line-height: 1.03;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.hero h1::first-line,
+.documentsPanel h2::first-line {
+  color: var(--cert-emphasis);
+}
+
+.hero p:not(.eyebrow) {
+  max-width: 700px;
+  margin: 0;
+  color: var(--cert-text-secondary);
+  font-size: clamp(16px, 1.2vw, 19px);
+  font-weight: 560;
+  line-height: 1.6;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  border-block-start: var(--border-width-hairline) solid var(--cert-border-emphasis);
+}
+
+.verificationCard {
+  position: relative;
+  display: grid;
+  min-height: 0;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-content: start;
+  align-items: start;
+  gap: var(--space-24);
+  overflow: visible;
+  padding: var(--space-32) 0;
+  border-block-end: var(--border-width-hairline) solid var(--cert-border-emphasis);
+  border-inline: 0;
+  border-radius: var(--radius-none);
+  background: transparent;
+  box-shadow: var(--shadow-none);
+  backdrop-filter: none;
+}
+
+.verificationCard::before {
+  display: none;
+}
+
+.verificationCard:hover::before {
+  display: none;
+}
+
+.verificationCard > * {
+  position: relative;
+}
+
+.iconTile,
+.documentIcon,
+.emptyState svg {
+  display: inline-grid;
+  place-items: center;
+  border: 0;
+  border-radius: var(--radius-none);
+  color: var(--cert-icon);
+  background: transparent;
+  box-shadow: var(--shadow-none);
+}
+
+.iconTile {
+  width: var(--space-32);
+  height: var(--space-32);
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.iconTile svg,
+.documentIcon svg,
+.emptyState svg {
+  width: 22px;
+  height: 22px;
+}
+
+.statusBadge,
+.pdfBadge,
+.todoState {
+  width: fit-content;
+  border: 0;
+  border-radius: var(--radius-none);
+  color: var(--cert-emphasis);
+  background: transparent;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.statusBadge {
+  padding: var(--space-8) 0 0;
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+
+.verificationCard h2 {
+  margin: 0;
+  color: var(--text-on-dark-primary);
+  grid-column: 3 / 6;
+  grid-row: 1;
+  font-size: var(--type-subheading-size);
+  font-weight: 850;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.verificationCard p {
+  margin: 0;
+  grid-column: 6 / 10;
+  grid-row: 1;
+  color: var(--cert-text-secondary);
+  font-size: 14px;
+  font-weight: 580;
+  line-height: 1.55;
+}
+
+.cardLink,
+.documentLink {
+  display: inline-flex;
+  align-items: center;
+  color: var(--cert-emphasis);
+  font-weight: 850;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.cardLink {
+  width: fit-content;
+  gap: 7px;
+  margin-top: var(--space-4);
+  grid-column: 10 / -1;
+  grid-row: 1;
+  justify-self: end;
+  font-size: 13px;
+}
+
+.cardLink svg,
+.documentLink > svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 180ms ease;
+}
+
+.cardLink:hover,
+.documentLink:hover,
+.documentLink:focus-visible {
+  color: var(--cert-text);
+}
+
+.cardLink:focus-visible,
+.documentLink:focus-visible {
+  outline: var(--focus-width-standard) solid var(--focus-ring);
+  outline-offset: var(--focus-offset-standard);
+}
+
+.cardLink:hover svg,
+.cardLink:focus-visible svg,
+.documentLink:hover > svg,
+.documentLink:focus-visible > svg {
+  transform: translate(3px, -3px);
+}
+
+.todoState {
+  display: inline-flex;
+  padding: 8px 10px;
+}
+
+.documentsPanel {
+  margin-top: clamp(30px, 4.4vw, 56px);
+  overflow: visible;
+  padding: var(--space-40) 0 0;
+  border-block-start: var(--border-width-emphasis) solid var(--cert-border-emphasis);
+  border-inline: 0;
+  border-radius: var(--radius-none);
+  background: transparent;
+  box-shadow: var(--shadow-none);
+  backdrop-filter: none;
+}
+
+.panelHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.62fr);
+  gap: clamp(22px, 4vw, 54px);
+  align-items: end;
+  padding-bottom: clamp(22px, 2.8vw, 32px);
+  border-bottom: 1px solid var(--cert-border);
+}
+
+.panelHeader h2 {
+  margin: 12px 0 0;
+  color: var(--text-on-dark-primary);
+  font-size: clamp(30px, 3.8vw, 54px);
+  font-weight: 850;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.panelHeader p:not(.eyebrow) {
+  max-width: 520px;
+  margin: 0;
+  color: var(--cert-text-secondary);
+  font-size: 15px;
+  font-weight: 560;
+  line-height: 1.58;
+}
+
+.documentList {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  padding: clamp(20px, 2.6vw, 28px) 0 0;
+  margin: 0;
+  list-style: none;
+}
+
+.documentLink {
+  gap: 14px;
+  min-height: 86px;
+  padding: var(--space-20) 0;
+  border-block-end: var(--border-width-hairline) solid var(--cert-border-emphasis);
+  border-inline: 0;
+  border-radius: var(--radius-none);
+  background: transparent;
+  box-shadow: var(--shadow-none);
+}
+
+.documentIcon {
+  flex: 0 0 auto;
+  width: var(--space-32);
+  height: var(--space-32);
+}
+
+.documentLink strong,
+.documentLink small {
+  display: block;
+}
+
+.documentLink strong {
+  color: var(--text-on-dark-primary);
+  font-size: 15px;
+  font-weight: 820;
+  line-height: 1.18;
+}
+
+.documentLink small {
+  margin-top: 5px;
+  color: var(--cert-text-muted);
+  font-size: 12px;
+  font-weight: 590;
+  line-height: 1.35;
+}
+
+.pdfBadge {
+  flex: 0 0 auto;
+  padding: 7px 9px;
+  margin-left: auto;
+  letter-spacing: 0.04em;
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid var(--cert-border-emphasis);
+  border-radius: 13px;
+  background: var(--cert-surface-card-hover);
+}
+
+.emptyState svg {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+}
+
+.emptyState p {
+  margin: 0;
+  color: var(--cert-text-secondary);
+  font-size: 14px;
+  font-weight: 680;
+}
+
+@media (width <= 1100px) {
+  .cardGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .verificationCard {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    row-gap: var(--space-10);
+  }
+
+  .iconTile {
+    grid-column: 1;
+    grid-row: 1 / 5;
+  }
+
+  .statusBadge {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .verificationCard h2 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .verificationCard p {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .cardLink {
+    grid-column: 3;
+    grid-row: 2 / 4;
+    align-self: center;
+  }
+}
+
+@media (width <= 820px) {
+  .shell {
+    width: min(100% - 32px, 720px);
+    padding-top: 118px;
+  }
+
+  .panelHeader {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .documentList {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .verificationCard {
+    grid-template-columns: auto minmax(0, 1fr);
+    padding: var(--space-24) 0;
+  }
+
+  .cardLink {
+    grid-column: 2;
+    grid-row: 4;
+    justify-self: start;
+  }
+}
+
+@media (width <= 560px) {
+  .shell {
+    width: min(100% - 28px, 480px);
+    padding-bottom: 64px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 10.6vw, 48px);
+  }
+
+  .cardGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .verificationCard {
+    min-height: 0;
+  }
+
+  .documentsPanel {
+    padding: var(--space-32) 0 0;
+  }
+
+  .documentLink {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .pdfBadge {
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .verificationCard::before,
+  .cardLink,
+  .documentLink,
+  .cardLink svg,
+  .documentLink > svg {
+    transition: none;
+  }
+}

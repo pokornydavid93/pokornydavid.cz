@@ -1,0 +1,89 @@
+.frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--media-frame-radius, var(--radius-media));
+  background: var(--surface-card-dark);
+  box-shadow: var(--media-frame-elevation, var(--shadow-none, none));
+  isolation: isolate;
+}
+
+.frame :where(img, video, picture, canvas, iframe) {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.frame :where(img, video, canvas) {
+  object-fit: cover;
+}
+
+.bordered {
+  border: var(--media-frame-border-width, var(--border-width-structural, 1px))
+    solid var(--border-subtle);
+}
+
+.elevated {
+  --media-frame-elevation: var(--shadow-media);
+}
+
+.interactive:focus-visible {
+  outline: var(--focus-width-inset, 2px) solid var(--button-focus-ring);
+  outline-offset: var(--focus-offset-inset, -6px);
+}
+
+.ratioHeroPortrait {
+  aspect-ratio: var(--ratio-hero-portrait, 0.79);
+}
+
+.ratioCinematicDevice {
+  aspect-ratio: var(--ratio-cinematic-device, 0.79);
+}
+
+.ratioVideoLandscape {
+  aspect-ratio: var(--ratio-video-landscape, 16 / 9);
+}
+
+.ratioVideoPortrait {
+  aspect-ratio: var(--ratio-video-portrait, 9 / 16);
+}
+
+.ratioEditorialPortrait {
+  aspect-ratio: var(--ratio-editorial-portrait, 4 / 5);
+}
+
+.ratioArticleFeature {
+  aspect-ratio: var(--ratio-article-feature, 16 / 8.55);
+}
+
+.ratioSquare {
+  aspect-ratio: 1;
+}
+
+.ratioCustom {
+  aspect-ratio: var(--media-frame-custom-ratio, 16 / 9);
+}
+
+.radiusMedia {
+  --media-frame-radius: var(--radius-media);
+}
+
+.radiusCard {
+  --media-frame-radius: var(--radius-card);
+}
+
+.radiusPanel {
+  --media-frame-radius: var(--radius-panel);
+}
+
+.radiusCinematic {
+  --media-frame-radius: var(--radius-cinematic-outer);
+}
+
+.radiusPill {
+  --media-frame-radius: var(--radius-pill);
+}
+
+.radiusNone {
+  --media-frame-radius: var(--radius-none);
+}

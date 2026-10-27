@@ -1,0 +1,83 @@
+.root {
+  --trust-carousel-surface: var(--surface-card-dark);
+  --trust-carousel-surface-hover: var(--surface-card-dark-hover);
+  --trust-carousel-border: var(--border-emphasis-subtle);
+  --trust-carousel-border-active: var(--border-emphasis);
+  --trust-carousel-text: var(--text-primary);
+  --trust-carousel-shadow: var(--surface-shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.viewport {
+  align-items: center;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  margin-left: -12px;
+}
+
+.slide {
+  flex: 0 0 50%;
+  padding-left: 12px;
+}
+
+.slideInner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  will-change: transform, opacity;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: var(--radius-circle);
+  border: 1px solid var(--trust-carousel-border);
+  background: var(--trust-carousel-surface);
+  color: var(--trust-carousel-text);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.arrowLeft {
+  left: 25%; /* krásně sedí DO prostoru mezi slidama */
+}
+
+.arrowRight {
+  right: 25%;
+}
+
+.arrow:hover {
+  background: var(--trust-carousel-surface-hover);
+  border-color: var(--trust-carousel-border-active);
+  box-shadow: 0 8px 18px var(--trust-carousel-shadow);
+  transform: translateY(-50%) scale(1.05);
+}

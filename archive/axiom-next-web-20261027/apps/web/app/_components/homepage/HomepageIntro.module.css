@@ -1,0 +1,381 @@
+:global(html:is(
+      [data-home-intro-state="pending"],
+      [data-home-intro-state="active"],
+      [data-home-intro-state="fallback-exit"]
+    ) [data-cinematic-home-hero]:not([data-hero-reveal-started])
+    :is(
+      [data-hero-heading-line-inner],
+      [data-hero-lead],
+      [data-hero-actions],
+      [data-hero-portrait]
+    )),
+:global(html:is(
+      [data-home-intro-state="pending"],
+      [data-home-intro-state="active"],
+      [data-home-intro-state="fallback-exit"]
+    ) [data-cinematic-home-hero]:not([data-hero-reveal-started]) [data-header-instance="hero"]) {
+  clip-path: inset(0 0 100% 0);
+  visibility: hidden;
+  opacity: 0;
+}
+
+:global(html[data-home-intro-state="pending"]),
+:global(html[data-home-intro-state="active"]),
+:global(html[data-home-intro-state="fallback-exit"]) {
+  overflow-y: hidden;
+}
+
+:global(html[data-home-intro-state="skip"]) .intro,
+:global(html[data-home-intro-state="fallback-complete"]) .intro {
+  display: none;
+}
+
+:global(html[data-home-intro-state="fallback-exit"]) .intro {
+  pointer-events: none;
+}
+
+:global(html[data-home-intro-state="fallback-exit"]) .lockup {
+  animation: introFallbackLockupOut 220ms ease-in both;
+}
+
+:global(html[data-home-intro-state="fallback-exit"]) .veil {
+  animation: introFallbackVeilFade 320ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: var(--layer-fullscreen-experience);
+  min-block-size: 100svh;
+  padding:
+    max(var(--space-24), env(safe-area-inset-top))
+    max(var(--space-24), env(safe-area-inset-right))
+    max(var(--space-24), env(safe-area-inset-bottom))
+    max(var(--space-24), env(safe-area-inset-left));
+  display: grid;
+  place-items: center;
+  overflow: clip;
+  isolation: isolate;
+  color: var(--text-on-dark-primary);
+  background: transparent;
+  overscroll-behavior: contain;
+  touch-action: manipulation;
+}
+
+.veil {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  overflow: visible;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+}
+
+.veilSurface {
+  fill: var(--hero-cinematic-stage, #080a09);
+}
+
+.apertureMask {
+  mask-type: luminance;
+}
+
+.apertureMaskBase {
+  fill: #fff;
+  forced-color-adjust: none;
+}
+
+.apertureScale {
+  opacity: 0;
+}
+
+.apertureShape {
+  fill: #000;
+  fill-rule: nonzero;
+  stroke: none;
+  forced-color-adjust: none;
+}
+
+.apertureBorderScale {
+  opacity: 0;
+}
+
+.apertureBorderShape {
+  fill: none;
+  stroke: var(--brand-lime);
+  stroke-width: 1.4px;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  vector-effect: non-scaling-stroke;
+  shape-rendering: geometricPrecision;
+  forced-color-adjust: none;
+}
+
+.lockup {
+  --intro-mark-size: clamp(6.25rem, 8vw, 7.5rem);
+
+  position: relative;
+  z-index: 2;
+  inline-size: var(--intro-mark-size);
+  display: grid;
+  place-items: center;
+}
+
+.ambientBloom {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  z-index: 0;
+  inline-size: clamp(22rem, 68vmin, 46rem);
+  aspect-ratio: 1;
+  background: radial-gradient(
+    circle,
+    rgb(var(--brand-lime-rgb) / 8%) 0%,
+    rgb(var(--brand-lime-rgb) / 2.8%) 42%,
+    transparent 72%
+  );
+  opacity: 0.24;
+  pointer-events: none;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: opacity;
+}
+
+.markStage {
+  position: relative;
+  z-index: 1;
+  inline-size: var(--intro-mark-size);
+  aspect-ratio: 175.60001 / 186.3;
+  opacity: 1;
+  transform: translateZ(0) scale(0.985);
+  transform-origin: 50% 50%;
+}
+
+.logoMark {
+  position: absolute;
+  inset: 0;
+  inline-size: 100% !important;
+  block-size: 100% !important;
+  color: var(--brand-lime) !important;
+}
+
+.logoGhost {
+  position: absolute;
+  inset: 0;
+  inline-size: 100% !important;
+  block-size: 100% !important;
+  color: var(--brand-lime) !important;
+  opacity: 0.24;
+  filter:
+    drop-shadow(0 1px 0 rgb(0 0 0 / 32%))
+    drop-shadow(0 -0.45px 0 rgb(var(--brand-lime-rgb) / 12%));
+}
+
+.logoEnergy {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.logoPath {
+  fill: currentColor;
+  fill-opacity: 1;
+  stroke: none;
+}
+
+.logoMask {
+  mask-type: alpha;
+}
+
+.logoRevealGuide {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 28;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  forced-color-adjust: none;
+  animation: none;
+}
+
+.logoHeadGuide {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 31;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  forced-color-adjust: none;
+}
+
+.logoHead,
+.logoAfterglow {
+  fill: var(--brand-lime);
+  stroke: none;
+  opacity: 0;
+}
+
+.logoHead {
+  fill: var(--brand-lime);
+  filter:
+    brightness(1.5)
+    drop-shadow(0 0 2.2px rgb(var(--brand-lime-rgb) / 64%));
+  shape-rendering: geometricPrecision;
+}
+
+.logoAfterglow {
+  filter: blur(3.6px);
+}
+
+.cuttingHead {
+  opacity: 0;
+  mix-blend-mode: screen;
+  transform-origin: 0 0;
+  will-change: transform, opacity;
+}
+
+.spark {
+  opacity: 0;
+  transform-origin: 0 0;
+}
+
+.cuttingHalo {
+  fill: rgb(var(--brand-lime-rgb) / 44%);
+  filter: blur(3.4px);
+}
+
+.cuttingRing {
+  fill: none;
+  stroke: rgb(var(--brand-lime-rgb) / 78%);
+  stroke-width: 0.9;
+  vector-effect: non-scaling-stroke;
+}
+
+.cuttingCore {
+  fill: #fffde8;
+  stroke: rgb(var(--brand-lime-rgb) / 100%);
+  stroke-width: 0.7;
+  filter: drop-shadow(0 0 3.6px rgb(var(--brand-lime-rgb) / 100%));
+}
+
+.sparkTrail {
+  fill: none;
+  stroke: #fffedb;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.sparkEmber {
+  fill: #fffef0;
+}
+
+.spark:nth-child(4n + 2) .sparkTrail {
+  stroke: var(--brand-lime);
+  stroke-width: 1.5;
+}
+
+.spark:nth-child(4n + 2) .sparkEmber {
+  fill: var(--brand-lime);
+}
+
+@keyframes introFallbackLockupOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes introFallbackVeilFade {
+  to {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .intro {
+    padding-inline:
+      max(var(--space-20), env(safe-area-inset-left))
+      max(var(--space-20), env(safe-area-inset-right));
+  }
+
+  .lockup {
+    --intro-mark-size: clamp(5.75rem, 25vw, 6.75rem);
+  }
+}
+
+@media (max-height: 520px) and (orientation: landscape) {
+  .lockup {
+    --intro-mark-size: 4.25rem;
+  }
+}
+
+@media (forced-colors: active) {
+  .intro {
+    color: CanvasText;
+    background: transparent;
+  }
+
+  .veilSurface {
+    fill: Canvas;
+  }
+
+  .logoPath {
+    color: CanvasText !important;
+    fill: CanvasText;
+  }
+
+  .logoHead,
+  .logoAfterglow,
+  .cuttingHead,
+  .spark,
+  .ambientBloom {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro[data-home-intro-play="true"] .logoRevealGuide {
+    opacity: 0;
+    animation: none;
+  }
+
+  .logoMark,
+  .markStage {
+    animation: none;
+    filter: none;
+  }
+
+  .markStage {
+    opacity: 1;
+    transform: none;
+    will-change: auto;
+  }
+
+  .logoGhost {
+    opacity: 0;
+    filter: none;
+  }
+
+  .logoPath {
+    fill-opacity: 1;
+    mask: none;
+    stroke: none;
+  }
+
+  .apertureScale {
+    display: none;
+    will-change: auto;
+  }
+
+  .apertureBorderScale {
+    display: none;
+    will-change: auto;
+  }
+
+  :global(html[data-home-intro-state="fallback-exit"]) .veil {
+    animation: introFallbackVeilFade 80ms linear both;
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "snapshotDate": "2026-10-27",
+  "node": "22.16.0",
+  "pnpm": "11.24.0",
+  "privateDependencies": {
+    "packageCount": 8,
+    "trackedSourceFiles": 797,
+    "realSshSparseRestore": true,
+    "aggregateSha256ChecksPassed": true,
+    "mutatedPrivateSourceRejected": true
+  },
+  "frozenInstallPassed": true,
+  "productionBuild": {
+    "passed": true,
+    "fixture": "Isolated GET-only loopback API using public projections of 12 archived article JSON documents and the unchanged authored offering catalog",
+    "backendRequests": 91,
+    "allBackendRequestsReadOnly": true,
+    "productionSecretsUsed": false,
+    "productionGuardUnchanged": true
+  },
+  "releaseSafetyUnitTests": {
+    "passed": 21,
+    "failed": 0
+  },
+  "standaloneHttp": {
+    "passed": 7,
+    "allStatus200": true,
+    "paths": [
+      "/",
+      "/sluzby/",
+      "/clanky/",
+      "/clanky/konec-fixace-hypoteky/",
+      "/favicon.svg",
+      "/who-home.avif",
+      "/_next/static/media/5c285b27cdda1fe8-s.p.2_mbdogr7ni8i.woff2"
+    ]
+  },
+  "sourceIdentity": {
+    "files": 806,
+    "authoredPublicMediaFiles": 64,
+    "allCapturedBytesIdentical": true,
+    "gitExecutableFlagsPreserved": true,
+    "nextGeneratedTypeShimRestoredBeforeCommit": true
+  },
+  "limits": [
+    "A real published article/offering API is required for an actual restored deployment; isolated fixture success does not verify a live production backend.",
+    "Private Axiom source access is required; shared SDK source is gitignored and absent from the public commit.",
+    "Original source modes are recorded as provenance; Git preserves executable flags, not full POSIX ownership/permission metadata."
+  ]
+}

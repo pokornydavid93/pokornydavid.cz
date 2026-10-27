@@ -1,0 +1,416 @@
+.root {
+  --dev-surface: var(--surface-section-dark);
+  --dev-surface-panel: var(--surface-card-dark);
+  --dev-surface-control: var(--surface-card-dark);
+  --dev-surface-control-hover: var(--surface-card-dark-hover);
+  --dev-surface-control-active: var(--surface-card-dark-hover);
+  --dev-scrim: var(--overlay-image-scrim);
+  --dev-border-subtle: var(--border-subtle);
+  --dev-border-medium: var(--border-medium);
+  --dev-border-emphasis: var(--border-emphasis-subtle);
+  --dev-border-active: var(--border-emphasis);
+  --dev-text: var(--text-primary);
+  --dev-text-secondary: var(--text-secondary);
+  --dev-text-muted: var(--text-muted);
+  --dev-text-emphasis: var(--text-emphasis);
+  --dev-focus-ring: var(--button-focus-ring);
+  --dev-inset-highlight: var(--shadow-inset);
+  --dev-shadow: var(--surface-shadow-soft);
+  position: fixed;
+  inset: 0;
+  z-index: var(--dev-tools-layer, var(--layer-dev-tools, 9000));
+  pointer-events: none;
+  color: var(--dev-text);
+  font-family: var(--font-base), system-ui, sans-serif;
+}
+
+.fab,
+.iconButton,
+.optionButton,
+.paletteMain,
+.modeButton {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.fab {
+  position: fixed;
+  right: 22px;
+  top: 122px;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--dev-border-emphasis);
+  border-radius: var(--radius-circle);
+  background: var(--dev-surface);
+  box-shadow:
+    var(--dev-inset-highlight),
+    inset 0 -1px 0 var(--dev-shadow),
+    0 18px 42px -28px var(--dev-shadow);
+  backdrop-filter: blur(var(--dev-tools-control-backdrop-blur, 16px));
+  -webkit-backdrop-filter: blur(var(--dev-tools-control-backdrop-blur, 16px));
+  pointer-events: auto;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.fab:hover,
+.fab:focus-visible,
+.root[data-open="true"] .fab {
+  transform: translateY(-1px);
+  border-color: var(--dev-border-active);
+  background: var(--dev-surface);
+  box-shadow:
+    var(--dev-inset-highlight),
+    0 20px 50px -30px var(--dev-shadow),
+    0 0 28px var(--dev-border-emphasis);
+}
+
+.fab svg,
+.iconButton svg,
+.groupHeader svg,
+.optionButton svg {
+  width: 19px;
+  height: 19px;
+  color: var(--dev-text-emphasis);
+}
+
+.scrim {
+  position: fixed;
+  inset: 0;
+  padding: 0;
+  border: 0;
+  background: var(--dev-scrim);
+  opacity: 0;
+  pointer-events: none;
+  appearance: none;
+  transition: opacity 220ms ease;
+}
+
+.root[data-open="true"] .scrim {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(420px, calc(100vw - 18px));
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--dev-border-medium);
+  background: var(--dev-surface);
+  box-shadow:
+    var(--dev-inset-highlight),
+    -32px 0 80px -48px var(--dev-shadow);
+  backdrop-filter: blur(var(--dev-tools-drawer-backdrop-blur, 16px));
+  -webkit-backdrop-filter: blur(var(--dev-tools-drawer-backdrop-blur, 16px));
+  pointer-events: auto;
+  transform: translate3d(102%, 0, 0);
+  opacity: 0.65;
+  transition:
+    transform 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 260ms ease;
+}
+
+.root[data-open="true"] .drawer {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 28px 24px 20px;
+  border-bottom: 1px solid var(--dev-border-subtle);
+}
+
+.kicker {
+  margin: 0 0 9px;
+  color: var(--dev-text-emphasis);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.15em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.drawerHeader h2 {
+  margin: 0;
+  color: var(--dev-text);
+  font-size: 27px;
+  font-weight: 850;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.iconButton {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border: 1px solid var(--dev-border-subtle);
+  border-radius: var(--radius-circle);
+  background: var(--dev-surface-control);
+}
+
+.iconButton:hover,
+.iconButton:focus-visible {
+  border-color: var(--dev-border-emphasis);
+  background: var(--dev-surface-control-hover);
+}
+
+.drawerBody {
+  display: grid;
+  gap: 16px;
+  padding: 18px 18px 28px;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dev-border-emphasis) transparent;
+}
+
+.group {
+  display: grid;
+  gap: 13px;
+  padding: 15px;
+  border: 1px solid var(--dev-border-subtle);
+  border-radius: var(--radius-card);
+  background: var(--dev-surface-panel);
+  box-shadow:
+    var(--dev-inset-highlight),
+    0 18px 44px -38px var(--dev-shadow);
+}
+
+.groupHeader {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.groupHeader > svg {
+  width: 36px;
+  height: 36px;
+  padding: 9px;
+  border: 1px solid var(--dev-border-subtle);
+  border-radius: var(--radius-circle);
+  background: var(--dev-surface-control);
+}
+
+.groupHeader h3 {
+  margin: 0;
+  color: var(--dev-text);
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1.1;
+}
+
+.groupHeader p {
+  margin: 4px 0 0;
+  color: var(--text-on-dark-muted);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.optionList {
+  display: grid;
+  gap: 9px;
+}
+
+.optionButton,
+.paletteCard {
+  border: 1px solid var(--dev-border-subtle);
+  border-radius: var(--radius-card);
+  background: var(--dev-surface-control);
+  color: var(--dev-text-secondary);
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.optionButton {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 13px;
+}
+
+.optionButton:hover,
+.optionButton:focus-visible,
+.paletteCard:hover {
+  border-color: var(--dev-border-emphasis);
+  background: var(--dev-surface-control-hover);
+}
+
+.optionButton[data-active="true"],
+.paletteCard[data-active="true"] {
+  border-color: var(--dev-border-active);
+  background: var(--dev-surface-control-active);
+  box-shadow:
+    var(--dev-inset-highlight),
+    0 0 0 1px var(--dev-border-emphasis);
+}
+
+.optionButton span,
+.paletteMain span:last-child {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.optionButton strong,
+.paletteMain strong {
+  color: var(--dev-text);
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1.15;
+}
+
+.optionButton small,
+.paletteMain small {
+  color: var(--text-on-dark-muted);
+  font-size: 11.5px;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.paletteCard {
+  display: grid;
+  gap: 10px;
+  padding: 11px;
+}
+
+.paletteMain {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  inline-size: 100%;
+}
+
+.paletteMain:focus-visible,
+.modeButton:focus-visible,
+.fab:focus-visible,
+.iconButton:focus-visible,
+.optionButton:focus-visible {
+  outline: 2px solid var(--dev-focus-ring);
+  outline-offset: 3px;
+}
+
+.paletteSwatch {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--dev-border-emphasis);
+  border-radius: var(--radius-circle);
+  background: var(--dev-surface);
+  box-shadow:
+    var(--dev-inset-highlight),
+    0 0 16px var(--dev-border-emphasis);
+}
+
+.paletteSwatch[data-theme-preview="signature"] {
+  background: conic-gradient(
+    from 45deg,
+    #b0e454 0 25%,
+    #224f10 25% 50%,
+    #eaffd0 50% 75%,
+    #0d0d0d 75% 100%
+  );
+}
+
+.paletteSwatch[data-theme-preview="verdant"] {
+  background: conic-gradient(
+    from 45deg,
+    #cbec10 0 25%,
+    #116e1c 25% 50%,
+    #f6f4e8 50% 75%,
+    #022c12 75% 100%
+  );
+}
+
+.paletteMain > svg {
+  inline-size: 18px;
+  block-size: 18px;
+  color: var(--dev-text-emphasis);
+}
+
+.modeSwitch {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  padding: 3px;
+  border: 1px solid var(--dev-border-subtle);
+  border-radius: var(--radius-pill);
+  background: var(--dev-surface-control);
+}
+
+.modeButton {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  color: var(--text-on-dark-muted);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.modeButton:hover {
+  color: var(--dev-text-secondary);
+  background: var(--dev-surface-control-hover);
+}
+
+.modeButton[data-active="true"] {
+  border-color: var(--dev-border-emphasis);
+  background: var(--dev-surface-control-active);
+  color: var(--dev-text);
+  box-shadow: 0 8px 18px -16px var(--dev-shadow);
+}
+
+@media (max-width: 720px) {
+  .fab {
+    right: 14px;
+    top: 88px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .drawer {
+    width: min(380px, calc(100vw - 10px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrim,
+  .drawer,
+  .fab,
+  .optionButton,
+  .paletteCard,
+  .modeButton {
+    transition: none;
+  }
+}

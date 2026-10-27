@@ -1,0 +1,16 @@
+import { cpSync, existsSync, mkdirSync } from 'node:fs';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { spawn } from 'node:child_process';
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const app = resolve(root, 'apps/web');
+const standalone = resolve(app, '.next/standalone');
+const server = [resolve(standalone, 'apps/web/server.js'), resolve(standalone, 'server.js')].find(existsSync);
+if (!server) throw new Error('Build the archive first: pnpm build');
+const target = dirname(server);
+mkdirSync(resolve(target, '.next'), { recursive: true });
+cpSync(resolve(app, 'public'), resolve(target, 'public'), { recursive: true });
+cpSync(resolve(app, '.next/static'), resolve(target, '.next/static'), { recursive: true });
+const child = spawn(process.execPath, [server], { cwd: target, env: process.env, stdio: 'inherit' });
+for (const signal of ['SIGINT', 'SIGTERM']) process.on(signal, () => child.kill(signal));
+child.on('exit', (code, signal) => { if (signal) process.kill(process.pid, signal); else process.exit(code ?? 1); });

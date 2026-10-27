@@ -1,0 +1,1073 @@
+{
+  "schemaVersion": 2,
+  "publication": {
+    "status": "review",
+    "author": "David Pokorný",
+    "publishedAt": "2026-10-08",
+    "updatedAt": "2026-10-08"
+  },
+  "meta": {
+    "slug": "cestovko-zdarma-od-karty-vas-nemusi-zachranit",
+    "topic": "Jak ověřit, zda cestovní pojištění připojené k platební kartě skutečně platí pro konkrétní cestu, osoby, destinaci a aktivity — a kdy je dostačující nebo potřebuje doplnit samostatnou smlouvou",
+    "category": "Pojištění a cestování",
+    "primaryIntent": "Naučit čtenáře odlišit samotnou existenci pojištění od skutečně použitelného krytí, projít podmínky konkrétní karty proti konkrétní cestě a rozhodnout se bez automatického odmítání ani přeceňování kartovního pojištění.",
+    "audience": "Člověk, který má u bankovní karty uvedené cestovní pojištění a před odjezdem neví, zda kryje jeho destinaci, délku pobytu, rodinu, sportovní aktivity a skutečně významné náklady.",
+    "estimatedReadTime": 17
+  },
+  "hero": {
+    "category": "Cestovní pojištění",
+    "eyebrow": "KARTA NENÍ DŮKAZ KRYTÍ",
+    "title": "Cestovko zdarma od karty vás nemusí zachránit ve chvíli, kdy ho potřebujete",
+    "subtitle": "Nápis „cestovní pojištění“ ještě neříká, zda pojištění běží, koho kryje, jak vysoké má limity ani jestli platí právě pro cestu, na kterou se chystáte.",
+    "excerpt": "Pojištění ke kartě může být pro řadu cest úplně dostačující. Nejdřív je ale potřeba ověřit konkrétní variantu, léčebné výlohy, rodinné krytí, délku pobytu, sportovní aktivity, zdravotní omezení a postup při pojistné události.",
+    "estimatedReadTime": "17 minut",
+    "heroSummary": [
+      "Rozlišíte léčebné výlohy od úrazového pojištění a zjistíte, proč toto rozlišení rozhoduje.",
+      "Pochopíte, co skutečně znamená limit a kde se mohou skrývat další stropy, výluky nebo spoluúčast.",
+      "Prověříte, zda je krytý partner, děti a každý člen rodiny vlastním, nebo společným limitem.",
+      "Dostanete praktický předodjezdový audit, podle kterého poznáte, zda karta stačí, nebo je potřeba krytí doplnit."
+    ]
+  },
+  "sections": [
+    {
+      "id": "mam-kartu-neznamena-jsem-kryty",
+      "eyebrow": "ŘÁDEK V BALÍČKU NENÍ VÝSLEDEK",
+      "title": "„Mám kartu, takže mám cestovko“ je začátek kontroly, ne její konec",
+      "intro": "Nejčastější problém není, že by pojištění ke kartě bylo automaticky špatné. Problém je jistota postavená na názvu služby, kterou člověk nikdy neporovnal s tím, kam, na jak dlouho a s kým skutečně jede.",
+      "rail": {
+        "type": "currentTopic",
+        "label": "PRÁVĚ ŘEŠÍME",
+        "title": "Proč samotné vlastnictví karty ještě neříká, zda jste pojištění na svoji konkrétní cestu."
+      },
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Cestovní pojištění u karty funguje pohodlně: člověk ho nemusí před každým odjezdem znovu sjednávat a často o něm skoro neví. Právě tato pohodlnost ale vytváří falešný pocit, že krytí automaticky platí všude, pro všechny a na všechno důležité."
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Na kartě nebo v bankovním balíčku může být napsané „cestovní pojištění“, ale pod tímto názvem se mohou skrývat velmi odlišné podmínky. Jedna varianta může obsahovat použitelné léčebné výlohy a rodinné krytí, jiná jen omezenou ochranu nebo pojištění, které je potřeba nejdřív aktivovat.",
+            "Rozdíl se přitom dlouho neprojeví. Dokud člověk nic neřeší v nemocnici, nezpůsobí škodu nebo nepotřebuje převoz domů, vypadá každé pojištění stejně: jako řádek ve smlouvě nebo aplikaci. Skutečný význam se ukáže až při události, kdy už podmínky nejdou změnit zpětně.",
+            "Stejná chyba nevzniká jen u karet. Člověk může mít samostatnou smlouvu sjednanou narychlo podle ceny a přesto nevědět, zda odpovídá destinaci, sportu nebo rodině. Tématem proto není odmítnout kartu, ale přestat spoléhat na krytí, které nebylo ověřené proti konkrétní cestě."
+          ]
+        },
+        {
+          "type": "comparison",
+          "title": "Tři tiché předpoklady, na kterých často stojí pocit „jsem pojištěný“",
+          "items": [
+            {
+              "label": "„Funguje to samo a u všech karet podobně“",
+              "summary": "Člověk předpokládá, že krytí běží automaticky a že rozdíly mezi bankami nebo variantami jsou jen kosmetické.",
+              "points": [
+                "Cestovní pojištění nemusí být součástí každé karty stejné banky.",
+                "U některých variant může být automatické, u jiných vyžadovat aktivaci.",
+                "Rozsah i limity se mohou zásadně lišit podle přesné úrovně karty nebo balíčku."
+              ]
+            },
+            {
+              "label": "„Kryje to všechno, co budu potřebovat“",
+              "summary": "Člověk vidí obecný název pojištění a domyslí si pod něj léčbu, sport, storno, zavazadla i převoz domů.",
+              "points": [
+                "Pojištění může obsahovat pouze úrazové krytí místo léčebných výloh.",
+                "Hlavní limit může vypadat vysoký, ale uvnitř mohou být nižší dílčí stropy.",
+                "Sportovní aktivity, známé zdravotní potíže nebo některé situace mohou být ve výlukách."
+              ]
+            },
+            {
+              "label": "„Když jedeme spolu, platí to pro celou rodinu“",
+              "summary": "Člověk automaticky přenese své krytí na partnera, děti nebo další spolucestující.",
+              "points": [
+                "Některé varianty kryjí pouze držitele karty.",
+                "Rodinné krytí může platit jen při společné cestě s držitelem.",
+                "Věkové hranice dětí a způsob sdílení limitů se mohou lišit."
+              ]
+            }
+          ],
+          "takeaway": "Pojištění se neposuzuje podle názvu služby. Posuzuje se podle konkrétních podmínek a konkrétní cesty."
+        },
+        {
+          "type": "keyInsight",
+          "text": "Mít pojištění a být pojištěný na svoji cestu jsou dvě různé věci.",
+          "supportingText": "První je informace o produktu. Druhé je výsledek kontroly, zda krytí skutečně sedí na osoby, místo, délku pobytu, aktivity a situace, na které se chystáte spolehnout."
+        }
+      ]
+    },
+    {
+      "id": "nejdriv-overit-zda-pojisteni-bezi",
+      "eyebrow": "PRVNÍ BRÁNA JE VŮBEC PLATIT",
+      "title": "Nejdřív zjistěte, zda pojištění skutečně běží — a zda kryje léčbu, ne jen následky úrazu",
+      "intro": "Než začnete porovnávat milionové limity, potřebujete projít základní otázky: máte správnou variantu karty, je pojištění aktivní, stále platné a obsahuje vůbec to krytí, které by zaplatilo zahraniční nemocnici?",
+      "rail": {
+        "type": "progress",
+        "label": "ČTYŘI ZÁKLADNÍ BRÁNY",
+        "steps": [
+          "Přesná varianta karty",
+          "Aktivní a platné krytí",
+          "Léčebné výlohy",
+          "Délka a územní platnost"
+        ]
+      },
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "První otázka nezní „kolik mi pojišťovna zaplatí“. Zní „platí mi toto pojištění vůbec a na co přesně?“. Vysoký limit nemá žádnou hodnotu, pokud je uvedený u jiné varianty karty, krytí nebylo aktivované nebo smlouva neobsahuje léčebné výlohy."
+        },
+        {
+          "type": "definition",
+          "term": "Léčebné výlohy",
+          "simpleDefinition": "Krytí nákladů na ošetření, hospitalizaci, operaci, léky a další nezbytnou zdravotní péči, kterou člověk potřebuje během pobytu v zahraničí.",
+          "optionalDetail": "Právě tato část cestovního pojištění řeší účet za léčbu. Je potřeba ji odlišit od úrazového pojištění, které typicky vyplácí odškodnění za následky úrazu, ale nemusí zaplatit samotnou zahraniční péči.",
+          "optionalExample": "Zlomená noha může znamenat operaci a hospitalizaci. Léčebné výlohy řeší náklady nemocnice; úrazové pojištění může řešit až následky úrazu podle svých podmínek."
+        },
+        {
+          "type": "comparison",
+          "title": "Léčebné výlohy a úrazové pojištění nejsou dvě jména pro stejnou věc",
+          "items": [
+            {
+              "label": "Léčebné výlohy",
+              "summary": "Mají zaplatit nebo uhradit zdravotní péči, kterou potřebujete během cesty.",
+              "points": [
+                "Řeší ošetření, hospitalizaci, operaci, léky a podle podmínek také související převoz.",
+                "Mají vlastní limit, který představuje horní hranici plnění.",
+                "Pro zahraniční nemocnici jsou obvykle klíčovou částí cestovního krytí."
+              ]
+            },
+            {
+              "label": "Úrazové pojištění",
+              "summary": "Typicky vyplácí sjednané odškodnění za následky úrazu, nikoli automaticky náklady zahraničního zdravotnického zařízení.",
+              "points": [
+                "Může se vztahovat na trvalé následky nebo úmrtí úrazem podle smlouvy.",
+                "Samotný název „úrazové pojištění“ neznamená, že zaplatí operaci nebo pobyt v nemocnici.",
+                "Karta může být formálně „pojištěná“, ale pro hlavní cestovní riziko zůstat nedostatečná."
+              ]
+            }
+          ],
+          "takeaway": "Před cestou ověřte výslovně léčebné výlohy. Obecné slovo „pojištění“ ani úrazové krytí tuto kontrolu nenahrazují."
+        },
+        {
+          "type": "checklist",
+          "title": "Co musí sedět, než má smysl řešit další detaily",
+          "items": [
+            {
+              "title": "Máte přesnou variantu karty, ke které je pojištění připojené",
+              "description": "Nestačí znát banku. Základní, prémiová a rodinná varianta stejného poskytovatele mohou mít úplně jiný rozsah a limity."
+            },
+            {
+              "title": "Krytí je aktivní",
+              "description": "U některých karet může běžet automaticky, u jiných může být potřeba aktivace. Ověřte to v konkrétních podmínkách nebo bankovnictví."
+            },
+            {
+              "title": "Karta i pojištění jsou stále platné",
+              "description": "Pojištění bývá navázané na existenci a platnost karty nebo účtu. Zablokování, ukončení nebo změna produktu může změnit i krytí."
+            },
+            {
+              "title": "Součástí jsou léčebné výlohy",
+              "description": "Najděte je výslovně v rozsahu pojištění a nepleťte je s úrazovým odškodněním."
+            },
+            {
+              "title": "Cesta se vejde do časové a územní platnosti",
+              "description": "Ověřte maximální délku jedné cesty a to, zda pojištění platí v zemi, do které jedete."
+            }
+          ]
+        },
+        {
+          "type": "expertNote",
+          "title": "První otázka není „kolik mi to platí“, ale „platí mi to vůbec?“",
+          "text": "Teprve po potvrzení přesné karty, aktivace, platnosti a léčebných výloh má smysl porovnávat limity, výluky a další části. Jinak se může celé rozhodnutí opírat o parametr pojištění, které pro vaši cestu vůbec neběží."
+        }
+      ]
+    },
+    {
+      "id": "limit-lecebnych-vyloh-je-strop",
+      "eyebrow": "VELKÉ ČÍSLO POTŘEBUJE KONTEXT",
+      "title": "Limit léčebných výloh je strop. Musí odpovídat zemi, kde může vzniknout účet.",
+      "intro": "Stejný nápis „cestovní pojištění ke kartě“ může skrývat výrazně odlišný limit. Rozhodující proto není, zda nějaké číslo existuje, ale zda by uneslo náklady právě v destinaci, do které cestujete.",
+      "rail": {
+        "type": "metric",
+        "label": "MODELOVÉ POROVNÁNÍ",
+        "value": "2,5 mil. → 100 mil. Kč",
+        "caption": "Čtyřicetinásobný rozdíl mezi uváděnými variantami."
+      },
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Limit není částka, kterou automaticky dostanete. Je to nejvyšší hranice, do které může pojišťovna podle podmínek zaplatit krytou událost. Co je nad ní nebo mimo rozsah smlouvy, zůstává na pojištěném."
+        },
+        {
+          "type": "definition",
+          "term": "Limit pojistného plnění",
+          "simpleDefinition": "Nejvyšší částka, kterou může pojišťovna za daný typ kryté události zaplatit.",
+          "optionalDetail": "Limit neříká, že bude vyplacen celý. Skutečné plnění závisí na vzniklých nákladech, rozsahu krytí, spoluúčasti, výlukách a dalších podmínkách smlouvy.",
+          "optionalExample": "Má-li pojištění limit léčebných výloh 5 milionů Kč a kryté náklady jsou vyšší, část nad limitem může zůstat na cestujícím."
+        },
+        {
+          "type": "definition",
+          "term": "Pojištění odpovědnosti na cestách",
+          "simpleDefinition": "Krytí škody nebo újmy, kterou v zahraničí způsobíte někomu jinému a za kterou podle podmínek odpovídáte.",
+          "optionalDetail": "Léčebné výlohy řeší, co se stane vám. Odpovědnost řeší, co způsobíte druhým — například zranění jiné osoby nebo škodu na majetku.",
+          "optionalExample": "Při srážce s jiným lyžařem mohou vedle vlastního ošetření vzniknout také nároky zraněného člověka. Ty se neposuzují z limitu vašich léčebných výloh, ale z odpovědnosti."
+        },
+        {
+          "type": "comparison",
+          "title": "Proč stejné označení pojištění neznamená stejnou ochranu",
+          "items": [
+            {
+              "label": "Nízký limit v drahé destinaci",
+              "summary": "Pojištění formálně existuje, ale horní hranice nemusí stačit na vážnější léčbu v zemi s vysokými cenami péče.",
+              "points": [
+                "Část nákladů nad limit může zůstat na cestujícím.",
+                "Rozdíl se nepozná podle vzhledu karty ani názvu balíčku.",
+                "Stejné číslo může být pro jednu cestu přijatelné a pro jinou nedostatečné."
+              ]
+            },
+            {
+              "label": "Vysoký limit odpovídající cestě",
+              "summary": "Krytí má větší prostor unést závažnou událost v destinaci, pro kterou bylo posuzované.",
+              "points": [
+                "Stále je potřeba prověřit výluky, dílčí limity a podmínky použití.",
+                "Vysoký hlavní limit sám o sobě neřeší odpovědnost, rodinu ani sport.",
+                "Rozhodnutí musí vycházet z celé struktury pojištění, ne jen z jednoho čísla."
+              ]
+            },
+            {
+              "label": "Jiná varianta stejné banky",
+              "summary": "Rozsah se může měnit i uvnitř jedné produktové řady podle úrovně karty nebo účtu.",
+              "points": [
+                "Nestačí otevřít obecnou stránku banky a převzít nejvyšší uváděný limit.",
+                "Je potřeba dohledat tabulku právě pro variantu, kterou skutečně vlastníte.",
+                "Rodinná, základní a prémiová verze mohou mít jinou územní platnost i limity."
+              ]
+            }
+          ],
+          "takeaway": "Otázka nezní „má moje banka cestovní pojištění“, ale „jaký přesně limit má moje konkrétní varianta pro tuto destinaci a pro tuto osobu“."
+        },
+        {
+          "type": "expertNote",
+          "title": "Léčebné výlohy a odpovědnost chrání před dvěma odlišnými účty",
+          "text": "Jedno krytí řeší náklady na vaše ošetření. Druhé řeší škodu, kterou způsobíte někomu jinému. Při kontrole je proto potřeba najít oba limity samostatně a nepředpokládat, že vysoké léčebné výlohy automaticky znamenají vysokou odpovědnost."
+        }
+      ]
+    },
+    {
+      "id": "velke-cislo-nestaci",
+      "eyebrow": "ŠKODA ČASTO NEUNIKNE PŘES HLAVNÍ LIMIT",
+      "title": "Velké číslo na léčebných výlohách nestačí. Rozhodují i dílčí stropy, výluky a postup.",
+      "intro": "Hlavní limit může působit uklidňujícím dojmem. Skutečná mezera ale často leží jinde: v chybějícím převozu domů, spoluúčasti, nízkém sublimitu, výluce nebo povinnosti nejdřív kontaktovat asistenci.",
+      "rail": {
+        "type": "summary",
+        "label": "CO HLEDAT POD HLAVNÍM ČÍSLEM",
+        "items": [
+          "Repatriace",
+          "Spoluúčast",
+          "Sublimity",
+          "Výluky",
+          "Asistenční postup"
+        ]
+      },
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Pojištění může mít vysoký celkový limit a přesto selhat v konkrétní situaci, protože některé položky mají vlastní nižší hranici nebo jsou kryté jen při splnění určitého postupu. Kontrola proto nekončí u jedné částky v přehledu."
+        },
+        {
+          "type": "checklist",
+          "title": "Položky, které bývají schované o úroveň níž",
+          "items": [
+            {
+              "title": "Repatriace a převoz domů",
+              "description": "Ověřte, zda je zdravotní převoz do Česka výslovně krytý, zda má vlastní limit a kdo o něm rozhoduje. Samotné ošetření v zahraničí nemusí převoz zahrnovat."
+            },
+            {
+              "title": "Spoluúčast",
+              "description": "Zjistěte, jakou část škody platíte sami. Může být pevná, procentní nebo odlišná podle typu krytí, například u storna."
+            },
+            {
+              "title": "Storno cesty",
+              "description": "Prověřte limit, důvody uznaného storna, spoluúčast a lhůtu, ve které musí být krytí sjednané po nákupu cesty."
+            },
+            {
+              "title": "Odpovědnost a její výluky",
+              "description": "Najděte limit škody na zdraví i majetku a ověřte situace, na které se nevztahuje — zejména škody spojené s použitím pronajatých vozidel nebo plavidel."
+            },
+            {
+              "title": "Sublimity uvnitř hlavního limitu",
+              "description": "Velké číslo u léčebných výloh může obsahovat nižší stropy například pro akutní zubní ošetření nebo jinou konkrétní službu."
+            },
+            {
+              "title": "Zavazadla a elektronika",
+              "description": "Ověřte celkový limit, limit na jednu věc a výluky podle místa uložení. Mobil, notebook nebo fotoaparát odcizený z auta nemusí být krytý."
+            },
+            {
+              "title": "Povinnost kontaktovat asistenční službu",
+              "description": "Zjistěte, zda musíte před ošetřením nebo organizací převozu nejdřív volat asistenci. Pozdní kontakt může podle podmínek omezit plnění."
+            }
+          ]
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Sublimit je nižší strop uvnitř většího limitu. Pojištění tak může na první pohled uvádět vysoké léčebné výlohy, ale u konkrétní služby zaplatit maximálně mnohem menší částku. Podobně spoluúčast znamená, že určitý díl nákladu zůstává vždy na cestujícím.",
+            "Výluka funguje jinak: daná situace není při splnění popsaných okolností krytá vůbec. Proto nestačí vědět, kolik pojištění zaplatí. Je potřeba vědět také, za jakých podmínek platí a co je z něj výslovně venku.",
+            "A třetí vrstvou je postup. U některých událostí může být asistenční služba součástí rozhodnutí o nemocnici, převozu nebo úhradě. Člověk může mít věcně krytou událost, ale zkomplikovat plnění tím, že předepsaný proces neznal."
+          ]
+        },
+        {
+          "type": "decision",
+          "title": "Jak pracovat s podmínkou kontaktovat asistenci",
+          "branches": [
+            {
+              "if": "Podmínky vyžadují předchozí kontakt s asistenční službou",
+              "then": "Mějte číslo uložené ještě před odjezdem a při události postupujte podle instrukcí pojišťovny.",
+              "check": "Kde je číslo uvedené, v jakém jazyce služba funguje a u kterých situací je kontakt povinný?"
+            },
+            {
+              "if": "Ošetření nebo převoz si zařídíte sami a asistenci kontaktujete až následně",
+              "then": "Pojišťovna může podle konkrétních podmínek plnění omezit nebo posuzovat jiným způsobem.",
+              "check": "Co přesně říkají podmínky o zpětném oznámení a o výdajích sjednaných bez souhlasu asistence?"
+            },
+            {
+              "if": "Postup z podmínek není srozumitelný",
+              "then": "Nečekejte na pojistnou událost. Nechte si před cestou potvrdit konkrétní postup a uložte si jej společně s kontaktem.",
+              "check": "Dokážete jednou větou říct, komu zavoláte jako první a co po vás bude potřebovat?"
+            }
+          ]
+        },
+        {
+          "type": "expertNote",
+          "title": "„100 milionů na léčebné výlohy“ neznamená 100 milionů na každou položku",
+          "text": "Hlavní limit je potřeba číst společně se sublimity, spoluúčastí, výlukami a procesem. Právě přes tyto detaily může vzniknout rozdíl mezi očekávaným a skutečným plněním."
+        }
+      ]
+    },
+    {
+      "id": "rodinne-kryti-neni-automaticke",
+      "eyebrow": "RODINNÉ NEZNAMENÁ AUTOMATICKY PRO KAŽDÉHO",
+      "title": "Partner a děti mohou být krytí jinak než držitel karty — nebo vůbec",
+      "intro": "Pocit „jedeme na moji kartu“ může zakrýt tři podstatné rozdíly: koho definice rodiny zahrnuje, zda musí cestovat společně s držitelem a jestli má každý vlastní limit, nebo se všichni dělí o jeden.",
+      "rail": {
+        "type": "comparisonSummary",
+        "label": "RODINNÉ KRYTÍ",
+        "items": [
+          {
+            "label": "Koho",
+            "value": "držitel / partner / děti / širší rodina"
+          },
+          {
+            "label": "Kdy",
+            "value": "společná cesta nebo samostatně"
+          },
+          {
+            "label": "Kolik",
+            "value": "limit na osobu nebo společný strop"
+          }
+        ]
+      },
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Nejnebezpečnější rodinná mezera není nízký limit. Je to člověk, o kterém si rodina myslí, že je pojištěný, ale podle definice smlouvy do krytí vůbec nepatří."
+        },
+        {
+          "type": "checklist",
+          "title": "Pět otázek, které musí být u rodinného krytí zodpovězené",
+          "items": [
+            {
+              "title": "Kdo je pojištěnou osobou",
+              "description": "Je krytý jen držitel karty, nebo také partner, děti, vnoučata či prarodiče? Hledejte přesnou smluvní definici, ne marketingový název „rodinné“."
+            },
+            {
+              "title": "Musí rodina cestovat společně s držitelem",
+              "description": "Některé varianty mohou rodinné krytí vázat na společnou cestu. Samostatný odlet partnera nebo dítěte pak může být mimo rozsah."
+            },
+            {
+              "title": "Do jakého věku jsou kryté děti",
+              "description": "Věková hranice se může lišit a nemusí odpovídat běžnému chápání nezaopatřeného dítěte. Ověřte ji pro každého potomka zvlášť."
+            },
+            {
+              "title": "Kolik osob může být současně krytých",
+              "description": "Rodinná varianta může omezovat počet spolucestujících nebo kombinaci osob, které do ní vstupují."
+            },
+            {
+              "title": "Je limit na osobu, nebo pro celou rodinu dohromady",
+              "description": "Dva vážné úrazy při jedné cestě mohou čerpat ze stejného stropu. Společný limit proto poskytuje jinou ochranu než stejná částka pro každého člena."
+            }
+          ]
+        },
+        {
+          "type": "decision",
+          "title": "Co z jednotlivých rodinných nastavení plyne",
+          "branches": [
+            {
+              "if": "Krytí se vztahuje pouze na držitele karty",
+              "then": "Ostatní členové potřebují vlastní nebo samostatné rodinné pojištění.",
+              "check": "Je v dokumentu partner nebo dítě skutečně uvedeno jako pojištěná osoba?"
+            },
+            {
+              "if": "Rodina je krytá pouze při společné cestě",
+              "then": "Každou odlišnou trasu nebo datum odjezdu je potřeba posoudit zvlášť.",
+              "check": "Platí krytí, když některý člen přiletí později, odjede dřív nebo cestuje samostatně?"
+            },
+            {
+              "if": "Děti překračují smluvní věkovou hranici",
+              "then": "Pro účely této smlouvy už nemusí patřit do rodinného krytí, i když s rodiči běžně cestují.",
+              "check": "Jaký věk rozhoduje a posuzuje se k odjezdu, nebo k datu události?"
+            },
+            {
+              "if": "Celá rodina sdílí jeden limit",
+              "then": "Posuzujte jeho dostatečnost pro více současných událostí, ne jako částku dostupnou každému zvlášť.",
+              "check": "Je limit uveden „na osobu“, „na pojistnou událost“, nebo pro všechny pojištěné dohromady?"
+            }
+          ]
+        },
+        {
+          "type": "keyInsight",
+          "text": "Rodinné krytí není otázka názvu. Je to definice osob, podmínka společné cesty a způsob, jak se mezi ně dělí limit.",
+          "supportingText": "Dokud nejsou známé všechny tři odpovědi, nelze z přítomnosti rodinné varianty spolehlivě odvodit ochranu konkrétního partnera nebo dítěte."
+        }
+      ]
+    },
+    {
+      "id": "ctyri-parametry-konkretni-cesty",
+      "eyebrow": "POJIŠTĚNÍ SE POSUZUJE PROTI CESTĚ",
+      "title": "Stejné krytí může stačit na víkend v Evropě a selhat při delším pobytu, sportu nebo známém zdravotním problému",
+      "intro": "Rozsah pojištění není pevná nálepka. Jeho použitelnost se mění podle čtyř vstupů: jak dlouho jste pryč, kam jedete, co tam budete dělat a s jakým zdravotním stavem odjíždíte.",
+      "rail": {
+        "type": "progress",
+        "label": "ČTYŘI OTÁZKY KE KAŽDÉ CESTĚ",
+        "steps": [
+          "Jak dlouho?",
+          "Kam?",
+          "Co tam budu dělat?",
+          "S jakým zdravotním stavem odjíždím?"
+        ]
+      },
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Pojištění, které bylo v pořádku pro minulou dovolenou, nemusí automaticky sedět na tu další. Změna destinace, délky pobytu, sportu nebo zdravotní situace může změnit význam stejné smlouvy bez toho, aby se na kartě cokoli viditelně změnilo."
+        },
+        {
+          "type": "definition",
+          "term": "Výluka",
+          "simpleDefinition": "Situace nebo okolnost, na kterou se pojištění podle smlouvy nevztahuje.",
+          "optionalDetail": "Výluka není nízký limit. U výluky může být daná událost z krytí vyřazená úplně, například kvůli druhu aktivity, známému zdravotnímu stavu nebo nesplněné podmínce.",
+          "optionalExample": "Pojistka může krýt běžnou turistiku, ale vyloučit určitý typ vysokohorské aktivity. O tom, zda je událost krytá, pak nerozhoduje výše hlavního limitu."
+        },
+        {
+          "type": "process",
+          "title": "Jak porovnat jednu smlouvu s konkrétní cestou",
+          "steps": [
+            {
+              "title": "Délka pobytu",
+              "description": "Zjistěte maximální počet dní jedné cesty. Delší cestování, práce v zahraničí nebo zimování může přesáhnout dobu, po kterou kartovní krytí běží."
+            },
+            {
+              "title": "Destinace",
+              "description": "Ověřte, zda pojištění v dané zemi vůbec platí a zda limit léčebných výloh odpovídá místním nákladům. Evropa a zámoří mohou vyžadovat jinou úroveň krytí."
+            },
+            {
+              "title": "Sportovní a pracovní aktivity",
+              "description": "Najděte přesnou klasifikaci aktivit, které plánujete. Rekreační sport, rizikový sport, závod, vysokohorská turistika nebo práce v zahraničí mohou mít odlišné podmínky."
+            },
+            {
+              "title": "Zdravotní stav",
+              "description": "Prověřte, jak smlouva pracuje s chronickým onemocněním, obtížemi známými před odjezdem, těhotenstvím nebo léčbou, která už probíhá."
+            }
+          ]
+        },
+        {
+          "type": "decision",
+          "title": "Sport se neposuzuje podle toho, zda vám připadá běžný",
+          "branches": [
+            {
+              "if": "Jde o klidnou rekreační aktivitu uvedenou mezi standardně krytými sporty",
+              "then": "Základní varianta může být dostačující, pokud sedí i ostatní podmínky cesty.",
+              "check": "Je aktivita skutečně uvedená v kryté skupině a splňujete předepsané vybavení nebo pravidla?"
+            },
+            {
+              "if": "Jde o lyžování, ferratu, potápění, rafting, paragliding, vysokohorskou aktivitu nebo závod",
+              "then": "Je potřeba vyhledat konkrétní zařazení aktivity a případné připojištění. Obecný pojem „sport“ nestačí.",
+              "check": "Do jaké kategorie pojišťovna aktivitu řadí a jaké výškové, obtížnostní nebo organizační hranice používá?"
+            },
+            {
+              "if": "Aktivita probíhá mimo vyznačené trasy nebo bez požadovaných pomůcek",
+              "then": "Může spadnout do výluky nebo vést k omezení plnění i tehdy, když je její běžná varianta jinak krytá.",
+              "check": "Vyžaduje smlouva helmu, průvodce, povolenou trasu nebo jinou konkrétní podmínku?"
+            }
+          ]
+        },
+        {
+          "type": "expertNote",
+          "title": "Známý zdravotní problém se nesmí posuzovat mlčky",
+          "text": "Obtíže, které se projevovaly už před odjezdem, nebo některá chronická rizika mohou být z krytí vyloučená. To neznamená automaticky, že člověk s chronickým onemocněním nemůže být pojištěný. Znamená to, že potřebuje přesné potvrzení podmínek pro svůj stav."
+        }
+      ]
+    },
+    {
+      "id": "kdy-karta-staci-a-kdy-ne",
+      "eyebrow": "KARTA NENÍ ŠPATNÁ ANI DOSTAČUJÍCÍ SAMA O SOBĚ",
+      "title": "Kdy může karta úplně stačit — a kdy dává smysl samostatná smlouva",
+      "intro": "Rozhodnutí nevychází z toho, zda je pojištění „zdarma“ nebo placené zvlášť. Vychází z toho, zda konkrétní rozsah pokryje konkrétní cestu bez důležité mezery.",
+      "rail": {
+        "type": "decisionSummary",
+        "label": "ROZHODUJÍCÍ OTÁZKA",
+        "title": "Sedí toto krytí na tuto cestu?",
+        "summary": "Když ano, není důvod kupovat další smlouvu. Když ne, doplňuje se přesně chybějící ochrana."
+      },
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Pojištění ke kartě může být plnohodnotným řešením pro krátkou a běžnou cestu. Stejně tak samostatná smlouva nemusí být automaticky kvalitnější, pokud byla zvolená bez kontroly destinace, aktivit a osob. Rozhoduje obsah, ne způsob sjednání."
+        },
+        {
+          "type": "comparison",
+          "title": "Typické situace, ve kterých karta může stačit nebo potřebuje doplnit",
+          "items": [
+            {
+              "label": "Karta může být dostačující",
+              "summary": "Konkrétní podmínky odpovídají jednoduché cestě a všechny zásadní body jsou ověřené.",
+              "points": [
+                "Kratší cesta v území, pro které pojištění platí, a v rámci maximální délky pobytu.",
+                "Běžná dovolená bez aktivit, které smlouva řadí mezi rizikové nebo vyloučené.",
+                "Potvrzené léčebné výlohy s limitem odpovídajícím destinaci.",
+                "Cestující osoby jsou podle definice skutečně kryté a je známé, zda mají vlastní nebo společný limit.",
+                "Repatriace, odpovědnost a asistenční postup odpovídají tomu, co od pojištění očekáváte."
+              ]
+            },
+            {
+              "label": "Samostatná smlouva nebo doplnění dává větší smysl",
+              "summary": "Cesta má vyšší nároky nebo kartovní varianta obsahuje konkrétní mezeru.",
+              "points": [
+                "Cesta mimo Evropu nebo do země s vysokými náklady na zdravotní péči a nízkým limitem karty.",
+                "Pobyt přesahuje maximální počet dní jedné cesty.",
+                "Plánujete sport nebo aktivitu, kterou karta nekryje nebo kryje jen ve vyšší variantě.",
+                "Rodina není pokrytá celá, děti nesplňují věk nebo všichni sdílejí nedostatečný limit.",
+                "Potřebujete širší storno, zavazadla, odpovědnost nebo jinou část, kterou karta řeší slabě."
+              ]
+            }
+          ],
+          "takeaway": "Samostatná smlouva není automatická odměna za opatrnost. Je nástrojem pro situaci, kdy konkrétní karta nepokrývá konkrétní potřebu."
+        },
+        {
+          "type": "decision",
+          "title": "Jak se rozhodnout bez zbytečného dvojího pojištění",
+          "branches": [
+            {
+              "if": "Všechny zásadní podmínky karty odpovídají cestě",
+              "then": "Kartu lze použít jako hlavní cestovní krytí a není potřeba kupovat další smlouvu jen pro pocit.",
+              "check": "Máte uložené aktuální podmínky, limity a kontakt na asistenci pro konkrétní variantu?"
+            },
+            {
+              "if": "Karta je dobrá v léčebných výlohách, ale slabá jen v jedné oblasti",
+              "then": "Prověřte, zda lze doplnit právě chybějící část místo automatického nahrazení všeho.",
+              "check": "Je mezerou sport, storno, rodina, odpovědnost, nebo délka cesty?"
+            },
+            {
+              "if": "Chybí léčebné výlohy, destinace, rodinné osoby nebo základní limit",
+              "then": "Karta sama pro tuto cestu nestačí a je potřeba jiné řešení.",
+              "check": "Dokáže samostatná varianta doložit přesně to, co u karty chybí, bez nové nejasnosti?"
+            },
+            {
+              "if": "Podmínky nejsou dohledatelné nebo jim nerozumíte",
+              "then": "Nespoléhejte na obecný název služby. Nechte si rozsah potvrdit nebo vyberte řešení, jehož podmínky lze před odjezdem jasně ověřit.",
+              "check": "Víte, kdo je pojištěný, kde, na jak dlouho, na co a do jakého limitu?"
+            }
+          ]
+        },
+        {
+          "type": "expertNote",
+          "title": "Co funguje, není potřeba měnit",
+          "text": "Můj princip je i tady jednoduchý: cílem není prodat vám novou smlouvu. Pokud pojištění ke kartě prokazatelně sedí na vaši cestu, správným výsledkem je nechat ho být. Změna má smysl jen tehdy, když řeší skutečnou mezeru."
+        },
+        {
+          "type": "keyInsight",
+          "text": "Nejlepší cestovní pojištění není nejdražší ani samostatné. Je to to, které prokazatelně sedí na cestu, kterou skutečně podnikáte.",
+          "supportingText": "Cena ani forma sjednání nenahradí shodu mezi limity, osobami, destinací, délkou pobytu, aktivitami a zdravotní situací."
+        }
+      ]
+    },
+    {
+      "id": "jak-cist-konkretni-podminky",
+      "eyebrow": "NEČTĚTE OBECNOU STRÁNKU, ČTĚTE SVOU VARIANTU",
+      "title": "Jak projít podmínky bez toho, abyste četli celý dokument od první do poslední stránky",
+      "intro": "Pro základní kontrolu nepotřebujete znát celou pojistnou teorii. Potřebujete najít správný dokument a vytáhnout z něj několik přesných odpovědí ve správném pořadí.",
+      "rail": {
+        "type": "currentTopic",
+        "label": "PRAKTICKÁ PRÁCE S DOKUMENTY",
+        "title": "Přesná karta → tabulka limitů → definice osob → výluky → asistenční postup"
+      },
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Nejčastější chyba při hledání podmínek je otevřít obecnou produktovou stránku banky, přečíst nejvyšší prezentovaný limit a připsat ho své kartě. Kontrola musí začít přesným názvem varianty a dokumentem, který se na ni skutečně vztahuje."
+        },
+        {
+          "type": "process",
+          "title": "Pět kroků k použitelné odpovědi",
+          "steps": [
+            {
+              "title": "Určete přesný název karty nebo účtu",
+              "description": "Zapište si banku, typ karty, úroveň balíčku a případnou rodinnou variantu. Bez toho nelze spolehlivě přiřadit limity."
+            },
+            {
+              "title": "Najděte aktuální tabulku limitů",
+              "description": "Vyhledejte léčebné výlohy, odpovědnost, repatriaci, storno, zavazadla a případné sublimity právě pro svou variantu."
+            },
+            {
+              "title": "Najděte definici pojištěných osob a cesty",
+              "description": "Ověřte držitele, partnera, děti, věkové hranice, společnou cestu, územní platnost a maximální délku pobytu."
+            },
+            {
+              "title": "Projít výluky relevantní pro vaši cestu",
+              "description": "Není potřeba začít všemi výlukami. Zaměřte se na sport, zdravotní stav, těhotenství, práci, půjčená vozidla a další okolnosti, které se vás skutečně týkají."
+            },
+            {
+              "title": "Uložte postup a kontakt na asistenci",
+              "description": "Zjistěte, kdy je potřeba volat, co si připravit a kde číslo najdete i bez přístupu do bankovní aplikace."
+            }
+          ]
+        },
+        {
+          "type": "checklist",
+          "title": "Dokumenty a údaje, které mají zůstat po kontrole po ruce",
+          "items": [
+            {
+              "title": "Pojistné podmínky s datem nebo verzí",
+              "description": "Podmínky se mohou měnit. Uložte dokument, který platí pro období vaší cesty a konkrétní kartu."
+            },
+            {
+              "title": "Tabulka limitů pro přesnou variantu",
+              "description": "Ne obecný marketingový přehled, ale rozpad částek podle typu krytí a pojištěné osoby."
+            },
+            {
+              "title": "Definice rodiny a územní platnosti",
+              "description": "Mějte potvrzené, kdo je krytý a ve kterých zemích, nikoli jen název rodinného nebo světového balíčku."
+            },
+            {
+              "title": "Relevantní výluky a sportovní tabulka",
+              "description": "Uložte část, která rozhoduje o aktivitách a zdravotních okolnostech vaší konkrétní cesty."
+            },
+            {
+              "title": "Telefon a instrukce asistenční služby",
+              "description": "Kontakt musí být dostupný i ve chvíli, kdy nefunguje internet, aplikace nebo samotná karta."
+            }
+          ]
+        },
+        {
+          "type": "expertNote",
+          "title": "Název banky není název krytí",
+          "text": "Jedna banka může současně nabízet několik karet s různými limity a podmínkami. Správným zdrojem proto není obecné tvrzení „moje banka má cestovní pojištění“, ale dokument přiřazený přesně k vašemu produktu."
+        }
+      ]
+    },
+    {
+      "id": "predodjezdovy-audit",
+      "eyebrow": "DESET ODPOVĚDÍ PŘED ODJEZDEM",
+      "title": "Předodjezdový audit: co si zkontrolovat u karty nebo samostatné smlouvy",
+      "intro": "Vezměte si podmínky svého pojištění a projděte deset konkrétních bodů. Každý z nich má skončit ověřitelnou odpovědí, ne pocitem, že to tam pravděpodobně bude.",
+      "rail": {
+        "type": "progress",
+        "label": "PRAKTICKÝ VÝSTUP",
+        "steps": [
+          "Krytí existuje",
+          "Limit odpovídá cestě",
+          "Osoby a aktivity sedí",
+          "Víte, co dělat při události"
+        ]
+      },
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Cílem není najít nejdelší seznam připojištění. Cílem je ověřit několik míst, přes která by konkrétní cesta mohla z krytí vypadnout."
+        },
+        {
+          "type": "checklist",
+          "title": "Deset bodů před cestou",
+          "items": [
+            {
+              "title": "Kryje pojištění léčebné výlohy, ne pouze úrazové následky?",
+              "description": "Najděte léčebné výlohy výslovně v rozsahu a ověřte, že platí pro vaši kartu i osobu."
+            },
+            {
+              "title": "Je limit léčebných výloh dostatečný pro destinaci?",
+              "description": "Porovnejte konkrétní limit s charakterem země a náklady péče. Neodvozujte dostatečnost jen z toho, že částka vypadá vysoká."
+            },
+            {
+              "title": "Platí pojištění v zemi, kam jedete?",
+              "description": "Ověřte územní rozsah a všechny výjimky, které se mohou týkat cílové země nebo trasy."
+            },
+            {
+              "title": "Je krytí aktivní a stále platné?",
+              "description": "Prověřte aktivaci, platnost karty nebo účtu a to, zda se podmínky od sjednání nezměnily."
+            },
+            {
+              "title": "Vejde se cesta do maximální délky pobytu?",
+              "description": "Počítejte jednu nepřerušenou cestu podle definice smlouvy a ověřte den, kdy krytí případně končí."
+            },
+            {
+              "title": "Je krytá každá cestující osoba a má odpovídající limit?",
+              "description": "Zkontrolujte partnera, děti, věkové hranice, podmínku společné cesty a sdílení limitu."
+            },
+            {
+              "title": "Jsou kryté všechny plánované sporty a aktivity?",
+              "description": "Najděte přesné zařazení lyžování, hor, potápění, ferrat, závodů nebo jiné konkrétní aktivity."
+            },
+            {
+              "title": "Nevzniká výluka kvůli zdravotnímu stavu nebo těhotenství?",
+              "description": "Ověřte známé diagnózy, projevy před odjezdem, probíhající léčbu a podmínky související s těhotenstvím."
+            },
+            {
+              "title": "Je krytá repatriace a odpovědnost?",
+              "description": "Najděte převoz domů, jeho limit a samostatný limit odpovědnosti za škodu způsobenou druhým."
+            },
+            {
+              "title": "Znáte spoluúčast, storno, zavazadla a postup asistence?",
+              "description": "Ověřte dílčí limity, výluky, povinný kontakt a číslo, na které budete při události volat."
+            }
+          ]
+        },
+        {
+          "type": "decision",
+          "title": "Co udělat podle výsledku kontroly",
+          "branches": [
+            {
+              "if": "Chybí léčebné výlohy nebo pojištění pro destinaci vůbec neplatí",
+              "then": "Pro tuto cestu nejde o použitelnou hlavní ochranu. Je potřeba jiné nebo doplňující řešení.",
+              "check": "Nová varianta musí výslovně pokrýt osoby, území a léčebné výlohy, které u karty chybí."
+            },
+            {
+              "if": "Základ sedí, ale limit, sport, rodina nebo délka pobytu zůstává nedostatečná",
+              "then": "Doplňte konkrétní mezeru a znovu projděte celý audit pro výslednou kombinaci krytí.",
+              "check": "Nevzniká překryv v jedné oblasti a stále prázdné místo v jiné?"
+            },
+            {
+              "if": "Všechny body jsou doložené a odpovídají cestě",
+              "then": "Karta nebo stávající smlouva může být dostačující a není potřeba ji měnit jen proto, že vznikla samostatně nebo zdarma k účtu.",
+              "check": "Máte podmínky, kontakty a potvrzení dostupné také během cesty?"
+            },
+            {
+              "if": "Na některou otázku nedokážete odpovědět",
+              "then": "Považujte ji za neověřenou, ne automaticky splněnou. Právě tento bod je potřeba před odjezdem dořešit.",
+              "check": "Kdo vám může odpověď potvrdit včetně odkazu na konkrétní článek podmínek?"
+            }
+          ]
+        },
+        {
+          "type": "keyInsight",
+          "text": "Krátká kontrola dokáže rychle odhalit největší mezery. Úplné potvrzení krytí ale vyžaduje ověřit konkrétní podmínky.",
+          "supportingText": "Nejdřív si ověřte variantu, platnost, pojištěné osoby, limity, výluky a postup při problému. Teprve potom víte víc než jen to, že „nějaké cestovko máte“."
+        }
+      ]
+    },
+    {
+      "id": "nejdriv-overit-potom-spolehat",
+      "eyebrow": "CÍLEM NENÍ DALŠÍ SMLOUVA",
+      "title": "Nejdřív ověřit. Potom teprve spoléhat.",
+      "intro": "Pojištění ke kartě může být pohodlné a kvalitní. Musí ale projít stejnou kontrolou jako jakákoli jiná smlouva: co kryje, komu platí, za jakých podmínek a zda odpovídá cestě, která je právě před vámi.",
+      "rail": {
+        "type": "nextAction",
+        "label": "JEDEN DALŠÍ KROK",
+        "title": "Položit vedle sebe konkrétní kartu a konkrétní cestu"
+      },
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Nejde o to koupit nejdražší variantu ani automaticky nahradit pojištění ke kartě. Jde o to vědět, že při konkrétní události nevypadne právě ta osoba, země, aktivita nebo náklad, kvůli kterému pojištění potřebujete."
+        },
+        {
+          "type": "explanation",
+          "paragraphs": [
+            "Dobře nastavené pojištění není vidět podle loga banky ani podle toho, zda je součástí účtu. Pozná se podle toho, že jeho podmínky odpovídají skutečné cestě a člověk ví, jak jej použít.",
+            "Karta může zůstat beze změny, když její krytí sedí. Samostatná smlouva má smysl, když řeší pojmenovanou mezeru — nikoli jako automatický druhý produkt pro jistotu.",
+            "A protože se cesty mění, má smysl krátkou kontrolu zopakovat při změně destinace, délky, rodiny, sportu nebo zdravotní situace. Ne proto, že by pojištění bylo složité samoúčelně, ale protože stejná smlouva může v jiné cestě plnit jinou práci."
+          ]
+        },
+        {
+          "type": "expertNote",
+          "title": "Přesné otázky jsou cennější než vymyšlená katastrofa",
+          "text": "Nechci vás strašit příběhem, který se nestal. Mnohem užitečnější je, když si podle přesných otázek ověříte vlastní krytí a budete vědět, na co se můžete při cestě opravdu spolehnout."
+        },
+        {
+          "type": "nextAction",
+          "title": "Máte pojištění ke kartě a nevíte, zda sedí na cestu, kterou plánujete?",
+          "text": "Můžeme vzít konkrétní variantu karty, destinaci, délku pobytu, cestující osoby a plánované aktivity a projít je proti sobě. Výsledkem může být stejně dobře potvrzení, že vaše karta stačí, jako přesné pojmenování jediné části, kterou je potřeba doplnit.",
+          "action": {
+            "label": "Prověřit moje cestovní krytí",
+            "intent": "open-contact-or-screening-flow"
+          }
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "title": "Pojištění se neověřuje podle toho, co má v názvu. Ověřuje se podle toho, co udělá na vaší cestě.",
+    "paragraphs": [
+      "Karta může obsahovat kvalitní a plně použitelné cestovní pojištění. Stejně tak může obsahovat pouze omezenou variantu, jiný typ krytí nebo podmínky, které na konkrétní cestu nesedí. Samotná existence služby nerozhoduje.",
+      "Podstatné je nejdřív potvrdit, že pojištění běží a obsahuje léčebné výlohy. Potom zkontrolovat limity, repatriaci, odpovědnost, sublimity, spoluúčast, rodinu, délku pobytu, destinaci, sport a zdravotní stav. Nakonec vědět, komu při události zavolat a jak postupovat.",
+      "Teprve z této kontroly vznikne odpověď, zda karta stačí. Nejdražší řešení není automaticky nejlepší a další smlouva není cílem. Cílem je, aby krytí odpovídalo cestě dřív, než na něj budete potřebovat spolehnout."
+    ]
+  },
+  "relatedTopics": [
+    {
+      "topic": "Máte finanční produkty. Ale máte skutečně finanční plán?",
+      "reason": "Rozšiřuje stejný princip: dobrý název nebo jednotlivá smlouva sama o sobě nestačí, pokud člověk neví, jakou práci má v jeho situaci dělat."
+    },
+    {
+      "topic": "Plánujete jednou děti? Některé pojistné možnosti lze sjednat jen předem",
+      "reason": "Ukazuje další oblast, ve které nestačí vědět, že nějaké pojištění existuje; rozhoduje přesná definice události, podmínky a okamžik, kdy je možné ochranu sjednat."
+    }
+  ],
+  "editorial": {
+    "contentStatus": "review-ready",
+    "sourceBasis": "Rozhovorové odpovědi Davida Pokorného, téma 7, strany 43–51 zdrojového dokumentu.",
+    "needsExternalVerification": true,
+    "review": {
+      "status": "pending"
+    },
+    "verificationItems": [
+      {
+        "id": "07-01-aktivace-navazani-na-kartu-a-maximalni-delka-cesty-s",
+        "title": "Aktivace, navázání na kartu a maximální délka cesty se liší podle produktu",
+        "instruction": "Zdroj uvádí, že některá krytí běží automaticky, jiná mohou vyžadovat aktivaci a kartovní pojištění může omezovat délku jedné cesty. Před publikací je nutné tato tvrzení navázat na aktuální podmínky konkrétních variant a nepodávat je jako jednotné pravidlo pro celý trh.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "nejdriv-overit-zda-pojisteni-bezi",
+        "claimRef": "nejdriv-overit-zda-pojisteni-bezi:verification-1",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [],
+        "requiresRecheck": true
+      },
+      {
+        "id": "07-02-orientacni-limity-a-ctyricetinasobne-porovnani-vyzad",
+        "title": "Orientační limity a čtyřicetinásobné porovnání vyžadují aktuální zdroje",
+        "instruction": "Zdroj pracuje s orientační úvahou kolem 25 milionů Kč pro Evropu, desítkami až 100 miliony Kč mimo Evropu a příkladem rozdílu 2,5 versus 100 milionů Kč mezi kartovními variantami. Jde o časově a produktově citlivé hodnoty. Před publikací musí být ověřené proti aktuálním pojistným podmínkám, cenám péče a konkrétnímu územnímu rozsahu. Stejně tak je potřeba přesně ověřit rozsah evropského průkazu zdravotního pojištění.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "limit-lecebnych-vyloh-je-strop",
+        "claimRef": "limit-lecebnych-vyloh-je-strop:verification-2",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [],
+        "requiresRecheck": true
+      },
+      {
+        "id": "07-03-konkretni-priklady-sublimitu-a-spoluucasti-jsou-prod",
+        "title": "Konkrétní příklady sublimitů a spoluúčasti jsou produktově citlivé",
+        "instruction": "Zdroj uvádí příklady 20% spoluúčasti u storna, 20 000 Kč na akutní zubní ošetření, přibližně 15 000 Kč na zavazadla a varianty repatriace bez finančního limitu. Před publikací je nutné každou hodnotu ověřit v aktuálních podmínkách a jasně ji spojit s konkrétním produktem, nikoli ji vydávat za obecný standard.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "velke-cislo-nestaci",
+        "claimRef": "velke-cislo-nestaci:verification-3",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [],
+        "requiresRecheck": true
+      },
+      {
+        "id": "07-04-vekove-hranice-spolecna-cesta-a-sdileni-limitu-musi",
+        "title": "Věkové hranice, společná cesta a sdílení limitů musí být ověřené u konkrétní varianty",
+        "instruction": "Zdroj uvádí příklady věkových hranic 18, 21 nebo 26 let, možnost krytí širší rodiny a společný rodinný limit. Tyto parametry se mezi produkty liší a mohou se měnit. Ve finálním článku nesmí být prezentované bez aktuální tabulky limitů a definice pojištěných osob.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "rodinne-kryti-neni-automaticke",
+        "claimRef": "rodinne-kryti-neni-automaticke:verification-4",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [],
+        "requiresRecheck": true
+      },
+      {
+        "id": "07-05-delky-90-120-dni-sportovni-hranice-a-zdravotni-vyluk",
+        "title": "Délky 90–120 dní, sportovní hranice a zdravotní výluky nejsou univerzální",
+        "instruction": "Zdroj uvádí příklady omezení jedné cesty na 90 nebo 120 dní, výpravy nad 3 000 metrů, lyžování, ferraty, potápění, závody a požadavky na ochranné pomůcky. Před publikací musí být každá konkrétní hranice ověřena v aktuálních podmínkách a formulována jako příklad konkrétního produktu, nikoli jako pravidlo všech pojišťoven.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "ctyri-parametry-konkretni-cesty",
+        "claimRef": "ctyri-parametry-konkretni-cesty:verification-5",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [],
+        "requiresRecheck": true
+      },
+      {
+        "id": "07-06-doporucene-situace-pro-kartu-nebo-samostatnou-smlouv",
+        "title": "Doporučené situace pro kartu nebo samostatnou smlouvu jsou rozhodovací rámec",
+        "instruction": "Zdroj uvádí typické příklady kratší evropské cesty, USA a Kanady, delšího pobytu, sportu, rodinného limitu a silnějšího storna či odpovědnosti. Každé rozhodnutí musí zůstat podmíněné konkrétními aktuálními dokumenty a nesmí z destinace samotné automaticky odvodit jediný správný produkt.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "kdy-karta-staci-a-kdy-ne",
+        "claimRef": "kdy-karta-staci-a-kdy-ne:verification-6",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [],
+        "requiresRecheck": true
+      },
+      {
+        "id": "07-07-zdroj-obsahuje-konkretni-produktove-odkazy-ale-nesme",
+        "title": "Zdroj obsahuje konkrétní produktové odkazy, ale nesmějí být použité bez nové kontroly",
+        "instruction": "Zdroj uvádí dokumenty České spořitelny, ČSOB a Komerční banky jako podklady pro budoucí přesné porovnání. Před publikací je nutné ověřit jejich aktuální dostupnost, datum účinnosti, návaznost na konkrétní varianty a případné změny po vložení do zdrojového rozhovoru. Produktové příklady nemají být vydávané za obecný obraz celého trhu.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "jak-cist-konkretni-podminky",
+        "claimRef": "jak-cist-konkretni-podminky:verification-7",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [],
+        "requiresRecheck": true
+      },
+      {
+        "id": "07-08-ciselne-orientace-v-checklistu-musi-byt-pred-publika",
+        "title": "Číselné orientace v checklistu musí být před publikací aktualizované",
+        "instruction": "Zdroj v původním checklistu používá orientační limity pro Evropu a mimo Evropu i příklady maximální délky 90 nebo 120 dní. V renderované verzi se checklist soustředí na princip kontroly. Pokud se doplní konkrétní čísla, musí mít aktuální autoritativní nebo produktový zdroj a datum platnosti.",
+        "status": "pending",
+        "severity": "blocking",
+        "blocksPublish": true,
+        "visibility": "internal",
+        "sectionId": "predodjezdovy-audit",
+        "claimRef": "predodjezdovy-audit:verification-8",
+        "evidenceRequired": "Aktuální autoritativní nebo produktový podklad a zaznamenaný výsledek kontroly.",
+        "sources": [],
+        "requiresRecheck": true
+      }
+    ],
+    "productionNotes": {
+      "videoOpportunities": [
+        {
+          "recommendedPlacement": "Za sekcí rozlišující léčebné výlohy a úrazové pojištění.",
+          "recommendedTopic": "Zlomená noha v zahraničí: co platí léčebné výlohy a co úrazovka.",
+          "suggestedDuration": "60–90 sekund",
+          "reason": "Krátký vizuální scénář může odstranit nejzásadnější terminologickou záměnu článku bez dalšího textového vysvětlování."
+        },
+        {
+          "recommendedPlacement": "Před rozhodovací sekcí karta versus samostatná smlouva.",
+          "recommendedTopic": "Čtyři otázky ke každé cestě: jak dlouho, kam, co tam dělám a s jakým zdravotním stavem jedu.",
+          "suggestedDuration": "75–120 sekund",
+          "reason": "Video může ukázat, že stejná karta může být dostatečná pro jednu cestu a nedostatečná pro jinou, aniž by bylo potřeba produkt automaticky označit za dobrý nebo špatný."
+        }
+      ],
+      "interactiveOpportunities": [
+        {
+          "type": "travelCoverageDiagnosticOpportunity",
+          "title": "Diagnostika cestovního krytí podle konkrétní cesty",
+          "inputs": [
+            "Banka a přesná varianta karty nebo smlouvy",
+            "Destinace a územní oblast",
+            "Délka jedné cesty",
+            "Seznam cestujících a věk dětí",
+            "Plánované sporty a aktivity",
+            "Relevantní chronická onemocnění nebo těhotenství",
+            "Limit léčebných výloh a odpovědnosti",
+            "Repatriace, storno, zavazadla a spoluúčast",
+            "Požadavek na kontakt s asistencí"
+          ],
+          "outputs": [
+            "Seznam potvrzených částí krytí",
+            "Neověřené nebo chybějící údaje",
+            "Možné mezery podle osob, destinace, délky a aktivit",
+            "Otázky, které je potřeba položit bance nebo pojišťovně",
+            "Rozhodovací výstup: karta může stačit / je potřeba doplnění / nelze rozhodnout bez podmínek"
+          ],
+          "reason": "Článek je postavený jako praktická diagnostika. Nástroj může stejnou logiku převést do kontrolovaného procesu bez automatického produktového doporučení."
+        },
+        {
+          "type": "policyComparisonOpportunity",
+          "title": "Porovnání kartovní a samostatné varianty po jednotlivých rizicích",
+          "inputs": [
+            "Limity a sublimity obou variant",
+            "Definice pojištěných osob",
+            "Územní a časová platnost",
+            "Sportovní skupiny a zdravotní výluky",
+            "Spoluúčast a asistenční proces"
+          ],
+          "outputs": [
+            "Shodné části, které není potřeba duplikovat",
+            "Oblasti, ve kterých je jedna varianta silnější",
+            "Konkrétní nevyřešené mezery",
+            "Přehled podmínek, které musí člověk během cesty dodržet"
+          ],
+          "reason": "Pomůže porovnávat skutečný rozsah místo ceny nebo jednoho headline limitu a může zabránit zbytečnému dvojímu pojištění."
+        }
+      ],
+      "verificationRequired": [
+        {
+          "topic": "Aktuální podmínky konkrétních karet České spořitelny, ČSOB a Komerční banky",
+          "reason": "Zdroj poskytuje konkrétní produktové stránky a PDF. Před publikací ověřit aktuální verze, datum účinnosti, názvy variant, aktivaci, limity, rodinné krytí a dostupnost dokumentů.",
+          "priority": "high"
+        },
+        {
+          "topic": "Orientační limity léčebných výloh pro Evropu a mimo Evropu",
+          "reason": "Částky kolem 25 milionů Kč a desítek až 100 milionů Kč musí být podložené aktuálním odborným zdrojem a formulované podle destinace, nikoli jako univerzální minimum.",
+          "priority": "high"
+        },
+        {
+          "topic": "Rozsah evropského průkazu zdravotního pojištění",
+          "reason": "Ověřit aktuální pravidla, rozsah veřejné péče, spoluúčast a služby, které průkaz nehradí, zejména repatriaci.",
+          "priority": "high"
+        },
+        {
+          "topic": "Aktivace pojištění a maximální délka jedné cesty",
+          "reason": "Příklady automatického krytí, aktivace a limitů 90 nebo 120 dní se musí spojit s přesným produktem a aktuálními podmínkami.",
+          "priority": "high"
+        },
+        {
+          "topic": "Klasifikace sportů a konkrétní hranice aktivit",
+          "reason": "Ověřit lyžování, snowpark, ferraty, potápění, rafting, paragliding, závody, výškové hranice a požadované ochranné pomůcky pro každou použitou variantu.",
+          "priority": "high"
+        },
+        {
+          "topic": "Zdravotní stav, chronická onemocnění a těhotenství",
+          "reason": "Formulace musí odpovídat aktuálním výlukám konkrétních produktů a nesmí paušálně tvrdit, že každá známá diagnóza nebo těhotenství je nekryté.",
+          "priority": "high"
+        },
+        {
+          "topic": "Rodinné krytí, věkové hranice a sdílené limity",
+          "reason": "Příklady 18, 21 a 26 let, podmínka společné cesty, širší rodina a společný limit musí být doložené konkrétními dokumenty.",
+          "priority": "high"
+        },
+        {
+          "topic": "Repatriace, storno, zavazadla, zubní ošetření a spoluúčast",
+          "reason": "Ověřit příklady bezlimitní repatriace, 20% spoluúčasti, 20 000 Kč na zuby, 15 000 Kč na zavazadla a lhůty pro sjednání storna.",
+          "priority": "high"
+        },
+        {
+          "topic": "Povinnost předchozího kontaktu asistenční služby",
+          "reason": "Ověřit přesný proces u jednotlivých pojistek, výjimky v naléhavé situaci a dopad pozdního kontaktu na plnění.",
+          "priority": "high"
+        },
+        {
+          "topic": "Odpovědnost a škody spojené s půjčenými vozidly nebo plavidly",
+          "reason": "Ověřit hranici mezi cestovní odpovědností, pojištěním vozidla a případnými doplňkovými krytími podle konkrétní země a smlouvy.",
+          "priority": "medium"
+        }
+      ],
+      "implementationNotes": [
+        "CaseStudy se záměrně nepoužívá. Zdroj výslovně uvádí, že David zatím nemá konkrétní klientskou pojistnou událost, při které kartovní krytí nestačilo.",
+        "ClientEvidence se nepoužívá, protože zdroj neobsahuje klientský výrok ani referenci k tomuto tématu.",
+        "FinancialDelta se nepoužívá. Čtyřicetinásobný rozdíl limitů je produktové porovnání, nikoli finanční vývoj domácnosti; patří do Comparison a SourceNote.",
+        "Title používá výraz „zdarma od karty“ jako běžné klientské vnímání. Copy nesmí tvrdit, že krytí nemá žádný ekonomický náklad, pokud je součástí placeného účtu nebo prémiové karty.",
+        "Článek nesmí působit jako útok na bankovní karty. Hlavní rozhodovací princip je: karta může být dostačující, pokud její konkrétní krytí sedí na konkrétní cestu.",
+        "Každá přesná částka, počet dní, věková hranice, sportovní klasifikace a produktová podmínka musí mít needsVerification: true nebo blokující redakční kontrolu.",
+        "Rail s hodnotou 2,5 mil. → 100 mil. Kč se smí zobrazit až po ověření konkrétních aktuálních variant. Do té doby má CMS umožnit jeho skrytí nebo nahrazení obecným sdělením o rozdílných limitech.",
+        "Rodinné Comparison musí vizuálně odlišit limit na osobu od společného limitu pro všechny. UI nesmí zobrazit jednu částku tak, aby působila jako dostupná každému členovi zvlášť.",
+        "Definice léčebných výloh a úrazového pojištění má být umístěná brzy v článku. Bez ní se čtenář může ztratit ve zbytku kontroly.",
+        "Checklist před cestou má být interaktivně odškrtávací, ale stav zaškrtnutí nesmí automaticky znamenat odborné potvrzení, pokud uživatel pouze uvedl vlastní domněnku.",
+        "Produktové odkazy ze zdroje patří do redakční vrstvy, nikoli jako trvale platný důkaz uvnitř článku. Při každé revizi se kontroluje verze a datum dokumentu.",
+        "Text musí zachovat klidný tón. Nemá používat nemocnici v cizině jako nátlakovou hororovou scénu, ale jako konkrétní vysvětlení toho, proč se podmínky ověřují předem.",
+        "Článek obsahuje právě jeden explicitní NextAction. Nevkládat další CTA do rails, limitových porovnání ani checklistu.",
+        "Budoucí diagnostický nástroj nesmí automaticky doporučovat konkrétní produkt bez aktuálních podmínek a potřebných klientských dat. Má odhalovat neověřené body a mezery.",
+        "Při použití značek bank ve veřejném renderu musí být jasné datum kontroly a přesná varianta. Obecné srovnání bank podle nejvyššího dostupného limitu by bylo zavádějící.",
+        "Editorial backlog: připravit samostatné téma Jak číst pojistné podmínky bez právnického slovníku.",
+        "Editorial backlog: připravit praktický průvodce Co dělat při pojistné události v zahraničí z aktuálně ověřených podmínek a procesů."
+      ]
+    }
+  }
+}

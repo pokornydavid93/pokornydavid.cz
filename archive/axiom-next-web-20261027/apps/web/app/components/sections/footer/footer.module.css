@@ -1,0 +1,523 @@
+.footerCont {
+  --footer-surface: var(--surface-card-dark);
+  --footer-surface-panel: var(--surface-card-dark-hover);
+  --footer-border: var(--border-subtle);
+  --footer-border-medium: var(--border-medium);
+  --footer-border-emphasis: var(--border-emphasis);
+  --footer-text-primary: var(--text-primary);
+  --footer-text-secondary: var(--text-secondary);
+  --footer-text-muted: var(--text-muted);
+  --footer-text-emphasis: var(--text-emphasis);
+  --footer-icon-emphasis: var(--icon-emphasis);
+  --footer-shadow: var(--shadow-jet-medium);
+  --footer-focus: var(--button-focus-ring);
+
+  position: relative;
+  width: 100%;
+  padding: 53px 0 53px;
+  overflow: hidden;
+  color: var(--footer-text-primary);
+  background: var(--footer-surface);
+  border-top: 1px solid var(--footer-border-medium);
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.topPanel {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.3fr) minmax(0, 0.7fr);
+  gap: clamp(30px, 4.5vw, 64px);
+  align-items: center;
+  padding: 0 0 50px;
+  border-bottom: 1px solid var(--footer-border);
+}
+
+.footerBrand {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 16px;
+}
+
+.footerLogo {
+  width: clamp(76px, 7vw, 104px);
+  height: auto;
+  flex: 0 0 auto;
+  color: var(--footer-icon-emphasis);
+  filter: none;
+}
+
+.footerName {
+  margin: 0;
+  color: var(--footer-text-emphasis);
+  font-size: clamp(1.25rem, 1.8vw, 1.32rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.footerRole {
+  margin: 4px 0 0;
+  color: var(--footer-text-secondary);
+  font-size: clamp(0.98rem, 1.15vw, 1.12rem);
+  font-weight: 550;
+}
+
+.linkGrid {
+  display: grid;
+  grid-template-columns:
+    minmax(220px, 1.1fr) minmax(150px, 0.72fr) minmax(180px, 0.82fr)
+    minmax(170px, 0.72fr);
+  gap: clamp(28px, 5vw, 70px);
+}
+
+.column {
+  min-width: 0;
+}
+
+.column h3 {
+  margin: 0 0 14px;
+  color: var(--footer-text-emphasis);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.column ul {
+  display: grid;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.column a {
+  color: var(--footer-text-secondary);
+  font-size: 0.95rem;
+  font-weight: 560;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.column a:hover,
+.column a:focus-visible {
+  color: var(--footer-text-emphasis);
+}
+
+.contactList li {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--footer-icon-emphasis);
+}
+
+.contactList svg {
+  flex: 0 0 auto;
+  color: var(--footer-icon-emphasis);
+  margin-top: 0.08em;
+}
+
+.contactList span {
+  color: var(--footer-text-secondary);
+  font-size: 0.95rem;
+  font-weight: 560;
+  line-height: 1.35;
+}
+
+.officeMapButton {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.officeMapButton span {
+  text-decoration-color: transparent;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition:
+    color 160ms ease,
+    text-decoration-color 160ms ease;
+}
+
+.officeMapButton:hover span,
+.officeMapButton:focus-visible span {
+  color: var(--footer-text-emphasis);
+  text-decoration-color: currentColor;
+}
+
+.officeMapButton:focus-visible {
+  outline: 2px solid var(--footer-focus);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.legalMini {
+  display: grid;
+  gap: 3px;
+  max-width: 310px;
+  margin: 16px 0 0;
+  color: var(--footer-text-muted);
+  font-size: 0.81rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.mapOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10020;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.mapBackdrop {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--overlay-backdrop);
+  cursor: pointer;
+}
+
+.mapDialog {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 18px;
+  width: min(720px, 100%);
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+  padding: 24px;
+  border: 1px solid var(--overlay-border);
+  border-radius: 16px;
+  background: var(--overlay-popover-surface);
+  box-shadow: var(--footer-shadow);
+}
+
+.mapClose {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--footer-border-emphasis);
+  border-radius: 999px;
+  background: var(--overlay-floating-utility-surface);
+  color: var(--footer-icon-emphasis);
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease;
+}
+
+.mapClose:hover,
+.mapClose:focus-visible {
+  border-color: var(--footer-border-emphasis);
+  background: var(--surface-card-dark-hover);
+}
+
+.mapHeader {
+  padding-right: 46px;
+}
+
+.mapHeader h2 {
+  margin: 0;
+  color: var(--footer-text-primary);
+  font-size: clamp(1.28rem, 2vw, 1.68rem);
+  font-weight: 780;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.mapHeader p {
+  margin: 8px 0 0;
+  color: var(--footer-text-secondary);
+  font-size: 0.96rem;
+  font-weight: 520;
+  line-height: 1.5;
+}
+
+.mapFrameShell {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 360px;
+  border-radius: 12px;
+  background: var(--surface-card-dark);
+}
+
+.mapFrame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.mapFrame.mapFrameLoaded {
+  opacity: 1;
+}
+
+.mapLoading {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  background: var(--surface-section-dark);
+  pointer-events: none;
+}
+
+.mapLoadingDots {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 14px;
+  border: 1px solid var(--footer-border);
+  border-radius: 999px;
+  background: var(--overlay-floating-utility-surface);
+}
+
+.mapLoadingDots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--footer-icon-emphasis);
+  box-shadow: none;
+  animation: mapTypingBounce 900ms ease-in-out infinite;
+}
+
+.mapLoadingDots span:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.mapLoadingDots span:nth-child(3) {
+  animation-delay: 240ms;
+}
+
+.mapActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mapExternalLink,
+.mapConsultButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--footer-text-emphasis);
+  font-size: 0.95rem;
+  font-weight: 760;
+  line-height: 1.25;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.mapConsultButton {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-decoration-color: transparent;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition:
+    color 160ms ease,
+    text-decoration-color 160ms ease;
+}
+
+.mapExternalLink:hover,
+.mapExternalLink:focus-visible,
+.mapConsultButton:hover,
+.mapConsultButton:focus-visible {
+  color: var(--footer-text-primary);
+}
+
+.mapConsultButton:hover,
+.mapConsultButton:focus-visible {
+  text-decoration-color: currentColor;
+}
+
+.mapConsultButton:focus-visible {
+  outline: 2px solid var(--footer-focus);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+@keyframes mapTypingBounce {
+  0%,
+  72%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.54;
+  }
+
+  28% {
+    transform: translateY(-7px);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mapFrame {
+    transition: none;
+  }
+
+  .mapLoadingDots span {
+    animation: none;
+  }
+}
+
+.regulatoryBox {
+  display: grid;
+  align-self: center;
+  gap: 8px;
+  border: 1px solid var(--footer-border);
+  border-radius: 12px;
+  background: var(--footer-surface-panel);
+  padding: 16px 18px;
+}
+
+.regulatoryBox h3 {
+  margin: 0;
+  color: var(--footer-text-emphasis);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.regulatoryBox p {
+  margin: 0;
+  color: var(--footer-text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.58;
+}
+
+.bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 22px;
+  border-top: 1px solid var(--footer-border);
+  color: var(--footer-text-muted);
+  font-size: 0.82rem;
+}
+
+.bottomLinks {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.bottomLinks a {
+  color: var(--footer-text-muted);
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.bottomLinks a:hover,
+.bottomLinks a:focus-visible {
+  color: var(--footer-text-emphasis);
+}
+
+@media (max-width: 1080px) {
+  .topPanel {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .linkGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .footerCont {
+    padding: 42px 0 26px;
+  }
+
+  .inner {
+    gap: 26px;
+  }
+
+  .topPanel {
+    padding-bottom: 26px;
+  }
+
+  .footerBrand {
+    gap: 14px;
+  }
+
+  .footerLogo {
+    width: 72px;
+  }
+
+  .linkGrid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .regulatoryBox {
+    padding: 14px;
+  }
+
+  .mapOverlay {
+    padding: 14px;
+  }
+
+  .mapDialog {
+    gap: 15px;
+    max-height: calc(100vh - 28px);
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .mapFrameShell {
+    height: 300px;
+  }
+
+  .mapActions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .bottomRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bottomLinks {
+    justify-content: flex-start;
+    gap: 16px;
+  }
+}

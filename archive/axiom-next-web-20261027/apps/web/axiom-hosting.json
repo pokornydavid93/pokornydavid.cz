@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "schema_id": "axiom.project-hosting-configuration@1",
+  "integration_manifest_schema_id": "axiom_integration_manifest@1",
+  "public_environment": {
+    "AXIOM_PUBLIC_ARTICLE_RUNTIME_ORIGIN": { "kind": "axiom_api_origin" },
+    "AXIOM_PUBLIC_ARTICLE_RUNTIME_WORKSPACE_ID": { "kind": "workspace_id" },
+    "AXIOM_PUBLIC_ARTICLE_SOURCE": { "kind": "literal", "value": "published" },
+    "AXIOM_PUBLIC_OFFERING_CATALOG_ORIGIN": { "kind": "axiom_api_origin" },
+    "AXIOM_PUBLIC_OFFERING_CATALOG_WORKSPACE_ID": { "kind": "workspace_id" },
+    "NEXT_PUBLIC_SITE_MODE": { "kind": "literal", "value": "full" }
+  }
+}

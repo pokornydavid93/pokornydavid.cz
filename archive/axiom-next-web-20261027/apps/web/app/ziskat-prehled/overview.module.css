@@ -1,0 +1,867 @@
+.utilityPage {
+  min-block-size: 100svh;
+  color: var(--text-on-light-primary);
+  background: var(--surface-paper);
+}
+
+.overviewHeader.overviewHeader {
+  --container-wide: var(--container-page-cinematic-max);
+  --nav-link-text: rgba(var(--brand-ivory-rgb), 0.8);
+  --nav-link-hover: var(--brand-ivory);
+  --nav-link-active: var(--brand-ivory);
+  --nav-active-indicator: var(--brand-lime);
+  --focus-ring: var(--brand-lime);
+  --site-header-material-bg: rgba(var(--brand-jet-rgb), 0.74);
+  --site-header-material-image:
+    linear-gradient(
+      100deg,
+      rgba(var(--brand-forest-rgb), 0.3) 0%,
+      rgba(var(--brand-jet-rgb), 0.12) 48%,
+      rgba(var(--brand-jet-rgb), 0.52) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(var(--brand-ivory-rgb), 0.075) 0%,
+      transparent 42%,
+      rgba(var(--brand-jet-rgb), 0.18) 100%
+    );
+  --site-header-material-edge: 1px solid rgba(var(--brand-ivory-rgb), 0.11);
+  --site-header-material-filter:
+    blur(var(--site-header-backdrop-blur)) saturate(1.08);
+  --site-header-shadow:
+    inset 0 1px 0 rgba(var(--brand-ivory-rgb), 0.055),
+    inset 0 -1px 0 rgba(var(--brand-jet-rgb), 0.32),
+    0 16px 34px -26px rgba(var(--brand-jet-rgb), 0.88);
+  --text-primary: var(--brand-ivory);
+  --text-muted: rgba(var(--brand-ivory-rgb), 0.72);
+}
+
+.utilityBrand,
+.backToWebsite {
+  min-block-size: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  touch-action: manipulation;
+}
+
+.utilityBrand {
+  gap: var(--space-10);
+}
+
+.utilityBrand > span {
+  display: grid;
+  gap: 1px;
+}
+
+.utilityBrand strong {
+  color: var(--text-primary);
+  font-size: var(--type-body-small-size);
+  line-height: var(--type-body-small-line-height);
+  white-space: nowrap;
+}
+
+.utilityBrand small {
+  color: var(--text-muted);
+  font-size: var(--type-caption-size);
+  white-space: nowrap;
+}
+
+.utilityHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 40px);
+}
+
+.backToWebsite {
+  gap: var(--space-8);
+  color: var(--text-on-dark-primary);
+  font-size: 0.86rem;
+  font-weight: 620;
+}
+
+.backToWebsite svg {
+  inline-size: 16px;
+  block-size: 16px;
+  color: var(--brand-lime);
+}
+
+.backMobile {
+  display: none;
+}
+
+.utilityBrand:focus-visible,
+.backToWebsite:focus-visible,
+.directContactError:focus-visible,
+.situationSummary button:focus-visible,
+.backStep:focus-visible {
+  outline: 2px solid var(--brand-lime);
+  outline-offset: 4px;
+}
+
+.utilityMain {
+  position: relative;
+  isolation: isolate;
+  min-block-size: calc(100svh - 72px);
+  overflow: hidden;
+  background: transparent;
+}
+
+.utilityMain::before {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0 7.5%,
+      rgba(var(--brand-forest-rgb), 0.045) 7.5% calc(7.5% + 1px),
+      transparent calc(7.5% + 1px) 92.5%,
+      rgba(var(--brand-forest-rgb), 0.045) 92.5% calc(92.5% + 1px),
+      transparent calc(92.5% + 1px)
+    );
+  content: "";
+  pointer-events: none;
+}
+
+.utilityMain::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("/noise.avif") center / 28rem 28rem repeat;
+  content: "";
+  opacity: 0.018;
+  pointer-events: none;
+}
+
+.formWorkspace {
+  box-sizing: border-box;
+  inline-size: min(100%, 920px);
+  margin-inline: auto;
+  padding: clamp(32px, 4vh, 48px) var(--space-24) clamp(64px, 8vh, 96px);
+}
+
+.overviewExperience {
+  inline-size: 100%;
+  overflow: clip;
+  background: var(--surface-card-light);
+  border: 1px solid color-mix(in srgb, var(--brand-forest) 18%, transparent);
+  border-radius: 14px;
+  box-shadow: 0 24px 62px -48px rgba(var(--brand-jet-rgb), 0.34);
+}
+
+.formColumn {
+  min-inline-size: 0;
+  padding: clamp(30px, 3.1vw, 44px);
+}
+
+.overviewForm {
+  position: relative;
+  inline-size: 100%;
+  display: grid;
+  gap: var(--space-24);
+}
+
+.honeypot,
+.visuallyHidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.progressBlock {
+  display: grid;
+  gap: var(--space-12);
+}
+
+.progressHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-16);
+}
+
+.progressLabel,
+.progressPhase {
+  color: var(--brand-forest);
+  font-size: 0.68rem;
+  font-weight: 760;
+  letter-spacing: 0.11em;
+  line-height: 1.2;
+}
+
+.progressPhase {
+  color: var(--text-on-light-muted);
+  text-align: end;
+}
+
+.progressTrack {
+  position: relative;
+  block-size: 2px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--brand-forest) 16%, transparent);
+}
+
+.progressFill {
+  position: absolute;
+  inset: 0;
+  background: var(--brand-forest);
+  transform: scaleX(0.5);
+  transform-origin: left center;
+  transition: transform 190ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.progressTrack[data-current-step="2"] .progressFill {
+  transform: scaleX(1);
+}
+
+.stepPanel {
+  display: grid;
+  gap: clamp(20px, 2.5vw, 28px);
+  animation: step-enter 190ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.stepOneIntro p {
+  max-inline-size: 54ch;
+  margin: 0;
+  color: var(--text-on-light-primary);
+  font-size: clamp(1.05rem, 1.5vw, 1.16rem);
+  font-weight: 590;
+  line-height: 1.5;
+}
+
+.reassurance,
+.collectionNotice p,
+.serverError p,
+.validationMessage {
+  margin: 0;
+}
+
+.situationGroup {
+  min-inline-size: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.situationGroup {
+  display: grid;
+  gap: clamp(14px, 2vw, 20px);
+}
+
+.situationOptions {
+  display: grid;
+  gap: 0;
+  border-block-start: 1px solid var(--border-on-light-default);
+}
+
+.situationOptionCluster {
+  min-inline-size: 0;
+}
+
+.situationOption {
+  position: relative;
+  box-sizing: border-box;
+  min-block-size: 58px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-14);
+  color: var(--text-on-light-primary);
+  background: transparent;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition:
+    background-color 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease;
+}
+
+.situationOption {
+  min-block-size: 62px;
+  padding: var(--space-14) var(--space-12);
+  font-size: 1.01rem;
+  font-weight: 580;
+  line-height: 1.32;
+  border: 0;
+  border-block-end: 1px solid var(--border-on-light-subtle);
+  border-radius: 0;
+  -webkit-tap-highlight-color: rgba(var(--brand-forest-rgb), 0.1);
+}
+
+.situationOption input {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  opacity: 0;
+}
+
+.radioMark {
+  box-sizing: border-box;
+  inline-size: 22px;
+  block-size: 22px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--brand-forest) 66%, transparent);
+  border-radius: 50%;
+}
+
+.radioMark::after {
+  inline-size: 8px;
+  block-size: 8px;
+  background: var(--brand-forest);
+  border-radius: 50%;
+  content: "";
+  transform: scale(0);
+  transition: transform 170ms ease;
+}
+
+.situationOption[data-selected="true"] {
+  background: color-mix(in srgb, var(--brand-forest) 6%, var(--surface-card-light));
+  border-color: color-mix(in srgb, var(--brand-forest) 32%, transparent);
+  box-shadow: inset 2px 0 0 var(--brand-forest);
+}
+
+[data-selected="true"] > .radioMark {
+  border-color: var(--brand-forest);
+}
+
+[data-selected="true"] > .radioMark::after {
+  transform: scale(1);
+}
+
+.situationOption:has(input:focus-visible) {
+  outline: 2px solid var(--brand-forest);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand-lime) 36%, transparent);
+}
+
+.situationOption:has(input:disabled) {
+  opacity: 0.52;
+  cursor: not-allowed;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .situationOption:not([data-selected="true"]):hover {
+    border-color: color-mix(in srgb, var(--brand-forest) 62%, transparent);
+    background: color-mix(in srgb, var(--brand-forest) 3%, var(--surface-card-light));
+  }
+
+  .utilityBrand:hover,
+  .backToWebsite:hover,
+  .directContactError:hover,
+  .situationSummary button:hover,
+  .backStep:hover {
+    text-decoration-thickness: 2px;
+  }
+}
+
+.situationOptionCluster[data-expanded="true"] .situationOption {
+  border-block-end-color: color-mix(
+    in srgb,
+    var(--brand-forest) 36%,
+    transparent
+  );
+}
+
+.situationNoteReveal {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition:
+    grid-template-rows 220ms ease,
+    opacity 180ms ease,
+    transform 220ms ease;
+}
+
+.situationNoteDisclosure {
+  min-inline-size: 0;
+  display: grid;
+}
+
+.situationNoteToggle {
+  inline-size: fit-content;
+  min-block-size: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-8) 0;
+  color: var(--brand-forest);
+  background: transparent;
+  border: 0;
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.situationNoteToggle::after {
+  inline-size: 7px;
+  block-size: 7px;
+  border-inline-end: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
+  content: "";
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.situationNoteToggle[aria-expanded="true"]::after {
+  transform: translateY(2px) rotate(225deg);
+}
+
+.situationNoteToggle:focus-visible {
+  outline: 2px solid var(--brand-forest);
+  outline-offset: 3px;
+}
+
+.situationNoteReveal > div {
+  min-block-size: 0;
+  overflow: hidden;
+}
+
+.situationOptionCluster[data-expanded="true"] .situationNoteReveal {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.situationNoteDisclosure[data-expanded="true"] .situationNoteReveal {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.situationNotePanel {
+  padding: var(--space-20);
+  display: grid;
+  gap: var(--space-10);
+  background:
+    color-mix(in srgb, var(--brand-lime) 8%, var(--surface-paper));
+  border: 1px solid color-mix(in srgb, var(--brand-forest) 34%, transparent);
+  border-block-start: 0;
+  border-radius: 0 0 var(--radius-control) var(--radius-control);
+}
+
+.situationNoteLabel {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-16);
+  color: var(--text-on-light-primary);
+}
+
+.situationNoteLabel > span {
+  font-size: 0.9rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.situationNoteLabel small {
+  flex: 0 0 auto;
+  color: var(--text-on-light-muted);
+  font-size: 0.7rem;
+  font-weight: 680;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.situationNotePanel textarea {
+  box-sizing: border-box;
+  inline-size: 100%;
+  min-block-size: 128px;
+  padding: 13px var(--space-14);
+  resize: vertical;
+  color: var(--text-on-light-primary);
+  background: color-mix(in srgb, var(--surface-paper) 94%, white);
+  border: 1px solid var(--border-on-light-default);
+  border-radius: var(--radius-control);
+  font: inherit;
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.situationNotePanel textarea::placeholder {
+  color: var(--text-on-light-muted);
+  opacity: 0.82;
+}
+
+.situationNotePanel textarea:focus-visible {
+  outline: 2px solid var(--brand-forest);
+  outline-offset: 2px;
+  border-color: var(--brand-forest);
+}
+
+.situationNotePanel textarea[aria-invalid="true"] {
+  border-color: var(--status-error-border-on-light);
+}
+
+.situationNoteMeta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-16);
+  color: var(--text-on-light-muted);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+.situationNoteMeta > span:first-child {
+  min-inline-size: 0;
+  flex: 1 1 auto;
+}
+
+.situationNoteMeta > span + span {
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+}
+
+.stepOneActions,
+.finalActionBlock {
+  display: grid;
+  gap: var(--space-12);
+}
+
+.primaryAction[data-component="button"] {
+  inline-size: fit-content;
+  min-inline-size: min(100%, 276px);
+  min-block-size: 56px;
+  padding-inline: var(--space-20) var(--space-8);
+  justify-content: space-between;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 10px 26px -20px rgba(var(--brand-forest-rgb), 0.68);
+  transition:
+    translate 160ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.primaryAction[data-component="button"] > span[aria-hidden="true"]:has(> svg) {
+  inline-size: 40px;
+  block-size: 40px;
+  margin-inline-start: var(--space-16);
+  display: grid;
+  place-items: center;
+  color: var(--brand-lime);
+  background: var(--surface-page);
+  border: 1px solid rgba(var(--brand-lime-rgb), 0.4);
+  border-radius: 50%;
+}
+
+.primaryAction[data-component="button"] > span[aria-hidden="true"]:has(> svg) > svg {
+  inline-size: 17px;
+  block-size: 17px;
+}
+
+.primaryAction[data-component="button"]:disabled > span[aria-hidden="true"]:has(> svg) {
+  color: var(--text-on-light-muted);
+  background: color-mix(in srgb, var(--brand-forest) 9%, var(--surface-card-light));
+  border-color: transparent;
+}
+
+.reassurance {
+  color: var(--text-on-light-muted);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.situationSummary {
+  min-block-size: 64px;
+  padding: var(--space-12) 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-20);
+  border-block-end: 1px solid var(--border-on-light-subtle);
+}
+
+.situationSummaryContext {
+  min-inline-size: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-24);
+}
+
+.situationSummaryContext > span {
+  min-inline-size: 0;
+  display: grid;
+  gap: var(--space-4);
+}
+
+.situationSummary small {
+  color: var(--text-on-light-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.situationSummary strong {
+  font-size: 0.94rem;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.situationSummary button,
+.backStep {
+  min-block-size: 44px;
+  padding: 0;
+  color: var(--brand-forest);
+  background: transparent;
+  border: 0;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 670;
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.fieldError,
+.validationMessage {
+  color: var(--status-error-text-on-light);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.contactFields {
+  display: grid;
+  gap: var(--space-20);
+}
+
+.contactField {
+  --input-height: 52px;
+  --form-field-gap: var(--space-8);
+}
+
+.contactField :global([data-component="text-input"]) {
+  background: color-mix(in srgb, var(--surface-card-light) 94%, white);
+  border-radius: var(--radius-control);
+}
+
+.serverError {
+  padding: var(--space-16);
+  display: grid;
+  gap: var(--space-8);
+  color: var(--status-error-text-on-light);
+  background: var(--status-error-bg-on-light);
+  border-inline-start: 3px solid var(--status-error-border-on-light);
+}
+
+.serverError:focus-visible {
+  outline: 2px solid var(--status-error-text-on-light);
+  outline-offset: 3px;
+}
+
+.serverError strong {
+  font-size: 0.9rem;
+}
+
+.serverError p,
+.serverError a {
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.collectionNotice {
+  display: grid;
+  gap: var(--space-8);
+  color: var(--text-on-light-secondary);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.collectionNotice > a {
+  inline-size: fit-content;
+}
+
+.backStep {
+  inline-size: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  text-decoration: none;
+}
+
+.backStep svg {
+  inline-size: 16px;
+  block-size: 16px;
+}
+
+.directContactError {
+  min-block-size: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--brand-forest);
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+@keyframes step-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1180px) {
+  .formWorkspace {
+    padding-inline: var(--space-20);
+  }
+
+  .formColumn {
+    padding: clamp(32px, 4vw, 44px);
+  }
+}
+
+@media (max-width: 1040px) {
+  .formWorkspace {
+    inline-size: min(100%, 860px);
+  }
+}
+
+@media (max-width: 720px) {
+  .backDesktop,
+  .utilityBrand small {
+    display: none;
+  }
+
+  .backMobile {
+    display: inline;
+  }
+
+  .utilityMain {
+    min-block-size: calc(100svh - var(--site-header-min-block-compact));
+  }
+
+  .formWorkspace {
+    padding: var(--space-16) var(--space-12) calc(var(--space-40) + env(safe-area-inset-bottom));
+  }
+
+  .overviewExperience {
+    border-radius: 12px;
+    box-shadow: 0 18px 48px -42px rgba(var(--brand-jet-rgb), 0.4);
+  }
+
+  .formColumn {
+    padding: var(--space-24) var(--space-20) var(--space-28);
+  }
+
+  .overviewForm {
+    gap: var(--space-14);
+  }
+
+  .progressBlock {
+    gap: var(--space-6);
+  }
+
+  .stepPanel {
+    gap: var(--space-16);
+  }
+
+  .stepOneIntro p {
+    font-size: 1.02rem;
+  }
+
+  .situationGroup {
+    gap: var(--space-14);
+  }
+
+  .situationOption {
+    min-block-size: 58px;
+    padding: var(--space-10) var(--space-8);
+  }
+
+  .primaryAction[data-component="button"] {
+    inline-size: 100%;
+    min-inline-size: 0;
+  }
+
+}
+
+@media (max-width: 390px) {
+  .formWorkspace {
+    padding-inline: var(--space-8);
+    padding-block-start: var(--space-12);
+  }
+
+  .formColumn {
+    padding-inline: var(--space-16);
+    padding-block-start: var(--space-20);
+  }
+
+  .overviewForm {
+    gap: var(--space-12);
+  }
+
+  .stepPanel {
+    gap: var(--space-8);
+  }
+
+  .situationGroup {
+    gap: var(--space-10);
+  }
+
+  .situationOption {
+    min-block-size: 54px;
+    padding-block: var(--space-8);
+  }
+
+  .utilityBrand strong {
+    font-size: 0.86rem;
+  }
+
+}
+
+@media (max-height: 800px) and (min-width: 721px) {
+  .formWorkspace {
+    padding-block-start: 36px;
+  }
+
+  .overviewForm,
+  .stepPanel {
+    gap: var(--space-20);
+  }
+
+  .situationOption {
+    min-block-size: 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primaryAction[data-component="button"] {
+    transition: none;
+  }
+
+  .stepPanel {
+    animation: none;
+  }
+
+  .progressFill,
+  .situationOption,
+  .radioMark::after,
+  .situationNoteReveal {
+    transition: none;
+  }
+}

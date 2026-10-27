@@ -1,3 +1,9 @@
+Aktuální produkční web používá Surface. Tento původní Next.js repozitář zůstává historicky zachovaný.
+
+Poslední lokální verzi najdete v [archivu z 27. 10. 2026](archive/axiom-next-web-20261027/README.md), včetně úplného zdroje aplikace, veřejných médií a postupu obnovy se soukromými závislostmi Axiomu.
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

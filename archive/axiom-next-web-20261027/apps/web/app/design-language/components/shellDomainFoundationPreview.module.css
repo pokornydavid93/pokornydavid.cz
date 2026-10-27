@@ -1,0 +1,438 @@
+.workbench,
+.labLayer,
+.contractStack,
+.domainContracts,
+.decisionFlow,
+.consentLab {
+  min-width: 0;
+  display: grid;
+}
+
+.workbench {
+  gap: var(--space-component);
+}
+
+.layerTabs {
+  padding: var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-control);
+}
+
+.layerTabs button,
+.segmentedControl button {
+  min-block-size: var(--control-touch-target-min);
+  padding-inline: var(--space-12);
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: var(--type-caption-size);
+  font-weight: var(--type-label-weight);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.layerTabs button[aria-selected="true"],
+.segmentedControl button[data-active] {
+  color: var(--selection-selected-text);
+  background: var(--selection-selected-bg);
+  border-color: var(--selection-selected-border);
+}
+
+.layerTabs button:focus-visible,
+.segmentedControl button:focus-visible,
+.workbench [role="tabpanel"]:focus-visible {
+  outline: var(--focus-width-standard) solid var(--focus-ring);
+  outline-offset: var(--focus-offset-standard);
+}
+
+.labLayer {
+  gap: var(--space-composition);
+}
+
+.layerIntro {
+  max-inline-size: var(--measure-lead);
+  display: grid;
+  gap: var(--space-8);
+}
+
+.layerIntro > span,
+.contractIndex header > span,
+.contractSpecimen > header > span,
+.domainCollection > header > span,
+.decisionFlow > section > header > span,
+.consentLab > header > span,
+.contractEyebrow {
+  color: var(--text-emphasis);
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-weight);
+  letter-spacing: var(--type-eyebrow-letter-spacing);
+  text-transform: uppercase;
+}
+
+.layerIntro h3,
+.layerIntro p,
+.contractIndex h4,
+.domainCollection h4,
+.decisionFlow h4,
+.consentLab h4,
+.trustBlock h4,
+.trustBlock p {
+  margin: 0;
+}
+
+.layerIntro h3 {
+  color: var(--text-primary);
+  font-size: var(--type-heading-size);
+  line-height: var(--type-heading-line-height);
+  text-wrap: balance;
+}
+
+.layerIntro p,
+.trustBlock p {
+  color: var(--text-secondary);
+  line-height: var(--type-body-line-height);
+  text-wrap: pretty;
+}
+
+.contractIndex {
+  padding-block: var(--space-20);
+  display: grid;
+  gap: var(--space-16);
+  border-block: 1px solid var(--border-default);
+}
+
+.contractIndex header {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.contractIndex h4,
+.domainCollection h4,
+.decisionFlow h4,
+.consentLab h4,
+.trustBlock h4 {
+  color: var(--text-primary);
+  font-size: var(--type-subheading-size);
+  line-height: var(--type-subheading-line-height);
+}
+
+.contractIndex ul {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1px;
+  background: var(--border-subtle);
+  list-style: none;
+}
+
+.contractIndex li {
+  min-width: 0;
+  padding: var(--space-12);
+  display: grid;
+  gap: var(--space-6);
+  color: var(--text-secondary);
+  background: var(--surface-page);
+}
+
+.contractIndex li > div {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+
+.contractIndex strong {
+  color: var(--text-primary);
+}
+
+.contractIndex code,
+.contractIndex small {
+  color: var(--text-muted);
+  font-size: var(--type-caption-size);
+  overflow-wrap: anywhere;
+}
+
+.segmentedControl {
+  justify-self: start;
+  padding: var(--space-4);
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, auto);
+  gap: var(--space-4);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-control);
+}
+
+.contractStack {
+  gap: var(--space-composition);
+}
+
+.contractSpecimen {
+  min-width: 0;
+  padding-block-start: var(--space-20);
+  display: grid;
+  gap: var(--space-16);
+  border-block-start: 1px solid var(--border-default);
+}
+
+.contractSpecimen > header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-8) var(--space-16);
+}
+
+.contractSpecimen > header > strong {
+  color: var(--text-primary);
+  font-size: var(--type-label-size);
+}
+
+.headerSpecimen,
+.footerSpecimen,
+.footerConsentBridge {
+  min-width: 0;
+  overflow: clip;
+  color: var(--text-primary);
+  background: var(--surface-page);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card-compact);
+}
+
+.headerSpecimen {
+  --page-gutter: var(--space-16);
+}
+
+.headerSpecimen > p {
+  margin: 0;
+  padding: var(--space-20);
+  color: var(--text-secondary);
+}
+
+.footerSpecimen,
+.footerConsentBridge {
+  --page-gutter: var(--space-24);
+}
+
+.paginationStates {
+  display: grid;
+  gap: var(--space-16);
+}
+
+.paginationStates > div {
+  min-width: 0;
+  padding-block: var(--space-12);
+  display: grid;
+  gap: var(--space-8);
+  border-block-start: 1px solid var(--border-subtle);
+}
+
+.paginationStates > div > span {
+  color: var(--text-muted);
+  font-size: var(--type-caption-size);
+  text-transform: uppercase;
+}
+
+.domainContracts {
+  padding: clamp(var(--space-16), 3vw, var(--space-32));
+  gap: var(--space-section-compact);
+  border-radius: var(--radius-card-compact);
+}
+
+.heroProof {
+  padding: var(--space-24);
+  display: grid;
+  gap: var(--space-8);
+  color: var(--text-primary);
+  border-block: 1px solid var(--border-emphasis);
+}
+
+.heroProof strong {
+  font-size: var(--type-heading-size);
+  line-height: var(--type-heading-line-height);
+}
+
+.heroProof span {
+  color: var(--text-secondary);
+}
+
+.domainCollection {
+  --layout-grid-item-standard: 20rem;
+
+  inline-size: 100%;
+  max-inline-size: 75rem;
+  display: grid;
+  gap: var(--space-component);
+}
+
+.domainCollection > header,
+.decisionFlow > section > header,
+.consentLab > header,
+.trustBlock > div > div > div:first-child {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.trustBlock {
+  padding-block: var(--space-24) !important;
+}
+
+.trustBlock [data-layout="grid"] {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.shellDiagnostics {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--border-subtle);
+}
+
+.shellDiagnostics > div {
+  min-width: 0;
+  padding: var(--space-12);
+  display: grid;
+  gap: var(--space-6);
+  background: var(--surface-page);
+}
+
+.shellDiagnostics dt {
+  color: var(--text-muted);
+  font-size: var(--type-caption-size);
+  text-transform: uppercase;
+}
+
+.shellDiagnostics dd {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: var(--type-body-small-size);
+  overflow-wrap: anywhere;
+}
+
+.iframeStage {
+  min-width: 0;
+  padding: var(--space-12);
+  display: grid;
+  justify-items: center;
+  overflow-x: auto;
+  background: var(--surface-card-dark);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card-compact);
+}
+
+.iframeStage iframe {
+  inline-size: min(100%, var(--shell-preview-width));
+  block-size: 48rem;
+  background: var(--surface-page);
+  border: 1px solid var(--border-control);
+  border-radius: var(--radius-control);
+}
+
+.decisionFlow {
+  max-inline-size: 48rem;
+  gap: var(--space-composition);
+}
+
+.decisionFlow > section,
+.consentLab {
+  gap: var(--space-component);
+}
+
+.orDivider {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-12);
+  color: var(--text-muted);
+  font-size: var(--type-caption-size);
+  text-transform: uppercase;
+}
+
+.orDivider::before,
+.orDivider::after {
+  content: "";
+  block-size: 1px;
+  background: var(--border-default);
+}
+
+.consentLab {
+  padding-block-start: var(--space-composition);
+  border-block-start: 1px solid var(--border-default);
+}
+
+.consentLab > [data-component="consent-analytics-loader"] {
+  min-block-size: var(--control-touch-target-min);
+  padding: var(--space-10) var(--space-12);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-control);
+}
+
+.consentLab > [data-component="consent-analytics-loader"][data-state="blocked"]::before {
+  content: "Analytics provider: blocked";
+}
+
+.consentLab > [data-component="consent-analytics-loader"][data-state="loaded"] {
+  color: var(--text-primary);
+  border-color: var(--border-state);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .layerTabs button:hover,
+  .segmentedControl button:hover {
+    color: var(--selection-text-hover);
+    background: var(--selection-bg-hover);
+  }
+}
+
+@media (max-width: 900px) {
+  .shellDiagnostics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .trustBlock [data-layout="grid"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .layerTabs {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .segmentedControl {
+    inline-size: 100%;
+    grid-auto-flow: row;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contractSpecimen > header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .shellDiagnostics {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .trustBlock [data-layout="grid"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .iframeStage {
+    padding-inline: 0;
+  }
+
+  .iframeStage iframe {
+    border-inline: 0;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,50 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--modal-layer, var(--layer-modal, 2000));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  padding: 28px;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay-dialog-underlay);
+  backdrop-filter: blur(var(--modal-backdrop-blur, 22px)) saturate(0.72);
+  -webkit-backdrop-filter: blur(var(--modal-backdrop-blur, 22px))
+    saturate(0.72);
+  pointer-events: auto;
+}
+
+.modalShell {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+  width: min(980px, calc(100vw - 56px));
+  max-height: calc(100dvh - 56px);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+
+@media (width <= 900px) {
+  .modalShell {
+    width: 100%;
+  }
+}
+
+@media (width <= 720px) {
+  .overlay {
+    align-items: flex-end;
+    padding: 16px 0 0;
+  }
+
+  .modalShell {
+    width: 100%;
+    max-height: calc(100dvh - 16px);
+  }
+}

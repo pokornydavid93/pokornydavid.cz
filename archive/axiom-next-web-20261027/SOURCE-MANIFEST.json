@@ -1,0 +1,5723 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-10-27",
+  "sourceRepository": "private Axiom",
+  "sourceWorktreeHead": "38eea10a79f57c5f75bd02cb9aef2feccdc80ab1",
+  "sourcePath": "apps/web",
+  "sourceFiles": 806,
+  "sourceBytes": 29954738,
+  "authoredPublicFiles": 64,
+  "authoredPublicBytes": 22738809,
+  "identity": "Every included apps/web file was copied with exact bytes and mode. No React/app source rewrite. Generated/dependency/env/archive outputs are explicitly excluded. Actual authored public media is preserved regardless of global Axiom generated-copy ignore patterns.",
+  "files": [
+    {
+      "path": "apps/web/.gitignore",
+      "kind": "file",
+      "bytes": 566,
+      "mode": "0664",
+      "sha256": "7e8cf75ca1d95117421644a118c6e116e7afe06410080861689500de0728046b"
+    },
+    {
+      "path": "apps/web/AGENTS.md",
+      "kind": "file",
+      "bytes": 678,
+      "mode": "0664",
+      "sha256": "63f2c50380ed6303237cce215ce27af1d620d094c215e28d1b1538a3c070e3bb"
+    },
+    {
+      "path": "apps/web/CLAUDE.md",
+      "kind": "file",
+      "bytes": 11,
+      "mode": "0664",
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49"
+    },
+    {
+      "path": "apps/web/COLOR_SYSTEM_AUDIT.md",
+      "kind": "file",
+      "bytes": 29088,
+      "mode": "0664",
+      "sha256": "54a87f08d349532553943ba265c3fa6564c30a9e29392d0876a89fed10e18c96"
+    },
+    {
+      "path": "apps/web/README.md",
+      "kind": "file",
+      "bytes": 4042,
+      "mode": "0664",
+      "sha256": "247b87977abf3fef6172701b150aaadd0809a69467ce744d12940bf31783a86e"
+    },
+    {
+      "path": "apps/web/SINGLE_PALETTE_REFACTOR_REPORT.md",
+      "kind": "file",
+      "bytes": 7609,
+      "mode": "0664",
+      "sha256": "012adf2d6b2f088f5b0f92a3a083343c5abcd725ae67f173b1ffa996dc089c93"
+    },
+    {
+      "path": "apps/web/axiom-hosting.json",
+      "kind": "file",
+      "bytes": 635,
+      "mode": "0664",
+      "sha256": "f54dde52d960b1fa3bb98f29f392f315b6dba1251954cbc9a2a6f72905e5e81d"
+    },
+    {
+      "path": "apps/web/components.json",
+      "kind": "file",
+      "bytes": 503,
+      "mode": "0664",
+      "sha256": "fc339f76226df177dfa683aee5536085a3f53e61fe98961d1ba17c7b1f9a222e"
+    },
+    {
+      "path": "apps/web/eslint.config.mjs",
+      "kind": "file",
+      "bytes": 842,
+      "mode": "0664",
+      "sha256": "eee00c576c2ed97e75f8c1fc3289b74bae37f58782c778c40e0466fc898811b0"
+    },
+    {
+      "path": "apps/web/next-env.d.ts",
+      "kind": "file",
+      "bytes": 296,
+      "mode": "0664",
+      "sha256": "0f70629890b72a0a82e91972cc032c04b658b26c265373cb711cf576bfbf8fcc"
+    },
+    {
+      "path": "apps/web/next.config.ts",
+      "kind": "file",
+      "bytes": 2151,
+      "mode": "0664",
+      "sha256": "d5cdae28cebd76357b12b4d1ed913ff45d0c567a60c7b45058e1f1c11271f4f6"
+    },
+    {
+      "path": "apps/web/package.json",
+      "kind": "file",
+      "bytes": 4108,
+      "mode": "0664",
+      "sha256": "c6e53f512ed7b90d080060c28d7d6176c5df3d99f49e314212b00f3a9c351c7e"
+    },
+    {
+      "path": "apps/web/playwright.config.ts",
+      "kind": "file",
+      "bytes": 1102,
+      "mode": "0664",
+      "sha256": "6a5e0b50a9a544ae2dd0349d749895c223d76014780df3c7992680e62f31e6d5"
+    },
+    {
+      "path": "apps/web/postcss.config.mjs",
+      "kind": "file",
+      "bytes": 94,
+      "mode": "0664",
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde"
+    },
+    {
+      "path": "apps/web/proxy.ts",
+      "kind": "file",
+      "bytes": 747,
+      "mode": "0664",
+      "sha256": "1e1ab3d4307eb57b26d2246cb1ec6a2ed685d4cdd182c80866d3cd90b08d3f10"
+    },
+    {
+      "path": "apps/web/tsconfig.json",
+      "kind": "file",
+      "bytes": 706,
+      "mode": "0664",
+      "sha256": "b94e97104fc40dd5eefcb7c0d5b7b01211d9746f465f3ed47533e69a63017212"
+    },
+    {
+      "path": "apps/web/app/favicon.ico",
+      "kind": "file",
+      "bytes": 17585,
+      "mode": "0664",
+      "sha256": "0c675e15ebb4c0c95cf41693601d6cd3bb99bde330ce274c6fe67f9cf8f0fc12"
+    },
+    {
+      "path": "apps/web/app/globals.css",
+      "kind": "file",
+      "bytes": 9544,
+      "mode": "0664",
+      "sha256": "c0379c16cd1523548626b1bdd981c7b1704d4bce3aff9fae1028ac5e2241215a"
+    },
+    {
+      "path": "apps/web/app/home.critical.module.css",
+      "kind": "file",
+      "bytes": 84849,
+      "mode": "0664",
+      "sha256": "2011df68cfe57d33536dfd90e26c31a5c4ec4bf4dfd539f6369806d946dbb33c"
+    },
+    {
+      "path": "apps/web/app/homepage.module.css",
+      "kind": "file",
+      "bytes": 178346,
+      "mode": "0664",
+      "sha256": "35b74d01f4fe493aee87251cef4520d7c1df7a5460a4fe9ad15b8ea5f6834509"
+    },
+    {
+      "path": "apps/web/app/layout.tsx",
+      "kind": "file",
+      "bytes": 5322,
+      "mode": "0664",
+      "sha256": "970cf3141c75ab0f6f75ec7925adb22de705e72c1e443f3bcc6d237dbceb9f16"
+    },
+    {
+      "path": "apps/web/app/legal.module.css",
+      "kind": "file",
+      "bytes": 4941,
+      "mode": "0664",
+      "sha256": "ca33381e3bbbcdf92084b401b2535b3820cd97c5a2ce6c818abdf2a982da30e0"
+    },
+    {
+      "path": "apps/web/app/not-found.tsx",
+      "kind": "file",
+      "bytes": 979,
+      "mode": "0664",
+      "sha256": "cabc5ed3db5b1c8c28a214951efec3bbe58edb802dd919a0a819e8dd8170f5f0"
+    },
+    {
+      "path": "apps/web/app/page.tsx",
+      "kind": "file",
+      "bytes": 40599,
+      "mode": "0664",
+      "sha256": "a9ef113010321633a9cdbbfae3e302892eb3cf8ad4f5ccbf66ce038c9d616f55"
+    },
+    {
+      "path": "apps/web/app/robots.ts",
+      "kind": "file",
+      "bytes": 257,
+      "mode": "0664",
+      "sha256": "039b572bf6851babad02b666e6f20a286e4dee9c9b34d4ee2375406c26b695bf"
+    },
+    {
+      "path": "apps/web/app/sitemap.ts",
+      "kind": "file",
+      "bytes": 478,
+      "mode": "0664",
+      "sha256": "044a564bb6dc3ee45aacd5786e9c5dbda67490c22d5a8818e30df632c59a6c5a"
+    },
+    {
+      "path": "apps/web/app/(e2e)/e2e-funnel-canonical/CanonicalFunnelHarness.client.tsx",
+      "kind": "file",
+      "bytes": 2638,
+      "mode": "0664",
+      "sha256": "c6eb9de668f4ff493becd3e52d086d58ea2743c23535f3b511bbe770021180bc"
+    },
+    {
+      "path": "apps/web/app/(e2e)/e2e-funnel-canonical/page.tsx",
+      "kind": "file",
+      "bytes": 317,
+      "mode": "0664",
+      "sha256": "f05b3526102fd624e405972ec0c2c446fdd493bfe8d9eb9d15919725fed80af4"
+    },
+    {
+      "path": "apps/web/app/(funnels)/layout.tsx",
+      "kind": "file",
+      "bytes": 122,
+      "mode": "0664",
+      "sha256": "2f78e42ee7ee1f3837a7d36bf5a36f76a50dd1c2f35010c5224f42ad43f133e4"
+    },
+    {
+      "path": "apps/web/app/(funnels)/refixace-hypoteky/RefixationAnalytics.client.tsx",
+      "kind": "file",
+      "bytes": 916,
+      "mode": "0664",
+      "sha256": "504bd65a628ff81ffb1e987cb81b1b053cfba7f25c7b20bef6a0393c2d4f4cc6"
+    },
+    {
+      "path": "apps/web/app/(funnels)/refixace-hypoteky/RefixationDiagnostic.client.tsx",
+      "kind": "file",
+      "bytes": 43898,
+      "mode": "0664",
+      "sha256": "bef8a2d17510be1b55a757f27a3b88899606d1e7052fbe1605d3830fae46ba0a"
+    },
+    {
+      "path": "apps/web/app/(funnels)/refixace-hypoteky/RefixationSilk.client.tsx",
+      "kind": "file",
+      "bytes": 323,
+      "mode": "0664",
+      "sha256": "62e9bb6abf4eb6de3e84727619f6cf6d67516b6d794f111e65f9b6301db3ca28"
+    },
+    {
+      "path": "apps/web/app/(funnels)/refixace-hypoteky/RefixationStartButton.client.tsx",
+      "kind": "file",
+      "bytes": 2541,
+      "mode": "0664",
+      "sha256": "14c59c42d6e73a772ad3df1ac3d22f3e0e3f21ad7a5f20bcbbaed6fd29487db8"
+    },
+    {
+      "path": "apps/web/app/(funnels)/refixace-hypoteky/actions.ts",
+      "kind": "file",
+      "bytes": 5244,
+      "mode": "0664",
+      "sha256": "548e7c6ef46146e816b6ba507002cb075f610fbd886d761f8bef87e3355008d9"
+    },
+    {
+      "path": "apps/web/app/(funnels)/refixace-hypoteky/content.ts",
+      "kind": "file",
+      "bytes": 5118,
+      "mode": "0664",
+      "sha256": "24fd126b2183c6240f3417de1d970d2e413559eb39cc7591e9d81589e2c465d2"
+    },
+    {
+      "path": "apps/web/app/(funnels)/refixace-hypoteky/page.tsx",
+      "kind": "file",
+      "bytes": 12140,
+      "mode": "0664",
+      "sha256": "80123402ec2516802c9e44e1a87e776cac3344c6d1e151b6ff12cc7f45a5ae21"
+    },
+    {
+      "path": "apps/web/app/(funnels)/refixace-hypoteky/refixationFunnel.module.css",
+      "kind": "file",
+      "bytes": 55770,
+      "mode": "0664",
+      "sha256": "22eb5a257e1d26d87f0ee97c818546e94dc53d912742434189b8082da5377355"
+    },
+    {
+      "path": "apps/web/app/(funnels)/test-jednoho-prijmu/AdvisorPortrait.tsx",
+      "kind": "file",
+      "bytes": 467,
+      "mode": "0664",
+      "sha256": "ba56f70bcf662dc7dd9642fad06a621a200f3e698402ed37c62588cefad42473"
+    },
+    {
+      "path": "apps/web/app/(funnels)/test-jednoho-prijmu/IncomeTest.client.tsx",
+      "kind": "file",
+      "bytes": 26833,
+      "mode": "0664",
+      "sha256": "36936157f46e1cd59cc6bde0597f7182ef1c03b9ac22fd03a6b4249b58c5e59d"
+    },
+    {
+      "path": "apps/web/app/(funnels)/test-jednoho-prijmu/IncomeTestContact.client.tsx",
+      "kind": "file",
+      "bytes": 11790,
+      "mode": "0664",
+      "sha256": "208ffe68d1982e94d3029d0aae4ebe5990abecdecb85f7530abb1dfb8d770091"
+    },
+    {
+      "path": "apps/web/app/(funnels)/test-jednoho-prijmu/incomeTest.module.css",
+      "kind": "file",
+      "bytes": 22487,
+      "mode": "0664",
+      "sha256": "d8b07fe709f481730d9c3a7e1f46ee8a0b4b1d6f6c1839471c314f6670826114"
+    },
+    {
+      "path": "apps/web/app/(funnels)/test-jednoho-prijmu/page.tsx",
+      "kind": "file",
+      "bytes": 3127,
+      "mode": "0664",
+      "sha256": "3456e95994fef3eb6893ad6b5167f32321a8785cc4bdbe773629043c6e99d1a5"
+    },
+    {
+      "path": "apps/web/app/_components/FooterCookieSettingsButton.client.tsx",
+      "kind": "file",
+      "bytes": 366,
+      "mode": "0664",
+      "sha256": "692f7c5126799c3128f346639caeea8622be580f84a1dc713502d71a881ddd80"
+    },
+    {
+      "path": "apps/web/app/_components/PublicAnalytics.client.tsx",
+      "kind": "file",
+      "bytes": 3982,
+      "mode": "0664",
+      "sha256": "ec3838e6a0d75e9148ea58a8549dd2c6bf2549186304b027c52a003160d16f05"
+    },
+    {
+      "path": "apps/web/app/_components/PublicSiteChrome.tsx",
+      "kind": "file",
+      "bytes": 6845,
+      "mode": "0664",
+      "sha256": "2b95311538e5533e8f943eb9b97980fb7f84286e1d48bea20970d26103aabc45"
+    },
+    {
+      "path": "apps/web/app/_components/publicSiteChrome.module.css",
+      "kind": "file",
+      "bytes": 4285,
+      "mode": "0664",
+      "sha256": "4b9b0fd04ca89e650ce50ed9c57b7c80e3c69138a447a3163cf88b2eaa70172b"
+    },
+    {
+      "path": "apps/web/app/_components/effects/LiquidLinesBackdrop.client.tsx",
+      "kind": "file",
+      "bytes": 2264,
+      "mode": "0664",
+      "sha256": "aaaf615b967be511f52481968779a00fc29a3c66eb15c7348f389be45276004a"
+    },
+    {
+      "path": "apps/web/app/_components/effects/LiquidLinesCanvas.client.tsx",
+      "kind": "file",
+      "bytes": 12136,
+      "mode": "0664",
+      "sha256": "87f83a85128ecd186e054900863bd20c38b692f808e36dc0c693163acb35cf5e"
+    },
+    {
+      "path": "apps/web/app/_components/effects/ReactBitsSilk.client.tsx",
+      "kind": "file",
+      "bytes": 30562,
+      "mode": "0664",
+      "sha256": "ab619ca0dea3f83f791b23bfa6ccbe625b9ad908c8126af32091fc0052e7240a"
+    },
+    {
+      "path": "apps/web/app/_components/effects/ReactBitsSilk.module.css",
+      "kind": "file",
+      "bytes": 992,
+      "mode": "0664",
+      "sha256": "6e70ef23addf3a4ffe8c50a620724e58e2528c44a0062b9f09e8c5b391bbbbef"
+    },
+    {
+      "path": "apps/web/app/_components/effects/liquidLines.module.css",
+      "kind": "file",
+      "bytes": 3764,
+      "mode": "0664",
+      "sha256": "4187a93992713d491ca992b2dea7041f075e975cdddf742af0a1b794b76a741a"
+    },
+    {
+      "path": "apps/web/app/_components/effects/reactBitsSilkMotion.ts",
+      "kind": "file",
+      "bytes": 4690,
+      "mode": "0664",
+      "sha256": "3951a6bbab72f46cfc4a1adfb6811a53b4367ab67163d6406f3a2d48f355e63e"
+    },
+    {
+      "path": "apps/web/app/_components/effects/silkRenderer.ts",
+      "kind": "file",
+      "bytes": 8501,
+      "mode": "0664",
+      "sha256": "e5afb729b0bc736fe21e72dc15cd6762da833b378901033f544a6c5bccd01b03"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/CinematicHomeHero.tsx",
+      "kind": "file",
+      "bytes": 12805,
+      "mode": "0664",
+      "sha256": "cc5e35100e093c9c86a002031efb1e1e1aa1031f5f371f06fb16228f9a47c620"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/FinalContactReveal.client.tsx",
+      "kind": "file",
+      "bytes": 6649,
+      "mode": "0664",
+      "sha256": "6a3898eeb241c59f6ce5fe8d718136ccf61d6be749f7870469df89dce45ecf2f"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/GsapTextReveal.client.tsx",
+      "kind": "file",
+      "bytes": 2336,
+      "mode": "0664",
+      "sha256": "10db142723c6979c306ac467cef05395ce1b2dd8c607c13726e6594b6a80b94b"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/GsapTextReveal.module.css",
+      "kind": "file",
+      "bytes": 199,
+      "mode": "0664",
+      "sha256": "cadd9692eba8d4c20197eb16dc1d91eb006666fe08a2f2072f54f8c75697a5b4"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HeroEffectsLifecycle.client.tsx",
+      "kind": "file",
+      "bytes": 20872,
+      "mode": "0664",
+      "sha256": "c8e1a428cd999431ed21876a1716d2e2ff4c41dd71dfc128c59fcb3392eec695"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HeroEffectsRuntime.ts",
+      "kind": "file",
+      "bytes": 974,
+      "mode": "0664",
+      "sha256": "af11c90b12b384f3c05ada53e8241d604ba10ab49c5544f078b130dd225f0499"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HeroIntroReveal.client.tsx",
+      "kind": "file",
+      "bytes": 13629,
+      "mode": "0664",
+      "sha256": "199059ca5939db06e86993cbbfc6c92415be07884d2abad10e13dace84203e1e"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HeroPortraitEdgeWarp.client.tsx",
+      "kind": "file",
+      "bytes": 14549,
+      "mode": "0664",
+      "sha256": "4678cb7c4f55233d8ddf9af990aafe83594c3c223efbd733a1cc2f250f0d73b4"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HeroPortraitEdgeWarpDeferred.client.tsx",
+      "kind": "file",
+      "bytes": 1470,
+      "mode": "0664",
+      "sha256": "894a728cee9a81cc6e2ab2358f7c0db1d16466bf4056d8480b02ddd79709999b"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HeroSilk.client.tsx",
+      "kind": "file",
+      "bytes": 2697,
+      "mode": "0664",
+      "sha256": "8f049404810d4968ba224765a311ef1031f670d25eb3fb962f3ed2bd03992613"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HeroSituationReveal.client.tsx",
+      "kind": "file",
+      "bytes": 44204,
+      "mode": "0664",
+      "sha256": "d3fe50b9232bc8951a5dc21835daa1db3478a95e9e1418af22edd85270cade22"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HomeArticlesEditorial.tsx",
+      "kind": "file",
+      "bytes": 7861,
+      "mode": "0664",
+      "sha256": "63c643547147ecff5c6456c45fb6874231268d75ed9212039b3a36ad91a56dc9"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HomeCinematicScroll.client.tsx",
+      "kind": "file",
+      "bytes": 31008,
+      "mode": "0664",
+      "sha256": "5af8753101be0de3e1522a6c7450859bb93a156488f35ae997d04084ef9ce1df"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HomeFaqAccordion.client.tsx",
+      "kind": "file",
+      "bytes": 2363,
+      "mode": "0664",
+      "sha256": "aac63a0f2317e59397e0cff292e3a2e402f37897e44bde82ff25b336a61f8d4f"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HomeFaqAccordion.module.css",
+      "kind": "file",
+      "bytes": 3696,
+      "mode": "0664",
+      "sha256": "dcfdc4c4f4cb60d8efc7bb37681066a5e2b964378523aef58d01b94c5299fc15"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HomeReferencesNavigator.client.tsx",
+      "kind": "file",
+      "bytes": 34944,
+      "mode": "0664",
+      "sha256": "cc759e524862fad163890a7de41df9b6b8b4c6fc019b608ee95c2a8497623f43"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HomeSituationSelector.client.tsx",
+      "kind": "file",
+      "bytes": 15925,
+      "mode": "0664",
+      "sha256": "812ac3c2db135dfa8016b433d18b564593dcfad23a8decde5741f021ff3dda48"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HomepageDeferredMotion.client.tsx",
+      "kind": "file",
+      "bytes": 5501,
+      "mode": "0664",
+      "sha256": "c87ad53c631a3d8cd21f9dcd68b3ad4ca83fd2a4b534ae85ac781b9db7fd079f"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HomepageIntro.bootstrap.ts",
+      "kind": "file",
+      "bytes": 3735,
+      "mode": "0664",
+      "sha256": "f7a02e9ac5eb94d74bb19f3394a0c2dadf74034b68df402467b883914f4b5a50"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HomepageIntro.client.tsx",
+      "kind": "file",
+      "bytes": 48714,
+      "mode": "0664",
+      "sha256": "df5cd1da31417193a2f948fde0ff13103055d456a93fa2d27a686b0c1c522eb2"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HomepageIntro.constants.ts",
+      "kind": "file",
+      "bytes": 799,
+      "mode": "0664",
+      "sha256": "3979f949a04305dec946dcbd1cbbabc06bb22eba5354fc22599343fc6f2e4b3a"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HomepageIntro.module.css",
+      "kind": "file",
+      "bytes": 7160,
+      "mode": "0664",
+      "sha256": "9fcadfcc267144429c36ad33a98b7dfe8505337264772e01feca3084d3a9d57d"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HomepageIntro.tsx",
+      "kind": "file",
+      "bytes": 479,
+      "mode": "0664",
+      "sha256": "798c0e6ef1aa0ea4ae2a3f0ce16234237981e7630c7e7eb8a32cbd4713894044"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/HomepageIntroSignatureAsset.ts",
+      "kind": "file",
+      "bytes": 20131,
+      "mode": "0664",
+      "sha256": "5dc46df7708b42f9cd6495bc28127ecdeec730fcd43bc30ef35ff84e2590a30d"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/ProcessLiquidLinesBackdrop.client.tsx",
+      "kind": "file",
+      "bytes": 80,
+      "mode": "0664",
+      "sha256": "169f19af77ee419cb80ea6be83fb88a36a19fa713136b985c4ef64126f56695f"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/ProcessReveal.client.tsx",
+      "kind": "file",
+      "bytes": 17031,
+      "mode": "0664",
+      "sha256": "aa6b838553943e1b8eb74e4d2d998ab61ef677d3b7b6a5bfb29bde201583fe51"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/ProcessTerrainBackdrop.client.tsx",
+      "kind": "file",
+      "bytes": 1260,
+      "mode": "0664",
+      "sha256": "1c35056f7bc3a268dfb03e01ec4e967e4212698c84a0e7e7c091c86aeea8929d"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/ProcessTerrainCanvas.client.tsx",
+      "kind": "file",
+      "bytes": 19362,
+      "mode": "0664",
+      "sha256": "e389e506deb39e59f4429d4f5e041625973306fe8c78a363cc2e2c4512a79c12"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/ProcessVideoExperience.client.tsx",
+      "kind": "file",
+      "bytes": 12966,
+      "mode": "0664",
+      "sha256": "d17f5d4f71fc5d03da9aae9d1df04f4956191168371ea23caf76e81ab045e7ad"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/ProfileSituationReveal.client.tsx",
+      "kind": "file",
+      "bytes": 27085,
+      "mode": "0664",
+      "sha256": "b3f3098d70fc3c3ee66841360d84fd784d309cf6e0679240662f3d0c399778cb"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/ReferencesCtaWaveBackdrop.client.tsx",
+      "kind": "file",
+      "bytes": 1286,
+      "mode": "0664",
+      "sha256": "ce8866d5f2f80099507929c614339f66d2c7b131096cbb1257e472a03dd99e4e"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/ReviewRating.tsx",
+      "kind": "file",
+      "bytes": 1388,
+      "mode": "0664",
+      "sha256": "8c437af391ac9f9d0a07fc9037a9b6ce74bde4a6d09115c1cdf3922b5fa30ff4"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/SituationOrientationReveal.client.tsx",
+      "kind": "file",
+      "bytes": 9079,
+      "mode": "0664",
+      "sha256": "a78d816bb9a20b75de92a27dbb101be32c1b7cd0ba70944acec1ab54c3b40d47"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/cinematicHomeHero.module.css",
+      "kind": "file",
+      "bytes": 30633,
+      "mode": "0664",
+      "sha256": "b65b7e49542294feb02e295e430420a41cf8bcd7429b57278a697b69b0cd0550"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/homeCircleReveal.ts",
+      "kind": "file",
+      "bytes": 742,
+      "mode": "0664",
+      "sha256": "03e2d3e8b1702904cc2da9e3802ddddded42e9f79d746a8186032fb9591f968a"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/homePinnedTestimonials.module.css",
+      "kind": "file",
+      "bytes": 15351,
+      "mode": "0664",
+      "sha256": "41ff4216b639e930bb25b1d512883435d34c1b424fd186983cae07eb2f7c9144"
+    },
+    {
+      "path": "apps/web/app/_components/homepage/readableScrollFade.ts",
+      "kind": "file",
+      "bytes": 878,
+      "mode": "0664",
+      "sha256": "fa1e8003b7d38a4a7ec7366714fcc9ee08a4c1e406027dc0376002ce418f9d36"
+    },
+    {
+      "path": "apps/web/app/api/article-screening/route.ts",
+      "kind": "file",
+      "bytes": 440,
+      "mode": "0664",
+      "sha256": "02cb6b05139f4936a6628ae3ca0aba63e2bda2cab64226b65c753445783fbf60"
+    },
+    {
+      "path": "apps/web/app/api/income-test/route.ts",
+      "kind": "file",
+      "bytes": 404,
+      "mode": "0664",
+      "sha256": "1842ac0148ac38e1ea216309b778161367d0a161ed382898188222a35d362b52"
+    },
+    {
+      "path": "apps/web/app/blog/page.tsx",
+      "kind": "file",
+      "bytes": 134,
+      "mode": "0664",
+      "sha256": "9fb976930f66b9310bf0d96a152081fef50f7b213ac67365b840a47a60163e5f"
+    },
+    {
+      "path": "apps/web/app/blog/[slug]/page.tsx",
+      "kind": "file",
+      "bytes": 301,
+      "mode": "0664",
+      "sha256": "c4cd7422ce5afa9200051192183f146d3ae04a6d8069123e79ec45186d9f7328"
+    },
+    {
+      "path": "apps/web/app/clanky/ArticleAuthorNote.module.css",
+      "kind": "file",
+      "bytes": 2746,
+      "mode": "0664",
+      "sha256": "2a310a58848c89e11ebe0240f4d32ced47e8f47f4a65d716c648a638fdc36716"
+    },
+    {
+      "path": "apps/web/app/clanky/ArticleAuthorNote.tsx",
+      "kind": "file",
+      "bytes": 2304,
+      "mode": "0664",
+      "sha256": "a9cb4c72dbfb8f20c1f349817c3216c395b50602927547b09c2852b6b9d5d1ab"
+    },
+    {
+      "path": "apps/web/app/clanky/ArticleContextRail.client.tsx",
+      "kind": "file",
+      "bytes": 4820,
+      "mode": "0664",
+      "sha256": "205b3a65418a221031b1f89421fe0a701c3b25cd6d0f31ccfb72c4ba1dc7ca69"
+    },
+    {
+      "path": "apps/web/app/clanky/ArticleConversionRail.tsx",
+      "kind": "file",
+      "bytes": 1337,
+      "mode": "0664",
+      "sha256": "ea9f3fa9caf275d2526ad82d77be037dc4dc7299ff46a05c50532bf2cb31dc64"
+    },
+    {
+      "path": "apps/web/app/clanky/ArticleEditorialRenderer.tsx",
+      "kind": "file",
+      "bytes": 37678,
+      "mode": "0664",
+      "sha256": "7fa9efd7746fc2fc138751761ac96d1672da5c128988939cfa276f18a3b1914f"
+    },
+    {
+      "path": "apps/web/app/clanky/ArticleLeadButton.client.tsx",
+      "kind": "file",
+      "bytes": 2085,
+      "mode": "0664",
+      "sha256": "b46589ea00bdd14ebea164913054baafb96172eb347bf2bd64e0f4b0fb674999"
+    },
+    {
+      "path": "apps/web/app/clanky/ArticleNavigationLink.client.tsx",
+      "kind": "file",
+      "bytes": 6183,
+      "mode": "0664",
+      "sha256": "cb3bef48b2f0768b7e6af786f6a02221053166483bfe6f91d6592b29c651b712"
+    },
+    {
+      "path": "apps/web/app/clanky/ArticlePracticalTemplate.tsx",
+      "kind": "file",
+      "bytes": 5940,
+      "mode": "0664",
+      "sha256": "649a5b184c143ea4b1473294ac08e660fbb67ce0afa8e76cf41b67fac5f61920"
+    },
+    {
+      "path": "apps/web/app/clanky/ArticleRelatedStories.module.css",
+      "kind": "file",
+      "bytes": 4737,
+      "mode": "0664",
+      "sha256": "a2bcf6537c300533c0f05dfe0817db5171ba62c3235ac1671016739f2f9e73be"
+    },
+    {
+      "path": "apps/web/app/clanky/ArticleRelatedStories.tsx",
+      "kind": "file",
+      "bytes": 3187,
+      "mode": "0664",
+      "sha256": "eb27e6935b5e3873f4999b330a3fc20278e9fa4e854ee1f87c4636ec025e929c"
+    },
+    {
+      "path": "apps/web/app/clanky/ArticleScreeningEmbed.client.tsx",
+      "kind": "file",
+      "bytes": 20645,
+      "mode": "0664",
+      "sha256": "48ef9f81202ca42c089beac043a0162edd80a66c4e95ba9b5208902647dc640a"
+    },
+    {
+      "path": "apps/web/app/clanky/ArticleScreeningEmbed.module.css",
+      "kind": "file",
+      "bytes": 9189,
+      "mode": "0664",
+      "sha256": "1fedb44f3cd72d724cda064e63de98f2ac2aaa6fc4530fcaad2bdc2c4a50c83b"
+    },
+    {
+      "path": "apps/web/app/clanky/ArticleStickyRail.client.tsx",
+      "kind": "file",
+      "bytes": 2205,
+      "mode": "0664",
+      "sha256": "5ea8a4cee5ace4d6d424d4e7b6d3b943a858ba9d98b96cf8967efba54a0318f6"
+    },
+    {
+      "path": "apps/web/app/clanky/ArticlesHub.client.tsx",
+      "kind": "file",
+      "bytes": 20069,
+      "mode": "0664",
+      "sha256": "f43bad09b31599dc89993c3f82ab4b45ed9adde71759fbf23e15b4fce2efd336"
+    },
+    {
+      "path": "apps/web/app/clanky/articleConversionBlocks.ts",
+      "kind": "file",
+      "bytes": 20173,
+      "mode": "0664",
+      "sha256": "592c5052d4896cb572a5110ff9836120a68d260dbe13a576dc3e002cf9d9e5cc"
+    },
+    {
+      "path": "apps/web/app/clanky/articleLeadContext.ts",
+      "kind": "file",
+      "bytes": 3227,
+      "mode": "0664",
+      "sha256": "25a99ac0442849f3d3bb343c4cb38779e95d4546465a99e5f5e59b9a4aecea59"
+    },
+    {
+      "path": "apps/web/app/clanky/articleMdxComponents.tsx",
+      "kind": "file",
+      "bytes": 3734,
+      "mode": "0664",
+      "sha256": "c980188c26bc2c7bb890b3cf766348546211c1e45ff2efe94e50d4b22c7e06bb"
+    },
+    {
+      "path": "apps/web/app/clanky/articleRenderer.module.css",
+      "kind": "file",
+      "bytes": 44383,
+      "mode": "0664",
+      "sha256": "4e2e108260dffe4f01a0a0c0aa902743f603cf775e545a51cbb8d75201f3cfd3"
+    },
+    {
+      "path": "apps/web/app/clanky/articleScreeningConfigs.ts",
+      "kind": "file",
+      "bytes": 48615,
+      "mode": "0664",
+      "sha256": "4dd11248974c5f23c7af251f41c1fd0bc6fa6f2d87bdd463827f7880d3954316"
+    },
+    {
+      "path": "apps/web/app/clanky/articleScreeningReview.ts",
+      "kind": "file",
+      "bytes": 2123,
+      "mode": "0664",
+      "sha256": "7e989a37454b7dfef34e40e1e15db34ef38539cf70edc750b8604c7c95e4aa4a"
+    },
+    {
+      "path": "apps/web/app/clanky/articleVisuals.ts",
+      "kind": "file",
+      "bytes": 1575,
+      "mode": "0664",
+      "sha256": "ab5a755f09aa913b6e4a39ac27c8671ac8322d698c37f38b2a4a6a6e15a472c6"
+    },
+    {
+      "path": "apps/web/app/clanky/articles.module.css",
+      "kind": "file",
+      "bytes": 104730,
+      "mode": "0664",
+      "sha256": "87fd37f7399ececc329448d7ccb1093a74f41303fab44ca872e720a9a9198ab0"
+    },
+    {
+      "path": "apps/web/app/clanky/page.tsx",
+      "kind": "file",
+      "bytes": 5977,
+      "mode": "0664",
+      "sha256": "e84cdc5f2a47e7afdb3754fc28bd28f22a84f8de7f2be56701b8adc1ae9a254e"
+    },
+    {
+      "path": "apps/web/app/clanky/[slug]/page.tsx",
+      "kind": "file",
+      "bytes": 11296,
+      "mode": "0664",
+      "sha256": "2cfdf425cf855d1debf0c45beaae34cb02c33c080692d3367c5f35750c3f5447"
+    },
+    {
+      "path": "apps/web/app/components/Providers/LeadFormModalProvider.tsx",
+      "kind": "file",
+      "bytes": 2809,
+      "mode": "0664",
+      "sha256": "6eb413817f5c374cedec7e0a2e1d4cacbb5c0eecc77f467c62b88b984d5ad40e"
+    },
+    {
+      "path": "apps/web/app/components/Providers/LegalScrollRestoreProvider.tsx",
+      "kind": "file",
+      "bytes": 1705,
+      "mode": "0664",
+      "sha256": "57adb93b79bb32fcefd3a5e7f22e6d044cdc1ac7759f9da72a2f70e12d62753e"
+    },
+    {
+      "path": "apps/web/app/components/Providers/LenisProvider.tsx",
+      "kind": "file",
+      "bytes": 9237,
+      "mode": "0664",
+      "sha256": "be14a65166b064ba3e3218e2e167e406e0897aabe12535fb6fa0ece27fa57a2a"
+    },
+    {
+      "path": "apps/web/app/components/Providers/ViewportProvider.tsx",
+      "kind": "file",
+      "bytes": 2361,
+      "mode": "0664",
+      "sha256": "f8634afd0f4eb0058057e535311fdb7719f87cd1f170ca780d6d4c571a54989d"
+    },
+    {
+      "path": "apps/web/app/components/cursor/CursorProvider.client.tsx",
+      "kind": "file",
+      "bytes": 2059,
+      "mode": "0664",
+      "sha256": "1ba47e6a73edb722eeb9265b228a55a0c237c6e13d65eaee7929337213c2e1bc"
+    },
+    {
+      "path": "apps/web/app/components/cursor/CustomCursor.module.css",
+      "kind": "file",
+      "bytes": 11226,
+      "mode": "0664",
+      "sha256": "c6ac473c7f143a312fd4f6a4ad1c109ee8afd83c2f85a01b363d68d36b009083"
+    },
+    {
+      "path": "apps/web/app/components/cursor/CustomCursor.tsx",
+      "kind": "file",
+      "bytes": 60009,
+      "mode": "0664",
+      "sha256": "f3f7aae567b103c4b411c9ced888f6863a251e6f7b33e865f8e06896ca986604"
+    },
+    {
+      "path": "apps/web/app/components/cursor/cursor.types.ts",
+      "kind": "file",
+      "bytes": 617,
+      "mode": "0664",
+      "sha256": "dd5141fe9bca7712f80b91cd7b11f73eaa631dd8eeb7435ebdfa03e048e39015"
+    },
+    {
+      "path": "apps/web/app/components/cursor/cursorMotion.ts",
+      "kind": "file",
+      "bytes": 1318,
+      "mode": "0664",
+      "sha256": "b8dec66e076624f6b262e42e06a2ac78d8459c0ed04b777f2902f00478aaf6b9"
+    },
+    {
+      "path": "apps/web/app/components/devSettings/DevSettingsProvider.client.tsx",
+      "kind": "file",
+      "bytes": 13449,
+      "mode": "0664",
+      "sha256": "4921ac9706216ecf77c2b48dfd67b3bd77d2328ea72a6301f46c724eda7151f7"
+    },
+    {
+      "path": "apps/web/app/components/devSettings/devSettings.module.css",
+      "kind": "file",
+      "bytes": 8906,
+      "mode": "0664",
+      "sha256": "f9a6087234bf4f0d3b9bb45c2d7163456317cb672688b673101c728e42b3194f"
+    },
+    {
+      "path": "apps/web/app/components/multipage/MarketingPage.tsx",
+      "kind": "file",
+      "bytes": 4310,
+      "mode": "0664",
+      "sha256": "f81b55c2ce758e16d1f02c4c74edf4a74cf5ffc61d3dfab606f97226bf265dc8"
+    },
+    {
+      "path": "apps/web/app/components/multipage/marketingPage.module.css",
+      "kind": "file",
+      "bytes": 9237,
+      "mode": "0664",
+      "sha256": "8fad15d68316331cc99c8c5f38f9e0d4eb9a802b12b7cd3800bd890911278318"
+    },
+    {
+      "path": "apps/web/app/components/nav/Nav.tsx",
+      "kind": "file",
+      "bytes": 11698,
+      "mode": "0664",
+      "sha256": "18021aeb0d9bc3d001b11ed01b19173039abd8836fa0c29c6852bce3e2a2737b"
+    },
+    {
+      "path": "apps/web/app/components/nav/NavShell.tsx",
+      "kind": "file",
+      "bytes": 264,
+      "mode": "0664",
+      "sha256": "aed5fb57a1fff6572290c21c86ddbd5d618599c4d61e1cc5c16b6efe1ae87fd0"
+    },
+    {
+      "path": "apps/web/app/components/nav/NavShellClient.client.tsx",
+      "kind": "file",
+      "bytes": 4662,
+      "mode": "0664",
+      "sha256": "9781cbed9cfd8a6a12c294bd18d683de772919c95b5116caf0c6bccbeb248b32"
+    },
+    {
+      "path": "apps/web/app/components/nav/SideMenu.tsx",
+      "kind": "file",
+      "bytes": 6877,
+      "mode": "0664",
+      "sha256": "ccacb43c0746e5b34748da91a1586400a4de85d40a77de6537871510a545fcb0"
+    },
+    {
+      "path": "apps/web/app/components/route-transition/AnimatedButtonLink.tsx",
+      "kind": "file",
+      "bytes": 1236,
+      "mode": "0664",
+      "sha256": "4528d96a29db2d076396d60e1463e917142b9bb5cef83249875f06dd2953101a"
+    },
+    {
+      "path": "apps/web/app/components/route-transition/AnimatedNavLink.tsx",
+      "kind": "file",
+      "bytes": 1823,
+      "mode": "0664",
+      "sha256": "cddaf6708a4ae3d1ff40471099c65493c89dec0e92c1a407b909778b8ec6963b"
+    },
+    {
+      "path": "apps/web/app/components/route-transition/RouteTransition.module.css",
+      "kind": "file",
+      "bytes": 5557,
+      "mode": "0664",
+      "sha256": "7900f3eef684491c5afae7e20c371916339d0effcbb169ca882c0db5504fbe52"
+    },
+    {
+      "path": "apps/web/app/components/route-transition/RouteTransitionOverlay.tsx",
+      "kind": "file",
+      "bytes": 1625,
+      "mode": "0664",
+      "sha256": "54ed575af01d746823af3200719b07cf3e17ea6ac25e21fe40692609d1b390ca"
+    },
+    {
+      "path": "apps/web/app/components/route-transition/RouteTransitionProvider.tsx",
+      "kind": "file",
+      "bytes": 9695,
+      "mode": "0664",
+      "sha256": "0adb7b799bb77888991e8f2f921693eb2afb7b820dbcd101b41160db8cb9146d"
+    },
+    {
+      "path": "apps/web/app/components/route-transition/routeTransition.types.ts",
+      "kind": "file",
+      "bytes": 547,
+      "mode": "0664",
+      "sha256": "48f560741017b9bcd250611eca69d4f05ed05a418509ec9249be657e5d0028f3"
+    },
+    {
+      "path": "apps/web/app/components/route-transition/routeTransition.utils.ts",
+      "kind": "file",
+      "bytes": 4135,
+      "mode": "0664",
+      "sha256": "d91d50d4888eb08041852eb04f54b47f221f43777146c0d30f95e36d1818e783"
+    },
+    {
+      "path": "apps/web/app/components/sections/about/About.tsx",
+      "kind": "file",
+      "bytes": 4980,
+      "mode": "0664",
+      "sha256": "41bd35f47f538f844ec2b92f63f97b6911c954dc747025c54c3579c16d4ec481"
+    },
+    {
+      "path": "apps/web/app/components/sections/about/AboutCTAButton.client.tsx",
+      "kind": "file",
+      "bytes": 766,
+      "mode": "0664",
+      "sha256": "a06ca13632b8504c45c87fdcba6f53d6284aea331a4bc9a2ba8064bb7e83af7f"
+    },
+    {
+      "path": "apps/web/app/components/sections/about/AboutCredentials.tsx",
+      "kind": "file",
+      "bytes": 6635,
+      "mode": "0664",
+      "sha256": "ad9f43fe520cb995496cfd03866d20e2be12d39dae06e1c44a5f689a91ed9470"
+    },
+    {
+      "path": "apps/web/app/components/sections/about/about.module.css",
+      "kind": "file",
+      "bytes": 10552,
+      "mode": "0664",
+      "sha256": "fa5662a2722159618491724e145b1e4b05c503ed44149dc5f3c6d14ee9fc1550"
+    },
+    {
+      "path": "apps/web/app/components/sections/about/aboutCredentials.module.css",
+      "kind": "file",
+      "bytes": 11483,
+      "mode": "0664",
+      "sha256": "a24cfe38bbd5a483bb7ccb77e48fae2cfd77fee8825498fff51529a0c5f09368"
+    },
+    {
+      "path": "apps/web/app/components/sections/articlesPreview/ArticlesPreview.tsx",
+      "kind": "file",
+      "bytes": 5793,
+      "mode": "0664",
+      "sha256": "21cbc63a90ec8e1373262c9431e7716e6cd39221c303a2db5c4fbd8e5df638b6"
+    },
+    {
+      "path": "apps/web/app/components/sections/articlesPreview/articlesPreview.module.css",
+      "kind": "file",
+      "bytes": 11380,
+      "mode": "0664",
+      "sha256": "d4a9c63062d204a02508f0e92ce9889a5df7a6e1527bb7ec22602e853e651f65"
+    },
+    {
+      "path": "apps/web/app/components/sections/faq/FAQ.tsx",
+      "kind": "file",
+      "bytes": 5152,
+      "mode": "0664",
+      "sha256": "761d431e735acf4b19494b9632946ebfd47e3c37fd2c4483081be3aae3d0b615"
+    },
+    {
+      "path": "apps/web/app/components/sections/faq/FAQAccordion.client.tsx",
+      "kind": "file",
+      "bytes": 1568,
+      "mode": "0664",
+      "sha256": "5d46c40b198816144f952aa6951d44f08d3fab2e48c6bd75504a9e4cb8ea9a96"
+    },
+    {
+      "path": "apps/web/app/components/sections/faq/FAQCTAButton.client.tsx",
+      "kind": "file",
+      "bytes": 886,
+      "mode": "0664",
+      "sha256": "03261d363a6eb97588df98b6ef5e18afc74273cb0f6966004d8607588911f0da"
+    },
+    {
+      "path": "apps/web/app/components/sections/faq/faq.module.css",
+      "kind": "file",
+      "bytes": 12248,
+      "mode": "0664",
+      "sha256": "56923080a73d5834b7516cc250588e946a6a804493c48e7f69f4b6495649a585"
+    },
+    {
+      "path": "apps/web/app/components/sections/fastGuide/FastGuide.tsx",
+      "kind": "file",
+      "bytes": 206,
+      "mode": "0664",
+      "sha256": "d387fba6007fbfe39597483ada854062b2fdc1cfc7429941fba441863fd23ad8"
+    },
+    {
+      "path": "apps/web/app/components/sections/fastGuide/fastGuide.module.css",
+      "kind": "file",
+      "bytes": 51,
+      "mode": "0664",
+      "sha256": "b61899c0c9d196e1628fa8104c43185353713cf88292f89aad2938853fc56284"
+    },
+    {
+      "path": "apps/web/app/components/sections/footer/Footer.tsx",
+      "kind": "file",
+      "bytes": 4708,
+      "mode": "0664",
+      "sha256": "38ecd2e5b5df590198dc02654eaf210145d6bd244545450119a70d161b6ccdf3"
+    },
+    {
+      "path": "apps/web/app/components/sections/footer/FooterCTAButton.client.tsx",
+      "kind": "file",
+      "bytes": 868,
+      "mode": "0664",
+      "sha256": "48069ea286406fe25ac471b60c4f32f628680abe2c20b14abbce3e681c66e408"
+    },
+    {
+      "path": "apps/web/app/components/sections/footer/FooterCtaLink.client.tsx",
+      "kind": "file",
+      "bytes": 532,
+      "mode": "0664",
+      "sha256": "75ac660c73175881e56969a764790ff143c7e43c634784dabd8e30fa12077afd"
+    },
+    {
+      "path": "apps/web/app/components/sections/footer/FooterOfficeMapButton.client.tsx",
+      "kind": "file",
+      "bytes": 7397,
+      "mode": "0664",
+      "sha256": "bf0ce658f7138f14361d26d3e709677055e8f47c2efb300c769c73ab1e0b57c5"
+    },
+    {
+      "path": "apps/web/app/components/sections/footer/footer.module.css",
+      "kind": "file",
+      "bytes": 9541,
+      "mode": "0664",
+      "sha256": "5d0145f6d6a12bba6f140e8a730acc6492070cb699aaa814b3854b3de8a95bd6"
+    },
+    {
+      "path": "apps/web/app/components/sections/hero/Hero.tsx",
+      "kind": "file",
+      "bytes": 47314,
+      "mode": "0664",
+      "sha256": "de4e73ae3c0b16291e11a01ee72d914e5f885a73b919095a674be311d31008b5"
+    },
+    {
+      "path": "apps/web/app/components/sections/hero/HeroCTAClient.tsx",
+      "kind": "file",
+      "bytes": 956,
+      "mode": "0664",
+      "sha256": "23850f193df2a4b292ad7d658f350594384ec08990321c90772c027b05c5d88f"
+    },
+    {
+      "path": "apps/web/app/components/sections/hero/HeroPortraitFigure.tsx",
+      "kind": "file",
+      "bytes": 4739,
+      "mode": "0664",
+      "sha256": "4a4317a12a85013177e1d89c435436b9f28d1c86ee1be122f66cab44f6ad9aec"
+    },
+    {
+      "path": "apps/web/app/components/sections/hero/HeroProcessCinematic.client.tsx",
+      "kind": "file",
+      "bytes": 8960,
+      "mode": "0664",
+      "sha256": "7984f94ee3bc0e45b4431eebe02ee1f969ed0a8f430dee15d1d6ed0ca0717bcb"
+    },
+    {
+      "path": "apps/web/app/components/sections/hero/HeroProcessCinematic.module.css",
+      "kind": "file",
+      "bytes": 7365,
+      "mode": "0664",
+      "sha256": "4b5d2fd9f70b58062f68a082897b786f8d052ff470565c5a3cfe8fb70667e576"
+    },
+    {
+      "path": "apps/web/app/components/sections/hero/HeroProcessHandoff.client.tsx",
+      "kind": "file",
+      "bytes": 14003,
+      "mode": "0664",
+      "sha256": "37654e432d11cb83a1ad956b249c3af69daf9e34f38f3b72828dd8127cad351c"
+    },
+    {
+      "path": "apps/web/app/components/sections/hero/HeroTrustLink.client.tsx",
+      "kind": "file",
+      "bytes": 1771,
+      "mode": "0664",
+      "sha256": "63e9b471ed5dfeb1476c51aea220b180658a46a1a6a195149ce6de7fd8ab2cfb"
+    },
+    {
+      "path": "apps/web/app/components/sections/leadForm/LeadForm.tsx",
+      "kind": "file",
+      "bytes": 342,
+      "mode": "0664",
+      "sha256": "a8788aa38db82434d680839db0ce4abebf3492a5ab7f55e0546fbb1cdde71a15"
+    },
+    {
+      "path": "apps/web/app/components/sections/leadForm/LeadFormCard.tsx",
+      "kind": "file",
+      "bytes": 391,
+      "mode": "0664",
+      "sha256": "3dde388d41c108e2dac923e47b69a8e8c9138fe52003708e68b0a86d8830d5f0"
+    },
+    {
+      "path": "apps/web/app/components/sections/leadForm/LeadFormCardClient.client.tsx",
+      "kind": "file",
+      "bytes": 34281,
+      "mode": "0664",
+      "sha256": "72ad4db4787202914e89cfb85fc044c7a4895c55d7bdc523548a62207126093d"
+    },
+    {
+      "path": "apps/web/app/components/sections/leadForm/StatusToast.tsx",
+      "kind": "file",
+      "bytes": 2570,
+      "mode": "0664",
+      "sha256": "c681e60ffe5042e6889875faec1e59d6d61f11dcb00edda9852d1fbab972bc8f"
+    },
+    {
+      "path": "apps/web/app/components/sections/leadForm/leadFormPrefillEvent.ts",
+      "kind": "file",
+      "bytes": 416,
+      "mode": "0664",
+      "sha256": "7dbef9f0b7a59bdaeb4e513b5f1b6f5271df9bedb6202b41149f1240e293c349"
+    },
+    {
+      "path": "apps/web/app/components/sections/leadForm/leadFormTopics.ts",
+      "kind": "file",
+      "bytes": 277,
+      "mode": "0664",
+      "sha256": "dcb1d9400b3c76ba102f388a8ccdec395803988baacc836d09d26c8705e79478"
+    },
+    {
+      "path": "apps/web/app/components/sections/leadForm/leadform.module.css",
+      "kind": "file",
+      "bytes": 21890,
+      "mode": "0664",
+      "sha256": "c1a0e75f6791fa304dd52a320ed579f30f29125d7f28163c93f880ea61d7b672"
+    },
+    {
+      "path": "apps/web/app/components/sections/leadForm/leadformModal.module.css",
+      "kind": "file",
+      "bytes": 947,
+      "mode": "0664",
+      "sha256": "a5e56cdad90bcde0db728f78bf4c70820f01b4c12dd0522bd4388aa526e29ed2"
+    },
+    {
+      "path": "apps/web/app/components/sections/process/Process.tsx",
+      "kind": "file",
+      "bytes": 8659,
+      "mode": "0664",
+      "sha256": "f6672a85f407090b33d8c5f06223c8349575f0be43006089080100788f9eafcd"
+    },
+    {
+      "path": "apps/web/app/components/sections/process/ProcessHandoff.client.tsx",
+      "kind": "file",
+      "bytes": 21553,
+      "mode": "0664",
+      "sha256": "de0e9e7f487557954ae1d6bc54fed373628a60eb4c29b8bbd7bd9381d9f9ee06"
+    },
+    {
+      "path": "apps/web/app/components/sections/process/ProcessHandoff.module.css",
+      "kind": "file",
+      "bytes": 362,
+      "mode": "0664",
+      "sha256": "0e3f02fa55760a423ebc3d71eec1568360f8de1d9c2f1e0b153f7b5f8d1a1274"
+    },
+    {
+      "path": "apps/web/app/components/sections/process/process.module.css",
+      "kind": "file",
+      "bytes": 6749,
+      "mode": "0664",
+      "sha256": "a4c1cdbe525208fac3f5722ae7b879ee35cd2e0628558059adea9af81adcad84"
+    },
+    {
+      "path": "apps/web/app/components/sections/processTimeline/ProcessCtaButton.client.tsx",
+      "kind": "file",
+      "bytes": 19696,
+      "mode": "0664",
+      "sha256": "b589033ef95869fcfeac4569e0e9c8f932ea5fbef48628b299d41b8136a89751"
+    },
+    {
+      "path": "apps/web/app/components/sections/processTimeline/ProcessDiagram.client.tsx",
+      "kind": "file",
+      "bytes": 3732,
+      "mode": "0664",
+      "sha256": "c7b2a5d1f4a7a753885748adaa933a24bb55eb130f5f785d7c56fd2a0223c83a"
+    },
+    {
+      "path": "apps/web/app/components/sections/processTimeline/ProcessDiagramNode.tsx",
+      "kind": "file",
+      "bytes": 2102,
+      "mode": "0664",
+      "sha256": "7aeb406064afc9d799c6a89d583ced401e17a6874eead1a3f1f1aa50e3228392"
+    },
+    {
+      "path": "apps/web/app/components/sections/processTimeline/ProcessTimeline.tsx",
+      "kind": "file",
+      "bytes": 1948,
+      "mode": "0664",
+      "sha256": "d3adbf3d918a1b83e3cea9f694cf26acd90423b11c5654ceaebea6f394ab6435"
+    },
+    {
+      "path": "apps/web/app/components/sections/processTimeline/process.module.css",
+      "kind": "file",
+      "bytes": 49729,
+      "mode": "0664",
+      "sha256": "32b5daaebda0f4f97f9150c19a8a6c06c553f90eee3e7740cdc3e1c970f0f1d4"
+    },
+    {
+      "path": "apps/web/app/components/sections/processTimeline/processDiagramData.ts",
+      "kind": "file",
+      "bytes": 3102,
+      "mode": "0664",
+      "sha256": "32c2931deeeb5305fd1ac2e8cee6115c1c6524d3c62c74fee712ce704fd013dc"
+    },
+    {
+      "path": "apps/web/app/components/sections/processTimeline/useProcessScrollTimeline.ts",
+      "kind": "file",
+      "bytes": 26058,
+      "mode": "0664",
+      "sha256": "17beca076d41778121ed014ffede84e09c821346c48c183e2804ec2122ffd12e"
+    },
+    {
+      "path": "apps/web/app/components/sections/services/Services.tsx",
+      "kind": "file",
+      "bytes": 6175,
+      "mode": "0664",
+      "sha256": "ae69bdad6c3faaac10fe1123ac0e11a34d5f72212ff473f61b68626eb387df7a"
+    },
+    {
+      "path": "apps/web/app/components/sections/services/ServicesCTAButton.client.tsx",
+      "kind": "file",
+      "bytes": 1055,
+      "mode": "0664",
+      "sha256": "27acbe181b72894c51db0fd31b39affa43a5a9dff2e4abff1179a15d33281d02"
+    },
+    {
+      "path": "apps/web/app/components/sections/services/services.module.css",
+      "kind": "file",
+      "bytes": 15639,
+      "mode": "0664",
+      "sha256": "b6e27273bf201157865d11a94d03c4ae36744d8e8b135e0b6090da37c4bd157c"
+    },
+    {
+      "path": "apps/web/app/components/sections/story/CinematicGridPan.client.tsx",
+      "kind": "file",
+      "bytes": 20509,
+      "mode": "0664",
+      "sha256": "ec7007321a65ff348e46dfc66604f718539f4b1d83b910a7395782c583cd17aa"
+    },
+    {
+      "path": "apps/web/app/components/sections/story/StoryFirstStep.client.tsx",
+      "kind": "file",
+      "bytes": 2198,
+      "mode": "0664",
+      "sha256": "e8082e2ab8f40286835f903f6ee838378547b1af91b6f04318d05afab159b437"
+    },
+    {
+      "path": "apps/web/app/components/sections/story/StoryFlow.client.tsx",
+      "kind": "file",
+      "bytes": 30408,
+      "mode": "0664",
+      "sha256": "8f1928e407ca0556495941de22f03902d73c23ca557ee1b4d5338d77936d4418"
+    },
+    {
+      "path": "apps/web/app/components/sections/story/StoryProof.tsx",
+      "kind": "file",
+      "bytes": 2449,
+      "mode": "0664",
+      "sha256": "b75630a680d1130258c1f57163d0768b81b986b093081f37a7ea5af3c580bc1c"
+    },
+    {
+      "path": "apps/web/app/components/sections/story/cinematicMotion.ts",
+      "kind": "file",
+      "bytes": 481,
+      "mode": "0664",
+      "sha256": "548ba3fe8880249d1654dbddbb08679370638e2d96510dc4db15f567e4836df1"
+    },
+    {
+      "path": "apps/web/app/components/sections/story/storyFlow.module.css",
+      "kind": "file",
+      "bytes": 11171,
+      "mode": "0664",
+      "sha256": "51844dbf753c12cc05c16b848998952442bd84d22374bfaadaf3325ec3b3c666"
+    },
+    {
+      "path": "apps/web/app/components/sections/testimonials/Testimonials.tsx",
+      "kind": "file",
+      "bytes": 3783,
+      "mode": "0664",
+      "sha256": "6e825cff6493ba73ef3d3a12339a7f722bf7244614083e24361011c7671be7e1"
+    },
+    {
+      "path": "apps/web/app/components/sections/testimonials/TestimonialsCTAButton.client.tsx",
+      "kind": "file",
+      "bytes": 21419,
+      "mode": "0664",
+      "sha256": "253347b81dcc856f895dc78a948b6617c57fb3ddc4924d2a4de5420f7cc89376"
+    },
+    {
+      "path": "apps/web/app/components/sections/testimonials/TestimonialsMarquee.client.tsx",
+      "kind": "file",
+      "bytes": 5405,
+      "mode": "0664",
+      "sha256": "875b9622115058526634166e042cbcf0f9c44fe67740266126467edbdcc8ba07"
+    },
+    {
+      "path": "apps/web/app/components/sections/testimonials/testimonials.module.css",
+      "kind": "file",
+      "bytes": 45196,
+      "mode": "0664",
+      "sha256": "1d7286c0ff61390eb04499367739e0b68c71f718dec9aec7889859cc4d2251ee"
+    },
+    {
+      "path": "apps/web/app/components/sections/video/Video.tsx",
+      "kind": "file",
+      "bytes": 1283,
+      "mode": "0664",
+      "sha256": "4a09e0f7da417757235347b1c19cd1303083c2b00f10a3b627e007953227ac2b"
+    },
+    {
+      "path": "apps/web/app/components/sections/video/VideoCTAButton.client.tsx",
+      "kind": "file",
+      "bytes": 612,
+      "mode": "0664",
+      "sha256": "7e542716ad893eb4121fe0499468c436f444464273bfbceecab66e1dc04b13ef"
+    },
+    {
+      "path": "apps/web/app/components/sections/video/VideoInteractive.client.tsx",
+      "kind": "file",
+      "bytes": 5011,
+      "mode": "0664",
+      "sha256": "4cbc35ee2e760c1a4082622671f81d1193c29b0f50ca13e3f0c79e6dddf8865a"
+    },
+    {
+      "path": "apps/web/app/components/sections/video/VideoScrollPin.client.tsx",
+      "kind": "file",
+      "bytes": 2441,
+      "mode": "0664",
+      "sha256": "f0e6f74f6fc2d882b17119df75174dce282b6c31bf06834b1b225e271ae9698c"
+    },
+    {
+      "path": "apps/web/app/components/sections/video/video.module.css",
+      "kind": "file",
+      "bytes": 11400,
+      "mode": "0664",
+      "sha256": "9ccfbe278dd186a4129ca820cced23d0aebd3cd34c2fd8b35073f5eb64320a7f"
+    },
+    {
+      "path": "apps/web/app/content/footer.ts",
+      "kind": "file",
+      "bytes": 1649,
+      "mode": "0664",
+      "sha256": "94a170dab1383cafe0da513c46a0d0713394db57b729787181b91389e8c92d16"
+    },
+    {
+      "path": "apps/web/app/content/form-privacy.ts",
+      "kind": "file",
+      "bytes": 948,
+      "mode": "0664",
+      "sha256": "f5f82f1c397e9700c25699b3c67a15117d0cb8829c6dafc66b2baadc609bbd3b"
+    },
+    {
+      "path": "apps/web/app/content/heroVariants.ts",
+      "kind": "file",
+      "bytes": 4189,
+      "mode": "0664",
+      "sha256": "8857692f35fac83c9025e1013488686a8836f624e2391de852765ed3b0de2d0a"
+    },
+    {
+      "path": "apps/web/app/content/homepage.ts",
+      "kind": "file",
+      "bytes": 16882,
+      "mode": "0664",
+      "sha256": "0bfbe9411e80df9dd4a3d53dad2eae739b1a59745e5dccefa33346785e3317fb"
+    },
+    {
+      "path": "apps/web/app/content/multipage.ts",
+      "kind": "file",
+      "bytes": 2146,
+      "mode": "0664",
+      "sha256": "5a6b25442d0fe9c534209d74e958806f79d41c9b9b3460cc073a1dcd78efb72e"
+    },
+    {
+      "path": "apps/web/app/content/overview-flow.ts",
+      "kind": "file",
+      "bytes": 4673,
+      "mode": "0664",
+      "sha256": "f696340f8488dcc5f07ba506263951a2b1585dc69c1f186335ad0083d7cc10dd"
+    },
+    {
+      "path": "apps/web/app/content/processSteps.ts",
+      "kind": "file",
+      "bytes": 1371,
+      "mode": "0664",
+      "sha256": "c1ab91d76db4abd537dc7f4622f55cd1c8fc62913ab4e99de480263e008aac07"
+    },
+    {
+      "path": "apps/web/app/content/service-labels.ts",
+      "kind": "file",
+      "bytes": 739,
+      "mode": "0664",
+      "sha256": "16153a23409d831bfedc4a2128fa2a08c7a2ca8a2883b50e9a57d59b0ad7f1d7"
+    },
+    {
+      "path": "apps/web/app/content/services.ts",
+      "kind": "file",
+      "bytes": 2262,
+      "mode": "0664",
+      "sha256": "baccedb2e1fbbe67d57b499fae136a2159b62e71757f80faeff26944ae586f6d"
+    },
+    {
+      "path": "apps/web/app/content/testimonials.ts",
+      "kind": "file",
+      "bytes": 25968,
+      "mode": "0664",
+      "sha256": "fe2b13393b795b1d3cacc247aee5a3d9e29f94684fc914f4216b3b6aba18e96d"
+    },
+    {
+      "path": "apps/web/app/cookies-a-mereni/page.tsx",
+      "kind": "file",
+      "bytes": 20242,
+      "mode": "0664",
+      "sha256": "6aada28161dc20f7ce3ac6480cb2114130e37f9907d4441bfa30e5ed66bb3a51"
+    },
+    {
+      "path": "apps/web/app/design-language/DESIGN_LANGUAGE_DASHBOARD_REPORT.md",
+      "kind": "file",
+      "bytes": 9614,
+      "mode": "0664",
+      "sha256": "ddbd8d78a2e29031e6ab9852947f65cae7078e65cb2de9171231761dfc792207"
+    },
+    {
+      "path": "apps/web/app/design-language/DesignLanguageApp.client.tsx",
+      "kind": "file",
+      "bytes": 148492,
+      "mode": "0664",
+      "sha256": "0a22f4256814160a8677c7ab4b470786cfa00293748c955e4e58d7ba221e6c52"
+    },
+    {
+      "path": "apps/web/app/design-language/DesignLanguageDashboard.client.tsx",
+      "kind": "file",
+      "bytes": 82837,
+      "mode": "0664",
+      "sha256": "f9c783b194d3216227f67ed14e1cb5d6371f7fca280006e4560a002b2cd7152b"
+    },
+    {
+      "path": "apps/web/app/design-language/designLanguage.module.css",
+      "kind": "file",
+      "bytes": 39391,
+      "mode": "0664",
+      "sha256": "49261e92feb99528a1cfee56e1097526b2bb3ebb19b1bef664ec88933b232a1d"
+    },
+    {
+      "path": "apps/web/app/design-language/designLanguageApp.module.css",
+      "kind": "file",
+      "bytes": 85484,
+      "mode": "0664",
+      "sha256": "c9c10d89640c43e6e67f2d473f7f1f0f16812ecb6301f7ec8e4c36608501d403"
+    },
+    {
+      "path": "apps/web/app/design-language/page.tsx",
+      "kind": "file",
+      "bytes": 441,
+      "mode": "0664",
+      "sha256": "e277cf3221172709c27fcfa338506823427e151149bb6380d200a34f6055abc6"
+    },
+    {
+      "path": "apps/web/app/design-language/actions/page.tsx",
+      "kind": "file",
+      "bytes": 463,
+      "mode": "0664",
+      "sha256": "f8d370e11a809bf3ecc765538d8f96cdf24e634f8e0dd3301c4dd134ca8e3a45"
+    },
+    {
+      "path": "apps/web/app/design-language/borders/page.tsx",
+      "kind": "file",
+      "bytes": 463,
+      "mode": "0664",
+      "sha256": "874f5d14dfd68c983820b185ca9d85f4d53dad270610d3cb2a19654c89d4f5e0"
+    },
+    {
+      "path": "apps/web/app/design-language/calendar-provider-preview/calendarProviderPreview.module.css",
+      "kind": "file",
+      "bytes": 639,
+      "mode": "0664",
+      "sha256": "791b1dd63be4eee50866f86a38c0537c0cd2e5d8f30ff7e6c77b414de68171cb"
+    },
+    {
+      "path": "apps/web/app/design-language/calendar-provider-preview/page.tsx",
+      "kind": "file",
+      "bytes": 656,
+      "mode": "0664",
+      "sha256": "5d830ae3d12dcfe303c1852976a965ddcab95ba0b760e3cdc4b35ec0c1f14247"
+    },
+    {
+      "path": "apps/web/app/design-language/components/ContainerSpecimen.client.tsx",
+      "kind": "file",
+      "bytes": 9697,
+      "mode": "0664",
+      "sha256": "b60770dc07d344f5069f9e96e3fc0332f62fffeef91ad7b59802675683842b84"
+    },
+    {
+      "path": "apps/web/app/design-language/components/IntrinsicLayoutSpecimens.client.tsx",
+      "kind": "file",
+      "bytes": 28895,
+      "mode": "0664",
+      "sha256": "33511bbf3f01267649af847d6be7cd7c15d59a35100279773ec4e8fd6cbf13ac"
+    },
+    {
+      "path": "apps/web/app/design-language/components/LayoutFoundationPreview.tsx",
+      "kind": "file",
+      "bytes": 8553,
+      "mode": "0664",
+      "sha256": "0a8cf1427cdd800d484f307282a3c89d0ac4b7e787332a0e33c0f3a6ff904c69"
+    },
+    {
+      "path": "apps/web/app/design-language/components/MediaLayoutSpecimens.client.tsx",
+      "kind": "file",
+      "bytes": 24685,
+      "mode": "0664",
+      "sha256": "c5402637a12503d37dc5ac48925c79f3183ce5ddae9aa250f5fd91b0bc91cae4"
+    },
+    {
+      "path": "apps/web/app/design-language/components/PatternTemplateFoundationPreview.tsx",
+      "kind": "file",
+      "bytes": 13906,
+      "mode": "0664",
+      "sha256": "a24945a6905f00ce12d1865d1f65bd9b19c07fc9c377101f7773b1cdfd6ce475"
+    },
+    {
+      "path": "apps/web/app/design-language/components/ShellDomainFoundationPreview.tsx",
+      "kind": "file",
+      "bytes": 21672,
+      "mode": "0664",
+      "sha256": "700e21c88505fb1143459ab9b3cc0fa8d3295e08dbf9e33eb73b94a8a93e3fa3"
+    },
+    {
+      "path": "apps/web/app/design-language/components/StackClusterSpecimens.client.tsx",
+      "kind": "file",
+      "bytes": 19646,
+      "mode": "0664",
+      "sha256": "b456910ccd0020c9a1ef7c60aeaf8fffed2d173b1029fafeaeee8d7911becb05"
+    },
+    {
+      "path": "apps/web/app/design-language/components/UIFormsCompositionLab.client.tsx",
+      "kind": "file",
+      "bytes": 6755,
+      "mode": "0664",
+      "sha256": "7de596e62d0a26de8f4cc271a72f96c2cbcac3008c8fd2cb53f81a5d7f74ae68"
+    },
+    {
+      "path": "apps/web/app/design-language/components/UIFormsContractLab.client.tsx",
+      "kind": "file",
+      "bytes": 16358,
+      "mode": "0664",
+      "sha256": "6fc6de7ba767096c8e7834bfe78502b2207ee823ef805e26ae2a5e70f9395310"
+    },
+    {
+      "path": "apps/web/app/design-language/components/UIFormsFoundationPreview.tsx",
+      "kind": "file",
+      "bytes": 2854,
+      "mode": "0664",
+      "sha256": "c40e5b6b8a53cc9ec384ca1ddabe6c04da5a6f6112cb99852c48d2a10001ef9f"
+    },
+    {
+      "path": "apps/web/app/design-language/components/UIFormsJourney.client.tsx",
+      "kind": "file",
+      "bytes": 7704,
+      "mode": "0664",
+      "sha256": "5bf8fea12104cdea094ce47d51367ebafabaa80c847daeeef2a5db1027e9681e"
+    },
+    {
+      "path": "apps/web/app/design-language/components/UIFormsToneMatrix.tsx",
+      "kind": "file",
+      "bytes": 1217,
+      "mode": "0664",
+      "sha256": "f36960e51564d456f585cc94c7592b16081e6afadafb09ecb770942a6169496b"
+    },
+    {
+      "path": "apps/web/app/design-language/components/intrinsicLayoutSpecimens.module.css",
+      "kind": "file",
+      "bytes": 10183,
+      "mode": "0664",
+      "sha256": "4e25741f9d48a139d3c1aa15ed4c1bd39b698de588efc1e6bb71076ad8152b80"
+    },
+    {
+      "path": "apps/web/app/design-language/components/layoutFoundationPreview.module.css",
+      "kind": "file",
+      "bytes": 10962,
+      "mode": "0664",
+      "sha256": "da528e3739eed8b296086d6f762a2719d078e8fdd640599c09f582cfb0885cdf"
+    },
+    {
+      "path": "apps/web/app/design-language/components/mediaLayoutSpecimens.module.css",
+      "kind": "file",
+      "bytes": 11974,
+      "mode": "0664",
+      "sha256": "3cb7c7824c0d33241dc6c8dd008c18a28bd3a921f6d981498dee66b08fc4c95b"
+    },
+    {
+      "path": "apps/web/app/design-language/components/page.tsx",
+      "kind": "file",
+      "bytes": 469,
+      "mode": "0664",
+      "sha256": "8e8abcefcac5894a94a2276d0a2b4254115098b18293f9788da06ff52b8a7375"
+    },
+    {
+      "path": "apps/web/app/design-language/components/patternTemplateFoundationPreview.module.css",
+      "kind": "file",
+      "bytes": 2914,
+      "mode": "0664",
+      "sha256": "61db0f71c046560200d8bfd69b89bfa8c00750aaf7ad9340b0dac402128e7e4f"
+    },
+    {
+      "path": "apps/web/app/design-language/components/shellDomainFoundationPreview.module.css",
+      "kind": "file",
+      "bytes": 9139,
+      "mode": "0664",
+      "sha256": "f5256c4350de0dd039d58f47da70564e727c9ae2289ced31819959b2df9f5987"
+    },
+    {
+      "path": "apps/web/app/design-language/components/stackClusterSpecimens.module.css",
+      "kind": "file",
+      "bytes": 10464,
+      "mode": "0664",
+      "sha256": "43d60decfcb78ddfc2861013a2a502aafe4f91253f5e06103c36dffb76f21a56"
+    },
+    {
+      "path": "apps/web/app/design-language/components/uiFormsFoundationPreview.module.css",
+      "kind": "file",
+      "bytes": 11544,
+      "mode": "0664",
+      "sha256": "17bf0a9b63b717688cca2d22a464fa0eff9d57e222ed1aa9ae0f309bf62fe498"
+    },
+    {
+      "path": "apps/web/app/design-language/components/labs/layout/page.tsx",
+      "kind": "file",
+      "bytes": 471,
+      "mode": "0664",
+      "sha256": "a08adde0c4ea8fa2063ae9ce9ba2b1135215660ab590412a982654802ae6a9dc"
+    },
+    {
+      "path": "apps/web/app/design-language/components/labs/patterns/page.tsx",
+      "kind": "file",
+      "bytes": 470,
+      "mode": "0664",
+      "sha256": "60a9ca557fefcf824f1e6d9e9c8f974281df6773545479ec0b16fceff742d3a7"
+    },
+    {
+      "path": "apps/web/app/design-language/components/labs/shell-domain/page.tsx",
+      "kind": "file",
+      "bytes": 477,
+      "mode": "0664",
+      "sha256": "6608e608380140e89e2ef9c6795f614abdf1d64b3bbc3a300dc2ad1b36f6ef65"
+    },
+    {
+      "path": "apps/web/app/design-language/components/labs/ui-forms/page.tsx",
+      "kind": "file",
+      "bytes": 491,
+      "mode": "0664",
+      "sha256": "83c4fe18d49b3eb34608dd6dec9311b4c2b063ebfe2672ed82d352a7c234520d"
+    },
+    {
+      "path": "apps/web/app/design-language/components/registry/builders.ts",
+      "kind": "file",
+      "bytes": 6849,
+      "mode": "0664",
+      "sha256": "5d11539c9851c47afff6ce40478eb87326aeae084e62b31f94c817de543c5770"
+    },
+    {
+      "path": "apps/web/app/design-language/components/registry/index.ts",
+      "kind": "file",
+      "bytes": 1975,
+      "mode": "0664",
+      "sha256": "d9dfe9798525f0ef717b292c8fe616232e82b64776228b6e1950a7ba153aad74"
+    },
+    {
+      "path": "apps/web/app/design-language/components/registry/page.tsx",
+      "kind": "file",
+      "bytes": 487,
+      "mode": "0664",
+      "sha256": "9da394c9f4727e4d019321903a71bbdf5b2e70a5158d66cfafc4980b99f21f26"
+    },
+    {
+      "path": "apps/web/app/design-language/components/registry/patterns.ts",
+      "kind": "file",
+      "bytes": 11768,
+      "mode": "0664",
+      "sha256": "e39fac381eab02f4d44eb40cff3c3de7b45eb276a50b3f0e5b540e918ee62d62"
+    },
+    {
+      "path": "apps/web/app/design-language/components/registry/routes.ts",
+      "kind": "file",
+      "bytes": 5395,
+      "mode": "0664",
+      "sha256": "78854484ab2c739a7936f0f60b0c646df249ae3ece559b713688278dbe19a56e"
+    },
+    {
+      "path": "apps/web/app/design-language/components/registry/runtime.ts",
+      "kind": "file",
+      "bytes": 58731,
+      "mode": "0664",
+      "sha256": "a3c7ba18fff3b2ea0684293361f26185084d88ae69993519f7f8851205f17b74"
+    },
+    {
+      "path": "apps/web/app/design-language/components/registry/templates.ts",
+      "kind": "file",
+      "bytes": 8977,
+      "mode": "0664",
+      "sha256": "2bd59a11a19a907ef637e9a13379c81c7cac3982e60369a7acbd6a3561d66ecb"
+    },
+    {
+      "path": "apps/web/app/design-language/components/registry/types.ts",
+      "kind": "file",
+      "bytes": 3502,
+      "mode": "0664",
+      "sha256": "d434ec95d0af5f1ef7eaf4bee1863d82fafe9da6ab4129aa1c62804f8c9d1d3f"
+    },
+    {
+      "path": "apps/web/app/design-language/components/registry/validate.ts",
+      "kind": "file",
+      "bytes": 8527,
+      "mode": "0664",
+      "sha256": "bfe7f9551d8e9413a1f65a61cb147526480d7b30af2657a7bbf5e4e29ab45b29"
+    },
+    {
+      "path": "apps/web/app/design-language/components/registry/[id]/page.tsx",
+      "kind": "file",
+      "bytes": 1079,
+      "mode": "0664",
+      "sha256": "70c1a9299f43bc8ae4e1b7658f344ba0f16a4ca55c41714246df2e114befa47e"
+    },
+    {
+      "path": "apps/web/app/design-language/components/workspace/ComponentCoverageView.tsx",
+      "kind": "file",
+      "bytes": 3364,
+      "mode": "0664",
+      "sha256": "94c9bfac4ffa025ecdd50d60f7141b12d5486ff453fae72c687ee065259162e8"
+    },
+    {
+      "path": "apps/web/app/design-language/components/workspace/ComponentWorkspace.client.tsx",
+      "kind": "file",
+      "bytes": 5586,
+      "mode": "0664",
+      "sha256": "8927c1ee9a61d9fe29bb449b278f66149bad10fa9426f588ffd4e084a86b5fa1"
+    },
+    {
+      "path": "apps/web/app/design-language/components/workspace/ComponentsOverview.tsx",
+      "kind": "file",
+      "bytes": 5288,
+      "mode": "0664",
+      "sha256": "462e15ebb7d3175e1e8422b6e98193a7a020ae4464e6309ae596578ecaf384f4"
+    },
+    {
+      "path": "apps/web/app/design-language/components/workspace/RuntimeContractDetail.tsx",
+      "kind": "file",
+      "bytes": 4229,
+      "mode": "0664",
+      "sha256": "96c11ebccabddf420a7a756dd1305fb1376039ce52b34ec02c86f91c80801f53"
+    },
+    {
+      "path": "apps/web/app/design-language/components/workspace/RuntimeRegistryView.client.tsx",
+      "kind": "file",
+      "bytes": 10187,
+      "mode": "0664",
+      "sha256": "d97a18d98b9a1df11ccdbb884611937741b07ba21b121be81ae0ec7d751b1beb"
+    },
+    {
+      "path": "apps/web/app/design-language/components/workspace/componentWorkspace.module.css",
+      "kind": "file",
+      "bytes": 11785,
+      "mode": "0664",
+      "sha256": "41ced7dcde2fb6f0f70c7f130a53625a7584c4a06c2f7eb67b00ce020f87b720"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/CompositionSpecimenPreview.tsx",
+      "kind": "file",
+      "bytes": 7936,
+      "mode": "0664",
+      "sha256": "8a12a2b369b6cd3b9f20a410c2e9fd0dfeb46a4bbfef2ce1203af1432934dcfd"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/page.tsx",
+      "kind": "file",
+      "bytes": 477,
+      "mode": "0664",
+      "sha256": "2a1e0c5046ce34a8cd6ba7e2b3f888aef47a524bda4fd2057f49ef05f27001f1"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/conversion.ts",
+      "kind": "file",
+      "bytes": 6385,
+      "mode": "0664",
+      "sha256": "73526257f54b596c80e0471047844c2ddc8bc42243c200d0c34b92ee6939ec00"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/coverage.ts",
+      "kind": "file",
+      "bytes": 23509,
+      "mode": "0664",
+      "sha256": "2a7cfb575a4eebb7035e05ea936d77272410c958e7089b1e752bc898fedca771"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/deprecated-aliases.ts",
+      "kind": "file",
+      "bytes": 6609,
+      "mode": "0664",
+      "sha256": "3f6e22c3722e47c83190353c8c2dbeff80313ab3a6916ad0239228401a507a2e"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/discovery.ts",
+      "kind": "file",
+      "bytes": 4622,
+      "mode": "0664",
+      "sha256": "ae2d4ed7cc8bbcfb6dd8cc5d9e36488252b371fd5cf934e3d6c356a6098680a4"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/editorial.ts",
+      "kind": "file",
+      "bytes": 8447,
+      "mode": "0664",
+      "sha256": "ff64a6247d9686191f43b304d80a0c79cf7dc4efbdced397992e16574631dd0d"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/entry.ts",
+      "kind": "file",
+      "bytes": 5013,
+      "mode": "0664",
+      "sha256": "9d19144bfdc1f1c5723699b80336996a41e48cb154bdf44a621109a155ca7b8e"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/fixtures.ts",
+      "kind": "file",
+      "bytes": 16492,
+      "mode": "0664",
+      "sha256": "cab938491380e28a1fdda13c509c9042648c08a0b7ca150778deb1369f9bd13f"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/helpers.ts",
+      "kind": "file",
+      "bytes": 12708,
+      "mode": "0664",
+      "sha256": "89bb48c8979574b555cf85834f3db5dfd0d8653554ffe4aad82dfb741e0f718f"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/index.ts",
+      "kind": "file",
+      "bytes": 10007,
+      "mode": "0664",
+      "sha256": "299a5011cfddcd471c0b6488a6956cf08f81de2cc59689cc90db14f92b0ce0df"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/layout-primitives.ts",
+      "kind": "file",
+      "bytes": 7691,
+      "mode": "0664",
+      "sha256": "1a10458eebdcfaa3473cb0ff07fe5a9f90babe664e625082a6d0b402b09378d6"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/narrative.ts",
+      "kind": "file",
+      "bytes": 8589,
+      "mode": "0664",
+      "sha256": "8a1408e8011624279ebc77692f589fd3dc1d9845ece695b9533c1ca6668da596"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/navigation.ts",
+      "kind": "file",
+      "bytes": 4890,
+      "mode": "0664",
+      "sha256": "fd15e5ab9f64b6830a6687669dd85c468f7449e864c6895f216d648d0568c7dd"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/process.ts",
+      "kind": "file",
+      "bytes": 2225,
+      "mode": "0664",
+      "sha256": "263fc8493639405ea02e896536a3e28bedd3f973291b948f501015d574fd47d8"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/proof.ts",
+      "kind": "file",
+      "bytes": 6468,
+      "mode": "0664",
+      "sha256": "276fa3bdfcde438ae459946394f523e7b0d382c61636981150958be84be3d356"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/recipes.ts",
+      "kind": "file",
+      "bytes": 7279,
+      "mode": "0664",
+      "sha256": "b4d9e902ee83dd7932938339d0a67dacd6861f4a28c912e6c4be630b104ec8d4"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/roles.ts",
+      "kind": "file",
+      "bytes": 5911,
+      "mode": "0664",
+      "sha256": "ad339a62d5a4e9a57f7fca9b9f22a848eba32c210b664e7d9314e9e33f785dbe"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/source-manifest.ts",
+      "kind": "file",
+      "bytes": 13143,
+      "mode": "0664",
+      "sha256": "fe83c61f2a26c73165d2d360fcc04eb5dd8da94e69f9aceb7cdf77578bf1d878"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/specimens.ts",
+      "kind": "file",
+      "bytes": 12253,
+      "mode": "0664",
+      "sha256": "fb3cd22dfed74255f151d606dbde47bf2aa90875e0f6d98265c1d1463e5152e8"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/templates.ts",
+      "kind": "file",
+      "bytes": 7398,
+      "mode": "0664",
+      "sha256": "8e40031ebf306e14ea5b844302035bd8834c2015ae89a0cdf29f26a0c39fb448"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/registry/types.ts",
+      "kind": "file",
+      "bytes": 12868,
+      "mode": "0664",
+      "sha256": "c43e3ce74946768d85ea7f8f475d2fc950132e8fe127d2ec570af464be766369"
+    },
+    {
+      "path": "apps/web/app/design-language/compositions/validation/validate-registry.ts",
+      "kind": "file",
+      "bytes": 25197,
+      "mode": "0664",
+      "sha256": "192376a98a952f0019421cd30acb736f67559ec6cc8ca256bcb086e0e30eb9a9"
+    },
+    {
+      "path": "apps/web/app/design-language/foundations/page.tsx",
+      "kind": "file",
+      "bytes": 480,
+      "mode": "0664",
+      "sha256": "2b647c81d48caf7010a22c43608a951fb9fac8cb2bab6a8f544d5257b1eb2258"
+    },
+    {
+      "path": "apps/web/app/design-language/shell-preview/ShellPreviewFocusManager.client.tsx",
+      "kind": "file",
+      "bytes": 570,
+      "mode": "0664",
+      "sha256": "10156d3a2975996c2206814d414f11ebaa537b4e189366a4f509e012e7ac74f8"
+    },
+    {
+      "path": "apps/web/app/design-language/shell-preview/page.tsx",
+      "kind": "file",
+      "bytes": 4162,
+      "mode": "0664",
+      "sha256": "c56c91517e1c8bd753ece131840101555a631fe0b6fe5e8f57d675a942521c8c"
+    },
+    {
+      "path": "apps/web/app/design-language/shell-preview/shellPreview.module.css",
+      "kind": "file",
+      "bytes": 1718,
+      "mode": "0664",
+      "sha256": "eea505c8a052a364b426c9b129ee0cacafe48c221906ca6e7572ec7302091f70"
+    },
+    {
+      "path": "apps/web/app/design-language/surfaces/page.tsx",
+      "kind": "file",
+      "bytes": 462,
+      "mode": "0664",
+      "sha256": "a2353d1d2000140cc8f65d31643f43317c65c55e0d86d5f4697895680d3d2b61"
+    },
+    {
+      "path": "apps/web/app/design-language/system-preview/SystemPreview.client.tsx",
+      "kind": "file",
+      "bytes": 2146,
+      "mode": "0664",
+      "sha256": "bb194f4d21ab3af21e85d9d5e6cfb75fb724bc5c56297e20121c1369dc2c4b33"
+    },
+    {
+      "path": "apps/web/app/design-language/system-preview/SystemPreview.module.css",
+      "kind": "file",
+      "bytes": 24153,
+      "mode": "0664",
+      "sha256": "bcbc021435ec576017c24d78925c613826031a1be230917588907e7a9e607c0a"
+    },
+    {
+      "path": "apps/web/app/design-language/system-preview/page.tsx",
+      "kind": "file",
+      "bytes": 448,
+      "mode": "0664",
+      "sha256": "5bfe13e485cd6eb3d9ee866b540fbb3c4d25949650b8a51e1906499550be5057"
+    },
+    {
+      "path": "apps/web/app/design-language/system-preview/components/DevControlPanel.tsx",
+      "kind": "file",
+      "bytes": 1753,
+      "mode": "0664",
+      "sha256": "180ce579be2e5f7a5738eb52670264f14d44dcefcd68924f17cb65a0227fba4f"
+    },
+    {
+      "path": "apps/web/app/design-language/system-preview/components/PreviewActionSurfaces.tsx",
+      "kind": "file",
+      "bytes": 2142,
+      "mode": "0664",
+      "sha256": "a5025b64a7f196965d1b7082a995ec338cf0b6b7fc8b15c9ea65602d2cb68ca9"
+    },
+    {
+      "path": "apps/web/app/design-language/system-preview/components/PreviewDarkCards.tsx",
+      "kind": "file",
+      "bytes": 2046,
+      "mode": "0664",
+      "sha256": "5ed03fcf5458bd516c02599f9d80ebf3d65bb580aa8e7b0d5e6e5c26b4cc285d"
+    },
+    {
+      "path": "apps/web/app/design-language/system-preview/components/PreviewEditorial.tsx",
+      "kind": "file",
+      "bytes": 2035,
+      "mode": "0664",
+      "sha256": "e4d46a53cc54eed5114d6d48c61635492ab676de883a1795ac47ad9448f3fabe"
+    },
+    {
+      "path": "apps/web/app/design-language/system-preview/components/PreviewFinalCta.tsx",
+      "kind": "file",
+      "bytes": 1039,
+      "mode": "0664",
+      "sha256": "5b36cce59e62133ead83ca6a7a7e925d99591354472cc881e91a4ba36aecb12a"
+    },
+    {
+      "path": "apps/web/app/design-language/system-preview/components/PreviewFooter.tsx",
+      "kind": "file",
+      "bytes": 647,
+      "mode": "0664",
+      "sha256": "dd9911ec65ee0dac524557b88971aa94c685d64d7a53dd7224a6853cf3ed3ce6"
+    },
+    {
+      "path": "apps/web/app/design-language/system-preview/components/PreviewForm.tsx",
+      "kind": "file",
+      "bytes": 4367,
+      "mode": "0664",
+      "sha256": "e74a38b9f72283ac0a68eca313616d398ca1e6ea4d24ab19ea76bea8fec29568"
+    },
+    {
+      "path": "apps/web/app/design-language/system-preview/components/PreviewHeader.tsx",
+      "kind": "file",
+      "bytes": 1141,
+      "mode": "0664",
+      "sha256": "6fa67569168effd825da4a8759bc1a019c956fd36abe4405188472977936f6c0"
+    },
+    {
+      "path": "apps/web/app/design-language/system-preview/components/PreviewHero.tsx",
+      "kind": "file",
+      "bytes": 2130,
+      "mode": "0664",
+      "sha256": "f7b554c42249c7be86a15d49702af29c5986deda16a10411a76455cac274f1a8"
+    },
+    {
+      "path": "apps/web/app/design-language/system-preview/components/PreviewProcess.tsx",
+      "kind": "file",
+      "bytes": 1793,
+      "mode": "0664",
+      "sha256": "c05842698294549d5872c6e76b9eaf345b9da90b69fbd0ad455242d5ab6b492a"
+    },
+    {
+      "path": "apps/web/app/design-language/system-preview/components/PreviewTrustStrip.tsx",
+      "kind": "file",
+      "bytes": 801,
+      "mode": "0664",
+      "sha256": "c8745d5378bb811bc54a27f70e820cbcc3b48206a5f2763066426bb4bca45070"
+    },
+    {
+      "path": "apps/web/app/design-language/template-preview/TemplatePreviewContent.tsx",
+      "kind": "file",
+      "bytes": 12594,
+      "mode": "0664",
+      "sha256": "782e4e1d2d79fb6b793364daf3c13f0342ee5b12ee143dc7c7ee23622f838455"
+    },
+    {
+      "path": "apps/web/app/design-language/template-preview/page.tsx",
+      "kind": "file",
+      "bytes": 854,
+      "mode": "0664",
+      "sha256": "15dcea3a13114b4cd19db813fd7c4b63570f9bbcc6f3d0b564cb905adf9995e1"
+    },
+    {
+      "path": "apps/web/app/design-language/tools/page.tsx",
+      "kind": "file",
+      "bytes": 480,
+      "mode": "0664",
+      "sha256": "5c7d7f6ffc0f51c7597899c650a3b71903f8fb35acb6c7e544adec63f5e880ba"
+    },
+    {
+      "path": "apps/web/app/design-language/typography/page.tsx",
+      "kind": "file",
+      "bytes": 461,
+      "mode": "0664",
+      "sha256": "13f59bb9bcbf89962db9cd588a9c128c0f4174625dbe97d7cc46408c7879edbf"
+    },
+    {
+      "path": "apps/web/app/funnels/mortgage-income-drop-check/SurfaceClient.module.css",
+      "kind": "file",
+      "bytes": 6590,
+      "mode": "0664",
+      "sha256": "4a6e341285f7588a4bf15a13e553cafeebf3bc73925699d767d0be057f05b0eb"
+    },
+    {
+      "path": "apps/web/app/funnels/mortgage-income-drop-check/SurfaceClient.tsx",
+      "kind": "file",
+      "bytes": 2436,
+      "mode": "0664",
+      "sha256": "58535701591558dcdba84e19de3c614c5997ed77596274c06ce6a28c50eae189"
+    },
+    {
+      "path": "apps/web/app/funnels/mortgage-income-drop-check/page.tsx",
+      "kind": "file",
+      "bytes": 673,
+      "mode": "0664",
+      "sha256": "1db6ccc0631e79596da186a8898d0e2d2017f95d17cd940bd137ada8ca658412"
+    },
+    {
+      "path": "apps/web/app/healthz/route.ts",
+      "kind": "file",
+      "bytes": 1091,
+      "mode": "0664",
+      "sha256": "b469da091fbb30ece26e207fd124dcadfe29a162e3538fb3dad448eb519e5166"
+    },
+    {
+      "path": "apps/web/app/jak-pracuji/ProcessMotion.client.tsx",
+      "kind": "file",
+      "bytes": 4965,
+      "mode": "0664",
+      "sha256": "c3778f742e8f1feb01552c62d40d33b762139bf37db1c0785ed70b79d878aaff"
+    },
+    {
+      "path": "apps/web/app/jak-pracuji/page.tsx",
+      "kind": "file",
+      "bytes": 11976,
+      "mode": "0664",
+      "sha256": "b6912811ccf993a6c9d5ab67fb18e0e8eca5050e5e1f75b834f13eab78499aaa"
+    },
+    {
+      "path": "apps/web/app/jak-pracuji/processPage.module.css",
+      "kind": "file",
+      "bytes": 19296,
+      "mode": "0664",
+      "sha256": "7e679b0b175c5bbe0f375a0e8cfc45e71001ec3695ea5c4c369fb3eeea2dbc3c"
+    },
+    {
+      "path": "apps/web/app/kdo-jsem/AboutMotion.client.tsx",
+      "kind": "file",
+      "bytes": 18258,
+      "mode": "0664",
+      "sha256": "a25b2414455b796d65843b5759e74796cae216e11db5b1c7a96de67cd89fb781"
+    },
+    {
+      "path": "apps/web/app/kdo-jsem/aboutPage.module.css",
+      "kind": "file",
+      "bytes": 40895,
+      "mode": "0664",
+      "sha256": "de5cd357205e64236efd2df935ecf122ef8bf229c92ff65d159f24c59acd5ea6"
+    },
+    {
+      "path": "apps/web/app/kdo-jsem/page.tsx",
+      "kind": "file",
+      "bytes": 31486,
+      "mode": "0664",
+      "sha256": "370bba8b27cb858df01fffbf2349e830f2a8a5af7ef9b76ad951caea896ab151"
+    },
+    {
+      "path": "apps/web/app/osvedceni-a-certifikace/certificatesPage.module.css",
+      "kind": "file",
+      "bytes": 9109,
+      "mode": "0664",
+      "sha256": "636813049fa2a6d52d30cf405cd3639888ff1c24c34e1a45b6747186357970d8"
+    },
+    {
+      "path": "apps/web/app/osvedceni-a-certifikace/page.tsx",
+      "kind": "file",
+      "bytes": 8310,
+      "mode": "0664",
+      "sha256": "cbdec963dee9e7d62be01a08b483cde2247a89986f132456d808d5633b97880c"
+    },
+    {
+      "path": "apps/web/app/pravni-informace/page.tsx",
+      "kind": "file",
+      "bytes": 6134,
+      "mode": "0664",
+      "sha256": "e09c9e96e8dde96e39b27230c12bd6e008fae6b85398af3574555c7850ab601a"
+    },
+    {
+      "path": "apps/web/app/reference/ReferencesExperience.client.tsx",
+      "kind": "file",
+      "bytes": 21109,
+      "mode": "0664",
+      "sha256": "70178bdd670aa77cfcc283a5682daaf1bfba1de026a0a4f4feea1aad438c57ba"
+    },
+    {
+      "path": "apps/web/app/reference/ReferencesHeroMotion.client.tsx",
+      "kind": "file",
+      "bytes": 4201,
+      "mode": "0664",
+      "sha256": "13aa4749130cabb11e350e3fa615030b2bde64fb191f62ac1f2b3d6aedb5b505"
+    },
+    {
+      "path": "apps/web/app/reference/page.tsx",
+      "kind": "file",
+      "bytes": 1125,
+      "mode": "0664",
+      "sha256": "443925546e51745c527cac4fb2829b167615d04e32ea76e721e7cd0faf88b14f"
+    },
+    {
+      "path": "apps/web/app/reference/references.module.css",
+      "kind": "file",
+      "bytes": 26836,
+      "mode": "0664",
+      "sha256": "640b003b82f7c4eb5eae55e36b82717865083bb2baae32c752fe8a82a8181e30"
+    },
+    {
+      "path": "apps/web/app/runtime/[channel]/publications/[publicationId]/[[...path]]/SurfacePublicationRuntime.client.tsx",
+      "kind": "file",
+      "bytes": 171,
+      "mode": "0664",
+      "sha256": "c83d2e88f15508b4684eca7f907ac0c0302b74621ce8275dc56793925960c292"
+    },
+    {
+      "path": "apps/web/app/runtime/[channel]/publications/[publicationId]/[[...path]]/page.tsx",
+      "kind": "file",
+      "bytes": 80,
+      "mode": "0664",
+      "sha256": "011ab5810181742a8447af40123ef8570d02347ffab3ff3245e8d0283800adf5"
+    },
+    {
+      "path": "apps/web/app/runtime-data/[channel]/publications/[publicationId]/[[...path]]/route.ts",
+      "kind": "file",
+      "bytes": 58,
+      "mode": "0664",
+      "sha256": "e0b3065d3540b8ff48e8958f035ad42341ea4505716bec5062413bf5a074f601"
+    },
+    {
+      "path": "apps/web/app/sluzby/ServicesAccordion.client.tsx",
+      "kind": "file",
+      "bytes": 6415,
+      "mode": "0664",
+      "sha256": "fae9d6e49db463816ba7cb0a5e6dc1925189d31ee78d0ff31a78db74750e946b"
+    },
+    {
+      "path": "apps/web/app/sluzby/ServicesMotion.client.tsx",
+      "kind": "file",
+      "bytes": 2795,
+      "mode": "0664",
+      "sha256": "51c8e6d81c31a8bc99266ca8113584973a7fe600520cfe647bf43c6b32ad3719"
+    },
+    {
+      "path": "apps/web/app/sluzby/page.tsx",
+      "kind": "file",
+      "bytes": 16848,
+      "mode": "0664",
+      "sha256": "80863d4759a917ac4caf46577d3361dcf9a265f6750e3958fcf225d5d418b6a9"
+    },
+    {
+      "path": "apps/web/app/sluzby/servicesPage.module.css",
+      "kind": "file",
+      "bytes": 23724,
+      "mode": "0664",
+      "sha256": "6824c11a3c34944155c82f42ada0ff87a7fbeb930a02a9765c78bb36144ddaa2"
+    },
+    {
+      "path": "apps/web/app/svgr/LogoMark.tsx",
+      "kind": "file",
+      "bytes": 2994,
+      "mode": "0664",
+      "sha256": "58b5e663a33125f11e13b8f2c9e2d21f2d306f6ffb74828298cdbaf41a3b5ef7"
+    },
+    {
+      "path": "apps/web/app/theme/color-palette.css",
+      "kind": "file",
+      "bytes": 62792,
+      "mode": "0664",
+      "sha256": "2be2288b9703a774b4ffbba61bf9be00a71f32cec3572d08235da576ac886fd8"
+    },
+    {
+      "path": "apps/web/app/theme/design-primitives.css",
+      "kind": "file",
+      "bytes": 17670,
+      "mode": "0664",
+      "sha256": "9769fd9e7c9c5d397d317808da4628da06aa4502c1c727d31b0e1b88f79fb271"
+    },
+    {
+      "path": "apps/web/app/theme/design-primitives.ts",
+      "kind": "file",
+      "bytes": 59499,
+      "mode": "0664",
+      "sha256": "5dc22a230eea8323f7869b0f333735f32e1a99d5c65fb50f753c661c7fd99a29"
+    },
+    {
+      "path": "apps/web/app/theme/site-themes.ts",
+      "kind": "file",
+      "bytes": 2354,
+      "mode": "0664",
+      "sha256": "0e3bed69cd8be88bb8cc7c9ba83846aca0c4337532cbadc9aa8c3fc04181eb29"
+    },
+    {
+      "path": "apps/web/app/theme/theme-tokens.ts",
+      "kind": "file",
+      "bytes": 33794,
+      "mode": "0664",
+      "sha256": "7ff42f43b27d385c59491d153909babb4b1ab24ffb72b04f08bf2bd3180a05e9"
+    },
+    {
+      "path": "apps/web/app/ui/Carousel/Carousel.tsx",
+      "kind": "file",
+      "bytes": 3746,
+      "mode": "0664",
+      "sha256": "32fce920d95dc8b785f84a17042b540d696d6b5b9e6b45ff325e2296aeec14bb"
+    },
+    {
+      "path": "apps/web/app/ui/Carousel/TrustCarousel.tsx",
+      "kind": "file",
+      "bytes": 4283,
+      "mode": "0664",
+      "sha256": "d4f91568fb1ec692d1bf2745db984e157db7a69ea68666fdde7a99c6c5c79cbc"
+    },
+    {
+      "path": "apps/web/app/ui/Carousel/carousel.module.css",
+      "kind": "file",
+      "bytes": 1518,
+      "mode": "0664",
+      "sha256": "56a61da17e1841d099dd175f0965967102990915c56273a0eae0c58e2f8b5243"
+    },
+    {
+      "path": "apps/web/app/ui/Carousel/trustCarousel.module.css",
+      "kind": "file",
+      "bytes": 1719,
+      "mode": "0664",
+      "sha256": "5c354b882cb9486d50918c70354a99a3cfd2bb70884c90821d488d664c531681"
+    },
+    {
+      "path": "apps/web/app/ui/animations/GoalsVelocityMarquee.tsx",
+      "kind": "file",
+      "bytes": 1364,
+      "mode": "0664",
+      "sha256": "94820f2f48be7bcad95bc852f300c7ab8d1f26c51f0e2ac64a6c715c2dfc74b0"
+    },
+    {
+      "path": "apps/web/app/ui/animations/GradientText.css",
+      "kind": "file",
+      "bytes": 707,
+      "mode": "0664",
+      "sha256": "5dddce8c429a672a46e1455336b6be3e4638523ce52e93b119146e1ebca4ee4c"
+    },
+    {
+      "path": "apps/web/app/ui/animations/GradientText.tsx",
+      "kind": "file",
+      "bytes": 931,
+      "mode": "0664",
+      "sha256": "bb10592cc586318517b43b32c5d9eda902f91290571fd75b696d27954c577e8e"
+    },
+    {
+      "path": "apps/web/app/ui/animations/Reveal.tsx",
+      "kind": "file",
+      "bytes": 179,
+      "mode": "0664",
+      "sha256": "225a8f86fbc2c81a3f4c1b95f13d2030a9abe538502b7dfd65b73864c18f9cad"
+    },
+    {
+      "path": "apps/web/app/ui/animations/RevealClient.tsx",
+      "kind": "file",
+      "bytes": 307,
+      "mode": "0664",
+      "sha256": "4b43bf90f897dbf6de55c515664ed8121d60a1674cc912ab060ed370a5336878"
+    },
+    {
+      "path": "apps/web/app/ui/animations/RouteEditorialReveal.client.tsx",
+      "kind": "file",
+      "bytes": 201,
+      "mode": "0664",
+      "sha256": "cbe91a5559ad634af9a559e39558b575398754f88941532f40f7494dac00ec32"
+    },
+    {
+      "path": "apps/web/app/ui/animations/RouteHeroEntry.client.tsx",
+      "kind": "file",
+      "bytes": 959,
+      "mode": "0664",
+      "sha256": "e876f8f693d65303accf3c1384d14334224fd80252da5404f4085bf7e6a450ed"
+    },
+    {
+      "path": "apps/web/app/ui/animations/SmoothScroll.ts",
+      "kind": "file",
+      "bytes": 844,
+      "mode": "0664",
+      "sha256": "c16c4447b0080a0980d7ba09232c32b6507b61dee2a0801966557e3e2cdfdcb7"
+    },
+    {
+      "path": "apps/web/app/ui/animations/Squares.tsx",
+      "kind": "file",
+      "bytes": 4893,
+      "mode": "0664",
+      "sha256": "6428a5ef73eecad941e7c6b8e94332e6d1d38c3568fb874a6eafb24e4241e5d2"
+    },
+    {
+      "path": "apps/web/app/ui/animations/TextMarquee.tsx",
+      "kind": "file",
+      "bytes": 2634,
+      "mode": "0664",
+      "sha256": "20c8a5f169e8e9e6aba7ba02f71862a1e566a8837fd59a77f39876bdf5efe679"
+    },
+    {
+      "path": "apps/web/app/ui/animations/UnifiedRevealEngine.client.tsx",
+      "kind": "file",
+      "bytes": 28306,
+      "mode": "0664",
+      "sha256": "5befa1cf13e2dc1386524ad19d89b88ae4e627a9773b553eadfd1631e7bfbd50"
+    },
+    {
+      "path": "apps/web/app/ui/animations/routeHeroEntry.css",
+      "kind": "file",
+      "bytes": 1995,
+      "mode": "0664",
+      "sha256": "1caa141f09ac9b4fb4ec2b68da057758897e10b8492e0bacba584ee43968a0a9"
+    },
+    {
+      "path": "apps/web/app/ui/animations/squares.module.css",
+      "kind": "file",
+      "bytes": 77,
+      "mode": "0664",
+      "sha256": "ba5a6ae5607623fae6f5010733708b025250a36f1adc764ca923c27ac42eae19"
+    },
+    {
+      "path": "apps/web/app/ui/animations/textMarquee.module.css",
+      "kind": "file",
+      "bytes": 1128,
+      "mode": "0664",
+      "sha256": "fbc93886a18778ecd957c7bd9e2369ed351915cd3883481c4d6d385b435bddfa"
+    },
+    {
+      "path": "apps/web/app/ui/animations/reveal/Reveal.tsx",
+      "kind": "file",
+      "bytes": 3801,
+      "mode": "0664",
+      "sha256": "c362e1feb5ffb503edbddbd620b71cf8ffb6b617ba94482ef63e2fded98330ce"
+    },
+    {
+      "path": "apps/web/app/ui/animations/reveal/animationCompiler.ts",
+      "kind": "file",
+      "bytes": 2303,
+      "mode": "0664",
+      "sha256": "dcb24013f9fa275d36f89507a0f41c72b4e260ed63461e8a3ac23fb6019004c8"
+    },
+    {
+      "path": "apps/web/app/ui/animations/reveal/presets.ts",
+      "kind": "file",
+      "bytes": 1338,
+      "mode": "0664",
+      "sha256": "232c2bcd858e09aa4b8a822e1bb7389b3fee0d6a0c7c80d44faa9dac825cf4b2"
+    },
+    {
+      "path": "apps/web/app/ui/animations/reveal/types.ts",
+      "kind": "file",
+      "bytes": 807,
+      "mode": "0664",
+      "sha256": "64203070fdfee7f860431681cd6898446c322b63c8eaf4cf58af3f18a1b5a583"
+    },
+    {
+      "path": "apps/web/app/ui/animations/reveal/tokens/directions.ts",
+      "kind": "file",
+      "bytes": 689,
+      "mode": "0664",
+      "sha256": "40fd026aa554158a6a8df10ad93857c2964063f66435113c87adcafb41ca7655"
+    },
+    {
+      "path": "apps/web/app/ui/animations/reveal/tokens/fade.ts",
+      "kind": "file",
+      "bytes": 189,
+      "mode": "0664",
+      "sha256": "1afb80e9610034f7f27d3c040f41b9eefc51d45bbd7747fe9a5ea088b779383e"
+    },
+    {
+      "path": "apps/web/app/ui/animations/reveal/tokens/index.ts",
+      "kind": "file",
+      "bytes": 254,
+      "mode": "0664",
+      "sha256": "b12c2cd33d541851bbbaa20ea7475f271835ecd05a98e1ff7d9fc00bfd2df84a"
+    },
+    {
+      "path": "apps/web/app/ui/animations/reveal/tokens/scale.ts",
+      "kind": "file",
+      "bytes": 298,
+      "mode": "0664",
+      "sha256": "78057e40a0108d41b23058a61f65462480d2d0aa12c5e2632e64f763b618c635"
+    },
+    {
+      "path": "apps/web/app/ui/badge/PrimitiveBadge.tsx",
+      "kind": "file",
+      "bytes": 1047,
+      "mode": "0664",
+      "sha256": "02c926320d5eebca067df4aa68f9ed8766f87aba0c07e647bc988a1d7a5b7f73"
+    },
+    {
+      "path": "apps/web/app/ui/badge/primitiveBadge.module.css",
+      "kind": "file",
+      "bytes": 2084,
+      "mode": "0664",
+      "sha256": "bb320c0b91d18f13a8b0a7ab5f21f83bb7f277d4a7eabbcbeea278ca29b545e8"
+    },
+    {
+      "path": "apps/web/app/ui/card/PrimitiveCard.tsx",
+      "kind": "file",
+      "bytes": 1516,
+      "mode": "0664",
+      "sha256": "64c603b58580f4b3be1932519a7fda1743c9fc9913846fd4f0c0bd2295688d3c"
+    },
+    {
+      "path": "apps/web/app/ui/card/primitiveCard.module.css",
+      "kind": "file",
+      "bytes": 1824,
+      "mode": "0664",
+      "sha256": "c8a15889425f18336f4ee79a17eca66af78c78a22d13ddcdbe62230a3d7aa739"
+    },
+    {
+      "path": "apps/web/app/ui/container/Container.tsx",
+      "kind": "file",
+      "bytes": 2688,
+      "mode": "0664",
+      "sha256": "81fe576a21c3896fa565adf665a74f1c0ce4a510da4553006ab96b0283a9510d"
+    },
+    {
+      "path": "apps/web/app/ui/container/container.module.css",
+      "kind": "file",
+      "bytes": 2691,
+      "mode": "0664",
+      "sha256": "222aec44c0a6d596243a5986116a31f9378a89c642e87cb93d1e5e7fc6bc760e"
+    },
+    {
+      "path": "apps/web/app/ui/cta/Button.tsx",
+      "kind": "file",
+      "bytes": 2576,
+      "mode": "0664",
+      "sha256": "f4d7e5041b64b341af81064c7dcf2683993ca2a1e06af2f6c251f9eb792fda72"
+    },
+    {
+      "path": "apps/web/app/ui/cta/button.module.css",
+      "kind": "file",
+      "bytes": 8891,
+      "mode": "0664",
+      "sha256": "213854386dd724cea3347c4d5036536ee31f9becffe65e6942a9c9508573a889"
+    },
+    {
+      "path": "apps/web/app/ui/domain/ArticleCard.tsx",
+      "kind": "file",
+      "bytes": 1687,
+      "mode": "0664",
+      "sha256": "95e5bcc910883bd30f8318020ba0d879f580804fb8fdb11a3d042e47972d3cf6"
+    },
+    {
+      "path": "apps/web/app/ui/domain/BookingPanel.tsx",
+      "kind": "file",
+      "bytes": 3733,
+      "mode": "0664",
+      "sha256": "c6820cf59482565b45fe043ad3b7dd6d0d74c17edf2f4140ca83f80d6d5127c3"
+    },
+    {
+      "path": "apps/web/app/ui/domain/CalendarProviderAdapter.tsx",
+      "kind": "file",
+      "bytes": 1521,
+      "mode": "0664",
+      "sha256": "fcbe20dbb87ecc109b9e6314cf40a5ad2c352904b5c443c329b4ba15e1ef2ae8"
+    },
+    {
+      "path": "apps/web/app/ui/domain/ConsentAnalyticsLoader.tsx",
+      "kind": "file",
+      "bytes": 557,
+      "mode": "0664",
+      "sha256": "0abfb9cf9ac1a99d33e644ed0135576876ada578710e72ff315f6ff6d63a070c"
+    },
+    {
+      "path": "apps/web/app/ui/domain/ConsentBanner.tsx",
+      "kind": "file",
+      "bytes": 1909,
+      "mode": "0664",
+      "sha256": "6153c0772452d259bd7f2bc5c77437790d9ba19c74468824fbf8c4e2bd849a0d"
+    },
+    {
+      "path": "apps/web/app/ui/domain/ConsentPreferences.tsx",
+      "kind": "file",
+      "bytes": 2197,
+      "mode": "0664",
+      "sha256": "dfbdc10c646f83073d570047149b6fa0c2e72c303441ae89de759272e5c80057"
+    },
+    {
+      "path": "apps/web/app/ui/domain/ConsentStore.ts",
+      "kind": "file",
+      "bytes": 1237,
+      "mode": "0664",
+      "sha256": "1b3934398e22860c490436ea838f6a2e35c467ac29888888d799785a094d6b35"
+    },
+    {
+      "path": "apps/web/app/ui/domain/CookieConsent.tsx",
+      "kind": "file",
+      "bytes": 2777,
+      "mode": "0664",
+      "sha256": "cc0911076b296f452d1d443c5b2ec294fa183f8978363580616b2e419a4d6dfe"
+    },
+    {
+      "path": "apps/web/app/ui/domain/EnquiryForm.tsx",
+      "kind": "file",
+      "bytes": 5635,
+      "mode": "0664",
+      "sha256": "0bd218a948fa5c369dad5a0f90267b5db6b31044d60c096b6dff7f5049fdc16d"
+    },
+    {
+      "path": "apps/web/app/ui/domain/Hero.tsx",
+      "kind": "file",
+      "bytes": 1934,
+      "mode": "0664",
+      "sha256": "401000b1836873c90777ae4031daf6455cc3a9370f441a5f9bd655e3f0c3d71c"
+    },
+    {
+      "path": "apps/web/app/ui/domain/ProfileCard.tsx",
+      "kind": "file",
+      "bytes": 1311,
+      "mode": "0664",
+      "sha256": "0d23f0b821f98e93f762c8af4373c6e1a04246ea193fab87eca9c32c0885de62"
+    },
+    {
+      "path": "apps/web/app/ui/domain/ProofItem.tsx",
+      "kind": "file",
+      "bytes": 1356,
+      "mode": "0664",
+      "sha256": "9f1ed38a063fd8c0658d5cdc1245e61eee28dd9c5bce2932d471122fc6e5dcfb"
+    },
+    {
+      "path": "apps/web/app/ui/domain/ServiceCard.tsx",
+      "kind": "file",
+      "bytes": 1485,
+      "mode": "0664",
+      "sha256": "56ddb429787103c4696cd7137940f134a6de5364490f844a161109e70f1a001d"
+    },
+    {
+      "path": "apps/web/app/ui/domain/TestimonialCard.tsx",
+      "kind": "file",
+      "bytes": 970,
+      "mode": "0664",
+      "sha256": "9eddda17809c14c96aead099a2457885a24724daae2b5d75c338e19031e55f01"
+    },
+    {
+      "path": "apps/web/app/ui/domain/domain.module.css",
+      "kind": "file",
+      "bytes": 7843,
+      "mode": "0664",
+      "sha256": "4959ff9f6c497a61f84e9636570e6fce2a65b43e3f9a32a5ab541723b0346472"
+    },
+    {
+      "path": "apps/web/app/ui/domain/index.ts",
+      "kind": "file",
+      "bytes": 1054,
+      "mode": "0664",
+      "sha256": "f20b1dab5723c2fd37815c54ca5b2a62dfb9d0419682d5d9a9672ea61ed8a682"
+    },
+    {
+      "path": "apps/web/app/ui/domain/surfaceTone.ts",
+      "kind": "file",
+      "bytes": 379,
+      "mode": "0664",
+      "sha256": "f1ea44335f8636704b1ba2b8a3fb06fcda14d028c2cd4628b18929552c63ba03"
+    },
+    {
+      "path": "apps/web/app/ui/form/PrimitiveField.tsx",
+      "kind": "file",
+      "bytes": 1156,
+      "mode": "0664",
+      "sha256": "664efbb4e0f61e179d75d47962569bd4364e99e70c9035251f5cfcdb02e397f6"
+    },
+    {
+      "path": "apps/web/app/ui/form/primitiveField.module.css",
+      "kind": "file",
+      "bytes": 1935,
+      "mode": "0664",
+      "sha256": "c530a60c0f2928baa34ce90b557bc382b24b3e426ab7afd33f5c640ce949040d"
+    },
+    {
+      "path": "apps/web/app/ui/forms/Checkbox.tsx",
+      "kind": "file",
+      "bytes": 2284,
+      "mode": "0664",
+      "sha256": "9fa0205025b9d6465cae2182d34ecaafb0b63acb3b12a5bf992320070525c751"
+    },
+    {
+      "path": "apps/web/app/ui/forms/ErrorSummary.tsx",
+      "kind": "file",
+      "bytes": 1808,
+      "mode": "0664",
+      "sha256": "762cfac17f9aa4f7e25e0ca023936f731f551814134ff0f76386221af68b0875"
+    },
+    {
+      "path": "apps/web/app/ui/forms/Field.tsx",
+      "kind": "file",
+      "bytes": 1949,
+      "mode": "0664",
+      "sha256": "5c1e227ac24e079291026acedc39c6aa41dc93a89f918f00c03526b369861592"
+    },
+    {
+      "path": "apps/web/app/ui/forms/FieldGroup.tsx",
+      "kind": "file",
+      "bytes": 1829,
+      "mode": "0664",
+      "sha256": "ad784f30f498980743879f466cd1c1bc9b3b6fc355e22f36b449e81d41106b22"
+    },
+    {
+      "path": "apps/web/app/ui/forms/RadioGroup.tsx",
+      "kind": "file",
+      "bytes": 2745,
+      "mode": "0664",
+      "sha256": "907d0d9e6602f97ffe6c3b515f2a96e01a7510ab4ccf1837189fdb5d0b5a978b"
+    },
+    {
+      "path": "apps/web/app/ui/forms/Select.tsx",
+      "kind": "file",
+      "bytes": 643,
+      "mode": "0664",
+      "sha256": "47f6a25b0c229c8b141842a844e12afda21050506f9b65b0e36826489e6435db"
+    },
+    {
+      "path": "apps/web/app/ui/forms/SelectField.tsx",
+      "kind": "file",
+      "bytes": 907,
+      "mode": "0664",
+      "sha256": "9a98b7102a125f0eecb689cd831fee1afe8033798900440e27cb6e9a608dafca"
+    },
+    {
+      "path": "apps/web/app/ui/forms/TextField.tsx",
+      "kind": "file",
+      "bytes": 911,
+      "mode": "0664",
+      "sha256": "1cbee58b635fa52d641f89d7f9e2976cadbc41c0ff9a7bff34803048cccc97ea"
+    },
+    {
+      "path": "apps/web/app/ui/forms/TextInput.tsx",
+      "kind": "file",
+      "bytes": 1046,
+      "mode": "0664",
+      "sha256": "2826b9d9e34202c1fb22e41f3be3fdaed270fdcd7ed1930d3e57231dd40201a5"
+    },
+    {
+      "path": "apps/web/app/ui/forms/Textarea.tsx",
+      "kind": "file",
+      "bytes": 761,
+      "mode": "0664",
+      "sha256": "5d6f6648594e7d344bea94e6b4f9ad3f77a311a4f9cf50e6889963da1dc61f5d"
+    },
+    {
+      "path": "apps/web/app/ui/forms/TextareaField.tsx",
+      "kind": "file",
+      "bytes": 929,
+      "mode": "0664",
+      "sha256": "56f1b8a7ea1fcf3b990bb22947aac3bab79c6e9fddb2438ddedf819f27950595"
+    },
+    {
+      "path": "apps/web/app/ui/forms/forms.module.css",
+      "kind": "file",
+      "bytes": 8085,
+      "mode": "0664",
+      "sha256": "23029d0846ca0d682142a3d1342022b0782e1754380fbdf91c11bc6dc93fab87"
+    },
+    {
+      "path": "apps/web/app/ui/forms/index.ts",
+      "kind": "file",
+      "bytes": 680,
+      "mode": "0664",
+      "sha256": "904614e414e88057ac00e38601c69b9b38a0ec539049095f8d226c1eb6876c96"
+    },
+    {
+      "path": "apps/web/app/ui/layout/Bleed.tsx",
+      "kind": "file",
+      "bytes": 714,
+      "mode": "0664",
+      "sha256": "e79e3536139663df3dd1be9fda6858d1c65e8d5787a3f7fe499744172ade16ce"
+    },
+    {
+      "path": "apps/web/app/ui/layout/Cluster.tsx",
+      "kind": "file",
+      "bytes": 969,
+      "mode": "0664",
+      "sha256": "61fc5461d263642b421cdd409283d243dfaa527f20ec797e76c3b7bad1541f19"
+    },
+    {
+      "path": "apps/web/app/ui/layout/Container.tsx",
+      "kind": "file",
+      "bytes": 927,
+      "mode": "0664",
+      "sha256": "ff2292276da8b9bc3ed056b89e8116234ffa7cda2e71a7912add85ba9606f976"
+    },
+    {
+      "path": "apps/web/app/ui/layout/Cover.tsx",
+      "kind": "file",
+      "bytes": 3168,
+      "mode": "0664",
+      "sha256": "5425db23c3de481b6b5f890ca1bef94e1d173608c6178c656f00f8f41b450eef"
+    },
+    {
+      "path": "apps/web/app/ui/layout/Frame.tsx",
+      "kind": "file",
+      "bytes": 1353,
+      "mode": "0664",
+      "sha256": "cf1726995efcd1b4510f35a7da3ddd609cc80345968318c92916256cb4c7f707"
+    },
+    {
+      "path": "apps/web/app/ui/layout/Grid.tsx",
+      "kind": "file",
+      "bytes": 942,
+      "mode": "0664",
+      "sha256": "d1b5a604753cf69a5e88ded5686e7fd1fdbd8de6d2cfe55f50f35b0c4af6af20"
+    },
+    {
+      "path": "apps/web/app/ui/layout/ReadingLayout.tsx",
+      "kind": "file",
+      "bytes": 685,
+      "mode": "0664",
+      "sha256": "6be15f88b1c1455386c93a008fcf6c69168cfba5db68490828fdbed3dec8866b"
+    },
+    {
+      "path": "apps/web/app/ui/layout/Sidebar.tsx",
+      "kind": "file",
+      "bytes": 1254,
+      "mode": "0664",
+      "sha256": "ce02a67a9d7daf0686fb26f8fbb4b2f47ba01a7c0b11749cf7d7f28032577dfb"
+    },
+    {
+      "path": "apps/web/app/ui/layout/Stack.tsx",
+      "kind": "file",
+      "bytes": 827,
+      "mode": "0664",
+      "sha256": "68ee7844a1296ed806c26a75592409822531863226313167eebbb7ff4a2b662d"
+    },
+    {
+      "path": "apps/web/app/ui/layout/Switcher.tsx",
+      "kind": "file",
+      "bytes": 994,
+      "mode": "0664",
+      "sha256": "3d08b551d850178cb57423fd1929d7f898cdd7f26e4ea21366f13794d66ba576"
+    },
+    {
+      "path": "apps/web/app/ui/layout/index.ts",
+      "kind": "file",
+      "bytes": 1216,
+      "mode": "0664",
+      "sha256": "72dfc8b1c7b80e217ab824ec34db144569543c05d312df69d97363c9fe3d5b37"
+    },
+    {
+      "path": "apps/web/app/ui/layout/layoutPrimitives.module.css",
+      "kind": "file",
+      "bytes": 8541,
+      "mode": "0664",
+      "sha256": "b2ffebe4f218a56f950e0e7555e1484ebfcd6c794995f29a25a41ac0d64b126b"
+    },
+    {
+      "path": "apps/web/app/ui/layout/types.ts",
+      "kind": "file",
+      "bytes": 578,
+      "mode": "0664",
+      "sha256": "e278649a0dc1e84adca76b64a35dc3edc38eb26fcf7e1b8c204654b0e0bef1cd"
+    },
+    {
+      "path": "apps/web/app/ui/legal/LegalBackButton.client.tsx",
+      "kind": "file",
+      "bytes": 692,
+      "mode": "0664",
+      "sha256": "852d9c41702e3ec1f1b9e077a510dc87664bac2d3bb41c3e9cee781d6068f81f"
+    },
+    {
+      "path": "apps/web/app/ui/legal/LegalCookieSettingsButton.client.tsx",
+      "kind": "file",
+      "bytes": 387,
+      "mode": "0664",
+      "sha256": "abf32314a2f7a2b8320cf0908da3653ddd3f0dfd9730c8c658ce123b24460325"
+    },
+    {
+      "path": "apps/web/app/ui/legal/LegalLink.tsx",
+      "kind": "file",
+      "bytes": 1006,
+      "mode": "0664",
+      "sha256": "2090de276b9db32b65f919b109ec4d9b60996dc051a08dcc8b1bd5f47fe06f55"
+    },
+    {
+      "path": "apps/web/app/ui/legal/useLegalReturn.ts",
+      "kind": "file",
+      "bytes": 2804,
+      "mode": "0664",
+      "sha256": "ceacfe21d53d9e366aca07a6844389a65c177455b0d1c232008b55903c7b6a0b"
+    },
+    {
+      "path": "apps/web/app/ui/media/MediaFrame.tsx",
+      "kind": "file",
+      "bytes": 2164,
+      "mode": "0664",
+      "sha256": "241f3150a328bbfc76ae1d1559ef8f3cafa8ad8c389fa7aa23c9bfab20d20c94"
+    },
+    {
+      "path": "apps/web/app/ui/media/editorialImageFrame.module.css",
+      "kind": "file",
+      "bytes": 530,
+      "mode": "0664",
+      "sha256": "150fdd3c87ac9b3d6edd4ebf3653ea733c317bccf65d72c228e054d7320005a5"
+    },
+    {
+      "path": "apps/web/app/ui/media/mediaFrame.module.css",
+      "kind": "file",
+      "bytes": 1753,
+      "mode": "0664",
+      "sha256": "297b2982ff0d4a8b661d1564a6e710e391e3b15f1036da1a0109b1b8203a01f3"
+    },
+    {
+      "path": "apps/web/app/ui/patterns/ActionBand.tsx",
+      "kind": "file",
+      "bytes": 2437,
+      "mode": "0664",
+      "sha256": "443c653d1789354dadc27720177ee79e4717c608f4705173474651a7366fa88c"
+    },
+    {
+      "path": "apps/web/app/ui/patterns/CardCollection.tsx",
+      "kind": "file",
+      "bytes": 1172,
+      "mode": "0664",
+      "sha256": "3fc05b9b4b692da5ad08aaa59b36b36766cecbf93f32e551368bc33905b345f9"
+    },
+    {
+      "path": "apps/web/app/ui/patterns/EditorialFlow.tsx",
+      "kind": "file",
+      "bytes": 1197,
+      "mode": "0664",
+      "sha256": "babe9bf3fd7aeeb2c02037e9886018fcf7c23841bce0a91bec54f0c2f94c84f3"
+    },
+    {
+      "path": "apps/web/app/ui/patterns/FAQSection.tsx",
+      "kind": "file",
+      "bytes": 1441,
+      "mode": "0664",
+      "sha256": "20d768998ad66a0f0c99ba77d9c17795d7fbde3ee15203fbb03a6e79be5bc24f"
+    },
+    {
+      "path": "apps/web/app/ui/patterns/FormContactSplit.tsx",
+      "kind": "file",
+      "bytes": 1033,
+      "mode": "0664",
+      "sha256": "accfc94785af9a0dbbea2332d1f49e7371f23c5bff7d4cf56bb8cd8337301e12"
+    },
+    {
+      "path": "apps/web/app/ui/patterns/ProcessAndFees.tsx",
+      "kind": "file",
+      "bytes": 1768,
+      "mode": "0664",
+      "sha256": "acaa350763fb1fc202fdc6daa16f32c6be538a342dfd0ae946628849a3c5c309"
+    },
+    {
+      "path": "apps/web/app/ui/patterns/SectionIntro.tsx",
+      "kind": "file",
+      "bytes": 1114,
+      "mode": "0664",
+      "sha256": "039c835e33f039918d6ec08a0c0566db848e8b882b00cf401f4a6e26d3df48b8"
+    },
+    {
+      "path": "apps/web/app/ui/patterns/SplitNarrative.tsx",
+      "kind": "file",
+      "bytes": 1296,
+      "mode": "0664",
+      "sha256": "5fe3075fa88cc49895f34886cbe5a61376b66607d3a514fc5638611766b44538"
+    },
+    {
+      "path": "apps/web/app/ui/patterns/TrustBlock.tsx",
+      "kind": "file",
+      "bytes": 1017,
+      "mode": "0664",
+      "sha256": "53953ea8f72b71053a297435a0d0e7e07683bd8b55122cbe4b37e08070e3b1b8"
+    },
+    {
+      "path": "apps/web/app/ui/patterns/index.ts",
+      "kind": "file",
+      "bytes": 1077,
+      "mode": "0664",
+      "sha256": "a7d2a739baa207ac41702c7b6ab40a1b0b44acdb7b458217360a34a57cfad0ba"
+    },
+    {
+      "path": "apps/web/app/ui/patterns/patterns.module.css",
+      "kind": "file",
+      "bytes": 5950,
+      "mode": "0664",
+      "sha256": "65d897e4c1a5ba86c082fb210006dcde7c9610fe9933d190ce5d83f8ac669331"
+    },
+    {
+      "path": "apps/web/app/ui/primitives/Badge.tsx",
+      "kind": "file",
+      "bytes": 564,
+      "mode": "0664",
+      "sha256": "3a0e2e5f28a1f1e494564e1b8b241115ede280b1f9a1ba227b5c9dbb8e4e1f7e"
+    },
+    {
+      "path": "apps/web/app/ui/primitives/Button.tsx",
+      "kind": "file",
+      "bytes": 1513,
+      "mode": "0664",
+      "sha256": "ac82de94278e07bfb6706b405f1e65794364a189b27964f058a89a3f1ecd59a2"
+    },
+    {
+      "path": "apps/web/app/ui/primitives/ChoiceChip.tsx",
+      "kind": "file",
+      "bytes": 121,
+      "mode": "0664",
+      "sha256": "c602bbbe4c912f485eae64c119b7d54331e6bd55d6fcd6080b13215babad47f7"
+    },
+    {
+      "path": "apps/web/app/ui/primitives/Disclosure.tsx",
+      "kind": "file",
+      "bytes": 1310,
+      "mode": "0664",
+      "sha256": "53be4784705f245330e315f4ac3bb202f62dd36750055aa75764b689d74191eb"
+    },
+    {
+      "path": "apps/web/app/ui/primitives/Divider.tsx",
+      "kind": "file",
+      "bytes": 765,
+      "mode": "0664",
+      "sha256": "e842e37fe42a28aa05e2332f81a31b13a842a43c09dd9856039b8ee051c6dfab"
+    },
+    {
+      "path": "apps/web/app/ui/primitives/Icon.tsx",
+      "kind": "file",
+      "bytes": 974,
+      "mode": "0664",
+      "sha256": "b04f91a3d271c95b03f525c4b5a3671a69c94f32e65b235f1eababdd41bc6509"
+    },
+    {
+      "path": "apps/web/app/ui/primitives/IconButton.tsx",
+      "kind": "file",
+      "bytes": 682,
+      "mode": "0664",
+      "sha256": "8df93e8885f896d80fe0c9f55215a74b7e21e29b34c4ea49f3840bec052643bd"
+    },
+    {
+      "path": "apps/web/app/ui/primitives/Link.tsx",
+      "kind": "file",
+      "bytes": 783,
+      "mode": "0664",
+      "sha256": "5750ea8846b7dbb1c724b9510e01e602d9ccb3ccd61f6446de77eb3924d901d0"
+    },
+    {
+      "path": "apps/web/app/ui/primitives/Notice.tsx",
+      "kind": "file",
+      "bytes": 1221,
+      "mode": "0664",
+      "sha256": "f62a56b55a05dfa7ffd6e55d226efc79424246c1f0fde0494abcf2a602c4674c"
+    },
+    {
+      "path": "apps/web/app/ui/primitives/Prose.tsx",
+      "kind": "file",
+      "bytes": 708,
+      "mode": "0664",
+      "sha256": "01eb3287df969250848fb5226cac0be3f0aa647048d09a89ac4a63e32e843a4d"
+    },
+    {
+      "path": "apps/web/app/ui/primitives/ResponsiveMedia.tsx",
+      "kind": "file",
+      "bytes": 2453,
+      "mode": "0664",
+      "sha256": "5018edf38089fcf3fe6c03e5bf99492b6ef76e5229cdc68dc0468daf65d56417"
+    },
+    {
+      "path": "apps/web/app/ui/primitives/SelectionChip.tsx",
+      "kind": "file",
+      "bytes": 1057,
+      "mode": "0664",
+      "sha256": "7d17ba37f6861fcd7ee6f766722e131ea9849f4ed704b7c782c92fa41380cd35"
+    },
+    {
+      "path": "apps/web/app/ui/primitives/Surface.tsx",
+      "kind": "file",
+      "bytes": 1025,
+      "mode": "0664",
+      "sha256": "5df93861c8bf173d0d5f1025ec43dc5401596b737d5e20416a2277ff3259a928"
+    },
+    {
+      "path": "apps/web/app/ui/primitives/index.ts",
+      "kind": "file",
+      "bytes": 1293,
+      "mode": "0664",
+      "sha256": "3a810449d78fceeafcdb5d4c9d9ee2e46bee8ce60b007190f4468606e4793d74"
+    },
+    {
+      "path": "apps/web/app/ui/primitives/primitives.module.css",
+      "kind": "file",
+      "bytes": 15551,
+      "mode": "0664",
+      "sha256": "6e983e95ed8d989aed8cf5754e5fc68dd35f08af5c90c69a9a9da6b9854e7ca5"
+    },
+    {
+      "path": "apps/web/app/ui/primitives/types.ts",
+      "kind": "file",
+      "bytes": 339,
+      "mode": "0664",
+      "sha256": "07dd0942f0a51d191e88171dc6178a6c10dbe5a0c2b7cbe51552b63e8cab15fa"
+    },
+    {
+      "path": "apps/web/app/ui/scroll/HashLink.client.tsx",
+      "kind": "file",
+      "bytes": 946,
+      "mode": "0664",
+      "sha256": "9be39f099263c4645a4c22fac5569cfd709140e97ef95782cfa1d5b4b934cdf6"
+    },
+    {
+      "path": "apps/web/app/ui/scroll/scrollTo.ts",
+      "kind": "file",
+      "bytes": 1659,
+      "mode": "0664",
+      "sha256": "68595d6ef5c661673ca5af4508baddeb044e807b7aee7374a9ee27fed3a1bb92"
+    },
+    {
+      "path": "apps/web/app/ui/site/Breadcrumbs.tsx",
+      "kind": "file",
+      "bytes": 1135,
+      "mode": "0664",
+      "sha256": "d16622f3dc0492c1e620d70b21af7fd9780a892ee8d5c6682a9733350c5e9f34"
+    },
+    {
+      "path": "apps/web/app/ui/site/HeaderScrollMotion.client.tsx",
+      "kind": "file",
+      "bytes": 27310,
+      "mode": "0664",
+      "sha256": "18f5895d90adad912875f2e30d54268afea2f310035f938255e132ce6d147c5f"
+    },
+    {
+      "path": "apps/web/app/ui/site/HeaderThemeController.client.tsx",
+      "kind": "file",
+      "bytes": 16750,
+      "mode": "0664",
+      "sha256": "36e17db6d91bfd21e840ca0a979591345003c4232f894923fbdca0b240e0c017"
+    },
+    {
+      "path": "apps/web/app/ui/site/Pagination.tsx",
+      "kind": "file",
+      "bytes": 2662,
+      "mode": "0664",
+      "sha256": "5b06df8199f7268fd735cbe73a7572f3e06fe7d2a93f241859e9b1e17d2291a4"
+    },
+    {
+      "path": "apps/web/app/ui/site/SiteFooter.tsx",
+      "kind": "file",
+      "bytes": 3596,
+      "mode": "0664",
+      "sha256": "a3801d3c47cce43f11f525a24368f5617ceed9544ebe7d35684d387add5ba768"
+    },
+    {
+      "path": "apps/web/app/ui/site/SiteHeader.tsx",
+      "kind": "file",
+      "bytes": 3759,
+      "mode": "0664",
+      "sha256": "21c660ab8efef0a9ee775a9ca3198e4b46f3f5e102a3cf1d90ef894ed6428b0e"
+    },
+    {
+      "path": "apps/web/app/ui/site/SiteNavigation.tsx",
+      "kind": "file",
+      "bytes": 16145,
+      "mode": "0664",
+      "sha256": "afe0a577046b1e7e69f8dd50e6fde394d380acceb37b4cfbd5319c171aa6dd8d"
+    },
+    {
+      "path": "apps/web/app/ui/site/SkipLink.tsx",
+      "kind": "file",
+      "bytes": 601,
+      "mode": "0664",
+      "sha256": "46e8ffbbf28d0b9c4be5dc81e7c94c24b17b7962c982d4cf1d091f2fbba01600"
+    },
+    {
+      "path": "apps/web/app/ui/site/headerContextLock.client.ts",
+      "kind": "file",
+      "bytes": 829,
+      "mode": "0664",
+      "sha256": "a58b9cf630807491ea7194819d3646fcde64abbc5ce1b97c9798c3f1f37cbd93"
+    },
+    {
+      "path": "apps/web/app/ui/site/index.ts",
+      "kind": "file",
+      "bytes": 738,
+      "mode": "0664",
+      "sha256": "6dd103befe0f2bdbd944dbf7ae696e9502ef0f7c925fe6cc894600e8787bc5a1"
+    },
+    {
+      "path": "apps/web/app/ui/site/site.module.css",
+      "kind": "file",
+      "bytes": 37123,
+      "mode": "0664",
+      "sha256": "6113a2a2468c56c62a34e2119fa7d425c706320664177025e912f0d9f55584ef"
+    },
+    {
+      "path": "apps/web/app/ui/site/siteHeaderTheme.ts",
+      "kind": "file",
+      "bytes": 1085,
+      "mode": "0664",
+      "sha256": "b9700d28a195298b37516e2141eda63cd8acf6899cb3fc640d6137617ee7ff78"
+    },
+    {
+      "path": "apps/web/app/ui/site/siteHeaderVisibilityLock.client.ts",
+      "kind": "file",
+      "bytes": 1064,
+      "mode": "0664",
+      "sha256": "a28668a50cfdedbb075104ad188bcb446b23084d47e741a3947e80d2aa7307d9"
+    },
+    {
+      "path": "apps/web/app/ui/site/types.ts",
+      "kind": "file",
+      "bytes": 299,
+      "mode": "0664",
+      "sha256": "610758890d02136c0dd9029ca0ceaf44752ecd3cee5402e40fdd193cee4e9be3"
+    },
+    {
+      "path": "apps/web/app/ui/templates/ArticleDetailTemplate.tsx",
+      "kind": "file",
+      "bytes": 1071,
+      "mode": "0664",
+      "sha256": "5edb89002efd1408a17622171f614772b48a8243c5711cdad11d4442af0e4e59"
+    },
+    {
+      "path": "apps/web/app/ui/templates/ContentDetailTemplate.tsx",
+      "kind": "file",
+      "bytes": 1038,
+      "mode": "0664",
+      "sha256": "f20b333a73df1209c8681e02302e0375037e0f3e8527bc8a3f088d8001185ce5"
+    },
+    {
+      "path": "apps/web/app/ui/templates/ConversionTemplate.tsx",
+      "kind": "file",
+      "bytes": 1128,
+      "mode": "0664",
+      "sha256": "7806a0c64fb3eadabb8f9d01915e308f64492f5b6bc6a86e2ce7e732a19c9ac5"
+    },
+    {
+      "path": "apps/web/app/ui/templates/HomeTemplate.tsx",
+      "kind": "file",
+      "bytes": 1298,
+      "mode": "0664",
+      "sha256": "7635a0a70389205cdeb877b952217aa5bf44bf18dacdf04ef583823bdd1c017b"
+    },
+    {
+      "path": "apps/web/app/ui/templates/IndexTemplate.tsx",
+      "kind": "file",
+      "bytes": 1021,
+      "mode": "0664",
+      "sha256": "e76d4d7a40cda09cb540d7f9a9b13c102639563068f810b9fdbc7e8082e7ec8e"
+    },
+    {
+      "path": "apps/web/app/ui/templates/LegalTemplate.tsx",
+      "kind": "file",
+      "bytes": 774,
+      "mode": "0664",
+      "sha256": "bbf0b497f9b8f479d00b718df8d1de231c48bc0f4823dce3cdc5aff3f7ea1071"
+    },
+    {
+      "path": "apps/web/app/ui/templates/PageTemplateFrame.tsx",
+      "kind": "file",
+      "bytes": 1191,
+      "mode": "0664",
+      "sha256": "f5607e321a62256cb869681d623d80c7954dbc0d40fbf4f3f337a744bcf36830"
+    },
+    {
+      "path": "apps/web/app/ui/templates/SystemTemplate.tsx",
+      "kind": "file",
+      "bytes": 1553,
+      "mode": "0664",
+      "sha256": "88bf713a8575d6b0487cf172934d6553f6d9daa81a4c1f2b6323bde5a87808a2"
+    },
+    {
+      "path": "apps/web/app/ui/templates/index.ts",
+      "kind": "file",
+      "bytes": 977,
+      "mode": "0664",
+      "sha256": "c64970e150e860e065bad9a75585937f4cd1264d3b4ef5eba748a286687009da"
+    },
+    {
+      "path": "apps/web/app/ui/templates/templates.module.css",
+      "kind": "file",
+      "bytes": 1943,
+      "mode": "0664",
+      "sha256": "9873588795132662d7740bd7b379c40a70543f726658c4faabe8a8c4622a0a60"
+    },
+    {
+      "path": "apps/web/app/ui/trustBar/TrustBar.tsx",
+      "kind": "file",
+      "bytes": 2789,
+      "mode": "0664",
+      "sha256": "387ae1ec6208d1fe544dd6c26cf264f4ba1b5939f839a30dd5a6cff96a463403"
+    },
+    {
+      "path": "apps/web/app/ui/trustBar/trustBar.module.css",
+      "kind": "file",
+      "bytes": 3196,
+      "mode": "0664",
+      "sha256": "27838ebf39a107009e599d0390d510c58a283826a1c719f1b67a30e1d2f09d63"
+    },
+    {
+      "path": "apps/web/app/zasady-zpracovani-osobnich-udaju/page.tsx",
+      "kind": "file",
+      "bytes": 28767,
+      "mode": "0664",
+      "sha256": "392049f1b751f6799d7e70ea4059e6cda4fa1d2e01d6f1224a63d3e1af911cb3"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/OverviewBackdrop.client.tsx",
+      "kind": "file",
+      "bytes": 641,
+      "mode": "0664",
+      "sha256": "6253aaa47cf6c9cb76c07c4549c6ba63217476924688600c6e110ce417965100"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/OverviewHeader.tsx",
+      "kind": "file",
+      "bytes": 1754,
+      "mode": "0664",
+      "sha256": "ef57b952fe740e79ce5b6e0f3083a2118df940d907f3fa4491d7abf2db161200"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/OverviewQuestion.client.tsx",
+      "kind": "file",
+      "bytes": 2542,
+      "mode": "0664",
+      "sha256": "f6703d6a3a5b3cda3472078053837eb839abf89c37dc15a943804bd3d48017b2"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/OverviewRequestForm.client.tsx",
+      "kind": "file",
+      "bytes": 27247,
+      "mode": "0664",
+      "sha256": "147780d0b974990b74813b267198765973e2df1ad32b9593a822f652449b2433"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/actions.ts",
+      "kind": "file",
+      "bytes": 6400,
+      "mode": "0664",
+      "sha256": "8bf9cdf4ad89aa2741c283d3284e11c2a29f668f4e5e95173751c67e5041514e"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/overview.module.css",
+      "kind": "file",
+      "bytes": 17938,
+      "mode": "0664",
+      "sha256": "888a9604932c500dad004c7ea643a2871de491bd73fbda8b5066de912354c9e8"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/overviewFunnel.module.css",
+      "kind": "file",
+      "bytes": 22490,
+      "mode": "0664",
+      "sha256": "dab90ef2864b0d97d6576f399c0c2655215129903324b21bbc9350b12df3b1fc"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/page.tsx",
+      "kind": "file",
+      "bytes": 2308,
+      "mode": "0664",
+      "sha256": "aca75e5021244dbdfbdb8d68c62550a3269b11415f703ee9c078827eb1028081"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/dekujeme/BookingAppointment.client.tsx",
+      "kind": "file",
+      "bytes": 8695,
+      "mode": "0664",
+      "sha256": "ed2474f0a6b3a03f2c86662c4452df3e33cdb325bf41602368b9d2fe6203417a"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/dekujeme/ThankYouAnalytics.client.tsx",
+      "kind": "file",
+      "bytes": 1955,
+      "mode": "0664",
+      "sha256": "f7d6ce343fffea7e9455065e263b4b218801f05e26dbf84a34b344436743fc28"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/dekujeme/ThankYouExperience.client.tsx",
+      "kind": "file",
+      "bytes": 8869,
+      "mode": "0664",
+      "sha256": "3d4c6c8824d1fbe21133351bbba1bc0ebb7523f505ec471c452571b5395ec397"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/dekujeme/analytics-actions.ts",
+      "kind": "file",
+      "bytes": 1947,
+      "mode": "0664",
+      "sha256": "41c97ed31ce36235472dbcfb0653120c252ef84656b235d11a103cd5288e6f2d"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/dekujeme/booking-actions.ts",
+      "kind": "file",
+      "bytes": 3209,
+      "mode": "0664",
+      "sha256": "79089d6c54d669d266cb9296d58a703c00c4966a6eeb73272089f449f0b4b58f"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/dekujeme/booking-state.ts",
+      "kind": "file",
+      "bytes": 639,
+      "mode": "0664",
+      "sha256": "e914ce35681110858c593c373a255bbd05b8d741641620afcc125ca96e659886"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/dekujeme/bookingAppointment.module.css",
+      "kind": "file",
+      "bytes": 9998,
+      "mode": "0664",
+      "sha256": "e2019579b43375a27ecc5f3b3e79176db12de9b3bcbdabc966159114eba2f6d1"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/dekujeme/page.tsx",
+      "kind": "file",
+      "bytes": 3566,
+      "mode": "0664",
+      "sha256": "c1071d91c51327a1d8e0b097096885bb7409df8e7a846ae644b1e470483f0766"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/dekujeme/related-articles.server.ts",
+      "kind": "file",
+      "bytes": 2662,
+      "mode": "0664",
+      "sha256": "ed07a08d01ef85c7c3d87fff6345fea4f2a873a709ba7802e0aec85b322977c6"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/dekujeme/thankYouExperience.module.css",
+      "kind": "file",
+      "bytes": 6910,
+      "mode": "0664",
+      "sha256": "1875cc90bd9a89f135c17d48edd947aa3e98e7df948e63c2a5433e6deb5da163"
+    },
+    {
+      "path": "apps/web/app/ziskat-prehled/dekujeme/thankYouPage.module.css",
+      "kind": "file",
+      "bytes": 1020,
+      "mode": "0664",
+      "sha256": "05f77ee19e348f9762b5e31c31fce5a2787c154a2de9d00be838c9c735d3ebd1"
+    },
+    {
+      "path": "apps/web/content/axiom/services.v1.json",
+      "kind": "file",
+      "bytes": 6414,
+      "mode": "0664",
+      "sha256": "9915bdd4b0520634c2dab6b3c1978d61b8c1fb1d76c89883b8377f3e8d500460"
+    },
+    {
+      "path": "apps/web/content/blog/Banka vám půjčí víc, než si můžete dovolit. V čem je rozdíl?/04-banka-vam-pujci-vic-nez-si-muzete-dovolit.article.json",
+      "kind": "file",
+      "bytes": 27007,
+      "mode": "0664",
+      "sha256": "4b7f71e750ec147db8cdefe581ac6bd05e1f7840093f9bd068b93d23a5f1e0d9"
+    },
+    {
+      "path": "apps/web/content/blog/Banka vám půjčí víc, než si můžete dovolit. V čem je rozdíl?/04-banka-vam-pujci-vic-nez-si-muzete-dovolit.preview.md",
+      "kind": "file",
+      "bytes": 9244,
+      "mode": "0664",
+      "sha256": "565e872b74548e25f02b6e608b2f4c976c4cddbd13dcefaf155e65d3a21afb6d"
+    },
+    {
+      "path": "apps/web/content/blog/Cestovko zdarma od karty vás nemusí zachránit ve chvíli, kdy ho potřebujete/07-cestovko-zdarma-od-karty.article.json",
+      "kind": "file",
+      "bytes": 68490,
+      "mode": "0664",
+      "sha256": "e24e2aff40b03f5d6a3176e10e37e96aa154d7a5c3f83067e8be2c6ef706d1cb"
+    },
+    {
+      "path": "apps/web/content/blog/Cestovko zdarma od karty vás nemusí zachránit ve chvíli, kdy ho potřebujete/07-cestovko-zdarma-od-karty.preview.md",
+      "kind": "file",
+      "bytes": 36284,
+      "mode": "0664",
+      "sha256": "b5e5ab6196a8775cfada66b3b1d0e996f908a81cb8f1851f8de53179b200807b"
+    },
+    {
+      "path": "apps/web/content/blog/Chcete investovat, ale nevíte čemu věřit? Začněte plánem, ne produktem/12-chcete-investovat-zacnete-planem.article.json",
+      "kind": "file",
+      "bytes": 17771,
+      "mode": "0664",
+      "sha256": "855c791a247b7c21b9aa193eee07584bec0e9afd4cf57e5978fa5e15ddaa8610"
+    },
+    {
+      "path": "apps/web/content/blog/Chcete investovat, ale nevíte čemu věřit? Začněte plánem, ne produktem/12-chcete-investovat-zacnete-planem.preview.md",
+      "kind": "file",
+      "bytes": 7144,
+      "mode": "0664",
+      "sha256": "01f29d19869c07870b26e5c568a40e5ffdedd59d39fcb423d76f5195a9fd6b3c"
+    },
+    {
+      "path": "apps/web/content/blog/Kolik má mít domácnost v rezervě? Jedno správné číslo neexistuje./03-kolik-ma-mit-domacnost-v-rezerve.article.json",
+      "kind": "file",
+      "bytes": 46503,
+      "mode": "0664",
+      "sha256": "9bd60c3fa6a6fe5d3135a4620efdde3f1e92e6d8f92e36c8e652ea47c3715adb"
+    },
+    {
+      "path": "apps/web/content/blog/Kolik má mít domácnost v rezervě? Jedno správné číslo neexistuje./03-kolik-ma-mit-domacnost-v-rezerve.preview.md",
+      "kind": "file",
+      "bytes": 30053,
+      "mode": "0664",
+      "sha256": "50f7c215e57e82005b2bb62f69f3b376d1a83609343492e108e2a32c77909fbb"
+    },
+    {
+      "path": "apps/web/content/blog/Končí vám fixace hypotéky? Neberte první nabídku banky jako konečný verdikt/09-konec-fixace-hypoteky.article.json",
+      "kind": "file",
+      "bytes": 17780,
+      "mode": "0664",
+      "sha256": "45c9640a10ef5fa9430068012c9d9c4b5f95872e01f299afc75699e730301907"
+    },
+    {
+      "path": "apps/web/content/blog/Končí vám fixace hypotéky? Neberte první nabídku banky jako konečný verdikt/09-konec-fixace-hypoteky.preview.md",
+      "kind": "file",
+      "bytes": 9222,
+      "mode": "0664",
+      "sha256": "b611f0f13763ba5daebf89d4e898d24e3f04c4d345e5a8a7aac3b4942d144bd2"
+    },
+    {
+      "path": "apps/web/content/blog/Máte finanční produkty. Ale máte skutečně finanční plán?/01-financni-plan.article.json",
+      "kind": "file",
+      "bytes": 17910,
+      "mode": "0664",
+      "sha256": "25d4f47e41bb07eaf25e0c3c37cca0bb6289acff314262ab28e10a1dddbf4213"
+    },
+    {
+      "path": "apps/web/content/blog/Máte finanční produkty. Ale máte skutečně finanční plán?/01-financni-plan.preview.md",
+      "kind": "file",
+      "bytes": 8647,
+      "mode": "0664",
+      "sha256": "47164c053206e72204155f99eedd6e59027915a718ef2913d2446a3a03b0eca6"
+    },
+    {
+      "path": "apps/web/content/blog/Máte pojištění příjmu, nebo jen pocit, že jste pojištění?/11-mate-pojisteni-prijmu-nebo-jen-pocit.article.json",
+      "kind": "file",
+      "bytes": 20144,
+      "mode": "0664",
+      "sha256": "c46d489e517ccbaaa4aceedb1456a13a707e5a9c22285cbb27c7a468adc04dde"
+    },
+    {
+      "path": "apps/web/content/blog/Máte pojištění příjmu, nebo jen pocit, že jste pojištění?/11-mate-pojisteni-prijmu-nebo-jen-pocit.preview.md",
+      "kind": "file",
+      "bytes": 8379,
+      "mode": "0664",
+      "sha256": "575d96e18b1966898e59e3d25a6a8088d25fa9834196825f38b765535e3f87de"
+    },
+    {
+      "path": "apps/web/content/blog/Peníze na rezervu, bydlení a důchod nemají být v jednom balíku/06-penize-na-rezervu-bydleni-a-duchod.article.json",
+      "kind": "file",
+      "bytes": 28540,
+      "mode": "0664",
+      "sha256": "a8fdee535de81465b74d4d487d601f6c7a0cb18943aa6a64e7324fd1d6ff993b"
+    },
+    {
+      "path": "apps/web/content/blog/Peníze na rezervu, bydlení a důchod nemají být v jednom balíku/06-penize-na-rezervu-bydleni-a-duchod.preview.md",
+      "kind": "file",
+      "bytes": 10891,
+      "mode": "0664",
+      "sha256": "1936b76fd9ef319f008c93e2057df5e6b4834734258e1e5d993e21bd7c6f80d4"
+    },
+    {
+      "path": "apps/web/content/blog/Plánujete jednou děti? Pojistit se na to dá jen dokud je to „jednou“/08-planujete-jednou-deti.article.json",
+      "kind": "file",
+      "bytes": 36327,
+      "mode": "0664",
+      "sha256": "7eec008313677d4a04864d83bb5559ba1d61baaafb0e251c025259eef496b26d"
+    },
+    {
+      "path": "apps/web/content/blog/Plánujete jednou děti? Pojistit se na to dá jen dokud je to „jednou“/08-planujete-jednou-deti.preview.md",
+      "kind": "file",
+      "bytes": 10920,
+      "mode": "0664",
+      "sha256": "ba5214c0d3bd18ffb440f33c451cc8f73d8aa92bee0c2df0075d31cb7879c462"
+    },
+    {
+      "path": "apps/web/content/blog/V jakém pořadí řešit osobní finance?/02-poradi-osobnich-financi.article.json",
+      "kind": "file",
+      "bytes": 20180,
+      "mode": "0664",
+      "sha256": "c56b83ea7a94acef00870181a607558c504010816c54132d885b8036f8801f60"
+    },
+    {
+      "path": "apps/web/content/blog/V jakém pořadí řešit osobní finance?/02-poradi-osobnich-financi.preview.md",
+      "kind": "file",
+      "bytes": 9831,
+      "mode": "0664",
+      "sha256": "df16045ec13055eb3aa4776fcb9b62bda85bc56b2e065a98935addb95d6c897a"
+    },
+    {
+      "path": "apps/web/content/blog/Zdražilo vám pojištění? Neplaťte vyšší částku automaticky jen proto, že smlouva pokračuje/10-zdrazilo-vam-pojisteni.article.json",
+      "kind": "file",
+      "bytes": 11760,
+      "mode": "0664",
+      "sha256": "a6a96c4b701c25db5ec84e704eadf1d321873fb265cd16dc22dea6343720f4f3"
+    },
+    {
+      "path": "apps/web/content/blog/Zdražilo vám pojištění? Neplaťte vyšší částku automaticky jen proto, že smlouva pokračuje/10-zdrazilo-vam-pojisteni.preview.md",
+      "kind": "file",
+      "bytes": 4471,
+      "mode": "0664",
+      "sha256": "5d25e5bb5f7dce31b321ae6b6c4061fb376c0c983fe4a0891b1189de06fb88de"
+    },
+    {
+      "path": "apps/web/content/blog/Úroková sazba není cena hypotéky. Co všechno rozhoduje?/05-urokova-sazba-neni-cena-hypoteky.article.json",
+      "kind": "file",
+      "bytes": 32449,
+      "mode": "0664",
+      "sha256": "dea3f24925ef718d54b03e73a255689513eeac66544a93f1cdada5d5bd608c55"
+    },
+    {
+      "path": "apps/web/content/blog/Úroková sazba není cena hypotéky. Co všechno rozhoduje?/05-urokova-sazba-neni-cena-hypoteky.preview.md",
+      "kind": "file",
+      "bytes": 11085,
+      "mode": "0664",
+      "sha256": "25ea9e8246016b2d3d176b1eb562343248bf62dbeb5029ecdf497d0661092863"
+    },
+    {
+      "path": "apps/web/docs/direct-response-marketing-financni-poradce-studie.md",
+      "kind": "file",
+      "bytes": 62239,
+      "mode": "0664",
+      "sha256": "236b2dc93c00e1a482fce6a144ab7ed41ebe9e6d11dbefcfd9a85a9b7a576750"
+    },
+    {
+      "path": "apps/web/docs/repository-publication-runtime.md",
+      "kind": "file",
+      "bytes": 1544,
+      "mode": "0664",
+      "sha256": "bc1f761495818cbb0fcd79bbbb81640c813554ca85ec991f34a2314a2408eead"
+    },
+    {
+      "path": "apps/web/docs/clanky/obsah.md",
+      "kind": "file",
+      "bytes": 5686,
+      "mode": "0664",
+      "sha256": "61598afb4467e29495b653a7ddb162ab2f17f81b1eec72d3b5df8b6669c7bf01"
+    },
+    {
+      "path": "apps/web/docs/design/HOMEPAGE_IMPLEMENTATION_AUDIT.md",
+      "kind": "file",
+      "bytes": 8342,
+      "mode": "0664",
+      "sha256": "cf7f63b0c9c515e54dc0728e51bfd9fb24d762154c27d2e54240f7fe72a9f92f"
+    },
+    {
+      "path": "apps/web/docs/design/POKORNYDAVID_HOMEPAGE_LANDING_BLUEPRINT.md",
+      "kind": "file",
+      "bytes": 75839,
+      "mode": "0664",
+      "sha256": "6a098d38afd7cd587e8507a9681783336527a4f12268a580ef415e3f646c329e"
+    },
+    {
+      "path": "apps/web/docs/design/color-system.md",
+      "kind": "file",
+      "bytes": 5649,
+      "mode": "0664",
+      "sha256": "5ff96c203edb7c0de12add6e422e5b8c15949947b6f0d599796564882acfb084"
+    },
+    {
+      "path": "apps/web/docs/seo-aeo-2026-10-08/README.md",
+      "kind": "file",
+      "bytes": 17950,
+      "mode": "0664",
+      "sha256": "4d3d2eb4ab34de0bb2f7f8cab14b7b9b0fea25cad5e8bf5333f77140413b9a8e"
+    },
+    {
+      "path": "apps/web/docs/seo-aeo-2026-10-08/content-audit.md",
+      "kind": "file",
+      "bytes": 17877,
+      "mode": "0664",
+      "sha256": "ebf135494baee4a609e21d73c0cd92d52a5116486db3830ed736097c595976d1"
+    },
+    {
+      "path": "apps/web/docs/seo-aeo-2026-10-08/metadata-audit.md",
+      "kind": "file",
+      "bytes": 11744,
+      "mode": "0664",
+      "sha256": "7e0c2120e10b8374f792041f59d2d106c411e48d12b3f045db4871f6169fa87a"
+    },
+    {
+      "path": "apps/web/docs/seo-aeo-2026-10-08/performance-audit.md",
+      "kind": "file",
+      "bytes": 11397,
+      "mode": "0664",
+      "sha256": "3da8024b90d64f59df2f98ee6fa756bc911463ac7d90baa14caacef8687967d8"
+    },
+    {
+      "path": "apps/web/docs/seo-aeo-2026-10-08/publication-dates.md",
+      "kind": "file",
+      "bytes": 7123,
+      "mode": "0664",
+      "sha256": "1cd25bc5febc18e784439df03b4b1718d773a55b2cdffd4a4c9cff3ce49cfde7"
+    },
+    {
+      "path": "apps/web/lib/article-content.server.ts",
+      "kind": "file",
+      "bytes": 2931,
+      "mode": "0664",
+      "sha256": "2cfd7814a0208b205a7f665d684b2120a0ed60c4ec71e90d89e811e3fdd0c8f4"
+    },
+    {
+      "path": "apps/web/lib/article-document-adapter.ts",
+      "kind": "file",
+      "bytes": 12124,
+      "mode": "0664",
+      "sha256": "8dcac44abe1de5c0228c4a096126f4d918bb22c3b8a68680d0e8758e8181bc22"
+    },
+    {
+      "path": "apps/web/lib/article-document-loader.ts",
+      "kind": "file",
+      "bytes": 2262,
+      "mode": "0664",
+      "sha256": "34ef0167960036d014a3de111fff2a8f8d9e45fe7c0ebd33ab282186a0b36fb1"
+    },
+    {
+      "path": "apps/web/lib/article-document-v2.ts",
+      "kind": "file",
+      "bytes": 7590,
+      "mode": "0664",
+      "sha256": "636a8498404597a4a7cd74952636c99b3fde8230f0d29675e738c49507c95445"
+    },
+    {
+      "path": "apps/web/lib/article-projections.ts",
+      "kind": "file",
+      "bytes": 2195,
+      "mode": "0664",
+      "sha256": "60d111499252e1b5138c725b412e0b3afe5dfc772284459a3b42046648b1014c"
+    },
+    {
+      "path": "apps/web/lib/article-publication-dates.ts",
+      "kind": "file",
+      "bytes": 2019,
+      "mode": "0664",
+      "sha256": "f1b0331db3ab757cc7cae1c4935fe2ee87c75bc8b53eba6313d015064ae6b28b"
+    },
+    {
+      "path": "apps/web/lib/article-runtime-provider.ts",
+      "kind": "file",
+      "bytes": 9136,
+      "mode": "0664",
+      "sha256": "39794f7ab7916c299cd75b6561c052e65fbaf4ab614822ab75be76e9f2f016e8"
+    },
+    {
+      "path": "apps/web/lib/article-seo.ts",
+      "kind": "file",
+      "bytes": 2199,
+      "mode": "0664",
+      "sha256": "215fb57eef2ade8b3ea9374798504745bf1dd66d3690bb103ece3ac38136ab55"
+    },
+    {
+      "path": "apps/web/lib/article-source.ts",
+      "kind": "file",
+      "bytes": 6637,
+      "mode": "0664",
+      "sha256": "4b91ffd18901feddc4aa59fdaf51c17675bf9467206b8e61a6230ec9aa0c7c11"
+    },
+    {
+      "path": "apps/web/lib/blog.ts",
+      "kind": "file",
+      "bytes": 11527,
+      "mode": "0664",
+      "sha256": "ae690d59791e39131bda12d65837af365d1479f35897748ab2b43c9c83b2f3cc"
+    },
+    {
+      "path": "apps/web/lib/random-id.ts",
+      "kind": "file",
+      "bytes": 531,
+      "mode": "0664",
+      "sha256": "316bfddb58feebe314a87a2fda5eb47c8b485460ad90452e860929886dd537f5"
+    },
+    {
+      "path": "apps/web/lib/runtimePublisher.ts",
+      "kind": "file",
+      "bytes": 57,
+      "mode": "0664",
+      "sha256": "5bc0f8e12ff62531fc5f89d0ee9be7ca9a5a0233c21bd709fea998707e55c455"
+    },
+    {
+      "path": "apps/web/lib/seo.ts",
+      "kind": "file",
+      "bytes": 5952,
+      "mode": "0664",
+      "sha256": "d2bdf6aa8480bb8f80d3125bbf2e180fb5e820a129124b451c52569f4a00d7cc"
+    },
+    {
+      "path": "apps/web/lib/site-indexing.ts",
+      "kind": "file",
+      "bytes": 2233,
+      "mode": "0664",
+      "sha256": "ea567d6493baa30210f892570cf37e7f55f2b5503730b2b5d607eb948b7052cf"
+    },
+    {
+      "path": "apps/web/lib/site-mode-routes.ts",
+      "kind": "file",
+      "bytes": 2775,
+      "mode": "0664",
+      "sha256": "a4dc19b7ba647a670c0f15d5d6edfc1cb811c9e12c9d8a0cc7f36cb0adb8f359"
+    },
+    {
+      "path": "apps/web/lib/site-sitemap.ts",
+      "kind": "file",
+      "bytes": 2031,
+      "mode": "0664",
+      "sha256": "52b9fe7e782081c0f090819167ca87f3d3e414312b1b1a46e2f050c2110d358a"
+    },
+    {
+      "path": "apps/web/lib/site.ts",
+      "kind": "file",
+      "bytes": 446,
+      "mode": "0664",
+      "sha256": "41e322a13edc1b8890061156f15abff458d8b406cbc1d2430b42ac32edc6ee01"
+    },
+    {
+      "path": "apps/web/lib/utils.ts",
+      "kind": "file",
+      "bytes": 165,
+      "mode": "0664",
+      "sha256": "eba89b7508841ca7ed641ab538c2e638aa9699ad4190ef8eeb4adcd48418c0b1"
+    },
+    {
+      "path": "apps/web/lib/analytics/axiom-first-party.client.ts",
+      "kind": "file",
+      "bytes": 9212,
+      "mode": "0664",
+      "sha256": "e5b374011bcd59d383ba622fef7bb7b1365bbeb34df1b7eb78fb8ead5cb5f132"
+    },
+    {
+      "path": "apps/web/lib/analytics/consent-policy.ts",
+      "kind": "file",
+      "bytes": 1066,
+      "mode": "0664",
+      "sha256": "ba77881a1bb692983653f4e2395bc6586301af4b1d3b1e9b49245c7c1e41b91f"
+    },
+    {
+      "path": "apps/web/lib/analytics/events.ts",
+      "kind": "file",
+      "bytes": 3946,
+      "mode": "0664",
+      "sha256": "18325ca65ccfdf6258f28b5ea979ed73597bdc4d2cb8bf8676467d786478bc66"
+    },
+    {
+      "path": "apps/web/lib/analytics/journey.client.ts",
+      "kind": "file",
+      "bytes": 14209,
+      "mode": "0664",
+      "sha256": "3a1de09189c1e1acfa313ca2eaa134bdfdd8668a305599a72d5a3e881c4bd186"
+    },
+    {
+      "path": "apps/web/lib/analytics/journey.ts",
+      "kind": "file",
+      "bytes": 4444,
+      "mode": "0664",
+      "sha256": "35faee32b5ba927414a3ac87d3f5ff31833a76251d1bf5fe41eeca95bf40e24e"
+    },
+    {
+      "path": "apps/web/lib/analytics/runtime.client.ts",
+      "kind": "file",
+      "bytes": 2010,
+      "mode": "0664",
+      "sha256": "ed66fa60a8c7cb78124ed8a822e8e79d95ddbbe0caa4a4017a5d2f7926cca8f8"
+    },
+    {
+      "path": "apps/web/lib/analytics/track.client.ts",
+      "kind": "file",
+      "bytes": 6454,
+      "mode": "0664",
+      "sha256": "4a0c1b7931910b7049cdbbe04687536a0e401b3ffae8f18f9bfa38468ef2337a"
+    },
+    {
+      "path": "apps/web/lib/api/index.ts",
+      "kind": "file",
+      "bytes": 118,
+      "mode": "0664",
+      "sha256": "95f3534e111936d67b3aedea9d34d004687f92a181e4709a0b1e136dbc4f64c5"
+    },
+    {
+      "path": "apps/web/lib/api/types.ts",
+      "kind": "file",
+      "bytes": 452,
+      "mode": "0664",
+      "sha256": "74a3d92b9f7de22a6fa825c5868c4ee5ab19e3782210c229e1a9e2893419dcce"
+    },
+    {
+      "path": "apps/web/lib/booking/public-booking-calendar.ts",
+      "kind": "file",
+      "bytes": 3744,
+      "mode": "0664",
+      "sha256": "1bdf9a4466aa38c1bcd4d331db83b4f3ccba5c7ed779a99812bcbcb64c98a273"
+    },
+    {
+      "path": "apps/web/lib/booking/public-booking-contract.ts",
+      "kind": "file",
+      "bytes": 9207,
+      "mode": "0664",
+      "sha256": "2a15696d7a5ca9a6727c9e5dd05a22b0090f2b4457f8192fdda15d3b60ab59e0"
+    },
+    {
+      "path": "apps/web/lib/booking/public-booking-runtime.server.ts",
+      "kind": "file",
+      "bytes": 14933,
+      "mode": "0664",
+      "sha256": "484ad49fba51ae8809ae55fe9c08e53f8accd887b45a436fe5bcfd124ced190f"
+    },
+    {
+      "path": "apps/web/lib/homepage/claims.server.ts",
+      "kind": "file",
+      "bytes": 2879,
+      "mode": "0664",
+      "sha256": "ef0de8d8ee7fc1e60f82a652dd773f2822a69772f52918998b4265610c0d2a8b"
+    },
+    {
+      "path": "apps/web/lib/homepage/routing.ts",
+      "kind": "file",
+      "bytes": 3780,
+      "mode": "0664",
+      "sha256": "a3cd276e3c1fc2e4de94f2b08e6f0ca35044ee7957669f16ed319e3e8afe2603"
+    },
+    {
+      "path": "apps/web/lib/homepage/types.ts",
+      "kind": "file",
+      "bytes": 7052,
+      "mode": "0664",
+      "sha256": "955a935ccd171160b7cada1aea8a7c543587a81cb16ebe8faa2a0e72c2a78074"
+    },
+    {
+      "path": "apps/web/lib/homepage/validate.ts",
+      "kind": "file",
+      "bytes": 12802,
+      "mode": "0664",
+      "sha256": "f566571c236e676af91236aaf9cc1aac4218c930182d34a0034ad2de0079daeb"
+    },
+    {
+      "path": "apps/web/lib/income-test/analytics.client.ts",
+      "kind": "file",
+      "bytes": 1584,
+      "mode": "0664",
+      "sha256": "b6ea9f83077017a20db1474c0683bc98c434c98b3c2a52ab00784c4a095207ed"
+    },
+    {
+      "path": "apps/web/lib/income-test/calculation.ts",
+      "kind": "file",
+      "bytes": 1676,
+      "mode": "0664",
+      "sha256": "c0c66dee313d7d788b0cde64c5b432b89f3e22b95bdae988f18edc3f18c94b8b"
+    },
+    {
+      "path": "apps/web/lib/income-test/contract.ts",
+      "kind": "file",
+      "bytes": 4533,
+      "mode": "0664",
+      "sha256": "e1a4d1eb8b147f8d9028c5c9349d580daf4f6fc0d933ee5dfd2d1af78c2ebbc4"
+    },
+    {
+      "path": "apps/web/lib/leads/article-screening-http.ts",
+      "kind": "file",
+      "bytes": 2209,
+      "mode": "0664",
+      "sha256": "394dfb186616f543355677eda5cfbd3d9d0191c0cc87bb0ae0569c4ecf800fa4"
+    },
+    {
+      "path": "apps/web/lib/leads/article-screening-request.ts",
+      "kind": "file",
+      "bytes": 4108,
+      "mode": "0664",
+      "sha256": "1a9a83bd36823b91792a5d709c05e1a8ef8e2bb7cc3539d267e2e15126e86322"
+    },
+    {
+      "path": "apps/web/lib/leads/article-screening-runtime.server.ts",
+      "kind": "file",
+      "bytes": 1437,
+      "mode": "0664",
+      "sha256": "b6c8c0f0b657e30a9f03ef72fabb5d0d1cc03a0b0faee85b13a614dc36d53fd1"
+    },
+    {
+      "path": "apps/web/lib/leads/article-screening-service.ts",
+      "kind": "file",
+      "bytes": 2356,
+      "mode": "0664",
+      "sha256": "15bf0f3d8a07fcd7b50883101df1bf71406949d3e58bc59087a378c6a813f96c"
+    },
+    {
+      "path": "apps/web/lib/leads/confirmation-email.server.ts",
+      "kind": "file",
+      "bytes": 418,
+      "mode": "0664",
+      "sha256": "d0b6175ff9766a9c455137889870cb0a46edffde09815ede07afa4591a058f19"
+    },
+    {
+      "path": "apps/web/lib/leads/confirmation-email.ts",
+      "kind": "file",
+      "bytes": 5068,
+      "mode": "0664",
+      "sha256": "6a77c4f2902df4867f12996204341590dab23f5a0cdd93a737860a9b37e5888a"
+    },
+    {
+      "path": "apps/web/lib/leads/hosted-runtime-identity.ts",
+      "kind": "file",
+      "bytes": 1395,
+      "mode": "0664",
+      "sha256": "b43d946fe56c29677656c86643673f220d86c536eb1231aa7b60f85ecf4fe27d"
+    },
+    {
+      "path": "apps/web/lib/leads/income-test-http.ts",
+      "kind": "file",
+      "bytes": 2233,
+      "mode": "0664",
+      "sha256": "f8e1795c6da195f592bf1e5a6a3f10754987490cee08ecdb078809c6196fccbf"
+    },
+    {
+      "path": "apps/web/lib/leads/income-test-request.ts",
+      "kind": "file",
+      "bytes": 5675,
+      "mode": "0664",
+      "sha256": "205c587aa2675059fb05feb541b732e4d231f590f0b1d1643b71b854f194ef6a"
+    },
+    {
+      "path": "apps/web/lib/leads/income-test-runtime.server.ts",
+      "kind": "file",
+      "bytes": 1294,
+      "mode": "0664",
+      "sha256": "b3db30408edf00af9a5b3676d5b7c3ab8d3bc883c432d21d51c8148eb088f0b2"
+    },
+    {
+      "path": "apps/web/lib/leads/income-test-service.ts",
+      "kind": "file",
+      "bytes": 2489,
+      "mode": "0664",
+      "sha256": "70a2dd8492bd7caed7b39859d4a028505f410de5d7dc9433eab6a272bebea596"
+    },
+    {
+      "path": "apps/web/lib/leads/lead-contract.ts",
+      "kind": "file",
+      "bytes": 8591,
+      "mode": "0664",
+      "sha256": "3e29a84f79f23e4e339f5189f9a5b0a5606528b1928678e913b95a9830797b77"
+    },
+    {
+      "path": "apps/web/lib/leads/lead-query.ts",
+      "kind": "file",
+      "bytes": 4504,
+      "mode": "0664",
+      "sha256": "faf6dd0b2054d252d6b8e06fb44cd34286c1dc0b29f884632ac8ea634660dac4"
+    },
+    {
+      "path": "apps/web/lib/leads/overview-confirmation-email.ts",
+      "kind": "file",
+      "bytes": 1204,
+      "mode": "0664",
+      "sha256": "64132d1a5b1ceb237168f144a5c46a5004077b5fcc121e7a3de835e154cb9f38"
+    },
+    {
+      "path": "apps/web/lib/leads/overview-notification.ts",
+      "kind": "file",
+      "bytes": 1690,
+      "mode": "0664",
+      "sha256": "f882b94ef0c91db94edb1ef01b5e9148d6491e7e810454f6eaa36b0cf9a04c47"
+    },
+    {
+      "path": "apps/web/lib/leads/overview-request.ts",
+      "kind": "file",
+      "bytes": 6910,
+      "mode": "0664",
+      "sha256": "a10f11407c95f007fe4e79f9a5ee307927e2a7e92487d266675db93d3ebe4667"
+    },
+    {
+      "path": "apps/web/lib/leads/phone-first-runtime.ts",
+      "kind": "file",
+      "bytes": 29367,
+      "mode": "0664",
+      "sha256": "8122748a98793bd122c5a1691f25e391819fe1d3d2bb16b95345bc7446e729dd"
+    },
+    {
+      "path": "apps/web/lib/leads/project-form-runtime.server.ts",
+      "kind": "file",
+      "bytes": 5568,
+      "mode": "0664",
+      "sha256": "8c71fb6d2e967ea2f36e4c9b6be2853c0bd52a245960c4cfde3e1a73201cf469"
+    },
+    {
+      "path": "apps/web/lib/leads/project-public-host.ts",
+      "kind": "file",
+      "bytes": 446,
+      "mode": "0664",
+      "sha256": "502e0063ca21d9c93a737b89c422912aeec7675d7ea553f92f1fadde7347a55c"
+    },
+    {
+      "path": "apps/web/lib/leads/receipt-cookie.ts",
+      "kind": "file",
+      "bytes": 140,
+      "mode": "0664",
+      "sha256": "68f4de33aed8f45bf73000eb9380e7449e0f55a5ec4c3e5254cc8b6b2b795d74"
+    },
+    {
+      "path": "apps/web/lib/leads/refixation-bucket.ts",
+      "kind": "file",
+      "bytes": 4151,
+      "mode": "0664",
+      "sha256": "71771137119ca461a858dd12b10a33561e4887b469915bc490e837f000f65b89"
+    },
+    {
+      "path": "apps/web/lib/leads/refixation-intake.ts",
+      "kind": "file",
+      "bytes": 1854,
+      "mode": "0664",
+      "sha256": "8cd5833271a0f548586eb6abdb58a63699a680959c31adb28717e840ac149cfc"
+    },
+    {
+      "path": "apps/web/lib/leads/refixation-request.ts",
+      "kind": "file",
+      "bytes": 7632,
+      "mode": "0664",
+      "sha256": "67434907070ba8b0a3903f09e8c8e6413bb6fd64bcc9a5c8fdd16b899c100cf3"
+    },
+    {
+      "path": "apps/web/lib/leads/refixation-runtime.server.ts",
+      "kind": "file",
+      "bytes": 6012,
+      "mode": "0664",
+      "sha256": "6f161d8cead753d83a0b8b6e5992c04d87d838872edd9db699dfe3f97487c534"
+    },
+    {
+      "path": "apps/web/lib/leads/runtime.server.ts",
+      "kind": "file",
+      "bytes": 6774,
+      "mode": "0664",
+      "sha256": "3c6f80005d06785923548019f0b648d7b581c16361cf4034f89193c47748e709"
+    },
+    {
+      "path": "apps/web/lib/leads/submission-identity.ts",
+      "kind": "file",
+      "bytes": 509,
+      "mode": "0664",
+      "sha256": "39edb89a7b62ef8b7066b17be3cc56b528f262d3f9a5a62f1c73e6051ec7b62e"
+    },
+    {
+      "path": "apps/web/lib/privacy/policy.ts",
+      "kind": "file",
+      "bytes": 1921,
+      "mode": "0664",
+      "sha256": "4219aca6822b17675d52cc3efc3195dfdfe96a7eef8c82542164bc7b16340634"
+    },
+    {
+      "path": "apps/web/lib/privacy/webPrivacyRuntime.server.ts",
+      "kind": "file",
+      "bytes": 3679,
+      "mode": "0664",
+      "sha256": "e16bbcd860288a7b77f9b3fbb87a784e3067c06038579d9405cd872aa045b47b"
+    },
+    {
+      "path": "apps/web/lib/services/offering-runtime-core.ts",
+      "kind": "file",
+      "bytes": 11178,
+      "mode": "0664",
+      "sha256": "3455bf28a424976ebe88defb06d399e90f8efc6fe15c6ce211e84e69b2035f12"
+    },
+    {
+      "path": "apps/web/lib/services/offering-runtime.server.ts",
+      "kind": "file",
+      "bytes": 1868,
+      "mode": "0664",
+      "sha256": "7dbbd1d4c9d41aa97a4dfaf80e081ca164b751fbb8ff68959def21a0c4317a85"
+    },
+    {
+      "path": "apps/web/lib/services/service-presentation-contract.ts",
+      "kind": "file",
+      "bytes": 5049,
+      "mode": "0664",
+      "sha256": "3c84b9b242afeb524e3827e9e610cd2e3798ce2c4e8f2e14a2d3451ed2cb656f"
+    },
+    {
+      "path": "apps/web/magic/ui/marquee.tsx",
+      "kind": "file",
+      "bytes": 4875,
+      "mode": "0664",
+      "sha256": "b7aed72d16d9e915ffe314b9e4a3b5914fb828f99d9016e55ba207030cf2d6ca"
+    },
+    {
+      "path": "apps/web/magic/ui/ripple.tsx",
+      "kind": "file",
+      "bytes": 2883,
+      "mode": "0664",
+      "sha256": "368e077f41856c53916116e43be844efcb2a1880e4e9ad281a3eb8c55e3ffc25"
+    },
+    {
+      "path": "apps/web/magic/ui/scroll-based-velocity.tsx",
+      "kind": "file",
+      "bytes": 14762,
+      "mode": "0664",
+      "sha256": "cda35717f238200e7d5768bd13e0a3ba1d683592ce9be23eb57686ebf66ed764"
+    },
+    {
+      "path": "apps/web/public/about-background.avif",
+      "kind": "file",
+      "bytes": 5933,
+      "mode": "0664",
+      "sha256": "db8eab9dce5a8e1ae1902f29d586499799f640ad01ccbd55b18b240c96d40b9b"
+    },
+    {
+      "path": "apps/web/public/about.avif",
+      "kind": "file",
+      "bytes": 23734,
+      "mode": "0664",
+      "sha256": "69ec7bb3bc02d7534e60aa8518a92d0c0b8e05d7122055ff70cb49bbcde5548d"
+    },
+    {
+      "path": "apps/web/public/apple-touch-icon.png",
+      "kind": "file",
+      "bytes": 4362,
+      "mode": "0664",
+      "sha256": "a677217a5ed7c0da8fd50df2c46f9a58d9f8c38e280e26ca3d7278920e4bf732"
+    },
+    {
+      "path": "apps/web/public/bckgv1-hero.avif",
+      "kind": "file",
+      "bytes": 74965,
+      "mode": "0644",
+      "sha256": "8f4ac8cd01274494499013fa4a1bcdc91929d19693776e2b97e12c305489bcd0"
+    },
+    {
+      "path": "apps/web/public/bckgv1.png",
+      "kind": "file",
+      "bytes": 1678471,
+      "mode": "0664",
+      "sha256": "313ffce2372706681c427a578e48131f56eb65a69daf98bfc4c19fcd16dcc0c6"
+    },
+    {
+      "path": "apps/web/public/david-profile-cutout.webp",
+      "kind": "file",
+      "bytes": 38748,
+      "mode": "0664",
+      "sha256": "973f4c3b9e974434b4f4f147c6d6e1beec1634e7054ccc76c403fad408fb7f38"
+    },
+    {
+      "path": "apps/web/public/favicon-96x96.png",
+      "kind": "file",
+      "bytes": 2846,
+      "mode": "0644",
+      "sha256": "6c9d530ccbcb26221d22b6a1409f22975232ac3202f0cabbd5abe00c03f792df"
+    },
+    {
+      "path": "apps/web/public/favicon.svg",
+      "kind": "file",
+      "bytes": 2185,
+      "mode": "0664",
+      "sha256": "8809031c8f58f75f4800d4abb4d579fce78809fa0e9ca40a3255ad51c06560ed"
+    },
+    {
+      "path": "apps/web/public/googleLogo.svg",
+      "kind": "file",
+      "bytes": 1140,
+      "mode": "0664",
+      "sha256": "6d399ca07e2091da15d80b65da4a7ea4b16915934bf39151ffc1802aff4b2f92"
+    },
+    {
+      "path": "apps/web/public/hero-silk-frame-zero.avif",
+      "kind": "file",
+      "bytes": 39372,
+      "mode": "0664",
+      "sha256": "6e1aaaf3c2a768eda2339ee08ef373ab18c4487d2c42ae75deb722d95a8fbdc5"
+    },
+    {
+      "path": "apps/web/public/hero-silk-home-frame-zero.avif",
+      "kind": "file",
+      "bytes": 60563,
+      "mode": "0664",
+      "sha256": "08b1563304036b87be156ef839d507c24e2de8bb0e22ad7f0536a04f1dfcf151"
+    },
+    {
+      "path": "apps/web/public/hero-v3.avif",
+      "kind": "file",
+      "bytes": 31192,
+      "mode": "0664",
+      "sha256": "fc7753c0cb53a43187feffbc723d70acdbc4767e25346d4af6621e9c4f3745da"
+    },
+    {
+      "path": "apps/web/public/heroRemastered.png",
+      "kind": "file",
+      "bytes": 812206,
+      "mode": "0664",
+      "sha256": "68e52a06c88cadb5fd23c721e7bb316a3de4df604b667169b1e1629f6210b99d"
+    },
+    {
+      "path": "apps/web/public/hypoteka.png",
+      "kind": "file",
+      "bytes": 1825448,
+      "mode": "0664",
+      "sha256": "e2a388fc16c1ed8248563c6c2696083b427dd7560dc7eeb9ce38b1ff1f8b35cb"
+    },
+    {
+      "path": "apps/web/public/investice-cert.pdf",
+      "kind": "file",
+      "bytes": 159727,
+      "mode": "0664",
+      "sha256": "b140af91262b9480e5ec5563344d865ab7114bc947e76a729b56e570918a09a7"
+    },
+    {
+      "path": "apps/web/public/investice.png",
+      "kind": "file",
+      "bytes": 1766727,
+      "mode": "0664",
+      "sha256": "fec0ff48db20c278f3a08b106e601ecf09020c562a27416f3b1ec6fe6a41f30f"
+    },
+    {
+      "path": "apps/web/public/leadForm.avif",
+      "kind": "file",
+      "bytes": 17511,
+      "mode": "0664",
+      "sha256": "45f91ddf9361423ad25505bde13641d904debb377870b5b67cd92e2ff77d0913"
+    },
+    {
+      "path": "apps/web/public/logo.svg",
+      "kind": "file",
+      "bytes": 2972,
+      "mode": "0664",
+      "sha256": "88eb812cef6e735f4fe87087224a32cd49767bf2f5c5ba11ce1015c2d14c0b91"
+    },
+    {
+      "path": "apps/web/public/nahled-mobil.avif",
+      "kind": "file",
+      "bytes": 106747,
+      "mode": "0664",
+      "sha256": "1b4e253d3fc7c0aec004e7496915997209ec286b68f5fa5b56ba83b99a0cc21b"
+    },
+    {
+      "path": "apps/web/public/nahled-video.avif",
+      "kind": "file",
+      "bytes": 32320,
+      "mode": "0664",
+      "sha256": "ffd7b2eda07e9c955e3616c0809eb8a38aa34ddce3c5196a805389eb1048a25f"
+    },
+    {
+      "path": "apps/web/public/noise.avif",
+      "kind": "file",
+      "bytes": 312073,
+      "mode": "0664",
+      "sha256": "401863bfaf5062e967d3310910195ffe29a30998946f86150d454c37b0493442"
+    },
+    {
+      "path": "apps/web/public/ochrana-prijmu.png",
+      "kind": "file",
+      "bytes": 1745560,
+      "mode": "0664",
+      "sha256": "d867b61147d7c42ebee9fff99bdfc70301a7e996b337f65e166ffa2e95ef2d74"
+    },
+    {
+      "path": "apps/web/public/og-logo-silk.jpg",
+      "kind": "file",
+      "bytes": 73880,
+      "mode": "0664",
+      "sha256": "fa6aaa94815a88a1f49cd8c464684f32e9c0fd8587832405ade568f3c7401371"
+    },
+    {
+      "path": "apps/web/public/og.jpg",
+      "kind": "file",
+      "bytes": 73880,
+      "mode": "0664",
+      "sha256": "fa6aaa94815a88a1f49cd8c464684f32e9c0fd8587832405ade568f3c7401371"
+    },
+    {
+      "path": "apps/web/public/penzijko-cert.pdf",
+      "kind": "file",
+      "bytes": 161707,
+      "mode": "0664",
+      "sha256": "66f95f72071a4936ede2a00b2dd27d13749ac564af195dcd7444cfd5b4f5f0bf"
+    },
+    {
+      "path": "apps/web/public/pojisteni-cert.pdf",
+      "kind": "file",
+      "bytes": 159517,
+      "mode": "0664",
+      "sha256": "fc4c5be6bb131ebfe36001e7d5c8989043a3f85e279046322e870515ccd243de"
+    },
+    {
+      "path": "apps/web/public/pojisteni.png",
+      "kind": "file",
+      "bytes": 1660156,
+      "mode": "0664",
+      "sha256": "9457a6c9db5a30c6ad2b22e73bee58b232598725e3ab2a1d41ca214e033c9805"
+    },
+    {
+      "path": "apps/web/public/uvery-cert.pdf",
+      "kind": "file",
+      "bytes": 162832,
+      "mode": "0664",
+      "sha256": "f69603999390982dc9e6e0839ebd55ac2aa4d0d038040435a4b96676cbd99971"
+    },
+    {
+      "path": "apps/web/public/video-mobil_h264_720p.mp4",
+      "kind": "file",
+      "bytes": 3420820,
+      "mode": "0664",
+      "sha256": "b513907a5baa554b20faeda4bf90032ddd123ebae42abb194346ff675ab97fb5"
+    },
+    {
+      "path": "apps/web/public/video_h264.mp4",
+      "kind": "file",
+      "bytes": 4075869,
+      "mode": "0664",
+      "sha256": "d3597361ebf3aef203422033ad907d3e2a81ef2a6e3af62596abd9d901161b47"
+    },
+    {
+      "path": "apps/web/public/who-home.avif",
+      "kind": "file",
+      "bytes": 100319,
+      "mode": "0664",
+      "sha256": "055088afbfa01bdb8dfbe13af58998410e3acc915f93eb5ea84246d0ba83c0e8"
+    },
+    {
+      "path": "apps/web/public/who.png",
+      "kind": "file",
+      "bytes": 1573099,
+      "mode": "0664",
+      "sha256": "93e430ce392c80bb9f4660a96c8ed0edbd68e8264b4b3f9e65745ec2e2d19fdd"
+    },
+    {
+      "path": "apps/web/public/whov2-hero.avif",
+      "kind": "file",
+      "bytes": 27099,
+      "mode": "0664",
+      "sha256": "40cf9b687e6f673e6777599084cd3323ee4c7e9c365ceaa4110807819eda6472"
+    },
+    {
+      "path": "apps/web/public/whov2.png",
+      "kind": "file",
+      "bytes": 904658,
+      "mode": "0664",
+      "sha256": "6b85bd484ae24437cf24a7d9598f29a2b1a35039c4257c18693676d95cfc9d50"
+    },
+    {
+      "path": "apps/web/public/articles/bezpecne-bydleni-editorial.webp",
+      "kind": "file",
+      "bytes": 69834,
+      "mode": "0664",
+      "sha256": "c6d831986744450092af3fe990887812b67f140ac1ad893d70fcb63bb29146b4"
+    },
+    {
+      "path": "apps/web/public/articles/cena-hypoteky-editorial.webp",
+      "kind": "file",
+      "bytes": 69536,
+      "mode": "0664",
+      "sha256": "e73a35f8dc01788b1cf4580bacfb3a21a0449ce7534998afb22a6e9ee73747a6"
+    },
+    {
+      "path": "apps/web/public/articles/cestovni-pojisteni-editorial.webp",
+      "kind": "file",
+      "bytes": 51882,
+      "mode": "0664",
+      "sha256": "3fbd61f5520c5ea1aae15401848745b4e1e0fbb3c413a81bd70e5a62cad2d25a"
+    },
+    {
+      "path": "apps/web/public/articles/financni-plan-editorial.webp",
+      "kind": "file",
+      "bytes": 83278,
+      "mode": "0664",
+      "sha256": "808252974bf2b8144961408788687040a153bdf96e7d34952dbe5870af38a65f"
+    },
+    {
+      "path": "apps/web/public/articles/fixace-hypoteky-editorial.webp",
+      "kind": "file",
+      "bytes": 61520,
+      "mode": "0664",
+      "sha256": "0024607cb0c8afdab1f86fd6e24c7a006c958349b5275bec91c7fa167a3094de"
+    },
+    {
+      "path": "apps/web/public/articles/investicni-plan-editorial.webp",
+      "kind": "file",
+      "bytes": 55824,
+      "mode": "0664",
+      "sha256": "bede8b78d7723f4a9b21bd321e3f525e9d496a3ecc30371fd5839cb662b5ca1f"
+    },
+    {
+      "path": "apps/web/public/articles/ochrana-prijmu-editorial.webp",
+      "kind": "file",
+      "bytes": 58462,
+      "mode": "0664",
+      "sha256": "04737a9046ea3735d7a8e521c5f984d23b08e195302c19f408ae78f03e7d4f3f"
+    },
+    {
+      "path": "apps/web/public/articles/planovani-rodiny-editorial.webp",
+      "kind": "file",
+      "bytes": 59792,
+      "mode": "0664",
+      "sha256": "abed0eaa3aca96cfd8740a0860389e2dffd98b7a083dea697e1ca9a3a1f9d260"
+    },
+    {
+      "path": "apps/web/public/articles/poradi-osobnich-financi-editorial.webp",
+      "kind": "file",
+      "bytes": 78982,
+      "mode": "0664",
+      "sha256": "6a130a1cd77056b365d093b66937c9dac9e32f4df90c5b03a8f3dcc3d81a7b9c"
+    },
+    {
+      "path": "apps/web/public/articles/rezerva-bydleni-duchod-editorial.webp",
+      "kind": "file",
+      "bytes": 63638,
+      "mode": "0664",
+      "sha256": "e0ed742be9641b135e89d30ee3c5ad21859b2a49b06ea1e2531a152a65da1762"
+    },
+    {
+      "path": "apps/web/public/articles/rezerva-domacnosti-editorial.webp",
+      "kind": "file",
+      "bytes": 58208,
+      "mode": "0664",
+      "sha256": "ee9c3a4276ad27a0828b88c79c91116b8578b13566c60f524060a110bc5f88e3"
+    },
+    {
+      "path": "apps/web/public/articles/zdrazene-pojisteni-editorial.webp",
+      "kind": "file",
+      "bytes": 65622,
+      "mode": "0664",
+      "sha256": "4a4795f9d14a4e04d9e09f48677499792cd01f47201532fbaceb3cf63086eaeb"
+    },
+    {
+      "path": "apps/web/public/images/testimonials/denisa-reznickova-avatar-144.webp",
+      "kind": "file",
+      "bytes": 4288,
+      "mode": "0644",
+      "sha256": "8124c9c087a69d23a53fa504a17f046ea6147bdb7875d4350a8cd3fc74468e69"
+    },
+    {
+      "path": "apps/web/public/images/testimonials/denisa-reznickova-avatar-64.webp",
+      "kind": "file",
+      "bytes": 1448,
+      "mode": "0644",
+      "sha256": "453fa92d362f14abd144a69c16451316c4efe1897b14eb354b43775fe125a47a"
+    },
+    {
+      "path": "apps/web/public/images/testimonials/denisa-reznickova-avatar-96.webp",
+      "kind": "file",
+      "bytes": 2400,
+      "mode": "0644",
+      "sha256": "7c2fcf7999b1e0cefc57d404604ebee9a3219665411f48b84207d8e1dcc42170"
+    },
+    {
+      "path": "apps/web/public/images/testimonials/denisa-reznickova-avatar.webp",
+      "kind": "file",
+      "bytes": 15706,
+      "mode": "0664",
+      "sha256": "1a28cc34d9ca1fdf3f02c7360648eb2db24dd79c86a60885492da28eceb38a5a"
+    },
+    {
+      "path": "apps/web/public/images/testimonials/denisa-reznickova.jpg",
+      "kind": "file",
+      "bytes": 476576,
+      "mode": "0644",
+      "sha256": "0a7747c9e9a83b5faf3c39e0e8c8ea8988033c7a307026c36a7ff0729e2869e2"
+    },
+    {
+      "path": "apps/web/public/images/testimonials/pavla-kucerova-avatar-144.webp",
+      "kind": "file",
+      "bytes": 3468,
+      "mode": "0644",
+      "sha256": "7bfba6751c999fbd39e92d423593be725f0b4a4b2f452f17d54054bf8eb162a3"
+    },
+    {
+      "path": "apps/web/public/images/testimonials/pavla-kucerova-avatar-64.webp",
+      "kind": "file",
+      "bytes": 1222,
+      "mode": "0644",
+      "sha256": "865056f8bddade6b4998b5d54a3f5f1ed2a354dd6f979663f09ebdc8ad752e27"
+    },
+    {
+      "path": "apps/web/public/images/testimonials/pavla-kucerova-avatar-96.webp",
+      "kind": "file",
+      "bytes": 2046,
+      "mode": "0644",
+      "sha256": "3392005af43a3df0dc81ba092c95426a8da762ac315db7bc278139777cc709cc"
+    },
+    {
+      "path": "apps/web/public/images/testimonials/pavla-kucerova-avatar.webp",
+      "kind": "file",
+      "bytes": 12646,
+      "mode": "0664",
+      "sha256": "3be534fcc44107d2ca8ad399dc1dcf0e37128a0ddff056fc14bb1ff6b5888200"
+    },
+    {
+      "path": "apps/web/public/images/testimonials/pavla-kucerova.jpeg",
+      "kind": "file",
+      "bytes": 182337,
+      "mode": "0644",
+      "sha256": "ca5764dece466ed158c435cf9f93ba77169c9cd134c268bced16740cc9fb6020"
+    },
+    {
+      "path": "apps/web/public/images/testimonials/stanislav-dvorak-avatar-144.webp",
+      "kind": "file",
+      "bytes": 4944,
+      "mode": "0644",
+      "sha256": "b7045e72fa905ea4c78f74d9ecc5f817c301d525ba78a9c934df0ce9282658e2"
+    },
+    {
+      "path": "apps/web/public/images/testimonials/stanislav-dvorak-avatar-64.webp",
+      "kind": "file",
+      "bytes": 1696,
+      "mode": "0644",
+      "sha256": "0f0a653526b9780ccc8b694932f66362b1dd94e41e069339b83c9c62f4bb6c6f"
+    },
+    {
+      "path": "apps/web/public/images/testimonials/stanislav-dvorak-avatar-96.webp",
+      "kind": "file",
+      "bytes": 2876,
+      "mode": "0644",
+      "sha256": "bf2d05a36d2ebbedcba1bcc9766a34b591562f28dff9790a15598ff3d300b13f"
+    },
+    {
+      "path": "apps/web/public/images/testimonials/stanislav-dvorak-avatar.webp",
+      "kind": "file",
+      "bytes": 15810,
+      "mode": "0664",
+      "sha256": "567041610dc1e7970ffa004eb77c32ecfebdc2bf5c5bc713f3f95114143e8b21"
+    },
+    {
+      "path": "apps/web/public/images/testimonials/stanislav-dvorak.jpeg",
+      "kind": "file",
+      "bytes": 90001,
+      "mode": "0644",
+      "sha256": "6d9bddc2b28347b2363292c54c32fc33aad9c940622d18a192aee77d89f87bab"
+    },
+    {
+      "path": "apps/web/public/patterns/brand-rings.svg",
+      "kind": "file",
+      "bytes": 1523,
+      "mode": "0664",
+      "sha256": "cc4033ea62a797781342578399080cc2e8fb8519df8807205bce0d25c8b1d499"
+    },
+    {
+      "path": "apps/web/public/patterns/calm-contours.svg",
+      "kind": "file",
+      "bytes": 1867,
+      "mode": "0664",
+      "sha256": "fd3fba93d38b4e34b42fe1751fd2a896874013465db5548fa7086beac334e545"
+    },
+    {
+      "path": "apps/web/public/patterns/hero-portrait-contours.svg",
+      "kind": "file",
+      "bytes": 2739,
+      "mode": "0664",
+      "sha256": "2ce943343b9ce9f70bc0abacd50500e10d9cd0ce217f02dec9e18f1d6261dbc8"
+    },
+    {
+      "path": "apps/web/scripts/audit-article-editorial.mjs",
+      "kind": "file",
+      "bytes": 6622,
+      "mode": "0664",
+      "sha256": "d7d74a6a1d046c1cefd5e4fa1fa51df68539adc590177673e058ad3f11b2fac9"
+    },
+    {
+      "path": "apps/web/scripts/audit-design-primitives.mjs",
+      "kind": "file",
+      "bytes": 3871,
+      "mode": "0664",
+      "sha256": "f2741c1a8e67d457c025e6c63b55ace46082123dd8a1636c48c3d5d73474717d"
+    },
+    {
+      "path": "apps/web/scripts/emit-axiom-integration-manifest.mjs",
+      "kind": "file",
+      "bytes": 3732,
+      "mode": "0664",
+      "sha256": "ce175559c2885169855e3e02e962aa348e84332fc5475605536b9b9f22f08a64"
+    },
+    {
+      "path": "apps/web/scripts/generate-article-previews.mjs",
+      "kind": "file",
+      "bytes": 1938,
+      "mode": "0664",
+      "sha256": "07613dd1cfb5b3441af8111ae6990146787bac51df82fecd4fb25b324f394e2f"
+    },
+    {
+      "path": "apps/web/scripts/generate-article-review-docx.py",
+      "kind": "file",
+      "bytes": 34539,
+      "mode": "0664",
+      "sha256": "a835d1d38813c23b9dfc03cbb248453fe16c538795bcde3e950d38f47ee9da68"
+    },
+    {
+      "path": "apps/web/scripts/generate-brand-assets.mjs",
+      "kind": "file",
+      "bytes": 3715,
+      "mode": "0664",
+      "sha256": "277d9984ca505ee5ca8b2ef6438759ed894446d07ffbf2b269a3dd2576af8f11"
+    },
+    {
+      "path": "apps/web/scripts/generate-testimonial-thumbnails.mjs",
+      "kind": "file",
+      "bytes": 980,
+      "mode": "0664",
+      "sha256": "7ea022d414f7002d80c49f783912601125531ed7c6990d0e0638075965c51934"
+    },
+    {
+      "path": "apps/web/scripts/migrate-article-editorial.mjs",
+      "kind": "file",
+      "bytes": 8920,
+      "mode": "0664",
+      "sha256": "69c55ae6f52b162d4a71c91d09f17959cbf6808fd133c74798c7fce04b39df2e"
+    },
+    {
+      "path": "apps/web/scripts/validate-article-review-docx.py",
+      "kind": "file",
+      "bytes": 9562,
+      "mode": "0664",
+      "sha256": "062bda165598fe06110e506908dc5e69e1cf44f42eed6a8607743f7db11afe3d"
+    },
+    {
+      "path": "apps/web/scripts/validate-component-registry.mjs",
+      "kind": "file",
+      "bytes": 3446,
+      "mode": "0664",
+      "sha256": "973bbaf57586c19ab4cc6e3bc5dc7d40a4678694a0ba148f32fb9d30dd662879"
+    },
+    {
+      "path": "apps/web/scripts/validate-composition-registry.mjs",
+      "kind": "file",
+      "bytes": 4167,
+      "mode": "0664",
+      "sha256": "2c6d678730373afcecdf0f6dd76aa1baec65ade3858f640fe9d396417c828952"
+    },
+    {
+      "path": "apps/web/scripts/validate-homepage-content.mjs",
+      "kind": "file",
+      "bytes": 3400,
+      "mode": "0664",
+      "sha256": "b283c72dc31eb0f6174e8ba9eb7debeb0d71fe9a51765b0f66f8dda5e2183874"
+    },
+    {
+      "path": "apps/web/scripts/validate-personal-voice.mjs",
+      "kind": "file",
+      "bytes": 11384,
+      "mode": "0664",
+      "sha256": "e257a3eda2cfc5cd6822d851789358e83f4d27392dab95bda79c31d0586f3084"
+    },
+    {
+      "path": "apps/web/scripts/validate-radius-contract.mjs",
+      "kind": "file",
+      "bytes": 4927,
+      "mode": "0664",
+      "sha256": "3a292d2456b0228c7c5b74dfef0d8a93fcd3d6e2f671680cb2282e4cf3f29285"
+    },
+    {
+      "path": "apps/web/scripts/validate-site-themes.mjs",
+      "kind": "file",
+      "bytes": 3415,
+      "mode": "0664",
+      "sha256": "5ed2352789514a4a77ae3dbd4142f46c94ceda8355b5488a96554d4cd3f816a1"
+    },
+    {
+      "path": "apps/web/scripts/validate-surface-token-graph.mjs",
+      "kind": "file",
+      "bytes": 13730,
+      "mode": "0664",
+      "sha256": "492910ae87f6c4c71a58ba12b31dcc26a383bee36b21894220239a57f09d732c"
+    },
+    {
+      "path": "apps/web/scripts/verify-article-editorial.py",
+      "kind": "file",
+      "bytes": 6063,
+      "mode": "0664",
+      "sha256": "67cb8b30651a60b9b4fc9826bbfb83a88f7a0bdf25cdcb1504b312465536175a"
+    },
+    {
+      "path": "apps/web/scripts/verify-article-migration.py",
+      "kind": "file",
+      "bytes": 4019,
+      "mode": "0664",
+      "sha256": "5f9a3b947e6736e52840b57e5945108c48bd253ce82a70bff3d1791602ef523a"
+    },
+    {
+      "path": "apps/web/scripts/verify-composition-regression.mjs",
+      "kind": "file",
+      "bytes": 6970,
+      "mode": "0664",
+      "sha256": "05311d1bb795f66ae3cf18d0ddd7b0cf31c8943e4bb2738b6a9367d5cc0d27ac"
+    },
+    {
+      "path": "apps/web/src/app/ui/mobileCall/MobileCall.tsx",
+      "kind": "file",
+      "bytes": 3230,
+      "mode": "0664",
+      "sha256": "1f7c821ce0c9b83b94d8d727887e496425fa2f0148999bf121992f609ff71b8f"
+    },
+    {
+      "path": "apps/web/src/app/ui/privacy/AnalyticsLoader.client.tsx",
+      "kind": "file",
+      "bytes": 4169,
+      "mode": "0664",
+      "sha256": "5ea8902cc326b43ccb5dbedeef9033648928e1bec3b3996713dfc1cabcb569d1"
+    },
+    {
+      "path": "apps/web/src/app/ui/privacy/CookieBanner.client.tsx",
+      "kind": "file",
+      "bytes": 3938,
+      "mode": "0664",
+      "sha256": "ccf823e740c55a8f047ba862ded78517d0682724fe7f628ae511d315f614afbb"
+    },
+    {
+      "path": "apps/web/src/app/ui/privacy/CookieBanner.module.css",
+      "kind": "file",
+      "bytes": 4297,
+      "mode": "0664",
+      "sha256": "3bf3ebde131112303bc3789f972a6100481110d770c766c304a8aa25b7f5880e"
+    },
+    {
+      "path": "apps/web/src/app/ui/privacy/CookieSettingsButton.client.tsx",
+      "kind": "file",
+      "bytes": 9404,
+      "mode": "0664",
+      "sha256": "181c7e2c4e5d3892aa3b186e81f9125be1f0ddaad0e5da4d9482febcec10afe3"
+    },
+    {
+      "path": "apps/web/src/app/ui/privacy/CookieSettingsButton.module.css",
+      "kind": "file",
+      "bytes": 9639,
+      "mode": "0664",
+      "sha256": "eae06fd9c5c6a917b869cbf82facda30debbe14dc8d6355920f571e94e1cf7f9"
+    },
+    {
+      "path": "apps/web/src/app/ui/privacy/cookieConsent.ts",
+      "kind": "file",
+      "bytes": 7170,
+      "mode": "0664",
+      "sha256": "77b0151e46f0602ace665056158b5fa17d7e8e24d3c5d2a5b1e8518350895d99"
+    },
+    {
+      "path": "apps/web/src/app/ui/privacy/cookieSettings.ts",
+      "kind": "file",
+      "bytes": 227,
+      "mode": "0664",
+      "sha256": "6eb168cb2fdcdad0b8be802371535a5018936a347f76b76d7f5c38d5284d022b"
+    },
+    {
+      "path": "apps/web/src/app/ui/privacy/gaCleanup.ts",
+      "kind": "file",
+      "bytes": 1810,
+      "mode": "0664",
+      "sha256": "739c5a28287a2f94b2e3fddf41bf92a1e477820f2f2bfdd7231380f9d6bfb16b"
+    },
+    {
+      "path": "apps/web/src/app/ui/privacy/lib/ga.ts",
+      "kind": "file",
+      "bytes": 1885,
+      "mode": "0664",
+      "sha256": "fdf9e293a7d9aff3e7446a3209617a135018a91acca8752b5c346c80207cb9cf"
+    },
+    {
+      "path": "apps/web/src/services/ApiClient.ts",
+      "kind": "file",
+      "bytes": 2792,
+      "mode": "0664",
+      "sha256": "81b62cf295c02e53547bf92d23306190837dd4630498e592b6b0ff3d583bbd54"
+    },
+    {
+      "path": "apps/web/src/services/api.ts",
+      "kind": "file",
+      "bytes": 434,
+      "mode": "0664",
+      "sha256": "a06c2fb103439cb5834f1c01399d94f75947d04a9ecbff1ddd28a1f9f76a38ff"
+    },
+    {
+      "path": "apps/web/tests/e2e/about-relief-parallax.spec.ts",
+      "kind": "file",
+      "bytes": 10902,
+      "mode": "0664",
+      "sha256": "990a4385784652ffc4868880360c13111837d64f482a8fbe313505afd86e24a1"
+    },
+    {
+      "path": "apps/web/tests/e2e/about.spec.ts",
+      "kind": "file",
+      "bytes": 39169,
+      "mode": "0664",
+      "sha256": "a4e7aee8a6892bd84eecee04249fa11d53221a48d875d77bdb3577d9595f47ea"
+    },
+    {
+      "path": "apps/web/tests/e2e/analytics-consent.spec.ts",
+      "kind": "file",
+      "bytes": 16204,
+      "mode": "0664",
+      "sha256": "c7d77bf5e3c0220008dc596c096ba82a449cd9df96ecd9899223367882485012"
+    },
+    {
+      "path": "apps/web/tests/e2e/article-lead-context.spec.ts",
+      "kind": "file",
+      "bytes": 3230,
+      "mode": "0664",
+      "sha256": "9cdf95f548d051ab2f659d1f3854e9032424b9330499dc2af0c569cd04809ac6"
+    },
+    {
+      "path": "apps/web/tests/e2e/article-publication-dates.spec.ts",
+      "kind": "file",
+      "bytes": 3275,
+      "mode": "0664",
+      "sha256": "6413155cfec335decaff33e673e2ce84278ed276dcb9300c7b75c7b9b77b0c50"
+    },
+    {
+      "path": "apps/web/tests/e2e/article-screening.spec.ts",
+      "kind": "file",
+      "bytes": 33843,
+      "mode": "0664",
+      "sha256": "9153fce194340f2791819305db0f6f11b73dedcc696a6da6be64b6d801063050"
+    },
+    {
+      "path": "apps/web/tests/e2e/articles.spec.ts",
+      "kind": "file",
+      "bytes": 96092,
+      "mode": "0664",
+      "sha256": "47d54258ea19ad3f62c2fff0a1aa34a6cc15ef1b8c1b282a06acc54a65b74bba"
+    },
+    {
+      "path": "apps/web/tests/e2e/color-theme.spec.ts",
+      "kind": "file",
+      "bytes": 8656,
+      "mode": "0664",
+      "sha256": "802909e01464a6168db77bc524009a29bb60857ada3524227969ca62d980c6ee"
+    },
+    {
+      "path": "apps/web/tests/e2e/cta-composition.spec.ts",
+      "kind": "file",
+      "bytes": 18459,
+      "mode": "0664",
+      "sha256": "c2548d9b2857a410361fce2043b6f3171edc787dbf458947afa87b470e9eba0b"
+    },
+    {
+      "path": "apps/web/tests/e2e/cursor-coverage.spec.ts",
+      "kind": "file",
+      "bytes": 19581,
+      "mode": "0664",
+      "sha256": "62a55aae9e2a6841b462d22c3ccb0521662849050363de4caf69dc6cccae9f9d"
+    },
+    {
+      "path": "apps/web/tests/e2e/cursor.spec.ts",
+      "kind": "file",
+      "bytes": 65610,
+      "mode": "0664",
+      "sha256": "cd7a8212ab4608c71fd263453fcbd315eeb40cc37a3ab2ef07da8be94781d37e"
+    },
+    {
+      "path": "apps/web/tests/e2e/design-language-actions.spec.ts",
+      "kind": "file",
+      "bytes": 39722,
+      "mode": "0664",
+      "sha256": "6ec45b04cb1515ef3b15d6b6604d614a455bf5e1a25caa8db9d9d8f92bfc445f"
+    },
+    {
+      "path": "apps/web/tests/e2e/design-language-borders.spec.ts",
+      "kind": "file",
+      "bytes": 6032,
+      "mode": "0664",
+      "sha256": "25a64ff1e8cc1dfe739ca470b94728cdc14fb84cca17c3c7454fb243e7e052cc"
+    },
+    {
+      "path": "apps/web/tests/e2e/design-language-components.spec.ts",
+      "kind": "file",
+      "bytes": 5707,
+      "mode": "0664",
+      "sha256": "9e827f8f4735960e7607d06334f9abebc072faca0278f255c1cd347d5e5961cf"
+    },
+    {
+      "path": "apps/web/tests/e2e/design-language-layout.spec.ts",
+      "kind": "file",
+      "bytes": 41923,
+      "mode": "0664",
+      "sha256": "7ba0780a5b462bb6aed223aedc2fde4e007751e74a61685dc6f96f1d0d5098ba"
+    },
+    {
+      "path": "apps/web/tests/e2e/design-language-patterns-templates.spec.ts",
+      "kind": "file",
+      "bytes": 5954,
+      "mode": "0664",
+      "sha256": "ae99aec52d65648e703e00876851847a60420fd93d55fd8702d5634b469bc896"
+    },
+    {
+      "path": "apps/web/tests/e2e/design-language-shell-domain.spec.ts",
+      "kind": "file",
+      "bytes": 18507,
+      "mode": "0664",
+      "sha256": "1324dc25f29d82962a62c058770d23bff7f9a6717e2baa293dddb5fe06a01809"
+    },
+    {
+      "path": "apps/web/tests/e2e/design-language-surfaces.spec.ts",
+      "kind": "file",
+      "bytes": 7637,
+      "mode": "0664",
+      "sha256": "60826cca03e40e305c6d8151efd29edc39a6522f26afc1fe73e1d22e272cee71"
+    },
+    {
+      "path": "apps/web/tests/e2e/design-language-ui-forms.spec.ts",
+      "kind": "file",
+      "bytes": 14015,
+      "mode": "0664",
+      "sha256": "4b776a94c54f08c3de8ceffc094b4f26a9b5765adca0aa30b3ba8065e4f0a991"
+    },
+    {
+      "path": "apps/web/tests/e2e/footer.spec.ts",
+      "kind": "file",
+      "bytes": 12033,
+      "mode": "0664",
+      "sha256": "73af0acc0160ea4f4b5fd70bd67298268b7f8575d64ae28565b44a9f1446dfc2"
+    },
+    {
+      "path": "apps/web/tests/e2e/form-privacy.spec.ts",
+      "kind": "file",
+      "bytes": 7351,
+      "mode": "0664",
+      "sha256": "48ebec3277d9c2241a04acb12fec3fda321817b5dff10e4162876cecbd775b8e"
+    },
+    {
+      "path": "apps/web/tests/e2e/funnel-canonical-intake.spec.ts",
+      "kind": "file",
+      "bytes": 7339,
+      "mode": "0664",
+      "sha256": "4dfe708534ae53ce4c0af61cb877cf6cf34e2f38c98ad68640576005dce3e575"
+    },
+    {
+      "path": "apps/web/tests/e2e/heading-integrity.spec.ts",
+      "kind": "file",
+      "bytes": 6969,
+      "mode": "0664",
+      "sha256": "599512afea393c4f857e9e816d4944f865e4d4048f75fca04057ec20d8cfdcb0"
+    },
+    {
+      "path": "apps/web/tests/e2e/hero-effects-lifecycle.spec.ts",
+      "kind": "file",
+      "bytes": 13389,
+      "mode": "0664",
+      "sha256": "f9e3b562dd80a949655786217e7a2de950c4009052dcf5196aaa79db6f0884aa"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-articles-editorial.spec.ts",
+      "kind": "file",
+      "bytes": 14848,
+      "mode": "0664",
+      "sha256": "e658bee117fb0cdb573bcedbdd6752c52b870e34efdb24c7e49686b55ab0c817"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-cinematic-scroll.spec.ts",
+      "kind": "file",
+      "bytes": 7343,
+      "mode": "0664",
+      "sha256": "b33ed6f297a8c742c8544af1b4f3634e7a5baf0fa4722c4018dedee62af79336"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-content-revision.spec.ts",
+      "kind": "file",
+      "bytes": 32795,
+      "mode": "0664",
+      "sha256": "e082d1c35f11ba95a76b5344420c274bbbdcab22e483e6c41829e40ceff9b581"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-evidence-motion.spec.ts",
+      "kind": "file",
+      "bytes": 4653,
+      "mode": "0664",
+      "sha256": "8384431418b6ba32c4f54f5b405815ec717dc549bdb3b8af4afeadf09f1c8469"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-faq-motion.spec.ts",
+      "kind": "file",
+      "bytes": 4308,
+      "mode": "0664",
+      "sha256": "b44601f0ca5a546711e94257655e94706078f511f20e69bfea4489a488466f54"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-flow-scroll-reveal.spec.ts",
+      "kind": "file",
+      "bytes": 19363,
+      "mode": "0664",
+      "sha256": "586c4bdad2dc6fdcd2a603507e3a0785be9ef6fb0f1723acc8304b77d9335e01"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-hero-intro-reveal.spec.ts",
+      "kind": "file",
+      "bytes": 12254,
+      "mode": "0664",
+      "sha256": "271c99c1eeed14213ebccd12658ae6de85eba1a92e43dfa5e8877325a3a6d36c"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-hero-profile-autoplay.spec.ts",
+      "kind": "file",
+      "bytes": 20648,
+      "mode": "0664",
+      "sha256": "bbaa2427eb38c7eb13b499df1b0c30620383f466c0fc672397d7355129b3401f"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-hero-silk-motion.spec.ts",
+      "kind": "file",
+      "bytes": 48945,
+      "mode": "0664",
+      "sha256": "67955772e50c6aafdfea1d9e918ec5cd5f8989c9bfeada843f830b50e0d37439"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-hero-startup-sync.spec.ts",
+      "kind": "file",
+      "bytes": 8089,
+      "mode": "0664",
+      "sha256": "7b9a3265dc42496df38b3d58447256406cef0791fe490f04b10a51dc9310c359"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-insights-parallax.spec.ts",
+      "kind": "file",
+      "bytes": 9751,
+      "mode": "0664",
+      "sha256": "b18602fe4d8a6a4bf6c0393a6b8e634b5f8c28b8f45307edb3f4ecf5d49a9e84"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-intro.spec.ts",
+      "kind": "file",
+      "bytes": 20766,
+      "mode": "0664",
+      "sha256": "702c0363f2aed7eb8021450a91dc784b1ac4a71c7dc6e42c8aa60e681975bb40"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-mobile-hero-polish.spec.ts",
+      "kind": "file",
+      "bytes": 32537,
+      "mode": "0664",
+      "sha256": "4193f9352cf4a343ef9b00d4431e18aa71e9b162a2e8f71075d2b5e6d89c569a"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-mobile-situation-interaction.spec.ts",
+      "kind": "file",
+      "bytes": 4352,
+      "mode": "0664",
+      "sha256": "d7eaf9be82f791ea9c83dc7aec8cd988afed955721f5f2472cae0d41aedb76b6"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-orientation-motion.spec.ts",
+      "kind": "file",
+      "bytes": 3684,
+      "mode": "0664",
+      "sha256": "8b2f84527269e5abafe209dd9243c642c9ec5791af48b6f374f94f79f52eaf22"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-process-cinematic.spec.ts",
+      "kind": "file",
+      "bytes": 15393,
+      "mode": "0664",
+      "sha256": "6591a01a6828918b1e9d6f7be3dbf28832c3dafba034454ab1ae50d4a73fcdd2"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-process-editorial.spec.ts",
+      "kind": "file",
+      "bytes": 12760,
+      "mode": "0664",
+      "sha256": "3f36566e2db8b558138d0d5fcc14848e6ebb4446d954dac53502302fad2b8697"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-process-references-handoff.spec.ts",
+      "kind": "file",
+      "bytes": 2997,
+      "mode": "0664",
+      "sha256": "77caad1ad91a978e591a93c73a5ceb2c46c4a3c16da016a8aa624e21ad83831f"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-profile-editorial.spec.ts",
+      "kind": "file",
+      "bytes": 32839,
+      "mode": "0664",
+      "sha256": "e9d0d673cefc22f180598642ac8e50366ee8f98fc35028966772f15c5eceafc4"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-profile-situations-handoff.spec.ts",
+      "kind": "file",
+      "bytes": 23419,
+      "mode": "0664",
+      "sha256": "d9f14627343800cc5912161f2c5fa8d0360a4029ac313f2ea7d2e35db99638e2"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-references-reader.spec.ts",
+      "kind": "file",
+      "bytes": 21962,
+      "mode": "0664",
+      "sha256": "953cc19cbe20d86b98f328a2c81bd92768d40128ccf660f6adcdd8dbe257e7df"
+    },
+    {
+      "path": "apps/web/tests/e2e/home-situation-stability.spec.ts",
+      "kind": "file",
+      "bytes": 27924,
+      "mode": "0664",
+      "sha256": "f618566283dd5e49dbf91ed79d4c54ceb10695413bd66364a72b652b32e2480b"
+    },
+    {
+      "path": "apps/web/tests/e2e/home.spec.ts",
+      "kind": "file",
+      "bytes": 204896,
+      "mode": "0664",
+      "sha256": "d44a0d89180ab5c5b8e39e16106510fec10602f861b7fae0a0cc4077f7efcf79"
+    },
+    {
+      "path": "apps/web/tests/e2e/income-test.spec.ts",
+      "kind": "file",
+      "bytes": 26962,
+      "mode": "0664",
+      "sha256": "82f139307ca81f84d185798703b8e33ffc5e60339e89c4ddfa05b54dbcbc623b"
+    },
+    {
+      "path": "apps/web/tests/e2e/journey-analytics.spec.ts",
+      "kind": "file",
+      "bytes": 12653,
+      "mode": "0664",
+      "sha256": "a120ae0f1931ae182c0be5f53ab59e47509e7110cb843b7cf4df81134759cf89"
+    },
+    {
+      "path": "apps/web/tests/e2e/lenis-intro-gate.spec.ts",
+      "kind": "file",
+      "bytes": 4663,
+      "mode": "0664",
+      "sha256": "4b8e6846c5f862163a2f6eb9edad6b7edca7ac094843e7b1c4411e3059b1252e"
+    },
+    {
+      "path": "apps/web/tests/e2e/media-performance.spec.ts",
+      "kind": "file",
+      "bytes": 1276,
+      "mode": "0664",
+      "sha256": "0fa7bb4e10a565d7e3fdb9813d64fd9b6c1ebd7422044157f5d8986bcec1e9a8"
+    },
+    {
+      "path": "apps/web/tests/e2e/mobile-cta-sizing.spec.ts",
+      "kind": "file",
+      "bytes": 3138,
+      "mode": "0664",
+      "sha256": "6848bc826482fc401d94fda80595f1f0f48176e9376cb6052157113299628a16"
+    },
+    {
+      "path": "apps/web/tests/e2e/navigation-mobile-performance.spec.ts",
+      "kind": "file",
+      "bytes": 10652,
+      "mode": "0664",
+      "sha256": "f9290f5033ba841664f1f6f8c119d9da4fb6988eb0effdcd5bd4b82c66de3a2a"
+    },
+    {
+      "path": "apps/web/tests/e2e/navigation-scroll.spec.ts",
+      "kind": "file",
+      "bytes": 25783,
+      "mode": "0664",
+      "sha256": "7733c3c23812cf6d86aa64c288bdf4259a400a4891881a06c0ce1e2507227589"
+    },
+    {
+      "path": "apps/web/tests/e2e/navigation-theme.spec.ts",
+      "kind": "file",
+      "bytes": 47721,
+      "mode": "0664",
+      "sha256": "0a48726467bb78ea8f9cb440599dc8f07755247666061b986213115ba92fce68"
+    },
+    {
+      "path": "apps/web/tests/e2e/overview-flow.spec.ts",
+      "kind": "file",
+      "bytes": 30756,
+      "mode": "0664",
+      "sha256": "4a6822e3e1e22823440b751f9e1b01831b88ee4933168269144b4c593bdb901e"
+    },
+    {
+      "path": "apps/web/tests/e2e/process-manifesto-parallax.spec.ts",
+      "kind": "file",
+      "bytes": 9549,
+      "mode": "0664",
+      "sha256": "ef62225ced6b85fc7b4a004d7039c5c363223cd49fdd8568285faea339320d21"
+    },
+    {
+      "path": "apps/web/tests/e2e/process.spec.ts",
+      "kind": "file",
+      "bytes": 28612,
+      "mode": "0664",
+      "sha256": "bc12191374eb41ca65c8e1c6efa8a14a14df0d444f8791eee6def2e72cda7100"
+    },
+    {
+      "path": "apps/web/tests/e2e/radius-system.spec.ts",
+      "kind": "file",
+      "bytes": 5808,
+      "mode": "0664",
+      "sha256": "0e448c91ea2c848b5660894bc8ae9090926dc062b59dc802c0e3ec163e506248"
+    },
+    {
+      "path": "apps/web/tests/e2e/reference.spec.ts",
+      "kind": "file",
+      "bytes": 37289,
+      "mode": "0664",
+      "sha256": "1b3ff19ae4cb88828b0eab6717e796a7d8cc51b0ffa90596fd551e7bfeae4b9a"
+    },
+    {
+      "path": "apps/web/tests/e2e/refixation-funnel.spec.ts",
+      "kind": "file",
+      "bytes": 8683,
+      "mode": "0664",
+      "sha256": "dc1fa7aed91a45ab57062c6acaad927115cf8a3d7fa63883acd08a2f57e5cbf6"
+    },
+    {
+      "path": "apps/web/tests/e2e/route-editorial-reveal.spec.ts",
+      "kind": "file",
+      "bytes": 11015,
+      "mode": "0664",
+      "sha256": "2f3f9c41758f66e308ccbc395cfbf59a9ca5571e3257c1c3a30fa0f58bcc963c"
+    },
+    {
+      "path": "apps/web/tests/e2e/route-hero-entry.spec.ts",
+      "kind": "file",
+      "bytes": 11127,
+      "mode": "0664",
+      "sha256": "580cebe7afefd326f1d73f27803089de9978d09cf33a4459a740d73ba9a46653"
+    },
+    {
+      "path": "apps/web/tests/e2e/seo-semantics.spec.ts",
+      "kind": "file",
+      "bytes": 4782,
+      "mode": "0664",
+      "sha256": "b0dd7cfb774a5a52c79c5cbab70c560cc4a1f37a7b0a14dae6197fc6c64d24f8"
+    },
+    {
+      "path": "apps/web/tests/e2e/seo.spec.ts",
+      "kind": "file",
+      "bytes": 6947,
+      "mode": "0664",
+      "sha256": "23466c5629488f709fc53c6baf381f4c7fff6e5d1de0c89ea33d1ae02e696500"
+    },
+    {
+      "path": "apps/web/tests/e2e/services-context-parallax.spec.ts",
+      "kind": "file",
+      "bytes": 9549,
+      "mode": "0664",
+      "sha256": "e2646bca8dcb4054d665f58d2e3a75cdd8dca47344c51f7239ef2c22261e3dd5"
+    },
+    {
+      "path": "apps/web/tests/e2e/services-scroll-reveal.spec.ts",
+      "kind": "file",
+      "bytes": 16930,
+      "mode": "0664",
+      "sha256": "fb7be1903ce98318e0f8f0df4b037520026b8e0ee7642229af456453edc1ff97"
+    },
+    {
+      "path": "apps/web/tests/e2e/services.spec.ts",
+      "kind": "file",
+      "bytes": 18748,
+      "mode": "0664",
+      "sha256": "bc2607f7bdc248643a252ff83cf84ede84ced9530cd90e3d3a805be7d005959e"
+    },
+    {
+      "path": "apps/web/tests/e2e/fixtures/analytics-configuration.ts",
+      "kind": "file",
+      "bytes": 722,
+      "mode": "0664",
+      "sha256": "0628164f1e24efdfc76f5f2b5a83a2747e8567aae2a9991d285656506ebacf46"
+    },
+    {
+      "path": "apps/web/tests/unit/analytics-consent-runtime.test.mjs",
+      "kind": "file",
+      "bytes": 9442,
+      "mode": "0664",
+      "sha256": "cfdee3a56b8d8feec14b3eb04270b26606086df1ab67c40c8922b52e633412ca"
+    },
+    {
+      "path": "apps/web/tests/unit/article-contract-bridge.test.mjs",
+      "kind": "file",
+      "bytes": 10074,
+      "mode": "0664",
+      "sha256": "a1894234269c3d3f62d634fba07439fc134a02947c06167d7415f3de06c70b95"
+    },
+    {
+      "path": "apps/web/tests/unit/article-editorial.test.mjs",
+      "kind": "file",
+      "bytes": 7035,
+      "mode": "0664",
+      "sha256": "1e0e9a9551458d2d9a3533ef00ebceaf5bb0212ed4de75cd8d3c67767e9ea6d8"
+    },
+    {
+      "path": "apps/web/tests/unit/article-lead-context.test.mjs",
+      "kind": "file",
+      "bytes": 5074,
+      "mode": "0664",
+      "sha256": "51b9b867c522fe6dc019d6e1d0564fc7ff64651c002084119e7f3fa1d7064639"
+    },
+    {
+      "path": "apps/web/tests/unit/article-projections.test.mjs",
+      "kind": "file",
+      "bytes": 2348,
+      "mode": "0664",
+      "sha256": "568aa8d31dc066730d1652bd288bd445ebfc4cb198d9f3097d4d355281427cfc"
+    },
+    {
+      "path": "apps/web/tests/unit/article-publication-dates.test.mjs",
+      "kind": "file",
+      "bytes": 10487,
+      "mode": "0664",
+      "sha256": "c74a36561ca9467aced67a59752cdcf5947773d004cb420fa972e6aaa5016a6d"
+    },
+    {
+      "path": "apps/web/tests/unit/article-runtime-provider.test.mjs",
+      "kind": "file",
+      "bytes": 12388,
+      "mode": "0664",
+      "sha256": "c28a89a8043120e384ace24d26650c52a130721aea32d7d367d6290cd8b66932"
+    },
+    {
+      "path": "apps/web/tests/unit/article-screening-form-contract.test.mjs",
+      "kind": "file",
+      "bytes": 1080,
+      "mode": "0664",
+      "sha256": "1982c5439873ed476b19c70d83686ed4b4464680b2667fcc2cf1aa65180a3ad4"
+    },
+    {
+      "path": "apps/web/tests/unit/article-screening-intake.test.mjs",
+      "kind": "file",
+      "bytes": 16482,
+      "mode": "0664",
+      "sha256": "0dec1523f1e3e8b61083ccf31d7fd542e3871b960ab8f6e2ff7e0735f71c39c4"
+    },
+    {
+      "path": "apps/web/tests/unit/article-screening-review.test.mjs",
+      "kind": "file",
+      "bytes": 22714,
+      "mode": "0664",
+      "sha256": "d4eebb0bad1bd4a9b078f9361455a21c2a259f26f29be18be6f79c41a3140410"
+    },
+    {
+      "path": "apps/web/tests/unit/article-source.test.mjs",
+      "kind": "file",
+      "bytes": 7376,
+      "mode": "0664",
+      "sha256": "4f68bdd84286011bc2283e321ed69336f0ada8d1e7bba2165c0f07f5dfe159c2"
+    },
+    {
+      "path": "apps/web/tests/unit/axiom-first-party-analytics.test.mjs",
+      "kind": "file",
+      "bytes": 2584,
+      "mode": "0664",
+      "sha256": "22051defc94aa0785310d875bd51771e99c8337d8c6402bf2e25222fdccdb9f6"
+    },
+    {
+      "path": "apps/web/tests/unit/funnel-form-contract.test.mjs",
+      "kind": "file",
+      "bytes": 974,
+      "mode": "0664",
+      "sha256": "1784f98791a6c5092507442210aa88ddc4dd2a091d4a7b37e78f8a0cee00c6a5"
+    },
+    {
+      "path": "apps/web/tests/unit/hosted-campaign-tracking.test.mjs",
+      "kind": "file",
+      "bytes": 801,
+      "mode": "0664",
+      "sha256": "cacf80d51246a850e1dfc802f512e499328b837a88c8b50443f1180d72e16132"
+    },
+    {
+      "path": "apps/web/tests/unit/hosted-runtime-identity.test.mjs",
+      "kind": "file",
+      "bytes": 2513,
+      "mode": "0664",
+      "sha256": "b2c95266a8b03437196df0ce3a3c4ea409295650fda62efdbed4cee44038be48"
+    },
+    {
+      "path": "apps/web/tests/unit/income-test-analytics.test.mjs",
+      "kind": "file",
+      "bytes": 5174,
+      "mode": "0664",
+      "sha256": "8e4790f0e25c36262126cf7b9667e4e4a8f7d1aabeb21c727d4ed70392f4e208"
+    },
+    {
+      "path": "apps/web/tests/unit/income-test-calculation.test.mjs",
+      "kind": "file",
+      "bytes": 9793,
+      "mode": "0664",
+      "sha256": "17e3617192ac2e4be4a5c7b1059728274d1cae0b4eef2557e104094131bc2260"
+    },
+    {
+      "path": "apps/web/tests/unit/income-test-intake.test.mjs",
+      "kind": "file",
+      "bytes": 7968,
+      "mode": "0664",
+      "sha256": "a5357a6321881d21ba867aa5991507ac8bb27b04bc8fd3ace957868c750d1814"
+    },
+    {
+      "path": "apps/web/tests/unit/journey-analytics.test.mjs",
+      "kind": "file",
+      "bytes": 6855,
+      "mode": "0664",
+      "sha256": "dc1c58230a1e7a184386c9dceb912cf7bf1be5a1cb45da9ef921d1faaf4b9908"
+    },
+    {
+      "path": "apps/web/tests/unit/offering-runtime-provider.test.mjs",
+      "kind": "file",
+      "bytes": 9641,
+      "mode": "0664",
+      "sha256": "da6c7f09aaedfb479adf601ac154f3f73590b8f2af2934064a44b00b7ac7ebee"
+    },
+    {
+      "path": "apps/web/tests/unit/overview-analytics-claim.test.mjs",
+      "kind": "file",
+      "bytes": 6301,
+      "mode": "0664",
+      "sha256": "a543471c6d5248cff7c678f91c8dd24d8b0b38f7697215bc0d604571a558366d"
+    },
+    {
+      "path": "apps/web/tests/unit/overview-confirmation-email.test.mjs",
+      "kind": "file",
+      "bytes": 7528,
+      "mode": "0664",
+      "sha256": "de19c7473b4c2f2ebb03e5cf30c5f22d3443689c2beda54bcad33a5b5073028e"
+    },
+    {
+      "path": "apps/web/tests/unit/overview-flow.test.mjs",
+      "kind": "file",
+      "bytes": 2315,
+      "mode": "0664",
+      "sha256": "9d0d57a6d4696a97175c432fa35ad67389430fdef22a1deb1de60a047c2474d8"
+    },
+    {
+      "path": "apps/web/tests/unit/phone-first-runtime.test.mjs",
+      "kind": "file",
+      "bytes": 19545,
+      "mode": "0664",
+      "sha256": "f3e132e6ae4e4fa12bd2bc0e310cca00521c47a1518ee349db4e7b8755ce4141"
+    },
+    {
+      "path": "apps/web/tests/unit/project-public-host.test.mjs",
+      "kind": "file",
+      "bytes": 1001,
+      "mode": "0664",
+      "sha256": "d113a9853ee8d3b14235905f5d758a87eb37931eaede8fc29d7e48df2d6b1e24"
+    },
+    {
+      "path": "apps/web/tests/unit/project-runtime-health.test.mjs",
+      "kind": "file",
+      "bytes": 3160,
+      "mode": "0664",
+      "sha256": "fb5c7803ef8bf8d7cafab846461a144f7897e6fd0ecd66d843048444484d15a0"
+    },
+    {
+      "path": "apps/web/tests/unit/public-booking-calendar.test.mjs",
+      "kind": "file",
+      "bytes": 3075,
+      "mode": "0664",
+      "sha256": "0b678a4044d44a8fb9aa3e07c88b0e0b7f660353bdcd80fb796393c0ce02a89a"
+    },
+    {
+      "path": "apps/web/tests/unit/public-booking-runtime.test.mjs",
+      "kind": "file",
+      "bytes": 16905,
+      "mode": "0664",
+      "sha256": "ef8da87ee755d6e6e2857c36efb86aa2b9b7b21fe81a50738450f0e677364148"
+    },
+    {
+      "path": "apps/web/tests/unit/refixation-bucket.test.mjs",
+      "kind": "file",
+      "bytes": 3989,
+      "mode": "0664",
+      "sha256": "09b16afe38a64925dab18261648cf2790176bc34f71659dafa2cbd74601674ac"
+    },
+    {
+      "path": "apps/web/tests/unit/refixation-intake.test.mjs",
+      "kind": "file",
+      "bytes": 2871,
+      "mode": "0664",
+      "sha256": "8f08d7c6aa2a5d7b123f0d3dc0d31a5b6bc4f3c5fd655ff6602b65661fdd319b"
+    },
+    {
+      "path": "apps/web/tests/unit/seo.test.mjs",
+      "kind": "file",
+      "bytes": 7779,
+      "mode": "0664",
+      "sha256": "08b294d41889a20167b98f94b48b285bd316eebf50a8b8b0aab14d39d7a919b6"
+    },
+    {
+      "path": "apps/web/tests/unit/site-indexing.test.mjs",
+      "kind": "file",
+      "bytes": 1863,
+      "mode": "0664",
+      "sha256": "395bb83ca9be545b9643e30cd4c825fd7cca027944adedb3d725c91ac70c1154"
+    },
+    {
+      "path": "apps/web/tests/unit/site-mode-routes.test.mjs",
+      "kind": "file",
+      "bytes": 2341,
+      "mode": "0664",
+      "sha256": "98cbdba6ce1ac6a7313128f825cef53423ff455ab3326fa1357908c966c67623"
+    }
+  ],
+  "excluded": [
+    {
+      "path": "apps/web/.next",
+      "kind": "directory",
+      "reason": "Generated/dependency/cache/runtime output"
+    },
+    {
+      "path": "apps/web/.tmp",
+      "kind": "directory",
+      "reason": "Generated/dependency/cache/runtime output"
+    },
+    {
+      "path": "apps/web/artifacts",
+      "kind": "directory",
+      "reason": "Generated/dependency/cache/runtime output"
+    },
+    {
+      "path": "apps/web/node_modules",
+      "kind": "directory",
+      "reason": "Generated/dependency/cache/runtime output"
+    },
+    {
+      "path": "apps/web/playwright-report",
+      "kind": "directory",
+      "reason": "Generated/dependency/cache/runtime output"
+    },
+    {
+      "path": "apps/web/review-docx",
+      "kind": "directory",
+      "reason": "Generated/dependency/cache/runtime output"
+    },
+    {
+      "path": "apps/web/test-artifacts",
+      "kind": "directory",
+      "reason": "Generated/dependency/cache/runtime output"
+    },
+    {
+      "path": "apps/web/test-results",
+      "kind": "directory",
+      "reason": "Generated/dependency/cache/runtime output"
+    },
+    {
+      "path": "apps/web/tmp",
+      "kind": "directory",
+      "reason": "Generated/dependency/cache/runtime output"
+    },
+    {
+      "path": "apps/web/.env.local",
+      "kind": "file",
+      "reason": "Local env/key/archive/generated file"
+    },
+    {
+      "path": "apps/web/app.new.tgz",
+      "kind": "file",
+      "reason": "Local env/key/archive/generated file"
+    },
+    {
+      "path": "apps/web/tsconfig.tsbuildinfo",
+      "kind": "file",
+      "reason": "Local env/key/archive/generated file"
+    },
+    {
+      "path": "apps/web/app/design-language/components/coverage",
+      "kind": "directory",
+      "reason": "Generated/dependency/cache/runtime output"
+    }
+  ]
+}
